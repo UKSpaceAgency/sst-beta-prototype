@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <a class="govuk-back-link" href="/start">Back</a>
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Impending alerts</h1>
+        <p class="govuk-body">Your impending alerts are listed below:</p>
+        <table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Satellite</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Orbit</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Time to collision</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Colliding object</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Likelihood</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Error range</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Satellite 1</th>
+      <td class="govuk-table__cell">Low Earth</td>
+      <td class="govuk-table__cell">24h</td>
+      <td class="govuk-table__cell">junk ASBV123131</td>
+      <td class="govuk-table__cell">3%</td>
+      <td class="govuk-table__cell">25%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Satellite 2</th>
+      <td class="govuk-table__cell">Low Earth</td>
+      <td class="govuk-table__cell">4 days</td>
+      <td class="govuk-table__cell">junk ASBV123131</td>
+      <td class="govuk-table__cell">1%</td>
+      <td class="govuk-table__cell">256%</td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Satellite 5</th>
+      <td class="govuk-table__cell">Low Earth</td>
+      <td class="govuk-table__cell">7 days</td>
+      <td class="govuk-table__cell">satellite OneWeb 1234</td>
+      <td class="govuk-table__cell">1%</td>
+      <td class="govuk-table__cell">10%</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">My satellites</h2>
+        <p class="govuk-body">Satellites attached to your registration number:</p>
+        <div>
+          <a href="#" class="govuk-link">Satellite 1</a>
+          </div>
+        <div>
+          <a href="#" class="govuk-link">Satellite 2</a>
+          </div>
+        <div>
+        <a href="#" class="govuk-link">Satellite 3</a>
+          </div>
+        <a href="#" class="govuk-link">Satellite 4</a>
+        <div>
+        <a href="#" class="govuk-link">Satellite 5</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
