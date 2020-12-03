@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="impending-alerts">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+<div)
+  <h1 class="govuk-heading-xl">Satellite 4</h1>
+  </div>
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Current location of Satellite 4</h2>
+        <p class="govuk-body">Satellite 4 is currently out of this world!</p>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">My satellites</h2>
+        <p class="govuk-body">Satellites attached to your registration number:</p>
+        <ul class="govuk-list">
+          <li>
+          <a href="/satellite-1" class="govuk-link--no-visited-state">Satellite 1</a>
+          </li>
+        <li>
+          <a href="/satellite-2" class="govuk-link govuk-link--no-visited-state">Satellite 2</a>
+          </li>
+        <li>
+        <a href="satellite-3" class="govuk-link govuk-link--no-visited-state">Satellite 3</a>
+          </li>
+          <li>
+        <a href="satellite-4" class="govuk-link govuk-link--no-visited-state">Satellite 4</a>
+        </li>
+        <li>
+        <a href="satellite-5" class="govuk-link govuk-link--no-visited-state">Satellite 5</a>
+        </li>
+      </div>
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <h2 class="govuk-heading-l">History of Satellite 4 location</h2>
+
+        <p>This table illustrates the changing location of Satellite 4 with time.</p>
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Location history</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Time</th>
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Orbit</th>
+              <th scope="col" class="govuk-table__header">Coordinates</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell">09:14</th>
+              <th scope="row" class="govuk-table__cell">03/12/2020</th>
+              <th scope="row" class="govuk-table__cell">LEO</th>
+              <td scope="row" class="govuk-table__cell">?</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__cell">09:17</th>
+              <th scope="row" class="govuk-table__cell">02/12/2020</th>
+              <th scope="row" class="govuk-table__cell">LEO</th>
+              <td scope="row" class="govuk-table__cell">?</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">09:20</th>
+              <th scope="row" class="govuk-table__header">01/12/2020</th>
+              <th scope="row" class="govuk-table__header">LEO</th>
+              <td scope="row" class="govuk-table__cell">?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-!-padding-top-9">
+      <h2 class="govuk-heading-l">Current risk of debris collision</h2>
+</div>
+  <p>Satellite 4 does not currently have any collision risks.</p>
+
+<a href="/impending-alerts">View list of impending alerts for all satellites</a>
+    </div>
+  </div>
+</main>
+</div>
+{% endblock %}
