@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Impending alerts</h1>
+        <p class="govuk-body">Your impending alerts are listed in the table below:</p>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">My satellites</h2>
+        <p class="govuk-body">Satellites attached to your registration number:</p>
+        <ul class="govuk-list">
+          <li>
+          <a href="#" class="govuk-link--no-visited-state">Satellite 1</a>
+          </li>
+        <li>
+          <a href="/satellite2" class="govuk-link govuk-link--no-visited-state">Satellite 2</a>
+          </li>
+        <li>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Satellite 3</a>
+          </li>
+          <li>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Satellite 4</a>
+        </li>
+        <li>
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Satellite 5</a>
+        </li>
+      </div>
+
+</div>
+
+    <div>
+            <table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">SATELLITE</th>
+      <th scope="col" class="govuk-table__header app-custom-class">TIME TO COLLISION</th>
+      <th scope="col" class="govuk-table__header app-custom-class">INTERNATIONAL DESIGNATOR</th>
+      <th scope="col" class="govuk-table__header app-custom-class">TYPE</th>
+      <th scope="col" class="govuk-table__header app-custom-class">RCS</th>
+      <th scope="col" class="govuk-table__header app-custom-class">LIKELIHOOD</th>
+      <th scope="col" class="govuk-table__header app-custom-class">ERROR</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Satellite 1</td>
+      <td class="govuk-table__cell">24 h</td>
+      <td class="govuk-table__cell">1957-001A</td>
+      <td class="govuk-table__cell">ROCKET BODY</td>
+      <td class="govuk-table__cell">LARGE</td>
+      <td class="govuk-table__cell">3%</td>
+      <td class="govuk-table__cell">34%</td>
+    </tr>
+    <tr class="govuk-table__row">
+    <td class="govuk-table__cell">Satellite 5</td>
+    <td class="govuk-table__cell">72 h</td>
+    <td class="govuk-table__cell">1987-026F</td>
+    <td class="govuk-table__cell">PAYLOAD</td>
+    <td class="govuk-table__cell">LARGE</td>
+    <td class="govuk-table__cell">1%</td>
+    <td class="govuk-table__cell">350%</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Satellite 1</td>
+      <td class="govuk-table__cell">1 week</td>
+      <td class="govuk-table__cell">1994-085Z</td>
+      <td class="govuk-table__cell">DEBRIS</td>
+      <td class="govuk-table__cell">SMALL</td>
+      <td class="govuk-table__cell">1%</td>
+      <td class="govuk-table__cell">284%</td>
+    </tr>
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell">Satellite 2</td>
+    <td class="govuk-table__cell">2 weeks</td>
+    <td class="govuk-table__cell">1960-003C</td>
+    <td class="govuk-table__cell">DEBRIS</td>
+    <td class="govuk-table__cell"></td>
+    <td class="govuk-table__cell">2%</td>
+    <td class="govuk-table__cell">300%</td>
+    </tr>
+
+          </tbody>
+      </table>
+      </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
