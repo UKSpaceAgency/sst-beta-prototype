@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="login" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Impending alerts</h1>
+        <p class="govuk-body">Your impending alerts are listed in the table below:</p>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">My satellites</h2>
+        <p class="govuk-body">Satellites attached to your registration number:</p>
+        <ul class="govuk-list">
+          <li>
+          <a href="satellite-1.html" class="govuk-link--no-visited-state">Satellite 1</a>
+          </li>
+        <li>
+          <a href="satellite-2.html" class="govuk-link govuk-link--no-visited-state">Satellite 2</a>
+          </li>
+        <li>
+        <a href="satellite-3.HTML" class="govuk-link govuk-link--no-visited-state">Satellite 3</a>
+          </li>
+          <li>
+        <a href="satellite-4.html" class="govuk-link govuk-link--no-visited-state">Satellite 4</a>
+        </li>
+        <li>
+        <a href="satellite-5.html" class="govuk-link govuk-link--no-visited-state">Satellite 5</a>
+        </li>
+      </div>
+
+</div>
+
+    <div>
+      <img src="https://www.google.com/url?sa=i&url=http%3A%2F%2Fclipart-library.com%2Femergency-pictures.html&psig=AOvVaw3QzlOnlVcZQGN_uuf4cl5Q&ust=1607098619654000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJjp1ISbsu0CFQAAAAAdAAAAABAD">
+      </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
