@@ -31,7 +31,5 @@ module.exports = {
   // Enable or disable Browser Sync
   useBrowserSync: 'true'
 
-"pull-request":
-githubApiToken: "762f8cefb4922bdeef559e72a683d824285416fb"
 
 }
