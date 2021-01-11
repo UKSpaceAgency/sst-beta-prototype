@@ -13,54 +13,93 @@ My satellite environment
         <h1 class="govuk-heading-xl">Your notification settings</h1>
         <p>
         </p>
+
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Show me alerts from:
+                Show me alerts containing data from:
               </h1>
             </legend>
-            <div id="waste-hint" class="govuk-hint">
-              Select all that apply.
-            </div>
-            <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  UKSPoCK
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  Spacetrack and UKSPoCK
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                  Spacetrack
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  Spacetrack only
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                <a href="/public/downloads/space_data.xlsx" download >Download this data as an xml feed</a>
 
               </div>
             </div>
 
-          </fieldset>
         </div>
-        <div class="govuk-warning-text">
-  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-  <strong class="govuk-warning-text__text">
-    <span class="govuk-warning-text__assistive">Warning</span>
-    You have 1 urgent alert
-  </strong>
-</div>
+
+
+
+        <div class="govuk-form-group">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Send me alerts in the following format(s):
+                </h1>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    Email
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
+                  <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                    Text message
+                  </label>
+                </div>
+
+              </div>
+
+            </fieldset>
+          </div>
+
+        </div>
 
       </div>
-      <p>
-        </p>
-        <p>
-          </p>
-          <p>
-            </p>
+      <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+        Show me alerts when a conjunction likelihood is greater than:
+        </h1>
+      </legend>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+            1%
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+            10%
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+            50%
+          </label>
+        </div>
 
+    </fieldset>
+  </div>
 
         <h2 class="govuk-heading-m">My satellites</h2>
         <p class="govuk-body">Satellites attached to your registration number:</p>
