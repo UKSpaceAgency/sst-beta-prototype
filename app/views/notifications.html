@@ -10,9 +10,7 @@ My satellite environment
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Impending alerts</h1>
-        <p class="govuk-body">Your impending alerts are listed in the table below:</p>
-
+        <h1 class="govuk-heading-xl">Notification settings</h1>
         <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -35,7 +33,27 @@ My satellite environment
                       </div>
                       </div>
                     </div>
-
+                    <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                    <h1 class="govuk-fieldset__heading">
+                                      Send me alerts in the following format(s):
+                                    </h1>
+                                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                        Email
+                                      </label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
+                                      <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                                        Text message
+                                      </label>
+                                    </div>
+                                  </div>
+                              </div>
       </div>
 
       <div class="govuk-grid-column-one-third">
