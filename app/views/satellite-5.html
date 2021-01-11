@@ -1,163 +1,157 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  2020-088AC
-{% endblock %}
-
-{% block beforeContent %}
-  <a class="govuk-back-link" href="impending-alerts">Back</a>
+My satellite environment
 {% endblock %}
 
 {% block content %}
 <div class="govuk-width-container">
-
-<div)
-  <h1 class="govuk-heading-xl">2020-088AC</h1>
-  <p> This satellite has been safely operated for 728 days. Closest pass: 1km </p>
-  </div>
+  <a href="impending-alerts.html" class="govuk-back-link">Back</a>
   <main class="govuk-main-wrapper">
-
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Current location of 2020-088AC</h2>
-        <table class="govuk-table">
-          <caption class="govuk-table__caption">Current location</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">TIME</th>
-              <th scope="col" class="govuk-table__header">DATE</th>
-              <th scope="col" class="govuk-table__header">ORBIT</th>
-              <th scope="col" class="govuk-table__header">INCLINATION</th>
-              <th scope="col" class="govuk-table__header">APOGEE</th>
-              <th scope="col" class="govuk-table__header">PERIGEE</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">09:14</th>
-            <th scope="row" class="govuk-table__cell">11/01/2021</th>
-            <th scope="row" class="govuk-table__cell">LEO</th>
-            <td scope="row" class="govuk-table__cell">98.36</td>
-            <td scope="row" class="govuk-table__cell">599</td>
-            <td scope="row" class="govuk-table__cell">597</td>
+        <h1 class="govuk-heading-xl">2020-088AC</h1>
+        <p> This satellite has been safely operated for 728 days. Closest pass: 1km </p>
+          <p> </p>
+          <h2 class="govuk-heading-l">Current location of 2020-088AC</h2>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Current location</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">TIME</th>
+                <th scope="col" class="govuk-table__header">DATE</th>
+                <th scope="col" class="govuk-table__header">ORBIT</th>
+                <th scope="col" class="govuk-table__header">INCLINATION</th>
+                <th scope="col" class="govuk-table__header">APOGEE</th>
+                <th scope="col" class="govuk-table__header">PERIGEE</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">09:14</th>
+              <th scope="row" class="govuk-table__cell">11/01/2021</th>
+              <th scope="row" class="govuk-table__cell">LEO</th>
+              <td scope="row" class="govuk-table__cell">98.36</td>
+              <td scope="row" class="govuk-table__cell">599</td>
+              <td scope="row" class="govuk-table__cell">597</td>
+              </tbody>
+              </table>
+                <p> </p>
+              <h2 class="govuk-heading-l">History of 2020-088AC location</h2>
+
+              <p>This table illustrates the changing location of 2020-088AC with time.</p>
+              <table class="govuk-table">
+                <caption class="govuk-table__caption">Location history</caption>
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">TIME</th>
+                    <th scope="col" class="govuk-table__header">DATE</th>
+                    <th scope="col" class="govuk-table__header">ORBIT</th>
+                    <th scope="col" class="govuk-table__header">INCLINATION</th>
+                    <th scope="col" class="govuk-table__header">APOGEE</th>
+                    <th scope="col" class="govuk-table__header">PERIGEE</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__cell">09:14</th>
+                    <th scope="row" class="govuk-table__cell">11/01/2021</th>
+                    <th scope="row" class="govuk-table__cell">LEO</th>
+                    <td scope="row" class="govuk-table__cell">98.46</td>
+                    <td scope="row" class="govuk-table__cell">1293</td>
+                    <td scope="row" class="govuk-table__cell">513</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__cell">09:17</th>
+                    <th scope="row" class="govuk-table__cell">10/01/2021</th>
+                    <th scope="row" class="govuk-table__cell">LEO</th>
+                    <td scope="row" class="govuk-table__cell">97.01</td>
+                    <td scope="row" class="govuk-table__cell">884</td>
+                    <td scope="row" class="govuk-table__cell">429</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">09:20</th>
+                    <th scope="row" class="govuk-table__header">09/01/2021</th>
+                    <th scope="row" class="govuk-table__header">LEO</th>
+                    <td scope="row" class="govuk-table__cell">98.82</td>
+                    <td scope="row" class="govuk-table__cell">429</td>
+                    <td scope="row" class="govuk-table__cell">716</td>
+                  </tr>
+                </tbody>
+              </table>
+                <a href="/public/downloads/space_data.xlsx" download >Download location data for 2020-088AC</a>
+                <p> </p>
+                <h2 class="govuk-heading-l">Current risk of debris collision</h2>
+                <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header app-custom-class">TIME TO COLLISION</th>
+                <th scope="col" class="govuk-table__header app-custom-class">INTERNATIONAL DESIGNATOR</th>
+                <th scope="col" class="govuk-table__header app-custom-class">TYPE</th>
+                <th scope="col" class="govuk-table__header app-custom-class">RCS</th>
+                <th scope="col" class="govuk-table__header app-custom-class">LIKELIHOOD</th>
+                <th scope="col" class="govuk-table__header app-custom-class">ERROR</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">24 h</td>
+                <td class="govuk-table__cell">1957-001A</td>
+                <td class="govuk-table__cell">ROCKET BODY</td>
+                <td class="govuk-table__cell">LARGE</td>
+                <td class="govuk-table__cell">3%</td>
+                <td class="govuk-table__cell">34%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1 week</td>
+                <td class="govuk-table__cell">1994-085Z</td>
+                <td class="govuk-table__cell">DEBRIS</td>
+                <td class="govuk-table__cell">SMALL</td>
+                <td class="govuk-table__cell">1%</td>
+                <td class="govuk-table__cell">284%</td>
+              </tr>
             </tbody>
-            </table>
+          </table>
       </div>
-
       <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m">My notification settings</h2>
+        <h2 class="govuk-heading-m">Impending alerts</h2>
 
-        <a href="notifications" class="govuk-link--no-visited-state">Change your notification settings here</a>
+        <a href="impending-alerts" class="govuk-link--no-visited-state">View your impending alerts</a>
         <p>
           </p>
+          <h2 class="govuk-heading-m">Notification settings</h2>
+
+          <a href="notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
+          <p>
+            </p>
         <h2 class="govuk-heading-m">My satellites</h2>
         <p class="govuk-body">Satellites attached to your registration number:</p>
         <ul class="govuk-list">
           <li>
-          <a href="/satellite-1" class="govuk-link--no-visited-state">2020-088AD</a>
+          <a href="satellite-1.html" class="govuk-link--no-visited-state">2020-088AD</a>
           </li>
         <li>
-          <a href="/satellite-2" class="govuk-link govuk-link--no-visited-state">2020-019F</a>
+          <a href="satellite-2.html" class="govuk-link govuk-link--no-visited-state">2020-019F</a>
           </li>
         <li>
-        <a href="satellite-3" class="govuk-link govuk-link--no-visited-state">2020-074BB</a>
+        <a href="satellite-3.HTML" class="govuk-link govuk-link--no-visited-state">2020-074BB</a>
           </li>
           <li>
-        <a href="satellite-4" class="govuk-link govuk-link--no-visited-state">2020-074BL</a>
+        <a href="satellite-4.html" class="govuk-link govuk-link--no-visited-state">2020-074BL</a>
         </li>
         <li>
-        <a href="satellite-5" class="govuk-link govuk-link--no-visited-state">2020-088AC</a>
+        <a href="satellite-5.html" class="govuk-link govuk-link--no-visited-state">2020-088AC</a>
         </li>
       </div>
 
-      <div class="govuk-grid-column-two-thirds">
+</div>
 
-        <h2 class="govuk-heading-l">History of 2020-088AC location</h2>
+    <div>
 
-        <p>This table illustrates the changing location of 2020-088AC with time.</p>
-        <table class="govuk-table">
-          <caption class="govuk-table__caption">Location history</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">TIME</th>
-              <th scope="col" class="govuk-table__header">DATE</th>
-              <th scope="col" class="govuk-table__header">ORBIT</th>
-              <th scope="col" class="govuk-table__header">INCLINATION</th>
-              <th scope="col" class="govuk-table__header">APOGEE</th>
-              <th scope="col" class="govuk-table__header">PERIGEE</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">09:14</th>
-              <th scope="row" class="govuk-table__cell">11/01/2021</th>
-              <th scope="row" class="govuk-table__cell">LEO</th>
-              <td scope="row" class="govuk-table__cell">98.46</td>
-              <td scope="row" class="govuk-table__cell">1293</td>
-              <td scope="row" class="govuk-table__cell">513</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell">09:17</th>
-              <th scope="row" class="govuk-table__cell">10/01/2021</th>
-              <th scope="row" class="govuk-table__cell">LEO</th>
-              <td scope="row" class="govuk-table__cell">97.01</td>
-              <td scope="row" class="govuk-table__cell">884</td>
-              <td scope="row" class="govuk-table__cell">429</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">09:20</th>
-              <th scope="row" class="govuk-table__header">09/01/2021</th>
-              <th scope="row" class="govuk-table__header">LEO</th>
-              <td scope="row" class="govuk-table__cell">98.82</td>
-              <td scope="row" class="govuk-table__cell">429</td>
-              <td scope="row" class="govuk-table__cell">716</td>
-            </tr>
-          </tbody>
-        </table>
-
-            <a href="/public/downloads/space_data.xlsx" download >Download location data for 2020-088AC</a>
       </div>
 
-
-    <div class="govuk-grid-column-two-thirds">
-
-<div class="govuk-!-padding-top-9">
-      <h2 class="govuk-heading-l">Current risk of debris collision</h2>
+  </main>
 </div>
-      <table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header app-custom-class">TIME TO COLLISION</th>
-      <th scope="col" class="govuk-table__header app-custom-class">INTERNATIONAL DESIGNATOR</th>
-      <th scope="col" class="govuk-table__header app-custom-class">TYPE</th>
-      <th scope="col" class="govuk-table__header app-custom-class">RCS</th>
-      <th scope="col" class="govuk-table__header app-custom-class">LIKELIHOOD</th>
-      <th scope="col" class="govuk-table__header app-custom-class">ERROR</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">24 h</td>
-      <td class="govuk-table__cell">1957-001A</td>
-      <td class="govuk-table__cell">ROCKET BODY</td>
-      <td class="govuk-table__cell">LARGE</td>
-      <td class="govuk-table__cell">3%</td>
-      <td class="govuk-table__cell">34%</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">1 week</td>
-      <td class="govuk-table__cell">1994-085Z</td>
-      <td class="govuk-table__cell">DEBRIS</td>
-      <td class="govuk-table__cell">SMALL</td>
-      <td class="govuk-table__cell">1%</td>
-      <td class="govuk-table__cell">284%</td>
-    </tr>
-  </tbody>
-</table>
 
-<a href="/impending-alerts">View list of impending alerts for all satellites</a>
-    </div>
-  </div>
-</main>
-</div>
+
 {% endblock %}
