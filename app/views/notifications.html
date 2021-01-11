@@ -6,13 +6,45 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="login.html" class="govuk-back-link">Back</a>
+  <a href="/impending-alerts" class="govuk-back-link">Back</a>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Impending alerts</h1>
-        <p class="govuk-body">Your impending alerts are listed in the table below:</p>
+        <h1 class="govuk-heading-xl">Your notification settings</h1>
+        <p>
+        </p>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Show me alerts from:
+              </h1>
+            </legend>
+            <div id="waste-hint" class="govuk-hint">
+              Select all that apply.
+            </div>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  UKSPoCK
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                  Spacetrack
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <a href="/public/downloads/space_data.xlsx" download >Download this data as an xml feed</a>
 
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
         <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
@@ -22,12 +54,13 @@ My satellite environment
 </div>
 
       </div>
+      <p>
+        </p>
+        <p>
+          </p>
+          <p>
+            </p>
 
-      <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m">My notification settings</h2>
-        <li>
-        <a href="notifications" class="govuk-link--no-visited-state">Change your notification settings here</a>
-        </li>
 
         <h2 class="govuk-heading-m">My satellites</h2>
         <p class="govuk-body">Satellites attached to your registration number:</p>
@@ -52,67 +85,7 @@ My satellite environment
 </div>
 
     <div>
-            <table class="govuk-table">
 
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header app-custom-class">SATELLITE</th>
-      <th scope="col" class="govuk-table__header app-custom-class">TIME TO COLLISION</th>
-      <th scope="col" class="govuk-table__header app-custom-class">INTERNATIONAL DESIGNATOR</th>
-      <th scope="col" class="govuk-table__header app-custom-class">TYPE</th>
-      <th scope="col" class="govuk-table__header app-custom-class">RADAR CROSS-SECTION</th>
-      <th scope="col" class="govuk-table__header app-custom-class">LIKELIHOOD</th>
-      <th scope="col" class="govuk-table__header app-custom-class">ERROR</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">2020-088AD</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-warning-text">
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-warning-text__assistive">Warning</span>
-            12 h
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          </strong>
-        </div>
-      </td>
-      <td class="govuk-table__cell">1957-001A</td>
-      <td class="govuk-table__cell">ROCKET BODY</td>
-      <td class="govuk-table__cell">LARGE</td>
-      <td class="govuk-table__cell">3%</td>
-      <td class="govuk-table__cell">34%</td>
-    </tr>
-    <tr class="govuk-table__row">
-    <td class="govuk-table__cell">2020-088AC</td>
-    <td class="govuk-table__cell">72 h</td>
-    <td class="govuk-table__cell">1987-026F</td>
-    <td class="govuk-table__cell">PAYLOAD</td>
-    <td class="govuk-table__cell">LARGE</td>
-    <td class="govuk-table__cell">1%</td>
-    <td class="govuk-table__cell">350%</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">1957-001A</td>
-      <td class="govuk-table__cell">1 week</td>
-      <td class="govuk-table__cell">1994-085Z</td>
-      <td class="govuk-table__cell">DEBRIS</td>
-      <td class="govuk-table__cell">SMALL</td>
-      <td class="govuk-table__cell">1%</td>
-      <td class="govuk-table__cell">284%</td>
-    </tr>
-<tr class="govuk-table__row">
-  <td class="govuk-table__cell">2020-019F</td>
-    <td class="govuk-table__cell">2 weeks</td>
-    <td class="govuk-table__cell">1960-003C</td>
-    <td class="govuk-table__cell">DEBRIS</td>
-    <td class="govuk-table__cell">SMALL</td>
-    <td class="govuk-table__cell">2%</td>
-    <td class="govuk-table__cell">300%</td>
-    </tr>
-
-          </tbody>
-      </table>
       </div>
 
   </main>
