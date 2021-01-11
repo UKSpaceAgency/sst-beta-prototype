@@ -9,21 +9,6 @@
   {{ govukHeader() }}
 {% endblock %}
 
-{% block beforeContent %}
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Section</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link">Subsection</a>
-      </li>
-    </ol>
-  </div>
-{% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
@@ -64,7 +49,7 @@
 
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
-          Subsection
+          Related content
         </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
@@ -73,11 +58,7 @@
                 Register to use this service
               </a>
             </li>
-                      <li>
-              <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Subsection</span>
-              </a>
-            </li>
+                    
           </ul>
         </nav>
       </aside>
