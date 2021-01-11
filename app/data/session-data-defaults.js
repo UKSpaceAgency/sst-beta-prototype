@@ -20,4 +20,5 @@ module.exports = {
 
   // Insert values here
 "data-source": {{ checked("Spacetrack and UKSpOC", "yes") }}
+"contact": [ "email", "text message" ]
 }
