@@ -19,5 +19,5 @@ Example usage:
 module.exports = {
 
   // Insert values here
-name="Spacetrack and UKSpOC" value="yes" {{ checked("Spacetrack and UKSpOC", "yes") }}
+"data-source": {{ checked("Spacetrack and UKSpOC", "yes") }}
 }
