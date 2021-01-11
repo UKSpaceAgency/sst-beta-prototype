@@ -17,7 +17,7 @@ Example usage:
 
 */
 module.exports = {
-
+name="contact" value="text message" {{ checked("text message", "yes") }}
   // Insert values here
 
 }
