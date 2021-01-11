@@ -8,87 +8,71 @@ My satellite environment
 <div class="govuk-width-container">
   <a href="login.html" class="govuk-back-link">Back</a>
   <main class="govuk-main-wrapper">
-
+    <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Your notification settings</h1>
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Show me alerts containing data from:
-              </h1>
-            </legend>
-            <div class="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                  Spacetrack and UKSPoCK
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                  Spacetrack only
-                </label>
-              </div>
-              </div>
-            </div>
-            <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  Send me alerts in the following format(s):
-                </h1>
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-                  <label class="govuk-label govuk-checkboxes__label" for="contact">
-                    Email
-                  </label>
-                </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
-                  <label class="govuk-label govuk-checkboxes__label" for="contact-3">
-                    Text message
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-      <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-        Show me alerts when a conjunction likelihood is greater than:
-        </h1>
-      </legend>
-      <div class="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-            1%
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-            10%
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-          <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-            50%
-          </label>
-        </div>
+        <h1 class="govuk-heading-xl">Impending alerts</h1>
+        <p class="govuk-body">Your impending alerts are listed in the table below:</p>
 
-    </fieldset>
+        <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Show me alerts containing data from:
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                          Spacetrack and UKSPoCK
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                          Spacetrack only
+                        </label>
+                      </div>
+                      </div>
+                    </div>
 
       </div>
 
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">Impending alerts</h2>
 
+        <a href="impending-alerts" class="govuk-link--no-visited-state">Return to impending alerts</a>
+        <p>
+          </p>
+
+        <h2 class="govuk-heading-m">My satellites</h2>
+        <p class="govuk-body">Satellites attached to your registration number:</p>
+        <ul class="govuk-list">
+          <li>
+          <a href="satellite-1.html" class="govuk-link--no-visited-state">2020-088AD</a>
+          </li>
+        <li>
+          <a href="satellite-2.html" class="govuk-link govuk-link--no-visited-state">2020-019F</a>
+          </li>
+        <li>
+        <a href="satellite-3.HTML" class="govuk-link govuk-link--no-visited-state">2020-074BB</a>
+          </li>
+          <li>
+        <a href="satellite-4.html" class="govuk-link govuk-link--no-visited-state">2020-074BL</a>
+        </li>
+        <li>
+        <a href="satellite-5.html" class="govuk-link govuk-link--no-visited-state">2020-088AC</a>
+        </li>
+      </div>
 
 </div>
+
+    <div>
+
+      </div>
+
   </main>
 </div>
+
+
 {% endblock %}
