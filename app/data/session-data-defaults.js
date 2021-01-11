@@ -19,6 +19,8 @@ Example usage:
 module.exports = {
 
   // Insert values here
+input type="radio" name="data-source" value="Spacetrack and UKSpOC" {{ checked("over-18", "yes") }}
+
 "data-source": {{ checked("Spacetrack and UKSpOC", "yes") }}
-"contact": [ "email", "text message" ]
+"contact": [ "text message" ]
 }
