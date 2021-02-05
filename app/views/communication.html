@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/impending-alerts">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Conversation history
+    </h1>
+
+    <p>Please find your active conversations below. To start a new conversation, select 'new message'.</p>
+
+    <button class="govuk-button" data-module="govuk-button">
+      New message
+    </button>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption">Active conversations</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header">Recipient</th>
+          <th scope="col" class="govuk-table__header">Subject</th>
+          <th scope="col" class="govuk-table__header">History</th>
+          <th scope="col" class="govuk-table__header">Case open/closed</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/conversation-example">05/02/2021</a></th>
+          <td class="govuk-table__cell">NORSS analyst</td>
+          <td class="govuk-table__cell">AA00-0001</td>
+          <td class="govuk-table__cell">5 previous messages</td>
+          <td class="govuk-table__cell">Open</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><a href="/conversation-example">03/02/2021</a></th>
+          <td class="govuk-table__cell">NORSS analyst</td>
+          <td class="govuk-table__cell">AA00-0003</td>
+          <td class="govuk-table__cell">4 previous messages</td>
+          <td class="govuk-table__cell">Open</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">02/02/2021</th>
+          <td class="govuk-table__cell">NORSS analyst</td>
+          <td class="govuk-table__cell">AA00-0007</td>
+          <td class="govuk-table__cell">5 previous messages</td>
+          <td class="govuk-table__cell">Closed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Return to <a href="/impending-alerts">impending alerts summary</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
