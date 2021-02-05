@@ -6,7 +6,7 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="impending-alerts.html" class="govuk-back-link">Back</a>
+  <a href="operator-homepage.html" class="govuk-back-link">Back</a>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -17,6 +17,9 @@ My satellite environment
             <span class="govuk-warning-text__assistive">Warning</span>
             This is an urgent alert
             </strong>
+            <p></p>
+            <p> This page contains the latest data released by UKSA for this conjunction event.
+              For an explanation of how this data was calculated, and what it means, please see our <a class="govuk-link" href="data-explanation.html">data explanation.</a>
           </div>
                   </div>
         <div class="govuk-grid-column-one-third">
@@ -29,7 +32,7 @@ My satellite environment
             <a href="notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
             <p>
             </p>
-            <h2 class="govuk-heading-m">Contact an Analyst</h2>
+            <h2 class="govuk-heading-m">Contact an Orbital Analyst</h2>
             <a href="communication" class="govuk-link--no-visited-state">View your communications history</a>
   </div>
           </div>
@@ -128,7 +131,19 @@ My satellite environment
                     </tr>
                   </tbody>
                 </table>
-                <img src="/public/images/chart-1.png" alt="User icon">
+                <h2 class="govuk-heading-l">Further Analysis</h2>
+                <p> Further analysis can provide you with more detailed information on the predicted conjunction event. Select the analysis you would like to view.
+                <ul class="govuk-list">
+                  <li>
+                    <a class="govuk-link" href="graph-analysis">View graphical analysis</a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="#">View maps data</a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="graph-analysis">View event simulation data</a>
+                  </li>
+                </ul>
               </div>
   </main>
 </div>
