@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <a href="login.html" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Satellite Catalogue</h1>
+        <p class="govuk-body">All conjunction alerts involving your satellites listed in the table below:</p>
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            There is 1 urgent alert
+          </strong>
+        </div>
+      </div>
+        <div class="govuk-grid-column-one-third">
+          <h2 class="govuk-heading-m">Notification settings</h2>
+
+          <a href="notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
+          <p>
+            </p>
+
+          <h2 class="govuk-heading-m">My satellites</h2>
+          <a href="satellite-list" class="govuk-link--no-visited-state">View satellites attached to your registration number</a>
+        </div>
+      <div class="govuk-grid-row">
+        <p>
+        </p>
+        <p>
+        </p>
+
+        <div>
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Your satellites</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Common name</th>
+                <th scope="col" class="govuk-table__header">International designator</th>
+                <th scope="col" class="govuk-table__header">UK licensed</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/satellite-1">1</a></td>
+                <td class="govuk-table__cell">2020-088AD</td>
+                <td class="govuk-table__cell">Yes</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/satellite-2">2</a></td>
+                <td class="govuk-table__cell">2020-088AD</td>
+                <td class="govuk-table__cell">Yes</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/satellite-3">3</a></td>
+                <td class="govuk-table__cell">2020-088AD</td>
+                <td class="govuk-table__cell">Yes</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/satellite-4">4</a></td>
+                <td class="govuk-table__cell">2020-088AD</td>
+                <td class="govuk-table__cell">Yes</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/satellite-5">5</a></td>
+                <td class="govuk-table__cell">2020-088AD</td>
+                <td class="govuk-table__cell">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      </div>
+
+
+  </main>
+</div>
+
+
+{% endblock %}
