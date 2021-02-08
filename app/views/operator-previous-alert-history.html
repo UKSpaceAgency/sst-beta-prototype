@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="operator-homepage.html" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Alert history</h1>
+            <p></p>
+            <p> This table shows a history of alerts for your satellites.
+              </p>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Alert ID</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Satellite at risk</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Probability of collision (USA)</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Probability of collision (UKSA)</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Last update</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Conjunction event?</th>
+
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">2nd Feb 2021</td>
+                  <td class="govuk-table__cell">AA00-0045</td>
+                  <td class="govuk-table__cell">2020-074BB</td>
+                  <td class="govuk-table__cell">2%</td>
+                  <td class="govuk-table__cell">8%</td>
+                  <td class="govuk-table__cell">2nd Feb 2021</td>
+                  <td class="govuk-table__cell">No</td>
+
+                  </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">30th Jan 2021</td>
+                  <td class="govuk-table__cell">AA00-0048</td>
+                  <td class="govuk-table__cell">2020-074BB</td>
+                  <td class="govuk-table__cell">12%</td>
+                  <td class="govuk-table__cell">9%</td>
+                  <td class="govuk-table__cell">29th Jan 2021</td>
+                  <td class="govuk-table__cell">No</td>
+
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">26th Jan 2021</td>
+                  <td class="govuk-table__cell">AA00-0071</td>
+                  <td class="govuk-table__cell">2020-088AC</td>
+                  <td class="govuk-table__cell">3%</td>
+                  <td class="govuk-table__cell">2%</td>
+                  <td class="govuk-table__cell">26th Jan 2021</td>
+                  <td class="govuk-table__cell">No</td>
+
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">15th Jan 2021</td>
+                  <td class="govuk-table__cell">AA00-0082</td>
+                  <td class="govuk-table__cell">2020-074BL</td>
+                  <td class="govuk-table__cell">15%</td>
+                  <td class="govuk-table__cell">9%</td>
+                  <td class="govuk-table__cell">15th Jan 2021</td>
+                  <td class="govuk-table__cell">No</td>
+
+                </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <h2 class="govuk-heading-m">All alerts</h2>
+
+          <a href="regulator_homepage" class="govuk-link--no-visited-state">View alert homepage</a>
+          <p>
+            </p>
+            <h2 class="govuk-heading-m">Contact an Orbital Analyst</h2>
+            <a href="communication" class="govuk-link--no-visited-state">View your communications history</a>
+            <p></p>
+            <h2 class="govuk-heading-m">My satellites</h2>
+            <a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites attached to your registration number</a>
+  </div>
+          </div>
+
+              </div>
+  </main>
+</div>
+
+
+{% endblock %}
