@@ -1,18 +1,23 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Question page
-{% endblock %}
-
-{% block beforeContent %}
-  <a class="govuk-back-link" href="/impending-alerts">Back</a>
+My satellite environment
 {% endblock %}
 
 {% block content %}
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-1">Alert AA00-0001</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
     <h1 class="govuk-heading-xl">
       Conversation history
     </h1>
@@ -63,26 +68,5 @@
 
     </div>
 
-    <div class="govuk-grid-column-one-third">
-      <h2 class="govuk-heading-m">Overview of current alerts</h2>
-      <a href="/operator-homepage" class="govuk-link--no-visited-state">View all current alerts for your satellites</a>
-      <p>
-        </p>
-
-      <h2 class="govuk-heading-m">Contact an analyst or regulator</h2>
-      <a href="/operator-satellite-list" class="govuk-link--no-visited-state">View your conversations with other Meridian users</a>
-      <p>
-        </p>
-        
-    </div>
-  <div class="govuk-grid-row">
-    <p>
-    </p>
-    <p>
-    </p>
-
-    <div>
-
-  </div>
-
+  </main>
 {% endblock %}
