@@ -6,10 +6,18 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="operator-homepage.html" class="govuk-back-link">Back</a>
-  <main class="govuk-main-wrapper">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-notifications">Notification settings</a>
+    </li>
+      </ol>
+      </div>
+      <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">Notification settings</h1>
         <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
@@ -123,17 +131,7 @@ My satellite environment
                                     </div>
                                     </div>
                   </div>
-      <div class="govuk-grid-column-one-third">
-          <h2 class="govuk-heading-m">All alerts</h2>
-        <a href="operator-homepage" class="govuk-link--no-visited-state">View alert homepage</a>
-          <p>
-          </p>
-          <h2 class="govuk-heading-m">Contact an Orbital Analyst</h2>
-          <a href="communication" class="govuk-link--no-visited-state">View your communications history</a>
-          <p></p>
-          <h2 class="govuk-heading-m">My satellites</h2>
-          <a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites attached to your registration number</a>
-</div>
+      
 
 </div>
 

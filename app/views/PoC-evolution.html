@@ -6,10 +6,21 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="warning-1.html" class="govuk-back-link">Back</a>
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-1">Alert AA00-0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="PoC-evolution">Evolution of conjunction probability</a>
+    </li>
+      </ol>
+      </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">AA00-0001: Evolution of conjunction probability</h1>
             <p></p>
             <p> This page contains the latest data released by UKSA for this conjunction event.
@@ -18,21 +29,7 @@ My satellite environment
             Data from both the USA and UKSA is shown. </p>
               <img src="/public/images/chart-2.png" alt="User icon">
             </div>
-        <div class="govuk-grid-column-one-third">
-          <h2 class="govuk-heading-m">All alerts</h2>
-
-          <a href="operator-homepage" class="govuk-link--no-visited-state">View Alert Homepage</a>
-          <p>
-            </p>
-            <h2 class="govuk-heading-m">Notification settings</h2>
-            <a href="notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
-            <p>
-            </p>
-            <h2 class="govuk-heading-m">Contact an Analyst</h2>
-            <a href="communication" class="govuk-link--no-visited-state">View your communications history</a>
-        </div>
-
-  </main>
+          </main>
 </div>
 
 
