@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="/emergency-response-team-homepage" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Notification settings</h1>
+        <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                        Show me alerts containing data from:
+                      </h1>
+                    </legend>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="data-source-1" name="data-source" type="radio" value="Spacetrack and UKSpOC">
+                        <label class="govuk-label govuk-radios__label" for="data-source">
+                          Spacetrack and UKSpOC
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="data-source-2" name="data-source" type="radio" value="UKSpOC only">
+                        <label class="govuk-label govuk-radios__label" for="data-source-2">
+                          UKSpOC only
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="data-source-3" name="data-source" type="radio" value="Spacetrack only">
+                        <label class="govuk-label govuk-radios__label" for="data-source-3">
+                          Spacetrack only
+                        </label>
+                      </div>
+                      </div>
+                      </fieldset>
+                    </div>
+                      <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                  <h1 class="govuk-fieldset__heading">
+                                    Send me alerts in the following format(s):
+                                  </h1>
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                  <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                      Email
+                                    </label>
+                                  </div>
+                                  <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
+                                    <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                                      Text message
+                                    </label>
+                                  </div>
+                                </div>
+                                </div>
+                              <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                    <h1 class="govuk-fieldset__heading">
+                                    Show me alerts when a probability of collision is greater than:
+                                    </h1>
+                                  </legend>
+                                  <div class="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="conjunction-1" name="likelihood" type="radio" value="1%">
+                                      <label class="govuk-label govuk-radios__label" for="conjunction-1">
+                                        1%
+                                      </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="conjunction-2" name="likelihood" type="radio" value="10%">
+                                      <label class="govuk-label govuk-radios__label" for="conjunction-2">
+                                        10%
+                                      </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="conjunction-3" name="likelihood" type="radio" value="50%">
+                                      <label class="govuk-label govuk-radios__label" for="conjunction-3">
+                                        50%
+                                      </label>
+                                    </div>
+                                  </div>
+                                  </div>
+                          <div class="govuk-form-group">
+                          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                      <h1 class="govuk-fieldset__heading">
+                                        Show me alerts for conjunction warnings:
+                                      </h1>
+                                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="contact" name="warning" type="checkbox" value="Under 24h" data-aria-controls="conditional-contact">
+                                        <label class="govuk-label govuk-checkboxes__label" for="warning-1">
+                                          Under 24h
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="24h- 48h" data-aria-controls="conditional-contact-3">
+                                        <label class="govuk-label govuk-checkboxes__label" for="warning-2">
+                                          24h - 48h
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="48h - 72h" data-aria-controls="conditional-contact-3">
+                                        <label class="govuk-label govuk-checkboxes__label" for="warning-3">
+                                          48h - 72h
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="72h - 10 days" data-aria-controls="conditional-contact-3">
+                                        <label class="govuk-label govuk-checkboxes__label" for="warning-4">
+                                          72h - 10 days
+                                        </label>
+                                      </div>
+                                    </div>
+                                    </div>
+                  </div>
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">Overview of current alerts</h2>
+        <a href="/emergency-response-team-homepage" class="govuk-link--no-visited-state">View all current alerts for UK satellites</a>
+        <p>
+          </p>
+
+        <h2 class="govuk-heading-m">Contact an operator or regulator</h2>
+        <a href="/ert-communication" class="govuk-link--no-visited-state">View your conversations with other Meridian users</a>
+        <p>
+          </p>
+
+        <h2 class="govuk-heading-m">Notification settings</h2>
+          <a href="/ert-notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
+      </div>
+
+</div>
+
+    <div>
+
+      </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
