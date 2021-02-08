@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="operator-homepage.html" class="govuk-back-link">Back</a>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">2020-074BL</h1>
+        <h2 class="govuk-heading-l">Satellite Information</h2>
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Common name</th>
+              <td class="govuk-table__cell">Starlink-1862</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">NORAD ID</th>
+              <td class="govuk-table__cell">46797</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">International designator</th>
+              <td class="govuk-table__cell">2020-074BL</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Object type</th>
+              <td class="govuk-table__cell">Payload</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Active / inactive</th>
+              <td class="govuk-table__cell">Active</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Mass (kg)</th>
+              <td class="govuk-table__cell">250</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">UK licensed</th>
+              <td class="govuk-table__cell">No</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Launching state</th>
+              <td class="govuk-table__cell">USA</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Launch year</th>
+              <td class="govuk-table__cell">2020</td>
+            </tr>
+          </tbody>
+        </table>
+          <p> </p>
+          <h2 class="govuk-heading-l">Location data for 2020-074BL</h2>
+          <p> This table shows the most recent location data for 2020-019F.</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">TIME</th>
+                <th scope="col" class="govuk-table__header">DATE</th>
+                <th scope="col" class="govuk-table__header">ORBIT</th>
+                <th scope="col" class="govuk-table__header">INCLINATION</th>
+                <th scope="col" class="govuk-table__header">APOGEE</th>
+                <th scope="col" class="govuk-table__header">PERIGEE</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell">09:14</th>
+                <th scope="row" class="govuk-table__cell">11/01/2021</th>
+                <th scope="row" class="govuk-table__cell">LEO</th>
+                <td scope="row" class="govuk-table__cell">98.46</td>
+                <td scope="row" class="govuk-table__cell">5989</td>
+                <td scope="row" class="govuk-table__cell">587</td>
+              </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">09:17</td>
+                    <td scope="row" class="govuk-table__cell">10/01/2021</td>
+                    <td scope="row" class="govuk-table__cell">LEO</td>
+                    <td scope="row" class="govuk-table__cell">97.01</td>
+                    <td scope="row" class="govuk-table__cell">634</td>
+                    <td scope="row" class="govuk-table__cell">628</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">09:20</td>
+                    <td scope="row" class="govuk-table__cell">09/01/2021</td>
+                    <td scope="row" class="govuk-table__cell">LEO</td>
+                    <td scope="row" class="govuk-table__cell">98.82</td>
+                    <td scope="row" class="govuk-table__cell">626</td>
+                    <td scope="row" class="govuk-table__cell">549</td>
+                  </tr>
+                </tbody>
+              </table>
+                <a href="/public/downloads/space_data.xlsx" download >Download location data for 2020-074BL</a>
+                <p> </p>
+                <h2 class="govuk-heading-l">Active conjunction alerts involving 2020-074BL</h2>
+                <p>2020-074BL does not currently have any conjunction alerts.</p>
+                <a href="/public/downloads/space_data.xlsx" download >Download alert history for 2020-074BL</a>
+              </div>
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">All alerts</h2>
+        <a href="operator-homepage" class="govuk-link--no-visited-state">View alert homepage</a>
+        <p></p>
+        <h2 class="govuk-heading-m">Notification settings</h2>
+        <a href="operator-notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
+        <p></p>
+        <h2 class="govuk-heading-m">Contact an Orbital Analyst</h2>
+        <a href="communication" class="govuk-link--no-visited-state">View your communications history</a>
+        <p></p>
+        <h2 class="govuk-heading-m">My satellites</h2>
+        <a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites attached to your registration number</a>
+      </div>
+
+</div>
+
+    <div>
+
+      </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
