@@ -6,7 +6,16 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="operator-homepage.html" class="govuk-back-link">Back</a>
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/warning-4">Alert AA00-0004</a>
+      </li>
+    </ol>
+  </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -122,6 +131,12 @@ My satellite environment
                     </li>
                     <li>
                       <a class="govuk-link" href="map-analysis.html">Predicted location of potential conjunction</a>
+                    </li>
+                  </ul>
+                  <h2 class="govuk-heading-l">Conversation history</h2>
+                  <ul class="govuk-list">
+                    <li>
+                      <a class="govuk-link" href="/operator-communication">View conversations associated with this alert</a>
                     </li>
                   </ul>
                   <h2 class="govuk-heading-l">Alert history</h2>

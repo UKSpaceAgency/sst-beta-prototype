@@ -7,7 +7,16 @@ My satellite environment
 {% block content %}
 
 <div class="govuk-width-container">
-  <a href="login.html" class="govuk-back-link">Back</a>
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-satellite-list">Satellite Catalogue</a>
+      </li>
+    </ol>
+  </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -15,7 +24,6 @@ My satellite environment
         <p class="govuk-body">All satellites registered to your account are listed in the table below:</p>
           <p></p>
           <table class="govuk-table">
-            <caption class="govuk-table__caption">Your satellites</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header">Common name</th>
