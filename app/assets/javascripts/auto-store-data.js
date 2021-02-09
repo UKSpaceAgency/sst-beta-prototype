@@ -13,11 +13,11 @@ $('body').on('submit', 'form', function (e) {
   $checkboxes.each(function () {
     var $this = $(this)
 
-    if (!names[$this.attr('name')]) {
-      names[$this.attr('name')] = true
+    if (!names[$this.attr('operator-warning')]) {
+      names[$this.attr('operator-warning')] = true
       var $input = $('<input type="hidden">')
-      $input.attr('name', $this.attr('name'))
-      $input.attr('value', '_unchecked')
+      $input.attr('operator-warning', $this.attr('operator-warning'))
+      $input.attr('Under 24h', '_unchecked')
       $inputs.push($input)
     }
   })
