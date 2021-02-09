@@ -6,16 +6,7 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/operator-homepage">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/warning-3">Alert AA00-0003</a>
-      </li>
-    </ol>
-  </div>
+  <a href="operator-homepage.html" class="govuk-back-link">Back</a>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -132,12 +123,6 @@ My satellite environment
                       <a class="govuk-link" href="map-analysis.html">Predicted location of potential conjunction</a>
                     </li>
                   </ul>
-                  <h2 class="govuk-heading-l">Conversation history</h2>
-                  <ul class="govuk-list">
-                    <li>
-                      <a class="govuk-link" href="/operator-communication">View conversations associated with this alert</a>
-                    </li>
-                  </ul>
                   <h2 class="govuk-heading-l">Alert history</h2>
                   <p> This page shows the latest data for alert AA00-0003. To view previous updates released for this conjunction event, see the alert history.
                   <ul class="govuk-list">
@@ -152,9 +137,6 @@ My satellite environment
           <p>
             </p>
 
-            <h2 class="govuk-heading-m">Contact an Orbital Analyst</h2>
-            <a href="communication" class="govuk-link--no-visited-state">View your communications history</a>
-            <p></p>
             <h2 class="govuk-heading-m">My satellites</h2>
             <a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites attached to your registration number</a>
   </div>
