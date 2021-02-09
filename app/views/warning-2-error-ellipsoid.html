@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-2">Alert AA00-0002</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-2-error-ellipsoid">Evolution of error ellipsoids</a>
+    </li>
+      </ol>
+      </div>  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">AA00-0001: Evolution of error ellipsoids</h1>
+            <p></p>
+              <p> Each error ellipsoid shows the uncertainity of an objects position in time.</p>
+                  <img src="/public/images/chart-1.png" alt="Conjunction Data message">
+
+          </div>
+        <div class="govuk-grid-column-one-third">
+          <h2 class="govuk-heading-m">All alerts</h2>
+
+          <a href="operator-homepage" class="govuk-link--no-visited-state">View Alert Homepage</a>
+          <p>
+            </p>
+            <h2 class="govuk-heading-m">Notification settings</h2>
+            <a href="notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
+            <p>
+            </p>
+            <h2 class="govuk-heading-m">Contact an Analyst</h2>
+            <a href="communication" class="govuk-link--no-visited-state">View your communications history</a>
+  </div>
+          </div>
+  </main>
+</div>
+
+
+{% endblock %}
