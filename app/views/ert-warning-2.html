@@ -6,7 +6,16 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="emergency-response-team-homepage.html" class="govuk-back-link">Back</a>
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/emergency-response-team-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/ert-warning-2">Alert AA00-0021</a>
+      </li>
+    </ol>
+  </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -131,16 +140,29 @@ My satellite environment
                     </tr>
                   </tbody>
                 </table>
-                <h2 class="govuk-heading-l">Further Analysis</h2>
-                <p> Further analysis can provide you with more detailed information on the predicted conjunction event. Select the analysis you would like to view.
+                <h2 class="govuk-heading-l">Further analysis</h2>
                 <ul class="govuk-list">
                   <li>
-                    <a class="govuk-link" href="graph-analysis.html">View graphical analysis</a>
+                    <a class="govuk-link" href="PoC-evolution.html">Evolution of conjunction probability</a>
                   </li>
                   <li>
-                    <a class="govuk-link" href="map-analysis.html">View maps data</a>
+                    <a class="govuk-link" href="error-ellipsoid-analysis.html">Evolution of conjunction error ellipsoids</a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="map-analysis.html">Predicted location of potential conjunction</a>
                   </li>
                 </ul>
+                <h2 class="govuk-heading-l">Conversation history</h2>
+                <ul class="govuk-list">
+                  <li>
+                    <a class="govuk-link" href="/ert-communication">View conversations associated with this alert</a>
+                  </li>
+                </ul>
+                <h2 class="govuk-heading-l">Alert history</h2>
+                <p> This page shows the latest data for alert AA00-0001. To view previous updates released for this conjunction event, see the alert history.
+                <ul class="govuk-list">
+                  <li>
+                    <a class="govuk-link" href="warning-1-history.html">View alert history</a>
               </div>
   </main>
 </div>
