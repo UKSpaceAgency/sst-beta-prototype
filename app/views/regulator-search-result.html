@@ -6,7 +6,19 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="impending-alerts.html" class="govuk-back-link">Back</a>
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/regulator-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/regulator-satellite-list">Search for a satellite</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/regulator-search-result">Search: 2020-088AD</a>
+      </li>
+    </ol>
+  </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -171,32 +183,6 @@ My satellite environment
           </table>
             <a href="/public/downloads/space_data.xlsx" download >Download notification history for 2020-088AD</a>
       </div>
-      <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m">Overview of current alerts</h2>
-        <a href="/regulator-homepage" class="govuk-link--no-visited-state">View all current alerts for UK satellites</a>
-        <p>
-          </p>
-
-        <h2 class="govuk-heading-m">Search all satellites</h2>
-        <a href="/regulator-satellite-list" class="govuk-link--no-visited-state">View details of another UK-licensed satellite</a>
-        <p>
-          </p>
-
-        <h2 class="govuk-heading-m">Contact an operator or analyst</h2>
-        <a href="/regulator-communication" class="govuk-link--no-visited-state">View your conversations with other Meridian users</a>
-        <p>
-          </p>
-
-        <h2 class="govuk-heading-m">Notification settings</h2>
-          <a href="/regulator-notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
-      </div>
-    <div class="govuk-grid-row">
-      <p>
-      </p>
-      <p>
-      </p>
-      </div>
-
 </div>
 
     <div>

@@ -6,7 +6,16 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="/analyst-homepage" class="govuk-back-link">Back</a>
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/analyst-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/analyst-warning-4">Alert AA00-0034</a>
+      </li>
+    </ol>
+  </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -17,25 +26,6 @@ My satellite environment
               For an explanation of how this data was calculated, and what it means, please see our <a class="govuk-link" href="data-explanation.html">data explanation.</a> </p>
           </div>
                   </div>
-        <div class="govuk-grid-column-one-third">
-          <h2 class="govuk-heading-m">Overview of current alerts</h2>
-
-          <a href="/analyst-homepage" class="govuk-link--no-visited-state">View all current alerts for UK satellites</a>
-          <p>
-            </p>
-
-          <h2 class="govuk-heading-m">Search all satellites</h2>
-          <a href="/analyst-satellite-list" class="govuk-link--no-visited-state">View details of another UK-licensed satellite</a>
-          <p>
-            </p>
-
-          <h2 class="govuk-heading-m">Contact an operator, analyst or regulator</h2>
-          <a href="/analyst-communication" class="govuk-link--no-visited-state">View your conversations with other Meridian users</a>
-          <p>
-            </p>
-          <h2 class="govuk-heading-m">Notification settings</h2>
-          <a href="/analyst-notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
-  </div>
           </div>
           <div class="govuk-grid-row">
             <p> </p>
@@ -136,16 +126,29 @@ My satellite environment
                     </tr>
                   </tbody>
                 </table>
-                <h2 class="govuk-heading-l">Further Analysis</h2>
-                <p> Further analysis can provide you with more detailed information on the predicted conjunction event. Select the analysis you would like to view.
+                <h2 class="govuk-heading-l">Further analysis</h2>
                 <ul class="govuk-list">
                   <li>
-                    <a class="govuk-link" href="graph-analysis.html">View graphical analysis</a>
+                    <a class="govuk-link" href="PoC-evolution.html">Evolution of conjunction probability</a>
                   </li>
                   <li>
-                    <a class="govuk-link" href="map-analysis.html">View maps data</a>
+                    <a class="govuk-link" href="error-ellipsoid-analysis.html">Evolution of conjunction error ellipsoids</a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="map-analysis.html">Predicted location of potential conjunction</a>
                   </li>
                 </ul>
+                <h2 class="govuk-heading-l">Conversation history</h2>
+                <ul class="govuk-list">
+                  <li>
+                    <a class="govuk-link" href="/analyst-communication">View conversations associated with this alert</a>
+                  </li>
+                </ul>
+                <h2 class="govuk-heading-l">Alert history</h2>
+                <p> This page shows the latest data for alert AA00-0001. To view previous updates released for this conjunction event, see the alert history.
+                <ul class="govuk-list">
+                  <li>
+                    <a class="govuk-link" href="warning-1-history.html">View alert history</a>
               </div>
   </main>
 </div>
