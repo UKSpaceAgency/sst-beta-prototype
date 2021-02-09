@@ -19,10 +19,13 @@ My satellite environment
       <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
         <h1 class="govuk-heading-xl">Notification settings</h1>
+        <form class="form" action="/operator-homepage" method="post">
         <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                      <h2 class="govuk-heading-l">Show me alerts containing data from:</h2>
+                      <h1 class="govuk-fieldset__heading">
+                        Show me alerts containing data from:
+                      </h1>
                     </legend>
                     <div class="govuk-radios">
                       <div class="govuk-radios__item">
@@ -49,7 +52,9 @@ My satellite environment
                       <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                                  <h2 class="govuk-heading-l">Send me alerts in the following format(s):</h2>
+                                  <h1 class="govuk-fieldset__heading">
+                                    Send me alerts in the following format(s):
+                                  </h1>
                                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                                   <div class="govuk-checkboxes__item">
                                     <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
@@ -68,7 +73,9 @@ My satellite environment
                               <div class="govuk-form-group">
                                 <fieldset class="govuk-fieldset">
                                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                                    <h2 class="govuk-heading-l">Show me alerts when a probability of collision is greater than:</h2>
+                                    <h1 class="govuk-fieldset__heading">
+                                    Show me alerts when a probability of collision is greater than:
+                                    </h1>
                                   </legend>
                                   <div class="govuk-radios">
                                     <div class="govuk-radios__item">
@@ -94,7 +101,9 @@ My satellite environment
                           <div class="govuk-form-group">
                           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                                      <h2 class="govuk-heading-l">Show me alerts for conjunction warnings:</h2>
+                                      <h1 class="govuk-fieldset__heading">
+                                        Show me alerts for conjunction warnings:
+                                      </h1>
                                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                                       <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="contact" name="operator-warning" type="checkbox" value="Under 24h" data-aria-controls="conditional-contact" checked=checked>
@@ -123,8 +132,9 @@ My satellite environment
                                     </div>
                                     </div>
                                 <button class="govuk-button" data-module="govuk-button">
-                                    Save notification preferences
+                                    Save and continue
                                 </button>
+                                </form>
                   </div>
 
 
