@@ -7,7 +7,16 @@ My satellite environment
 {% block content %}
 
 <div class="govuk-width-container">
-  <a href="login.html" class="govuk-back-link">Back</a>
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/regulator-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/regulator-satellite-list">Search for a satellite</a>
+      </li>
+    </ol>
+  </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -25,28 +34,6 @@ My satellite environment
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
           </svg></a>
       </div>
-      </div>
-        <div class="govuk-grid-column-one-third">
-          <h2 class="govuk-heading-m">Overview of current alerts</h2>
-
-          <a href="/regulator-homepage" class="govuk-link--no-visited-state">View all current alerts for UK satellites</a>
-          <p>
-            </p>
-
-          <h2 class="govuk-heading-m">Contact an operator or analyst</h2>
-          <a href="/regulator-communication" class="govuk-link--no-visited-state">View your conversations with other Meridian users</a>
-          <p>
-            </p>
-
-          <h2 class="govuk-heading-m">Notification settings</h2>
-          <a href="/regulator-notifications" class="govuk-link--no-visited-state">Change your notification settings </a>
-        </div>
-      <div class="govuk-grid-row">
-        <p>
-        </p>
-        <p>
-        </p>
-
       </div>
       </div>
 
