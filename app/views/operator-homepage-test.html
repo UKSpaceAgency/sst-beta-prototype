@@ -18,6 +18,116 @@ My satellite environment
         <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
         <p class="govuk-body">Forecast conjunction events affecting your satellites:</p>
 
+        <div class="moj-filter-layout">
+
+<div class="moj-filter-layout__filter">
+
+<div class="moj-filter">
+
+  <div class="moj-filter__header">
+
+    <div class="moj-filter__header-title">
+      <h2 class="govuk-heading-m">Filter</h2>
+    </div>
+
+    <div class="moj-filter__header-action">
+
+    </div>
+
+  </div>
+
+  <div class="moj-filter__content">
+
+    <div class="moj-filter__selected">
+
+      <div class="moj-filter__selected-heading">
+
+        <div class="moj-filter__heading-title">
+          <h2 class="govuk-heading-m">Selected filters</h2>
+        </div>
+
+        <div class="moj-filter__heading-action">
+          <p><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+        </div>
+
+      </div>
+
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Satellite</h3>
+
+      <ul class="moj-filter-tags">
+
+        <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Starlink-1862</a></li>
+        <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Starlink-1317</a></li>
+        <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Starlink-1929</a></li>
+        <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Starlink-1947</a></li>
+        <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Starlink-1861</a></li>
+      </ul>
+      </div>
+    <div class="moj-filter__options">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Apply filters
+      </button>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="keywords">
+          Keywords
+        </label>
+        <input class="govuk-input" id="keywords" name="keywords" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Satellite
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="type">
+                Starlink-1862 (2)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                Starlink-1317 (1)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3">
+              <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                Starlink-1929 (0)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                Starlink-1947 (0)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="type-2">
+              Starlink-1861 (1)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+<div class="moj-filter-layout__content">
+
+<div class="moj-action-bar">
+  <div class="moj-action-bar__filter"></div>
+</div>
+
 
         <table class="govuk-table" data-module=moj-sortable-table>
           <thead class="govuk-table__head">
@@ -81,11 +191,12 @@ My satellite environment
             </tr>
           </tbody>
       </table>
+      </div>
       <h2 class="govuk-heading-m">My satellites</h2>
        <p><a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites</a> attached to your registration number</p>
         <h2 class="govuk-heading-m">Notification settings</h2>
-        <p>Change your <a href="operator-notifications.html" class="govuk-link--no-visited-state">notification settings</a></p>        <p></p>
-
+        <p>Change your <a href="operator-notifications.html" class="govuk-link--no-visited-state">notification settings</a></p>
+        <p></p>
       </div>
       </div>
   </main>
