@@ -53,7 +53,7 @@ My satellite environment
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                       <h1 class="govuk-fieldset__heading">
-                        Send me alerts in the following format(s):
+                        Send me notifications in the following format(s):
                       </h1>
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
@@ -74,7 +74,7 @@ My satellite environment
                     <fieldset class="govuk-fieldset">
                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <h1 class="govuk-fieldset__heading">
-                        Show me alerts when a probability of collision is greater than:
+                        Show me notifications when a PofC is greater than:
                         </h1>
                       </legend>
                       <div class="govuk-radios">
@@ -98,6 +98,17 @@ My satellite environment
                         </div>
                       </div>
                       </div>
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <h1 class="govuk-fieldset__heading">
+                                  Show me notifications for conjunction events within:
+                                </h1>
+                                <div id="miss-distance" class="govuk-hint">
+                                  Please enter maximum miss distance (metres) for which you would like a notification.
+                                </div>
+                                <input class="govuk-input govuk-input--width-10" id="miss-distance" name="miss-distance" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
+                              </div>
                       <div class="govuk-form-group">
                           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
