@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/operator-homepage">Home</a>
+    </li>
+    </ol>  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Upcoming conjunction risks</h1>
+      </div>
+        <div class="govuk-grid-column-one-third">
+          <h2 class="govuk-heading-m">Notification settings</h2>
+          <a href="operator-notifications.html" class="govuk-link--no-visited-state">Change your notification settings</a>
+          <p></p>
+          <h2 class="govuk-heading-m">My satellites</h2>
+          <a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites attached to your registration number</a>
+        </div>
+      <div class="govuk-grid-row">
+        <p class="govuk-body">Known conjunction risks affecting your satellites</p>
+
+        <div>
+
+        <table class="sortable">
+          <thead>
+            <tr>
+              <th aria-sort="ascending">Place</th>
+              <th class="sortable-column">
+              <span class="th-content">Amount <i class="arrow"></i></span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="rowgroup">Canada</th>
+              <td class="numeric" data-sort-value="30012">30,012</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="rowgroup">United Kingdom</th>
+              <td class="numeric" data-sortby="numeric" data-sort-value="102304">102,304</td>
+            </tr>
+            <tr>
+              <th>England</th>
+              <td class="numeric" data-sort-value="81913">81,913</td>
+            </tr>
+            <tr>
+              <th>Scotland</th>
+              <td class="numeric" data-sort-value="10102">10,102</td>
+            </tr>
+            <tr>
+              <th>Wales</th>
+              <td class="numeric" data-sort-value="31010">31,010</td>
+            </tr>
+          </tbody>
+        </table>
+<script src="sortable-table.js></script>
+</body>"
+</html>
+
+      </div>
+      </div>
+
+
+  </main>
+</div>
+
+
+{% endblock %}
