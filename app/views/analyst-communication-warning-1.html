@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-1">Alert AA00-0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/analyst-communication-warning-1">Contact operator</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+    <h1 class="govuk-heading-xl">
+      Contact operator regarding AA00-0001
+    </h1>
+
+    <p>Please complete the details below and send your message.</p>
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Urgent request
+      </h1>
+    </legend>
+    <div id="contact-hint" class="govuk-hint">
+      If you require a response within 24 hours, please check this box.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+          Urgent
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+          Your message:
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        Please insert your message below. Only include details regarding this alert.
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Send
+    </button>
+
+    <p>Return to <a href="/analyst-homepage">Alert summary</a>.</p>
+
+    </div>
+
+  </main>
+{% endblock %}
