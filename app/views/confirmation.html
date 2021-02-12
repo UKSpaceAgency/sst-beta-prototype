@@ -5,28 +5,41 @@
 {% endblock %}
 
 {% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-1">Alert AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/operator-communication-warning-1">Contact analyst</a>
+    </li>
+    </ol>
+</div>
+  <form class="form" action="/warning-1" method="post">
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Application complete</h1>
+        <h1 class="govuk-panel__title">Message sent</h1>
         <div class="govuk-panel__body">
-          Your reference number<br><strong>HDJ2123F</strong>
+          Your reference number<br><strong>AAA0001-01</strong>
         </div>
       </div>
 
       <p>
-        We have sent you a confirmation email.
+        An analyst will be in touch.
       </p>
-
-      <h2 class="govuk-heading-m">What happens next</h2>
-      <p>We've sent your application to Hackney Electoral Register Office.</p>
-      <p>They will contact you either to confirm your registration, or to ask for more information.</p>
-      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
-
-
+        <button class="govuk-button" data-module="govuk-button">
+          Return to alert summary
+        </button>
+        </div>
+        </div>
+      </form>
     </div>
-  </div>
 
 {% endblock %}

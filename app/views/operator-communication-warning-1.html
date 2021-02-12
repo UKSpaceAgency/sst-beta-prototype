@@ -12,7 +12,7 @@ My satellite environment
       <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="warning-1">Alert AA00-0001</a>
+      <a class="govuk-breadcrumbs__link" href="warning-1">Alert AAA0001</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="/operator-communication-warning-1">Contact analyst</a>
@@ -22,32 +22,14 @@ My satellite environment
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
     <h1 class="govuk-heading-xl">
-      Contact analyst regarding AA00-0001
+      Contact analyst regarding AAA0001
     </h1>
+    <form class="form" action="/confirmation" method="post">
 
-    <p>Please complete the details below and send your message.</p>
-
-    <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Urgent request
-      </h1>
-    </legend>
-    <div id="contact-hint" class="govuk-hint">
-      If you require a response within 24 hours, please check this box.
-    </div>
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-        <label class="govuk-label govuk-checkboxes__label" for="contact">
-          Urgent
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
-
+    <ul class="govuk-list">
+      <li> Our operators are available Monday to Friday, 9am to 5pm (except public holidays).</li>
+      <li>We aim to respond within 1 working day.</li>
+    </ul>
     <div class="govuk-form-group">
       <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
           Your message:
@@ -62,8 +44,6 @@ My satellite environment
     <button class="govuk-button" data-module="govuk-button">
       Send
     </button>
-
-    <p>Return to <a href="/operator-homepage">Alert summary</a>.</p>
 
     </div>
 
