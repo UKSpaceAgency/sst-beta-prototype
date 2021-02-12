@@ -8,7 +8,7 @@ $('body').on('submit', 'form', function (e) {
   var $checkboxes = $(this).find('input:checkbox')
 
   var $inputs = []
-  var names = {}
+  var names = {data-source}
 
   $checkboxes.each(function () {
     var $this = $(this)
