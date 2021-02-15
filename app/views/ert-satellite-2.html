@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-satellite-list">Satellite Catalogue</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-satellite-2">Starlink-1317</a>
+    </li>
+  </ol>
+</div>
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">Starlink-1317</h1>
+
+<h2 class="govuk-heading-l">Upcoming conjunction events</h2>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Event ID</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Time of event (UTC)</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Total miss distance</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Radial miss distance</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Probability of collision (USA)</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Probability of collision (UKSA)</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Last updated (UTC)</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a>
+      </td>
+      <td class="govuk-table__cell">14/02/21 03:49</td>
+      <td class="govuk-table__cell">851 m</td>
+      <td class="govuk-table__cell">600 m</td>
+      <td class="govuk-table__cell">2%</td>
+      <td class="govuk-table__cell">1%</td>
+      <td class="govuk-table__cell">03/02/21 07:16</td>
+    </tr>
+  </tbody>
+</table>
+    <a href="/public/downloads/space_data.xlsx" download >Download alert history for Starlink-1317</a>
+    <p></p>
+
+        <h2 class="govuk-heading-l">Satellite Information</h2>
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Common name</th>
+              <td class="govuk-table__cell">Starlink-1317</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">NORAD ID</th>
+              <td class="govuk-table__cell">45365</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">International designator</th>
+              <td class="govuk-table__cell">2020-019F</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Object type</th>
+              <td class="govuk-table__cell">Payload</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Active / inactive</th>
+              <td class="govuk-table__cell">Active</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Mass (kg)</th>
+              <td class="govuk-table__cell">250</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">UK licensed</th>
+              <td class="govuk-table__cell">Yes</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Launching state</th>
+              <td class="govuk-table__cell">UK</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Launch year</th>
+              <td class="govuk-table__cell">2020</td>
+            </tr>
+          </tbody>
+        </table>
+          <p> </p>
+          <h2 class="govuk-heading-l">Location data</h2>
+          <p> This table shows the most recent location data for Starlink-1317.</p>
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">TIME</th>
+                <th scope="col" class="govuk-table__header">DATE</th>
+                <th scope="col" class="govuk-table__header">ORBIT</th>
+                <th scope="col" class="govuk-table__header">INCLINATION</th>
+                <th scope="col" class="govuk-table__header">APOGEE</th>
+                <th scope="col" class="govuk-table__header">PERIGEE</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell">09:14</td>
+                <td scope="row" class="govuk-table__cell">11/01/2021</td>
+                <td scope="row" class="govuk-table__cell">LEO</td>
+                <td scope="row" class="govuk-table__cell">115.26</td>
+                <td scope="row" class="govuk-table__cell">1573</td>
+                <td scope="row" class="govuk-table__cell">1378</td>
+              </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">09:17</td>
+                    <td scope="row" class="govuk-table__cell">10/01/2021</td>
+                    <td scope="row" class="govuk-table__cell">LEO</td>
+                    <td scope="row" class="govuk-table__cell">115.01</td>
+                    <td scope="row" class="govuk-table__cell">1574</td>
+                    <td scope="row" class="govuk-table__cell">1376</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">09:20</td>
+                    <td scope="row" class="govuk-table__cell">09/01/2021</td>
+                    <td scope="row" class="govuk-table__cell">LEO</td>
+                    <td scope="row" class="govuk-table__cell">115.892</td>
+                    <td scope="row" class="govuk-table__cell">1572</td>
+                    <td scope="row" class="govuk-table__cell">1378</td>
+                  </tr>
+                </tbody>
+              </table>
+                <a href="/public/downloads/space_data.xlsx" download >Download location data for Starlink-1317</a>
+                <p> </p>
+  </main>
+</div>
+
+
+{% endblock %}
