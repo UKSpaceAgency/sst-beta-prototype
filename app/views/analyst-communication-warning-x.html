@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/analyst-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-1">Alert AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/analyst-communication-warning-2">Contact operator</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+    <h1 class="govuk-heading-xl">
+      Contact analyst regarding AAA0001
+    </h1>
+    <form class="form" action="/confirmation" method="post">
+
+    <ul class="govuk-list">
+      <li> Our analysts are available Monday to Friday, 9am to 5pm (except public holidays).</li>
+      <li>We aim to respond within 1 working day.</li>
+    </ul>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+          Your message:
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        Please insert your message below. Only include details regarding this alert.
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Send
+    </button>
+
+    </div>
+
+  </main>
+{% endblock %}
