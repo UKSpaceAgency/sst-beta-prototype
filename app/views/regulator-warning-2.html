@@ -6,7 +6,16 @@ My satellite environment
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="/regulator-homepage.html" class="govuk-back-link">Back</a>
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/emergency-response-team-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/ert-warning-2">Alert AA00-0021</a>
+      </li>
+    </ol>
+  </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -32,32 +41,28 @@ My satellite environment
                   <td class="govuk-table__cell">5%</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Estimated time of conjunction event</th>
-                  <td class="govuk-table__cell">10th Feb 2021 at 04:19 UTC</td>
+                  <th scope="row" class="govuk-table__header">Estimated time of conjunction event (UTC)</th>
+                  <td class="govuk-table__cell">10/02/21 04:19</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Miss distance</th>
+                  <th scope="row" class="govuk-table__header">Total miss distance</th>
                   <td class="govuk-table__cell">87 m</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Close approach point</th>
-                  <td class="govuk-table__cell">560 km</td>
+                  <th scope="row" class="govuk-table__header">Radial miss distance</th>
+                  <td class="govuk-table__cell">56 m</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Impact velocity</th>
-                  <td class="govuk-table__cell">21 km/s</td>
+                  <th scope="row" class="govuk-table__header">In-track miss distance</th>
+                  <td class="govuk-table__cell">47 m</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Mass of objects</th>
-                  <td class="govuk-table__cell">600 kg</td>
+                  <th scope="row" class="govuk-table__header">Cross-track miss distance</th>
+                  <td class="govuk-table__cell">61 m</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Estimated number of fragments</th>
-                  <td class="govuk-table__cell">8,000</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Data last updated</th>
-                  <td class="govuk-table__cell">5th Feb 2021 at 16:55 UTC</td>
+                  <th scope="row" class="govuk-table__header">Data last updated (UTC)</th>
+                  <td class="govuk-table__cell">05/02/21 16:55</td>
                 </tr>
               </tbody>
             </table>
@@ -65,7 +70,7 @@ My satellite environment
             <h2 class="govuk-heading-l">Contact an analyst about this risk</h2>
             <ul class="govuk-list">
               <li>
-                <a class="govuk-link" href="/regulator-communication-warning-1">Contact an analyst and view your communication history.</a>
+                <a class="govuk-link" href="/ert-communication-warning-1">Contact an analyst and view your communication history.</a>
               </li>
             </ul>
 
@@ -124,6 +129,29 @@ My satellite environment
                     </tr>
                   </tbody>
                 </table>
+
+                <h2 class="govuk-heading-l">Additional event data</h2>
+                <table class="govuk-table">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Close approach point</th>
+                      <td class="govuk-table__cell">560 km</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Impact velocity</th>
+                      <td class="govuk-table__cell">21 km/s</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Mass of objects</th>
+                      <td class="govuk-table__cell">600 kg</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Estimated number of fragments</th>
+                      <td class="govuk-table__cell">8,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+
                 <h2 class="govuk-heading-l">Further analysis</h2>
                 <ul class="govuk-list">
                   <li>
