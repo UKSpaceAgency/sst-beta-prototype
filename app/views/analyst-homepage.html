@@ -7,151 +7,114 @@ My satellite environment
 {% block content %}
 
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Login</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/analyst-homepage">Home</a>
-      </li>
-    </ol>
-  </div>
-  <main class="govuk-main-wrapper">
+
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-homepage">Home</a>
+    </li>
+    </ol>  <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Upcoming conjunction risks</h1>
-        <p class="govuk-body">All conjunction alerts involving UK-licensed satellites listed in the table below:</p>
-        <div class="govuk-warning-text">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-warning-text__assistive">Warning</span>
-            There is 1 urgent alert
-          </strong>
-        </div>
-      </div>
-        <div class="govuk-grid-column-one-third">
-          <h2 class="govuk-heading-m">Search all satellites</h2>
-          <a href="/analyst-satellite-list" class="govuk-link--no-visited-state">View details of a UK-licensed satellite</a>
-          <p>
-            </p>
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
+        <p class="govuk-body">There are currently <b>7</b> conjunction events affecting UK satellites.</p>
 
-          <h2 class="govuk-heading-m">Notification settings</h2>
-            <a href="/analyst-notifications" class="govuk-link--no-visited-state">Change your notification settings</a>
+        <div class="moj-search">
+        <form action="#" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Find a conjunction event
+          </label>
+          <span id="search-hint" class="govuk-hint moj-search__hint ">
+            You can search by satellite common name, NORAD ID or operator.
+          </span>
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
         </div>
-      <div class="govuk-grid-row">
-        <p>
-        </p>
-        <p>
-        </p>
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+        </form>
+        </div>
+        <nav class="moj-pagination" id="pagination-label">
 
-        <div>
-        <table class="govuk-table">
+      <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+
+      <p class="moj-pagination__results">Showing <b>1</b> to <b>7</b> of <b>7</b> results</p>
+      </nav>
+        <! main table for conjunction warnings>
+        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header app-custom-class">Alert ID</th>
-              <th scope="col" class="govuk-table__header app-custom-class">Time of conjunction event</th>
-              <th scope="col" class="govuk-table__header app-custom-class">Primary object</th>
-              <th scope="col" class="govuk-table__header app-custom-class">Probability of collision (USA)</th>
-              <th scope="col" class="govuk-table__header app-custom-class">Probability of collision (UKSA)</th>
-              <th scope="col" class="govuk-table__header app-custom-class">Mass involved</th>
-              <th scope="col" class="govuk-table__header app-custom-class">Data last updated</th>
+
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 30%";>Satellite common name</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 20%";>NORAD ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 20%";>International designator</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 20%";>Operator</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>Active conjunction alerts</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th class="govuk-table__cell">
-                <a href="warning-1.html" class="govuk-link--no-visited-state">AA00-0001</a>
-              </th>
-              <th class="govuk-table__cell">4th Feb 2021 at 11:51 UTC</th>
-              <th class="govuk-table__cell"><a href="/satellite-1">2020-088AD</a></th>
-              <th class="govuk-table__cell">52%</th>
-              <th class="govuk-table__cell">38%</th>
-              <th class="govuk-table__cell">890 kg</th>
-              <th class="govuk-table__cell">4th Feb 2021 at 08:19 UTC</th>
-
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-1">Starlink-1862</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">47149</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2020-088AD</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">SPACEX</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <a href="warning-2.html" class="govuk-link--no-visited-state">AA00-0002</a>
-              </td>
-              <td class="govuk-table__cell">10th Feb 2021 at 04:19 UTC </td>
-              <td class="govuk-table__cell"><a href="/satellite-1">2020-088AD</a></td>
-              <td class="govuk-table__cell">8%</td>
-              <td class="govuk-table__cell">5%</td>
-              <td class="govuk-table__cell">921 kg </td>
-              <td class="govuk-table__cell">3th Feb 2021 at 14:30 UTC</td>
-
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-5">Starlink-1861</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">47148</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2020-088AC</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">SPACEX</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <a href="warning-3.html" class="govuk-link--no-visited-state">AA00-0003</a>
-              </td>
-              <td class="govuk-table__cell">12th Feb 2021 at 19:00 UTC</td>
-              <td class="govuk-table__cell"><a href="/satellite-1">2020-088AD</a></td>
-              <td class="govuk-table__cell">6%</td>
-              <td class="govuk-table__cell">7%</td>
-              <td class="govuk-table__cell">1489 kg</td>
-              <td class="govuk-table__cell">4th Feb 2021 at 12:02 UTC</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">Starlink-1317</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">45365</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2020-019F</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">SPACEX</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <a href="warning-4.html" class="govuk-link--no-visited-state">AA00-0004</a>
-              </td>
-              <td class="govuk-table__cell">14th Feb 2021 at 03:49 UTC</td>
-              <td class="govuk-table__cell"><a href="/satellite-2">2020-019F</a></td>
-              <td class="govuk-table__cell">2%</td>
-              <td class="govuk-table__cell">1%</td>
-              <td class="govuk-table__cell">3800 kg</td>
-              <td class="govuk-table__cell">3th Feb 2021 at 07:16 UTC</td>
-
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">SpaceBEE-52</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">47425</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2021-006N	</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Swarm Technologies</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">
-                <a href="/analyst-warning-2" class="govuk-link--no-visited-state">AA00-0021</a>
-              </td>
-              <td class="govuk-table__cell">10th Feb 2021 at 04:19 UTC</td>
-              <td class="govuk-table__cell">2021-006N</td>
-              <td class="govuk-table__cell">7%</td>
-              <td class="govuk-table__cell">5%</td>
-              <td class="govuk-table__cell">600 kg</td>
-              <td class="govuk-table__cell">5th Feb 2021 at 16:55 UTC</td>
-
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">SpaceBEE 10</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">46305</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2020-061AK</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Swarm Technologies</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
             </tr>
-
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="/analyst-warning-3" class="govuk-link--no-visited-state">AA00-0033</a>
-            </td>
-            <td class="govuk-table__cell">12th Feb 2021 at 19:00 UTC</td>
-            <td class="govuk-table__cell">2020-020K</td>
-            <td class="govuk-table__cell">11%</td>
-            <td class="govuk-table__cell">9%</td>
-            <td class="govuk-table__cell">1100 kg</td>
-            <td class="govuk-table__cell">6th Feb 2021 at 03:59 UTC</td>
-
-          </tr>
-
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              <a href="/analyst-warning-4" class="govuk-link--no-visited-state">AA00-0034</a>
-            </td>
-            <td class="govuk-table__cell">14th Feb 2021 at 01:05 UTC</td>
-            <td class="govuk-table__cell">2020-020AF</td>
-            <td class="govuk-table__cell">16%</td>
-            <td class="govuk-table__cell">7%</td>
-            <td class="govuk-table__cell">760 kg</td>
-            <td class="govuk-table__cell">2nd Feb 2021 at 01:05 UTC</td>
-
-          </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">SpaceBEE 11</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">46307</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2020-061AM</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Swarm Technologies</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">SpaceBEE 12</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">46309</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2020-061AP</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Swarm Technologies</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
           </tbody>
       </table>
+        <h2 class="govuk-heading-m">Notification settings</h2>
+        <p>Change your <a href="ert-notifications.html" class="govuk-link--no-visited-state">notification settings</a></p>        <p></p>
+
       </div>
       </div>
-
-
   </main>
 </div>
-
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
 
 {% endblock %}
