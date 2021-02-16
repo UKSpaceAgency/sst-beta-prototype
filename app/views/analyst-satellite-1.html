@@ -9,13 +9,13 @@ My satellite environment
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/operator-homepage">Home</a>
+        <a class="govuk-breadcrumbs__link" href="/analyst-homepage">Home</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/operator-satellite-list">Satellite Catalogue</a>
+        <a class="govuk-breadcrumbs__link" href="/analyst-satellite-list">Satellite Catalogue</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/operator-satellite-1">Starlink-1862</a>
+        <a class="govuk-breadcrumbs__link" href="/analyst-satellite-1">Starlink-1862</a>
       </li>
     </ol>
   </div>
@@ -26,50 +26,43 @@ My satellite environment
       <h1 class="govuk-heading-xl">Starlink-1862</h1>
 
   <h2 class="govuk-heading-l">Upcoming conjunction events</h2>
-  <! main table for conjunction warnings>
-  <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+  <table class="govuk-table">
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>Event ID</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 13%";>Time of event (UTC)</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Primary object</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Total miss distance (m)</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Radial miss distance (m)</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>USA % probability of collision</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>UKSA % probability of collision</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Last updated (UTC)</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Event ID</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Time of event (UTC)</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Total miss distance</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Radial miss distance</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Probability of collision (USA)</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Probability of collision (UKSA)</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Last updated (UTC)</th>
       </tr>
     </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-body-s"> <b>
-          <a href="warning-1.html" class="govuk-link--no-visited-state">AAA0001</a> </b>
-        </td>
-        <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
-        <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-1">Starlink-1862</a></td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">37</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">22</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">18</td>
-        <td class="govuk-table__cell govuk-body-s">04/02/21 08:19</td>
-
-      </tr>
-
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell govuk-body-s"> <b>
-          <a href="warning-3.html" class="govuk-link--no-visited-state">AAA0003</a> </b>
-        </td>
-        <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
-        <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-1">Starlink-1862</a></td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">152</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">6</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7</td>
-        <td class="govuk-table__cell govuk-body-s">04/02/21 12:02</td>
-      </tr>
-
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="warning-1.html" class="govuk-link--no-visited-state">AAA0001</a>
+      </td>
+      <td class="govuk-table__cell">04/02/21 11:51</td>
+      <td class="govuk-table__cell">37 m</td>
+      <td class="govuk-table__cell">15 m</td>
+      <td class="govuk-table__cell">52%</td>
+      <td class="govuk-table__cell">38%</td>
+      <td class="govuk-table__cell">04/02/21 08:19</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <a href="warning-3.html" class="govuk-link--no-visited-state">AAA0003</a>
+      </td>
+      <td class="govuk-table__cell">12/02/21 19:00</td>
+      <td class="govuk-table__cell">152 m</td>
+      <td class="govuk-table__cell">42 m</td>
+      <td class="govuk-table__cell">6%</td>
+      <td class="govuk-table__cell">7%</td>
+      <td class="govuk-table__cell">04/02/21 12:02</td>
+    </tr>
     </tbody>
-</table>
+    </table>
 <a href="/public/downloads/space_data.xlsx" download >Download alert history for Starlink-1862</a>
 <p></p>
         <h2 class="govuk-heading-l">Satellite Information</h2>
@@ -115,7 +108,6 @@ My satellite environment
             </tbody>
           </table>
           <p> </p>
-
           <h2 class="govuk-heading-l">Location data</h2>
               <p>This table shows the most recent location data for Starlink-1862.</p>
               <table class="govuk-table">
@@ -156,7 +148,7 @@ My satellite environment
                   </tr>
                 </tbody>
               </table>
-                <a href="/public/downloads/space_data.xlsx" download >Download location data for 2020-088AD</a>
+                <a href="/public/downloads/space_data.xlsx" download >Download location data for Starlink-1862</a>
                 <p> </p>
   </main>
   </div>

@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/ert-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/ert-warning-21">Alert AAA0021</a>
+      </li>
+    </ol>
+  </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Alert AAA0021</h1>
+          <div class="govuk-warning-text">
+            <p></p>
+            <p> This page contains the latest data released by UKSA for this conjunction event.
+              For an explanation of how this data was calculated, and what it means, please see our <a class="govuk-link" href="data-explanation.html">data explanation.</a> </p>
+          </div>
+                  </div>
+          </div>
+          <div class="govuk-grid-row">
+            <p> </p>
+            <h2 class="govuk-heading-l">Event Summary</h2>
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Probability of Collision (USA)</th>
+                  <td class="govuk-table__cell">7%</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Probability of collision (UKSA)</th>
+                  <td class="govuk-table__cell">5%</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Estimated time of conjunction event (UTC)</th>
+                  <td class="govuk-table__cell">10/02/21 04:19</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Total miss distance</th>
+                  <td class="govuk-table__cell">87 m</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Radial miss distance</th>
+                  <td class="govuk-table__cell">56 m</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">In-track miss distance</th>
+                  <td class="govuk-table__cell">47 m</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Cross-track miss distance</th>
+                  <td class="govuk-table__cell">61 m</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Data last updated (UTC)</th>
+                  <td class="govuk-table__cell">05/02/21 16:55</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 class="govuk-heading-l">Contact an analyst about this risk</h2>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link" href="/ert-communication-warning-x">Contact an analyst and view your communication history.</a>
+              </li>
+            </ul>
+
+              <h2 class="govuk-heading-l">Object Data</h2>
+                <table class="govuk-table">
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Object</th>
+                        <th scope="row" class="govuk-table__header">Primary Object</th>
+                        <th scope="row" class="govuk-table__header">Secondary Object</th>
+                      </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Common Name</th>
+                      <td class="govuk-table__cell">SPACEBEE-52</td>
+                      <td class="govuk-table__cell">LEMUR 2 NALLYWACKER</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">NORAD ID</th>
+                      <td class="govuk-table__cell">47425</td>
+                      <td class="govuk-table__cell">47457</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">International designator</th>
+                      <td class="govuk-table__cell">2021-006N</td>
+                      <td class="govuk-table__cell">2021-006AW</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Object type</th>
+                      <td class="govuk-table__cell">Payload</td>
+                      <td class="govuk-table__cell">Payload</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Active/ Inactive</th>
+                      <td class="govuk-table__cell">Active</td>
+                      <td class="govuk-table__cell">Active</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Mass (kg)</th>
+                      <td class="govuk-table__cell">340</td>
+                        <td class="govuk-table__cell">150</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">UK licensed</th>
+                      <td class="govuk-table__cell">Yes</td>
+                      <td class="govuk-table__cell">No</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Launching State</th>
+                      <td class="govuk-table__cell">UK</td>
+                      <td class="govuk-table__cell">USA</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Launch year</th>
+                      <td class="govuk-table__cell">2021</td>
+                      <td class="govuk-table__cell">2021</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h2 class="govuk-heading-l">Additional event data</h2>
+                <table class="govuk-table">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Close approach point</th>
+                      <td class="govuk-table__cell">560 km</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Impact velocity</th>
+                      <td class="govuk-table__cell">21 km/s</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Mass of objects</th>
+                      <td class="govuk-table__cell">600 kg</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Estimated number of fragments</th>
+                      <td class="govuk-table__cell">8,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h2 class="govuk-heading-l">Further analysis</h2>
+                <ul class="govuk-list">
+                  <li>
+                    <a class="govuk-link" href="PoC-evolution.html">Evolution of conjunction probability</a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="error-ellipsoid-analysis.html">Evolution of conjunction error ellipsoids</a>
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="map-analysis.html">Predicted location of potential conjunction</a>
+                  </li>
+                </ul>
+                <h2 class="govuk-heading-l">Alert history</h2>
+                <p> This page shows the latest data for alert AA00-0001. To view previous updates released for this conjunction event, see the alert history.
+                <ul class="govuk-list">
+                  <li>
+                    <a class="govuk-link" href="warning-1-history.html">View alert history</a>
+              </div>
+  </main>
+</div>
+
+
+{% endblock %}
