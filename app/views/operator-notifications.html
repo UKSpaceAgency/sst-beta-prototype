@@ -20,11 +20,12 @@ My satellite environment
     <div class="govuk-grid-row">
         <h1 class="govuk-heading-xl">Notification settings</h1>
         <form class="form" action="/operator-homepage" method="post">
+        <p class="govuk-body-l">Please complete the form below. Select options to customise how you will receive conjunction event notifications.</p>
         <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                       <h2 class="govuk-fieldset__heading">
-                        Show me alerts containing data from:
+                        Use data sources:
                       </h2>
                     </legend>
                     <div class="govuk-radios">
@@ -53,8 +54,9 @@ My satellite environment
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                       <h1 class="govuk-fieldset__heading">
-                        Send me notifications in the following format(s):
+                        Notification format:
                       </h1>
+                      <p> Select all that apply.<p/>
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
@@ -68,32 +70,45 @@ My satellite environment
                           Text message
                         </label>
                       </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3" checked=check>
+                        <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                          Phone call (only in emergencies)
+                        </label>
+                      </div>
                     </div>
             </div>
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset">
                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <h1 class="govuk-fieldset__heading">
-                        Show me notifications when a PofC is greater than:
+                        Criteria for notification:
                         </h1>
                       </legend>
+                      <h3 class="govuk-heading-m">Probabilty of collision above:</h3>
                       <div class="govuk-radios">
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="conjunction-1" name="likelihood" type="radio" value="1%">
                           <label class="govuk-label govuk-radios__label" for="conjunction-1">
-                            1%
+                            0.01%
                           </label>
                         </div>
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="conjunction-2" name="likelihood" type="radio" value="10%" checked = checked>
                           <label class="govuk-label govuk-radios__label" for="conjunction-2">
-                            10%
+                            0.1%
                           </label>
                         </div>
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="conjunction-3" name="likelihood" type="radio" value="50%">
                           <label class="govuk-label govuk-radios__label" for="conjunction-3">
-                            50%
+                            1%
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="conjunction-3" name="likelihood" type="radio" value="50%">
+                          <label class="govuk-label govuk-radios__label" for="conjunction-3">
+                            5%
                           </label>
                         </div>
                       </div>
@@ -101,43 +116,58 @@ My satellite environment
                       <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                                <h1 class="govuk-fieldset__heading">
-                                  Show me notifications for conjunction events within:
-                                </h1>
-                                <div id="miss-distance" class="govuk-hint">
-                                  Please enter maximum miss distance (metres) for which you would like a notification.
+                                <h3 class="govuk-heading-m">Miss distance below:</h3>
+                                <p></p>
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="weight">
+                                    Total miss distance
+                                  </label>
+                                  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                                    <div class="govuk-input__suffix" aria-hidden="true">metres</div>
+                                  </div>
                                 </div>
-                                <input class="govuk-input govuk-input--width-10" id="miss-distance" name="miss-distance" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="weight">
+                                    Radial miss distance
+                                  </label>
+                                  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                                    <div class="govuk-input__suffix" aria-hidden="true">metres</div>
+                                  </div>
+                                </div>
                               </div>
                       <div class="govuk-form-group">
                           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                                      <h1 class="govuk-fieldset__heading">
-                                        Show me alerts for potential events within:
-                                      </h1>
+                                      <h3 class="govuk-heading-m">Time of event within:</h3>
                                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                                       <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="contact" name="operator-warning" type="checkbox" value="Under 24h" data-aria-controls="conditional-contact" checked=checked>
                                         <label class="govuk-label govuk-checkboxes__label" for="Under 24h">
-                                          Under 24h
+                                          24 hours
                                         </label>
                                       </div>
                                       <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="contact-3" name="operator-warning" type="checkbox" value="24h- 48h" data-aria-controls="conditional-contact-3" checked=checked>
                                         <label class="govuk-label govuk-checkboxes__label" for="warning-2">
-                                          24h - 48h
+                                          48 hours
                                         </label>
                                       </div>
                                       <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="contact-3" name="operator-warning" type="checkbox" value="48h - 72h" data-aria-controls="conditional-contact-3" checked=checked>
                                         <label class="govuk-label govuk-checkboxes__label" for="warning-3">
-                                          48h - 72h
+                                          72 hours
                                         </label>
                                       </div>
                                       <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="contact-3" name="operator-warning" type="checkbox" value="72h - 10 days" data-aria-controls="conditional-contact-3" checked=checked>
                                         <label class="govuk-label govuk-checkboxes__label" for="warning-4">
-                                          72h - 10 days
+                                          7 days
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="contact-3" name="operator-warning" type="checkbox" value="72h - 10 days" data-aria-controls="conditional-contact-3" checked=checked>
+                                        <label class="govuk-label govuk-checkboxes__label" for="warning-4">
+                                          10 days
                                         </label>
                                       </div>
                                     </div>
