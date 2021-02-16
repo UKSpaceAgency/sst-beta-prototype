@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-homepage">Home</a>
+    </li>
+    </ol>  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">UK Satellite list</h1>
+        <div class="moj-search">
+        <form action="#" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Find a satellite
+          </label>
+          <span id="search-hint" class="govuk-hint moj-search__hint ">
+            You can search by name, NORAD ID, international designator, operator or active conjunction alerts.
+          </span>
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+        </form>
+        </div>
+      <nav class="moj-pagination" id="pagination-label">
+
+<p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+<ul class="moj-pagination__list">
+  <li class="moj-pagination__item  moj-pagination__item--prev">
+  <a class="moj-pagination__link" href="/regulator-homepage-2">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/regulator-homepage">1</a></li>
+  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/regulator-homepage-2">2</a></li>
+  <li class="moj-pagination__item moj-pagination__item--active">3</li>
+</ul>
+<p class="moj-pagination__results">Showing <b>21</b> to <b>30</b> of <b>30</b> results</p>
+</nav>
+        <! main table for conjunction warnings>
+        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>Satellite name</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 4%";>NORAD ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 14%";>International designator</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 20%";>Operator</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Active conjunction alerts</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a>DMC 3-FM2	</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">40716 </td>
+              <td class="govuk-table__cell govuk-body-s ">2015-032B</td>
+              <td class="govuk-table__cell govuk-body-s ">DMCii</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-5">DMC 3-FM3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">40717</td>
+              <td class="govuk-table__cell govuk-body-s ">2015-032C</td>
+              <td class="govuk-table__cell govuk-body-s ">DMCii</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">DMC 3-FM1</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">40715  </td>
+              <td class="govuk-table__cell govuk-body-s ">2015-032A</td>
+              <td class="govuk-table__cell govuk-body-s ">DMCii</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">CARBONITE 1</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">40718  </td>
+              <td class="govuk-table__cell govuk-body-s ">	2015-032D</td>
+              <td class="govuk-table__cell govuk-body-s ">SSTL</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">UKUBE 1	</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">40074 </td>
+              <td class="govuk-table__cell govuk-body-s ">2014-037F	</td>
+              <td class="govuk-table__cell govuk-body-s ">UKSA</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">FUNCUBE 1</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">39444</td>
+              <td class="govuk-table__cell govuk-body-s ">2013-066AE</td>
+              <td class="govuk-table__cell govuk-body-s ">AMSAT-UK</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">TRITON 1</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">39427 </td>
+              <td class="govuk-table__cell govuk-body-s ">2013-066M	</td>
+              <td class="govuk-table__cell govuk-body-s ">ISIS-BV</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-8">STRAND 1	</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">39090 </td>
+              <td class="govuk-table__cell govuk-body-s ">2013-009E	</td>
+              <td class="govuk-table__cell govuk-body-s ">SSTL</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-8">SKYNET 5D</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">39034 </td>
+              <td class="govuk-table__cell govuk-body-s ">2012-075A	</td>
+              <td class="govuk-table__cell govuk-body-s ">Paradigm Secure Communications</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-8">HYLAS 2</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">38741</td>
+              <td class="govuk-table__cell govuk-body-s ">2012-043B	</td>
+              <td class="govuk-table__cell govuk-body-s ">Avanti</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+          </tbody>
+      </table>
+      </div>
+      </div>
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}

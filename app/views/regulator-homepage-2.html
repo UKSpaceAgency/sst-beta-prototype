@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-homepage">Home</a>
+    </li>
+    </ol>  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">UK Satellite list</h1>
+        <div class="moj-search">
+        <form action="#" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Find a satellite
+          </label>
+          <span id="search-hint" class="govuk-hint moj-search__hint ">
+            You can search by name, NORAD ID, international designator, operator or active conjunction alerts.
+          </span>
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+        </form>
+        </div>
+      <nav class="moj-pagination" id="pagination-label">
+
+<p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+<ul class="moj-pagination__list">
+  <li class="moj-pagination__item  moj-pagination__item--prev">
+  <a class="moj-pagination__link" href="/regulator-homepage">Previous<span class="govuk-visually-hidden"> set of pages</span></a>
+  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/regulator-homepage">1</a></li>
+  <li class="moj-pagination__item moj-pagination__item--active">2</li>
+  <li class="moj-pagination__item"><a class="moj-pagination__link" href="/regulator-homepage-3">3</a></li>
+
+<li class="moj-pagination__item  moj-pagination__item--next">
+  <a class="moj-pagination__link" href="/regulator-homepage-3">Next<span class="govuk-visually-hidden"> set of pages</span></a>
+</li>
+</ul>
+<p class="moj-pagination__results">Showing <b>11</b> to <b>20</b> of <b>30</b> results</p>
+</nav>
+        <! main table for conjunction warnings>
+        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>Satellite name</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 4%";>NORAD ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 14%";>International designator</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 20%";>Operator</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Active conjunction alerts</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a>SSSTL S1-4</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">43618</td>
+              <td class="govuk-table__cell govuk-body-s ">2018-071A</td>
+              <td class="govuk-table__cell govuk-body-s ">DMCii</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-5">NOVASAR 1	</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">43619</td>
+              <td class="govuk-table__cell govuk-body-s ">2018-071B	C</td>
+              <td class="govuk-table__cell govuk-body-s ">SSTL</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">HYLAS 4</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">43272 </td>
+              <td class="govuk-table__cell govuk-body-s ">2018-033B</td>
+              <td class="govuk-table__cell govuk-body-s ">Avanti</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">CARBONITE 2</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">43115 </td>
+              <td class="govuk-table__cell govuk-body-s ">2018-004E	</td>
+              <td class="govuk-table__cell govuk-body-s ">SSTL</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">INFLATESAIL</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42770</td>
+              <td class="govuk-table__cell govuk-body-s ">2017-036F	</td>
+              <td class="govuk-table__cell govuk-body-s ">SSC</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">DIAMOND BLUE</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42786 </td>
+              <td class="govuk-table__cell govuk-body-s ">2017-036X	</td>
+              <td class="govuk-table__cell govuk-body-s ">Sky and Space Global</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-2">UCLSAT</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42765</td>
+              <td class="govuk-table__cell govuk-body-s ">2017-036A	</td>
+              <td class="govuk-table__cell govuk-body-s ">MSSL, University College London</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-8">DIAMOND RED</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4783</td>
+              <td class="govuk-table__cell govuk-body-s ">2017-036U</td>
+              <td class="govuk-table__cell govuk-body-s ">Sky and Space Global</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-8">DIAMOND GREEN</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42785</td>
+              <td class="govuk-table__cell govuk-body-s ">2017-036W	</td>
+              <td class="govuk-table__cell govuk-body-s ">Sky and Space Global</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/ert-satellite-8">DEORBITSAIL	</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">40719 </td>
+              <td class="govuk-table__cell govuk-body-s ">	2015-032E</td>
+              <td class="govuk-table__cell govuk-body-s ">Surrey Space Centre</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            </tr>
+          </tbody>
+      </table>
+      </div>
+      </div>
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
