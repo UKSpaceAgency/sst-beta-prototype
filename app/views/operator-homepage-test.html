@@ -11,11 +11,14 @@ My satellite environment
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="/operator-homepage">Home</a>
     </li>
-    </ol>  <main class="govuk-main-wrapper">
+    </ol>
+
+    <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
+                <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
         <p class="govuk-body">Forecast conjunction events affecting your satellites:</p>
+        
         <div class="moj-search">
         <form action="#" method="post">
         <div class="govuk-form-group">
@@ -34,11 +37,10 @@ My satellite environment
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 7%";>Event ID</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 13%";>Time of event (UTC)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Primary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Secondary object</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Secondary object</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 8%";>Total miss distance</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 8%";>Radial miss distance</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 5%";>USA PofC (%)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 5%";>UKSA PofC (%)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 5%";>Probability of collision (%)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 14%";>Last updated (UTC)</th>
             </tr>
           </thead>
@@ -49,10 +51,9 @@ My satellite environment
               </td>
               <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
               <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-1">Starlink-1862</a></td>
-              <td class="govuk-table__cell govuk-body-s">Discoverer 5</td>
+              <td class="govuk-table__cell govuk-body-s">Discoverer 5 (I)</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">37 m</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">22</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">18</td>
               <td class="govuk-table__cell govuk-body-s">04/02/21 08:19</td>
 
@@ -63,10 +64,9 @@ My satellite environment
               </td>
               <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
               <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-5">Starlink-1861</td>
-                <td class="govuk-table__cell govuk-body-s">Lemur 2</td>
+                <td class="govuk-table__cell govuk-body-s">Lemur 2 (A)</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87 m</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">8</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5</td>
               <td class="govuk-table__cell govuk-body-s">03/02/21 14:30</td>
 
@@ -77,11 +77,10 @@ My satellite environment
               </td>
               <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
               <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-1">Starlink-1862</a></td>
-              <td class="govuk-table__cell govuk-body-s">Oneweb-0064</td>
+              <td class="govuk-table__cell govuk-body-s">Oneweb-0064 (A)</td>
 
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">152 m</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">6</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7</td>
               <td class="govuk-table__cell govuk-body-s">04/02/21 12:02</td>
             </tr>
@@ -91,17 +90,16 @@ My satellite environment
               </td>
               <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
               <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">Oneweb-0050</td>
+              <td class="govuk-table__cell govuk-body-s">Oneweb-0050 (A)</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852 m</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">242 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
               <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
 
             </tr>
           </tbody>
       </table>
-      <p> <b>PofC</b> = Probability of Collision. Probabilities are provided from US data sources (Spacetrack), and where available a UKSA probability is provided from further UKSA analysis.
+      <p> Where available, a UKSA calculated <b>probability of collision </b> is displayed. This is calculated using additional data sources to US calculations. If no UKSA calculation is available, the US calculation is shown.
       <h2 class="govuk-heading-m">My satellites</h2>
        <p><a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites</a> attached to your registration number</p>
         <h2 class="govuk-heading-m">Notification settings</h2>
