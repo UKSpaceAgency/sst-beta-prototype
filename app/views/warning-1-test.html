@@ -19,8 +19,6 @@ My satellite environment
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
         <h1 class="govuk-heading-xl">Alert AAA0001</h1>
-            <p> This page contains the latest data released by UKSA for this conjunction event.
-              For an explanation of how this data was calculated, and what it means, please see our <a class="govuk-link" href="data-explanation.html">data explanation.</a> </p>
               <p> </p>
               <h2 class="govuk-heading-l">Event Summary</h2>
               <table class="govuk-table"style="width:100%">
@@ -59,6 +57,23 @@ My satellite environment
                   </tr>
                 </tbody>
               </table>
+              <p></p>
+
+              <h3 class="govuk-heading-m">Data visualisations of event</h3>
+              <ul class="govuk-list">
+                <li>
+                  <a class="govuk-link" href="warning-1-probability-evolution.html">Evolution of collision probability</a>
+                </li>
+                <li>
+                  <a class="govuk-link" href="warning-1-miss-distance-evolution.html">Evolution of miss distance predictions</a>
+                </li>
+                <li>
+                  <a class="govuk-link" href="warning-1-error-ellipsoid.html">Evolution of conjunction error ellipsoids</a>
+                </li>
+                <li>
+                  <a class="govuk-link" href="warning-1-map-analysis.html">Predicted location of conjunction event</a>
+                </li>
+              </ul>
 
               <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
                 <div class="govuk-accordion__section ">
@@ -121,7 +136,6 @@ My satellite environment
                           <td class="govuk-table__cell">37 m</td>
                           <td class="govuk-table__cell">15 m</td>
                           <td class="govuk-table__cell">04/02/21 11:51</td>
-
                           </tr>
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell">03/02/21 14:10</td>
@@ -130,7 +144,6 @@ My satellite environment
                           <td class="govuk-table__cell">40 m</td>
                           <td class="govuk-table__cell">12 m</td>
                           <td class="govuk-table__cell">04/02/21 11:58</td>
-
                         </tr>
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell">02/02/21 12:00</td>
@@ -139,7 +152,6 @@ My satellite environment
                           <td class="govuk-table__cell">40 m</td>
                           <td class="govuk-table__cell">30 m</td>
                           <td class="govuk-table__cell">04/02/21 11:55</td>
-
                         </tr>
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell">01/02/21 03:49</td>
@@ -148,7 +160,6 @@ My satellite environment
                           <td class="govuk-table__cell">42 m</td>
                           <td class="govuk-table__cell">18 m</td>
                           <td class="govuk-table__cell">04/02/21 12:13</td>
-
                         </tr>
                       </tbody>
                   </table>
@@ -222,36 +233,12 @@ My satellite environment
                     <div class="govuk-accordion__section ">
                       <div class="govuk-accordion__section-header">
                         <h2 class="govuk-accordion__section-heading">
-                          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                            Explanation of object data
-                          </span>
-                        </h2>
-                      </div>
-                      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                        <table class="govuk-table" style="width: 100%">
-                            <tbody class="govuk-table__body">
-                              <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header" style="width: 40%">Active/ Inactive</th>
-                                <td class="govuk-table__cell" style="width: 60%">Whether the satellite is known to be currently actively managed by an operator. This may be unknown.</td>
-                              </tr>
-                            <tr class="govuk-table__row">
-                              <th scope="row" class="govuk-table__header">Manoeuvrable</th>
-                              <td class="govuk-table__cell">Whether the object is able to be manoeuvred.</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <div class="govuk-accordion__section ">
-                      <div class="govuk-accordion__section-header">
-                        <h2 class="govuk-accordion__section-heading">
                           <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                            Data sources used to generate object data
+                            Object data sources
                           </span>
                         </h2>
                       </div>
                       <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                        <h3 class="govuk-heading-m">Data Sources</h3>
                         <table class="govuk-table" style="width: 100%">
                             <tbody class="govuk-table__body">
                               <tr class="govuk-table__row">
@@ -278,25 +265,36 @@ My satellite environment
                           </table>
                       </div>
                     </div>
+                    <div class="govuk-accordion__section ">
+                      <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Further explanation of object data
+                          </span>
+                        </h2>
+                      </div>
+                      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                        <table class="govuk-table" style="width: 100%">
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header" style="width: 40%">Details of this analysis</th>
+                                <td class="govuk-table__cell" style="width: 60%">To view an explanation and additional details regarding this data and analysis, view our <a class="govuk-link" href="data-explanation.html">further explanation page.</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header" style="width: 40%">Define term: Active/ Inactive</th>
+                                <td class="govuk-table__cell" style="width: 60%">Whether the satellite is known to be currently actively managed by an operator. This may be unknown.</td>
+                              </tr>
+                            <tr class="govuk-table__row">
+                              <th scope="row" class="govuk-table__header">Define term: Manoeuvrable</th>
+                              <td class="govuk-table__cell">Whether the object is able to be manoeuvred.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                     </div>
 
-                  <h2 class="govuk-heading-l">Further analysis</h2>
-                  <ul class="govuk-list">
-                    <li>
-                      <a class="govuk-link" href="warning-1-probability-evolution.html">Evolution of conjunction probability</a>
-                    </li>
-                    <li>
-                      <a class="govuk-link" href="warning-1-miss-distance-evolution.html">Evolution of miss distance predictions</a>
-                    </li>
-                    <li>
-                      <a class="govuk-link" href="warning-1-error-ellipsoid.html">Evolution of conjunction error ellipsoids</a>
-                    </li>
-                    <li>
-                      <a class="govuk-link" href="warning-1-map-analysis.html">Predicted location of potential conjunction</a>
-                    </li>
-                  </ul>
-
-                  <h2 class="govuk-heading-l">Contact an orbital analyst or operator about this risk</h2>
+                  <h2 class="govuk-heading-l">Contact an orbital analyst or operator about this event</h2>
                   <ul class="govuk-list">
                     <li>
                       <a class="govuk-link" href="/operator-communication-warning-1">Contact an orbital analyst</a> at NORSS for advice
