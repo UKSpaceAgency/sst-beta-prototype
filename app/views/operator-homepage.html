@@ -23,14 +23,14 @@ My satellite environment
         <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 7%";>Event ID</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 13%";>Time of closest approach (UTC)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 11%";>Primary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Secondary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 9%";>Total miss distance (m)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 8%";>Radial miss distance (m)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 8%";>Probability of collision (Spacetrack CDM)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 8%";>Probability of collision (UKSA)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 6%";>Event ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Time of closest approach (UTC)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Primary object</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Secondary object</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Total miss distance (m)</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Radial miss distance (m)</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Probability of collision (Spacetrack CDM)</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 7%";>Probability of collision (UKSA)</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
@@ -43,8 +43,8 @@ My satellite environment
               <td class="govuk-table__cell govuk-body-s">Discoverer 5</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">129</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">352</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.1538234</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.0933822</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1538234">0.1538234</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="933822">0.0933822</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s"> <b>
@@ -55,8 +55,8 @@ My satellite environment
                 <td class="govuk-table__cell govuk-body-s">Lemur 2 </td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">418</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">125</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.1038291</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.0502054</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1038291" >0.1038291</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="502054">0.0502054</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s"> <b>
@@ -68,8 +68,8 @@ My satellite environment
 
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">652</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">427</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.0532134</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.0399283</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="532134">0.0532134</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort0value="399283">0.0399283</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s"><b>
@@ -80,8 +80,8 @@ My satellite environment
               <td class="govuk-table__cell govuk-body-s">Oneweb-0050</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">242</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.0133913</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.0196849</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="328438">0.0328438</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="196849">0.0196849</td>
 
             </tr>
           </tbody>
