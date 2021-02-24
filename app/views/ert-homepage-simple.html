@@ -1,0 +1,280 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-homepage">Home</a>
+    </li>
+    </ol>  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
+        <p class="govuk-body">There are currently <b>7</b> conjunction events affecting UK satellites.</p>
+
+        <div class="moj-search">
+        <form action="#" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Find a conjunction event
+          </label>
+          <span id="search-hint" class="govuk-hint moj-search__hint ">
+            You can search by event ID or primary object
+          </span>
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+        </form>
+        </div>
+        <nav class="moj-pagination" id="pagination-label">
+
+      <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+
+      <p class="moj-pagination__results">Showing <b>1</b> to <b>7</b> of <b>7</b> results</p>
+      </nav>
+        <! main table for conjunction warnings>
+        <p></p>
+        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 5%";>Risk</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 22%";>Event ID</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 20%";>Time of closest approach (UTC)</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 10%";>ERF level</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 10%";>Probability of collision (%)</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 10%";>Total miss distance (m)</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  High
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      <b>AAA0001</b>
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list">
+                      <li><b>Primary object:</b></li>
+                      <li>Starlink-1862</li>
+                      <li>Active</li>
+                      <li><b>Secondary object:</b></li>
+                      <li>Discoverer 5</li>
+                      <li>Inactive</li>
+                      <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                      <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                      <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                    </ul>
+                  </div>
+                </details>
+              </td>
+              <td class="govuk-table__cell">04/02/21 11:51</td>
+              <td class="govuk-table__cell">3</td>
+              <td class="govuk-table__cell">0.15</td>
+              <td class="govuk-table__cell">129</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  High
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      <b>AAA0002</b>
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list">
+                      <li><b>Primary object:</b> Starlink-1862</li>
+                    <li><b>Secondary object:</b> Discoverer 5</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                      </ul>
+                  </div>
+                </details>
+              </td>
+              <td class="govuk-table__cell">10/02/21 04:19</td>
+              <td class="govuk-table__cell">3</td>
+              <td class="govuk-table__cell">0.10</td>
+              <td class="govuk-table__cell">230</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  MED
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      <b>AAA0003</b>
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list">
+                      <li><b>Primary object:</b> Starlink-1862</li>
+                    <li><b>Secondary object:</b> Discoverer 5</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                      </ul>
+                  </div>
+                </details>
+              </td>
+              <td class="govuk-table__cell">12/02/21 19:00</td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">0.05</td>
+              <td class="govuk-table__cell">330</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Med
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      <b>AAA0004</b>
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list">
+                      <li><b>Primary object:</b> Starlink-1862</li>
+                    <li><b>Secondary object:</b> Discoverer 5</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                      </ul>
+                  </div>
+                </details>
+              </td>
+              <td class="govuk-table__cell">14/02/21 03:49</td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">0.03</td>
+              <td class="govuk-table__cell">460</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Med
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      <b>AAA0021</b>
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list">
+                      <li><b>Primary object:</b> Starlink-1862</li>
+                    <li><b>Secondary object:</b> Discoverer 5</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                      </ul>
+                  </div>
+                </details>
+              </td>
+              <td class="govuk-table__cell">10/02/21 04:19</td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">0.11</td>
+              <td class="govuk-table__cell">320</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--blue">
+                  Low
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      <b>AAA0033</b>
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list">
+                      <li><b>Primary object:</b> Starlink-1862</li>
+                    <li><b>Secondary object:</b> Discoverer 5</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                      </ul>
+                  </div>
+                </details>
+              </td>
+              <td class="govuk-table__cell">12/02/21 19:00</td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">0.08</td>
+              <td class="govuk-table__cell">654</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--blue">
+                  Low
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      <b>AAA0034</b>
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                    <ul class="govuk-list">
+                      <li><b>Primary object:</b> Starlink-1862</li>
+                    <li><b>Secondary object:</b> Discoverer 5</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                      </ul>
+                  </div>
+                </details>
+              </td>
+              <td class="govuk-table__cell">14/02/21 01:05</td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">0.06</td>
+              <td class="govuk-table__cell">423</td>
+            </tr>
+          </tbody>
+      </table>
+        <h2 class="govuk-heading-m">Notification settings</h2>
+        <p>Change your <a href="ert-notifications.html" class="govuk-link--no-visited-state">notification settings</a></p>
+        <p></p>
+
+      </div>
+      </div>
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
