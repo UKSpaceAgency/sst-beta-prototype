@@ -200,6 +200,30 @@ My satellite environment
                   <p><a href="/public/downloads/space_data.xlsx" download >Download event history</a></p>
                   </div>
                 </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                        Probability of collision calculations
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <table class="govuk-table" style="width: 100%">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header" style="width: 55%">Spacetrack CDM</th>
+                          <td class="govuk-table__cell">Alfano-2005 method</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header" style="width: 55%">UKSA analysis</th>
+                          <td class="govuk-table__cell">Foster-1992 method</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <p> For more information on the analysis carried out by the UKSA, please see the 'How this data was calculated' section at the bottom of the page.</p>
+                  </div>
+                </div>
                 </div>
                 <p></p>
 
@@ -274,7 +298,6 @@ My satellite environment
                         </h2>
                       </div>
                       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                        <p> UKSA data outputs are based on:</p>
                         <table class="govuk-table" style="width: 100%">
                             <tbody class="govuk-table__body">
                               <tr class="govuk-table__row">
@@ -283,9 +306,14 @@ My satellite environment
                                 <th scope="row" class="govuk-table__header" style="width: 30%">Secondary Object</th>
                               </tr>
                             <tr class="govuk-table__row">
-                              <th scope="row" class="govuk-table__header">Data Source</th>
+                              <th scope="row" class="govuk-table__header">Data Source - UKSA</th>
                               <td class="govuk-table__cell">Ephemeris</td>
-                              <td class="govuk-table__cell">SpaceTrack TLE</td>
+                              <td class="govuk-table__cell">Spacetrack TLE</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <th scope="row" class="govuk-table__header">Data Source - Spacetrack</th>
+                              <td class="govuk-table__cell">TLE</td>
+                              <td class="govuk-table__cell">TLE</td>
                             </tr>
                             <tr class="govuk-table__row">
                               <th scope="row" class="govuk-table__header">Data received</th>
@@ -296,6 +324,11 @@ My satellite environment
                               <th scope="row" class="govuk-table__header">Data reliability</th>
                               <td class="govuk-table__cell">N/A</td>
                               <td class="govuk-table__cell">167 observations</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <th scope="row" class="govuk-table__header">Object manoeuvrability source</th>
+                              <td class="govuk-table__cell">Spacetrack</td>
+                              <td class="govuk-table__cell">Spacetrack</td>
                             </tr>
                             </tbody>
                           </table>
