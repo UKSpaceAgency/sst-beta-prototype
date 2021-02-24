@@ -47,12 +47,12 @@ My satellite environment
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 4%";>Risk</th>
-              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 30%";>Event ID</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 18%";>Event ID</th>
               <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 20%";>Time of closest approach (UTC)</th>
               <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 5%";>ERF level</th>
               <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 5%";>Probability of collision (%)</th>
               <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 5%";>Miss distance (m)</th>
-              <th scope="col" class="govuk-table__header" span="1" style="width: 30%";>Additional options</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 45%";>Actions</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
@@ -74,11 +74,12 @@ My satellite environment
                       <li><b>Primary object:</b></li>
                       <li>Starlink-1862</li>
                       <li>Active</li>
-                      <li>Operator: SPACEX</li>
                       <li><b>Secondary object:</b></li>
                       <li>Discoverer 5</li>
                       <li>Inactive</li>
-                      <li>Operator: N/A</li>
+                      <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                      <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                      <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
                     </ul>
                   </div>
                 </details>
@@ -88,12 +89,23 @@ My satellite environment
               <td class="govuk-table__cell">0.15</td>
               <td class="govuk-table__cell">129</td>
               <td class="govuk-table__cell">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Analysis</a>
-                </button>
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Contact</a>
-                </button>
+                <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+                <ul class="moj-sub-navigation__list">
+                <li class="moj-sub-navigation__item">
+                  <a class="moj-sub-navigation__link" aria-current="page" href="#1">Analysis</a>
+                </li>
+
+                <li class="moj-sub-navigation__item">
+                  <a class="moj-sub-navigation__link" href="#2">Contact</a>
+                </li>
+
+                <li class="moj-sub-navigation__item">
+                  <a class="moj-sub-navigation__link" href="#3">Contact</a>
+                </li>
+                </ul>
+
+                </nav>
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -114,11 +126,12 @@ My satellite environment
                       <li><b>Primary object:</b></li>
                       <li>Starlink-1862</li>
                       <li>Active</li>
-                      <li>Operator: SPACEX</li>
                       <li><b>Secondary object:</b></li>
                       <li>Discoverer 5</li>
                       <li>Inactive</li>
-                      <li>Operator: N/A</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
                       </ul>
                   </div>
                 </details>
@@ -128,12 +141,20 @@ My satellite environment
               <td class="govuk-table__cell">0.10</td>
               <td class="govuk-table__cell">230</td>
               <td class="govuk-table__cell">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Analysis</a>
-                </button>
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Contact</a>
-                </button>
+                <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+                <ul class="moj-sub-navigation__list">
+                <li class="moj-sub-navigation__item">
+                  <a class="moj-sub-navigation__link" aria-current="page" href="#1">Analysis</a>
+                </li>
+
+                <li class="moj-sub-navigation__item">
+                  <a class="moj-sub-navigation__link" href="#2">Contact details</a>
+                </li>
+
+                </ul>
+
+                </nav>
               </td>
             </tr>
             <tr class="govuk-table__row">
@@ -154,11 +175,12 @@ My satellite environment
                       <li><b>Primary object:</b></li>
                       <li>Starlink-1862</li>
                       <li>Active</li>
-                      <li>Operator: SPACEX</li>
                       <li><b>Secondary object:</b></li>
                       <li>Discoverer 5</li>
                       <li>Inactive</li>
-                      <li>Operator: N/A</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
                       </ul>
                   </div>
                 </details>
@@ -167,14 +189,6 @@ My satellite environment
               <td class="govuk-table__cell">2</td>
               <td class="govuk-table__cell">0.05</td>
               <td class="govuk-table__cell">330</td>
-              <td class="govuk-table__cell">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Analysis</a>
-                </button>
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Contact</a>
-                </button>
-              </td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
@@ -194,11 +208,12 @@ My satellite environment
                       <li><b>Primary object:</b></li>
                       <li>Starlink-1862</li>
                       <li>Active</li>
-                      <li>Operator: SPACEX</li>
                       <li><b>Secondary object:</b></li>
                       <li>Discoverer 5</li>
                       <li>Inactive</li>
-                      <li>Operator: N/A</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
                       </ul>
                   </div>
                 </details>
@@ -207,14 +222,6 @@ My satellite environment
               <td class="govuk-table__cell">2</td>
               <td class="govuk-table__cell">0.03</td>
               <td class="govuk-table__cell">460</td>
-              <td class="govuk-table__cell">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Analysis</a>
-                </button>
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Contact</a>
-                </button>
-              </td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
@@ -234,11 +241,12 @@ My satellite environment
                       <li><b>Primary object:</b></li>
                       <li>Starlink-1862</li>
                       <li>Active</li>
-                      <li>Operator: SPACEX</li>
                       <li><b>Secondary object:</b></li>
                       <li>Discoverer 5</li>
                       <li>Inactive</li>
-                      <li>Operator: N/A</li>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
                       </ul>
                   </div>
                 </details>
@@ -247,14 +255,6 @@ My satellite environment
               <td class="govuk-table__cell">2</td>
               <td class="govuk-table__cell">0.11</td>
               <td class="govuk-table__cell">320</td>
-              <td class="govuk-table__cell">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Analysis</a>
-                </button>
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Contact</a>
-                </button>
-              </td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
@@ -274,12 +274,13 @@ My satellite environment
                       <li><b>Primary object:</b></li>
                       <li>Starlink-1862</li>
                       <li>Active</li>
-                      <li>Operator: SPACEX</li>
                       <li><b>Secondary object:</b></li>
                       <li>Discoverer 5</li>
                       <li>Inactive</li>
-                      <li>Operator: N/A</li>
-                    </ul>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                      </ul>
                   </div>
                 </details>
               </td>
@@ -287,14 +288,6 @@ My satellite environment
               <td class="govuk-table__cell">2</td>
               <td class="govuk-table__cell">0.08</td>
               <td class="govuk-table__cell">654</td>
-              <td class="govuk-table__cell">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Analysis</a>
-                </button>
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Contact</a>
-                </button>
-              </td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
@@ -314,12 +307,13 @@ My satellite environment
                       <li><b>Primary object:</b></li>
                       <li>Starlink-1862</li>
                       <li>Active</li>
-                      <li>Operator: SPACEX</li>
                       <li><b>Secondary object:</b></li>
                       <li>Discoverer 5</li>
                       <li>Inactive</li>
-                      <li>Operator: N/A</li>
-                  </ul>
+                    <li><b><a href="admin-warning-1.html" class="govuk-link--no-visited-state">Further analysis</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact an analyst</a></b></li>
+                    <li><b><a href="#" class="govuk-link--no-visited-state">Contact the operator</a></b></li>
+                      </ul>
                   </div>
                 </details>
               </td>
@@ -327,14 +321,6 @@ My satellite environment
               <td class="govuk-table__cell">2</td>
               <td class="govuk-table__cell">0.06</td>
               <td class="govuk-table__cell">423</td>
-              <td class="govuk-table__cell">
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Analysis</a>
-                </button>
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  <a href="#" class="govuk-link--no-visited-state">Contact</a>
-                </button>
-              </td>
             </tr>
           </tbody>
       </table>
