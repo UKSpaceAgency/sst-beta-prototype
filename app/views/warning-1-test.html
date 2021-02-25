@@ -22,52 +22,44 @@ My satellite environment
     </div>
     <div class="govuk-main-wrapper">
         <div class="govuk-grid-column-one-quarter">
-          <div class="govuk-grid-row">
 
-        <nav class="moj-side-navigation" aria-label="Side navigation">
-          <h4 class="moj-side-navigation__title">Page contents</h4>
-          <ul class="moj-side-navigation__list">
-            <li class="moj-side-navigation__item">
-              <a class="moj-sub-navigation__link" href="#event summary">Event summary</a>
-            </li>
-            <li class="moj-side-navigation__item">
-              <a class="moj-sub-navigation__link" href="#data_sources">Data sources</a>
-            </li>
-            <li class="moj-side-navigation__item">
-              <a class="moj-sub-navigation__link" href="#object_data">Object data</a>
-            </li>
-            <li class="moj-side-navigation__item">
-              <a class="moj-sub-navigation__link" href="#download_data">Download data</a>
-            </li>
-          </ul>
-          <h4 class="moj-side-navigation__title">View further information on how this data was calculated</h4>
-          <ul class="moj-side-navigation__list">
-            <li class="moj-side-navigation__item">
-              <a class="moj-sub-navigation__link" href="#event summary">Data sources</a>
-            </li>
-            <li class="moj-side-navigation__item">
-              <a class="moj-sub-navigation__link" href="#event summary">Analytical tools</a>
-            </li>
-            <li class="moj-side-navigation__item">
-              <a class="moj-sub-navigation__link" href="#event summary">Definitions and explanations</a>
-            </li>
+          <h3 class="govuk-heading-s">Contents</h3>
+
+            <ul class="moj-side-navigation__list">
+              <li class="moj-side-navigation__item">
+                <a href="#event summary">Event Summary</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#data_sources">Data sources</a>
+              </li>
+
+              <li class="moj-side-navigation__item">
+                <a href="#object_data">Object data</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#download_data">Download data</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#calculation_info">How this data was calculated</a>
+              </li>
             </ul>
-          <h4 class="moj-side-navigation__title">Contact someone about this event</h4>
-          <ul class="moj-side-navigation__list">
-            <li class="moj-side-navigation__item">
+
+
+            <h3 class="govuk-heading-s">Contact someone about this event</h3>
+
+          <ul class="govuk-list">
+            <li >
               <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
                 Contact a UKSA orbital analyst
               </button>    </li>
-              <li class="moj-side-navigation__item">
+              <li >
                 <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
                 Send ephemeris data to UKSA
                 </button>    </li>
-            <li class="moj-side-navigation__item">
+            <li >
               <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
               Contact the operator of the secondary object</button>    </li>
             </ul>
-
-        </nav>
 
 
         </div>
@@ -81,7 +73,8 @@ My satellite environment
                     <th scope="row" class="govuk-table__header" style="width: 35%"> </th>
                     <th scope="row" class="govuk-table__header govuk-table__header--numeric govuk-body-s" style="width: 15%">Error ±</th>
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s" style="width: 55%">Probability of collision (SpaceTrack CDM, %)</th>
+                    <th scope="row" class="govuk-table__header govuk-body-s" style="width: 55%">Probability of collision (SpaceTrack CDM, %)
+                    </th>
                     <td class="govuk-table__cell govuk-body-s" style="width: 25%">0.1538234</td>
                     <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s" style="width: 20%">0.02</td>
                   </tr>
@@ -122,7 +115,7 @@ My satellite environment
                   </tr>
                 </tbody>
               </table>
-              <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations of event">
+              <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
                 <div class="govuk-accordion__section ">
                   <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading">
@@ -174,7 +167,7 @@ My satellite environment
                           <td class="govuk-table__cell">320 km</td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header" style="width: 55%">Longitude</th>
+                          <th scope="row" class="govuk-table__header " style="width: 55%">Longitude</th>
                           <td class="govuk-table__cell">280 km</td>
                         </tr>
                         <tr class="govuk-table__row">
@@ -376,16 +369,15 @@ My satellite environment
                     </tr>
                   </tbody>
                 </table>
-
-
                   <h1 class="govuk-heading-l" id="download_data">Download data</h1>
-
                   <p><a href="/public/downloads/space_data.xlsx" download >Download event data for AAA0001 (csv file)</a></p>
-
-
-                  <p></p>
-
-            </div>
+                  <h1 class="govuk-heading-l" id="calculation_info">How this data was calculated</h1>
+                  <p class="govuk-body">To understand more about how this data was generated by the UKSA, see:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li><a class="govuk-link" href="#">Data sources</a></li>
+                    <li><a class="govuk-link" href="#">Analytical tools</a></li>
+                    <li><a class="govuk-link" href="#">Definitions and explanation</a></li>
+                  </ul>            </div>
             <div class="govuk-grid-row">
 
             </div>
