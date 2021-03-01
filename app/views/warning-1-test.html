@@ -37,30 +37,15 @@ My satellite environment
                 <a href="#object_data">Object data</a>
               </li>
               <li class="moj-side-navigation__item">
+                <a href="#contact_someone">Contact someone about this event</a>
+              </li>
+              <li class="moj-side-navigation__item">
                 <a href="#download_data">Download data</a>
               </li>
               <li class="moj-side-navigation__item">
                 <a href="#calculation_info">How this data was calculated</a>
               </li>
             </ul>
-
-
-            <h3 class="govuk-heading-s">Contact someone about this event</h3>
-
-          <ul class="govuk-list">
-            <li >
-              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Contact a UKSA orbital analyst
-              </button>    </li>
-              <li >
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Send ephemeris data to UKSA
-                </button>    </li>
-            <li >
-              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Contact the operator of the secondary object</button>    </li>
-            </ul>
-
 
         </div>
       </div>
@@ -200,8 +185,8 @@ My satellite environment
                       <thead class="govuk-table__head">
                         <tr class="govuk-table__row">
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of update (UTC)</th>
-                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision % (SpaceTrack CDM)</th>
-                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision % (UKSA)</th>
+                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision (SpaceTrack CDM, %)</th>
+                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision (UKSA, %)</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Total miss distance</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Radial miss distance</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of event (UTC)</th>
@@ -369,6 +354,21 @@ My satellite environment
                     </tr>
                   </tbody>
                 </table>
+                  <a href="operator-communication-warning-1" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                  Send ephemeris data to UKSA</a>
+                <h1 class="govuk-heading-l" id="contact_someone">Contact someone about this event</h1>
+                <div class="moj-button-menu">
+                  <div class="moj-button-menu__wrapper">
+                    <a href="operator-communication-warning-1" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
+                      Contact a UKSA orbital analyst
+                    </a>
+
+                    <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
+                      Contact the operator of the secondary object
+                    </a>
+                    </div>
+                    </div>
+                    <p></p>
                   <h1 class="govuk-heading-l" id="download_data">Download data</h1>
                   <p><a href="/public/downloads/space_data.xlsx" download >Download event data for AAA0001 (csv file)</a></p>
                   <h1 class="govuk-heading-l" id="calculation_info">How this data was calculated</h1>
