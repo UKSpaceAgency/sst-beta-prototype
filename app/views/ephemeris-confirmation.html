@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-1">Alert AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-send-ephemeris">Upload your ephemeris data</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/operator-communication-warning-1">Ephemeris confirmation</a>
+    </li>
+    </ol>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl"> Event AAA0001 ephemeris confirmation </h1>
+      <p> Your ephemeris data has been sent. </p>
+      <div class="govuk-button-group">
+        <a href="warning-1" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+          Return to event summary</a>
+          <a href="operator-contact-analyst" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Contact a UKSA orbital analyst</a>
+      </div>
+    </div>
+    </div>
+
+{% endblock %}
