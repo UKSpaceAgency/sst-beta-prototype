@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="ert-warning-1">Alert AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-add-interpretation">Add information</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+    <h1 class="govuk-heading-xl">Add information to AAA0001 event page</h1>
+    <form class="form" action="/confirmation" method="post">
+      <p class="govuk--body">Add supplementary explanation and data interpretation for other users. The text entered will be seen by all users at the top of the page. </p>
+      <p> </p>
+      <p> </p>
+
+    <div class="govuk-form-group">
+    <h1 class="govuk-heading-l">Add your text:</h1>
+  </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Publish and notify users
+    </button>
+
+    </div>
+
+  </main>
+{% endblock %}
