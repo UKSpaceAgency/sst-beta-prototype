@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/admin-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/admin-ert-homepage">ERT interface</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="admin-ert-warning-1">ERT Event AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/admin-edit-field">Edit field</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+    <h1 class="govuk-heading-xl">
+      Make changes to the ERT event page
+    </h1>
+    <form class="form" action="/confirmation" method="post">
+
+    <ul class="govuk-list">
+      <li>Edit the information visible in the ERT interface.</li>
+      <li><p></p> </li>
+      <li></li>
+    </ul>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+          Field name:
+        </label>
+      </h1>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+    </div>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+          Your edit:
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        Please insert your edit below. This edit will be visible to all users of the ERT interface.
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Send
+    </button>
+
+    </div>
+
+  </main>
+{% endblock %}
