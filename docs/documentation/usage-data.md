@@ -2,7 +2,7 @@
 
 You can choose to have the Prototype Kit send anonymous usage data for analysis.
 This helps the team working on the Kit understand how it's being used, in order
-to improve it - please don't turn off usage data unless you have to.
+to improve it -  don't turn off usage data unless you have to.
 
 ## How it works
 
