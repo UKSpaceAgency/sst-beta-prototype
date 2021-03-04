@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-warning-3">Event AAA0003</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Evolution of miss distance predictions</a>
+    </li>
+      </ol>
+      </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+        <h1 class="govuk-heading-xl">AAA0003: Evolution of miss distance prediction</h1>
+            <p></p>
+            <p> This graph shows the changing predictions of miss distance occuring over time.</p>
+            <p> Note, the red line represents the expected time of conjunction event.</p>
+
+              <img src="/public/images/MD-test-AAA0003.PNG" alt="Miss-distance-evolution-US">
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
