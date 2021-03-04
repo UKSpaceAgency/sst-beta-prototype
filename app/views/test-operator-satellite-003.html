@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/test-operator-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/test-operator-satellite-003">CRNFD-003</a>
+      </li>
+    </ol>
+  </div>
+
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">CRNFD-003</h1>
+
+  <h2 class="govuk-heading-l">Upcoming conjunction events</h2>
+  <p>CRNFD-003 does not currently have any active conjunction events.</p>
+
+<p><a href="/public/downloads/space_data.xlsx" download >Download event history for CRNFD-003</a></p>
+<p></p>
+        <h2 class="govuk-heading-l">Satellite Information</h2>
+
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Common name</th>
+                <td class="govuk-table__cell">CRNFD-003</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">NORAD ID</th>
+                <td class="govuk-table__cell">92223</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">International designator</th>
+                <td class="govuk-table__cell">2021-003CN</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Object type</th>
+                <td class="govuk-table__cell">Payload</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Active / inactive</th>
+                <td class="govuk-table__cell">Active</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Manoeuvrability</th>
+                <td class="govuk-table__cell">Manoeuvrable</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Disposed or decayed</th>
+                <td class="govuk-table__cell">N/A</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Mass (kg)</th>
+                <td class="govuk-table__cell">105</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location of launch</th>
+                <td class="govuk-table__cell">UK</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Launch date</th>
+                <td class="govuk-table__cell">2021</td>
+              </tr>
+            </tbody>
+          </table>
+          <p></p>
+
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Licence Information
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <table class="govuk-table">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Operator/Owner</th>
+                      <td class="govuk-table__cell"><a href="/operator2-profile-x">Cranfield</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Licence issued under Outer Space Act</th>
+                      <td class="govuk-table__cell">01/01/21</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Accepted onto UK register of Space Objects</th>
+                      <td class="govuk-table__cell">01/01/21</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">General function</th>
+                      <td class="govuk-table__cell">Research</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                    Compliance and monitoring
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <p> For further information regarding compliance and monitoring of this spacecraft, visit www...</p>
+                <table class="govuk-table">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header"></th>
+                      <th  class="govuk-table__header">Most recent submission</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Annual Health Check</th>
+                      <td class="govuk-table__cell">01/01/2021</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Third-party liability insurance policy</th>
+                      <td class="govuk-table__cell">01/01/2021</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Reported planned change to activity to UKSA</th>
+                      <td class="govuk-table__cell">N/A</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <p> </p>
+          <h2 class="govuk-heading-l">Location data</h2>
+              <p>This table shows the most recent location data for CRNFD-003.</p>
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header" span="1" style="width: 20%">Date</th>
+                    <th scope="col" class="govuk-table__header" span="1" style="width: 15%">Orbit</th>
+                    <th scope="col" class="govuk-table__header" span="1" style="width: 15%">Inclination</th>
+                    <th scope="col" class="govuk-table__header" span="1" style="width: 15%">Apogee</th>
+                    <th scope="col" class="govuk-table__header" span="1" style="width: 15%">Perigee</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">10/03/2021 11:40</td>
+                    <td scope="row" class="govuk-table__cell">LEO</td>
+                    <td scope="row" class="govuk-table__cell">111.11</td>
+                    <td scope="row" class="govuk-table__cell">1459</td>
+                    <td scope="row" class="govuk-table__cell">1096</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">09/03/2021 11:37</td>
+                    <td scope="row" class="govuk-table__cell">LEO</td>
+                    <td scope="row" class="govuk-table__cell">111.81</td>
+                    <td scope="row" class="govuk-table__cell">1463</td>
+                    <td scope="row" class="govuk-table__cell">1101</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">08/03/2021 11:18</td>
+                    <td scope="row" class="govuk-table__cell">LEO</td>
+                    <td scope="row" class="govuk-table__cell">112.01</td>
+                    <td scope="row" class="govuk-table__cell">1455</td>
+                    <td scope="row" class="govuk-table__cell">1099</td>
+                  </tr>
+                </tbody>
+              </table>
+                <p><a href="/public/downloads/space_data.xlsx" download >Download location data for CRNFD-003</a></p>
+                <p> </p>
+  </main>
+  </div>
+
+
+{% endblock %}

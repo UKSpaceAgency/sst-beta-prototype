@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-warning-1">Event AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-warning-1-contact-spacex">Contact operator</a>
+    </li>
+      </ol>
+      </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+        <h1 class="govuk-heading-xl">Contact operator of Starlink 1862</h1>
+            <p></p>
+            <p class="govuk-body-l"> The contact details of the operator of this satellite are shown below: </p>
+            <p> </p>
+    </div>
+    <div class="govuk-grid-row">
+      <table class="govuk-table">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Operator</th>
+        <td class="govuk-table__cell">Space X</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Email</th>
+        <td class="govuk-table__cell">[email@email.com]</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Phone number</th>
+        <td class="govuk-table__cell">[XXXXX XXXXXX]</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Availability</th>
+        <td class="govuk-table__cell">24/7</td>
+      </tr>
+    </tbody>
+  </table>
+  </main>
+</div>
+
+
+{% endblock %}
