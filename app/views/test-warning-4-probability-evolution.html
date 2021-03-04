@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-warning-4">Event AAA0004</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Evolution of conjunction probability</a>
+    </li>
+      </ol>
+      </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+        <h1 class="govuk-heading-xl">AAA0004: Evolution of conjunction probability</h1>
+            <p></p>
+            <p> This graph shows the changing probability of a conjunction event occuring over time.
+            Data from both the USA and UKSA is shown. </p>
+            <p><b>TCA</b> = Time of closest approach.
+              <img src="/public/images/PofC-test-AAA0004.PNG" alt="User icon">
+            </div>
+          </main>
+</div>
+
+
+{% endblock %}
