@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/test-ert-homepage">Home</a>
+    </li>
+  </ol>
+</div>
+    <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
+        <p class="govuk-body">Forecast conjunction events affecting UK satellites:</p>
+        <! main table for conjunction warnings>
+        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>ERF level</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>Event ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Time of closest approach (UTC)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary object</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary object</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of collision (%)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Total miss distance</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Impact</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s" data-sort-value="2">
+              <strong class="govuk-tag govuk-tag--yellow">
+                Level 2
+              </strong>
+            </td>
+            <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b>
+                <a href="test-ert-warning-1.html" class="govuk-link--no-visited-state">AAA0001</a> </b>
+              </td>
+              <td class="govuk-table__cell govuk-body-s">12/03/21 19:51</td>
+              <td class="govuk-table__cell govuk-body-s">CRNFD-001</td>
+              <td class="govuk-table__cell govuk-body-s">Starlink-1862</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="24371">2.4371</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="104">104 m</td>
+              <td class="govuk-table__cell govuk-body-s">High</td>
+            </tr>
+            <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s" data-sort-value="1">
+              <strong class="govuk-tag govuk-tag--blue">
+                Level 1
+              </strong>
+            </td>
+            <td class="govuk-table__cell govuk-body-s" data-sort-value="0002"> <b>
+                <a href="test-ert-warning-2.html" class="govuk-link--no-visited-state">AAA0002</a> </b>
+              </td>
+              <td class="govuk-table__cell govuk-body-s">12/03/21 23:03</td>
+              <td class="govuk-table__cell govuk-body-s">CRNFD-004</td>
+              <td class="govuk-table__cell govuk-body-s">Debris</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="13472">1.3472</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="140">140 m</td>
+              <td class="govuk-table__cell govuk-body-s">Medium</td>
+            </tr>
+            <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s" data-sort-value="1">
+              <strong class="govuk-tag govuk-tag--blue">
+                Level 1
+              </strong>
+            </td>
+            <td class="govuk-table__cell govuk-body-s" data-sort-value="0003"> <b>
+                <a href="test-ert-warning-3.html" class="govuk-link--no-visited-state">AAA0003</a> </b>
+              </td>
+              <td class="govuk-table__cell govuk-body-s">12/03/21 19:00</td>
+              <td class="govuk-table__cell govuk-body-s">CRNFD-006</td>
+              <td class="govuk-table__cell govuk-body-s">Spacebee-52</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="865">0.0865</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="308">308 m</td>
+              <td class="govuk-table__cell govuk-body-s">Medium</td>
+            </tr>
+            <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s" data-sort-value="3">
+              <strong class="govuk-tag govuk-tag--red">
+                Level 3
+              </strong>
+            </td>
+            <td class="govuk-table__cell govuk-body-s" data-sort-value="0004"> <b>
+                <a href="test-ert-warning-4.html" class="govuk-link--no-visited-state">AAA0004</a> </b>
+              </td>
+              <td class="govuk-table__cell govuk-body-s">13/03/21 03:49</td>
+              <td class="govuk-table__cell govuk-body-s">CRNFD-007</td>
+              <td class="govuk-table__cell govuk-body-s">Debris</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="74325">7.4325</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="17">17 m</td>
+              <td class="govuk-table__cell govuk-body-s">High</td>
+            </tr>
+          </tbody>
+      </table>
+        <h2 class="govuk-heading-m">Settings</h2>
+        <p>View or change your <a href="#" class="govuk-link--no-visited-state">notification settings</a></p>
+        <p>View or change your <a href="#" class="govuk-link--no-visited-state">homepage settings</a></p>
+        <p></p>
+      </div>
+      </div>
+  </main>
+</div>
+
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
