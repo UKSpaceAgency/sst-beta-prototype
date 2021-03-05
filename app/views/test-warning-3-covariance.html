@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-warning-3">Event AAA0003</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Covariance</a>
+    </li>
+      </ol>
+      </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+        <h1 class="govuk-heading-xl">AAA0003: Covariance visualisation of event</h1>
+            <p></p>
+            <p>  </p>
+              <img src="/public/images/CV-test-AAA0003.PNG" alt="covariance">
+            </div>
+          </main>
+</div>
+
+
+{% endblock %}
