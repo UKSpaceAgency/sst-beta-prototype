@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="test-operator-homepage-settings">Homepage settings</a>
+    </li>
+      </ol>
+      </div>
+      <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Homepage settings</h1>
+        <form class="form" action="/test-operator-homepage" method="post">
+        <p class="govuk-body-m">Your current event status thresholds are displayed below.</p>
+
+        <p> An event status is triggered if <b> any of your specified thresholds </b> are met:
+
+
+        <table class="govuk-table" style="width:100%">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" style="width:60%">Event status criteria</th>
+              <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Probability of collision (UKSA or Spacetrack) is above:</th>
+              <td class="govuk-table__cell">0.1 %</td>
+              <td class="govuk-table__cell">0.01 %</td>
+              <td class="govuk-table__cell">-</td>
+
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+              <td class="govuk-table__cell">200 m </td>
+              <td class="govuk-table__cell">500 m</td>
+              <td class="govuk-table__cell">-</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+              <td class="govuk-table__cell">200 m</td>
+              <td class="govuk-table__cell">500 m</td>
+              <td class="govuk-table__cell">-</td>
+            </tr>
+
+
+          </tbody>
+        </table>
+            <a class="govuk-link" href="#">
+                Change your event status thresholds<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+          </div>
+
+
+
+
+</div>
+
+    <div>
+
+      </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
