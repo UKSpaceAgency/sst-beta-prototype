@@ -12,58 +12,100 @@ My satellite environment
       <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="operator-homepage-settings">Homepage settings</a>
+      <a class="govuk-breadcrumbs__link" href="operator-homepage-settings">Event status settings</a>
     </li>
       </ol>
       </div>
       <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-
-        <h1 class="govuk-heading-xl">Homepage settings</h1>
         <form class="form" action="/operator-homepage" method="post">
-        <p class="govuk-body-m">Your current event status thresholds are displayed below.</p>
 
-        <p> An event status is triggered if <b> any of your specified thresholds </b> are met:
-
-
+        <h1 class="govuk-heading-xl">Event status settings</h1>
+        <form class="form" action="/operator-homepage" method="post">
+        <p> An event status is listed as <strong class="govuk-tag govuk-tag--red">High</strong> or <strong class="govuk-tag govuk-tag--yellow">Med</strong> if <b> any of your specified thresholds </b> are met.
+          <p> Leave criteria you do not wish to be considered blank.
         <table class="govuk-table" style="width:100%">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header" style="width:60%">Event status criteria</th>
-              <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
-              <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
-              <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:40%">Event status criteria</th>
+              <th scope="col" class="govuk-table__header" style="width:20%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:20%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:20%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Probability of collision (UKSA or Spacetrack) is above:</th>
-              <td class="govuk-table__cell">0.1 %</td>
-              <td class="govuk-table__cell">0.01 %</td>
+              <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+              <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                  <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                </div></td>
+              <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                  <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                </div></td>
               <td class="govuk-table__cell">-</td>
 
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
-              <td class="govuk-table__cell">200 m </td>
-              <td class="govuk-table__cell">500 m</td>
+              <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                  <div class="govuk-input__suffix" aria-hidden="true">m</div>
+                </div></td>
+              <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                  <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
               <td class="govuk-table__cell">-</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
-              <td class="govuk-table__cell">200 m</td>
-              <td class="govuk-table__cell">500 m</td>
+              <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                  <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+              <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                  <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
               <td class="govuk-table__cell">-</td>
             </tr>
-            
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Time to event is below</th>
+              <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                  <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+              <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                  <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+              <td class="govuk-table__cell">-</td>
+            </tr>
 
           </tbody>
         </table>
-            <a class="govuk-link" href="#">
-                Change your event status thresholds<span class="govuk-visually-hidden"> date of birth</span>
-              </a>
+        <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h2 class="govuk-fieldset__heading">
+                        Use data sources:
+                      </h2>
+                    </legend>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="data-source-1" name="data-source" type="radio" value="Spacetrack and UKSpOC" checked=checked>
+                        <label class="govuk-label govuk-radios__label" for="data-source">
+                          Spacetrack and/or UKSpOC
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="data-source-2" name="data-source" type="radio" value="UKSpOC only">
+                        <label class="govuk-label govuk-radios__label" for="data-source-2">
+                          UKSpOC only
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="data-source-3" name="data-source" type="radio" value="Spacetrack only">
+                        <label class="govuk-label govuk-radios__label" for="data-source-3">
+                          Spacetrack only
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
           </div>
-
+          <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+            </button>
+            </form>
 
 
 
