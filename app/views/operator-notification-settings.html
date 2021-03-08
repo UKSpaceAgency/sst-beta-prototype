@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-notification-settings">Notification settings</a>
+    </li>
+      </ol>
+      </div>
+      <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <form class="form" action="/operator-homepage" method="post">
+
+        <h1 class="govuk-heading-xl">Notification settings</h1>
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Which events would you like to receive notifications for?
+  </h1>
+</legend>
+<div class="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+      All forecast conjunction events (<strong class="govuk-tag govuk-tag--blue">Low</strong>, <strong class="govuk-tag govuk-tag--yellow">Med</strong> and <strong class="govuk-tag govuk-tag--red">High</strong> status criteria)
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        Only events meeting your <strong class="govuk-tag govuk-tag--yellow">Med</strong> or <strong class="govuk-tag govuk-tag--red">High</strong> status criteria
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Only events meeting your <strong class="govuk-tag govuk-tag--red">High</strong> status criteria
+    </label>
+  </div>
+  <div class="govuk-radios__divider">or</div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="where-do-you-live-6" name="where-do-you-live" type="radio" value="abroad">
+    <label class="govuk-label govuk-radios__label" for="where-do-you-live-6">
+      Do not receive event notifications
+    </label>
+  </div>
+</div>
+
+</fieldset>
+</div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                      <h1 class="govuk-fieldset__heading">
+                      How would you like to receive event notifications?
+                      </h1>
+                      <p> Select all that apply.<p/>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                        <label class="govuk-label govuk-checkboxes__label" for="contact">
+                          Email
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3" checked=check>
+                        <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                          Text message
+                        </label>
+                      </div>
+                    </div>
+            </div>
+
+
+          <button class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+                </form>
+  </div>
+
+
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
