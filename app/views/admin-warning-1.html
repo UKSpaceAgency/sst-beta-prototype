@@ -29,7 +29,7 @@ My satellite environment
 
             <ul class="moj-side-navigation__list">
               <li class="moj-side-navigation__item">
-                <a href="#event summary">Event summary</a>
+                <a href="#event info">Event information</a>
               </li>
               <li class="moj-side-navigation__item">
                 <a href="#data_sources">Data sources</a>
@@ -49,24 +49,57 @@ My satellite environment
               </li>
             </ul>
 
+          <h3 class="govuk-heading-s">Actions</h3>
+
+            <ul class="moj-side-navigation__list">
+              <li class="moj-side-navigation__item">
+                <a href="#">Contact ERT team</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#">Contact orbital analyst</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#">Request .pdf report from orbital analysts</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#">Download this page as a .pdf</a>
+              </li>
+            </ul>
+
         </div>
       </div>
       <div class="govuk-grid-column-three-quarters">
-              <h1 class="govuk-heading-l" id="event summary">Event summary</h1>
+        <h1 class="govuk-heading-l" id="event summary">Event summary</h1>
+        <table class="govuk-table"style="width:100%">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 55%">Event risk</th>
+            <td class="govuk-table__cell" style="width: 25%">  <strong class="govuk-tag govuk-tag--red">High</strong></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric" style="width: 20%"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 55%">Event potential impact</th>
+            <td class="govuk-table__cell" style="width: 25%">  <strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric" style="width: 20%"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 55%">Emergency Response Framework level</th>
+            <td class="govuk-table__cell govuk-body-s" style="width: 25%">  <strong class="govuk-tag govuk-tag--yellow">LEVEL 2</strong></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric" style="width: 20%"></td>
+          </tr>
+        </table>
+        <p> To alter these ratings and request confirmation from the CNI team regarding the ERF level, select the button below.</p>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Edit event summary for AAA0001
+        </button>
+
+          <h1 class="govuk-heading-l" id="event info">Event information</h1>
+
               <table class="govuk-table"style="width:100%">
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header" style="width: 50%"> </th>
                     <th scope="row" class="govuk-table__header" style="width: 35%"> </th>
                     <th scope="row" class="govuk-table__header govuk-table__header--numeric govuk-body-s" style="width: 15%">Error ±</th>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s" style="width: 55%">Your event status
-                      </th>
-                      <td class="govuk-table__cell govuk-body-s" style="width: 25%">  <strong class="govuk-tag govuk-tag--red">
-                          High
-                        </strong></td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s" style="width: 20%"></td>
-                    </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s" style="width: 55%">Probability of collision (SpaceTrack CDM, %)
                     </th>
