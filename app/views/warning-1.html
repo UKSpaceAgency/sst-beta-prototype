@@ -192,9 +192,9 @@ My satellite environment
                     <table class="govuk-table" data-module="moj-sortable-table">
                       <thead class="govuk-table__head">
                         <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Data source</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of update (UTC)</th>
-                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision (Space-track CDM, %)</th>
-                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision (UKSA, %)</th>
+                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision (%)</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Total miss distance (m)</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Radial miss distance (m)</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of closest approach (UTC)</th>
@@ -202,33 +202,33 @@ My satellite environment
                       </thead>
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">Space-track CDM</td>
                           <td class="govuk-table__cell govuk-body-s">04/02/21 08:19</td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="1538234">0.1538</td>
-                          <td class="govuk-table__cell govuk-body-s" data-sort-value="933822">0.0933</td>
                           <td class="govuk-table__cell govuk-body-s">37</td>
                           <td class="govuk-table__cell govuk-body-s">15</td>
                           <td class="govuk-table__cell govuk-body-s">04/02/21 11:51.05</td>
                           </tr>
                         <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">Space-track CDM</td>
                           <td class="govuk-table__cell govuk-body-s">03/02/21 14:10</td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="1639218">0.1639</td>
-                          <td class="govuk-table__cell govuk-body-s" data-sort-value="950231">0.0950</td>
                           <td class="govuk-table__cell govuk-body-s">40</td>
                           <td class="govuk-table__cell govuk-body-s">12</td>
                           <td class="govuk-table__cell govuk-body-s">04/02/21 11:51.00</td>
                         </tr>
                         <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">UKSA</td>
                           <td class="govuk-table__cell govuk-body-s">02/02/21 12:00</td>
-                          <td class="govuk-table__cell govuk-body-s" data-sort-value="1710025">0.1710</td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="961032">0.0961</td>
                           <td class="govuk-table__cell govuk-body-s">40</td>
                           <td class="govuk-table__cell govuk-body-s">30</td>
                           <td class="govuk-table__cell govuk-body-s">04/02/21 11:51.08</td>
                         </tr>
                         <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">Space-track CDM</td>
                           <td class="govuk-table__cell govuk-body-s">01/02/21 03:49</td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="1700132">0.1700</td>
-                          <td class="govuk-table__cell govuk-body-s" data-sort-value="980012">0.0980</td>
                           <td class="govuk-table__cell govuk-body-s">42</td>
                           <td class="govuk-table__cell govuk-body-s">18</td>
                           <td class="govuk-table__cell govuk-body-s">04/02/21 11:51.15</td>
@@ -382,12 +382,14 @@ My satellite environment
                     <p></p>
                   <h1 class="govuk-heading-l" id="download_data">Download data</h1>
                   <p><a href="/public/downloads/space_data.xlsx" download >Download event data for AAA0001 (csv file)</a></p>
+
                   <h1 class="govuk-heading-l" id="calculation_info">How this data was calculated</h1>
                   <p class="govuk-body">To understand more about how this data was generated by the UKSA, see:</p>
                   <ul class="govuk-list govuk-list--bullet">
                     <li><a class="govuk-link" href="#">UKSA conjunction analysis process</a></li>
                     <li><a class="govuk-link" href="#">Definitions and explanation</a></li>
-                  </ul>            </div>
+                  </ul>
+              </div>
             <div class="govuk-grid-row">
 
             </div>
