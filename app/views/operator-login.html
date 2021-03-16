@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Operator login
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="#">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Setting up your account</h1>
+
+    <p class="govuk-body">Welcome to 'Monitor my satellites'. Before you start using this application, please define your account settings.</p>
+
+    <h2 class="govuk-heading-l">Set your event status and notification thresholds:</h2>
+
+
+    <form class="form" action="/operator-homepage" method="post">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Conjunction events can be categorised as <strong class="govuk-tag govuk-tag--red">high</strong>, <strong class="govuk-tag govuk-tag--yellow">medium</strong> or <strong class="govuk-tag govuk-tag--blue">low</strong> events.</li>
+        <li>For each category you need to define thresholds based on four criteria.</li>
+        <li>An event status is listed as <strong class="govuk-tag govuk-tag--red">high</strong> or <strong class="govuk-tag govuk-tag--yellow">medium</strong> if <b>any of your specified thresholds</b> are met.</li>
+        <li>Any events below these thresholds will be defined as <strong class="govuk-tag govuk-tag--blue">low</strong>.</li>
+        <li>Leave criteria you do not wish to be considered blank.</li>
+      </ul>
+    <p> </p>
+    <h3 class="govuk-heading-m">Event status thresholds:</h3>
+    <table class="govuk-table" style="width:100%">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" style="width:40%">Event status criteria</th>
+          <th scope="col" class="govuk-table__header" style="width:20%"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+          <th scope="col" class="govuk-table__header" style="width:20%"><strong class="govuk-tag govuk-tag--yellow">Med</strong></th>
+          <th scope="col" class="govuk-table__header" style="width:20%"><strong class="govuk-tag govuk-tag--blue">Low</strong></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+          <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">%</div>
+            </div></td>
+          <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">%</div>
+            </div></td>
+          <td class="govuk-table__cell">-</td>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+          <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">m</div>
+            </div></td>
+          <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+          <td class="govuk-table__cell">-</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+          <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+          <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+          <td class="govuk-table__cell">-</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Time to event is below</th>
+          <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+          <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+              <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+          <td class="govuk-table__cell">-</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with event status thresholds
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Event status thresholds will depend on your risk tolerances, however common thresholds for event status may include:
+        <p></p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li> <b>Probability of collision:</b> a <strong class="govuk-tag govuk-tag--red">high</strong> risk event may have a probability over 1%; <strong class="govuk-tag govuk-tag--yellow">medium</strong> over 0.1%; and <strong class="govuk-tag govuk-tag--blue">low</strong> below 0.1%.</li>
+          <li> <b>Miss distances:</b> a <strong class="govuk-tag govuk-tag--red">high</strong> risk event may have a miss distance below 500m; <strong class="govuk-tag govuk-tag--yellow">medium</strong> below 1 km; and <strong class="govuk-tag govuk-tag--blue">low</strong> over 1 km.</li>
+          <li> <b>Time to event:</b> this will depend on how much warning you would like about an event and how long you need to plan a response.</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="govuk-form-group">
+      <h3 class="govuk-heading-m">Use data sources:</h3>
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="data-source-1" name="data-source" type="radio" value="Space-Track and UKSpOC" checked=checked>
+                    <label class="govuk-label govuk-radios__label" for="data-source">
+                      Space-Track and/or UKSpOC
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="data-source-2" name="data-source" type="radio" value="UKSpOC only">
+                    <label class="govuk-label govuk-radios__label" for="data-source-2">
+                      UKSpOC only
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="data-source-3" name="data-source" type="radio" value="Space-Track only">
+                    <label class="govuk-label govuk-radios__label" for="data-source-3">
+                      Space-Track only
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+      </div>
+      <p> </p>
+      <h3 class="govuk-heading-m">Notification preferences:</h3>
+      <table class="govuk-table" style="width:100%">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" style="width:22%">Event status criteria</th>
+            <th scope="col" class="govuk-table__header" style="width:33%"></th>
+            <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
+            <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
+            <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" rowspan="2">Receive notifications?</th>
+            <td class="govuk-table__cell">Email (containing event summary)</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+            </td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" >
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Text message (event ID only)</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+              </div>
+            </td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" >
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+            </td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" >
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+            </td>
+        </tbody>
+      </table>
+      <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+        </button>
+        </form>
+        <p class="govuk-body">You can customise your thresholds in your <a href="operator-notification-settings">account settings</a> at any time.</p>
+
+        <p>If you choose to not enter your own thresholds, <b>default thresholds</b> will be used:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>All events will be defined as <strong class="govuk-tag govuk-tag--yellow">medium</strong></li>
+          <li>You will receive notifications about all events.</li>
+        </ul>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
+{% extends "layout.html" %}
