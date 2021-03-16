@@ -15,7 +15,9 @@ My satellite environment
       <a class="govuk-breadcrumbs__link" href="/admin-ert-homepage">ERT interface</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/admin-ert-warning-1">ERT Event AAA0001</a>
+
+      <a class="govuk-breadcrumbs__link" href="ert-warning-1">ERT Event AAA0001</a>
+
     </li>
     </ol>
 </div>
@@ -33,14 +35,14 @@ My satellite environment
             <td class="govuk-table__cell" style="width: 7%"><a href="#">edit</a></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="width: 50%">Potential consequence</th>
+            <th scope="row" class="govuk-table__header" style="width: 50%">Potential impact</th>
             <td class="govuk-table__cell" style="width: 43%"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
             <td class="govuk-table__cell" style="width: 7%"><a href="#">edit</a></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header" style="width: 50%">Time to event</th>
-            <td class="govuk-table__cell" style="width: 43%"><strong class="govuk-tag govuk-tag--red">27 hours</strong></td>
-            <td class="govuk-table__cell" style="width: 7%"></td>
+            <td class="govuk-table__cell" style="width: 43%"><strong class="govuk-tag govuk-tag--red">24 hours</strong></td>
+            <td class="govuk-table__cell" style="width: 7%"><a href="#"> </a></td>
           </tr>
         </tbody>
       </table>
@@ -52,12 +54,12 @@ My satellite environment
           </span>
         </summary>
         <div class="govuk-details__text">
-          <p class="govuk-body"><b>Information used to generate these outputs:</b></p>
+          <p class="govuk-body">Information used to generate these outputs:</p>
             <ul class="govuk-list govuk-list--bullet">
-              <li><b>Probability of collision:</b> generated based on orbit determination calculations. High represents a probability over 1%; medium over 0.1%; and low below 0.1%.</li>
-              <li><b>Potential consequence:</b> generated based on potential risk to UK assets, other sectors, loss of services, reputational damage and financial loss.</li>
+              <li><b>Probability of collision:</b> generated based on orbit determination calculations. High represents a probability over 5%; medium over 1%; and low below 1%.</li>
+              <li><b>Potential impact:</b> generated based on potential risk to UK assets, other sectors, loss of services, reputational damage and financial loss.</li>
             </ul>
-            <p class="govuk-body"><b>What do the ratings mean?</b></p>
+            <p class="govuk-body">What do the ratings mean?</p>
               <ul class="govuk-list govuk-list--bullet">
                 <li><b>High:</b> requires urgent action.</li>
                 <li><b>Medium:</b> monitor closely and notify internal team. </li>
@@ -66,34 +68,32 @@ My satellite environment
         </div>
       </details>
 
-      <p class="govuk-body-l"> <b>Event summary:</b> [text here summarises the event and recommends further actions to be taken by the team]</p>
+      <p> Place holder for text that summarises the event and recommends further actions to be taken by the team. Place holder for text that summarises the event and recommends further actions to be taken by the team. Place holder for text that summarises the event and recommends further actions to be taken by the team. Place holder for text that summarises the event and recommends further actions to be taken by the team.</p>
       <p> </p>
       <p><a href="#">Add/edit summary text</a></p>
-      <p></p>
       <h2 class="govuk-heading-l">Event Details</h2>
         <h3 class="govuk-heading-m">1. What</h3>
-        <p>This table shows key information about the conjunction event and whether the relative associated risk is high, medium or low.</p>
         <table class="govuk-table"style="width:100%">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 50%">Probability of collision</th>
               <td class="govuk-table__cell" style="width: 40%">13%</td>
-              <td class="govuk-table__cell" style="width: 10%"><strong class="govuk-tag govuk-tag--red">High</strong></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" style="width: 10%"><strong class="govuk-tag govuk-tag--red">High</strong></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header"">Total miss distance</th>
               <td class="govuk-table__cell">78 m</td>
-              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">High</strong></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--red">High</strong></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Altitude</th>
               <td class="govuk-table__cell">1456 m</td>
-              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Low</strong></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">Low</strong></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Fragments created if collision occurs</th>
               <td class="govuk-table__cell">10,000</td>
-              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
             </tr>
           </tbody>
         </table>
@@ -114,16 +114,6 @@ My satellite environment
               <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
               <th scope="row" class="govuk-table__header" style="width: 35%">Type</th>
               <td class="govuk-table__cell" style="width: 50%">Payload</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
-              <th scope="row" class="govuk-table__header" style="width: 35%">Mass</th>
-              <td class="govuk-table__cell" style="width: 50%">50 kg</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
-              <th scope="row" class="govuk-table__header" style="width: 35%">Size</th>
-              <td class="govuk-table__cell" style="width: 50%">2 m x 1 m x 1.5 m</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
@@ -152,16 +142,6 @@ My satellite environment
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
-              <th scope="row" class="govuk-table__header" style="width: 35%">Mass</th>
-              <td class="govuk-table__cell" style="width: 50%">13 kg</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
-              <th scope="row" class="govuk-table__header" style="width: 35%">Size</th>
-              <td class="govuk-table__cell" style="width: 50%">0.5 m x 0.5 m x 1 m</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
               <th scope="row" class="govuk-table__header" style="width: 35%">Operator</th>
               <td class="govuk-table__cell" style="width: 50%">Unknown</td>
             </tr>
@@ -178,12 +158,12 @@ My satellite environment
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 50%">Time of closest approach (UTC)</th>
               <td class="govuk-table__cell" style="width: 43%">02/03/2021 12:30</td>
-              <td class="govuk-table__cell" style="width: 7%"></td>
+              <td class="govuk-table__cell" style="width: 7%"> </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 50%">Time of last update (UTC)</th>
               <td class="govuk-table__cell" style="width: 43%">01/03/2021 14:30</td>
-              <td class="govuk-table__cell" style="width: 7%"></td>
+              <td class="govuk-table__cell" style="width: 7%"> </td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 50%">Estimated time of next update (UTC)</th>
@@ -198,12 +178,12 @@ My satellite environment
         <div class="moj-button-menu">
           <div class="moj-button-menu__wrapper">
 
-            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            <a href="/ert-warning-1-full" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
               View further analysis
             </a>
 
-            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
-              Communications about this event
+            <a href="/ert-communication-warning-1" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+              Contact analyst at UKSpOC
             </a>
 
             <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
