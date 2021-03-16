@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-My satellite environment
+Event AAA0001
 {% endblock %}
 
 {% block content %}
@@ -22,7 +22,6 @@ My satellite environment
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl">Event AAA0001</h1>
-
     </div>
     <div class="govuk-main-wrapper">
         <div class="govuk-grid-column-one-quarter">
@@ -40,9 +39,7 @@ My satellite environment
               <li class="moj-side-navigation__item">
                 <a href="#object_data">Object data</a>
               </li>
-              <li class="moj-side-navigation__item">
-                <a href="#contact_someone">Contact an orbital analyst about this event</a>
-              </li>
+
               <li class="moj-side-navigation__item">
                 <a href="#download_data">Download data</a>
               </li>
@@ -52,67 +49,54 @@ My satellite environment
             </ul>
 
         </div>
-
       </div>
       <div class="govuk-grid-column-three-quarters">
               <h1 class="govuk-heading-l" id="event summary">Event summary</h1>
-              <table class="govuk-table"style="width:100%">
+                <table class="govuk-table"style="width:100%">
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header" style="width: 50%"> </th>
-                    <th scope="row" class="govuk-table__header" style="width: 35%"> </th>
-                    <th scope="row" class="govuk-table__header govuk-table__header--numeric govuk-body-s" style="width: 15%">Error ±</th>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s" style="width: 55%">Your event status
-                      </th>
-                      <td class="govuk-table__cell govuk-body-s" style="width: 25%">  <strong class="govuk-tag govuk-tag--red">
-                          High
-                        </strong></td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s" style="width: 20%"></td>
-                    </tr>
+                    <th scope="row" class="govuk-table__header govuk-body-s" "></th>
+                    <th scope="row" class="govuk-table__header govuk-body-s" ">UKSA</th>
+                    <th scope="row" class="govuk-table__header govuk-body-s" >Space-Track CDM</th>
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s" style="width: 55%">Probability of collision (Space-Track CDM, %)
+                    <th scope="row" class="govuk-table__header govuk-body-s">Probability of collision (%)
                     </th>
-                    <td class="govuk-table__cell govuk-body-s" style="width: 25%">0.1538234</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s" style="width: 20%">0.02</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s">Probability of collision (UKSA, %)</th>
-                    <td class="govuk-table__cell govuk-body-s">0.0933822</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s">0.0933</td>
+                    <td class="govuk-table__cell govuk-body-s">0.1538</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Time of closest approach (UTC)</th>
                     <td class="govuk-table__cell govuk-body-s">04/02/2021 11:51:05.03 </td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s">-</td>
+                    <td class="govuk-table__cell govuk-body-s">04/02/2021 11:51:07.03 </td>
                   </tr>
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s">Total miss distance</th>
-                    <td class="govuk-table__cell govuk-body-s">129 m</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s">12 m</td>
+                    <th scope="row" class="govuk-table__header govuk-body-s">Total miss distance ± 1σ (m)</th>
+                    <td class="govuk-table__cell govuk-body-s">360 ± 12</td>
+                    <td class="govuk-table__cell govuk-body-s">362 ± 13</td>
                   </tr>
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">Radial miss distance</th>
-                    <td class="govuk-table__cell govuk-body-s">352 m</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s">46 m</td>
+                    <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">Radial miss distance ± 1σ (m)</th>
+                    <td class="govuk-table__cell govuk-body-s">352 ± 46</td>
+                    <td class="govuk-table__cell govuk-body-s">352 ± 46</td>
                   </tr>
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">In-track miss distance</th>
-                    <td class="govuk-table__cell govuk-body-s">208 m</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s">19 m</td>
+                    <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">In-track miss distance ± 1σ (m)</th>
+                    <td class="govuk-table__cell govuk-body-s">208 ± 19</td>
+                    <td class="govuk-table__cell  govuk-body-s">208 ± 19</td>
                   </tr>
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">Cross-track miss distance</th>
-                    <td class="govuk-table__cell govuk-body-s">105 m</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s">21 m</td>
+                    <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">Cross-track miss distance ± 1σ (m)</th>
+                    <td class="govuk-table__cell govuk-body-s">105 ± 21</td>
+                    <td class="govuk-table__cell  govuk-body-s">105 ± 21</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Data updated (UTC)</th>
                     <td class="govuk-table__cell govuk-body-s">04/02/21 08:19.00</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric govuk-body-s">-</td>
+                    <td class="govuk-table__cell  govuk-body-s">04/02/21 20:19.00 </td>
                   </tr>
                 </tbody>
               </table>
+
               <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
                 <div class="govuk-accordion__section ">
                   <div class="govuk-accordion__section-header">
@@ -124,12 +108,7 @@ My satellite environment
                   </div>
                   <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                     <ul class="govuk-list">
-                      <li>
-                        <a class="govuk-link" href="warning-1-covariance.html">Covariance visualisation</a>
-                      </li>
-                      <li>
-                        <a class="govuk-link" href="warning-1-probability-evolution.html"><a class="govuk-link" href="warning-1-map-analysis.html">Predicted location of conjunction event</a></a>
-                      </li>
+
                       <li>
                         <a class="govuk-link" href="warning-1-probability-evolution.html">Evolution of collision probability</a>
                       </li>
@@ -139,7 +118,12 @@ My satellite environment
                       <li>
                         <a class="govuk-link" href="warning-1-error-ellipsoid.html">Evolution of conjunction error ellipsoids</a>
                       </li>
-
+                      <li>
+                        <a class="govuk-link" href="warning-1-covariance.html">Covariance visualisation</a>
+                      </li>
+                      <li>
+                        <a class="govuk-link" href="warning-1-probability-evolution.html"><a class="govuk-link" href="warning-1-map-analysis.html">Predicted location of conjunction event</a></a>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -162,15 +146,15 @@ My satellite environment
                         </tr>
                         <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header" style="width: 55%">Latitude</th>
-                          <td class="govuk-table__cell">320 km</td>
+                          <td class="govuk-table__cell">15°N</td>
                         </tr>
                         <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header " style="width: 55%">Longitude</th>
-                          <td class="govuk-table__cell">280 km</td>
+                          <td class="govuk-table__cell">30°E</td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header">Impact velocity</th>
-                          <td class="govuk-table__cell">28 km/s</td>
+                          <th scope="row" class="govuk-table__header">Relative velocity</th>
+                          <td class="govuk-table__cell">28.48 km/s</td>
                         </tr>
                         <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header">Estimated combined mass of objects</th>
@@ -207,7 +191,7 @@ My satellite environment
                       </thead>
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s">Space-track CDM</td>
+                          <td class="govuk-table__cell govuk-body-s">Space-Track CDM</td>
                           <td class="govuk-table__cell govuk-body-s">04/02/21 08:19</td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="1538234">0.1538</td>
                           <td class="govuk-table__cell govuk-body-s">37</td>
@@ -215,7 +199,7 @@ My satellite environment
                           <td class="govuk-table__cell govuk-body-s">04/02/21 11:51.05</td>
                           </tr>
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s">Space-track CDM</td>
+                          <td class="govuk-table__cell govuk-body-s">Space-Track CDM</td>
                           <td class="govuk-table__cell govuk-body-s">03/02/21 14:10</td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="1639218">0.1639</td>
                           <td class="govuk-table__cell govuk-body-s">40</td>
@@ -231,7 +215,7 @@ My satellite environment
                           <td class="govuk-table__cell govuk-body-s">04/02/21 11:51.08</td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s">Space-track CDM</td>
+                          <td class="govuk-table__cell govuk-body-s">Space-Track CDM</td>
                           <td class="govuk-table__cell govuk-body-s">01/02/21 03:49</td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="1700132">0.1700</td>
                           <td class="govuk-table__cell govuk-body-s">42</td>
@@ -240,7 +224,6 @@ My satellite environment
                         </tr>
                       </tbody>
                   </table>
-                  <p><a href="/public/downloads/space_data.xlsx" download >Download event history</a></p>
                   </div>
                 </div>
                 <div class="govuk-accordion__section ">
@@ -256,55 +239,85 @@ My satellite environment
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header" style="width: 55%">Space-Track CDM</th>
-                          <td class="govuk-table__cell">Alfano-2005 method</td>
+                          <td class="govuk-table__cell">Foster-1992 method</td>
                         </tr>
                         <tr class="govuk-table__row">
                           <th scope="row" class="govuk-table__header" style="width: 55%">UKSA analysis</th>
-                          <td class="govuk-table__cell">Foster-1992 method</td>
+                          <td class="govuk-table__cell">Alfano-2005 method</td>
                         </tr>
                         </tbody>
                         </table>
-                        <p> For more information on the analysis carried out by the UKSA,  see the 'How this data was calculated' section at the bottom of the page.</p>
+                        <p> For more information on the analysis carried out by the UKSA, see the 'How this data was calculated' section at the bottom of the page.</p>
                   </div>
                 </div>
                 </div>
                 <p></p>
                 <h1 class="govuk-heading-l" id="data_sources">Data sources</h1>
+                <p>The data sources used to generate the event information are listed here for both UKSA and Space-Track calculations.</p>
 
 
-                <table class="govuk-table" style="width: 100%">
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header" style="width: 40%""> </th>
-                        <th scope="row" class="govuk-table__header" style="width: 30%">Primary Object</th>
-                        <th scope="row" class="govuk-table__header" style="width: 30%">Secondary Object</th>
-                      </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Data Source - UKSA</th>
-                      <td class="govuk-table__cell">Ephemeris</td>
-                      <td class="govuk-table__cell">Space-Track TLE</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Data Source - Space-Track</th>
-                      <td class="govuk-table__cell">TLE</td>
-                      <td class="govuk-table__cell">TLE</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Data received</th>
-                      <td class="govuk-table__cell">03/02/21 04:23</td>
-                      <td class="govuk-table__cell">03/02/21 07:56</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Data reliability</th>
-                      <td class="govuk-table__cell">N/A</td>
-                      <td class="govuk-table__cell">167 observations</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                  <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                  Send ephemeris data to UKSA</a>
+
+                    <table class="govuk-table" style="width:100%">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header" style="width:8%"></th>
+                          <th scope="col" class="govuk-table__header" style="width:32%"></th>
+                          <th scope="row" class="govuk-table__header govuk-body-s" style="width:30%">UKSA</th>
+                          <th scope="row" class="govuk-table__header govuk-body-s" style="width:30%">Spacetrack CDM</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header govuk-body-s" rowspan="4">Primary object</th>
+                          <td class="govuk-table__header govuk-body-s">Data source</td>
+                          <td class="govuk-table__cell govuk-body-s">Ephemeris</td>
+                          <td class="govuk-table__cell govuk-body-s">SP ephemeris</td>
+
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__header govuk-body-s">Data received</td>
+                          <td class="govuk-table__cell govuk-body-s">03/02/21 04:23</td>
+                          <td class="govuk-table__cell govuk-body-s">03/02/21 07:56</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__header govuk-body-s">Number of observations</td>
+                          <td class="govuk-table__cell govuk-body-s">N/A</td>
+                          <td class="govuk-table__cell govuk-body-s">167</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__header govuk-body-s">Timespan of observations</td>
+                          <td class="govuk-table__cell govuk-body-s">N/A</td>
+                          <td class="govuk-table__cell govuk-body-s">65 hours</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header govuk-body-s" rowspan="4">Secondary object</th>
+                          <td class="govuk-table__header govuk-body-s">Data source</td>
+                          <td class="govuk-table__cell govuk-body-s">Space-Track TLE</td>
+                          <td class="govuk-table__cell govuk-body-s">Space-Track TLE</td>
+
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__header govuk-body-s">Data received</td>
+                          <td class="govuk-table__cell govuk-body-s">03/02/21 07:56</td>
+                          <td class="govuk-table__cell govuk-body-s">03/02/21 07:56</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__header govuk-body-s">Number of observations</td>
+                          <td class="govuk-table__cell govuk-body-s">18</td>
+                          <td class="govuk-table__cell govuk-body-s">18</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__header govuk-body-s">Timespan of observations</td>
+                          <td class="govuk-table__cell govuk-body-s">48 hours</td>
+                          <td class="govuk-table__cell govuk-body-s">48 hours</td>
+                        </tr>
+
+
+                      </tbody>
+                    </table>
+
+
                 <h1 class="govuk-heading-l" id="object_data">Object data</h1>
-                <p> When available, object data is sourced from Space-Track.
                 <table class="govuk-table" style="width: 100%">
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
@@ -333,30 +346,31 @@ My satellite environment
                       <td class="govuk-table__cell">Payload</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Activity</th>
-                      <td class="govuk-table__cell">Active</td>
+                      <th scope="row" class="govuk-table__header">Active/inactive</th>
+                      <td class="govuk-table__cell">Likely active</td>
                       <td class="govuk-table__cell">Unknown</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Manoeuvrability</th>
-                      <td class="govuk-table__cell">Manoeuvrable</td>
+                      <td class="govuk-table__cell">Likely manoeuvrable</td>
                       <td class="govuk-table__cell">Unknown</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">UK licensed</th>
-                      <td class="govuk-table__cell">Yes</td>
-                      <td class="govuk-table__cell">No</td>
+                      <th scope="row" class="govuk-table__header">Size (m)</th>
+                      <td class="govuk-table__cell">2 x 2 x 2</td>
+                      <td class="govuk-table__cell">0.5 x 1 x 0.5</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Operator (if known)</th>
-                      <td class="govuk-table__cell">SPACEX</td>
-                      <td class="govuk-table__cell"><a >SPACEY</a></td>
+                      <th scope="row" class="govuk-table__header">Mass (kg)</th>
+                      <td class="govuk-table__cell">150</td>
+                      <td class="govuk-table__cell">360</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Contact details (if known)</th>
-                      <td class="govuk-table__cell">-</td>
-                      <td class="govuk-table__cell"><a class="govuk-link" href="warning-1-contact-operator">SPACEY contact details</a></td>
+                      <th scope="row" class="govuk-table__header">Licensed by</th>
+                      <td class="govuk-table__cell">UK</td>
+                      <td class="govuk-table__cell">USA</td>
                     </tr>
+
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Launching State</th>
                       <td class="govuk-table__cell">UK</td>
@@ -367,24 +381,29 @@ My satellite environment
                       <td class="govuk-table__cell">2020</td>
                       <td class="govuk-table__cell">1959</td>
                     </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Operator</th>
+                      <td class="govuk-table__cell">SPACEX</td>
+                      <td class="govuk-table__cell">SPACEY</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Contact details</th>
+                      <td class="govuk-table__cell">-</td>
+                      <td class="govuk-table__cell"><a class="govuk-link" href="warning-1-contact-operator">SPACEY contact details</a></td>
+                    </tr>
                   </tbody>
                 </table>
-                <h1 class="govuk-heading-l" id="contact_someone">Contact an orbital analyst about this event</h1>
-
-                    <a href="operator-contact-analyst" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
-                      Contact a UKSA orbital analyst
-                    </a>
-
-                    <p></p>
+                  <p></p>
                   <h1 class="govuk-heading-l" id="download_data">Download data</h1>
                   <p><a href="/public/downloads/space_data.xlsx" download >Download event data for AAA0001 (csv file)</a></p>
+
                   <h1 class="govuk-heading-l" id="calculation_info">How this data was calculated</h1>
                   <p class="govuk-body">To understand more about how this data was generated by the UKSA, see:</p>
                   <ul class="govuk-list govuk-list--bullet">
-                    <li><a class="govuk-link" href="#">Data sources</a></li>
-                    <li><a class="govuk-link" href="#">Analytical tools</a></li>
+                    <li><a class="govuk-link" href="#">UKSA conjunction analysis process</a></li>
                     <li><a class="govuk-link" href="#">Definitions and explanation</a></li>
-                  </ul>            </div>
+                  </ul>
+              </div>
             <div class="govuk-grid-row">
 
             </div>
