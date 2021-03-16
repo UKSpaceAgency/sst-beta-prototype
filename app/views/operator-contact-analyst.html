@@ -27,8 +27,6 @@ AAA0001 Contact analyst
       Contact a UKSA analyst regarding AAA0001
     </h1>
 
-    <div class="govuk-grid-column-full">
-
       <ul class="govuk-list">
           <li> UKSA analysts are available Monday to Sunday, 9am to 5pm (except public holidays).</li>
           <li>We aim to respond within 1 working day.</li>
@@ -54,7 +52,15 @@ AAA0001 Contact analyst
       </div>
       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
-
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Email address
+      </label>
+      <div id="email-hint" class="govuk-hint">
+        Enter any additional email addresses you would like to be included in this correspondence.
+      </div>
+      <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" value="" autocomplete="email">
+    </div>
     <form class="form" action="/confirmation" method="post">
 
     <button class="govuk-button" data-module="govuk-button">
