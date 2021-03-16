@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-My satellite environment
+Account settings
 {% endblock %}
 
 {% block content %}
@@ -29,7 +29,7 @@ My satellite environment
             </h1>
           </legend>
                 <p class="govuk-body-m">Your current event status settings are displayed below. An event status is triggered if <b> any of your specified thresholds </b> are met:
-                <p><b>Data source:</b>  UKSA and/or Space-Track
+                <p><b>Data source:</b>  UKSA and/or Space-Track</p>
                 <table class="govuk-table" style="width:100%">
                   <thead class="govuk-table__head">
                     <tr class="govuk-table__row">
@@ -68,7 +68,7 @@ My satellite environment
                   </tbody>
                 </table>
                 </fieldset>
-                <a class="govuk-link" href="operator-homepage-settings">
+                <a class="govuk-link govuk-body-m" href="operator-homepage-settings">
                     Change your event status thresholds<span class="govuk-visually-hidden"> event thresholds</span>
                   </a>
                   <p></p>
@@ -137,6 +137,7 @@ My satellite environment
                     <label class="govuk-label govuk-checkboxes__label" for="contact">
                     </label>
                   </div>
+                  </div>
               </td>
               <td class="govuk-table__cell">
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -145,12 +146,84 @@ My satellite environment
                     <label class="govuk-label govuk-checkboxes__label" for="contact">
                     </label>
                   </div>
+                  </div>
               </td>
-          </tbody>
+              </tr>
+              </tbody>
         </table>
-</fieldset>
+        <p></p>
+        <table class="govuk-table" style="width:100%">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" style="width:100%" colspan="5">Would you like to receive a daily notification when no forecast conjunction events meet your notification thresholds?</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" rowspan="2" style="width:22%">Receive notifications?</th>
+              <td class="govuk-table__cell" style="width:33%">Email </td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+                </div>
+              </td>
+              <td class="govuk-table__cell">
+              </td>
+              <td class="govuk-table__cell">
+              </td>
+              <td class="govuk-table__cell">
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Text message </td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+                </div>
+              </td>
+              <td class="govuk-table__cell">
 
+              </td>
+              <td class="govuk-table__cell">
 
+              </td>
+              </tr>
+
+              </tbody>
+        </table>
+</fieldset><fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Your contact details
+  </h1>
+</legend>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              example.operator@satellite-company.com
+            </dd>
+
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone number            </dt>
+            <dd class="govuk-summary-list__value">
+            07123 456789
+            </dd>
+
+          </div>
+          </dl>
               <button class="govuk-button" data-module="govuk-button">
                     Save and continue
                 </button>
