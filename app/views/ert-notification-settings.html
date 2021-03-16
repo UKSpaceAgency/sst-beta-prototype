@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="ert-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="ert-notification-settings">Account settings</a>
+    </li>
+      </ol>
+      </div>
+      <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <form class="form" action="/ert-homepage" method="post">
+
+        <h1 class="govuk-heading-xl">Account settings</h1>
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Your event status settings
+            </h1>
+          </legend>
+                <p class="govuk-body-m">Your current event status settings are displayed below. An event status is triggered if <b> any of your specified thresholds </b> are met:
+                <p><b>Data source:</b>  UKSA and/or Space-Track
+                <table class="govuk-table" style="width:100%">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header" style="width:55%">Event status criteria</th>
+                      <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
+                      <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
+                      <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Probability of collision (UKSA or Space-Track) is above:</th>
+                      <td class="govuk-table__cell">0.1 %</td>
+                      <td class="govuk-table__cell">0.01 %</td>
+                      <td class="govuk-table__cell">-</td>
+
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+                      <td class="govuk-table__cell">200 m </td>
+                      <td class="govuk-table__cell">500 m</td>
+                      <td class="govuk-table__cell">-</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+                      <td class="govuk-table__cell">200 m</td>
+                      <td class="govuk-table__cell">500 m</td>
+                      <td class="govuk-table__cell">-</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Time to event is under:</th>
+                      <td class="govuk-table__cell">72 h</td>
+                      <td class="govuk-table__cell">-</td>
+                      <td class="govuk-table__cell">-</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                </fieldset>
+                <p><a class="govuk-link" href="ert-homepage-settings">Change your event status thresholds<span class="govuk-visually-hidden"> event thresholds</span></a></p>
+                  <p></p>
+        <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Your notification settings
+          </h1>
+        </legend>
+        <p></p>
+        <table class="govuk-table" style="width:100%">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" style="width:22%">Event status criteria</th>
+              <th scope="col" class="govuk-table__header" style="width:33%"></th>
+              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" rowspan="2">Receive notifications?</th>
+              <td class="govuk-table__cell">Email (containing event summary)</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+                </div>
+              </td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+              </td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" >
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+              </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Text message (event ID only)</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+                </div>
+              </td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" >
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+              </td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" >
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+              </td>
+          </tbody>
+        </table>
+      </fieldset>
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+    </form>
+  </div>
+
+
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
