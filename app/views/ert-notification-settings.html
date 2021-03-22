@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-My satellite environment
+Notification settings
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@ My satellite environment
       <a class="govuk-breadcrumbs__link" href="ert-homepage">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="ert-notification-settings">Account settings</a>
+      <a class="govuk-breadcrumbs__link" href="ert-notification-settings">Notification settings</a>
     </li>
       </ol>
       </div>
@@ -21,75 +21,16 @@ My satellite environment
       <div class="govuk-grid-column-full">
         <form class="form" action="/ert-homepage" method="post">
 
-        <h1 class="govuk-heading-xl">Account settings</h1>
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Your event status settings
-            </h1>
-          </legend>
-                <p class="govuk-body-m">Your current event status settings are displayed below. An event status is triggered if <b> any of your specified thresholds </b> are met:
-                <p><b>Data source:</b>  UKSA and/or Space-Track
-                <table class="govuk-table" style="width:100%">
-                  <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                      <th scope="col" class="govuk-table__header" style="width:55%">Event status criteria</th>
-                      <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
-                      <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
-                      <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Probability of collision (UKSA or Space-Track) is above:</th>
-                      <td class="govuk-table__cell">0.1 %</td>
-                      <td class="govuk-table__cell">0.01 %</td>
-                      <td class="govuk-table__cell">-</td>
-
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
-                      <td class="govuk-table__cell">200 m </td>
-                      <td class="govuk-table__cell">500 m</td>
-                      <td class="govuk-table__cell">-</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
-                      <td class="govuk-table__cell">200 m</td>
-                      <td class="govuk-table__cell">500 m</td>
-                      <td class="govuk-table__cell">-</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Time to event is under:</th>
-                      <td class="govuk-table__cell">72 h</td>
-                      <td class="govuk-table__cell">-</td>
-                      <td class="govuk-table__cell">-</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Potential consequence is:</th>
-                      <td class="govuk-table__cell">High</td>
-                      <td class="govuk-table__cell">Medium</td>
-                      <td class="govuk-table__cell">-</td>
-                    </tr>
-                  </tbody>
-                </table>
-                </fieldset>
-                <p><a class="govuk-link" href="ert-homepage-settings">Change your event status thresholds<span class="govuk-visually-hidden"> event thresholds</span></a></p>
-                  <p></p>
-        <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">
-            Your notification settings
-          </h1>
-        </legend>
+        <h1 class="govuk-heading-xl">Notification settings</h1>
         <p></p>
         <table class="govuk-table" style="width:100%">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header" style="width:22%">Event status criteria</th>
               <th scope="col" class="govuk-table__header" style="width:33%"></th>
-              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
-              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
-              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--red">Level 3</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--yellow">Level 2</strong</th>
+              <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--blue">Level 1</strong</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">

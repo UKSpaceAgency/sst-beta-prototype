@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="ert-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-warning-1">Event AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/ert-operator2-profile-SPACEX">SPACEX</a>
+    </li>
+      </ol>
+      </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">SPACEX</h1>
+            <p></p>
+      <h2 class="govuk-heading-l">Contact details</h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Operator</th>
+            <td class="govuk-table__cell">SPACEX</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Email</th>
+            <td class="govuk-table__cell">spacex@email.com</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Phone number</th>
+            <td class="govuk-table__cell">00000 00000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Availability</th>
+            <td class="govuk-table__cell">24/7</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="moj-button-menu">
+        <div class="moj-button-menu__wrapper">
+        </div>
+      </div>
+      <h2 class="govuk-heading-l">Operator Information</h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" span="1" style="width: 50%"=>UK licence ID</th>
+            <td class="govuk-table__cell">0000-0000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" span="1" style="width: 50%"=>Nationality</th>
+            <td class="govuk-table__cell">US</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of satellites</th>
+            <td class="govuk-table__cell">X</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of UK-licensed satellites</th>
+            <td class="govuk-table__cell">X</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Sharing ephemeris data with UKSA?</th>
+            <td class="govuk-table__cell">Yes/No</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="govuk-heading-l">Registered satellites</h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" span="1" style="width: 15%">Common name</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 15%">NORAD ID</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 15%">International designator</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 15%">Launch date</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 15%">General function</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 15%">Date UK registered</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 15%">Operational?</th>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="/ert-satellite-1">Starlink-1862</td>
+            <td class="govuk-table__cell">47149</td>
+            <td class="govuk-table__cell">2020-008AD</td>
+            <td class="govuk-table__cell">2020</td>
+            <td class="govuk-table__cell">[function]</td>
+            <td class="govuk-table__cell">2020</td>
+            <td class="govuk-table__cell">Yes</td>
+          </tr>
+          </tbody>
+      </table>
+  </main>
+</div>
+
+
+{% endblock %}
