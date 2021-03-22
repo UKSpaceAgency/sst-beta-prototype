@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="warning-1">Event AAA0001</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-communication-warning-1">Contact analyst</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-communication-warning-1">View communication history</a>
+      </li>
+      </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Communications: AAA0001</h1>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Recipients</th>
+          <th scope="col" class="govuk-table__header">Reference</th>
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header"> </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">UKSA analyst</th>
+          <td class="govuk-table__cell">AAA0001-01</td>
+          <td class="govuk-table__cell">05/02/2021</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+    <a href="warning-1" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Return to event page</a>
+    </div>
+
+  </main>
+{% endblock %}
