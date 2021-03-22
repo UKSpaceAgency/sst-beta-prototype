@@ -14,8 +14,10 @@ UKSA Homepage
     </li>
     </ol>  <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">UK Satellite list</h1>
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Monitoring UK Satellites</h1>
+
+      <h2 class="govuk-heading-l">UK satellite list</h2>
         <div class="moj-search">
         <form action="#" method="post">
         <div class="govuk-form-group">
@@ -23,7 +25,7 @@ UKSA Homepage
             Find a satellite
           </label>
           <span id="search-hint" class="govuk-hint moj-search__hint ">
-            You can search by name, NORAD ID, international designator, operator or active conjunction alerts.
+            Search by name, NORAD ID, international designator, operator or active conjunction alerts.
           </span>
           <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
         </div>
@@ -33,113 +35,131 @@ UKSA Homepage
         </form>
         </div>
       <nav class="moj-pagination" id="pagination-label">
-
-<p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
-
-<ul class="moj-pagination__list">
-<li class="moj-pagination__item moj-pagination__item--active">1</li>
-<li class="moj-pagination__item"><a class="moj-pagination__link" href="/regulator-homepage-2">2</a></li>
-<li class="moj-pagination__item"><a class="moj-pagination__link" href="/regulator-homepage-3">3</a></li>
-<li class="moj-pagination__item  moj-pagination__item--next">
-  <a class="moj-pagination__link" href="/regulator-homepage-2">Next<span class="govuk-visually-hidden"> set of pages</span></a>
-</li>
-</ul>
-<p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>30</b> results</p>
-</nav>
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+        <ul class="moj-pagination__list">
+          <li class="moj-pagination__item moj-pagination__item--active">1</li>
+          <li class="moj-pagination__item"><a class="moj-pagination__link" href="/regulator-homepage-2">2</a></li>
+          <li class="moj-pagination__item"><a class="moj-pagination__link" href="/regulator-homepage-3">3</a></li>
+          <li class="moj-pagination__item  moj-pagination__item--next"><a class="moj-pagination__link" href="/regulator-homepage-2">Next<span class="govuk-visually-hidden"> set of pages</span></a></li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>30</b> results</p>
+      </nav>
         <! main table for conjunction warnings>
-        <p></p>
+      <p></p>
+
         <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Satellite name</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 4%";>NORAD ID</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 14%";>International designator</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Operator</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Active conjunction alerts</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Number of conjunction events over last year</th>
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 5%";>Exception report</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 15%";>Satellite</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 15%";>Operator</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 15%";>Monthly report</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 5%";>Upcoming conjunction events</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 8%";>Inclination (°)</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 8%";>Apogee (km)</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 8%";>Perigee (km)</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="/regulator-satellite-1">STARLINK-1862</a></td>
-              <td class="govuk-table__cell govuk-body-s">47149</td>
-              <td class="govuk-table__cell govuk-body-s ">2020-088AD</td>
-              <td class="govuk-table__cell govuk-body-s "><a href="/operator2-profile-SPACEX">SPACEX</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">8</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">STARLINK-1861</td>
-              <td class="govuk-table__cell govuk-body-s">47148</td>
-              <td class="govuk-table__cell govuk-body-s">2020-088AC</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator2-profile-SPACEX">SPACEX</a></td>
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--red">Yes</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/regulator-satellite-1"><b>STARLINK-1862</b></a></td>
+              <td class="govuk-table__cell govuk-body-s "><a href="/regulator-operator2-profile-SPACEX">SPACEX</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0002</b></a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">STARLINK-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">45365</td>
-              <td class="govuk-table__cell govuk-body-s ">2020-019F</td>
-              <td class="govuk-table__cell govuk-body-s "><a href="/operator2-profile-SPACEX">SPACEX</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">SPACEBEE-52</a></td>
-              <td class="govuk-table__cell govuk-body-s">47425</td>
-              <td class="govuk-table__cell govuk-body-s">2021-006N	</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="#">Swarm Technologies</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">14</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">STARLINK-1947</a></td>
-              <td class="govuk-table__cell govuk-body-s">46729</td>
-              <td class="govuk-table__cell govuk-body-s">2020-074BL</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator2-profile-SPACEX">SPACEX</a></td>
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>STARLINK-1861</b></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/regulator-operator2-profile-SPACEX">SPACEX</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0012</b></a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">16</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">SPACEBEE-11</a></td>
-              <td class="govuk-table__cell govuk-body-s">46307</td>
-              <td class="govuk-table__cell govuk-body-s ">2020-061AM</td>
-              <td class="govuk-table__cell govuk-body-s "><a href="#">Swarm Technologies</a></td>
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--red">Yes</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>STARLINK-1317</b></a></td>
+              <td class="govuk-table__cell govuk-body-s "><a href="/regulator-operator2-profile-SPACEX">SPACEX</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0016</b></a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>SPACEBEE-52</b></a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Swarm Tech.</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0007</b></a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>STARLINK-1947</b></a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/regulator-operator2-profile-SPACEX">SPACEX</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0009</b></a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>SPACEBEE-11</b></a></td>
+              <td class="govuk-table__cell govuk-body-s "><a href="#">Swarm Tech.</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0023</b></a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">STARLINK-1929</a></td>
-              <td class="govuk-table__cell govuk-body-s">46788</td>
-              <td class="govuk-table__cell govuk-body-s ">2020-074BB</td>
-              <td class="govuk-table__cell govuk-body-s "><a href="/operator2-profile-SPACEX">SPACEX</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">ONEWEB-0050</a></td>
-              <td class="govuk-table__cell govuk-body-s">45453</td>
-              <td class="govuk-table__cell govuk-body-s ">2020-020AF</td>
-              <td class="govuk-table__cell govuk-body-s "><a href="#">OneWeb Ltd.</a></td>
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>STARLINK-1929</b></a></td>
+              <td class="govuk-table__cell govuk-body-s "><a href="/regulator-operator2-profile-SPACEX">SPACEX</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0025</b></a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">ONEWEB-0064</a></td>
-              <td class="govuk-table__cell govuk-body-s">45433</td>
-              <td class="govuk-table__cell govuk-body-s ">2020-020K</td>
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>ONEWEB-0050</b></a></td>
               <td class="govuk-table__cell govuk-body-s "><a href="#">OneWeb Ltd.</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">9</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0016</b></a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="#">ONEWEB-0120</a></td>
-              <td class="govuk-table__cell govuk-body-s">47266</td>
-              <td class="govuk-table__cell govuk-body-s ">2020-100J	</td>
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>ONEWEB-0064</b></a></td>
               <td class="govuk-table__cell govuk-body-s "><a href="#">OneWeb Ltd.</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0018</b></a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>ONEWEB-0120</b></a></td>
+              <td class="govuk-table__cell govuk-body-s "><a href="#">OneWeb Ltd.</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>21-MAR-0022</b></a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">95.6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">872</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">150</td>
             </tr>
           </tbody>
       </table>
@@ -155,7 +175,7 @@ UKSA Homepage
           <ul class="govuk-list govuk-list--bullet">
             <li>Select the <b>satellite name</b> to view more information about the satellite, licence information, location data and conjunction events.</li>
             <li>Select the <b>satellite operator</b> to view their contact details and registered satellites.</li>
-
+            <li>Highlighted rows indicate satellites with <b>exception reports</b>.</li>
           </ul>
         </div>
       </details>
@@ -163,7 +183,10 @@ UKSA Homepage
       <p> </p>
 
       <h3 class="govuk-heading-m">Register a new UK satellite</h3>
-      <p> <a href="/regulator-add-satellite">Add a new UK-licensed satellite</a> to this UKSA register by uploading the satellite information.</p>
+      <p>Add a <a href="/regulator-add-satellite">new UK-licensed satellite</a> to this UKSA register by uploading the satellite information.</p>
+      <p></p>
+      <h3 class="govuk-heading-m">Settings</h3>
+      <p> View your <a href="regulator-settings">account settings</a> to modify your event status thresholds and your event notification settings.</p>
       </div>
       </div>
   </main>

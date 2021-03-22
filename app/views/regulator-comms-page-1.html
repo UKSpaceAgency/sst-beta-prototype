@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="regulator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="regulator-warning-1">AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Communication about AAA0001</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Communications: AAA0001</h1>
+
+    <h3 class="govuk-heading-m">Active threads:</h3>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Recipients</th>
+          <th scope="col" class="govuk-table__header">Subject</th>
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header"> </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">UKSA analyst; Operator</th>
+          <td class="govuk-table__cell">AAA0001: Request for additional observations</td>
+          <td class="govuk-table__cell">05/02/2021</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">UKSA analyst; Operator</th>
+          <td class="govuk-table__cell">AAA0001: Request for advice on whether to take action</td>
+          <td class="govuk-table__cell">05/02/2021</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">CNI team; SST team; UKSA analyst</th>
+          <td class="govuk-table__cell">AAA0001: Escalate event to ERF level 2</td>
+          <td class="govuk-table__cell">04/02/2021</td>
+          <td class="govuk-table__cell"><a href="#">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>To start a new thread or conversation, select the button below.</p>
+    <div class="moj-button-menu">
+      <div class="moj-button-menu__wrapper">
+        <a href="/regulator-new-message-1" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+          New message
+        </a>
+        </div>
+      </div>
+    <p></p>
+    <h3 class="govuk-heading-m">Archived threads:</h3>
+    <p> There are no inactive threads to show.</p>
+
+
+    </div>
+
+  </main>
+{% endblock %}
