@@ -20,8 +20,41 @@ Notification settings
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <form class="form" action="/ert-homepage" method="post">
+          <h1 class="govuk-heading-xl">Notification settings</h1>
+          <form class="form" action="/operator-homepage" method="post">
+              <p class="govuk-body-m">Current ERF thresholds are shown below. A ERF level is triggered if <b> any of the specified thresholds </b> are met:
+              <p><b>Data source:</b>  UKSA and/or Space-Track</p>
+              <table class="govuk-table" style="width:100%">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header" style="width:55%">Event status criteria</th>
+                    <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
+                    <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
+                    <th scope="col" class="govuk-table__header" style="width:15%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Probability of collision (UKSA or Space-Track) is above:</th>
+                    <td class="govuk-table__cell">[Level 3 threshold]</td>
+                    <td class="govuk-table__cell">[Level 2 threshold]</td>
+                    <td class="govuk-table__cell">[Level 1 threshold]</td>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+                    <td class="govuk-table__cell">[Level 3 threshold]</td>
+                    <td class="govuk-table__cell">[Level 2 threshold]</td>
+                    <td class="govuk-table__cell">[Level 1 threshold]</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+                    <td class="govuk-table__cell">[Level 3 threshold]</td>
+                    <td class="govuk-table__cell">[Level 2 threshold]</td>
+                    <td class="govuk-table__cell">[Level 1 threshold]</td>
+                  </tr>
+                  </tbody>
+              </table>
 
-        <h1 class="govuk-heading-xl">Notification settings</h1>
+        <h2 class="govuk-heading-l">Your notification preferences</h2>
         <p></p>
         <table class="govuk-table" style="width:100%">
           <thead class="govuk-table__head">
@@ -92,9 +125,6 @@ Notification settings
               </td>
           </tbody>
         </table>
-      </fieldset>
-
-
       <button class="govuk-button" data-module="govuk-button">
         Save and continue
       </button>
