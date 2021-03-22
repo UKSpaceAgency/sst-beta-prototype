@@ -12,7 +12,7 @@ My satellite environment
       <a class="govuk-breadcrumbs__link" href="/operator-homepage">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/operator-satellite-list">Satellite Catalogue</a>
+      <a class="govuk-breadcrumbs__link" href="/operator-satellite-list">Registered satellites</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="/operator-satellite-2">Starlink-1317</a>
@@ -30,29 +30,34 @@ My satellite environment
 <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>Event ID</th>
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 13%";>Time of event (UTC)</th>
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Primary object</th>
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Total miss distance (m)</th>
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Radial miss distance (m)</th>
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>USA % probability of collision</th>
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 10%";>UKSA % probability of collision</th>
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Last updated (UTC)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="descending" span="1" style="width: 6%";>Your event status</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 6%";>Event ID</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Time of closest approach (UTC)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary object</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary object</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Total miss distance (m)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Radial miss distance (m)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Probability of collision (Space-Track CDM, %)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of collision (UKSA, %)</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
-
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s"><b>
-        <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a></b>
+      <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--blue">
+          Low
+        </strong>
+      </td>
+      <td class="govuk-table__cell govuk-body-s"data-sort-value="4"><b>
+        <a href="#" class="govuk-link--no-visited-state">AAA0004</a></b>
       </td>
       <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
-      <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1317</a></td>
+      <td class="govuk-table__cell govuk-body-s">Spacebee-52</td>
       <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852</td>
       <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">242</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
-      <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="328438">0.0328</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="196849">0.0196</td>
 
     </tr>
   </tbody>
@@ -101,50 +106,7 @@ My satellite environment
             </tr>
           </tbody>
         </table>
-          <p> </p>
-
-          <h2 class="govuk-heading-l">Location data</h2>
-          <p> This table shows the most recent location data for Starlink-1317.</p>
-          <table class="govuk-table">
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">TIME</th>
-                <th scope="col" class="govuk-table__header">DATE</th>
-                <th scope="col" class="govuk-table__header">ORBIT</th>
-                <th scope="col" class="govuk-table__header">INCLINATION</th>
-                <th scope="col" class="govuk-table__header">APOGEE</th>
-                <th scope="col" class="govuk-table__header">PERIGEE</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__cell">09:14</td>
-                <td scope="row" class="govuk-table__cell">11/01/2021</td>
-                <td scope="row" class="govuk-table__cell">LEO</td>
-                <td scope="row" class="govuk-table__cell">115.26</td>
-                <td scope="row" class="govuk-table__cell">1573</td>
-                <td scope="row" class="govuk-table__cell">1378</td>
-              </tr>
-                  <tr class="govuk-table__row">
-                    <td scope="row" class="govuk-table__cell">09:17</td>
-                    <td scope="row" class="govuk-table__cell">10/01/2021</td>
-                    <td scope="row" class="govuk-table__cell">LEO</td>
-                    <td scope="row" class="govuk-table__cell">115.01</td>
-                    <td scope="row" class="govuk-table__cell">1574</td>
-                    <td scope="row" class="govuk-table__cell">1376</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td scope="row" class="govuk-table__cell">09:20</td>
-                    <td scope="row" class="govuk-table__cell">09/01/2021</td>
-                    <td scope="row" class="govuk-table__cell">LEO</td>
-                    <td scope="row" class="govuk-table__cell">115.892</td>
-                    <td scope="row" class="govuk-table__cell">1572</td>
-                    <td scope="row" class="govuk-table__cell">1378</td>
-                  </tr>
-                </tbody>
-              </table>
-                <a href="/public/downloads/space_data.xlsx" download >Download location data for 2020-019F</a>
-                <p> </p>
+          
   </main>
 </div>
 
