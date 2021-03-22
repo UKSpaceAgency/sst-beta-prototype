@@ -28,183 +28,125 @@ My satellite environment
     </p>
   </div>
 </div>
-                <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
-        <p class="govuk-body">Forecast conjunction events affecting your satellites, which are listed as the primary object:</p>
+<h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
+<p class="govuk-body">Forecast conjunction events affecting your satellites, which are listed as the primary object:</p>
+<! main table for conjunction warnings>
+<table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="descending" span="1" style="width: 6%";>Your event status</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 6%";>Event ID</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Time of closest approach (UTC)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary object</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary object</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Total miss distance (m)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Radial miss distance (m)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Probability of collision (Space-Track CDM, %)</th>
+      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of collision (UKSA, %)</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+    <td class="govuk-table__cell">
+      <strong class="govuk-tag govuk-tag--red">
+        High
+      </strong>
+    </td>
+    <td class="govuk-table__cell govuk-body-s" data-sort-value="1"> <b>
+        <a href="warning-1.html" class="govuk-link--no-visited-state" >AAA0001</a> </b>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
+      <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-1">Starlink-1862</a></td>
+      <td class="govuk-table__cell govuk-body-s">Discoverer 5</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">360</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">352</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1538234">0.1538</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="933822">0.0933</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          Med
+        </strong>
+      </td>
+      <td class="govuk-table__cell govuk-body-s" data-sort-value="2"> <b>
+        <a href="#" class="govuk-link--no-visited-state">AAA0002</a></b>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1861</td>
+        <td class="govuk-table__cell govuk-body-s">Lemur 2 </td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">418</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">125</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1038291" >0.1038</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="502054">0.0502</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--yellow">
+          Med
+        </strong>
+      </td>
+      <td class="govuk-table__cell govuk-body-s" data-sort-value="3"> <b>
+        <a href="#" class="govuk-link--no-visited-state">AAA0003</a> </b>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
+      <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-1">Starlink-1862</a></td>
+      <td class="govuk-table__cell govuk-body-s">CMS-01</td>
 
-        <div class="moj-search">
-        <form action="#" method="post">
-        <div class="govuk-form-group">
-          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-            Find a conjunction event
-          </label>
-          <span id="search-hint" class="govuk-hint moj-search__hint ">
-            You can search by event ID or primary object
-          </span>
-          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
-          <nav class="moj-pagination" id="pagination-label">
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">652</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">427</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="532134">0.0532</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort0value="399283">0.0399</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--blue">
+          Low
+        </strong>
+      </td>
+      <td class="govuk-table__cell govuk-body-s"data-sort-value="4"><b>
+        <a href="#" class="govuk-link--no-visited-state">AAA0004</a></b>
+      </td>
+      <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
+      <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1317</a></td>
+      <td class="govuk-table__cell govuk-body-s">Spacebee-52</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">242</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="328438">0.0328</td>
+      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="196849">0.0196</td>
 
-    <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+    </tr>
+  </tbody>
+</table>
 
-    <ul class="moj-pagination__list">
-    <li class="moj-pagination__item moj-pagination__item--active">1</li>
-    <li class="moj-pagination__item"><a class="moj-pagination__link" href="">2</a></li>
-    <li class="moj-pagination__item  moj-pagination__item--next">
-      <a class="moj-pagination__link" href="">Next<span class="govuk-visually-hidden"> set of pages</span></a>
-    </li>
-    </ul>
-    <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>20</b> results</p>
-    </nav>
-        </div>
-        </div>
-        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 7%";>Event ID</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 13%";>Time of event (UTC)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 12%";>Primary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 15%";>Secondary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 8%";>Total miss distance</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 8%";>Radial miss distance</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 5%";>Probability of collision (%)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 14%";>Last updated (UTC)</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"> <b>
-                <a href="warning-1.html" class="govuk-link--no-visited-state">AAA0001</a> </b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-1">Starlink-1862</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">57 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">185 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12</td>
-              <td class="govuk-table__cell govuk-body-s">04/02/21 08:19</td>
-
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"> <b>
-                <a href="warning-2.html" class="govuk-link--no-visited-state">AAA0002</a></b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-5">Starlink-1861</td>
-                <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5</td>
-              <td class="govuk-table__cell govuk-body-s">03/02/21 14:30</td>
-
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"> <b>
-                <a href="warning-3.html" class="govuk-link--no-visited-state">AAA0003</a> </b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-1">Starlink-1862</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">152 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7</td>
-              <td class="govuk-table__cell govuk-body-s">04/02/21 12:02</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><b>
-                <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a></b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">507 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">100 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">8</td>
-              <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><b>
-                <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a></b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">242 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
-              <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><b>
-                <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a></b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">156 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">89 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
-              <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><b>
-                <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a></b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">242 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">9</td>
-              <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><b>
-                <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a></b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">360 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">9</td>
-              <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><b>
-                <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a></b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">209 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">331 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
-              <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><b>
-                <a href="warning-4.html" class="govuk-link--no-visited-state">AAA0004</a></b>
-              </td>
-              <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/operator-satellite-2">Starlink-1317</a></td>
-              <td class="govuk-table__cell govuk-body-s">BXZ013 Debris</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">400 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">242 m</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
-              <td class="govuk-table__cell govuk-body-s">03/02/21 07:16</td>
-            </tr>
-          </tbody>
-      </table>
-      <p> Where available, a UKSA calculated <b>probability of collision </b> is displayed. This is calculated using additional data sources to US calculations. If no UKSA calculation is available, the US calculation is shown.
-      <h2 class="govuk-heading-m">My satellites</h2>
-       <p><a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites</a> attached to your registration number</p>
-        <h2 class="govuk-heading-m">Notification settings</h2>
-        <p>Change your <a href="operator-notifications.html" class="govuk-link--no-visited-state">notification settings</a></p>
-        <p></p>
-      </div>
-      </div>
-  </main>
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+  <span class="govuk-details__summary-text">
+    Help with this table
+  </span>
+</summary>
+<div class="govuk-details__text">
+  This table shows upcoming conjunction events involving your satellites.
+  <p> </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Select the <b>event ID</b> to view more information.</li>
+    <li>Each event ID or row represents <b>one conjunction event</b> including all related CDMs and UKSA analysis.</li>
+    <li>The <b>event status</b> is defined by your thresholds which can viewed or changed in your <a href="operator-notification-settings.html" class="govuk-link--no-visited-state">account settings</a>.</li>
+    <li>Your satellite will always be listed as the <b>primary object</b>.</li>
+  </ul>
 </div>
+</details>
+
+<h2 class="govuk-heading-m">Registered satellites</h2>
+<p><a href="/operator-satellite-list" class="govuk-link--no-visited-state">View satellites</a> attached to your registration number.</p>
+<h2 class="govuk-heading-m">Settings</h2>
+<p>View your <a href="operator-notification-settings.html" class="govuk-link--no-visited-state">account settings</a> to modify your <b>event status</b> thresholds and your <b>event notification</b> settings.</p>
+<p></p>
+</div>
+</div>
+</main>
+</div>
+
 <script src="<sst-alpha>/<application>.js"></script>
 <script>
 window.MOJFrontend.initAll()
