@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-My satellite environment
+Account settings
 {% endblock %}
 
 {% block content %}
@@ -19,11 +19,10 @@ My satellite environment
       <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/operator-homepage" method="post">
-
         <h1 class="govuk-heading-xl">Account settings</h1>
-        <h2 class="govuk-heading-l">Notifications</h2>
-        <form class="form" action="/operator-homepage" method="post">
+        <h2 class="govuk-heading-l">Upcoming conjunction notifications</h2>
+        <form class="form" action="/regulator-homepage" method="post">
+            <p>If you would like to receive notifications of upcoming conjunction events, enter your notification thresholds below.</p>
           <p> An event notification is sent if <b> any of your specified thresholds </b> are met.</p>
           <p> Leave criteria you do not wish to be considered blank.</p>
         <table class="govuk-table" style="width:100%">
