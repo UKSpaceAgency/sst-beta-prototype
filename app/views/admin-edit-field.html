@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Event AAA0001: ERT interface
+Event AAA0001: edit information
 {% endblock %}
 
 {% block content %}
@@ -12,34 +12,31 @@ Event AAA0001: ERT interface
       <a class="govuk-breadcrumbs__link" href="/admin-homepage">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/admin-ert-homepage">ERT interface</a>
+      <a class="govuk-breadcrumbs__link" href="/admin-warning-1">Event AAA0001</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="admin-ert-warning-1">ERT Event AAA0001</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/admin-edit-field">Edit field</a>
+      <a class="govuk-breadcrumbs__link" href="/admin-edit-field">Edit information</a>
     </li>
     </ol>
 </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
     <h1 class="govuk-heading-xl">
-      Make changes to the ERT event page
+      Edit event summary and information
     </h1>
-    <form class="form" action="/confirmation" method="post">
-
-    <ul class="govuk-list">
-      <li>Edit the information visible in the ERT interface.</li>
-      <li><p></p> </li>
-      <li></li>
+    <form class="form" action="/admin-warning-1" method="post">
+    <p>Any changes made here will be shown on the admin and ERT interfaces.</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Edit the event summary table by altering the labels shown</li>
+      <li>Add or edit a written event summary</li>
+      <li>Add or edit additional information fields: press and communication or other contacts</li>
     </ul>
     <div class="govuk-form-group">
       <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
           Field name:
         </label>
       </h1>
-      <input class="govuk-input" id="event-name" name="event-name" type="text">
+      <input class="govuk-input" id="event-name" name="event-name" type="text" value = "Select from dropdown">
     </div>
     <div class="govuk-form-group">
       <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
@@ -53,7 +50,7 @@ Event AAA0001: ERT interface
     </div>
 
     <button class="govuk-button" data-module="govuk-button">
-      Send
+      Confirm and publish
     </button>
 
     </div>
