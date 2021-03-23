@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Event AAA0001
+Event AAA0001: ERT interface
 {% endblock %}
 
 {% block content %}
@@ -9,34 +9,38 @@ Event AAA0001
   <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="admin-homepage">Home</a>
+      <a class="govuk-breadcrumbs__link" href="/admin-homepage">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="admin-warning-1">Event AAA0001</a>
+      <a class="govuk-breadcrumbs__link" href="/admin-ert-homepage">ERT interface</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="admin-ert-warning-1">ERT Event AAA0001</a>
+      <a class="govuk-breadcrumbs__link" href="/admin-ert-warning-1">ERT Event AAA0001</a>
     </li>
     </ol>
 </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl">Event AAA0001</h1>
+        </div>
+    <div class="govuk-grid-row">
       <p> <strong class="govuk-tag govuk-tag--yellow">EVENT LEVEL 2</strong> </p>
       <table class="govuk-table"style="width:100%">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header" style="width: 50%">Probability of collision</th>
-            <td class="govuk-table__cell" style="width: 50%"><strong class="govuk-tag govuk-tag--red">High</strong></td>
+            <td class="govuk-table__cell" style="width: 43%"><strong class="govuk-tag govuk-tag--red">High</strong></td>
+            <td class="govuk-table__cell" style="width: 7%"><a href="#">edit</a></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header" style="width: 50%">Potential consequence</th>
-            <td class="govuk-table__cell" style="width: 50%"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
+            <td class="govuk-table__cell" style="width: 43%"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
+            <td class="govuk-table__cell" style="width: 7%"><a href="#">edit</a></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header" style="width: 50%">Time to event</th>
-            <td class="govuk-table__cell" style="width: 50%"><strong class="govuk-tag govuk-tag--red">27 hours</strong></td>
+            <td class="govuk-table__cell" style="width: 43%"><strong class="govuk-tag govuk-tag--red">27 hours</strong></td>
+            <td class="govuk-table__cell" style="width: 7%"></td>
           </tr>
         </tbody>
       </table>
@@ -64,15 +68,17 @@ Event AAA0001
 
       <p class="govuk-body-l"> <b>Event summary:</b> [text here summarises the event and recommends further actions to be taken by the team]</p>
       <p> </p>
+      <p><a href="#">Add/edit summary text</a></p>
+      <p></p>
       <h2 class="govuk-heading-l">Event Details</h2>
         <h3 class="govuk-heading-m">1. What</h3>
-        <p>This table shows key information about the event and whether the relative associated risk is high, medium or low.</p>
+        <p>This table shows key information about the conjunction event and whether the relative associated risk is high, medium or low.</p>
         <table class="govuk-table"style="width:100%">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 50%">Probability of collision</th>
-              <td class="govuk-table__cell" style="width: 25%">13%</td>
-              <td class="govuk-table__cell" style="width: 25%"><strong class="govuk-tag govuk-tag--red">High</strong></td>
+              <td class="govuk-table__cell" style="width: 40%">13%</td>
+              <td class="govuk-table__cell" style="width: 10%"><strong class="govuk-tag govuk-tag--red">High</strong></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header"">Total miss distance</th>
@@ -95,77 +101,94 @@ Event AAA0001
         <table class="govuk-table"style="width:100%">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" style="width: 50%">Objects involved</th>
-              <th scope="row" class="govuk-table__header" style="width: 25%">Object 1</th>
-              <th scope="row" class="govuk-table__header" style="width: 25%">Object 2</th>
-
+              <th scope="row" class="govuk-table__header" style="width: 15%">Object 1</th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Common name</th>
+              <td class="govuk-table__cell" style="width: 50%"><a href="ert-satellite-1.html" class="govuk-link--no-visited-state">Starlink-1862</a></td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Common name</th>
-              <td class="govuk-table__cell" ><a href="/admin-satellite-1" class="govuk-link--no-visited-state">Starlink-1862</a></td>
-              <td class="govuk-table__cell">Discoverer 5</td>
-
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Activity</th>
+              <td class="govuk-table__cell" style="width: 50%">Active</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Active/Inactive</th>
-              <td class="govuk-table__cell">Active</td>
-              <td class="govuk-table__cell">Inactive</td>
-
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Type</th>
+              <td class="govuk-table__cell" style="width: 50%">Payload</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Manoeuvrability</th>
-              <td class="govuk-table__cell">Manoeuvrable</td>
-              <td class="govuk-table__cell">Manoeuvrable</td>
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Mass</th>
+              <td class="govuk-table__cell" style="width: 50%">50 kg</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Type</th>
-              <td class="govuk-table__cell">Payload</td>
-              <td class="govuk-table__cell">Payload</td>
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Size</th>
+              <td class="govuk-table__cell" style="width: 50%">2 m x 1 m x 1.5 m</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Mass (kg)</th>
-              <td class="govuk-table__cell">50</td>
-              <td class="govuk-table__cell">13</td>
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Operator</th>
+              <td class="govuk-table__cell" style="width: 50%">Space X</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Size (m)</th>
-              <td class="govuk-table__cell" >2 x 1 x 1.5</td>
-              <td class="govuk-table__cell" >0.5 x 0.5 x 1</td>
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">UK licensed</th>
+              <td class="govuk-table__cell" style="width: 50%">Yes</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" >Operator</th>
-              <td class="govuk-table__cell" ><a href="#" class="govuk-link--no-visited-state">SPACEX</a></td>
-              <td class="govuk-table__cell" >Unknown</td>
+              <th scope="row" class="govuk-table__header" style="width: 15%">Object 2</th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Common name</th>
+              <td class="govuk-table__cell" style="width: 50%"><a href="#" class="govuk-link--no-visited-state">Discoverer 5</a></td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">General function</th>
-              <td class="govuk-table__cell" >Research</td>
-              <td class="govuk-table__cell" >Communications - <b>critical</b></td>
-
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Activity</th>
+              <td class="govuk-table__cell" style="width: 50%">Inactive</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" >Licensed by</th>
-              <td class="govuk-table__cell">UK</td>
-              <td class="govuk-table__cell">USA</td>
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Type</th>
+              <td class="govuk-table__cell" style="width: 50%">Payload</td>
             </tr>
-
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Mass</th>
+              <td class="govuk-table__cell" style="width: 50%">13 kg</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Size</th>
+              <td class="govuk-table__cell" style="width: 50%">0.5 m x 0.5 m x 1 m</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">Operator</th>
+              <td class="govuk-table__cell" style="width: 50%">Unknown</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" style="width: 15%"> </th>
+              <th scope="row" class="govuk-table__header" style="width: 35%">UK licensed</th>
+              <td class="govuk-table__cell" style="width: 50%">No</td>
+            </tr>
           </tbody>
         </table>
-
-              <h3 class="govuk-heading-m">3. When</h3>
+        <h3 class="govuk-heading-m">3. When</h3>
         <table class="govuk-table"style="width:100%">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 50%">Time of closest approach (UTC)</th>
-              <td class="govuk-table__cell" style="width: 50%">02/03/2021 12:30</td>
+              <td class="govuk-table__cell" style="width: 43%">02/03/2021 12:30</td>
+              <td class="govuk-table__cell" style="width: 7%"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 50%">Time of last update (UTC)</th>
-              <td class="govuk-table__cell" style="width: 50%">01/03/2021 14:30</td>
+              <td class="govuk-table__cell" style="width: 43%">01/03/2021 14:30</td>
+              <td class="govuk-table__cell" style="width: 7%"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header" style="width: 50%">Estimated time of next update (UTC)</th>
-              <td class="govuk-table__cell" style="width: 50%">02/03/2021 01:00</td>
+              <td class="govuk-table__cell" style="width: 43%">02/03/2021 01:00</td>
+              <td class="govuk-table__cell" style="width: 7%"><a href="#">edit</a></td>
             </tr>
           </tbody>
         </table>
@@ -175,12 +198,16 @@ Event AAA0001
         <div class="moj-button-menu">
           <div class="moj-button-menu__wrapper">
 
-            <a href="/admin-warning-1" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
               View further analysis
             </a>
 
-            <a href="/admin-comms-page-1" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
               Communications about this event
+            </a>
+
+            <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary" data-module="govuk-button">
+              Change labelling thresholds
             </a>
 
       </div>
@@ -201,15 +228,18 @@ Event AAA0001
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header" style="width: 50%">Press and communication</th>
-                    <td class="govuk-table__cell" style="width: 50%">[insert text here]</td>
+                    <td class="govuk-table__cell" style="width: 43%">[insert text here]</td>
+                    <td class="govuk-table__cell" style="width: 7%"><a href="#">edit</a></td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header" style="width: 50%">Other contacts</th>
-                    <td class="govuk-table__cell" style="width: 50%">[insert text here]</td>
+                    <td class="govuk-table__cell" style="width: 43%">[insert text here]</td>
+                    <td class="govuk-table__cell" style="width: 7%"><a href="#">edit</a></td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header" style="width: 50%">Next update</th>
-                    <td class="govuk-table__cell" style="width: 50%">[insert text here]</td>
+                    <td class="govuk-table__cell" style="width: 43%">[insert text here]</td>
+                    <td class="govuk-table__cell" style="width: 7%"><a href="#">edit</a></td>
                   </tr>
                 </tbody>
                 </table>
@@ -225,7 +255,7 @@ Event AAA0001
             </div>
             <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
               <ul class="govuk-list govuk-list--bullet">
-                <li><b>ERF levels</b>, Emergency Response Framework levels, are explained in our <a href="#">ERF information page</a>.</li>
+                <li><b>ERF levels</b>, Emergency Response Framework levels, are explained in our <a href="/ERF-explanation">ERF information page</a>. To summarise,... </li>
                 <p> </p>
                 <li><b>Probability of collision</b> above x% is usually a cause for concern and the event should be monitored. For any probability over x%, the UKSA recommends escalating the event and prompting an avoidance manoeuvre, if possible. </li>
                 <p> </p>
