@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-UKSA: Homepage
+Homepage
 {% endblock %}
 
 {% block content %}
@@ -53,7 +53,7 @@ UKSA: Homepage
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 16%";>Time of closest approach (UTC)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Primary object (UK object)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Secondary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Secondary object licence</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Altitude (km)</th>
               <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Total miss distance (m)</th>
               <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 7%";>Probability of collision (UKSA, %)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Potential consequence</th>
@@ -66,7 +66,7 @@ UKSA: Homepage
               <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
               <td class="govuk-table__cell govuk-body-s"><a href="/admin-satellite-1">Starlink-1862</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Discoverer 5</a></td>
-              <td class="govuk-table__cell govuk-body-s">France</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">230</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">37</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="2">Medium</td>
@@ -77,7 +77,7 @@ UKSA: Homepage
               <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1861</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Lemur 2</a></td>
-              <td class="govuk-table__cell govuk-body-s">US</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">469</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="24623">2.4623</td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="3">High</td>
@@ -88,7 +88,7 @@ UKSA: Homepage
               <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1862</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-64</a></td>
-              <td class="govuk-table__cell govuk-body-s">UK</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">560</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">152</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">0.1543</td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="3">High</td>
@@ -99,7 +99,7 @@ UKSA: Homepage
               <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1317</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-50</a></td>
-              <td class="govuk-table__cell govuk-body-s">UK</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">750</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="2543">0.2543</td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="1">Low</td>
@@ -110,7 +110,7 @@ UKSA: Homepage
               <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Spacebee-52</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
-              <td class="govuk-table__cell govuk-body-s">-</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">260</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">382</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="765">0.0765</td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="1">Low</td>
@@ -121,7 +121,7 @@ UKSA: Homepage
               <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-0064</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Hyla-6</a></td>
-              <td class="govuk-table__cell govuk-body-s">China</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">400</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">211</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="143">0.0143</td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="1">Low</td>
@@ -132,7 +132,7 @@ UKSA: Homepage
               <td class="govuk-table__cell govuk-body-s">14/02/21 01:05</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-0050</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
-              <td class="govuk-table__cell govuk-body-s">-</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">805</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">103</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="987">0.0987</td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="1">Low</td>
