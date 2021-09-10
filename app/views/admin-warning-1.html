@@ -49,68 +49,7 @@ Event AAA0001
         </div>
       </div>
       <div class="govuk-grid-column-three-quarters">
-        <h1 class="govuk-heading-l" id="event summary">Event Summary</h1>
-        <table class="govuk-table"style="width:100%">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="width: 55%">Probability of collision</th>
-            <td class="govuk-table__cell" style="width: 25%">  <strong class="govuk-tag govuk-tag--red">High</strong></td>
-            <td class="govuk-table__cell govuk-table__cell--numeric" style="width: 20%"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="width: 55%">Potential consequence</th>
-            <td class="govuk-table__cell" style="width: 25%">  <strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
-            <td class="govuk-table__cell govuk-table__cell--numeric" style="width: 20%"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="width: 55%">Emergency Response Framework level</th>
-            <td class="govuk-table__cell govuk-body-s" style="width: 25%">  <strong class="govuk-tag govuk-tag--yellow">LEVEL 2</strong></td>
-            <td class="govuk-table__cell govuk-table__cell--numeric" style="width: 20%"></td>
-          </tr>
-        </table>
 
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              What are these ratings?
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            <p class="govuk-body"><b>Information used to generate these outputs:</b></p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><b>Probability of collision:</b> generated based on orbit determination calculations. High represents a probability over 1%; medium over 0.1%; and low below 0.1%.</li>
-                <li><b>Potential consequence:</b> generated based on potential risk to UK assets, other sectors, loss of services, reputational damage and financial loss. When defining this level, the following should be considered: what objects are nearby, how many UK-licensed objects are within X distance, how many and what UK-licensed objects would expect to see an increased risk of collision due to the event and how quickly these consequences may unfold.</li>
-              </ul>
-              <p class="govuk-body"><b>What do the ratings mean?</b></p>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li><b>High:</b> requires urgent action.</li>
-                  <li><b>Medium:</b> monitor closely and notify internal team. </li>
-                  <li><b>Low:</b> monitor over time. </li>
-                </ul>
-          </div>
-        </details>
-
-        <div class="moj-button-menu">
-          <div class="moj-button-menu__wrapper">
-            <a href="/admin-edit-field" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
-              Add to or edit event summary
-            </a>
-            <a href="/admin-comms-page-1" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
-              AAA0001 Communications
-            </a>
-            <a href="/admin-ert-warning-1" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
-              View ERT event page
-            </a>
-            <div class="moj-button-menu">
-              <div class="moj-button-menu__wrapper">
-                <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
-                  Request extended pdf report from UKSA analysts
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p></p>
           <h1 class="govuk-heading-l" id="event information">Event Information</h1>
           <table class="govuk-table"style="width:100%">
             <tbody class="govuk-table__body">
@@ -176,12 +115,6 @@ Event AAA0001
                   </li>
                   <li>
                     <a class="govuk-link" href="admin-warning-1-error-ellipsoid.html">Evolution of conjunction error ellipsoids</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="admin-warning-1-covariance.html">Covariance visualisation</a>
-                  </li>
-                  <li>
-                    <a class="govuk-link" href="admin-warning-1-probability-evolution.html">Predicted location of conjunction event</a>
                   </li>
                 </ul>
               </div>
@@ -437,13 +370,8 @@ Event AAA0001
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Operator</th>
-                  <td class="govuk-table__cell"><a class="govuk-link" href="/admin-operator-profile-1">SPACEX</a></td>
+                  <td class="govuk-table__cell">SPACEX</td>
                   <td class="govuk-table__cell">SPACEY</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Contact details</th>
-                  <td class="govuk-table__cell"><a class="govuk-link" href="/admin-operator-profile-1">SPACEX contact details</a></td>
-                  <td class="govuk-table__cell"><a class="govuk-link">-</a></td>
                 </tr>
               </tbody>
             </table>
@@ -452,7 +380,6 @@ Event AAA0001
 
               <h1 class="govuk-heading-l" id="download_data">Download event information</h1>
               <p><a href="/public/downloads/AAA0001.csv" download >Download event data (.csv)</a></p>
-              <p><a href="/public/downloads/AAA0001.pdf" download >Download this page (PDF)</a></p>
               <h1 class="govuk-heading-l" id="calculation_info">How this data was calculated</h1>
               <p class="govuk-body">To understand more about how this data was generated by the UKSA, see:</p>
               <ul class="govuk-list govuk-list--bullet">
