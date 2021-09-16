@@ -10,42 +10,40 @@ Login
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+<h1 class="govuk-heading-xl">Log in to Monitor my Satellites</h1>
+</div>
+</div>
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">My satellite environment: registration number</h1>
-
-      <form class="form" action="/password" method="post">
+    <form class="form" action="/password" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Enter your registration number
+
+          <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="account-number">
+                  What is your account number?
+                </label>
               </h1>
-            </legend>
-            <div id="passport-issued-hint" class="govuk-hint">
-              For example, 1234 1234 1234
+              <div id="account-number-hint" class="govuk-hint">
+                Must be between 6 and 8 digits long
+              </div>
+              <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
             </div>
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4"  type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="account-number">
+                  Email address
+                </label>
+              </h1>
+              <div id="account-number-hint" class="govuk-hint">
+                Please enter your organisation email address
               </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4"  type="text" pattern="[0-9]*" inputmode="numeric"></div>
-              </div>
+              <input class="govuk-input govuk-input--width-three-quarters" id="email-address" name="email-address" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
             </div>
 
-          </fieldset>
         </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>

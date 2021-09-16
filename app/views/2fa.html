@@ -13,34 +13,26 @@ password
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 <h1 class="govuk-heading-xl">Log in to Monitor my Satellites</h1>
-</div>
-</div>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-    <form class="form" action="/2fa" method="post">
+    <form class="form" action="/operator-homepage" method="post">
 
         <div class="govuk-form-group">
           <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="account-number">
-                  Enter your password
+                  Enter the 8-digit code we have sent to your email
                 </label>
             </h1>
-              <input class="govuk-input govuk-input--width-30" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
+              <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
           </div>
         </div>
 
-      <p><a href="#">Forgot your password?</a></p>
+      <p><a href="#">Did not receive an email?</a></p>
 
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
-      
-      </form>
   </div>
 
         </div>
 
-
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
 
