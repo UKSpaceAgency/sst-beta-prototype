@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Registered satellites
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-admin-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-admin-account-info">Organisation account details</a>
+      </li>
+    </ol>
+  </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">SpaceX account</h1>
+        <p class="govuk-body-m"> View your organisations account information and registered member users.</p>
+
+        <h3 class="govuk-heading-m">Organisation details</h3>
+
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Organisation</th>
+              <td class="govuk-table__cell">SpaceX</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Organisation ID</th>
+              <td class="govuk-table__cell">abc123</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Number of member users</th>
+              <td class="govuk-table__cell">abc123</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Organisation admin user</th>
+              <td class="govuk-table__cell">[name of this user]</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Organisation admin user email address</th>
+              <td class="govuk-table__cell">[email of this user]</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Organisation admin user phone number</th>
+              <td class="govuk-table__cell">[number of this user]</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="govuk-body-m"><a href="#">Edit this information</a></p>
+
+          <p></p>
+
+          <h3 class="govuk-heading-m">Member user details</h3>
+
+          <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 20%">User ID</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Name</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Email address</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Phone number</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Date account added</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Last active</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+                <td class="govuk-table__cell">x</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="govuk-body-m"><a href="#">Edit (add/remove) member users</a></p>
+
+          <p>   </p>
+      </div>
+      </div>
+  </main>
+</div>
+
+
+{% endblock %}
