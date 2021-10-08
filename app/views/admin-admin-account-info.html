@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Registered satellites
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/admin-admin-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/admin-admin-account-info">Accounts details</a>
+      </li>
+    </ol>
+  </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Monitor my Satellites registered accounts</h1>
+
+        <p class="govuk-body-m">There are currently <b>15</b> active organisations registered with Monitor my Satellites</p>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Invite new organisation
+        </button>
+
+          <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 10%">Organisaton name</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Email domain</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Date account added</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Last active</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Number of accounts</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Number of admins</th>
+                <th scope="col" class="govuk-table__header" span="1" style="width: 20%"></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">CAA</a></td>
+                <td class="govuk-table__cell">@cca.co.uk</td>
+                <td class="govuk-table__cell">10/05/2021</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell">10</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell"><a href="#">Delete</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="#">Space X</a></td>
+                <td class="govuk-table__cell">@spacex.com</td>
+                <td class="govuk-table__cell">10/05/2021</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell">10</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell"><a href="#">Delete</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/admin-admin-UKSAaccount-info">UKSA</a></td>
+                <td class="govuk-table__cell">@uksa.co.uk</td>
+                <td class="govuk-table__cell">10/05/2021</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell">10</td>
+                <td class="govuk-table__cell">1</td>
+                <td class="govuk-table__cell"><a href="#">Delete</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <p>   </p>
+      </div>
+      </div>
+  </main>
+</div>
+
+
+{% endblock %}
