@@ -13,7 +13,7 @@ Registered satellites
         <a class="govuk-breadcrumbs__link" href="/regulator-admin-homepage">Home</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/admin-admin-account-info">Accounts details</a>
+        <a class="govuk-breadcrumbs__link" href="/admin-account-info">Accounts details</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="#">UKSA account details</a>
@@ -27,10 +27,13 @@ Registered satellites
         <h1 class="govuk-heading-xl">UK Space Agency</h1>
 
         <p class="govuk-body-m">There are currently <b>9</b> active users registered with your organisation.</p>
-        <button class="govuk-button" data-module="govuk-button">
-          Invite new member
-        </button>
-
+        <div class="moj-button-menu">
+          <div class="moj-button-menu__wrapper">
+            <a href="/invite-new-member" role="button" draggable="false" class="govuk-button moj-button-menu__item  " data-module="govuk-button">
+              Invite new member
+            </a>
+          </div>
+        </div>
         <p></p>
 
           <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
@@ -53,7 +56,7 @@ Registered satellites
                 <td class="govuk-table__cell">01234 5678</td>
                 <td class="govuk-table__cell">10/05/2021</td>
                 <td class="govuk-table__cell">22/09/2021</td>
-                <td class="govuk-table__cell"><a href="#">Delete</a></td>
+                <td class="govuk-table__cell"><a href="#">Edit</a></td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">Member</td>
@@ -62,7 +65,7 @@ Registered satellites
                 <td class="govuk-table__cell">01234 5678</td>
                 <td class="govuk-table__cell">10/05/2021</td>
                 <td class="govuk-table__cell">22/09/2021</td>
-                <td class="govuk-table__cell"><a href="#">Delete</a></td>
+                <td class="govuk-table__cell"><a href="#">Edit</a></td>
               </tr>
             </tbody>
           </table>
