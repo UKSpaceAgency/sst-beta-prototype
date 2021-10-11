@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+UKSA Homepage
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/regulator-homepage">Home</a>
+    </li>
+    </ol>  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Monitoring UK Satellites</h1>
+
+      <h2 class="govuk-heading-l">Register a new UK satellite</h2>
+      <p>Add a <a href="/regulator-add-satellite">new UK-licensed satellite</a> to this UKSA register by uploading the satellite information.</p>
+      <p></p>
+
+
+      <h2 class="govuk-heading-l">Registered UK satellites</h2>
+        <div class="moj-search">
+        <form action="#" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Find a satellite
+          </label>
+          <span id="search-hint" class="govuk-hint moj-search__hint ">
+            You can search by exception reports (yes/no), satellite, operator, monthly report, number of upcoming conjunction events, inclination, apogee or perigee.
+          </span>
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+        </form>
+        </div>
+      <nav class="moj-pagination" id="pagination-label">
+        <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+        <ul class="moj-pagination__list">
+          <li class="moj-pagination__item moj-pagination__item--active">1</li>
+          <li class="moj-pagination__item"><a class="moj-pagination__link">2</a></li>
+          <li class="moj-pagination__item"><a class="moj-pagination__link">3</a></li>
+          <li class="moj-pagination__item  moj-pagination__item--next"><a class="moj-pagination__link">Next<span class="govuk-visually-hidden"> set of pages</span></a></li>
+        </ul>
+        <p class="moj-pagination__results">Showing <b>1</b> to <b>10</b> of <b>30</b> results</p>
+      </nav>
+        <! main table for conjunction warnings>
+      <p></p>
+
+        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 30%";>Satellite</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 30%";>Operator</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%";>Upcoming conjunction events</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%";>Date added</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="regulator-satellite-1"><b>STARLINK-1862</b></a></td>
+              <td class="govuk-table__cell govuk-body-s ">SPACEX</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12/09/2012</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>STARLINK-1861</b></td>
+              <td class="govuk-table__cell govuk-body-s">SPACEX</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">09/01/2008</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>STARLINK-1317</b></a></td>
+              <td class="govuk-table__cell govuk-body-s ">SPACEX</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">22/10/2015</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>SPACEBEE-52</b></a></td>
+              <td class="govuk-table__cell govuk-body-s">Swarm Tech.</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">01/04/2004</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>STARLINK-1947</b></a></td>
+              <td class="govuk-table__cell govuk-body-s">SPACEX</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">18/03/2019</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>SPACEBEE-11</b></a></td>
+              <td class="govuk-table__cell govuk-body-s ">Swarm Tech.</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">06/10/2018</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>STARLINK-1929</b></a></td>
+              <td class="govuk-table__cell govuk-body-s ">SPACEX</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">28/11/2017</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>ONEWEB-0050</b></a></td>
+              <td class="govuk-table__cell govuk-body-s ">OneWeb Ltd.</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">11/08/2020</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>ONEWEB-0064</b></a></td>
+              <td class="govuk-table__cell govuk-body-s ">OneWeb Ltd.</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">22/01/2010</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="#"><b>ONEWEB-0120</b></a></td>
+              <td class="govuk-table__cell govuk-body-s ">OneWeb Ltd.</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">08/09/2019</td>
+            </tr>
+          </tbody>
+      </table>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with this table
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          This table shows all UK-licensed satellites.
+          <p> </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Select the <b>satellite name</b> to view more information about the satellite and conjunction events.</li>
+          </ul>
+        </div>
+      </details>
+
+      <p> </p>
+      <p>View your <a href="regulator-notification-settings.html" class="govuk-link--no-visited-state">account settings</a> to modify your <b>event notification</b> settings.</p>
+
+      <p>View your <a href="regulator-admin-account-info.html" class="govuk-link--no-visited-state">organisation account information</a> to view your <b>user information</b>.</p>
+
+
+      </div>
+      </div>
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
