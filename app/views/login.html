@@ -11,25 +11,13 @@ Login
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-<h1 class="govuk-heading-xl">Log in to Monitor my Satellites</h1>
-</div>
-</div>
-
-  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="/password" method="post">
+    <form class="form" action="/login-email-answer" method="post">
+    <form class="form" action="/email-sent" method="post">
 
         <div class="govuk-form-group">
 
-          <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="account-number">
-                  What is your account number?
-                </label>
-              </h1>
-              <div id="account-number-hint" class="govuk-hint">
-                Must be between 6 and 8 digits long
               </div>
               <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
             </div>
@@ -44,13 +32,27 @@ Login
               <input class="govuk-input govuk-input--width-three-quarters" id="email-address" name="email-address" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
             </div>
 
+            {% from "govuk/components/input/macro.njk" import govukInput %}
+
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="account-number">
+                What is your email? <address class="">
+
+                </address>
+              </label>
+            </h1>
+{{ govukInput({
+  label: {
+    text: "Please enter your organisation email address"
+  },
+  id: "email",
+  name: "email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false
+}) }}
+
+
         </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-
-      </form>
-
-    </div>
-  </div>
 
 {% endblock %}
