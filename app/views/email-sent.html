@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/login">Log in</a>
+    </li>
+
+    </ol>
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Email sent successfully.</h1>
+
+      </div>
+
+      <p>Please check your email and click the link provided to log in.</p>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <div class="govuk-button-group">
+            <a href="homepage" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              Return to homepage</a>
+
+              <p> Note: homepage will need to depend on user </p>
+
+
+          </div>
+        </div>
+        </div>
+
+        </div>
+        </div>
+    </div>
+
+{% endblock %}
