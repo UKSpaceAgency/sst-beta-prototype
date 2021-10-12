@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+AAA0001 Upload ephemeris data
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Account information</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">View member</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">[Name of user]</h1>
+    <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 10%">User type</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Name</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Email address</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Phone number</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Date account added</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Last active</th>
+          <th scope="col" class="govuk-table__header" span="1" style="width: 20%"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Admin</td>
+          <td class="govuk-table__cell">Name</td>
+          <td class="govuk-table__cell">person@uksa.com</td>
+          <td class="govuk-table__cell">01234 5678</td>
+          <td class="govuk-table__cell">10/05/2021</td>
+          <td class="govuk-table__cell">22/09/2021</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="govuk-heading-l">Edit user</h2>
+    <p class="govuk-body-m">You can remove user permanently, suspend user temporarily or change their user type.</p>
+
+    <div class="moj-button-menu">
+      <div class="moj-button-menu__wrapper">
+
+        <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item  " data-module="govuk-button">
+          Remove user
+        </a>
+
+        <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
+          Suspend user
+        </a>
+
+        <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
+          Change access
+        </a>
+
+      </div>
+    </div>
+
+    <p></p>
+
+    <h2 class="govuk-heading-l">Activity log</h2>
+
+    <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 10%">Date</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 10%">Timespan</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Actions</th>
+      </thead>
+      <tbody>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">01/01/21</td>
+          <td class="govuk-table__cell">4 hours</td>
+          <td class="govuk-table__cell">No actions</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">01/01/21</td>
+          <td class="govuk-table__cell">8 hours</td>
+          <td class="govuk-table__cell">Ephemeris submitted</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">01/01/21</td>
+          <td class="govuk-table__cell">24 hours</td>
+          <td class="govuk-table__cell">No actions</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+    </div>
+
+  </main>
+{% endblock %}
