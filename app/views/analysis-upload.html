@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+AAA0001 Upload ephemeris data
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-1">Event summary</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/operator-send-ephemeris">Upload your analysis</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">
+    Upload your analysis for event AAA0001
+    </h1>
+    <form class="form" action="/operator-comms-history" method="post">
+
+    <p> Please upload your analysis of the event.</p>
+    <p> </p>
+    <p> Upload a CCSDS .oem file. The file must not exceed 20MB.
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        <b>Upload .oem file:</b>
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Email address
+      </label>
+      <div id="email-hint" class="govuk-hint">
+        If you would like to receive email confirmation that your analysis has been sent, enter the email address you would like this to be sent to.
+      </div>
+      <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" value="" autocomplete="email">
+    </div>
+    <button class="govuk-button" data-module="govuk-button">
+      Send
+    </button>
+
+    </div>
+
+  </main>
+{% endblock %}
