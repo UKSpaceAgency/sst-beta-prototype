@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Account settings
+Settings
 {% endblock %}
 
 {% block content %}
@@ -16,198 +16,345 @@ Account settings
     </li>
       </ol>
       </div>
-  <main class="govuk-main-wrapper">
+      <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
+        <form class="form" action="/operator-homepage" method="post">
 
-        <h1 class="govuk-heading-xl">Your account settings</h1>
-        <h2 class="govuk-heading-l">Your notification thresholds:</h2>
-
+        <h1 class="govuk-heading-xl">Account settings</h1>
         <fieldset class="govuk-fieldset">
-
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Your event status settings:
+            </h1>
+          </legend>
           <form class="form" action="/operator-homepage" method="post">
 
-            <p class="govuk-body-m">Your current notification settings are displayed below. A notification is triggered if <b> any of your specified thresholds </b> are met:
+          <form class="form" action="/operator-homepage" method="post">
+          <p> A notification is sent if <b> any of your specified thresholds </b> are met.
+            <p> Leave criteria you do not wish to be considered blank. </p>
+
+            {% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% set Satellite1Html %}
+<h2 class="govuk-heading-l">Satellite 1</h2>
+<table class="govuk-table" style="width:100%">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+      <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+      <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+          <div class="govuk-input__suffix" aria-hidden="true">%</div>
+        </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+      <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+          <div class="govuk-input__suffix" aria-hidden="true">m</div>
+        </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+          <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Time to event is below:</th>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
+          <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+    </tr>
+  </tbody>
+</table>
+{% endset -%}
+
+{% set Satellite2Html %}
+<h2 class="govuk-heading-l">Satellite 2</h2>
+<table class="govuk-table" style="width:100%">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+      <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+      <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+          <div class="govuk-input__suffix" aria-hidden="true">%</div>
+        </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+      <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+          <div class="govuk-input__suffix" aria-hidden="true">m</div>
+        </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+          <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Time to event is below:</th>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
+          <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+    </tr>
+  </tbody>
+</table>
+{% endset -%}
+
+{% set Satellite3Html %}
+<h2 class="govuk-heading-l">Satellite 3</h2>
+<table class="govuk-table" style="width:100%">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+      <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+      <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+          <div class="govuk-input__suffix" aria-hidden="true">%</div>
+        </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+      <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+          <div class="govuk-input__suffix" aria-hidden="true">m</div>
+        </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+          <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Time to event is below:</th>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
+          <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+    </tr>
+  </tbody>
+</table>
+{% endset -%}
+
+{% set Satellite4Html %}
+<h2 class="govuk-heading-l">Satellite 4</h2>
+
+<table class="govuk-table" style="width:100%">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+      <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+      <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+          <div class="govuk-input__suffix" aria-hidden="true">%</div>
+        </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+      <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+          <div class="govuk-input__suffix" aria-hidden="true">m</div>
+        </div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+          <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Time to event is below:</th>
+      <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
+          <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+    </tr>
+  </tbody>
+</table>
+{% endset -%}
+
+{{ govukTabs({
+  items: [
+    {
+      label: "Satellite 1",
+      id: "satellite-1",
+      panel: {
+        html: Satellite1Html
+      }
+    },
+    {
+      label: "Satellite 2",
+      id: "satellite-2",
+      panel: {
+        html: Satellite2Html
+      }
+    },
+    {
+      label: "Satellite 3",
+      id: "satellite-3",
+      panel: {
+        html: Satellite3Html
+      }
+    },
+    {
+      label: "Satellite 4",
+      id: "satellite-4",
+      panel: {
+        html: Satellite4Html
+      }
+    }
+  ]
+}) }}
+
+<table class="govuk-table" style="width:100%">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" style="width:33%"></th>
+      <th scope="col" class="govuk-table__header" style="width:33%"></th>
+      <th scope="col" class="govuk-table__header" style="width:33%">Select</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header" rowspan="2">Do you want to apply these settings to all satellites?</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+            <label class="govuk-label govuk-checkboxes__label" for="contact">
+            </label>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+      </tbody>
+</table>
+          <h1 class="govuk-heading-l">Notification format:</h1>
           <table class="govuk-table" style="width:100%">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header" style="width:50%">Notification criteria</th>
-                <th scope="col" class="govuk-table__header" style="width:50%">Threshold</th>
+                <th scope="col" class="govuk-table__header" style="width:33%"></th>
+                <th scope="col" class="govuk-table__header" style="width:33%"></th>
+                <th scope="col" class="govuk-table__header" style="width:33%">Select</th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
-                <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
-                    <div class="govuk-input__suffix" aria-hidden="true">%</div>
-                  </div></td>
+                <th scope="row" class="govuk-table__header" rowspan="2">Receive notifications?</th>
+                <td class="govuk-table__cell">Email (containing event summary)</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
-                <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
-                    <div class="govuk-input__suffix" aria-hidden="true">m</div>
-                  </div></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
-                <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
-                    <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Time to event is below:</th>
-                <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
-                    <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
-              </tr>
-            </tbody>
+                <td class="govuk-table__cell">Text message (event ID only)</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                </tr>
+                </tbody>
           </table>
-          <p> Leave criteria you do not wish to be considered blank.</p>
+          <p></p>
+          <table class="govuk-table" style="width:100%">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" style="width:100%" colspan="5">Would you like to receive a daily notification when no forecast conjunction events meet your notification thresholds?</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header" rowspan="2" style="width:33%">Receive notifications?</th>
+                <td class="govuk-table__cell" style="width:33%">Email </td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">
+                </td>
+                <td class="govuk-table__cell">
+                </td>
+                <td class="govuk-table__cell">
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Text message </td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td class="govuk-table__cell">
 
-          <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h2 class="govuk-fieldset__heading">
-                          Use data sources:
-                        </h2>
-                      </legend>
-                      <p></p>
-                      <div class="govuk-radios">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="data-source-1" name="data-source" type="radio" value="Space-Track and UKSpOC" checked=checked>
-                          <label class="govuk-label govuk-radios__label" for="data-source">
-                            Space-Track and/or UKSA
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="data-source-2" name="data-source" type="radio" value="UKSpOC only">
-                          <label class="govuk-label govuk-radios__label" for="data-source-2">
-                            UKSA only
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="data-source-3" name="data-source" type="radio" value="Space-Track only">
-                          <label class="govuk-label govuk-radios__label" for="data-source-3">
-                            Space-Track only
-                          </label>
-                        </div>
-                      </div>
-                    </fieldset>
+                </td>
+                <td class="govuk-table__cell">
+
+                </td>
+                </tr>
+
+                </tbody>
+          </table>
+  </fieldset>
+
+  <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Your contact details:
+    </h1>
+  </legend>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                operator@gov.uk
+              </dd>
+
             </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Phone number</dt>
+              <dd class="govuk-summary-list__value">07123 456789</dd>
 
+            </div>
+            </dl>
 
+          <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+            </button>
 
-        <h1 class="govuk-heading-l">Notification format:</h1>
-        <table class="govuk-table" style="width:100%">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header" style="width:33%"></th>
-              <th scope="col" class="govuk-table__header" style="width:33%"></th>
-              <th scope="col" class="govuk-table__header" style="width:33%">Select</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" rowspan="2">Receive notifications?</th>
-              <td class="govuk-table__cell">Email (containing event summary)</td>
-              <td class="govuk-table__cell">
-                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
-                    <label class="govuk-label govuk-checkboxes__label" for="contact">
-                    </label>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Text message (event ID only)</td>
-              <td class="govuk-table__cell">
-                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
-                    <label class="govuk-label govuk-checkboxes__label" for="contact">
-                    </label>
-                  </div>
-                </div>
-              </td>
-              </tr>
-              </tbody>
-        </table>
-        <p></p>
-        <table class="govuk-table" style="width:100%">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header" style="width:100%" colspan="5">Would you like to receive a daily notification when no forecast conjunction events meet your notification thresholds?</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" rowspan="2" style="width:33%">Receive notifications?</th>
-              <td class="govuk-table__cell" style="width:33%">Email </td>
-              <td class="govuk-table__cell">
-                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
-                    <label class="govuk-label govuk-checkboxes__label" for="contact">
-                    </label>
-                  </div>
-                </div>
-              </td>
-              <td class="govuk-table__cell">
-              </td>
-              <td class="govuk-table__cell">
-              </td>
-              <td class="govuk-table__cell">
-              </td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Text message </td>
-              <td class="govuk-table__cell">
-                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
-                    <label class="govuk-label govuk-checkboxes__label" for="contact">
-                    </label>
-                  </div>
-                </div>
-              </td>
-              <td class="govuk-table__cell">
-
-              </td>
-              <td class="govuk-table__cell">
-
-              </td>
-              </tr>
-
-              </tbody>
-        </table>
-</fieldset>
-<fieldset class="govuk-fieldset">
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-  <h1 class="govuk-fieldset__heading">
-    Your contact details:
-  </h1>
-</legend>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              example.operator@satellite-company.com
-            </dd>
-
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">Phone number</dt>
-            <dd class="govuk-summary-list__value">07123 456789</dd>
-
-          </div>
-          </dl>
-              <button class="govuk-button" data-module="govuk-button">
-                    Save and continue
-                </button>
                 </form>
-          </fieldset>
   </div>
 
 
