@@ -4,9 +4,7 @@
 Login
 {% endblock %}
 
-{% block beforeContent %}
-  <a class="govuk-back-link" href="start">Back</a>
-{% endblock %}
+
 
 {% block content %}
 
@@ -31,7 +29,7 @@ Login
             </h1>
 {{ govukInput({
   label: {
-    text: "Please enter your organisation email address."
+    text: "Enter your organisation email address."
   },
   id: "email",
   name: "email",
@@ -44,24 +42,19 @@ Login
 
         </div>
 
-        <a href="/domain-known-email-known" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        <a href="/email-known" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
           Log in [email known]
           <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
           </svg>
         </a>
 
-        <a href="/domain-known-email-unknown" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
-          Log in [domain known]
+        <a href="/email-unknown" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+          Log in [email unknown]
           <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
           </svg>
         </a>
-        <a href="/domain-unknown-email-unknown" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
-          Log in [email unknown domain unkown]
-          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-          </svg>
-        </a>
+
 
 {% endblock %}
