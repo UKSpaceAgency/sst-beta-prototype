@@ -21,73 +21,9 @@ Settings
       <div class="govuk-grid-column-full">
         <form class="form" action="/operator-homepage" method="post">
 
-        <h1 class="govuk-heading-xl">Account settings</h1>
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              All registered satellite notification thresholds
-            </h1>
-          </legend>
-          <form class="form" action="/operator-homepage" method="post">
+          <h1 class="govuk-heading-xl">Account settings</h1>
 
-          <form class="form" action="/operator-homepage" method="post">
-          <p> The notification setting thresholds of all UK-licensed satellites registered to your account are listed in the table below:
-         </p>
-
-
-              <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
-                <thead class="govuk-table__head">
-                  <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 12%">Common name</th>
-                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 12%">NORAD ID</th>
-                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Probability of collision is above: (%)</th>
-                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Total miss distance is below: (m)</th>
-                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Radial miss distance is below: (m)</th>
-                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Time to event is below: (hours)</th>
-                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 12%"></th>
-                  </tr>
-                </thead>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1862</a></td>
-                    <td class="govuk-table__cell">47149</td>
-                    <td class="govuk-table__cell">0.1</td>
-                    <td class="govuk-table__cell">200</td>
-                    <td class="govuk-table__cell">200</td>
-                    <td class="govuk-table__cell">72</td>
-<td class="govuk-table__cell"><a href="/operator-satellite-1">Edit</a></td>
-                  </tr>
-                  <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1317</a></td>
-                  <td class="govuk-table__cell">45365</td>
-                  <td class="govuk-table__cell">0.1</td>
-                  <td class="govuk-table__cell">200</td>
-                  <td class="govuk-table__cell">200</td>
-                  <td class="govuk-table__cell">72</td>
-<td class="govuk-table__cell"><a href="/operator-satellite-1">Edit</a></td>
-                </tr>
-                <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1929</a></td>
-                <td class="govuk-table__cell">46788</td>
-                <td class="govuk-table__cell">0.1</td>
-                <td class="govuk-table__cell">200</td>
-                <td class="govuk-table__cell">200</td>
-                <td class="govuk-table__cell">72</td>
-<td class="govuk-table__cell"><a href="/operator-satellite-1">Edit</a></td>
-              </tr>
-              <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1947</a></td>
-                  <td class="govuk-table__cell">46797</td>
-                  <td class="govuk-table__cell">0.1</td>
-                  <td class="govuk-table__cell">200</td>
-                  <td class="govuk-table__cell">200</td>
-                  <td class="govuk-table__cell">72</td>
-<td class="govuk-table__cell"><a href="/operator-satellite-1">Edit</a></td>
-                </tr>
-                </tbody>
-              </table>
-
-
-
-    
-          <h1 class="govuk-heading-l">Notification format:</h1>
+          <h1 class="govuk-heading-l">Notification format</h1>
           <table class="govuk-table" style="width:100%">
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
@@ -172,7 +108,74 @@ Settings
 
                 </tbody>
           </table>
-  </fieldset>
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              All registered satellite notification thresholds
+            </h1>
+          </legend>
+          <form class="form" action="/operator-homepage" method="post">
+
+          <form class="form" action="/operator-homepage" method="post">
+          <p> The notification setting thresholds of all UK-licensed satellites registered to your account are listed in the table below:
+         </p>
+         <p>Adjust your default notification settings <b><a href="/operator-master-settings">here</a></b>.</p>
+
+
+              <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 12%">Common name</th>
+                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 12%">NORAD ID</th>
+                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Probability of collision is above: (%)</th>
+                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Total miss distance is below: (m)</th>
+                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Radial miss distance is below: (m)</th>
+                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Time to event is below: (hours)</th>
+                    <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 12%"></th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1862</a></td>
+                    <td class="govuk-table__cell">47149</td>
+                    <td class="govuk-table__cell">0.1</td>
+                    <td class="govuk-table__cell">200</td>
+                    <td class="govuk-table__cell">200</td>
+                    <td class="govuk-table__cell">72</td>
+<td class="govuk-table__cell"><a href="/operator-satellite-1">Edit</a></td>
+                  </tr>
+                  <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1317</a></td>
+                  <td class="govuk-table__cell">45365</td>
+                  <td class="govuk-table__cell">0.1</td>
+                  <td class="govuk-table__cell">200</td>
+                  <td class="govuk-table__cell">200</td>
+                  <td class="govuk-table__cell">72</td>
+<td class="govuk-table__cell"><a href="/operator-satellite-1">Edit</a></td>
+                </tr>
+                <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1929</a></td>
+                <td class="govuk-table__cell">46788</td>
+                <td class="govuk-table__cell">0.1</td>
+                <td class="govuk-table__cell">200</td>
+                <td class="govuk-table__cell">200</td>
+                <td class="govuk-table__cell">72</td>
+<td class="govuk-table__cell"><a href="/operator-satellite-1">Edit</a></td>
+              </tr>
+              <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1947</a></td>
+                  <td class="govuk-table__cell">46797</td>
+                  <td class="govuk-table__cell">0.1</td>
+                  <td class="govuk-table__cell">200</td>
+                  <td class="govuk-table__cell">200</td>
+                  <td class="govuk-table__cell">72</td>
+<td class="govuk-table__cell"><a href="/operator-satellite-1">Edit</a></td>
+                </tr>
+                </tbody>
+              </table>
+
+
+
+
+
 
   <fieldset class="govuk-fieldset">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
