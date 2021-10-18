@@ -25,6 +25,46 @@ Starlink-1862
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">Starlink-1862</h1>
 
+        <h2 class="govuk-heading-l">Satellite notification settings</h2>
+
+      <table class="govuk-table" style="width:100%">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+            <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+            <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+                <div class="govuk-input__suffix" aria-hidden="true">%</div>
+              </div></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+            <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+                <div class="govuk-input__suffix" aria-hidden="true">m</div>
+              </div></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+            <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+                <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Time to event is below:</th>
+            <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
+                <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button class="govuk-button" data-module="govuk-button">
+            Save
+        </button>
+
+
   <h2 class="govuk-heading-l">Upcoming conjunction events</h2>
   <!This is the same as the table in the homepage, but only shows events involving this particular satellite>
   <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
