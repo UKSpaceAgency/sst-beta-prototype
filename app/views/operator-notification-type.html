@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Account settings
+{% endblock %}
+
+{% block content %}
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Your account settings</h1>
+        <p>You must set up your account notifications before continuing.</p>
+
+
+
+
+        <h1 class="govuk-heading-l">Notifications:</h1>
+        <span id="analysis-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> You must recieve UKSA conjuction event analysis notifications. Select which type of notification you wish to recieve.
+          </span>
+        <p>Select the boxes for the type of notification you wish to receive. Leave boxes blank for those you do not wish to receive notifications for.</p>
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" aria-describedby="analysis-hint analysis-error">
+
+      <table class="govuk-table" style="width:100%">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" style="width:50%"></th>
+              <th scope="col" class="govuk-table__header" style="width:25%">Email notifications</th>
+              <th scope="col" class="govuk-table__header" style="width:25%">Text notifications</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">New conjunction event</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell">New UKSA conjuction event analysis uploaded</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">No new conjuction events in the last 24 hours (that meet your notification thresholds)</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                        <label class="govuk-label govuk-checkboxes__label" for="contact">
+                        </label>
+                      </div>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                        <label class="govuk-label govuk-checkboxes__label" for="contact">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">No new Space-Track uploads for 24 hours</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                          <label class="govuk-label govuk-checkboxes__label" for="contact">
+                          </label>
+                        </div>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                          <label class="govuk-label govuk-checkboxes__label" for="contact">
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+              </tbody>
+        </table>
+      </fieldset>
+     </div>
+        <p></p>
+
+
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Your contact details:
+  </h1>
+</legend>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              example.operator@satellite-company.co.uk
+            </dd>
+
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Phone number</dt>
+            <dd class="govuk-summary-list__value">07123 456789</dd>
+
+          </div>
+          </dl>
+
+          <a href="/initial-operator-settings" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+            Save and continue
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+            </svg>
+          </a>
+                </form>
+          </fieldset>
+  </div>
+
+
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
