@@ -216,48 +216,32 @@ Starlink-1862
   </table>
   <p></p>
 
-  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-<div class="govuk-accordion__section ">
-<div class="govuk-accordion__section-header">
-<h2 class="govuk-accordion__section-heading">
-<span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-  Adjust your satellite notification settings
-</span>
-</h2>
-</div>
+    <h2 class="govuk-heading-l">Satellite notification settings</h2>
 
-<div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-  <p>Use the table below to adjust your individual satellite notification thresholds.</p>
-  <p>You can also adjust your <b><a href="/operator-master-settings">default satellite notification threshold</a></b>.</p>
-<table class="govuk-table" style="width:100%">
-<thead class="govuk-table__head">
-  <tr class="govuk-table__row">
-    <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
-    <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
-  </tr>
-</thead>
-<tbody class="govuk-table__body">
-  <tr class="govuk-table__row">
-    <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
-    <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
-        <div class="govuk-input__suffix" aria-hidden="true">%</div>
-      </div></td>
-  </tr>
-  <tr class="govuk-table__row">
-    <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
-    <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
-        <div class="govuk-input__suffix" aria-hidden="true">m</div>
-      </div></td>
-  </tr>
-  <tr class="govuk-table__row">
-    <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
-    <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
-        <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
-  </tr>
-  <tr class="govuk-table__row">
-    <th scope="row" class="govuk-table__header">Time to event is below:</th>
-    <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
-        <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+    <table class="govuk-table" style="width:100%" data-module=table>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 18%">Common name</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 12%">NORAD ID</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 18%">Probability of collision is above: (%)</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 18%">Total miss distance is below: (m)</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 18%">Radial miss distance is below: (m)</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 18%">Time to event is below: (hours)</th>
+          <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 18%"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1862</a></td>
+          <td class="govuk-table__cell">47149</td>
+          <td class="govuk-table__cell">0.1</td>
+          <td class="govuk-table__cell">200</td>
+          <td class="govuk-table__cell">200</td>
+          <td class="govuk-table__cell">72</td>
+<td class="govuk-table__cell"><a href="/operator-satellite-edit">Edit</a></td>
+        </tr>
+
+
   </tr>
 </tbody>
 </table>
