@@ -24,7 +24,152 @@ Settings
       <div class="govuk-grid-column-full">
         <form class="form" action="/operator-homepage" method="post">
 
-        <h1 class="govuk-heading-xl">Set your default satellite notification thresholds</h1>
+  <h1 class="govuk-heading-xl">Set your satellite notification alerts and thresholds</h1>
+                    <h1 class="govuk-heading-l">Notifications:</h1>
+                    <span id="analysis-error" class="govuk-error-message">
+                      <span class="govuk-visually-hidden">Error:</span> You must recieve UKSA conjuction event analysis notifications. Select which type of notification you wish to recieve.
+                      </span>
+                    <p>Select the boxes for the type of notification you wish to receive. Leave boxes blank for those you do not wish to receive notifications for.</p>
+
+            <div class="govuk-form-group govuk-form-group--error">
+              <fieldset class="govuk-fieldset" aria-describedby="analysis-hint analysis-error">
+
+                  <table class="govuk-table" style="width:100%">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header" style="width:50%"></th>
+                          <th scope="col" class="govuk-table__header" style="width:25%">Email notifications</th>
+                          <th scope="col" class="govuk-table__header" style="width:25%">Text notifications</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td scope="row" class="govuk-table__cell">New conjunction event crosses thresholds</td>
+                          <td class="govuk-table__cell">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                </label>
+                              </div>
+
+                          <td class="govuk-table__cell">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td scope="row" class="govuk-table__cell">Updated conjunction event crosses thresholds</td>
+                          <td class="govuk-table__cell">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                </label>
+                              </div>
+
+                          <td class="govuk-table__cell">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td scope="row" class="govuk-table__cell">Updated conjunction event no longer crosses thresholds</td>
+                          <td class="govuk-table__cell">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                </label>
+                              </div>
+
+                          <td class="govuk-table__cell">
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <td scope="row" class="govuk-table__cell">New UKSA conjuction event analysis uploaded</td>
+                            <td class="govuk-table__cell">
+                              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                  </label>
+                                </div>
+                            <td class="govuk-table__cell">
+                              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                  </label>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <td scope="row" class="govuk-table__cell">No new conjuction events in the last 24 hours that crosses thresholds</td>
+                              <td class="govuk-table__cell">
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                  <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                    </label>
+                                  </div>
+                              <td class="govuk-table__cell">
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                  <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                    </label>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td scope="row" class="govuk-table__cell">No new Space-Track uploads for 24 hours</td>
+                                <td class="govuk-table__cell">
+                                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                      </label>
+                                    </div>
+                                <td class="govuk-table__cell">
+                                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                      </label>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                          </tbody>
+                    </table>
+                  </fieldset>
+                 </div>
+                    <p></p>
+
+        <h1 class="govuk-heading-l">Set your default satellite notification thresholds:</h1>
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 
@@ -156,7 +301,7 @@ Settings
                 </tbody>
           </table>
 
-  
+
             <button class="govuk-button" data-module="govuk-button">
                   Save and continue
               </button>
