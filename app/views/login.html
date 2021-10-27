@@ -22,14 +22,14 @@ Login
             {% from "govuk/components/input/macro.njk" import govukInput %}
 
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="account-number">
-                What is your email? <address class="">
+                What is your email address? <address class="">
 
                 </address>
               </label>
             </h1>
 {{ govukInput({
   label: {
-    text: "Enter your organisation email address."
+    text: "Enter the email address you are registered with, and we will send you a link to log in."
   },
   id: "email",
   name: "email",
