@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Settings
+{% endblock %}
+
+{% block content %}
+
+
+
+        <h1 class="govuk-heading-xl">Set your Starlink-1862 event notification thresholds</h1>
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+            <h2 class="govuk-heading-l">Current notification thresholds</h2>
+
+            <table class="govuk-table" style="width:100%" data-module=table>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 18%">Common name</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 12%">NORAD ID</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Probability of collision is above: (%)</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Total miss distance is below: (m)</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Radial miss distance is below: (m)</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 18%">Time to event is below: (hours)</th>
+
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1862</a></td>
+                  <td class="govuk-table__cell">47149</td>
+                  <td class="govuk-table__cell">0.1</td>
+                  <td class="govuk-table__cell">200</td>
+                  <td class="govuk-table__cell">200</td>
+                  <td class="govuk-table__cell">72</td>
+
+                </tr>
+
+
+
+         <table class="govuk-table" style="width:100%">
+           <thead class="govuk-table__head">
+             <tr class="govuk-table__row">
+                 <h2 class="govuk-heading-l">Edit notification thresholds</h2>
+               <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+               <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+             </tr>
+           </thead>
+           <tbody class="govuk-table__body">
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+               <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+                   <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                 </div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+               <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+                   <div class="govuk-input__suffix" aria-hidden="true">m</div>
+                 </div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Radial miss distance is below:</th>
+               <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+                   <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Time to event is below:</th>
+               <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
+                   <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+             </tr>
+           </tbody>
+         </table>
+
+
+
+
+
+
+
+  <fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Your contact details:
+    </h1>
+  </legend>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+                operator@satellite-company.co.uk
+              </dd>
+
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">Phone number</dt>
+              <dd class="govuk-summary-list__value">07123 456789</dd>
+
+            </div>
+            </dl>
+
+            <a href="/operator-homepage" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+              Save and continue
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+              </svg>
+            </a>
+  </div>
+
+
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
