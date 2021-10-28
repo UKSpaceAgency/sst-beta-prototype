@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Settings
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="operator-threshold-settings-view">Event threshold settings</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="operator-threshold-settings-edit">Edit default event threshold settings</a>
+      </li>
+        </ol>
+        </div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <form class="form" action="/operator-homepage" method="post">
+
+          <h1 class="govuk-heading-xl">Event notification threshold settings</h1>
+
+        <p class="govuk-body-l">Set your default event notification thresholds:</p>
+
+         <table class="govuk-table" style="width:100%">
+           <thead class="govuk-table__head">
+             <tr class="govuk-table__row">
+               <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+               <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+             </tr>
+           </thead>
+           <tbody class="govuk-table__body">
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+               <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+                   <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                 </div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+               <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+                   <div class="govuk-input__suffix" aria-hidden="true">m</div>
+                 </div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Mean radial miss distance is below:</th>
+               <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+                   <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Time to event is below:</th>
+               <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
+                   <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+             </tr>
+           </tbody>
+         </table>
+
+            <button class="govuk-button" data-module="govuk-button">
+                  Save and continue
+              </button>
+                </form>
+  </div>
+
+
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
