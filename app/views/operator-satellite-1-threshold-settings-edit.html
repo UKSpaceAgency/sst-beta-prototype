@@ -6,44 +6,35 @@ Settings
 
 {% block content %}
 
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-satellite-list">Registered satellites</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-satellite-1">Starlink-1862</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-satellite-1">Edit notification thresholds for Starlink-1862</a>
+      </li>
+    </ol>
+  </div>
 
+  <main class="govuk-main-wrapper">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">Set your Starlink-1862 event notification thresholds</h1>
+        <h1 class="govuk-heading-xl">Edit Starlink-1862 event notification thresholds</h1>
 
         <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-
-            <h2 class="govuk-heading-l">Current notification thresholds</h2>
-
-            <table class="govuk-table" style="width:100%" data-module=table>
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 18%">Common name</th>
-                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 12%">NORAD ID</th>
-                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Probability of collision is above: (%)</th>
-                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Total miss distance is below: (m)</th>
-                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Mean radial miss distance is below: (m)</th>
-                  <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 18%">Time to event is below: (hours)</th>
-
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><a href="/operator-satellite-1">Starlink-1862</a></td>
-                  <td class="govuk-table__cell">47149</td>
-                  <td class="govuk-table__cell">0.1</td>
-                  <td class="govuk-table__cell">200</td>
-                  <td class="govuk-table__cell">200</td>
-                  <td class="govuk-table__cell">72</td>
-
-                </tr>
-
-
 
          <table class="govuk-table" style="width:100%">
            <thead class="govuk-table__head">
              <tr class="govuk-table__row">
-                 <h2 class="govuk-heading-l">Edit notification thresholds</h2>
                <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
                <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
              </tr>
@@ -73,35 +64,6 @@ Settings
              </tr>
            </tbody>
          </table>
-
-
-
-
-
-
-
-  <fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h1 class="govuk-fieldset__heading">
-      Your contact details:
-    </h1>
-  </legend>
-          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Email address
-              </dt>
-              <dd class="govuk-summary-list__value">
-                operator@satellite-company.co.uk
-              </dd>
-
-            </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">Phone number</dt>
-              <dd class="govuk-summary-list__value">07123 456789</dd>
-
-            </div>
-            </dl>
 
             <a href="/operator-homepage" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
               Save and continue
