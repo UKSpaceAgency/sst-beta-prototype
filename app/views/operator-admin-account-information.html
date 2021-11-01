@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Account settings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-admin-homepage">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-admin-account-information">Your account details</a>
+      </li>
+    </ol>
+  </div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Your Monitor my Satellites account</h1>
+
+        <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Your account details:
+          </h1>
+        </legend>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Organisation</dt>
+                <dd class="govuk-summary-list__value">Satellite company</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">User type</dt>
+                <dd class="govuk-summary-list__value">Organisation administrator</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Email address</dt>
+                <dd class="govuk-summary-list__value">example.operator@satellite-company.co.uk</dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Phone number</dt>
+                <dd class="govuk-summary-list__value">07123 456789</dd>
+              </div>
+            </dl>
+            <div class="moj-button-menu">
+              <div class="moj-button-menu__wrapper">
+                <a href="/edit-member" role="button" draggable="false" class="govuk-button moj-button-menu__item  " data-module="govuk-button">
+                  Edit information
+                </a>
+              </div>
+            </div>
+
+          </fieldset>
+
+
+  </div>
+
+
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
