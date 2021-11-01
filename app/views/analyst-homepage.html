@@ -49,10 +49,10 @@ Homepage
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 6%";>Event ID</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 16%";>Time of closest approach (UTC)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Primary object (UK object)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Time of closest approach (UTC)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary object</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Secondary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Altitude (above ground level) (km)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Altitude (above ground level) (km)</th>
               <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Total miss distance (m)</th>
               <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 7%";>Probability of collision (UKSA, %)</th>
             </tr>
@@ -136,16 +136,26 @@ Homepage
           <ul class="govuk-list govuk-list--bullet">
             <li>Select the <b>event ID</b> to view more information.</li>
             <li>Each event ID or row represents <b>one conjunction event</b> including all related CDMs and UKSA analysis.</li>
-            <li>The UK satellite will always be listed as the <b>primary object</b>.</li>
+
           </ul>
         </div>
       </details>
 
-      <h3 class="govuk-heading-m">Settings</h3>
-      <p>View your <a href="/analyst-notification-settings">account settings</a> to modify your event notification settings.</p>
-      <p>View <a href="all-account-info-view.html" class="govuk-link--no-visited-state">all organisational users' account information</a>.</p>
-<p>View <a href="analyst-settings" class="govuk-link--no-visited-state">your organisation's account information</a> to invite a new member or edit current ones.</p>
-      </div>
+      <h2 class="govuk-heading-l">Your account</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/analyst-account-information" class="govuk-link--no-visited-state">View your account information</a></li>
+<li><a href="/analyst-settings" class="govuk-link--no-visited-state">View your organisation's account information</a></li>
+          <li><a href="/all-account-info-view" class="govuk-link--no-visited-state">View all organisations' account information</a></li>
+
+          <li><a href="#" class="govuk-link--no-visited-state">View your notification settings</a></li>
+          <li><a href="#" class="govuk-link--no-visited-state">Edit your notification settings</a></li>
+          <li><a href="/analyst-threshold-settings-view" class="govuk-link--no-visited-state">View your default event notification thresholds</a></li>
+          <li><a href="/analyst-threshold-settings-edit" class="govuk-link--no-visited-state">Edit your default event notification thresholds</a></li>
+        </ul>
+  <p></p>
+</div>
+
+      
       </div>
   </main>
 </div>
