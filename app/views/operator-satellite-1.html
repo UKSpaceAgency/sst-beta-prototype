@@ -23,6 +23,7 @@ Starlink-1862
   <main class="govuk-main-wrapper">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+        <form class="form" action="/operator-satellite-1-threshold-settings-edit" method="post">
       <h1 class="govuk-heading-xl">Starlink-1862</h1>
 </div>
 
@@ -98,6 +99,8 @@ Starlink-1862
 <p></p>
         <h2 class="govuk-heading-l" id="satellite information">Satellite information</h2>
 
+        <p>Space-Track is the source of all object data. Contact Space-Track if your satellite data is incorrect.</p>
+
           <table class="govuk-table">
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
@@ -120,42 +123,18 @@ Starlink-1862
                 <th scope="row" class="govuk-table__header">Size (m)</th>
                 <td class="govuk-table__cell">2 x 2 x 2</td>
               </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Mass (kg)</th>
-                <td class="govuk-table__cell">250</td>
-              </tr>
+
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Operator</th>
                 <td class="govuk-table__cell">SpaceX</td>
               </tr>
+
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header" >Active / inactive</th>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header" style="text-indent: 40px">Status</th>
-                <td class="govuk-table__cell">Likely active</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header" style="text-indent: 40px">Source of active / inactive data</th>
-                <td class="govuk-table__cell">DBPedia</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header" >Manoeuvrability</th>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header" style="text-indent: 40px">Status</th>
+                <th scope="row" class="govuk-table__header" >Manoeuvrability status</th>
                 <td class="govuk-table__cell">Likely manoeuvrable</td>
               </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header" style="text-indent: 40px">Source of manoeuvrability data</th>
-                <td class="govuk-table__cell">DBPedia</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header" >Disposed or decayed</th>
-                <td class="govuk-table__cell">N/A</td>
-              </tr>
+
+
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">License information</th>
                 <td class="govuk-table__cell"></td>
@@ -267,7 +246,9 @@ Starlink-1862
       <tbody class="govuk-table__body">
     </table>
 
-    <p class="govuk-body-m"><a href="/operator-satellite-1-threshold-settings-edit">Edit your notification settings for [Starlink-1862]</a></p>
+    <button class="govuk-button" data-module="govuk-button">
+          Edit your notification settings for [Starlink-1862]
+      </button>
 
 </div>
 
