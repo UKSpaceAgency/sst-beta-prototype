@@ -9,28 +9,23 @@ Settings
   <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+      <a class="govuk-breadcrumbs__link" href="analyst-homepage">Home</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="operator-notification-settings-view">Notification settings</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="operator-notification-settings-edit">Edit notification settings</a>
+      <a class="govuk-breadcrumbs__link" href="analyst-notification-settings-view">Notification settings</a>
     </li>
       </ol>
       </div>
-
-
-  <main class="govuk-main-wrapper">
+      <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/operator-homepage" method="post">
 
-          <h1 class="govuk-heading-l">Notification settings for your account</h1>
-          <p>You must recieve notifications for UKSA conjunction event anlysis uploads.</p>
+    <h1 class="govuk-heading-l">Notification settings for your account</h1>
 
-  <div class="govuk-form-group govuk-form-group">
+          <p>Your current notification settings are displayed below.</p>
 
+  <div class="govuk-form-group">
+<form class="form" action="/analyst-notification-settings-edit" method="post">
 
         <table class="govuk-table" style="width:100%">
             <thead class="govuk-table__head">
@@ -123,7 +118,7 @@ Settings
                 </tr>
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row">
-                    <td scope="row" class="govuk-table__cell">No new conjuction events in the last 24 hours that crosses thresholds</td>
+                    <td scope="row" class="govuk-table__cell">No new conjuction events in the last 24 hours crosses thresholds</td>
                     <td class="govuk-table__cell">
                       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                         <div class="govuk-checkboxes__item">
@@ -164,15 +159,17 @@ Settings
                 </tbody>
           </table>
 
+          <button class="govuk-button" data-module="govuk-button">
+                Edit your default event notification threshold settings
+            </button>
+              </form>
+
+
        </div>
     <br>
 <p></p>
 
-          <button class="govuk-button" data-module="govuk-button">
-                Save and continue
-            </button>
 
-                </form>
   </div>
 
 
