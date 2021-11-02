@@ -9,14 +9,13 @@ Account settings
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
+        <form class="form" action="/operator-initial-setup" method="post">
 
-        <h1 class="govuk-heading-xl">Your Monitor my Satellites account</h1>
+        <h1 class="govuk-heading-xl">Your account</h1>
 
         <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">
-            Your account details:
-          </h1>
+
         </legend>
 
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -40,12 +39,10 @@ Account settings
 
             <p class="govuk-body-m">Contact your organisation administrator if any of these details are incorrect.</p>
 
-            <a href="/operator-initial-setup" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
-              Save and continue
-              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-              </svg>
-            </a>
+            <button class="govuk-button" data-module="govuk-button">
+                  Save and continue
+              </button>
+                </form>
           </fieldset>
 
 
