@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Event AAA0001
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="analyst-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="analyst-warning-1">Event AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/analyst-definitions">Definitions</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Definitions</h1>
+
+    </div>
+        <div class="govuk-grid-column-one-quarter">
+
+          <h3 class="govuk-heading-s">Contents</h3>
+
+            <ul class="moj-side-navigation__list">
+
+              <li class="moj-side-navigation__item">
+                <a href="#objects">Primary and secondary objects</a>
+              </li>
+
+
+              <li class="moj-side-navigation__item">
+                <a href="#missdistance">Miss distance</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#manoeuvrability">Manoeuvrablility</a>
+              </li>
+
+
+
+
+
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-three-quarters">
+
+
+              <h1 class="govuk-heading-l" id="objects">Primary and secondary objects</h1>
+
+<p>The primary object will always be your own satellite, and the secondary object will be the other object involved in the conjunction event. This may not align with the Space Track CDM’s primary and secondary objects.</p>
+
+                <h1 class="govuk-heading-l" id="missdistance">Miss distance</h1>
+
+              <p>  The Consulatative Commmittee for Space Data Systems describes the miss distance as "the norm of the relative position vector. It indicates how close the two objects are at the time of the predicted encounter." </p>
+<p>Monitor my satellites uses the RTN coordinate framework to describe miss distances.</p>
+<p>R (Radial) is the unit vector in the radial direction pointed outward from the center of the central body.</p>
+<p> T (Transverse) is the unit vector perpendicular to the R vector in the direction of the spacecraft velocity.</p>
+<p>N (Normal) is the unit vector normal to the satellite’s inertial orbit plane (in the direction of the satellite’s angular momentum) that completes the right-hand coordinate frame.</p>
+<p>In-track miss distance refers to the transverse miss distance.</p>
+<p>Cross-track miss distance refers to the normal miss distance.</p>
+
+                  <h2 class="govuk-heading-l" id="manoeuvrability">Manoeuvrability</h2>
+
+              </div>
+            <div class="govuk-grid-row">
+
+            </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
