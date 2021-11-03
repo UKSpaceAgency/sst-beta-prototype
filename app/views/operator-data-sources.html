@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Event AAA0001
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-warning-1">Event AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/operator-data-sources">Data sources</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Data sources</h1>
+
+    </div>
+        <div class="govuk-grid-column-one-quarter">
+
+          <h3 class="govuk-heading-s">Contents</h3>
+
+            <ul class="moj-side-navigation__list">
+
+              <li class="moj-side-navigation__item">
+                <a href="#objects">Object data</a>
+              </li>
+
+
+              <li class="moj-side-navigation__item">
+                <a href="#missdistance">Event data</a>
+              </li>
+            
+
+
+
+
+
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-three-quarters">
+
+
+              <h1 class="govuk-heading-l" id="objects">Object data</h1>
+
+<p>Space-Track is the source of all object data.</p>
+
+                <h1 class="govuk-heading-l" id="missdistance">Event data</h1>
+
+              <p>UKSA orbital analysts carry out conjunction event analysis.</p>
+              <p>UKSA orbital analysts use several data sources to perform their conjunction analysis.</p>
+              <p>These include:</p>
+              <p>
+                <ul class="govuk-list govuk-list--bullet">
+              <li>Satellite operator-uploaded ephemeris data</li>
+              <li>SpaceTrack SATCAT and CDMs</li>
+              <li>ESA-DISCOS (European Space Agency's Database and Information System Characterising Objects in Space)</li></ul>
+              </p>
+<p>All other event data is from Space-Track.</p>
+
+
+
+              </div>
+            <div class="govuk-grid-row">
+
+            </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
