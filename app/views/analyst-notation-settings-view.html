@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Settings
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="analyst-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="analyst-notation-settings-view">Notation display settings</a>
+    </li>
+      </ol>
+      </div>
+      <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+<h2 class="govuk-heading-l">Your notation display settings</h2>
+
+<p> Your default notation display is: <b> scientific notation</b>.
+
+
+<form class="form" action="/analyst-notation-settings-edit" method="post">
+
+
+          <button class="govuk-button" data-module="govuk-button">
+                Edit your notation display settings
+            </button>
+              </form>
+
+
+       </div>
+    <br>
+<p></p>
+
+
+  </div>
+
+
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
