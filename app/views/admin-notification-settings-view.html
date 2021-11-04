@@ -5,15 +5,14 @@ Settings
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-width-container">
   <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="operator-account">Account</a>
+      <a class="govuk-breadcrumbs__link" href="admin-account">Account</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="operator-notification-settings-view">Notification settings</a>
+      <a class="govuk-breadcrumbs__link" href="admin-notification-settings-view">Notification settings</a>
     </li>
       </ol>
       </div>
@@ -26,7 +25,7 @@ Settings
           <p>Your current notification settings are displayed below.</p>
 
   <div class="govuk-form-group">
-<form class="form" action="/operator-notification-settings-edit" method="post">
+<form class="form" action="/admin-notification-settings-edit" method="post">
 
         <table class="govuk-table" style="width:100%">
             <thead class="govuk-table__head">
@@ -99,7 +98,7 @@ Settings
               </tr>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <td scope="row" class="govuk-table__cell">New UKSA conjuction event analysis uploaded</td>
+                  <td scope="row" class="govuk-table__cell">New ephemeris data uploaded</td>
                   <td class="govuk-table__cell">
                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
@@ -117,7 +116,30 @@ Settings
                     </div>
                   </td>
                 </tr>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td scope="row" class="govuk-table__cell">New UKSA analysis uploaded</td>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                          <label class="govuk-label govuk-checkboxes__label" for="contact">
+                          </label>
+                        </div>
+                    <td class="govuk-table__cell">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                          <label class="govuk-label govuk-checkboxes__label" for="contact">
+                          </label>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
 
+                        </div>
+                      </td>
+                    </tr>
                 </tbody>
           </table>
 

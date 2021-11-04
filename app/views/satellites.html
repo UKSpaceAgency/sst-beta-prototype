@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Registered satellites
+{% endblock %}
+
+{% block content %}
+
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Monitor my satellites</h1>
+
+        <p class="govuk-body-m">Select whose satellite page you would like to visit:</p>
+
+          <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+            <tbody class="govuk-table__body">
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/operator-satellite-list">Operator user</a></td>
+              </tr>
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/analyst-satellite-list">Orbital analyst user</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/admin-satellite-list">Administrator</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <p>   </p>
+      </div>
+      </div>
+  </main>
+</div>
+
+
+{% endblock %}

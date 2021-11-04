@@ -10,10 +10,10 @@ Account settings
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/analyst-account">Account</a>
+        <a class="govuk-breadcrumbs__link" href="/admin-account">Account</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/analyst-account-information">User information</a>
+        <a class="govuk-breadcrumbs__link" href="/admin-account-information">Your account details</a>
       </li>
     </ol>
   </div>
@@ -22,10 +22,7 @@ Account settings
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">User information</h1>
-
-        <fieldset class="govuk-fieldset">
-
+        <h1 class="govuk-heading-xl">Your account details</h1>
 
 
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -35,11 +32,11 @@ Account settings
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">User type</dt>
-                <dd class="govuk-summary-list__value">Standard user</dd>
+                <dd class="govuk-summary-list__value">Administrator</dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Email address</dt>
-                <dd class="govuk-summary-list__value">analyst@uksa.co.uk</dd>
+                <dd class="govuk-summary-list__value">example@uksa.co.uk</dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Phone number</dt>
@@ -47,7 +44,13 @@ Account settings
               </div>
             </dl>
 
-            <p class="govuk-body-m">Contact your organisation administrator if any of these details are incorrect.</p>
+            <form class="form" action="/admin-account-edit" method="post">
+
+
+                      <button class="govuk-button" data-module="govuk-button">
+                            Edit user information
+                        </button>
+                          </form>
 
           </fieldset>
 
