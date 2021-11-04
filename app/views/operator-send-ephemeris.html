@@ -5,20 +5,35 @@ AAA0001 Upload ephemeris data
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-  <ol class="govuk-breadcrumbs__list">
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="warning-1">Event AAA0001</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/operator-send-ephemeris">Upload your ephemeris data</a>
-    </li>
-    </ol>
+<div class="moj-primary-navigation">
+
+  <div class="moj-primary-navigation__container">
+
+    <div class="moj-primary-navigation__nav">
+
+      <nav class="moj-primary-navigation" aria-label="Primary navigation">
+
+        <ul class="moj-primary-navigation__list">
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" aria-current="page" href="operator-homepage">Home</a>
+          </li>
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="operator-account">Settings</a>
+          </li>
+
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+
 </div>
+<a href="/operator-warning-1" class="govuk-back-link">Back</a>
+<div class="govuk-width-container">
+
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
