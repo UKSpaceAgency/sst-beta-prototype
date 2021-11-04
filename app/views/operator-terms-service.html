@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Setup menu
+{% endblock %}
+
+{% block content %}
+
+
+  <form class="form" action="/operator-data-privacy" method="post">
+    <h1 class="govuk-heading-xl">
+      Terms of Service
+    </h1>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              I have read and agreed to the Terms of Service
+            </label>
+
+            <br>
+            <br>
+<br>
+      <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+        </button>
+          </form>
+
+
+    </ol>
+  </div>
+</div>
+
+{% endblock %}
