@@ -6,24 +6,17 @@ Account settings
 
 {% block content %}
 
-<div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/admin-account">Account</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/admin-account-information">Your account details</a>
-      </li>
-    </ol>
-  </div>
-
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
+        <form class="form" action="/admin-initial-notification-settings" method="post">
 
-        <h1 class="govuk-heading-xl">Your account details</h1>
+        <h1 class="govuk-heading-xl">Your account</h1>
 
+        <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+        </legend>
 
             <dl class="govuk-summary-list govuk-!-margin-bottom-9">
               <div class="govuk-summary-list__row">
@@ -32,11 +25,11 @@ Account settings
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">User type</dt>
-                <dd class="govuk-summary-list__value">Administrator</dd>
+                <dd class="govuk-summary-list__value">Standard user</dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Email address</dt>
-                <dd class="govuk-summary-list__value">example@uksa.co.uk</dd>
+                <dd class="govuk-summary-list__value">example.admin@UKSA.co.uk</dd>
               </div>
               <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Phone number</dt>
@@ -44,11 +37,12 @@ Account settings
               </div>
             </dl>
 
-            <form class="form" action="/admin-account-edit" method="post">
+            <p class="govuk-body-m">Contact your organisation administrator if any of these details are incorrect.</p>
 
-
-                    
-
+            <button class="govuk-button" data-module="govuk-button">
+                  Save and continue
+              </button>
+                </form>
           </fieldset>
 
 

@@ -6,27 +6,13 @@ Settings
 
 {% block content %}
 <div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="operator-account">Account</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="operator-threshold-settings-view">Event threshold settings</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="operator-threshold-settings-edit">Edit default event threshold settings</a>
-      </li>
-        </ol>
-        </div>
 
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/operator-account" method="post">
+        <form class="form" action="/admin-initial-notation-settings-edit" method="post">
 
-          <h1 class="govuk-heading-xl">Edit your event notification threshold settings</h1>
-
+          <h1 class="govuk-heading-xl">Event notification threshold settings</h1>
 
 
          <table class="govuk-table" style="width:100%">
@@ -61,11 +47,6 @@ Settings
              </tr>
            </tbody>
          </table>
-
-
-
-
-
 
             <button class="govuk-button" data-module="govuk-button">
                   Save and continue
