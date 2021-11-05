@@ -9,30 +9,29 @@ Account settings
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/operator-initial-threshold-settings" method="post">
-
-        <h1 class="govuk-heading-xl">Notification settings</h1>
-
-        <p>You must set up your account notifications before continuing.</p>
 
 
+        <h1 class="govuk-heading-xl">Set your notification settings</h1>
+        <p>Choose which notifications you wish to receive. Uncheck boxes where you do not wish to receive notifications.<p>
 
-        <p>Select the boxes for the type of notification you wish to receive. Leave boxes blank for those you do not wish to receive notifications for.</p>
-<p>You must recieve notifications for when new UKSA conjunction event analysis is uploaded.</p>
-        <p>You will be able to set your event notification thresholds on the next page.</p>
+<p>You must recieve notifications for when new UKSA analysis is uploaded.</p>
+
+<p>You will set your notification thresholds on the next page.
+
+</p>
 
 
       <table class="govuk-table" style="width:100%">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header" style="width:50%"></th>
-              <th scope="col" class="govuk-table__header" style="width:25%">Email notifications</th>
-              <th scope="col" class="govuk-table__header" style="width:25%">Text notifications</th>
+              <th scope="col" class="govuk-table__header" style="width:25%">Email</th>
+              <th scope="col" class="govuk-table__header" style="width:25%">Text</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <td scope="row" class="govuk-table__cell">New conjunction event crosses thresholds</td>
+              <td scope="row" class="govuk-table__cell">New conjunction event crosses your thresholds</td>
               <td class="govuk-table__cell">
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
@@ -52,7 +51,7 @@ Account settings
               </td>
             </tr>
             <tr class="govuk-table__row">
-              <td scope="row" class="govuk-table__cell">Updated conjunction event crosses thresholds</td>
+              <td scope="row" class="govuk-table__cell">Updated event crosses your thresholds</td>
               <td class="govuk-table__cell">
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
@@ -72,7 +71,7 @@ Account settings
               </td>
             </tr>
             <tr class="govuk-table__row">
-              <td scope="row" class="govuk-table__cell">Updated conjunction event no longer crosses thresholds</td>
+              <td scope="row" class="govuk-table__cell">Updated  event no longer crosses your thresholds</td>
               <td class="govuk-table__cell">
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
@@ -91,27 +90,30 @@ Account settings
                 </div>
               </td>
             </tr>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__cell">New UKSA conjuction event analysis uploaded</td>
-                <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
-                      <label class="govuk-label govuk-checkboxes__label" for="contact">
-                      </label>
-                    </div>
-                <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
-                      <label class="govuk-label govuk-checkboxes__label" for="contact">
-                      </label>
-                    </div>
-                  </div>
-                </td>
-              </tr>
             
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">New UKSA event analysis uploaded</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                        <label class="govuk-label govuk-checkboxes__label" for="contact">
+                        </label>
+                      </div>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                        <label class="govuk-label govuk-checkboxes__label" for="contact">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                      </div>
+                    </td>
+                  </tr>
               </tbody>
         </table>
       </fieldset>
@@ -119,16 +121,12 @@ Account settings
         <p></p>
         <p></p>
 
-
+<form class="form" action="/operator-initial-threshold-settings" method="post">
         <button class="govuk-button" data-module="govuk-button">
               Save and continue
           </button>
             </form>
-                </form>
-  </div>
 
-
-</div>
   </main>
 </div>
 
