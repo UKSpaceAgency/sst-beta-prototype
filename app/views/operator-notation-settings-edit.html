@@ -14,6 +14,9 @@ Settings
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="operator-notation-settings-view">Notation display settings</a>
     </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-notation-settings-view">Edit notation display settings</a>
+    </li>
       </ol>
       </div>
       <main class="govuk-main-wrapper">
@@ -22,53 +25,56 @@ Settings
 
 
 
-          <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        How do you want to display numbers?
-      </h1>
-    </legend>
-    <div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-          Scientific notation (eg. 5 x 10^-5)
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-          Decimals (eg. 0.00005)
-        </label>
-      </div>
+        <div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Edit your notation  settings
 
-      </div>
+    </h1>
+  </legend>
+  <br>
+  <p>Display numbers as:</p>
+  <div class="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        Scientific notation (eg. 5 * 10^<sup>-5</sup>)
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        Decimal notation (eg. 0.00005)
+      </label>
     </div>
 
-  </fieldset>
-</div>
-
-
-<form class="form" action="/operator-account" method="post">
-
-
-          <button class="govuk-button" data-module="govuk-button">
-                Save and continue
-            </button>
-              </form>
-
-
-       </div>
-    <br>
-<p></p>
-
-
+    </div>
   </div>
 
 
 </div>
-  </main>
+
+
+<form class="form" action="/operator-notation-settings-view" method="post">
+
+
+        <button class="govuk-button" data-module="govuk-button">
+              Save and continue
+          </button>
+            </form>
+
+
+     </div>
+  <br>
+<p></p>
+
+
+</div>
+
+
+</div>
+</main>
 </div>
 
 {% endblock %}
