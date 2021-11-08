@@ -19,30 +19,108 @@ Settings
     </li>
       </ol>
       </div>
+<br>
+
+      <h1 class="govuk-heading-l">Edit your notification settings</h1>
+      <p>Choose which notifications you wish to receive. Uncheck boxes where you do not wish to receive notifications.<p>
+
+    <p>You must recieve notifications for when new UKSA analysis is uploaded.</p>
+
+<p>Return to your account page to edit your notification thresholds.</p>
 
 
-  <main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <form class="form" action="/operator-account" method="post">
+    <table class="govuk-table" style="width:100%">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" style="width:50%"></th>
+            <th scope="col" class="govuk-table__header" style="width:25%">Email</th>
+            <th scope="col" class="govuk-table__header" style="width:25%">Text</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">New conjunction event crosses your thresholds</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
 
-          <h1 class="govuk-heading-l">Edit your notification settings</h1>
-          <p>You must recieve notifications for UKSA analysis uploads.</p>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Updated event crosses your thresholds</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
 
-  <div class="govuk-form-group govuk-form-group">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Updated  event no longer crosses your thresholds</td>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
 
-
-        <table class="govuk-table" style="width:100%">
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header" style="width:50%"></th>
-                <th scope="col" class="govuk-table__header" style="width:25%">Email notifications</th>
-                <th scope="col" class="govuk-table__header" style="width:25%">Text notifications</th>
-              </tr>
-            </thead>
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">New ephemeris data uploaded</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+                </div>
+              </td>
+            </tr>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__cell">New conjunction event crosses thresholds</td>
+                <td scope="row" class="govuk-table__cell">New UKSA event analysis uploaded</td>
                 <td class="govuk-table__cell">
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
@@ -50,7 +128,6 @@ Settings
                       <label class="govuk-label govuk-checkboxes__label" for="contact">
                       </label>
                     </div>
-
                 <td class="govuk-table__cell">
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
@@ -61,74 +138,16 @@ Settings
                   </div>
                 </td>
               </tr>
-              <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__cell">Updated conjunction event crosses thresholds</td>
-                <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
-                      <label class="govuk-label govuk-checkboxes__label" for="contact">
-                      </label>
-                    </div>
-
-                <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
-                      <label class="govuk-label govuk-checkboxes__label" for="contact">
-                      </label>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__cell">Updated conjunction event no longer crosses thresholds</td>
-                <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
-                      <label class="govuk-label govuk-checkboxes__label" for="contact">
-                      </label>
-                    </div>
-
-                <td class="govuk-table__cell">
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
-                      <label class="govuk-label govuk-checkboxes__label" for="contact">
-                      </label>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <td scope="row" class="govuk-table__cell">New UKSA conjuction event analysis uploaded</td>
-                  <td class="govuk-table__cell">
-                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact" checked=unchecked>
-                        <label class="govuk-label govuk-checkboxes__label" for="contact">
-                        </label>
-                      </div>
-                  <td class="govuk-table__cell">
-                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
-                        <label class="govuk-label govuk-checkboxes__label" for="contact">
-                        </label>
-                      </div>
                     </div>
                   </td>
                 </tr>
+            </tbody>
+      </table>
+    </fieldset>
+    </div>
+      <p></p>
+      <p></p>
 
-
-                </tbody>
-          </table>
-
-       </div>
-    <br>
-<p></p>
 
           <button class="govuk-button" data-module="govuk-button">
                 Save and continue
