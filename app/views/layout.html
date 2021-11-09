@@ -42,23 +42,25 @@
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
   {{ govukHeader({
-    homepageUrl: "#",
     serviceName: "Monitor my satellites",
     serviceUrl: "#",
     navigation: [
-      {
-        href: "/events",
-        text: "Events",
-        active: true
-      },
-      {
-        href: "/satellites",
-        text: "Satellites"
-      },
-      {
-        href: "/account",
-        text: "Account"
-      }]
+    {
+      href: "/events",
+      text: "Events",
+      active: true
+    },
+    {
+      href: "/satellites",
+      text: "Satellites"
+    },
+    {
+      href: "/account",
+      text: "Account"
+    }]
+
+  
+
 
   }) }}
 {% endblock %}
