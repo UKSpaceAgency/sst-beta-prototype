@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Setup menu
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-account">Account</a>
+    </li>
+
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/operator-account-data-privacy">Data privacy and security</a>
+    </li>
+    </ol>
+</div>
+<br>
+  <form class="form" action="/operator-account" method="post">
+    <h1 class="govuk-heading-xl">
+      Data privacy and security
+    </h1>
+    <p>WE ARE GDR COMPLIANT</P>
+
+
+
+      <button class="govuk-button" data-module="govuk-button">
+            Retun to account page
+        </button>
+          </form>
+
+
+    </ol>
+  </div>
+</div>
+
+{% endblock %}
