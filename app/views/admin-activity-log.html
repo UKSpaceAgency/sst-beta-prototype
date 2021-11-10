@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Registered satellites
+{% endblock %}
+
+{% block content %}
+
+<div class="moj-primary-navigation">
+
+  <div class="moj-primary-navigation__container">
+
+    <div class="moj-primary-navigation__nav">
+
+
+
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+
+</div>
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="admin-account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="admin-activity-log">All account activity</a>
+    </li>
+    </ol>
+<br>
+        <h1 class="govuk-heading-xl">All account activity</h1>
+
+
+          <p></p>
+          <div class="moj-search">
+          <form action="#" method="post">
+          <div class="govuk-form-group">
+            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+              Find account activity:
+            </label>
+
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by date" aria-describedby="search-hint">
+          </div>
+          <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+            Search
+          </button>
+          </form>
+          </div>
+              <br>
+          <nav class="moj-pagination" id="pagination-label">
+
+
+          <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 20%">Date</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">User name</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">User type</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">User organisation</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Activity</th>
+
+              </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">10/11/2021</td>
+                <td class="govuk-table__cell">FirstName LastName</td>
+                <td class="govuk-table__cell">Standard operator</td>
+                <td class="govuk-table__cell">Satellite company</td>
+                <td class="govuk-table__cell"><a href="">Ephemeris uploaded</a></td>
+
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">09/11/2021</td>
+                <td class="govuk-table__cell">FirstName LastName</td>
+                <td class="govuk-table__cell">Standard orbital analyst</td>
+                <td class="govuk-table__cell">UKSA</td>
+                <td class="govuk-table__cell"><a href="">Ephemeris downloaded</a></td>
+
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">09/11/2021</td>
+                <td class="govuk-table__cell">FirstName LastName</td>
+                <td class="govuk-table__cell">Administrator operator</td>
+                <td class="govuk-table__cell">Satellite company</td>
+                <td class="govuk-table__cell"><a href="">New user added</a></td>
+
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">10/11/2021</td>
+                <td class="govuk-table__cell">FirstName LastName</td>
+                <td class="govuk-table__cell">Standard orbital analyst</td>
+                <td class="govuk-table__cell">UKSA</td>
+                <td class="govuk-table__cell"><a href="">Event anlysis uploaded</a></td>
+
+              </tr>
+
+
+              </tr>
+            </tbody>
+          </table>
+          <p>   </p>
+      </div>
+      </div>
+  </main>
+</div>
+
+
+{% endblock %}
