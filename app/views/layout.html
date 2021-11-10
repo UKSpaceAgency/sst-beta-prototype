@@ -41,7 +41,15 @@
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
   {{ govukHeader({
+
     serviceName: "Monitor my satellites",
     serviceUrl: "#",
     navigation: [
@@ -59,7 +67,7 @@
       text: "Account"
     }]
 
-  
+
 
 
   }) }}
