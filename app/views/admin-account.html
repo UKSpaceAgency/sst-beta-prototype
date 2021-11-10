@@ -1,47 +1,123 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Account
+Setup menu
 {% endblock %}
 
 {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      <form class="form" action="/admin-homepage" method="post">
+      Your account
+
+    </h1>
+  <form class="form" action="/admin-initial-setup" method="post">
 
 
 
-    <main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">Account settings</h1>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/admin-account-information" class="govuk-link--no-visited-state">Account details</a></li>
-          <li><a href="/admin-account-info" class="govuk-link--no-visited-state">All organisations' information</a></li>
-        <li><a href="/admin-notification-settings-view" class="govuk-link--no-visited-state">Notification settings</a></li>
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span>View the Terms of Service
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/admin-ts-and-cs" aria-describedby="terms-of-service">
+                Terms of Service
+              </a>
+            </span>
 
-        <li><a href="/admin-threshold-settings-view" class="govuk-link--no-visited-state">Threshold settings</a></li>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="admin-account-data-privacy" aria-describedby="data-privacy">
+                Data privacy and security
+              </a>
+            </span>
 
-        <li><a href="/admin-notation-settings-view" class="govuk-link--no-visited-state">Notation settings</a></li>
+          </li>
+        </ul>
+      </li>
 
-      </ul>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span> View your account details
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/admin-account-information">Your contact and organisation information</a>
+            </span>
 
-      <form class="form" action="#" method="post">
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/admin-account-info">All organisations' information</a>
+            </span>
+
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">3. </span>View and edit your account settings
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="admin-notification-settings-view" aria-describedby="notification-settings">
+                Notification settings
+              </a>
+            </span>
+
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/admin-threshold-settings-view" aria-describedby="event-thresholds">
+                Event notification thresholds settings
+              </a>
+            </span>
+
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/admin-notation-settings-view" aria-describedby="event-thresholds">
+                Notation settings
+              </a>
+            </span>
+
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">4. </span>View your account activity
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/admin-activity-log">Account activity log</a>
+            </span>
+
+          </li>
+        </ul>
+      </li>
 
 
-                <button class="govuk-button" data-module="govuk-button">
-                      Sign out
-                  </button>
-                    </form>
 
-        <p></p>
-      </div>
-      </div>
-  </main>
+      <button class="govuk-button" data-module="govuk-button">
+            Return to events page
+        </button>
+          </form>
+
+
+    </ol>
+  </div>
 </div>
-
-<script src="<sst-alpha>/<application>.js"></script>
-<script>
-window.MOJFrontend.initAll()
-</script>
 
 {% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Account
+{% endblock %}
+
+{% block content %}
+
+
+
+
+    <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Account settings</h1>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/admin-account-information" class="govuk-link--no-visited-state">Account details</a></li>
+          <li><a href="/admin-account-info" class="govuk-link--no-visited-state">All organisations' information</a></li>
+        <li><a href="/admin-notification-settings-view" class="govuk-link--no-visited-state">Notification settings</a></li>
+
+        <li><a href="/admin-threshold-settings-view" class="govuk-link--no-visited-state">Threshold settings</a></li>
+
+        <li><a href="/admin-notation-settings-view" class="govuk-link--no-visited-state">Notation settings</a></li>
+
+      </ul>
+
+      <form class="form" action="#" method="post">
+
+
+                <button class="govuk-button" data-module="govuk-button">
+                      Sign out
+                  </button>
+                    </form>
+
+        <p></p>
+      </div>
+      </div>
+  </main>
+</div>
+
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
