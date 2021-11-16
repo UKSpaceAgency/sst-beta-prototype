@@ -32,25 +32,29 @@ Upcoming conjunction events
         </button>
         </form>
         </div>
-        <nav class="moj-pagination" id="pagination-label">
+    <br>
 
-      <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+      <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+        <col>
+          <colgroup span="2"></colgroup>
+          <colgroup span="2"></colgroup>
+          <colgroup span="2"></colgroup>
+          <colgroup span="2"></colgroup>
 
-      <p class="moj-pagination__results">Showing <b>1</b> to <b>7</b> of <b>7</b> results</p>
-      </nav>
-        <! main table for conjunction warnings>
-        <p></p>
-
-        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"></td>
+            <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
+            <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"></td>
+            <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision (%)</b></td>
+</tr>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending" span="1" style="width: 13%";>Event ID</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Time of closest approach (UTC)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Primary object (UK object)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Secondary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Altitude (above ground level) (km)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Primary</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Secondary</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Altitude (km above ground level)</th>
               <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Total miss distance (m)</th>
-              <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Probability of collision (UKSA, %)</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric govuk-body-s" aria-sort="none" span="1" style="width: 8%";>UKSA</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
