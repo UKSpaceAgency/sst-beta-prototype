@@ -1,30 +1,17 @@
-{% extends "layout.html" %}
+{% extends "noheader-layout.html" %}
 
 {% block pageTitle %}
-Login
+Sign-in to Monitor my satellites
 {% endblock %}
-
-
 
 {% block content %}
 
 <div class="govuk-width-container">
-
-
-</div>
-
-
-<div class="govuk-grid-row">
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-    <form class="form" action="/email-sent" method="post">
-    <form class="form" action="/email-sent" method="post">
-
-        <div class="govuk-form-group">
-
-
-
-        </div>
+      <h1 class="govuk-heading-xl">Signing in to Monitor my satellites</h1>
+        <p class="govuk-body-l">You have selected a link sent to <b>example@user.com</b></p>
+        <p class="govuk-body-l">Select the button below to proceed to Monitor my satellites and to start your session.</p>
 
         <a href="/MmS-start" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
           Proceed to my homepage
@@ -32,6 +19,26 @@ Login
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
           </svg>
         </a>
+
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with signing in
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            If the <b>button does not work</b>, your magic link may have expired. Re-enter your email address at the sign-in page.
+            If you continue to have problems, email us at monitormysatellites@ukspaceagency.gov.uk
+          </div>
+          <div class="govuk-details__text">
+            If the <b>email stated is not you</b>, close this window and report this to monitormysatellites@ukspaceagency.gov.uk
+          </div>
+        </details>
+
+    </div>
+  </div>
+</div>
 
 
 
