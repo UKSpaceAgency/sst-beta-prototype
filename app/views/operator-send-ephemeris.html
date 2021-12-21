@@ -26,23 +26,38 @@ AAA0001 Upload ephemeris data
       <div class="govuk-grid-column-full">
 
     <h1 class="govuk-heading-xl">
-    Upload your ephemeris data
+    Uploading your ephemeris data
     </h1>
     <form class="form" action="/operator-warning-1" method="post">
 
-    <p> If you would like updated UKSA analysis on this event using your ephemeris data, attach a file below. This data will not be shared outside of the UKSA.</p>
-    <p> </p>
-    <p> Upload a CCSDS .oem file. The file must not exceed 20MB.
+    <p>If you would like updated UKSA analysis on this event using your ephemeris data, attach a file below.</p>
+    <p>Upload a CCSDS .oem file. The file must not exceed 20MB.
     <div class="govuk-form-group">
       <label class="govuk-label" for="file-upload-1">
         <b>Upload .oem file:</b>
       </label>
       <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     </div>
-  
+
     <button class="govuk-button" data-module="govuk-button">
       Upload
     </button>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          More information about sharing your ephemerides with the UKSA
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Additional analysis will be provided by UKSA orbital analysts only on events that UKSA analysis determines breach a probability of collision ≥ 10-3
+      </div>
+      <div class="govuk-details__text">
+        View the <a href="#">terms and conditions</a> for data handling information
+      </div>
+
+
+    </details>
 
     </div>
 
