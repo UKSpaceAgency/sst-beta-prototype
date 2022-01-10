@@ -111,19 +111,21 @@ Event AAA0001
   <ul class="govuk-list govuk-list--bullet">
 <li>
 US SATCAT (United States’ satellite catalogue), ESA DISCOS (the European Space Agency’s database and information system characterising objects in space),UCS (Union of Concerned Scientists’ database) and other available data sources for object information.</li>
-<li>Probability of Collision (POC)</li>
-<li>Miss-distances</li>
-<li>Time of analysis update</li>
-<li>Altitude, longitude and latitude at TCA</li>
-<li>Estimated number of fragments generated if collision occurs</li>
-<li>Relative velocity at TCA</li>
-<li>Object information</li>
-<li>Event history</li>
-<li>Visualisations of the evolution of the probability of collision</li></ul>
+<li>TLE (two line element set) and SP Ephemeris data from Space-Track, ephemeris data from Space-Track or directly from operators when available.</li>
+<li>Observation data on objects from either SSN observations, procured  UK sensor data, or other data sources.</li>
+<li>CDMs, UK sensor data and orbital analysts for event parameters.</li></ul>
 </p>
 
 <h1 class="govuk-heading-l" id="sensor-data">UK sensor data</h1>
+<p>Sensor data is taken from both national Her Majesty's Government (HMG) sensors and commercial sensor providers.</p>
+<p>At LEO (Low Earth orbit), both optical and radar sensor data is available from the SSN, the Science and Technology Facilities Council (STFC), LeoLabs, NORSS (Northern Space and Security), Fylingdales and Natural Environment Research Council (NERC). 
+</p>
+<p>At MEO (Medium Earth orbit), HEO (Higher Earth orbit), GTO (geostationary transfer orbit) and GEO (geosynchronous equatorial orbit), optical sensor data is available from the SSN, STFC, Numerica or NERC.</p>
+<p>Sensors are available for event tasking on secondary objects.</p>
+
 <h1 class="govuk-heading-l" id="ephemeris-data">Sharing your Ephemeris with the UKSA</h1>
+<p>In order for us to provide the most up-to-date and accurate analysis, you will be able to send your ephemeris data to the UKSA orbital analyst team for event analysis. However, this functionality is currently in development and not yet live. </p>
+<p>Ephemeris must be submitted via the event page in an CCSDS OEM file format ideally with covariance and spanning beyond the TCA of a conjunction. The UKSA orbital analyst team will then use your ephemeris data in their analyses for all relevant events. The file size should not exceed 20 MB. If you give your permission, the UKSA analysts can also access the ephemeris files you share with Space-Track. </p>
 <h1 class="govuk-heading-l" id="data-storage">Data storage</h1>
 <p>Ephemeris files will be stored for 30 days, unless a relevant event involving the object occurs. </p>
 <p>Event information including all parameters, analysis and event history will be stored indefinitely.</p>
