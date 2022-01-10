@@ -15,13 +15,13 @@ Event AAA0001
       <a class="govuk-breadcrumbs__link" href="operator-warning-1">Event AAA0001</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/operator-conjunction-analysis">Conjunction analysis process</a>
+      <a class="govuk-breadcrumbs__link" href="/operator-conjunction-analysis">Conjunction analysis process and data sources</a>
     </li>
     </ol>
 </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">Conjunction event analysis</h1>
+        <h1 class="govuk-heading-xl">Conjunction event analysis and data sources</h1>
 
     </div>
         <div class="govuk-grid-column-one-quarter">
@@ -31,14 +31,26 @@ Event AAA0001
             <ul class="moj-side-navigation__list">
 
               <li class="moj-side-navigation__item">
-                <a href="#objects">UKSA method</a>
+                <a href="#conjunction-event-analysis">UKSA conjunction event analysis process</a>
               </li>
+
 
 
               <li class="moj-side-navigation__item">
-                <a href="#missdistance">Space-Track method</a>
+                <a href="#space-track-sources">Space-Track data sources</a>
               </li>
-
+              <li class="moj-side-navigation__item">
+                <a href="#uksa-analysis-sources">UKSA orbital analysis data sources</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#sensor-data">UK sensor data sources</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#ephemeris-data">Ephemeris data</a>
+              </li>
+              <li class="moj-side-navigation__item">
+                <a href="#data-storage">Data storage</a>
+              </li>
 
 
 
@@ -50,22 +62,74 @@ Event AAA0001
       <div class="govuk-grid-column-three-quarters">
 
 
-              <h1 class="govuk-heading-l" id="objects">UKSA method</h1>
+              <h1 class="govuk-heading-l" id="conjunction-event-analysis">UKSA conjunction event analysis process</h1>
 
-<p>Additional conjunction event analysis will be provided by UKSA orbital analysts only on events with a probability of collision ≥ 10^3.</p>
-<p>UKSA orbital analysts use several data sources to perform their conjunction analysis.</p>
-<p>These include:</p>
+<p>A conjunction event occurs when two objects in space make a close approach. Monitor my satellites provides data on conjunction events identified by the 18th Space Control Squadron (18SpCS) and distributed via Space-Track (space-track.org) and additional event analysis from the UKSA.
+</p>
+<p>Additional analysis is currently provided by UKSA Orbital Analysts on events that UKSA analysis determines breach a probability of collision of ≥ 10-3. In the future, the UKSA may review this PoC threshold. Analysis of events in GEO (geosynchronous equatorial orbit) may move to be based on miss-distance in the near future.
+</p>
+<p>All updates to an event are included in the event page within ‘event history’ on this interface.</p>
+<p>UKSA orbital analysis ingests Conjunction Data Messages (CDMs), refines them and adds extra analysis using additional data and tools available to the UKSA. Analysts use well-established, validated and tested methods and tools. The Foster 2D 1992 method is currently used to calculate the probability of a collision.</p>
+<p>There are three components of the analytical process:</p>
+
 <p>
   <ul class="govuk-list govuk-list--bullet">
-<li>Satellite operator-uploaded ephemeris data</li>
-<li>SpaceTrack SATCAT and CDMs</li>
-<li>ESA-DISCOS</li></ul>
+<li>Conjunction assessments from suitably qualified and experienced persons (UKSA Orbital Analysts).</li>
+<li>The use of additional data from the United States Space Surveillance Network (SSN), UKSA procured commercial sensor observations, Met Office Space Weather data, and additional object physical parameters.</li>
+<li>Use of capable data processing tools.</li></ul>
 </p>
-<p>For more information or to contact an analyst about specific UKSA analysis, email orbitalanalysts@ukspaceagency.gov.uk</p>
+<p>The reported parameters of analysis are: :</p>
+<p>
+  <ul class="govuk-list govuk-list--bullet">
+<li>Time of Closest Apporach (TCA)</li>
+<li>Probability of Collision (POC)</li>
+<li>Miss-distances</li>
+<li>Time of analysis update</li>
+<li>Altitude, longitude and latitude at TCA</li>
+<li>Estimated number of fragments generated if collision occurs</li>
+<li>Relative velocity at TCA</li>
+<li>Object information</li>
+<li>Event history</li>
+<li>Visualisations of the evolution of the probability of collision</li></ul>
+</p>
+<p>Data sources for the UKSA conjunction analysis are listed in the section below.
+</p>
 
-                <h1 class="govuk-heading-l" id="missdistance">Space-Track method</h1>
+  <h1 class="govuk-heading-l" id="space-track-sources">Space-Track data sources</h1>
 
+                <p>Space-Track (space-track.org) is the source of all object data shown in Monitor my satellites’ event page. If the data for your satellite is inaccurate, you must contact Space-Track.
+</p>
+<p>Monitor my satellites ingests all CDMs from Space-Track that affect UK satellites (irrelevant of the metrics and probabilities). It is likely that several conjunction data messages (CDMs) from Space-Track will be generated for a single event. However, you can edit your notification thresholds to ensure you only receive notifications about events with probabilities, miss distances and time to events that you are interested in.</p>
+
+<p>Monitor my satellites retrieves CDMs from Space-Track every 8 hours.</p>
+<p>To find out more about Space-Track CDMs and their conjunction analysis, visit www.space-track.org.</p>
               <p>
+<h1 class="govuk-heading-l" id="uksa-analyst-sources">UKSA orbital analysis data sources</h1>
+<p>The UKSA orbital analyst team will use a wider range of sources than just Space-Track for their orbital analysis. These include:
+</p>
+<p>
+  <ul class="govuk-list govuk-list--bullet">
+<li>
+US SATCAT (United States’ satellite catalogue), ESA DISCOS (the European Space Agency’s database and information system characterising objects in space),UCS (Union of Concerned Scientists’ database) and other available data sources for object information.</li>
+<li>Probability of Collision (POC)</li>
+<li>Miss-distances</li>
+<li>Time of analysis update</li>
+<li>Altitude, longitude and latitude at TCA</li>
+<li>Estimated number of fragments generated if collision occurs</li>
+<li>Relative velocity at TCA</li>
+<li>Object information</li>
+<li>Event history</li>
+<li>Visualisations of the evolution of the probability of collision</li></ul>
+</p>
+
+<h1 class="govuk-heading-l" id="sensor-data">UK sensor data</h1>
+<h1 class="govuk-heading-l" id="ephemeris-data">Sharing your Ephemeris with the UKSA</h1>
+<h1 class="govuk-heading-l" id="data-storage">Data storage</h1>
+<p>Ephemeris files will be stored for 30 days, unless a relevant event involving the object occurs. </p>
+<p>Event information including all parameters, analysis and event history will be stored indefinitely.</p>
+<p> User information will be stored indefinitely, or until users request that it is deleted.</p>
+
+<h3 class="govuk-heading-s">These pages will be reviewed every 3 months and updated to align with current processes.</h3>
 
 
               </div>
