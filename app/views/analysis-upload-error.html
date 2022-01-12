@@ -30,11 +30,15 @@ AAA0001 Upload ephemeris data
 
     <p> Upload UKSA conjunction analysis for this event.</p>
     <p> Upload a JSON file with the agreed format.</p>
-    <div class="govuk-form-group">
+
+    <div class="govuk-form-group govuk-form-group--error">
       <label class="govuk-label" for="file-upload-1">
         <b>Upload your analysis:</b>
       </label>
-      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      <p id="file-upload-1-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> The JSON file must be smaller than [x]MB and have the correct format
+      </p>
+      <input class="govuk-file-upload govuk-file-upload--error" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-error">
     </div>
 
     <p>You will receive confirmation when the file has been successfully uploaded.</p>
