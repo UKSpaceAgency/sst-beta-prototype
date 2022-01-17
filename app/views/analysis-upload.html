@@ -30,10 +30,22 @@ Upload UKSA analysis
 
 
     <p> Upload a JSON file. The file must be smaller than 12 MB and should meet the defined UKSA schema for JSON files.</p>
+
+</p>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        <b>Upload your analysis:</b>
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Upload analysis
+    </button>
     <p>The data schema for JSON files is as follows:<p>
       <p>{</p>
         <p>"event_id": "event ID as in Monitor my satelites",</p>
-  <p>"cdm_id":"CDM ID as in Monitor my satellites",</p>
+  <p>"cdm_id": "CDM ID as in Monitor my satellites",</p>
   <p>"collision_probability": ,</p>
   <p>"tca": "yyyy-mm-dd UTC time",</p>
   <p>"miss_distance":</p>
@@ -78,18 +90,6 @@ Upload UKSA analysis
     <p>},  <p>
     <p>"collision_probability_method": "FOSTER-1992"  <p>
   <p>}  <p>
-</p>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="file-upload-1">
-        <b>Upload your analysis:</b>
-      </label>
-      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-    </div>
-
-    <button class="govuk-button" data-module="govuk-button">
-      Upload analysis
-    </button>
-
     </div>
 
   </main>
