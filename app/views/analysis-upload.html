@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-AAA0001 Upload ephemeris data
+Upload UKSA analysis
 {% endblock %}
 
 {% block content %}
@@ -24,20 +24,18 @@ AAA0001 Upload ephemeris data
       <div class="govuk-grid-column-full">
 
     <h1 class="govuk-heading-xl">
-    Upload your analysis for event AAA0001
+    Upload UKSA analysis for event AAA0001
     </h1>
     <form class="form" action="#" method="post">
 
-    <p> Upload UKSA conjunction analysis for this event.</p>
-    <p> Upload a JSON file with the agreed format.</p>
+
+    <p> Upload a JSON file. The file should meet the defined UKSA schema for JSON files. </p>
     <div class="govuk-form-group">
       <label class="govuk-label" for="file-upload-1">
         <b>Upload your analysis:</b>
       </label>
       <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
     </div>
-
-    <p>You will receive confirmation when the file has been successfully uploaded.</p>
 
     <button class="govuk-button" data-module="govuk-button">
       Upload analysis
