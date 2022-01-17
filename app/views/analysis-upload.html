@@ -29,7 +29,56 @@ Upload UKSA analysis
     <form class="form" action="#" method="post">
 
 
-    <p> Upload a JSON file. The file should meet the defined UKSA schema for JSON files. </p>
+    <p> Upload a JSON file. The file must be smaller than 12 MB and should meet the defined UKSA schema for JSON files.</p>
+    <p>The data schema for JSON files is as follows:<p>
+      <p>{</p>
+        <p>"event_id": "event ID as in Monitor my satelites",</p>
+  <p>"cdm_id":"CDM ID as in Monitor my satellites",</p>
+  <p>"collision_probability": ,</p>
+  <p>"tca": "yyyy-mm-dd UTC time",</p>
+  <p>"miss_distance":</p>
+  <p>{</p>
+      <p>"total_value":,</p>
+        <p>"total_uncertainty":,</p>
+        <p>"mean_radial_value":,</p>
+        <p>"mean_radial_uncertainty":,</p>
+        <p>"in_track_value":,</p>
+        <p>"in_track_uncertainty": ,</p>
+        <p>"cross_track_value": ,</p>
+        <p>"cross_track_uncertainty": </p>
+    <p>},</p>
+    <p>"update_time": "yyyy-mm-dd UTC time",</p>
+    <p>"altitude": 695,</p>
+  <p>"latitude": 38.8951,</p>
+    <p>"longitude": -77.0364,</p>
+    <p>"relative_velocity": 5662.6,</p>
+    <p>"estimated_combined_mass": 2200,</p>
+    <p>"estimated_fragments": 1500,</p>
+    <p>"primary_object":</p>
+    <p>{</p>
+      <p>"norad_id": "49101",</p>
+      <p>"data_received": "2021-11-23T08:21:43Z",</p>
+      <p>"data_source": "NORSS",</p>
+      <p>"HBR": 3.0,</p>
+      <p>"observations_number": 21,</p>
+      <p>"observations_available": 23,</p>
+      <p>"observations_timespan": 100,</p>
+      <p>"OD_Quality":1.0 </p>
+    <p>},</p>
+    <p>"secondary_object":</p>
+    <p>{</p>
+      <p>"norad_id": "29816",</p>
+      <p>"data_received": "2021-11-23T08:21:43Z",</p>
+      <p>"data_source": "NORSS",</p>
+      <p>"HBR": 1.0,</p>
+      <p>"observations_number": 20,</p>
+      <p>"observations_available": 22,</p>
+      <p>"observations_timespan": 40,</p>
+      <p>"OD_Quality":1.0</p>
+    <p>},  <p>
+    <p>"collision_probability_method": "FOSTER-1992"  <p>
+  <p>}  <p>
+</p>
     <div class="govuk-form-group">
       <label class="govuk-label" for="file-upload-1">
         <b>Upload your analysis:</b>
