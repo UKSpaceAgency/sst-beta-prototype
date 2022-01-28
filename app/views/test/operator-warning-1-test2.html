@@ -142,6 +142,7 @@ Event AAA0001
                         <tr class="govuk-table__row">
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Data source</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of update (UTC)</th>
+                          <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%"></th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision (%)</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Total miss distance (m)</th>
                           <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Mean radial miss distance (m)</th>
@@ -150,14 +151,10 @@ Event AAA0001
                       </thead>
                       <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s">Space-Track CDM</td>
+                          <td class="govuk-table__cell govuk-body-s">Space-Track CDM ID 12345678</td>
                           <td class="govuk-table__cell govuk-body-s">04/02/21 08:19</td>
-                          <td class="govuk-table__cell govuk-body-s" data-sort-value="1538234">0.1538</td>
-                          <td class="govuk-table__cell govuk-body-s">37</td>
-                          <td class="govuk-table__cell govuk-body-s">15</td>
-                          <td class="govuk-table__cell govuk-body-s">04/02/21 11:51.05</td>
                           <td class="govuk-table__cell govuk-body-s">
-                          <details class="govuk-details" data-module="govuk-details">
+                          <details class="govuk-details govuk-body-s" data-module="govuk-details">
                             <summary class="govuk-details__summary">
                               <span class="govuk-details__summary-text">
                                 Data sources
@@ -179,9 +176,36 @@ Event AAA0001
                           </details>
                           </td>
                           </tr>
+                          <td class="govuk-table__cell govuk-body-s" data-sort-value="1538234">0.1538</td>
+                          <td class="govuk-table__cell govuk-body-s">37</td>
+                          <td class="govuk-table__cell govuk-body-s">15</td>
+                          <td class="govuk-table__cell govuk-body-s">04/02/21 11:51.05</td>
+
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell govuk-body-s">Space-Track CDM</td>
                           <td class="govuk-table__cell govuk-body-s">03/02/21 14:10</td>
+                          <td class="govuk-table__cell govuk-body-s">
+                          <details class="govuk-details govuk-body-s" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                Data sources
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                            <table class="govuk-table">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s"><b>Primary object data source</td>
+                                <td class="govuk-table__cell govuk-body-s">Owner/operator ephemeris</td>
+                                <td class="govuk-table__cell govuk-body-s">Oberservations: N/A</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s"><b>Secondary object data source</td>
+                                <td class="govuk-table__cell govuk-body-s">SSN Observations</td>
+                                <td class="govuk-table__cell govuk-body-s">Oberservations: 80</td>
+                              </table>
+                            </div>
+                          </details>
+                          </td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="1639218">0.1639</td>
                           <td class="govuk-table__cell govuk-body-s">40</td>
                           <td class="govuk-table__cell govuk-body-s">12</td>
@@ -190,6 +214,28 @@ Event AAA0001
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell govuk-body-s">UKSA</td>
                           <td class="govuk-table__cell govuk-body-s">02/02/21 12:00</td>
+                          <td class="govuk-table__cell govuk-body-s">
+                          <details class="govuk-details govuk-body-s" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                Data sources
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                            <table class="govuk-table">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s"><b>Primary object data source</td>
+                                <td class="govuk-table__cell govuk-body-s">Owner/operator ephemeris</td>
+                                <td class="govuk-table__cell govuk-body-s">Oberservations: N/A</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s"><b>Secondary object data source</td>
+                                <td class="govuk-table__cell govuk-body-s">SSN Observations</td>
+                                <td class="govuk-table__cell govuk-body-s">Oberservations: 80</td>
+                              </table>
+                            </div>
+                          </details>
+                          </td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="961032">0.0961</td>
                           <td class="govuk-table__cell govuk-body-s">40</td>
                           <td class="govuk-table__cell govuk-body-s">30</td>
@@ -198,6 +244,28 @@ Event AAA0001
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell govuk-body-s">Space-Track CDM</td>
                           <td class="govuk-table__cell govuk-body-s">01/02/21 03:49</td>
+                          <td class="govuk-table__cell govuk-body-s">
+                          <details class="govuk-details govuk-body-s" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                Data sources
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                            <table class="govuk-table">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s"><b>Primary object data source</td>
+                                <td class="govuk-table__cell govuk-body-s">Owner/operator ephemeris</td>
+                                <td class="govuk-table__cell govuk-body-s">Oberservations: N/A</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s"><b>Secondary object data source</td>
+                                <td class="govuk-table__cell govuk-body-s">SSN Observations</td>
+                                <td class="govuk-table__cell govuk-body-s">Oberservations: 80</td>
+                              </table>
+                            </div>
+                          </details>
+                          </td>
                           <td class="govuk-table__cell govuk-body-s" data-sort-value="1700132">0.1700</td>
                           <td class="govuk-table__cell govuk-body-s">42</td>
                           <td class="govuk-table__cell govuk-body-s">18</td>
