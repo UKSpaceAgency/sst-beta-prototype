@@ -26,14 +26,25 @@ Editing user information
     <h1 class="govuk-heading-xl">Editing user information</h1>
     <p class="govuk-body-m">Update a user's information by editing the details below.</p>
     <p class="govuk-body-m">Your organisaton: <b>[insert their organisaton name]</b></p>
+    <p class="govuk-body-m">User: <b>[insert user name in question]</b></p>
 
-    <form class="form" action="/operator-admin-homepage" method="post">
+
+    <form class="form" action="/operator-homepage" method="post">
     <div class="govuk-form-group">
       <label class="govuk-heading-l" for="email">
         Enter new user email address:
       </label>
       <div id="email-hint" class="govuk-hint">
         Insert the member email address with your organisation's domain
+      </div>
+      <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" value="" autocomplete="email">
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-heading-l" for="email">
+        Enter new user phone number:
+      </label>
+      <div id="email-hint" class="govuk-hint">
       </div>
       <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" value="" autocomplete="email">
     </div>
@@ -46,7 +57,7 @@ Editing user information
             </h1>
           </legend>
           <div id="nationality-hint" class="govuk-hint">
-            What type of access will this user require in the <b>UKSA organisation</b>?
+            What type of access will this user require in your organisation?
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
