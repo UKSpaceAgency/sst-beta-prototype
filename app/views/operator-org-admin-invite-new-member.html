@@ -27,7 +27,7 @@ Inviting a new member
     <p class="govuk-body-m">Invite a new user to join your organisation by entering the details below.</p>
     <p class="govuk-body-m">Your organisaton: <b>[insert their organisaton name]</b></p>
 
-    <form class="form" action="/operator-admin-homepage" method="post">
+    <form class="form" action="/operator-homepage" method="post">
     <div class="govuk-form-group">
       <label class="govuk-heading-l" for="email">
         Enter new user email address:
@@ -37,6 +37,16 @@ Inviting a new member
       </div>
       <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" value="" autocomplete="email">
     </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-heading-l" for="email">
+        Enter new user phone number:
+      </label>
+      <div id="email-hint" class="govuk-hint">
+      </div>
+      <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" value="" autocomplete="email">
+    </div>
+
 
     <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
