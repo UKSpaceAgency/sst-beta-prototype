@@ -15,48 +15,54 @@ Check your answers
       <h2 class="govuk-heading-m">
         Vehicle details
       </h2>
-
+      
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key govuk-!-width-one-third">
-            high-probability
+            Registration number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['high-probability'] }}
+            {{ data['vehicle-registration'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="vehicle-registration">
+            <a class="govuk-link" href="/docs/examples/pass-data/vehicle-registration">
               Change <span class="govuk-visually-hidden">registration number</span>
             </a>
-          </dd>
+          </dd> 
         </div>
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-third">
-          med-probability
+          <dt class="govuk-summary-list__key">
+            Vehicle type
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['med-probability'] }}
+            {{ data['vehicle-type'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="vehicle-registration">
-              Change <span class="govuk-visually-hidden">registration number2</span>
+            <a class="govuk-link" href="/docs/examples/pass-data/vehicle-type">
+              Change <span class="govuk-visually-hidden">vehicle type</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key govuk-!-width-one-third">
-          low-probability
+          <dt class="govuk-summary-list__key">
+            Vehicle features
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['low-probability'] }}
+            <ul class="govuk-list govuk-list--bullet">
+              {% for feature in data['vehicle-features'] %}
+                <li>{{ feature }}</li>
+              {% else %}
+                <li>No features selected</li>
+              {% endfor %}
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="vehicle-registration">
-              Change <span class="govuk-visually-hidden">registration number2</span>
+            <a class="govuk-link" href="/docs/examples/pass-data/vehicle-features">
+              Change <span class="govuk-visually-hidden">vehicle features</span>
             </a>
           </dd>
         </div>
-        </dl>
+      </dl>
 
       <p>
         <a href="/docs/tutorials-and-examples">
