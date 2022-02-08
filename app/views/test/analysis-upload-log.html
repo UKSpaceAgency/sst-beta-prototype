@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Account settings
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Analyst account activity</a>
+    </li>
+      </ol>
+      </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">UKSA analysis uploads</h1>
+
+        <p class="govuk-body-m">View all UKSA analysis uploaded to Monitor my satellites for UK conjunction events.</p>
+
+        <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" aria-sort="ascending" span="1" style="width: 15%">Date</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">User name</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Event ID</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">File uploaded</th>
+              <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 10%"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">10/11/2021 11:11</td>
+              <td class="govuk-table__cell">FirstName LastName</td>
+              <td class="govuk-table__cell"><a href="#">asdf-asdf-asdf</a></td>
+              <td class="govuk-table__cell"><a href="#">1234456341234.json</a></td>
+              <td class="govuk-table__cell"><a href="#">Delete</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">10/11/2021 11:11</td>
+              <td class="govuk-table__cell">FirstName LastName</td>
+              <td class="govuk-table__cell"><a href="#">asdf-asdf-asdf</a></td>
+              <td class="govuk-table__cell"><a href="#">1234456341234.json</a></td>
+              <td class="govuk-table__cell"><a href="#">Delete</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">10/11/2021 11:11</td>
+              <td class="govuk-table__cell">FirstName LastName</td>
+              <td class="govuk-table__cell"><a href="#">asdf-asdf-asdf</a></td>
+              <td class="govuk-table__cell"><a href="#">1234456341234.json</a></td>
+              <td class="govuk-table__cell"><a href="#">Delete</a></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with this table
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body-m">Select the file to view the analysis.</p>
+            <p class="govuk-body-m">Select delete to permanently remove the analysis from the service.</p>
+          </div>
+        </details>
+
+  </div>
+
+
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
