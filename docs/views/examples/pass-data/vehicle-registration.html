@@ -11,71 +11,23 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <form action="/vehicle-check-answers" method="post" class="form">
+    <div class="govuk-grid-column-two-thirds">
 
-      <table class="govuk-table" style="width:100%">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header" style="width:35%">Event status criteria</th>
-            <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--red">High</strong</th>
-            <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--yellow">Med</strong</th>
-            <th scope="col" class="govuk-table__header" style="width:10%"><strong class="govuk-tag govuk-tag--blue">Low</strong</th>
-          </tr>
-        </thead>
-        </table>
-        <div class="govuk-grid-column-one-half">
-          <form action="/vehicle-check-answers" method="post" class="form">
-              <div class="govuk-form-group">
-                  <p>Probability of collision (UKSA or Space-Track) is above:</p>
-              </div>
-            <div class="govuk-form-group">
-              <p>Total miss distance (m) is below:</p>
-            </div>
-            <div class="govuk-form-group">
-              <p>Mean radial miss distance (m) is below:</p>
-            </div>
-            </div>
-            </form>
+      <form action="/docs/examples/pass-data/vehicle-type" method="post" class="form">
 
-      <form action="/vehicle-check-answers" method="post" class="form">
-          <div class="govuk-grid-column-one-half">
-        <div class="govuk-grid-column-one-third">
-          <div class="govuk-form-group">
-            <input class="govuk-input" id="high-probability" name="high-probability" value="{{ data['high-probability'] }}" type="numeric">
-          </div>
         <div class="govuk-form-group">
-          <input class="govuk-input" id="high-probability" name="high-probability" value="{{ data['high-probability'] }}" type="number">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="registration-number">
+              What is your vehicle registration number?
+            </label>
+          </h1>
+          <input class="govuk-input" id="registration-number" name="vehicle-registration" value="{{ data['vehicle-registration'] }}" type="text">
         </div>
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="high-probability" name="high-probability" value="{{ data['high-probability'] }}" type="number">
-        </div>
-        </div>
-        <div class="govuk-grid-column-one-third">
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="med-probability" name="med-probability" value="{{ data['med-probability'] }}" type="number">
-        </div>
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="med-probability" name="med-probability" value="{{ data['med-probability'] }}" type="number">
-        </div>
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="med-probability" name="med-probability" value="{{ data['med-probability'] }}" type="number">
-        </div>
-        </div>
-        <div class="govuk-grid-column-one-third">
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="low-probability" name="low-probability" value="{{ data['low-probability'] }}" type="number">
-        </div>
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="low-probability" name="low-probability" value="{{ data['low-probability'] }}" type="number">
-        </div>
-        <div class="govuk-form-group">
-          <input class="govuk-input" id="low-probability" name="low-probability" value="{{ data['low-probability'] }}" type="number">
-        </div>
-        </div>
+
         <button class="govuk-button" data-module="govuk-button">Continue</button>
+
       </form>
-      </div>
+
     </div>
   </div>
 {% endblock %}
