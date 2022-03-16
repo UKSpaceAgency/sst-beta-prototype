@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Login
+Sign in
 {% endblock %}
 
 
@@ -22,27 +22,25 @@ Login
             {% from "govuk/components/input/macro.njk" import govukInput %}
 
             <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="account-number">
-                What is your email address? <address class="">
+                What is your sign in code? <address class="">
 
                 </address>
               </label>
             </h1>
-{{ govukInput({
-  label: {
-    text: "Enter the email address you are registered with, and we will send you a code to sign in."
-  },
-  id: "email",
-  name: "email",
-  type: "email",
-  autocomplete: "email",
-  spellcheck: false
+<p> Enter the code sent to your email address.</p>
+<p>If our email doesn't arrive within 5 minutes, check your spam and trash folder, or <b><a href="/login">try entering your email again</a></b>.</p>
 
-}) }}
+<div class="govuk-form-group">
+   <label class="govuk-label" for="signin-code">
+     Sign in code
+   </label>
+   <input class="govuk-input govuk-input--width-10" id="signin-code" name="signin-code" type="text" autocomplete="signin-code">
+ </div>
 
 
         </div>
 
-        <a href="/email-known" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        <a href="" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
           Sign in
           <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
