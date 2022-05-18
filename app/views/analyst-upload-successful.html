@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+AAA0001 Upload ephemeris data
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="operator-homepage">Events</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="operator-warning-1">Event AAA001</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="operator-send-ephemeris">Upload</a>
+      </li>
+        </ol>
+        </div>
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Analysis upload complete
+      </h1>
+      <div class="govuk-panel__body">
+        Your analysis for [Event ID] has been successfully uploaded to Monitor my satellites<br>
+      </div>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Return to Event
+    </button>
+
+
+    </div>
+
+  </main>
+{% endblock %}
