@@ -5,49 +5,85 @@ Cookies
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Home</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Account information</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Cookies</a>
-      </li>
-    </ol>
+<main>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
   </div>
-
-<main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      You’ve set your cookie preferences. 
+    </p>
+  </div>
+</div>
         <h1 class="govuk-heading-xl">Cookies information</h1>
-
-          <p class="govuk-body-l">Cookies are small files saved on your device when you visit a website. We use cookies to make this site work and collect information about how you use our service.</p>
-
-        <h2 class="govuk-heading-l">Essential cookies</h2>
-          <p class="govuk-body-l">Essential cookies keep your information secure while you use this service. We do not need to ask permission to use them.</p>
-          <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 30%";>Name</th>
-                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 30%";>Purpose</th>
-                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%";>Expires</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">mms_session</td>
-                <td class="govuk-table__cell">Used to keep you signed in</td>
-                <td class="govuk-table__cell">12 hours</td>
+          <p class="govuk-body" index="0">Cookies are small files saved on your device when you visit a website. We use cookies to make this site work and collect information about how you use our service.</p>
+          <h2 id="essential_cookies" class="govuk-heading-l" index="1">Essential cookies</h2>
+          <p class="govuk-body" index="2">Essential cookies keep your information secure while you use this service. We do not need to ask permission to use them.</p>
+          <table class="govuk-table" index="3">
+            <thead class="govuk-table__head" index="0"
+            <tr class="govuk-table__row" index="0">
+              <th class="govuk-table__header" index="0">Name</th>
+              <th class="govuk-table__header" index="1">Purpose</th>
+              <th class="govuk-table__header" index="2">Expires</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body" index="1">
+            <tr class="govuk-table__row" index="0">
+              <td class="govuk-table__cell" index="0">mms</td>
+              <td class="govuk-table__cell" index="1">Used to keep you signed in</td>
+              <td class="govuk-table__cell" index="2">12 hours</td>
+            </tr>
+          </tbody>
+          </table>
+            <h2 id="analytics_cookies_optional" class="govuk-heading-l" index="4">Analytics cookies (optional)</h2><p class="govuk-body" index="5">With the your permission, we will use Piwik Pro to collect data about how you use the service. This information will enable us to improve the service and assess KPIs. All the data will be stored and processed on Piwik Pro’s servers.</p><table class="govuk-table" index="6"><thead class="govuk-table__head" index="0"><tr class="govuk-table__row" index="0"><th class="govuk-table__header" index="0">Name</th>
+              <th class="govuk-table__header" index="1">Purpose</th>
+              <th class="govuk-table__header" index="2">Expires</th>
+            </tr>
+          </thead><tbody class="govuk-table__body" index="1"><tr class="govuk-table__row" index="0"><td class="govuk-table__cell" index="0">_pk_ses.appID.domainHash</td><td class="govuk-table__cell" index="1">Session activity</td><td class="govuk-table__cell" index="2">30 minutes</td></tr><tr class="govuk-table__row" index="1"><td class="govuk-table__cell" index="0">_pk_id.appID.domainHash</td><td class="govuk-table__cell" index="1">Used to recognise users</td><td class="govuk-table__cell" index="2">13 months</td></tr><tr class="govuk-table__row" index="2"><td class="govuk-table__cell" index="0">app_id</td><td class="govuk-table__cell" index="1">Used to pass a site or app ID between Piwik PRO’s modules</td><td class="govuk-table__cell" index="2">1 year</td></tr><tr class="govuk-table__row" index="3"><td class="govuk-table__cell" index="0">ppms_privacy_appID</td><td class="govuk-table__cell" index="1">Stores visitor’s consent to data collection and usage</td><td class="govuk-table__cell" index="2">1 year</td></tr><tr class="govuk-table__row" index="4"><td class="govuk-table__cell" index="0">_stg_debug</td><td class="govuk-table__cell" index="1">Determines if the Tag Manager’s debugger should be displayed. A cookie is removed after you close the debugger.</td><td class="govuk-table__cell" index="2">14 days</td></tr><tr class="govuk-table__row" index="5"><td class="govuk-table__cell" index="0">stg_traffic_source_priority</td><td class="govuk-table__cell" index="1">Stores the type of traffic source that explains how the visitor reached your website.</td><td class="govuk-table__cell" index="2">30 minutes</td></tr><tr class="govuk-table__row" index="6"><td class="govuk-table__cell" index="0">stg_last_interaction</td><td class="govuk-table__cell" index="1">Determines whether the last visitor’s session is still in progress or a new session has started.</td><td class="govuk-table__cell" index="2">1 year</td></tr><tr class="govuk-table__row" index="7"><td class="govuk-table__cell" index="0">stg_returning_visitor</td><td class="govuk-table__cell" index="1">Determines if the visitor has already been to your website — they are returning visitors.</td><td class="govuk-table__cell" index="2">1 year</td></tr><tr class="govuk-table__row" index="8"><td class="govuk-table__cell" index="0">stg_fired__appID</td><td class="govuk-table__cell" index="1">Determines if the combination of a tag and trigger was fired during the current visitor’s session.</td><td class="govuk-table__cell" index="2">End of session</td></tr><tr class="govuk-table__row" index="9"><td class="govuk-table__cell" index="0">stg_utm_campaign</td><td class="govuk-table__cell" index="1">Stores a name of the campaign that directed the visitor to your website.</td><td class="govuk-table__cell" index="2">End of session</td></tr><tr class="govuk-table__row" index="10"><td class="govuk-table__cell" index="0">stg_pk_campaign</td><td class="govuk-table__cell" index="1">Stores a name of the campaign that directed the visitor to your website.</td><td class="govuk-table__cell" index="2">End of session</td></tr><tr class="govuk-table__row" index="11"><td class="govuk-table__cell" index="0">stg_externalReferrer</td><td class="govuk-table__cell" index="1">Stores an URL of a website that referred a visitor to your website.</td><td class="govuk-table__cell" index="2">End of session</td></tr><tr class="govuk-table__row" index="12"><td class="govuk-table__cell" index="0">_stg_opt_out_simulate</td><td class="govuk-table__cell" index="1">Used to simulate the behavior of the opt-out snippet in the debugger. It turns off all tracking tags in the tested domain.</td><td class="govuk-table__cell" index="2">1 year</td></tr><tr class="govuk-table__row" index="13"><td class="govuk-table__cell" index="0">_stg_optout</td><td class="govuk-table__cell" index="1">Used to turn off all tracking tags in the tested domain.</td><td class="govuk-table__cell" index="2">1 year</td></tr><tr class="govuk-table__row" index="14"><td class="govuk-table__cell" index="0">csrftoken</td><td class="govuk-table__cell" index="1">This cookie is set only for Piwik PRO’s users. It stores a CSRF token for securing Piwik PRO’s forms.</td>
+              <td class="govuk-table__cell" index="2">8 hours</td></tr>
+              <tr class="govuk-table__row" index="15">
+                <td class="govuk-table__cell" index="0">sessionid</td>
+                <td class="govuk-table__cell" index="1">This cookie is set only for Piwik PRO’s users. It stores the session ID of the currently logged-in user.</td>
+                <td class="govuk-table__cell" index="2">8 hours</td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
 
-    </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            Do you want to accept analytics cookies?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="analytics-cookies" name="analytics-cookies" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="analytics-cookies">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="analytics-cookies-2" name="analytics-cookies" type="radio" value="no" checked>
+              <label class="govuk-label govuk-radios__label" for="analytics-cookies-2">
+                No
+              </label>
+            </div>
+          </div>
 
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save cookie settings
+      </button>
+    </form>
+  </div>
+</div>
 </main>
 {% endblock %}
