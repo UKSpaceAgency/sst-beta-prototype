@@ -11,70 +11,80 @@ Upcoming conjunction events
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl">External data sources performance monitoring</h1>
-        <p> Monitor your satellites ingests data from multiple different sources. Performance metrics on all data ingest attempts over the last 7 days are shown below:
+        <p> Monitor your satellites ingests data multiple times a day from several external sources. Monitor your satellites also receives additional data from UKSA orbital analysts for events above certain probability thresholds. Performance metrics on all external data sources received over the last 7 days are shown below:
           <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-half">
+              <div class="govuk-grid-column-one-third">
                 <div style="background-color:#f3f2f1">
-              <h3 class="govuk-heading-s">CDM ingests</h3>
-              <img src="/public/images/CDM_data2.png" alt="Daily CDMs" width="450" height="350">
+              <h2 class="govuk-heading-s">CDM ingests</h2>
+              <p class="govuk-body-s">Latest ingest: 2022-06-22 15:17:30</p>
+              <img src="/public/images/CDM_data2.png" alt="Daily CDMs" width="300" height="250">
               </div>
               </div>
-              <div class="govuk-grid-column-one-half" style="background-color:#f3f2f1">
-                <h3 class="govuk-heading-s">Object data ingests</h3>
-                <img src="/public/images/object-data2.png" alt="Daily CDMs" width="450" height="350">
+              <div class="govuk-grid-column-one-third">
+                <div style="background-color:#f3f2f1">
+                <h2 class="govuk-heading-s">Object data ingests</h2>
+                <p class="govuk-body-s">Latest ingest: 2022-06-22 15:17:30</p>
+                <img src="/public/images/object-data2.png" alt="Daily CDMs" width="300" height="250">
               </div>
-        </div>
-        <p></p>
-        <h2 class="govuk-heading-m">CDM ingests</h2>
-        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-            <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></td>
-            </tr>
-            </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
-              <td class="govuk-table__cell govuk-body-s">CDM</td>
-              <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-              <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-              <td class="govuk-table__cell govuk-body-s">1204</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
-              <td class="govuk-table__cell govuk-body-s">CDM</td>
-              <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-              <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-              <td class="govuk-table__cell govuk-body-s">8039</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
-              <td class="govuk-table__cell govuk-body-s">CDM</td>
-              <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-              <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-              <td class="govuk-table__cell govuk-body-s">5384</td>
-            </tr>
-          </tbody>
-      </table>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Help with this table
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          This table shows performance monitoring information for the external sources of CDMs that Monitor your satellites ingests.
-          <p> </p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Ingestion start and stop show the time the last data ingest started and finished</li>
-            <li>Number of items fetched shows how many items were retrieved</li>
-          </ul>
-        </div>
-        </details>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div style="background-color:#f3f2f1">
+              <h3 class="govuk-heading-s">UKSA analysis</h3>
+              <p class="govuk-body-s">Last received: 2022-06-21 14:00:01</p>
+              <img src="/public/images/UKSA_analysis.png" alt="Daily CDMs" width="300" height="250">
+            </div>
+          </div>
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">CDM ingests</h2>
+          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></td>
+                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></td>
+                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></td>
+                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></td>
+                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></td>
+              </tr>
+              </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
+                <td class="govuk-table__cell govuk-body-s">CDM</td>
+                <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                <td class="govuk-table__cell govuk-body-s">1204</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
+                <td class="govuk-table__cell govuk-body-s">CDM</td>
+                <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                <td class="govuk-table__cell govuk-body-s">8039</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
+                <td class="govuk-table__cell govuk-body-s">CDM</td>
+                <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                <td class="govuk-table__cell govuk-body-s">5384</td>
+              </tr>
+            </tbody>
+            </table>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with this table
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                This table shows performance monitoring information for the external sources of CDMs that Monitor your satellites ingests.
+                <p> </p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Ingestion start and stop show the time the last data ingest started and finished</li>
+                  <li>Number of items fetched shows how many items were retrieved</li>
+                </ul>
+              </div>
+          </details>
 
         <h2 class="govuk-heading-m">Object data ingests</h2>
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
@@ -127,7 +137,35 @@ Upcoming conjunction events
         </div>
         </details>
 
-  </main>
+        <h2 class="govuk-heading-m">UKSA analysis</h2>
+        <p>For events over certain probabilities, UKSA will produce additional analysis that is sent to, and displayed on, Monitor your satellites. The number of additional CDMs Monitor your satellites has received from UKSA analysts per day is displayed below.
+        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+            <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Date</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of CDMs received</b></td>
+            </tr>
+            </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" >UKSA</td>
+              <td class="govuk-table__cell govuk-body-s">2022-06-22</td>
+              <td class="govuk-table__cell govuk-body-s" >521</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" >UKSA</td>
+              <td class="govuk-table__cell govuk-body-s">2022-06-21</td>
+              <td class="govuk-table__cell govuk-body-s" >632</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" >UKSA</td>
+              <td class="govuk-table__cell govuk-body-s">2022-06-20</td>
+              <td class="govuk-table__cell govuk-body-s" >599</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
 </div>
 
 <script src="<sst-alpha>/<application>.js"></script>
