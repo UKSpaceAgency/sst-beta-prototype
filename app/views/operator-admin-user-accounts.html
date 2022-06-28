@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Registered satellites
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-admin-account">Account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/operator-admin-user-accounts">Organisation user accounts</a>
+      </li>
+    </ol>
+  </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">[Name of organisation] user accounts</h1>
+
+        <p class="govuk-body-m">There are currently <b>X</b> active users registered with [Name of organisation]</p>
+
+          <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 15%">Name</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">User type</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Email</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Phone number</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 15%">Date created</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 15%">Last active</th>
+                <th scope="col" class="govuk-table__header" span="1" style="width: 20%"></th>
+
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">FirstName LastName</td>
+                <td class="govuk-table__cell">Standard user</td>
+                <td class="govuk-table__cell">example@cca.co.uk</td>
+                <td class="govuk-table__cell">12345 123456</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell"><a href="admin-edit-existing-user">Edit</td>
+
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">FirstName LastName</td>
+                <td class="govuk-table__cell">Organisation administrator</td>
+                <td class="govuk-table__cell">example@cca.co.uk</td>
+                <td class="govuk-table__cell">12346 789322</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell"><a href="admin-edit-existing-user">Edit</td>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+          <div class="moj-button-menu">
+            <div class="moj-button-menu__wrapper">
+              <a href="/admin-invite-new-member" role="button" draggable="false" class="govuk-button moj-button-menu__item  " data-module="govuk-button">
+                Invite new user
+              </a>
+            </div>
+          </div>
+
+          <p>   </p>
+      </div>
+      </div>
+  </main>
+</div>
+
+
+{% endblock %}

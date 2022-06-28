@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Edit an existing user
+{% endblock %}
+
+{% block content %}
+<a href="operator-admin-account-information" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Change your account type</h1>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Changing account type will change the permissions associated with your account.
+      </strong>
+    </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend">
+          What type of access do you require in the <b>UK Space Agency</b> organisation?
+        </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          Organisation administrator
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          with the ability to add/remove users and view user activity
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          Operator
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+<div class="govuk-button-group">
+<button class="govuk-button" data-module="govuk-button">
+  Save
+</button>
+
+</div>
+
+  </main>
+{% endblock %}

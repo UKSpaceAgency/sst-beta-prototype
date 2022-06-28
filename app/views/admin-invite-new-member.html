@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-AAA0001 Upload ephemeris data
+Invite a new user
 {% endblock %}
 
 {% block content %}
@@ -9,13 +9,13 @@ AAA0001 Upload ephemeris data
   <div class="govuk-breadcrumbs">
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="admin-account">Account</a>
+      <a class="govuk-breadcrumbs__link" href="operator-admin-account">Account</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="admin">Account information</a>
+      <a class="govuk-breadcrumbs__link" href="operator-admin-user-accounts">Organisation user accounts</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Invite new member</a>
+      <a class="govuk-breadcrumbs__link" href="#">Invite a new user</a>
     </li>
     </ol>
 </div>
@@ -23,54 +23,51 @@ AAA0001 Upload ephemeris data
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
+
     <h1 class="govuk-heading-xl">Invite a new user</h1>
-    <p class="govuk-body-m">Invite a new user to join your organisation by entering the details below.</p>
-    <p class="govuk-body-m">Your organisaton: <b>UK Space Agency</b></p>
+
+    <p class="gem-c-lead-paragraph">Invite a new user to join your organisation by entering the details below.</p>
 
     <form class="form" action="/operator-admin-homepage" method="post">
-    <div class="govuk-form-group">
-      <label class="govuk-heading-l" for="email">
-        Enter new user email address:
-      </label>
-      <div id="email-hint" class="govuk-hint">
-        Insert the member email address with your organisation's domain
+      <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <b>Email address<b>
+    </label>
+    <input class="govuk-input" id="event-name" name="event-name" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      <b>Select an account type<b>
+    </legend>
+    <div id="sign-in-hint" class="govuk-hint">
+      What type of access will this user require in the UK Space Agency organisation?
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          Organisation administrator
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          Has the ability to add/remove users and view user activity
+        </div>
       </div>
-      <input class="govuk-input " id="email" name="email" type="email" spellcheck="false" value="" autocomplete="email">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+          Operator
+        </label>
+      </div>
     </div>
 
-    <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Type of user account:
-            </h1>
-          </legend>
-          <div id="nationality-hint" class="govuk-hint">
-            What type of access will this user require in the <b>UKSA organisation</b>?
-          </div>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
-              <label class="govuk-label govuk-checkboxes__label" for="nationality">
-                Admin
-              </label>
-              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                with the ability to add/remove users and view user activity
-              </div>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
-              <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
-                Member
-              </label>
-            </div>
-          </div>
+  </fieldset>
+</div>
 
-        </fieldset>
-      </div>
 
     <button class="govuk-button" data-module="govuk-button">
-      Submit
+      Send invite
     </button>
     </form>
     </div>
