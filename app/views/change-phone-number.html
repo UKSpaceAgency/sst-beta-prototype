@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Edit an existing user
+{% endblock %}
+
+{% block content %}
+<a href="operator-admin-account-information" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Change your phone number</h1>
+
+    <form class="form" action="/operator-admin-homepage" method="post">
+      <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      Mobile number
+    </label>
+    <input class="govuk-input" id="event-name" name="event-name" type="text">
+  </div>
+
+<div class="govuk-button-group">
+<button class="govuk-button" data-module="govuk-button">
+  Save
+</button>
+
+</div>
+
+  </main>
+{% endblock %}
