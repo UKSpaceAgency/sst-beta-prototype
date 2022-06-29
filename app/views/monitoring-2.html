@@ -21,151 +21,48 @@ Upcoming conjunction events
                   <div class="chartMenu">
                       </div>
                       <div class="chartCard">
-                        <button onclick="timeFrame(this)" value="week">Last 7 days</button>
-                        <button onclick="timeFrame(this)" value="month">Last month</button>
-                        <button onclick="timeFrame(this)" value="year">Last year</button>
+                        <button onclick="timeFrame(this)" value="week">7 days</button>
+                        <button onclick="timeFrame(this)" value="month">1 month</button>
+                        <button onclick="timeFrame(this)" value="year">All time</button>
                         <div class="chartBox">
-                          <canvas id="myChart" width="400" height="400"></canvas>
+                          <canvas id="myChart1" width="400" height="400"></canvas>
                         </div>
                       </div>
                       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                       <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 
                       <script>
-                        const week = [
-                          {x: Date.parse ('2022-06-24'), y: 8000 },
-                          {x: Date.parse ('2022-06-23'), y: 7950 },
-                          {x: Date.parse ('2022-06-22'), y: 7316 },
-                          {x: Date.parse ('2022-06-21'), y: 9175 },
-                          {x: Date.parse ('2022-06-20'), y: 8201 },
-                          {x: Date.parse ('2022-06-19'), y: 9180 },
-                          {x: Date.parse ('2022-06-18'), y: 7260 },
-                        ];
 
-                        const month = [
-                        {x: Date.parse ('2022-06-24 00:00:00: GMT'), y: 8000 },
-                        {x: Date.parse ('2022-06-23 00:00:00: GMT'), y: 7950 },
-                        {x: Date.parse ('2022-06-22 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-06-21 00:00:00: GMT'), y: 9175 },
-                        {x: Date.parse ('2022-06-20 00:00:00: GMT'), y: 8201 },
-                        {x: Date.parse ('2022-06-19 00:00:00: GMT'), y: 9180 },
-                        {x: Date.parse ('2022-06-18 00:00:00: GMT'), y: 7260 },
-                        {x: Date.parse ('2022-06-17 00:00:00: GMT'), y: 8000 },
-                        {x: Date.parse ('2022-06-16 00:00:00: GMT'), y: 7950 },
-                        {x: Date.parse ('2022-06-15 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-06-14 00:00:00: GMT'), y: 9175 },
-                        {x: Date.parse ('2022-06-13 00:00:00: GMT'), y: 8201 },
-                        {x: Date.parse ('2022-06-12 00:00:00: GMT'), y: 9180 },
-                        {x: Date.parse ('2022-06-11 00:00:00: GMT'), y: 7260 },
-                        {x: Date.parse ('2022-06-10 00:00:00: GMT'), y: 7950 },
-                        {x: Date.parse ('2022-06-09 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-06-08 00:00:00: GMT'), y: 9175 },
-                        {x: Date.parse ('2022-06-07 00:00:00: GMT'), y: 8201 },
-                        {x: Date.parse ('2022-06-06 00:00:00: GMT'), y: 9180 },
-                        {x: Date.parse ('2022-06-05 00:00:00: GMT'), y: 7260 },
-                        ];
-
-                        const year = [
-                        {x: Date.parse ('2022-06-24 00:00:00: GMT'), y: 8000 },
-                        {x: Date.parse ('2022-06-23 00:00:00: GMT'), y: 7950 },
-                        {x: Date.parse ('2022-06-22 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-06-21 00:00:00: GMT'), y: 9175 },
-                        {x: Date.parse ('2022-06-20 00:00:00: GMT'), y: 8201 },
-                        {x: Date.parse ('2022-06-19 00:00:00: GMT'), y: 9180 },
-                        {x: Date.parse ('2022-06-18 00:00:00: GMT'), y: 7260 },
-                        {x: Date.parse ('2022-06-17 00:00:00: GMT'), y: 8000 },
-                        {x: Date.parse ('2022-06-16 00:00:00: GMT'), y: 7950 },
-                        {x: Date.parse ('2022-06-15 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-06-14 00:00:00: GMT'), y: 9175 },
-                        {x: Date.parse ('2022-06-13 00:00:00: GMT'), y: 8201 },
-                        {x: Date.parse ('2022-06-12 00:00:00: GMT'), y: 9180 },
-                        {x: Date.parse ('2022-06-11 00:00:00: GMT'), y: 7260 },
-                        {x: Date.parse ('2022-06-10 00:00:00: GMT'), y: 7950 },
-                        {x: Date.parse ('2022-06-09 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-06-08 00:00:00: GMT'), y: 10175 },
-                        {x: Date.parse ('2022-06-07 00:00:00: GMT'), y: 9801 },
-                        {x: Date.parse ('2022-06-06 00:00:00: GMT'), y: 9380 },
-                        {x: Date.parse ('2022-06-05 00:00:00: GMT'), y: 7260 },
-                        {x: Date.parse ('2022-06-04 00:00:00: GMT'), y: 10000 },
-                        {x: Date.parse ('2022-06-03 00:00:00: GMT'), y: 7950 },
-                        {x: Date.parse ('2022-06-02 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-06-01 00:00:00: GMT'), y: 9175 },
-                        {x: Date.parse ('2022-05-31 00:00:00: GMT'), y: 8201 },
-                        {x: Date.parse ('2022-05-30 00:00:00: GMT'), y: 9180 },
-                        {x: Date.parse ('2022-05-29 00:00:00: GMT'), y: 7260 },
-                        {x: Date.parse ('2022-05-28 00:00:00: GMT'), y: 8000 },
-                        {x: Date.parse ('2022-05-27 00:00:00: GMT'), y: 7950 },
-                        {x: Date.parse ('2022-05-26 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-05-25 00:00:00: GMT'), y: 9175 },
-                        {x: Date.parse ('2022-05-24 00:00:00: GMT'), y: 8201 },
-                        {x: Date.parse ('2022-05-23 00:00:00: GMT'), y: 6280 },
-                        {x: Date.parse ('2022-05-22 00:00:00: GMT'), y: 6450 },
-                        {x: Date.parse ('2022-05-21 00:00:00: GMT'), y: 8950 },
-                        {x: Date.parse ('2022-05-20 00:00:00: GMT'), y: 7316 },
-                        {x: Date.parse ('2022-05-19 00:00:00: GMT'), y: 8175 },
-                        {x: Date.parse ('2022-05-18 00:00:00: GMT'), y: 6201 },
-                        {x: Date.parse ('2022-05-17 00:00:00: GMT'), y: 6980 },
-                        {x: Date.parse ('2022-05-16 00:00:00: GMT'), y: 6260 },
-
-                        ];
-
-                      // setup
-                      const data = {
-                        datasets: [{
-                          label: 'Space-Track',
-                          data: week,
-                          backgroundColor: '#003078',
-                          borderColor: '#003078',
-                          borderWidth: 1,
-                          pointRadius: 1
-                        }]
-                      };
-
-                      // config
-                      const config = {
-                        type: 'line',
-                        data,
-                        options: {
-                          scales: {
-                            x: {
-                              type: 'time',
-                                time: {
-                                  unit: ''
-                                },
-                                grid: {display: false
+                            const ctx1 = document.getElementById('myChart1');
+                            const myChart1 = new Chart(ctx1, {
+                            type: 'line',
+                            options: {
+                                scales: {
+                                  x: {
+                                      grid: {display: false
+                                      },
+                                      ticks: {},
+                                  },
+                                    y: {
+                                        beginAtZero: true,
+                                        grid: {display: false
+                                        }
+                                    }
                                 }
+                            },
+                            data: {
+                              labels: ['16/06/22', '17/06/22', '18/06/22', '19/06/22', '20/06/22', '21/06/22'],
+                              datasets: [{
+                                label: 'Space-Track',
+                                data: [7950, 7316, 9175, 8201, 9180, 7260],
+                                backgroundColor: '#003078',
+                                borderColor: '#003078',
+                                borderWidth: 1,
+                                pointRadius: 1
                               },
-                              y: {
-                                  beginAtZero: true,
-                                  grid: {display: false
-                                  }
-                              }
-                          }
-                        }
-                      };
-
-                      // render init block
-                      const myChart = new Chart(
-                        document.getElementById('myChart'),
-                        config
-                      );
-                      function timeFrame(period){
-                        //console.log(period)
-                        console.log(period.value);
-                        if (period.value == 'week') {
-                          myChart.config.options.scales.x.time.unit = period.value;
-                          myChart.config.data.datasets[0].data = week;
-                        }
-                        if (period.value == 'month') {
-                          myChart.config.options.scales.x.time.unit = period.value;
-                          myChart.config.data.datasets[0].data = month;
-                        }
-                        if (period.value == 'year') {
-                          myChart.config.options.scales.x.time.unit = period.value;
-                          myChart.config.data.datasets[0].data = year;
-                        }
-                        myChart.update();
-                      }
+                            ]
+                            },
+                          });
                       </script>
                     </div>
                     </div>
@@ -175,9 +72,9 @@ Upcoming conjunction events
                   <h2 class="govuk-heading-s">Object data ingests</h2>
                   <p class="govuk-body-s">Latest ingest: 2022-06-22 15:17:30</p>
                   <div>
-                    <button onclick="timeFrame(this)" value="week2">Last 7 days</button>
-                    <button onclick="timeFrame(this)" value="month2">Last month</button>
-                    <button onclick="timeFrame(this)" value="year2">Last year</button>
+                    <button onclick="timeFrame(this)" value="week2">7 days</button>
+                    <button onclick="timeFrame(this)" value="month2">1 month</button>
+                    <button onclick="timeFrame(this)" value="year2">All time</button>
                     <canvas id="myChart2" width="400" height="400"></canvas>
                     <script>
                       const ctx2 = document.getElementById('myChart2');
@@ -205,6 +102,7 @@ Upcoming conjunction events
                           backgroundColor: '#003078',
                           borderColor: '#003078',
                           borderWidth: 1,
+                          pointRadius: 1
                         },
                         {
                           label: 'ESA-DISCOS',
@@ -212,6 +110,8 @@ Upcoming conjunction events
                           backgroundColor: 'rgb(255, 99, 132)',
                           borderColor: 'rgb(255, 99, 132)',
                           borderWidth: 1,
+                          pointRadius: 1
+
                         }
                         ]
                       },
@@ -224,9 +124,9 @@ Upcoming conjunction events
                 <div style="background-color:#f3f2f1">
                 <h3 class="govuk-heading-s">UKSA analysis</h3>
                 <p class="govuk-body-s">Last received: 2022-06-21 14:00:01</p>
-                <button onclick="timeFrame(this)" value="week3">Last 7 days</button>
-                <button onclick="timeFrame(this)" value="month3">Last month</button>
-                <button onclick="timeFrame(this)" value="year3">Last year</button>
+                <button onclick="timeFrame(this)" value="week3">7 days</button>
+                <button onclick="timeFrame(this)" value="month3">1 month</button>
+                <button onclick="timeFrame(this)" value="year3">All time</button>
                 <canvas id="myChart3" width="400" height="400"></canvas>
                 <script>
                   const ctx3 = document.getElementById('myChart3');
@@ -251,6 +151,8 @@ Upcoming conjunction events
                       backgroundColor: '#f47738',
                       borderColor: '#f47738',
                       borderWidth: 1,
+                      pointRadius: 1
+
                     }]
                   },
                 });
@@ -265,14 +167,14 @@ Upcoming conjunction events
 
           <div class="govuk-grid-column-full">
             <h2 class="govuk-heading-m">CDM ingests</h2>
-            <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+            <table class="govuk-table" style="width:100%">
                 <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></td>
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></td>
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></td>
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></td>
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></td>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></th>
                 </tr>
                 </thead>
               <tbody class="govuk-table__body">
@@ -319,11 +221,11 @@ Upcoming conjunction events
           <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
               <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></td>
-                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></td>
-                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></td>
-                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></td>
-                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></td>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></th>
               </tr>
               </thead>
             <tbody class="govuk-table__body">
@@ -371,9 +273,9 @@ Upcoming conjunction events
           <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
               <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></td>
-                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Date</b></td>
-                <td scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of CDMs received</b></td>
+                <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></th>
+                <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Date</b></th>
+                <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of CDMs received</b></th>
               </tr>
               </thead>
             <tbody class="govuk-table__body">
