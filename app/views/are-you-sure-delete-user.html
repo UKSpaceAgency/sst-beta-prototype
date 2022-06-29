@@ -22,7 +22,21 @@ Edit an existing user
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/are-you-sure-delete-user" method="post">
+<form class="form" action="/admin-user-deleted" method="post">
+
+  <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    Are you sure you want to delete [email address]?
+  </h2>
+  <div class="govuk-button-group">
+    <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+    Yes, delete
+  </button>
+
+  <a class="govuk-link" href="admin-edit-existing-user">Cancel</a>
+  </div>
+</div>
+</div>
 
     <h1 class="govuk-heading-xl">Edit user account</h1>
 
@@ -79,21 +93,6 @@ Edit an existing user
 
 
   </dl>
-</div>
-
-<div class="govuk-button-group">
-
-<button class="govuk-button govuk-button--warning" data-module="govuk-button">
-  Delete user
-</button>
-</form>
-
-<a class="govuk-link" href="operator-admin-user-accounts"> Return to organisation user accounts</a>
-</div>
-
-
-
-
 </div>
 
   </main>

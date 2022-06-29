@@ -10,6 +10,7 @@ Edit an existing user
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
+        <form class="form" action="/admin-edit-existing-user" method="post">
 
     <h1 class="govuk-heading-xl">Change user's account type</h1>
 
@@ -33,7 +34,7 @@ Edit an existing user
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
         <label class="govuk-label govuk-radios__label" for="sign-in-2">
-          Operator
+          Standard user
         </label>
       </div>
     </div>
@@ -45,6 +46,7 @@ Edit an existing user
 <button class="govuk-button" data-module="govuk-button">
   Save
 </button>
+</form>
 
 </div>
 
