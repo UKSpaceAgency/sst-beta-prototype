@@ -12,13 +12,10 @@ Invite successfully sent
         <a class="govuk-breadcrumbs__link" href="operator-admin-account">Account</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="operator-admin-user-accounts">Organisation user accounts</a>
+        <a class="govuk-breadcrumbs__link" href="operator-admin-account-information">Account details</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="admin-invite-new-member">Invite new user</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="operator-admin-invite-success">Invite sent</a>
+        <a class="govuk-breadcrumbs__link" href="#">Account type changed </a>
       </li>
         </ol>
         </div>
@@ -30,17 +27,16 @@ Invite successfully sent
         <div class="govuk-panel govuk-panel--confirmation">
 
       <h1 class="govuk-panel__title">
-        Invite sent
+        Account type changed
       </h1>
       <div class="govuk-panel__body">
-        An invite has been sent to [email address]. They will now be invited to access Monitor your satellites and set up their account.
+        You have changed this user's account type to [new account type]
       </div>
-
     </div>
 
-<form class="form" action="/operator-admin-user-accounts" method="post">
+<form class="form" action="/operator-admin-edit-existing-user" method="post">
     <button class="govuk-button" data-module="govuk-button">
-      Return to organisation user accounts
+      Return to user account details
     </button>
     </form>
 

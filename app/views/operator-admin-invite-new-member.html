@@ -22,14 +22,11 @@ Invite a new user
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/operator-admin-invite-success" method="post">
-
 
     <h1 class="govuk-heading-xl">Invite a new user</h1>
 
     <p class="gem-c-lead-paragraph">Invite a new user to join your organisation by entering the details below.</p>
 
-    <form class="form" action="/operator-admin-homepage" method="post">
       <div class="govuk-form-group">
     <label class="govuk-label" for="event-name">
       <b>Email address<b>
@@ -48,17 +45,20 @@ Invite a new user
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-          Organisation administrator
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          Administrator
         </label>
-        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-          Has the ability to add/remove users and view user activity
-        </div>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-          Standard user
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          Operator
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          User
         </label>
       </div>
     </div>
@@ -66,12 +66,27 @@ Invite a new user
   </fieldset>
 </div>
 
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+  What can these roles do?
+</span>
+</summary>
+<div class="govuk-details__text">
+<p class="govuk-body"><span class="govuk-!-font-weight-bold">Administrators</span> can view all user accounts for an organisation, and can add new users, and change or delete existing users.</p>
+<p class="govuk-body"><span class="govuk-!-font-weight-bold">Operators</span> can view information on their organisation's satellites  and the upcoming conjunction events involving them, and can upload ephemeris data to the site.</p>
+<p class="govuk-body"><span class="govuk-!-font-weight-bold">Users</span> can view information on their organisation's satellites and the upcoming conjunction events involving them.</p>
+</div>
+</details>
 
+<form class="form" action="/operator-admin-invite-success" method="post">
     <button class="govuk-button" data-module="govuk-button">
       Send invite
     </button>
     </form>
-    </div>
 
+    </div>
+</div>
   </main>
+  </div>
 {% endblock %}

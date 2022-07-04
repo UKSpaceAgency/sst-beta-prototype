@@ -10,7 +10,6 @@ Edit an existing user
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/operator-admin-account-information" method="post">
 
     <h1 class="govuk-heading-xl">Change your account type</h1>
 
@@ -25,22 +24,25 @@ Edit an existing user
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend">
-          What type of access do you require in the <b>UK Space Agency</b> organisation?
+          What type of access do you require to Monitor your satellites?
         </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
         <label class="govuk-label govuk-radios__label" for="sign-in">
-          Organisation administrator
+          Administrator
         </label>
-        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-          with the ability to add/remove users and view user activity
-        </div>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
         <label class="govuk-label govuk-radios__label" for="sign-in-2">
-          Standard user
+          Operator
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          User
         </label>
       </div>
     </div>
@@ -48,6 +50,20 @@ Edit an existing user
   </fieldset>
 </div>
 
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What can these roles do?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Administrators</span> can view information on their organisation's satellites and the upcoming conjunction events involving them, and can upload ephemeris data to the site. Administrators can also view all user accounts for an organisation, and can add new users, and change or delete existing users. </p>
+    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Operators</span> can view information on their organisation's satellites  and the upcoming conjunction events involving them, and can upload ephemeris data to the site.</p>
+    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Users</span> can view information on their organisation's satellites and the upcoming conjunction events involving them.</p>
+  </div>
+</details>
+
+<form class="form" action="/operator-admin-are-you-sure-change-account-type" method="post">
 <div class="govuk-button-group">
 <button class="govuk-button" data-module="govuk-button">
   Save
