@@ -5,30 +5,29 @@ Edit an existing user
 {% endblock %}
 
 {% block content %}
-<a href="operator-admin-account-information" class="govuk-back-link">Back</a>
+<a href="operator-editable-account-information" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/operator-admin-account-information" method="post">
 
-    <h1 class="govuk-heading-xl">Change your email address</h1>
+    <h1 class="govuk-heading-xl">Change your phone number</h1>
 
-<form class="form" action="/operator-admin-account-information" method="post">
       <div class="govuk-form-group">
     <label class="govuk-label" for="event-name">
-      Email address
+      Mobile number
     </label>
     <input class="govuk-input" id="event-name" name="event-name" type="text">
   </div>
 
+<form class="form" action="/operator-phone-number-changed" method="post">
 <div class="govuk-button-group">
 <button class="govuk-button" data-module="govuk-button">
   Save
 </button>
 </form>
 
-
+</div>
 </div>
 
   </main>

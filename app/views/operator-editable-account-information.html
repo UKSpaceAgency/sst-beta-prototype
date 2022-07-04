@@ -10,10 +10,10 @@ Account settings
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/operator-admin-account">Account</a>
+        <a class="govuk-breadcrumbs__link" href="/operator-account">Account</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/operator-admin-account-information">Your account details</a>
+        <a class="govuk-breadcrumbs__link" href="/operator-editable-account-information">Your account details</a>
       </li>
     </ol>
   </div>
@@ -40,11 +40,6 @@ Account settings
     <dd class="govuk-summary-list__value">
       Administrator
     </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="operator-admin-change-your-account-type">
-        Edit<span class="govuk-visually-hidden"> user type</span>
-      </a>
-    </dd>
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
@@ -54,7 +49,7 @@ Account settings
       example.operator@satellite-company.co.uk
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="operator-admin-change-your-email-address">
+      <a class="govuk-link" href="operator-change-your-email-address">
         Edit<span class="govuk-visually-hidden"> email address</span>
       </a>
     </dd>
@@ -67,7 +62,7 @@ Account settings
       <p class="govuk-body">07123 456789</p>
     </dd>
     <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="operator-admin-change-your-phone-number">
+      <a class="govuk-link" href="operator-change-your-phone-number">
         Edit<span class="govuk-visually-hidden"> phone number </span>
       </a>
     </dd>
@@ -76,14 +71,8 @@ Account settings
 
 <div class="govuk-button-group">
 
-<form class="form" action="/operator-admin-are-you-sure-delete-your-account" method="post">
-<button class="govuk-button govuk-button--warning" data-module="govuk-button">
-  Delete account
-</button>
-</form>
-
-<form class="form" action="/operator-admin-account" method="post">
-<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+<form class="form" action="/operator-account" method="post">
+<button class="govuk-button govuk-button" data-module="govuk-button">
   Return to account page
 </button>
 

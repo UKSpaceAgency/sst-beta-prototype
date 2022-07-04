@@ -15,14 +15,34 @@ Edit an existing user
       <a class="govuk-breadcrumbs__link" href="operator-admin-user-accounts">Organisation user accounts</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Edit user account</a>
+      <a class="govuk-breadcrumbs__link" href="#">Delete user account</a>
     </li>
     </ol>
 </div>
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/are-you-sure-delete-user" method="post">
+
+  <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    Are you sure you want to delete [email address]?
+  </h2>
+  <p class="govuk-body"> If you delete this account, this user will no longer have access to Monitor your satellites.</p>
+  <div class="govuk-button-group">
+
+  <form class="form" action="/operator-admin-user-account-deleted" method="post">
+  <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+    Yes, delete
+  </button>
+  </form>
+
+  <form class="form" action="/admin-edit-existing-user" method="post">
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Cancel
+  </button>
+
+  </div>
+</div>
 
     <h1 class="govuk-heading-xl">Edit user account</h1>
 
@@ -79,21 +99,6 @@ Edit an existing user
 
 
   </dl>
-</div>
-
-<div class="govuk-button-group">
-
-<button class="govuk-button govuk-button--warning" data-module="govuk-button">
-  Delete user
-</button>
-</form>
-
-<a class="govuk-link" href="operator-admin-user-accounts"> Return to organisation user accounts</a>
-</div>
-
-
-
-
 </div>
 
   </main>
