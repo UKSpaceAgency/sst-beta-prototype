@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Edit an existing user
+Change user's account type
 {% endblock %}
 
 {% block content %}
-<a href="admin-edit-existing-user" class="govuk-back-link">Back</a>
+<a href="operator-admin-edit-existing-user" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
@@ -24,7 +24,7 @@ Edit an existing user
     <div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend">
-          What type of access does this user require to Monitor your satellites?
+          Select an account type
         </legend>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
@@ -53,11 +53,11 @@ Edit an existing user
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      What can these roles do?
+      What can these accounts do?
     </span>
   </summary>
   <div class="govuk-details__text">
-    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Administrators</span> can view all user accounts for an organisation, and can add new users, and change or delete existing users.</p>
+    <p class="govuk-body"><span class="govuk-!-font-weight-bold">Administrators</span> can view information on their organisation's satellites and the upcoming conjunction events involving them, and can upload ephemeris data to the site. Administrators can also view all user accounts for an organisation, and can add new users, and change or delete existing users.</p>
     <p class="govuk-body"><span class="govuk-!-font-weight-bold">Operators</span> can view information on their organisation's satellites  and the upcoming conjunction events involving them, and can upload ephemeris data to the site.</p>
     <p class="govuk-body"><span class="govuk-!-font-weight-bold">Users</span> can view information on their organisation's satellites and the upcoming conjunction events involving them.</p>
   </div>

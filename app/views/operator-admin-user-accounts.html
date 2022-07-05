@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Registered satellites
+Organisation user accounts
 {% endblock %}
 
 {% block content %}
@@ -29,7 +29,7 @@ Registered satellites
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 15%">Name</th>
-                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">User type</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Account type</th>
                 <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Email</th>
                 <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 20%">Phone number</th>
                 <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 15%">Date created</th>
@@ -69,12 +69,19 @@ Registered satellites
             </tbody>
           </table>
 
-          <div class="moj-button-menu">
-            <div class="moj-button-menu__wrapper">
-              <a href="/operator-admin-invite-new-member" role="button" draggable="false" class="govuk-button moj-button-menu__item  " data-module="govuk-button">
-                Invite new user
-              </a>
-            </div>
+          <div class="govuk-button-group">
+
+            <form class="form" action="/operator-admin-invite-new-member" method="post">
+                  <button class="govuk-button" data-module="govuk-button">
+                        Invite new user
+                    </button>
+                      </form>
+
+          <form class="form" action="/operator-admin-account" method="post">
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to account page
+          </button>
+
           </div>
 
       </div>

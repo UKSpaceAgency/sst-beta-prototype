@@ -1,11 +1,12 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Edit an existing user
+Change user's email address
 {% endblock %}
 
 {% block content %}
-<a href="admin-edit-existing-user" class="govuk-back-link">Back</a>
+
+<a href="operator-admin-edit-existing-user" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
@@ -13,9 +14,11 @@ Edit an existing user
 
     <h1 class="govuk-heading-xl">Change user's email address</h1>
 
+    <p class="govuk-body">User's current email address is <span class="govuk-!-font-weight-bold">alex.wates@thepsc.co.uk</span></p>
+
       <div class="govuk-form-group">
     <label class="govuk-label" for="event-name">
-      Email address
+      <b>Enter new email address here:</b>
     </label>
     <input class="govuk-input" id="event-name" name="event-name" type="text">
   </div>
