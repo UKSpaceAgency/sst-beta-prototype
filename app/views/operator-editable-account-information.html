@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Account settings
+Your account details
 {% endblock %}
 
 {% block content %}
@@ -35,7 +35,7 @@ Account settings
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      User type
+      Account type
     </dt>
     <dd class="govuk-summary-list__value">
       Administrator
@@ -69,6 +69,8 @@ Account settings
   </div>
 </dl>
 
+<p class="govuk-body-m">If you would like to change your account type, contact your organisation administrator.</p>
+
 <div class="govuk-button-group">
 
 <form class="form" action="/operator-account" method="post">
@@ -77,7 +79,6 @@ Account settings
 </button>
 
 </div>
-
 
 </div>
   </main>
