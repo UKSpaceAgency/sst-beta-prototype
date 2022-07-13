@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Invite a new user
+Add a new user
 {% endblock %}
 
 {% block content %}
@@ -15,7 +15,7 @@ Invite a new user
       <a class="govuk-breadcrumbs__link" href="operator-admin-user-accounts">Organisation user accounts</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Invite a new user</a>
+      <a class="govuk-breadcrumbs__link" href="#">Add a new user</a>
     </li>
     </ol>
 </div>
@@ -23,9 +23,9 @@ Invite a new user
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-    <h1 class="govuk-heading-xl">Invite a new user</h1>
+    <h1 class="govuk-heading-xl">Add a new user</h1>
 
-    <p class="gem-c-lead-paragraph">Invite a new user to join your organisation by entering the details below.</p>
+    <p class="gem-c-lead-paragraph">Add a new user to join your organisation by entering the details below. New users will receive an invitation to the email address specified.</p>
 
       <div class="govuk-form-group">
     <label class="govuk-label" for="event-name">
@@ -33,6 +33,13 @@ Invite a new user
     </label>
     <input class="govuk-input" id="event-name" name="event-name" type="text">
   </div>
+
+  <div class="govuk-form-group">
+<label class="govuk-label" for="event-name">
+  <b>Phone number<b>
+</label>
+<input class="govuk-input" id="event-name" name="event-name" type="text">
+</div>
 
   <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
@@ -81,7 +88,7 @@ Invite a new user
 
 <form class="form" action="/operator-admin-invite-success" method="post">
     <button class="govuk-button" data-module="govuk-button">
-      Send invite
+      Add user
     </button>
     </form>
 
