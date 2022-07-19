@@ -5,30 +5,35 @@ Setup menu
 {% endblock %}
 
 {% block content %}
-
+<div class="govuk-width-container">
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
-  <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-    <div class="govuk-notification-banner__header">
-      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-        Important
-      </h2>
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+        You have completed account set up. You can now access the site.
+        </h3>
+        <form class="form" action="/operator-homepage" method="post">
+        <button class="govuk-button" data-module="govuk-button">
+              View upcoming conjunction events
+          </button>
+            </form>
+      </div>
     </div>
-    <div class="govuk-notification-banner__content">
-      <p class="govuk-notification-banner__heading">
-        You must review and complete all sections of account set up before you can access the service.
-      </p>
-    </div>
-  </div>
 
   <div class="govuk-grid-column-two-thirds">
+
     <h1 class="govuk-heading-xl">
-      <form class="form" action="/operator-homepage" method="post">
       Set up your account
     </h1>
-  <form class="form" action="/operator-initial-setup" method="post">
 
-    <p class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 3 sections.</p>
+    <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 3 sections.</p>
 
 
     <ul class="app-task-list">
@@ -43,7 +48,7 @@ Setup menu
                 Terms and Conditions
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="terms">Not started</strong>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -51,7 +56,7 @@ Setup menu
                 Data privacy notice
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="terms">Not started</strong>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
           </li>
         </ul>
       </li>
@@ -65,7 +70,7 @@ Setup menu
             <span class="app-task-list__task-name">
               <a href="/operator-initial-account-information">Account details</a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="terms">Not started</strong>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
           </li>
         </ul>
       </li>
@@ -81,7 +86,7 @@ Setup menu
                 Event notification thresholds settings
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="terms">Not started</strong>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -89,7 +94,7 @@ Setup menu
                 Notification settings
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="terms">Not started</strong>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
           </li>
         </ul>
       </li>
