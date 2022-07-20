@@ -19,11 +19,20 @@ Setup menu
         <h3 class="govuk-notification-banner__heading">
         You have completed account set up. You can now access the site.
         </h3>
-        <form class="form" action="/operator-homepage" method="post">
-        <button class="govuk-button" data-module="govuk-button">
-              View upcoming conjunction events
-          </button>
-            </form>
+        <div class="govuk-button-group">
+
+          <form class="form" action="/operator-homepage" method="post">
+                <button class="govuk-button" data-module="govuk-button">
+                      View upcoming conjunction events
+                  </button>
+                    </form>
+
+        <form class="form" action="/operator-admin-invite-new-member" method="post">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Add users to organisation
+        </button>
+
+        </div>
       </div>
     </div>
 
@@ -37,49 +46,27 @@ Setup menu
 
 
     <ul class="app-task-list">
-      <li>
-        <h2 class="app-task-list__section">
-         Review the legal information
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-terms-service" aria-describedby="terms-of-service">
-                Terms and Conditions
-              </a>
-            </span>
-              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="operator-data-privacy" aria-describedby="data-privacy">
-                Data privacy notice
-              </a>
-            </span>
-              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
-          </li>
-        </ul>
-      </li>
 
       <li>
         <h2 class="app-task-list__section">
-          Review your account details
+          Choose your notification settings
         </h2>
         <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-initial-account-information">Account details</a>
-            </span>
-              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
-          </li>
-        </ul>
-      </li>
 
-      <li>
-        <h2 class="app-task-list__section">
-          Choose your account settings
-        </h2>
-        <ul class="app-task-list__items">
+          <li>
+            <h2 class="app-task-list__section">
+              Confirm your account details
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="/operator-initial-account-information">Account details</a>
+                </span>
+                  <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
+              </li>
+            </ul>
+          </li>
+
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="/operator-initial-threshold-settings" aria-describedby="event-thresholds">
@@ -101,24 +88,27 @@ Setup menu
 
       <li>
         <h2 class="app-task-list__section">
-          Review your organisation's details
+         Review terms and conditions and data privacy notice
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#">Organisation information</a>
+              <a href="/operator-terms-service" aria-describedby="terms-of-service">
+                Terms and Conditions
+              </a>
             </span>
-            <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="#">Organisation user accounts</a>
+              <a href="operator-data-privacy" aria-describedby="data-privacy">
+                Data privacy notice
+              </a>
             </span>
-            <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
           </li>
         </ul>
       </li>
-
 
     </ul>
   </div>
