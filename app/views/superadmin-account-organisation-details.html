@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+My satellite environment
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account-organisations-overview">Organisation information</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account-organisation-details">Organisation information</a>
+    </li>
+      </ol>
+      </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Timmy's Fish & Chips</h1>
+
+      <h2 class="govuk-heading-l">Contact details</h2>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Operator</th>
+            <td class="govuk-table__cell">Name</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Email</th>
+            <td class="govuk-table__cell">email@email.com</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Phone number</th>
+            <td class="govuk-table__cell">XXXXX XXXXXX</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Availability</th>
+            <td class="govuk-table__cell">24/7 or working hours</td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+      <h2 class="govuk-heading-l">Operator Information</h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" span="1" style="width: 50%"=>UK licence ID</th>
+            <td class="govuk-table__cell">XXXX-XXXX</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" span="1" style="width: 50%"=>Nationality</th>
+            <td class="govuk-table__cell">XXXXXXX</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of satellites</th>
+            <td class="govuk-table__cell">X</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Number of UK-licensed satellites</th>
+            <td class="govuk-table__cell">X</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Sharing ephemeris data with UKSA?</th>
+            <td class="govuk-table__cell">Yes/No</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-l">Registered Satellites</h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" span="1" style="width: 13%"=>Common name</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 13%"=>NORAD ID</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 13%"=>International designator</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 13%"=>Launch date</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 13%"=>General function</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 13%"=>Date UK registered</th>
+            <th scope="row" class="govuk-table__header" span="1" style="width: 13%"=>Operational?</th>
+            <th scope="col" class="govuk-table__header" span="1" style="width: 9%"></th>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">[name]</td>
+            <td class="govuk-table__cell">[NORAD ID]</td>
+            <td class="govuk-table__cell">[IntDes]</td>
+            <td class="govuk-table__cell">[date]</td>
+            <td class="govuk-table__cell">[function]</td>
+            <td class="govuk-table__cell">[date]</td>
+            <td class="govuk-table__cell">[Y/N]</td>
+            <td class="govuk-table__cell"><a href="superadmin-edit-existing-satellite">Edit</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">[name]</td>
+            <td class="govuk-table__cell">[NORAD ID]</td>
+            <td class="govuk-table__cell">[IntDes]</td>
+            <td class="govuk-table__cell">[date]</td>
+            <td class="govuk-table__cell">[function]</td>
+            <td class="govuk-table__cell">[date]</td>
+            <td class="govuk-table__cell">[Y/N]</td>
+            <td class="govuk-table__cell"><a href="superadmin-edit-existing-satellite">Edit</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">[name]</td>
+            <td class="govuk-table__cell">[NORAD ID]</td>
+            <td class="govuk-table__cell">[IntDes]</td>
+            <td class="govuk-table__cell">[date]</td>
+            <td class="govuk-table__cell">[function]</td>>
+            <td class="govuk-table__cell">[date]</td>
+            <td class="govuk-table__cell">[Y/N]</td>
+            <td class="govuk-table__cell"><a href="superadmin-edit-existing-satellite">Edit</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-button-group">
+
+        <form class="form" action="/superadmin-add-new-satellite" method="post">
+              <button class="govuk-button" data-module="govuk-button">
+                    Add new satellite
+                </button>
+                  </form>
+
+      <form class="form" action="/superadmin-account-organisations-overview" method="post">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Return to organisations overview page
+      </button>
+
+      </div>
+
+</div>
+</div>
+  </main>
+</div>
+
+
+{% endblock %}
