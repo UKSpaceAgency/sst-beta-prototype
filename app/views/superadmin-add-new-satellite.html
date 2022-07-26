@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Add a new user
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account-organisations-overview">Organisations overview</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account-organisation-details">Organisation details</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-add-new-satellite">Add new satellite</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Add a new satellite</h1>
+
+    <p class="gem-c-lead-paragraph">Add a new satellite to this organisation</p>
+
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    <b>Common name<b>
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
+  </div>
+
+      <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <b>NORAD ID<b>
+    </label>
+    <input class="govuk-input" id="event-name" name="event-name" type="text">
+  </div>
+
+<form class="form" action="/superadmin-add-satellite-success" method="post">
+    <button class="govuk-button" data-module="govuk-button">
+      Add satellite
+    </button>
+    </form>
+
+    </div>
+</div>
+  </main>
+  </div>
+{% endblock %}
