@@ -10,10 +10,7 @@ Add a new user
   <ol class="govuk-breadcrumbs__list">
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="operator-admin-account">Account</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="operator-admin-user-accounts">Organisation user accounts</a>
-    </li>
+
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="#">Add a new user</a>
     </li>
@@ -27,73 +24,87 @@ Add a new user
 
     <p class="gem-c-lead-paragraph">Add a new user to join your organisation by entering the details below. New users will receive an invitation to the email address specified.</p>
 
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="event-name">
+        <b>First name<b>
+      </label>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+  
       <div class="govuk-form-group">
-    <label class="govuk-label" for="event-name">
-      <b>Email address<b>
-    </label>
-    <input class="govuk-input" id="event-name" name="event-name" type="text">
+        <label class="govuk-label" for="event-name">
+          <b>Last name<b>
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+  
+        <div class="govuk-form-group">
+      <label class="govuk-label" for="event-name">
+        <b>Email address<b>
+      </label>
+      <input class="govuk-input" id="event-name" name="event-name" type="text">
+    </div>
+  
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="event-name">
+    <b>Phone number<b>
+  </label>
+  <input class="govuk-input" id="event-name" name="event-name" type="text">
   </div>
-
-  <div class="govuk-form-group">
-<label class="govuk-label" for="event-name">
-  <b>Phone number<b>
-</label>
-<input class="govuk-input" id="event-name" name="event-name" type="text">
-</div>
-
-  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-      <b>Select an account type<b>
-    </legend>
-    <div id="sign-in-hint" class="govuk-hint">
-      What type of access will this user require to Monitor your satellites?
-    </div>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="sign-in">
-          Administrator
-        </label>
+  
+    <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend">
+        <b>Select an account type<b>
+      </legend>
+      <div id="sign-in-hint" class="govuk-hint">
+        What type of access will this user require to the organisation on Monitor your satellites?
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="sign-in-2">
-          Operator
-        </label>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="sign-in">
+            Administrator
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            Operator
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in-2">
+            User
+          </label>
+        </div>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="sign-in-2">
-          User
-        </label>
-      </div>
-    </div>
-
-  </fieldset>
-</div>
-
-<details class="govuk-details" data-module="govuk-details">
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">
-  What can these accounts do?
-</span>
-</summary>
-<div class="govuk-details__text">
-<p class="govuk-body"><span class="govuk-!-font-weight-bold">Administrators</span> can view information on their organisation's satellites and the upcoming conjunction events involving them, and can upload ephemeris data to the site. Administrators can also view all user accounts for an organisation, and can add new users, and change or delete existing users.</p>
-<p class="govuk-body"><span class="govuk-!-font-weight-bold">Operators</span> can view information on their organisation's satellites  and the upcoming conjunction events involving them, and can upload ephemeris data to the site.</p>
-<p class="govuk-body"><span class="govuk-!-font-weight-bold">Users</span> can view information on their organisation's satellites and the upcoming conjunction events involving them.</p>
-</div>
-</details>
-
-<form class="form" action="/operator-admin-invite-success" method="post">
-    <button class="govuk-button" data-module="govuk-button">
-      Add user
-    </button>
-    </form>
-
-    </div>
-</div>
-  </main>
+  
+    </fieldset>
   </div>
-{% endblock %}
+  
+  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+  <span class="govuk-details__summary-text">
+    What can these accounts do?
+  </span>
+  </summary>
+  <div class="govuk-details__text">
+  <p class="govuk-body"><span class="govuk-!-font-weight-bold">Administrators</span> can view information on their organisation's satellites and the upcoming conjunction events involving them, and can upload ephemeris data to the site. Administrators can also view all user accounts for an organisation, and can add new users, and change or delete existing users.</p>
+  <p class="govuk-body"><span class="govuk-!-font-weight-bold">Operators</span> can view information on their organisation's satellites  and the upcoming conjunction events involving them, and can upload ephemeris data to the site.</p>
+  <p class="govuk-body"><span class="govuk-!-font-weight-bold">Users</span> can view information on their organisation's satellites and the upcoming conjunction events involving them.</p>
+  </div>
+  </details>
+  
+  <form class="form" action="/superadmin-invite-success" method="post">
+      <button class="govuk-button" data-module="govuk-button">
+        Add user
+      </button>
+      </form>
+  
+      </div>
+  </div>
+    </main>
+    </div>
+  {% endblock %}
