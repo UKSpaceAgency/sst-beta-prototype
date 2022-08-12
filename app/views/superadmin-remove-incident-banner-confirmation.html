@@ -10,6 +10,26 @@ Setup menu
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
 
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        Are you sure you want to remove the incident banner?
+      </h2>
+      <p class="govuk-body"> The banner will no longer be visible to users of the service.</p>
+      <div class="govuk-button-group">
+    <form class="form" action="/superadmin-account" method="post">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+        Remove incident banner
+      </button>
+      </form>
+
+    <form class="form" action="/superadmin-account-incident-banner-on" method="post">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel
+    </button>
+    </form>
+    </div>
+    </div>
+
       Your account
 
     </h1>
