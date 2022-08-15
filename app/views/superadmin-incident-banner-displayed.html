@@ -20,25 +20,26 @@ Incident
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
-        <h2 class="govuk-error-summary__title" id="error-summary-title">
-          Are you sure you want to display the incident banner?
-        </h2>
-        <p class="govuk-body"> This will be visible to all users of the service. You will have to manually remove the incident banner by going to the account page.</p>
-        <div class="govuk-button-group">
-      <form class="form" action="/superadmin-incident-banner-displayed" method="post">
-          <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-          Display incident banner
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        The incident banner will now be visible to all users of the service.
+      </h3>
+      <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> if you think there's a problem.</p>
+
+      <form class="form" action="/superadmin-account-incident-banner-on" method="post">
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Return to account page
         </button>
         </form>
 
-      <form class="form" action="/superadmin-incident" method="post">
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Cancel
-      </button>
-      </form>
-      </div>
-      </div>
+    </div>
+  </div>
 
     <h1 class="govuk-heading-xl">Incident</h1>
 
