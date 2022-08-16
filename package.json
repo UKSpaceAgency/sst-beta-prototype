@@ -12,6 +12,7 @@
     "serve": "node listen-on-port"
   },
   "dependencies": {
+    "@ministryofjustice/frontend": "^1.4.2",
     "acorn": "^8.5.0",
     "ansi-colors": "^4.1.1",
     "body-parser": "^1.14.1",
@@ -32,6 +33,7 @@
     "govuk-frontend": "^4.1.0",
     "gray-matter": "^4.0.3",
     "inquirer": "^8.2.0",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "marked": "^4.0.10",
     "nodemon": "^2.0.15",

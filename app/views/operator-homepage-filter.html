@@ -13,46 +13,80 @@ Upcoming conjunction events
         <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
 
         <! main table listing all conjunction warnings involving satellites owned by this operator>
-
         <div class="moj-filter-layout">
-
-
-          <form class="search_form__Za8jQ"><div class="search_group__H5hPE">
-            <label class="govuk-body govuk-!-font-weight-bold">Find a conjunction event:
-              <div class="govuk-form-group   ">
-                <input class="govuk-input  " name="search" data-cy="search-input" placeholder="Search by event or object ID" type="text" value="">
+          <div class="moj-filter-layout__filter">
+            <div class="moj-filter">
+              <div class="moj-filter__header">
+                <div class="moj-filter__header-title">
+                  <h2 class="govuk-heading-m">Filter by data source</h2>
+                </div>
+                <div class="moj-filter__header-action">
+                </div>
               </div>
-            </label>
-          </div>
-          <button type="submit" data-cy="search-button" data-module="govuk-button" class="govuk-button search_button__3_ZpZ ">Search</button>
-        </form>
-
-        <div class="moj-filter-layout__filter">
-          <div class="moj-filter">
-          </div>
-        </div>
-        <div class="moj-filter-layout__content">
-          <div class="moj-action-bar">
-            <div class="moj-button-menu">
-              <div class="moj-button-menu__wrapper">
-                <button class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
-                  All data sources
-                </button>
-
-                <button class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
-                  Ephemeris data sources
-                </button>
+              <div class="moj-filter__content">
+                <div class="moj-filter__selected">
+                  <div class="moj-filter__selected-heading">
+                    <div class="moj-filter__heading-title">
+                      <h2 class="govuk-heading-m">Selected data sources</h2>
+                    </div>
+                    <div class="moj-filter__heading-action">
+                      <p><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+                    </div>
+                  </div>
+                  <ul class="moj-filter-tags">
+                    <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Ephemeris - SSN</a></li>
+                    <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> SSN - Ephemeris</a></li>
+                    <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Ephemeris - Ephemeris</a></li>
+                  </ul>
+                </div>
+                <div class="moj-filter__options">
+                  <button class="govuk-button" data-module="govuk-button">
+                    Apply filters
+                  </button>
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        Data source
+                      </legend>
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1">
+                          <label class="govuk-label govuk-checkboxes__label" for="type">
+                            SSN - SSN
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                            Ephemeris - SSN
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                            SSN - Ephemeris
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3" checked>
+                          <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                            Ephemeris - Ephemeris
+                          </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          <div class="moj-filter-layout__content">
+            <div class="moj-action-bar">
+              <div class="moj-action-bar__filter">
+              </div>
+
 
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
-          <col>
-            <colgroup span="2"></colgroup>
-            <colgroup span="2"></colgroup>
-            <colgroup span="2"></colgroup>
-            <colgroup span="2"></colgroup>
 
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -144,8 +178,9 @@ Upcoming conjunction events
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
             </tr>
           </tbody>
-        </col>
       </table>
+  </div>
+</div>
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -173,10 +208,10 @@ Upcoming conjunction events
       </div>
   </main>
 </div>
+  <script>
+    window.MOJFrontend.initAll()
+  </script>
 
-<script src="<sst-alpha>/<application>.js"></script>
-<script>
-window.MOJFrontend.initAll()
-</script>
+
 
 {% endblock %}

@@ -13,7 +13,7 @@ $(document).ready(function () {
   startHidden: true,
   toggleButton: {
     container: $('.moj-action-bar__filter'),
-    showText: 'Show filter',
+    showText: 'Filter by data source',
     hideText: 'Hide filter',
     classes: 'govuk-button--secondary'
   },
