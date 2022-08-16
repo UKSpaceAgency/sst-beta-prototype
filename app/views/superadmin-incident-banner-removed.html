@@ -1,16 +1,26 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Setup menu
+Manage incident banner
 {% endblock %}
 
 {% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Manage incident banner</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-
-      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
     <div class="govuk-notification-banner__header">
       <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
         Success
@@ -18,113 +28,55 @@ Setup menu
     </div>
     <div class="govuk-notification-banner__content">
       <h3 class="govuk-notification-banner__heading">
-        The incident banner has been removed from the site. 
+        The incident banner will no longer be visible to users of the service.
       </h3>
-      <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> if you think there's a problem.</p>
+      <p class="govuk-body">To display the banner, go to the <a class="govuk-link" href="superadmin-display-incident-banner">manage incident banner</a> page.</p>
+
+      <form class="form" action="/admin-homepage" method="post">
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          View upcoming conjunction events page
+        </button>
+        </form>
+
     </div>
   </div>
 
-      Your account
+    <h1 class="govuk-heading-xl">Manage incident banner</h1>
 
-    </h1>
-
-    <ol class="app-task-list">
-
-      <li>
-        <h2 class="app-task-list__section">
-           Change your account details
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-admin-account-information">Your account details</a>
-            </span>
-
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-        Change your notification settings
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="operator-notification-settings-view" aria-describedby="notification-settings">
-                Notification settings
-              </a>
-            </span>
-
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-threshold-settings-view" aria-describedby="event-thresholds">
-                Event notification thresholds settings
-              </a>
-            </span>
-
-          </li>
-
-        </ul>
-      </li>
+    <p class="gem-c-lead-paragraph">In the case of an incident, the Monitor your satellites service will remain live, but there will be a banner at the top of each page warning users that the information presented on Monitor your satellites may not be accurate:
+</p>
 
 
-
-      <li>
-        <h2 class="app-task-list__section">
-           Manage organisation and user details
-        </h2>
-        <ul class="app-task-list__items">
-
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="/superadmin-account-organisations-overview">Organisations</a>
-              </span>
-              <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                  <a href="/superadmin-invite-new-member">Add a new user</a>
-                </span>
-
-
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          View terms and conditions and data privacy notice
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-ts-and-cs" aria-describedby="terms-of-service">
-                Terms and Conditions
-              </a>
-            </span>
-
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="operator-account-data-privacy" aria-describedby="data-privacy">
-                Data privacy and security
-              </a>
-            </span>
-
-          </li>
-        </ul>
-      </li>
-
-
-<form class="form" action="/superadmin-incident" method="post">
-  <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-Display incident banner
-</button>
-          </form>
-
-
-    </ol>
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+<div class="govuk-notification-banner__header">
+<h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+Important
+</h2>
+</div>
+<div class="govuk-notification-banner__content" >
+  <h3 class="govuk-notification-banner__heading">
+    Due to an ongoing incident, Monitor your satellites may display inaccurate information at this time.
+  </h3>
+    <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> for more information</p>
   </div>
 </div>
+          <div class="govuk-button-group">
 
+            <form class="form" action="/superadmin-remove-incident-banner-confirmation" method="post">
+              <button class="govuk-button" data-module="govuk-button">
+            Remove incident banner
+            </button>
+                      </form>
+
+          <form class="form" action="/superadmin-account" method="post">
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to account page
+          </button>
+
+          </div>
+
+    </div>
+</div>
+  </main>
+  </div>
 {% endblock %}
