@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Incident
+Manage incident banner
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@ Incident
       <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/superadmin-account-organisations-overview">Incident</a>
+      <a class="govuk-breadcrumbs__link" href="#">Manage incident banner</a>
     </li>
     </ol>
 </div>
@@ -24,7 +24,7 @@ Incident
         <h2 class="govuk-error-summary__title" id="error-summary-title">
           Are you sure you want to display the incident banner?
         </h2>
-        <p class="govuk-body"> This will be visible to all users of the service. You will have to manually remove the incident banner by going to the account page.</p>
+        <p class="govuk-body"> The banner will be visible to all users of the service until you manually remove it by going to the <u>manage incident banner</u> page, in the account section of the site.</p>
         <div class="govuk-button-group">
       <form class="form" action="/superadmin-incident-banner-displayed" method="post">
           <button class="govuk-button govuk-button--warning" data-module="govuk-button">
@@ -32,7 +32,7 @@ Incident
         </button>
         </form>
 
-      <form class="form" action="/superadmin-incident" method="post">
+      <form class="form" action="/superadmin-display-incident-banner" method="post">
         <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Cancel
       </button>
@@ -40,10 +40,10 @@ Incident
       </div>
       </div>
 
-    <h1 class="govuk-heading-xl">Incident</h1>
+    <h1 class="govuk-heading-xl">Manage incident banner</h1>
 
-    <p class="gem-c-lead-paragraph">In the case of an incident (including problems with Space-track or a Kessler event) the Monitor your satellites service will remain up, but there will be a banner at the top of each page saying that the information presented on Mys may not be accurate:
-</p>
+    <p class="gem-c-lead-paragraph">In the case of an incident, the Monitor your satellites service will remain live, but there will be a banner at the top of each page warning users that the information presented on Monitor your satellites may not be accurate:
+  </p>
 
 
 <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
@@ -53,26 +53,16 @@ Important
 </h2>
 </div>
 <div class="govuk-notification-banner__content" >
-<p class="govuk-notification-banner__heading">
-Due to an ongoing incident Monitor my satellites may display inaccurate information.
-</p>
-</div>
-</div>
-
-<div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-      Please provide more detail on the incident
-    </label>
-  </h1>
-  <div id="more-detail-hint" class="govuk-hint">
-  For example, Space-track is down, Kessler event, etc
+  <h3 class="govuk-notification-banner__heading">
+    Due to an ongoing incident, Monitor your satellites may display inaccurate information at this time.
+  </h3>
+    <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> for more information</p>
   </div>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
           <div class="govuk-button-group">
 
-            <form class="form" action="/admin-homepage" method="post">
-              <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            <form class="form" action="/superadmin-display-incident-banner-confirmation" method="post">
+              <button class="govuk-button" data-module="govuk-button">
             Display incident banner
             </button>
                       </form>
