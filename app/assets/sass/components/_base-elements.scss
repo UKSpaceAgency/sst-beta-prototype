@@ -1,0 +1,171 @@
+/* Base elements
+*/
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-ononesx-font-smoothing: grayscale;
+
+    & .govuk-header {
+        border-color: #1d70b8;
+    }
+}
+
+pre,
+code {
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 10pt;
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+        margin-bottom: 1rem;
+    }
+
+    & dt {
+        font-size: smaller !important;
+        display: inline-flex;
+        flex: 1 2 30%;
+        justify-content: flex-end;
+        align-self: flex-start;
+
+        & > * {
+            font-size: smaller !important;
+        }
+    }
+
+    & dd {
+        font-size: smaller !important;
+        display: inline-flex;
+        flex: 1 4 50%;
+        max-width: 50%;
+        margin-left: 1rem;
+
+        & > * {
+            font-size: smaller !important;
+        }
+    }
+}
+
+button {
+    overflow: visible;
+    width: auto;
+    padding: 0;
+    border: none;
+    margin: 0;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    appearance: none;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Remove excess padding and border in Firefox 4+ */
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+
+
+div[role='heading'] {
+    padding-left: 0.5rem;
+}
+
+.govuk-heading-* {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.govuk-body:not(article) {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+#cases-map-container,
+.map {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75vh;
+    border: 1px solid black;
+}
+
+
+.__rcs-handle-button:hover {
+    background: $primary-colour;
+}
+
+.__rcs-handle-line:hover {
+    background-color: $primary-colour;
+    color: $primary-colour;
+    border-color: $primary-colour;
+}
+
+
+.tab-link {
+    @extend .govuk-link ;
+    @extend .govuk-\!-font-size-19;
+    @extend .govuk-\!-margin-right-7;
+    @extend .govuk-link--no-visited-state;
+
+    padding-bottom: 2px;
+    color: #1e70b8;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.active,
+    &.focus {
+        border-bottom: 4px solid #1e70b8 !important;
+        color: #1e70b8;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 1rem;
+    }
+}
+
+
+.map-tab-container {
+    &.active {
+        padding: 0 1rem;
+    }
+
+    &:not(.active) {
+        background: #f3f2f1;
+        padding: .5rem 1rem;
+    }
+}
+
+.map-tab {
+    @extend .govuk-link;
+    @extend .govuk-\!-margin-right-1;
+    @extend .govuk-link--no-visited-state;
+    @extend .govuk-\!-font-size-19;
+    @extend .govuk-\!-font-weight-bold;
+
+    color: #1e70b8;
+    cursor: pointer;
+    text-decoration: none;
+
+    &.active,
+    &.focus {
+        border-bottom: 4px solid #1e70b8 !important;
+        color: #1e70b8;
+        padding: .5rem 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 1rem;
+    }
+}
