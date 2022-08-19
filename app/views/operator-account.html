@@ -8,20 +8,54 @@ Setup menu
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+
     <h1 class="govuk-heading-xl">
-      <form class="form" action="/operator-homepage" method="post">
-      Your account
+      Your account information
+      </h1>
 
-    </h1>
-  <form class="form" action="/operator-initial-setup" method="post">
-
+    <ul class="app-task-list">
 
 
 
-    <ol class="app-task-list">
+          <li>
+            <h2 class="app-task-list__section">
+             View your account details
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="/operator-account-information">Account details</a>
+                </span>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="app-task-list__section">
+            Change your notification settings
+            </h2>
+            <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/operator-threshold-settings-view" aria-describedby="event-thresholds">
+                Event notification thresholds settings
+              </a>
+            </span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="operator-notification-settings-view" aria-describedby="notification-settings">
+                Notification settings
+              </a>
+            </span>
+          </li>
+
+        </ul>
+      </li>
+
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span>View the Terms and Conditions
+      View terms and conditions and data privacy notice
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
@@ -35,65 +69,7 @@ Setup menu
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="operator-account-data-privacy" aria-describedby="data-privacy">
-                Data privacy and security
-              </a>
-            </span>
-
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">2. </span> View your account details
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-account-information">Your account details</a>
-            </span>
-
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-account-info">All organisations' information</a>
-            </span>
-
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-editable-account-information">Your account details [editable]</a>
-            </span>
-
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">3. </span>View and edit your account settings
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="operator-notification-settings-view" aria-describedby="notification-settings">
-                Notification settings
-              </a>
-            </span>
-
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-threshold-settings-view" aria-describedby="event-thresholds">
-                Event notification thresholds settings
-              </a>
-            </span>
-
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/operator-notation-settings-view" aria-describedby="event-thresholds">
-                Notation settings
+                Data privacy notice
               </a>
             </span>
 
@@ -102,17 +78,7 @@ Setup menu
       </li>
 
         </ul>
-      </li>
 
-
-
-      <button class="govuk-button" data-module="govuk-button">
-            Return to events page
-        </button>
-          </form>
-
-
-    </ol>
   </div>
 </div>
 

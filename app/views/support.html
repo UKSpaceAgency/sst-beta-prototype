@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Support
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Support</h1>
+
+    </div>
+
+    <div class="govuk-grid-column-one-quarter">
+      <h3 class="govuk-heading-s">Contents</h3>
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item">
+          <a href="#using-the-service">Using the service</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="#support-process">The support process</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="#service-availability">Service availability</a>
+        </li>
+        </ul>
+      </div>
+
+    </div>
+
+      <div class="govuk-grid-column-three-quarters">
+
+
+  <h2 class="govuk-heading-l" id="using-the-service">Using the service</h2>
+
+<p class="govuk-body"> Monitor your satellites aims to provide clear, actionable data to help its users make informed decisions regarding potential collisions. In order to do this, it is important to understand how to use the service.</p>
+ <p class="govuk-body">We have provided a brief <a href="https://www.youtube.com/watch?v=ba0cGB2JVWM">video</a> [5 minutes] that will introduce you to the main features of Monitor your satellites, including: </p>
+ <ul class="list__list-bullet">
+<li class="govuk-body"> An overview of the main pages on the site</li>
+<li class="govuk-body">How to set your own event notification thresholds settings, to determine what events are of high interest to you </li>
+<li class="govuk-body">How to choose your notification settings </li>
+</ul>
+
+ <p class="govuk-body">There is also additional material provided on our technical documentation site, on:</p>
+
+ <ul class="list__list-bullet">
+<li class="govuk-body"><a href="#">How to upload and manage ephemeris data</a></li>
+<li class="govuk-body"><a href="#">How to use the API</a> </li>
+</ul>
+
+<h2 class="govuk-heading-l" id="support-process">The support process</h2>
+<p class="govuk-body"> Monitor your satellites is expected to run reliably at all times and available 24/7. However, like all web services, bugs can be introduced and unexpected downtime can occur, at which point support will be necessary.</p>
+<p class="govuk-body"> Technical support for Monitor your satellites is available 9-5, Monday to Friday. In the event of an issue occuring outside of Monday to Friday 9-5, we will respond the next working day.</p>
+
+<p class="govuk-body"> If you have any questions, or need any support whilst using the service, email <a href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> with any queries.</p>
+
+<h2 class="govuk-heading-l" id="service-availability">Service availability</h2>
+
+<p class="govuk-body">You can check if there are any problems with the service on the <a href="#">service availability</a> page.</p>
+<p class="govuk-body">You can also check the <a href="monitoring-2">performance of external data sources</a> used by Monitor your satellites.</p>
+
+<form class="form" action="/operator-homepage" method="post">
+<button class="govuk-button" data-module="govuk-button">
+      View upcoming conjunction events
+  </button>
+    </form>
+
+</div>
+
+<div class="govuk-grid-row">
+
+</div>
+
+  </main>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+<footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#1">
+              Cookies
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#2">
+              Data privacy notice
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#3">
+              Accessibility statement
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#3">
+              Support
+            </a>
+          </li>
+        </ul>
+
+        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}
