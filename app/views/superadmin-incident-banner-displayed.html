@@ -28,7 +28,7 @@ Manage incident banner
     </div>
     <div class="govuk-notification-banner__content">
       <h3 class="govuk-notification-banner__heading">
-        The incident banner will now be visible to all users of the service.
+        The incident banner for [Name of incident banner] will now be visible to all users of the service.
       </h3>
       <p class="govuk-body">To remove the banner, go to the <a class="govuk-link" href="superadmin-remove-incident-banner">manage incident banner</a> page.</p>
 
@@ -41,37 +41,116 @@ Manage incident banner
     </div>
   </div>
 
-    <h1 class="govuk-heading-xl">Manage incident banner</h1>
+  <h1 class="govuk-heading-xl">Manage incident banner</h1>
 
-    <p class="gem-c-lead-paragraph">In the case of an incident, the Monitor your satellites service will remain live, but there will be a banner at the top of each page warning users that the information presented on Monitor your satellites may not be accurate:
-  </p>
+  <p class="gem-c-lead-paragraph">In the case of an incident, the Monitor your satellites service will remain live, but there will be a banner at the top of each page warning users that the information presented on Monitor your satellites may not be accurate.
+</p>
 
-
-<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-<div class="govuk-notification-banner__header">
-<h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-Important
-</h2>
-</div>
-<div class="govuk-notification-banner__content" >
-  <h3 class="govuk-notification-banner__heading">
-    Due to an ongoing incident, Monitor your satellites may display inaccurate information at this time.
-  </h3>
-    <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> for more information</p>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Select the incident banner you would like to display:
+    </h1>
+  </legend>
+  <div class="govuk-radios" data-module="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        Major incident
+      </label>
+      <p></p>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+      </h2>
+      </div>
+      <div class="govuk-notification-banner__content" >
+        <h3 class="govuk-notification-banner__heading">
+          Due to an ongoing incident, Monitor your satellites may display inaccurate information at this time.
+        </h3>
+          <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> for more information</p>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        Technical issue ingesting conjunction data messages
+      </label>
+      <p></p>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+      </h2>
+      </div>
+      <div class="govuk-notification-banner__content" >
+        <h3 class="govuk-notification-banner__heading">
+          Due to a technical issue ingesting conjunction data messages, Monitor your satellites may display inaccurate information at this time.
+        </h3>
+          <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> for more information</p>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+        Technical issue ingesting object data
+      </label>
+      <p></p>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+      </h2>
+      </div>
+      <div class="govuk-notification-banner__content" >
+        <h3 class="govuk-notification-banner__heading">
+          Due to a technical issue ingesting object data, Monitor your satellites may display inaccurate information at this time.
+        </h3>
+          <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> for more information</p>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+        Technical issue ingesting orbital analyses
+      </label>
+      <p></p>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+      </h2>
+      </div>
+      <div class="govuk-notification-banner__content" >
+        <h3 class="govuk-notification-banner__heading">
+          Due to a technical issue ingesting ingesting orbital analyses, Monitor your satellites may display inaccurate information at this time.
+        </h3>
+          <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">monitoryoursatellites@ukspaceagency.gov.uk</a> for more information</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+</fieldset>
 </div>
-          <div class="govuk-button-group">
 
-            <form class="form" action="/superadmin-display-incident-banner-confirmation" method="post">
-              <button class="govuk-button" data-module="govuk-button">
-            Display incident banner
-            </button>
-                      </form>
+        <div class="govuk-button-group">
 
-          <form class="form" action="/superadmin-account" method="post">
-          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Return to account page
+          <form class="form" action="/superadmin-display-incident-banner-confirmation" method="post">
+            <button class="govuk-button" data-module="govuk-button">
+          Display incident banner
           </button>
+                    </form>
+
+        <form class="form" action="/superadmin-account" method="post">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Return to account page
+        </button>
 
           </div>
 
