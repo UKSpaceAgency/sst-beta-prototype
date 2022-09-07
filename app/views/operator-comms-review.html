@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+AAA0001 Contact analyst
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="operator-homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="warning-1">Event AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/operator-communication-warning-1">Contact analyst</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">
+      Contact a UKSA analyst
+    </h1>
+    <p> UKSA analysts are available Monday to Sunday, 9am to 5pm (except public holidays).
+        Your request will be triaged and an analyst will get back to you as soon as possible.
+    </p>
+    <div class="govuk-form-group">
+
+
+      <div id="more-detail-hint" class="govuk-hint">
+        UKSA analysts <b> can </b> provide:
+        <ul>
+          <li>Further detail on their calculations</li>
+          <li>An indication on whether further analysis of an event is possible</li>
+        </ul>
+        UKSA analysts <b> cannot </b> provide:
+        <ul>
+          <li>Advice how you should manoeuvre your satellite</li>
+        </ul>
+      </div>
+      <dl class="govuk-summary-list">
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Event ID
+           </dt>
+           <dd class="govuk-summary-list__value">
+            dsafd-dfdks-adjsf
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+           example.email@operator.gov.uk
+         </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional email addresses
+          </dt>
+          <dd class="govuk-summary-list__value">
+           example1.email@operator.gov.uk, example2.email@operator.gov.uk
+         </dd>
+         <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/contact-analyst-form">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your request
+          </dt>
+          <dd class="govuk-summary-list__value" >
+          I'd like to understand why your probability of collision calculation is so much lower than Space-Track.
+         </dd>
+         <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/contact-analyst-form">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+        </div>
+      </dl>
+
+    <a href="/operator-comms-history" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+    Send</a>
+    </div>
+
+  </main>
+{% endblock %}
