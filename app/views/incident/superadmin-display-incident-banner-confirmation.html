@@ -27,7 +27,7 @@ Confirm incident banner settings
         <h2 class="govuk-error-summary__title" id="error-summary-title">
           Are you sure you want to display the incident banner for [Name of incident banner]?
         </h2>
-        <p class="govuk-body"> The banner will be visible to all users of the service until you manually remove it.</p>
+        <p class="govuk-body"> The banner will be visible to all users of the service until the active time period is over or until you manually remove it.</p>
         <div class="govuk-button-group">
       <form class="form" action="/incident/superadmin-incident-banner-displayed" method="post">
           <button class="govuk-button govuk-button--warning" data-module="govuk-button">
@@ -56,10 +56,10 @@ Confirm incident banner settings
   </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Scheduled time
+      Active time period
     </dt>
     <dd class="govuk-summary-list__value">
-      [start time entered][Start date entered] to [End time entered][End date entered]<br><b>OR</b> Indefintiely, pending manual removal [If activate now was selected]
+      [start time entered][Start date entered] to [End time entered][End date entered]<br><b>OR</b> Indefintiely, until removed [If activate now was selected]
     </dd>
   </div>
 </dl>
