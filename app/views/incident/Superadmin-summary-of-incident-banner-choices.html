@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm incident banner settings
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/incident/superadmin-display-incident-banner">Manage incident banner</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Confirm incident banner settings</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Confirm incident banner settings</h1>
+
+        <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Incident type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Dependent on incident banner selected]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/incident/superadmin-change-incident-type">
+          Change<span class="govuk-visually-hidden">incident type</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Start date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Start date entered],[start time entered]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/incident/superadmin-change-start-date">
+          Change<span class="govuk-visually-hidden"> start date</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        End date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [End date entered],[End time entered]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/incident/superadmin-change-end-date">
+          Change<span class="govuk-visually-hidden"> end date</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+              <div class="govuk-button-group">
+
+                <form class="form" action="/incident/superadmin-display-incident-banner-confirmation" method="post">
+                  <button class="govuk-button" data-module="govuk-button">
+                Display incident banner
+                </button>
+                          </form>
+
+              <form class="form" action="/incident/superadmin-display-incident-banner" method="post">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Return to incident banner options
+              </button>
+
+              </div>
+  </main>
+  </div>
+{% endblock %}

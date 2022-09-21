@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Manage incident banner
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    The is currently an incident banner for [name of incident banner chosen] displayed on the site
+  </strong>
+</div>
+
+        <h1 class="govuk-heading-xl">Manage incident banner</h1>
+
+        <p class="gem-c-lead-paragraph"><b>Details of the banner currently displayed on Monitor your satellites:</p>
+
+        <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Incident type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Dependent on incident banner selected]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/incident/superadmin-change-incident-type-2">
+          Change<span class="govuk-visually-hidden">incident type</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Start date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Start date entered],[start time entered]
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        End date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [End date entered],[End time entered]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/incident/superadmin-change-end-date-2">
+          Change<span class="govuk-visually-hidden"> end date</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+                <form class="form" action="/incident/are-you-sure-remove-incident-banner" method="post">
+                  <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Remove incident banner
+</button>
+                          </form>
+  </main>
+  </div>
+{% endblock %}
