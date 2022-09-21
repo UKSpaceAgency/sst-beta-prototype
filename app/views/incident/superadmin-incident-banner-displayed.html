@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Incident banner displayed
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/incident/superadmin-display-incident-banner">Manage incident banner</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Confirm incident banner settings</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Incident banner displayed</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        The incident banner for [Name of incident banner] will now be visible to all users of the service.
+      </h3>
+      <p class="govuk-body">To remove the banner, go to the <a class="govuk-link" href="/incident/superadmin-change-incident-banner-displayed">manage incident banner</a> page.</p>
+
+      <form class="form" action="/operator-homepage-incident" method="post">
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          View upcoming conjunction events page
+        </button>
+        </form>
+
+    </div>
+  </div>
+
+        <h1 class="govuk-heading-xl">Confirm incident banner settings</h1>
+
+        <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Incident type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Dependent on incident banner selected]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden">incident type</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Start date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [Start date entered],[start time entered]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> start date</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        End date
+      </dt>
+      <dd class="govuk-summary-list__value">
+        [End date entered],[End time entered]
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> end date</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+              <div class="govuk-button-group">
+
+                <form class="form" action="#" method="post">
+                  <button class="govuk-button" data-module="govuk-button">
+                Display incident banner
+                </button>
+                          </form>
+
+              <form class="form" action="#" method="post">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Return to incident banner options
+              </button>
+
+              </div>
+  </main>
+  </div>
+{% endblock %}
