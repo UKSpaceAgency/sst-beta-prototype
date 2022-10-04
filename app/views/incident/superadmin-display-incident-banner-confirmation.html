@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirm incident banner settings
+Review new incident banner
 {% endblock %}
 
 {% block content %}
@@ -12,10 +12,13 @@ Confirm incident banner settings
       <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Manage incident banner</a>
+      <a class="govuk-breadcrumbs__link" href="#">Manage incident banners</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Confirm incident banner settings</a>
+      <a class="govuk-breadcrumbs__link" href="#">Schedule new incident banner</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Review new incident banner</a>
     </li>
     </ol>
 </div>
@@ -25,13 +28,13 @@ Confirm incident banner settings
 
         <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
         <h2 class="govuk-error-summary__title" id="error-summary-title">
-          Are you sure you want to display the incident banner for [Name of incident banner]?
+          Are you sure you want to schedule an incident banner for [Name of incident banner]?
         </h2>
         <p class="govuk-body"> The banner will be visible to all users of the service until the active time period is over or until you manually remove it.</p>
         <div class="govuk-button-group">
       <form class="form" action="/incident/superadmin-incident-banner-displayed" method="post">
           <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-          Display incident banner
+          Schedule incident banner
         </button>
         </form>
 
@@ -43,7 +46,7 @@ Confirm incident banner settings
       </div>
       </div>
 
-      <h1 class="govuk-heading-xl">Confirm incident banner settings</h1>
+      <h1 class="govuk-heading-xl">Review new incident banner</h1>
 
       <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
@@ -68,7 +71,7 @@ Confirm incident banner settings
 
                 <form class="form" action="#" method="post">
                   <button class="govuk-button" data-module="govuk-button">
-                Display incident banner
+                Schedule incident banner
                 </button>
                           </form>
 

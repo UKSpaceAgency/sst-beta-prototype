@@ -12,7 +12,7 @@ Incident banner removed
       <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Manage incident banner</a>
+      <a class="govuk-breadcrumbs__link" href="#">Manage incident banners</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
       <a class="govuk-breadcrumbs__link" href="#">Remove incident banner</a>
@@ -26,12 +26,84 @@ Incident banner removed
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Incident banner has been removed.
+    </h3>
+    <p class="govuk-body">This banner will no longer be displayed on the site. </p>
+    <form class="form" action="/operator-homepage" method="post">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        View upcoming conjunction events page
+      </button>
+      </form>
+  </div>
+</div>
 
-        <div class="govuk-panel govuk-panel--confirmation">
-          <h1 class="govuk-panel__title">Incident banner has been removed from Monitor your satellites</h1>
-        </div>
+<h1 class="govuk-heading-xl">Manage incident banners</h1>
 
-          <p class="govuk-body">To display another incident banner on the site, go to the <a class="govuk-link" href="/incident/superadmin-display-incident-banner">manage incident banner</a> page.</p>
+<p class="gem-c-lead-paragraph">In the case of an incident, the Monitor your satellites service will remain live, but it is important to notify all Monitor your satellites users.</p>
+<p class="gem-c-lead-paragraph">Superadmins are able to display banners that will be visible at the top of each page, warning users that the information presented on Monitor your satellites may not be accurate.</p>
+
+<h2 class="govuk-heading-l">Scheduled incident banners</h2>
+
+  <table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th scope="col" style="width: 30%" class="govuk-!-text-align-left"> Incident type</th>
+<th scope="col" style="width: 65%" class="govuk-!-text-align-left">Active time period </th>
+<th scope="col" style="width: 5%" class="govuk-!-text-align-left"></th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell"> Technical issue ingesting conjuntion data messages</td>
+<td class="govuk-table__cell">[start time][Start date] to [End time][End date]<b>OR</b> Until removed</td>
+<td class="govuk-table__cell"><form class="form" action="/incident/are-you-sure-remove-incident-banner" method="post">
+<button class="govuk-button govuk-button--warning" data-module="govuk-button">
+Remove
+</button>
+        </form></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Major incident</td>
+<td class="govuk-table__cell">[start time][Start date] to [End time][End date]<b>OR</b> Until removed</td>
+<td class="govuk-table__cell"><form class="form" action="/incident/are-you-sure-remove-incident-banner" method="post">
+<button class="govuk-button govuk-button--warning" data-module="govuk-button">
+Remove
+</button>
+        </form></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Technical issue ingesting object data</td>
+<td class="govuk-table__cell">[start time][Start date] to [End time][End date]<b>OR</b> Until removed</td>
+<td class="govuk-table__cell"><form class="form" action="/incident/are-you-sure-remove-incident-banner" method="post">
+<button class="govuk-button govuk-button--warning" data-module="govuk-button">
+Remove
+</button>
+        </form></td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="govuk-button-group">
+
+  <form class="form" action="/incident/superadmin-display-incident-banner-2" method="post">
+    <button class="govuk-button" data-module="govuk-button">
+  Schedule new incident banner
+  </button>
+            </form>
+
+<form class="form" action="/superadmin-account" method="post">
+<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Return to account page
+</button>
 
 </div>
 </div>
