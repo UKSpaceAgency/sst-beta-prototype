@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirm incident banner settings
+Review new incident banner
 {% endblock %}
 
 {% block content %}
@@ -12,10 +12,13 @@ Confirm incident banner settings
       <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/incident/superadmin-display-incident-banner">Manage incident banner</a>
+      <a class="govuk-breadcrumbs__link" href="#">Manage incident banners</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Confirm incident banner settings</a>
+      <a class="govuk-breadcrumbs__link" href="#">Schedule new incident banner</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Review new incident banner</a>
     </li>
     </ol>
 </div>
@@ -23,7 +26,7 @@ Confirm incident banner settings
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">Confirm incident banner settings</h1>
+        <h1 class="govuk-heading-xl">Review new incident banner</h1>
 
         <dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
@@ -48,11 +51,11 @@ Confirm incident banner settings
 
                 <form class="form" action="/incident/superadmin-display-incident-banner-confirmation" method="post">
                   <button class="govuk-button" data-module="govuk-button">
-                Display incident banner
+                Schedule incident banner
                 </button>
                           </form>
 
-              <form class="form" action="/incident/superadmin-display-incident-banner" method="post">
+              <form class="form" action="/incident/superadmin-display-incident-banner-2" method="post">
               <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
                 Return to incident banner options
               </button>

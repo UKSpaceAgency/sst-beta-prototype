@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Incident banner displayed
+Review new incident banner
 {% endblock %}
 
 {% block content %}
@@ -12,13 +12,13 @@ Incident banner displayed
       <a class="govuk-breadcrumbs__link" href="/superadmin-account">Account</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/incident/superadmin-display-incident-banner">Manage incident banner</a>
+      <a class="govuk-breadcrumbs__link" href="/incident/superadmin-display-incident-banner">Manage incident banners</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Confirm incident banner settings</a>
+      <a class="govuk-breadcrumbs__link" href="#">Schedule new incident banner</a>
     </li>
     <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="#">Incident banner displayed</a>
+      <a class="govuk-breadcrumbs__link" href="#">Review new incident banner</a>
     </li>
     </ol>
 </div>
@@ -34,20 +34,25 @@ Incident banner displayed
     </div>
     <div class="govuk-notification-banner__content">
       <h3 class="govuk-notification-banner__heading">
-        The incident banner for [Name of incident banner] will now be visible to all users of the service.
+        The incident banner for [Name of incident banner] has been scheduled.
       </h3>
-      <p class="govuk-body">To remove the banner, go to the <a class="govuk-link" href="/incident/manage-incident-banner">manage incident banner</a> page.</p>
-
+      <p class="govuk-body"> The banner will be visible to all users of the service between [start time][Start date] and [End time][End date]<b>OR</b> Until removed.</p>
+<div class="govuk-button-group">
       <form class="form" action="/operator-homepage-incident" method="post">
           <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          View upcoming conjunction events page
+          Upcoming conjunction events page
         </button>
         </form>
-
+        <form class="form" action="/incident/manage-incident-banner" method="post">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Manage incident banners
+          </button>
+          </form>
+</div>
     </div>
   </div>
 
-  <h1 class="govuk-heading-xl">Confirm incident banner settings</h1>
+  <h1 class="govuk-heading-xl">Review new incident banner</h1>
 
   <dl class="govuk-summary-list">
 <div class="govuk-summary-list__row">
@@ -67,20 +72,22 @@ Incident banner displayed
 </dd>
 </div>
 </dl>
-              <div class="govuk-button-group">
 
-                <form class="form" action="#" method="post">
-                  <button class="govuk-button" data-module="govuk-button">
-                Display incident banner
-                </button>
-                          </form>
+          <div class="govuk-button-group">
 
-              <form class="form" action="#" method="post">
-              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Return to incident banner options
-              </button>
+            <form class="form" action="#" method="post">
+              <button class="govuk-button" data-module="govuk-button">
+            Schedule incident banner
+            </button>
+                      </form>
 
-              </div>
+          <form class="form" action="#" method="post">
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to incident banner options
+          </button>
+
+          </div>
+
   </main>
   </div>
 {% endblock %}

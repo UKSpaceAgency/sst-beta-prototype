@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Manage incident banner
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Manage incident banner</h1>
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+<div class="govuk-notification-banner__header">
+<h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+Important
+</h2>
+</div>
+<div class="govuk-notification-banner__content" >
+  <h3 class="govuk-notification-banner__heading">
+    [Message dependent on incident banner selected]
+  </h3>
+  </div>
+</div>
+
+        <p class="gem-c-lead-paragraph"><b>Details of incident banner:</p>
+
+          <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Incident type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          [Dependent on incident banner selected]
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Active time period
+        </dt>
+        <dd class="govuk-summary-list__value">
+          [start time entered][Start date entered] to [End time entered][End date entered]<br><b>OR</b> Until removed [If activate now was selected]
+        </dd>
+      </div>
+    </dl>
+
+                <form class="form" action="/incident/are-you-sure-remove-incident-banner" method="post">
+                  <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Remove incident banner
+</button>
+                          </form>
+  </main>
+  </div>
+{% endblock %}
