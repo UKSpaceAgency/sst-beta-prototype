@@ -33,6 +33,9 @@ Event AAA0001
           <a href="#accordion-heading-2">Evolution of miss distance</a>
         </li>
         <li class="moj-side-navigation__item">
+          <a href="#accordion-heading-6">Probability of collision calculations</a>
+        </li>
+        <li class="moj-side-navigation__item">
           <a href="#accordion-heading-3">Object data</a>
         </li>
         <li class="moj-side-navigation__item">
@@ -40,9 +43,6 @@ Event AAA0001
         </li>
         <li class="moj-side-navigation__item">
           <a href="#accordion-heading-5">Event history</a>
-        </li>
-        <li class="moj-side-navigation__item">
-          <a href="#accordion-heading-6">Data validity</a>
         </li>
         <li class="moj-side-navigation__item">
           <a href="#accordion-heading-7">Further information</a>
@@ -106,39 +106,6 @@ Event AAA0001
         </tbody>
       </table>
 
-      <details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Why do Space-Track and UKSA's probability of collision differ?
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p>Space-Track categorises objects into objects with a 1m, 3m or 5m radius. UKSA orbital analysts use information on object sizes from ESA DISCOS or a custom value if suitable. Probability of collision values will differ when different object sizes are used.</p>
-    <h3> Object sizes used for this conjunction event</h3>
-<table class="govuk-table" style="width:100%">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header" style="width:40%"></th>
-      <th scope="col" class="govuk-table__header govuk-table__header" style="width:30%">Space-Track</th>
-      <th scope="col" class="govuk-table__header govuk-table__header" style="width:30%">UKSA</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header" >Primary object</th>
-      <td class="govuk-table__cell govuk-table__cell">3</td>
-      <td class="govuk-table__cell govuk-table__cell">3.68</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Secondary object</th>
-      <td class="govuk-table__cell govuk-table__cell">5</td>
-      <td class="govuk-table__cell govuk-table__cell">4.24</td>
-    </tr>
-  </tbody>
-</table>
-  </div>
-</details>
-
 <form class="form" action="/contact-an-analyst/contact-analyst-form" method="post">
 <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
   Contact an UKSA orbital analyst
@@ -185,6 +152,50 @@ Event AAA0001
 
                 </div>
                 </div>
+
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading" id="accordion-heading-6">
+                      <span class="govuk-accordion__section-button" id="data-validity">
+                        Probability of collision calculations</span>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <p>Probability of collision values will differ depending on the object sizes and methods used in the calculations.</p>
+                          <p>Space-Track uses a radius of 1m, 3m or 5m in their probability of collision calculations. UKSA orbital analysts use information on object sizes from ESA DISCOS or a custom value if suitable.</p>
+                          <table class="govuk-table" style="width: 100%">
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header"></th>
+                                <th scope="col" class="govuk-table__header">Space-Track CDM</th>
+                                <th scope="col" class="govuk-table__header">UKSA analysis</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Method</th>
+                                <td class="govuk-table__cell">Foster-1992 method</td>
+                                <td class="govuk-table__cell">Alfano-2005 method</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Object size (m)</th>
+                                <td class="govuk-table__cell"></td>
+                                <td class="govuk-table__cell"></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header" style="text-indent: 40px">Primary object</th>
+                                <td class="govuk-table__cell">3</td>
+                                <td class="govuk-table__cell">3.96</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header" style="text-indent: 40px">Secondary object</th>
+                                <td class="govuk-table__cell">5</td>
+                                <td class="govuk-table__cell">4.24</td>
+                              </tr>
+                              </tbody>
+                              </table>
+                              <p> For more information on the analysis carried out by the UKSA, go to the <a href="/operator-definitions" class="govuk-link--no-visited-state">conjunction event analysis information</a> page.</p>
+
+                          </div>
 
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
@@ -448,97 +459,6 @@ Event AAA0001
 
 
         </div>
-
-        <div class="govuk-accordion__section ">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading" id="accordion-heading-6">
-              <span class="govuk-accordion__section-button" id="data-validity">
-                Data validity</span>
-                </div>
-                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                  <h3 class="govuk-heading-m" id="probability_of_collision_calculations">Probability of collision calculations</h3>
-                  <table class="govuk-table" style="width: 100%">
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header" style="width: 55%">Space-Track CDM</th>
-                        <td class="govuk-table__cell">Foster-1992 method</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header" style="width: 55%">UKSA analysis</th>
-                        <td class="govuk-table__cell">Alfano-2005 method</td>
-                      </tr>
-                      </tbody>
-                      </table>
-                      <p> For more information on the analysis carried out by the UKSA, see the 'Conjunction analysis process' section at the bottom of the page.</p>
-                  </div>
-
-                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                    <h3 class="govuk-heading-m" id="data_sources">Data sources</h3>
-                    <p>The data sources used to generate the event information are listed here for both UKSA and Space-Track calculations.</p>
-
-
-
-                        <table class="govuk-table" style="width:100%">
-                          <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                              <th scope="col" class="govuk-table__header" style="width:8%"></th>
-                              <th scope="col" class="govuk-table__header" style="width:32%"></th>
-                              <th scope="row" class="govuk-table__header govuk-body-s" style="width:30%">UKSA</th>
-                              <th scope="row" class="govuk-table__header govuk-body-s" style="width:30%">Space-Track CDM</th>
-                            </tr>
-                          </thead>
-                          <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                              <th scope="row" class="govuk-table__header govuk-body-s" rowspan="4">Primary object</th>
-                              <td class="govuk-table__header govuk-body-s">Data source</td>
-                              <td class="govuk-table__cell govuk-body-s">Ephemeris</td>
-                              <td class="govuk-table__cell govuk-body-s">SP ephemeris</td>
-
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__header govuk-body-s">Data received</td>
-                              <td class="govuk-table__cell govuk-body-s">03/02/21 04:23</td>
-                              <td class="govuk-table__cell govuk-body-s">03/02/21 07:56</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__header govuk-body-s">Number of observations</td>
-                              <td class="govuk-table__cell govuk-body-s">N/A</td>
-                              <td class="govuk-table__cell govuk-body-s">167</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__header govuk-body-s">Timespan of observations</td>
-                              <td class="govuk-table__cell govuk-body-s">N/A</td>
-                              <td class="govuk-table__cell govuk-body-s">65 hours</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <th scope="row" class="govuk-table__header govuk-body-s" rowspan="4">Secondary object</th>
-                              <td class="govuk-table__header govuk-body-s">Data source</td>
-                              <td class="govuk-table__cell govuk-body-s">Space-Track TLE</td>
-                              <td class="govuk-table__cell govuk-body-s">Space-Track TLE</td>
-
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__header govuk-body-s">Data received</td>
-                              <td class="govuk-table__cell govuk-body-s">03/02/21 07:56</td>
-                              <td class="govuk-table__cell govuk-body-s">03/02/21 07:56</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__header govuk-body-s">Number of observations</td>
-                              <td class="govuk-table__cell govuk-body-s">18</td>
-                              <td class="govuk-table__cell govuk-body-s">18</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__header govuk-body-s">Timespan of observations</td>
-                              <td class="govuk-table__cell govuk-body-s">48 hours</td>
-                              <td class="govuk-table__cell govuk-body-s">48 hours</td>
-                            </tr>
-
-
-                          </tbody>
-                        </table>
-                    </div>
-
-          </div>
 
           <div class="govuk-accordion__section ">
             <div class="govuk-accordion__section-header">
