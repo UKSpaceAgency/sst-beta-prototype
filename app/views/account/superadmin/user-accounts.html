@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Organisation user accounts
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/account">Account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/user-accounts">User accounts</a>
+      </li>
+    </ol>
+  </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">User accounts</h1>
+
+        <p class="govuk-body-m">There are currently <b>X</b> active users registered with Monitor your Satellites</p>
+
+          <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Organisation</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Account type</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Email</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Phone number</th>
+                <th scope="col" class="govuk-table__header" aria-sort="none" span="1" style="width: 19%">Date created</th>
+                <th scope="col" class="govuk-table__header" span="1" style="width: 5%"></th>
+
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">SpaceX</td>
+                <td class="govuk-table__cell">Administrator</td>
+                <td class="govuk-table__cell">example@cca.co.uk</td>
+                <td class="govuk-table__cell">12345 123456</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell"><a href="/account/superadmin/edit-existing-user">Edit</td>
+
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">SpaceX</td>
+                <td class="govuk-table__cell">Operator</td>
+                <td class="govuk-table__cell">example@cca.co.uk</td>
+                <td class="govuk-table__cell">12346 789322</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell"><a href="/account/superadmin/edit-existing-user">Edit</td>
+
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">SpaceX</td>
+                <td class="govuk-table__cell">User</td>
+                <td class="govuk-table__cell">example@cca.co.uk</td>
+                <td class="govuk-table__cell">12346 789322</td>
+                <td class="govuk-table__cell">22/09/2021</td>
+                <td class="govuk-table__cell"><a href="/account/superadmin/edit-existing-user">Edit</td>
+
+              </tr>
+
+            </tbody>
+          </table>
+
+          <div class="govuk-button-group">
+
+            <form class="form" action="/account/superadmin/invite-new-member" method="post">
+                  <button class="govuk-button" data-module="govuk-button">
+                        Add new user
+                    </button>
+                      </form>
+
+          <form class="form" action="/account/superadmin/account" method="post">
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to account page
+          </button>
+          </form>
+
+          </div>
+
+      </div>
+      </div>
+  </main>
+</div>
+
+
+{% endblock %}

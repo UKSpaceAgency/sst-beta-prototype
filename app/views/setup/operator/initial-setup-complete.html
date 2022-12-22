@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Setup menu
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+        You have completed account set up. You can now access Monitor your satellites.
+        </h3>
+        <div> <p class="govuk-body">For more information about how to use the service, go to the <a href="support-and-guidance">support and guidance</a> page.</p></div>
+        <form class="form" action="/operator-homepage" method="post">
+        <button class="govuk-button" data-module="govuk-button">
+              View upcoming conjunction events
+          </button>
+            </form>
+      </div>
+    </div>
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Set up your account
+    </h1>
+
+    <p class="govuk-body govuk-!-margin-bottom-7">You have completed 3 of 3 sections.</p>
+
+
+    <ul class="app-task-list">
+
+      <li>
+        <h2 class="app-task-list__section">
+          Confirm your account details
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/setup/operator/initial-account-information">Account details</a>
+            </span>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          Choose your notification settings
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/setup/operator/initial-threshold-settings" aria-describedby="event-thresholds">
+                Event notification thresholds settings
+              </a>
+            </span>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="operator-initial-notification-settings" aria-describedby="notification-settings">
+                Notification settings
+              </a>
+            </span>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+         Review terms and conditions and data privacy notice
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/operator-terms-service" aria-describedby="terms-of-service">
+                Terms and Conditions
+              </a>
+            </span>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="operator-data-privacy" aria-describedby="data-privacy">
+                Data privacy notice
+              </a>
+            </span>
+              <strong class="govuk-tag govuk-tag app-task-list__tag" id="contact-information">COMPLETED</strong>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#1">
+              Cookies
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#2">
+              Data privacy notice
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#3">
+              Accessibility statement
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#3">
+              Support and guidance
+            </a>
+          </li>
+        </ul>
+
+        <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}

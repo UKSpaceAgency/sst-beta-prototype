@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Change your account type
+{% endblock %}
+
+{% block content %}
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+      <a href="/account/superadmin/account-information" class="govuk-back-link">Back</a>
+
+  <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    Are you sure you want to change your account type?
+  </h2>
+  <p class="govuk-body"> If you are the only organisation administrator, you will be unable to change your account type until you have created another admin for your organisation.</p>
+  <div class="govuk-button-group">
+<form class="form" action="/account/superadmin/your-account-type-changed" method="post">
+    <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+    Yes, change
+  </button>
+  </form>
+
+<form class="form" action="/account/superadmin/account-information" method="post">
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Cancel
+</button>
+</form>
+</div>
+</div>
+
+<h1 class="govuk-heading-xl">Change your account type</h1>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Changing account type will change the permissions associated with your account.
+  </strong>
+</div>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      <b>Select an account type</b>
+    </legend>
+<div class="govuk-radios" data-module="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+    <label class="govuk-label govuk-radios__label" for="sign-in">
+      Administrator
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+    <label class="govuk-label govuk-radios__label" for="sign-in-2">
+      Operator
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+    <label class="govuk-label govuk-radios__label" for="sign-in-2">
+      User
+    </label>
+  </div>
+</div>
+
+</fieldset>
+</div>
+
+<details class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+  What can these accounts do?
+</span>
+</summary>
+<div class="govuk-details__text">
+<p class="govuk-body"><span class="govuk-!-font-weight-bold">Administrators</span> can view information on their organisation's satellites and the upcoming conjunction events involving them, and can upload ephemeris data to the site. Administrators can also view all user accounts for an organisation, and can add new users, and change or delete existing users.</p>
+<p class="govuk-body"><span class="govuk-!-font-weight-bold">Operators</span> can view information on their organisation's satellites  and the upcoming conjunction events involving them, and can upload ephemeris data to the site.</p>
+<p class="govuk-body"><span class="govuk-!-font-weight-bold">Users</span> can view information on their organisation's satellites and the upcoming conjunction events involving them.</p>
+</div>
+</details>
+
+</div>
+
+  </main>
+{% endblock %}

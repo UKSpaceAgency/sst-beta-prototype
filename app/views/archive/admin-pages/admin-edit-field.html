@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Event AAA0001: edit information
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/homepage">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/admin-warning-1">Event AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/admin-edit-field">Edit information</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">
+      Edit event summary and information
+    </h1>
+    <form class="form" action="/admin-warning-1" method="post">
+    <p>Any changes made here will be shown on the admin and ERT interfaces.</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Edit the event summary table by altering the labels shown</li>
+      <li>Add or edit a written event summary</li>
+      <li>Add or edit additional information fields: press and communication or other contacts</li>
+    </ul>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+          Field name:
+        </label>
+      </h1>
+      <input class="govuk-input" id="event-name" name="event-name" type="text" value = "Select from dropdown">
+    </div>
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+          Your edit:
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        Please insert your edit below. This edit will be visible to all users of the ERT interface.
+      </div>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Confirm and publish
+    </button>
+
+    </div>
+
+  </main>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Review new incident banner
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/account/superadmin/account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Manage incident banners</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Set up new incident banner</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Review new incident banner</a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          Are you sure you want to set up an incident banner for [Name of incident banner]?
+        </h2>
+        <p class="govuk-body"> The banner will be visible to all users of the service until the active time period is over or until you manually remove it.</p>
+        <div class="govuk-button-group">
+      <form class="form" action="/account/superadmin/incident/incident-banner-displayed" method="post">
+          <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Set up incident banner
+        </button>
+        </form>
+
+      <form class="form" action="/account/superadmin/incident/incident-banner-summary" method="post">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Cancel
+      </button>
+      </form>
+      </div>
+      </div>
+
+      <h1 class="govuk-heading-xl">Review new incident banner</h1>
+
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Incident type
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [Dependent on incident banner selected]
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Active time period
+    </dt>
+    <dd class="govuk-summary-list__value">
+      [start time entered][Start date entered] to [End time entered][End date entered]<br><b>OR</b> Until removed [If activate now was selected]
+    </dd>
+  </div>
+</dl>
+
+              <div class="govuk-button-group">
+
+                <form class="form" action="#" method="post">
+                  <button class="govuk-button" data-module="govuk-button">
+                Set up incident banner
+                </button>
+                          </form>
+
+              <form class="form" action="#" method="post">
+              <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Return to incident banner options
+              </button>
+
+              </div>
+  </main>
+  </div>
+{% endblock %}
