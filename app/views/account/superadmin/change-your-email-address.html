@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Change your email address
+{% endblock %}
+
+{% block content %}
+<a href="/account/superadmin/account-information" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Change your email address</h1>
+
+    <p class="govuk-body">Your current email address is <span class="govuk-!-font-weight-bold">example.operator@satellite-company.co.uk</span></p>
+
+      <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      <b>Enter your new email address here:</b>
+    </label>
+    <input class="govuk-input" id="event-name" name="event-name" type="text">
+  </div>
+
+<form class="form" action="/account/superadmin/email-changed" method="post">
+<div class="govuk-button-group">
+<button class="govuk-button" data-module="govuk-button">
+  Save
+</button>
+</form>
+
+
+</div>
+</div>
+  </main>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Unable to delete your account
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/account/admin/account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/account/admin/account-information">Your account details</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href=#">Delete your account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Unable to delete your account </a>
+    </li>
+    </ol>
+</div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+    <h2 class="govuk-error-summary__title" id="error-summary-title">
+      There is a problem
+    </h2>
+    <p class="govuk-body">It is not possible to delete your account until you have assigned another user to be administrator of your organisation. This can be done on the <a class="link" href="/operator-admin-user-accounts">Organisation user accounts</a> page.</p>
+  </div>
+
+<form class="form" action="/account/admin/account-information" method="post">
+  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Return to account details
+  </button>
+</form>
+
+</div>
+
+  </main>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Setup menu
+{% endblock %}
+
+{% block content %}
+
+
+  <form class="form" action="/setup/analyst/initial-account-information" method="post">
+    <h1 class="govuk-heading-xl">
+      Data privacy and security
+    </h1>
+    <p>WE ARE GDR COMPLIANT</P>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              I have read and agreed to the data privacy and security policy
+            </label>
+
+            <br>
+            <br>
+<br>
+      <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+        </button>
+          </form>
+
+
+    </ol>
+  </div>
+</div>
+
+{% endblock %}
