@@ -10,8 +10,6 @@ Upcoming conjunction events
     <main class="govuk-main-wrapper">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-
-
           <h1 class="govuk-heading-xl">Performance monitoring and statistics</h1>
           <p> This page shows both perfomance data for the Monitor your satellites service and more detailed information about the object and event data processed by the service. This data is broken down by organisation and by satellite.</p>
           <br>
@@ -44,27 +42,137 @@ Upcoming conjunction events
                   <a href="#accordion-heading-6">Events by satellite</a>
                 </li>
                 </ul>
-                <h2 class="govuk-heading-m">Performance monitoring</h2>
+                <h2 class="govuk-heading-l">Performance monitoring</h2>
 
-              <h2 class="govuk-heading-m">CDM ingests</h2>
-                <div style="background-color:#f3f2f1">
-                <p class="govuk-body-s">Latest ingest: 2022-06-22 15:17:30</p>
-                  <div class="chartMenu">
-                      </div>
-                      <div class="chartCard">
-                        <button onclick="timeFrame(this)" value="week">7 days</button>
-                        <button onclick="timeFrame(this)" value="month">1 month</button>
-                        <button onclick="timeFrame(this)" value="year">All time</button>
-                        <div class="chartBox">
-                          <canvas id="myChart1" width="400" height="100"></canvas>
-                        </div>
-                      </div>
-                      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-                      <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-                      <script>
+                <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h3 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                          CDM ingests
+                        </span>
+                      </h3>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                        <div style="background-color:#f3f2f1">
+                        <p class="govuk-body-s">Latest ingest: 2022-06-22 15:17:30</p>
+                          <div class="chartMenu">
+                              </div>
+                              <div class="chartCard">
+                                <button onclick="timeFrame(this)" value="week">7 days</button>
+                                <button onclick="timeFrame(this)" value="month">1 month</button>
+                                <button onclick="timeFrame(this)" value="year">All time</button>
+                                <div class="chartBox">
+                                  <canvas id="myChart1" width="400" height="100"></canvas>
+                                </div>
+                              </div>
+                              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                              <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+                              <script>
 
-                            const ctx1 = document.getElementById('myChart1');
-                            const myChart1 = new Chart(ctx1, {
+                                    const ctx1 = document.getElementById('myChart1');
+                                    const myChart1 = new Chart(ctx1, {
+                                    type: 'line',
+                                    options: {
+                                        scales: {
+                                          x: {
+                                              grid: {display: false
+                                              },
+                                              ticks: {},
+                                          },
+                                            y: {
+                                                beginAtZero: true,
+                                                grid: {display: false
+                                                }
+                                            }
+                                        }
+                                    },
+                                    data: {
+                                      labels: ['16/06/22', '17/06/22', '18/06/22', '19/06/22', '20/06/22', '21/06/22'],
+                                      datasets: [{
+                                        label: 'Space-Track',
+                                        data: [7950, 7316, 9175, 8201, 9180, 7260],
+                                        backgroundColor: '#003078',
+                                        borderColor: '#003078',
+                                        borderWidth: 1,
+                                        pointRadius: 1
+                                      },
+                                    ]
+                                    },
+                                  });
+                              </script>
+                            </div>
+                            <table class="govuk-table" style="width:100%">
+                                <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></th>
+                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></th>
+                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></th>
+                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></th>
+                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></th>
+                                </tr>
+                                </thead>
+                              <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
+                                  <td class="govuk-table__cell govuk-body-s">CDM</td>
+                                  <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                                  <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                                  <td class="govuk-table__cell govuk-body-s">1204</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
+                                  <td class="govuk-table__cell govuk-body-s">CDM</td>
+                                  <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                                  <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                                  <td class="govuk-table__cell govuk-body-s">8039</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
+                                  <td class="govuk-table__cell govuk-body-s">CDM</td>
+                                  <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                                  <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                                  <td class="govuk-table__cell govuk-body-s">5384</td>
+                                </tr>
+                              </tbody>
+                              </table>
+                              <p>Download this table [JSON] [CSV]</p>
+                              <details class="govuk-details" data-module="govuk-details">
+                                <summary class="govuk-details__summary">
+                                  <span class="govuk-details__summary-text">
+                                    Help with this table
+                                  </span>
+                                </summary>
+                                <div class="govuk-details__text">
+                                  This table shows performance monitoring information for the external sources of CDMs that Monitor your satellites ingests.
+                                  <p> </p>
+                                  <ul class="govuk-list govuk-list--bullet">
+                                    <li>Ingestion start and stop show the time the last data ingest started and finished</li>
+                                    <li>Number of items fetched shows how many items were retrieved</li>
+                                  </ul>
+                                </div>
+                            </details>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                          Object data ingests
+                        </span>
+                      </h2>
+                    </div>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                        <div style="background-color:#f3f2f1">
+                        <p class="govuk-body-s">Latest ingest: 2022-06-22 15:17:30</p>
+                        <div>
+                          <button onclick="timeFrame(this)" value="week2">7 days</button>
+                          <button onclick="timeFrame(this)" value="month2">1 month</button>
+                          <button onclick="timeFrame(this)" value="year2">All time</button>
+                          <canvas id="myChart2" width="400" height="100"></canvas>
+                          <script>
+                            const ctx2 = document.getElementById('myChart2');
+                            const myChart2 = new Chart(ctx2, {
                             type: 'line',
                             options: {
                                 scales: {
@@ -84,456 +192,417 @@ Upcoming conjunction events
                               labels: ['16/06/22', '17/06/22', '18/06/22', '19/06/22', '20/06/22', '21/06/22'],
                               datasets: [{
                                 label: 'Space-Track',
-                                data: [7950, 7316, 9175, 8201, 9180, 7260],
+                                data: [12359, 11900, 12000, 11900, 11900, 12359],
                                 backgroundColor: '#003078',
                                 borderColor: '#003078',
                                 borderWidth: 1,
                                 pointRadius: 1
                               },
-                            ]
+                              {
+                                label: 'ESA-DISCOS',
+                                data: [10359, 9900, 11000, 10900, 9900, 11359],
+                                backgroundColor: 'rgb(255, 99, 132)',
+                                borderColor: 'rgb(255, 99, 132)',
+                                borderWidth: 1,
+                                pointRadius: 1
+
+                              }
+                              ]
                             },
                           });
-                      </script>
-                    </div>
-                    <table class="govuk-table" style="width:100%">
-                        <thead class="govuk-table__head">
-                        <tr class="govuk-table__row">
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></th>
-                        </tr>
-                        </thead>
-                      <tbody class="govuk-table__body">
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
-                          <td class="govuk-table__cell govuk-body-s">CDM</td>
-                          <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-                          <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-                          <td class="govuk-table__cell govuk-body-s">1204</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
-                          <td class="govuk-table__cell govuk-body-s">CDM</td>
-                          <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-                          <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-                          <td class="govuk-table__cell govuk-body-s">8039</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
-                          <td class="govuk-table__cell govuk-body-s">CDM</td>
-                          <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-                          <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-                          <td class="govuk-table__cell govuk-body-s">5384</td>
-                        </tr>
-                      </tbody>
+                          </script>
+                          </div>
+                        </div>
+                      <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+                          <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></th>
+                          </tr>
+                          </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
+                            <td class="govuk-table__cell govuk-body-s">Satellite</td>
+                            <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                            <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                            <td class="govuk-table__cell govuk-body-s">1204</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
+                            <td class="govuk-table__cell govuk-body-s">Satellite</td>
+                            <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                            <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                            <td class="govuk-table__cell govuk-body-s">8039</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" >ESA-Discos</td>
+                            <td class="govuk-table__cell govuk-body-s">Satellite</td>
+                            <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
+                            <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
+                            <td class="govuk-table__cell govuk-body-s">5384</td>
+                          </tr>
+                        </tbody>
                       </table>
                       <p>Download this table [JSON] [CSV]</p>
                       <details class="govuk-details" data-module="govuk-details">
-                        <summary class="govuk-details__summary">
-                          <span class="govuk-details__summary-text">
-                            Help with this table
-                          </span>
-                        </summary>
-                        <div class="govuk-details__text">
-                          This table shows performance monitoring information for the external sources of CDMs that Monitor your satellites ingests.
-                          <p> </p>
-                          <ul class="govuk-list govuk-list--bullet">
-                            <li>Ingestion start and stop show the time the last data ingest started and finished</li>
-                            <li>Number of items fetched shows how many items were retrieved</li>
-                          </ul>
-                        </div>
-                    </details>
-
-                  <h2 class="govuk-heading-m">Object data ingests</h2>
-                    <div style="background-color:#f3f2f1">
-                    <p class="govuk-body-s">Latest ingest: 2022-06-22 15:17:30</p>
-                    <div>
-                      <button onclick="timeFrame(this)" value="week2">7 days</button>
-                      <button onclick="timeFrame(this)" value="month2">1 month</button>
-                      <button onclick="timeFrame(this)" value="year2">All time</button>
-                      <canvas id="myChart2" width="400" height="100"></canvas>
-                      <script>
-                        const ctx2 = document.getElementById('myChart2');
-                        const myChart2 = new Chart(ctx2, {
-                        type: 'line',
-                        options: {
-                            scales: {
-                              x: {
-                                  grid: {display: false
-                                  },
-                                  ticks: {},
-                              },
-                                y: {
-                                    beginAtZero: true,
-                                    grid: {display: false
-                                    }
-                                }
-                            }
-                        },
-                        data: {
-                          labels: ['16/06/22', '17/06/22', '18/06/22', '19/06/22', '20/06/22', '21/06/22'],
-                          datasets: [{
-                            label: 'Space-Track',
-                            data: [12359, 11900, 12000, 11900, 11900, 12359],
-                            backgroundColor: '#003078',
-                            borderColor: '#003078',
-                            borderWidth: 1,
-                            pointRadius: 1
-                          },
-                          {
-                            label: 'ESA-DISCOS',
-                            data: [10359, 9900, 11000, 10900, 9900, 11359],
-                            backgroundColor: 'rgb(255, 99, 132)',
-                            borderColor: 'rgb(255, 99, 132)',
-                            borderWidth: 1,
-                            pointRadius: 1
-
-                          }
-                          ]
-                        },
-                      });
-                      </script>
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Help with this table
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        This table shows performance monitoring information for the external data sources of satellite information that Monitor your satlelites ingests.
+                        <p> </p>
+                        <ul class="govuk-list govuk-list--bullet">
+                          <li>Ingestion start and stop show the time the last data ingest started and finished</li>
+                          <li>Number of items fetched shows how many items were retrieved</li>
+                        </ul>
                       </div>
+                      </details>
                     </div>
-                  <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-                      <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type of source</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion start</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Ingestion stop</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Number of items fetched</b></th>
-                      </tr>
-                      </thead>
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
-                        <td class="govuk-table__cell govuk-body-s">Satellite</td>
-                        <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-                        <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-                        <td class="govuk-table__cell govuk-body-s">1204</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >Space-Track</td>
-                        <td class="govuk-table__cell govuk-body-s">Satellite</td>
-                        <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-                        <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-                        <td class="govuk-table__cell govuk-body-s">8039</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >ESA-Discos</td>
-                        <td class="govuk-table__cell govuk-body-s">Satellite</td>
-                        <td class="govuk-table__cell govuk-body-s" >2022-06-22 15:17:30.560793</td>
-                        <td class="govuk-table__cell govuk-body-s">2022-06-22 15:17:34.425801</td>
-                        <td class="govuk-table__cell govuk-body-s">5384</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p>Download this table [JSON] [CSV]</p>
-                  <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      Help with this table
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    This table shows performance monitoring information for the external data sources of satellite information that Monitor your satlelites ingests.
-                    <p> </p>
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>Ingestion start and stop show the time the last data ingest started and finished</li>
-                      <li>Number of items fetched shows how many items were retrieved</li>
-                    </ul>
                   </div>
-                  </details>
-                  <h2 class="govuk-heading-m"> Notfications sent</h2>
-                  <p> Number of total, sms and email notifications sent by Monitor your satellites to each organisation.</p>
-                  <div class="govuk-form-group">
-                <label class="govuk-label" for="sort">
-                  Choose organisation
-                </label>
-                <select class="govuk-select" id="sort" name="sort">
-                <option value="published">AAC Clyde Space</option>
-                <option value="updated" selected>Airbus</option>
-                <option value="views">Astroscale</option>
-                <option value="comments">Avanti</option>
-                <option value="comments">Inmarsat</option>
-                <option value="comments">OneWeb</option>
-                <option value="comments">Open Cosmos</option>
-                <option value="comments">SSTL</option>
-                <option value="comments">Sky and Space Global</option>
-                <option value="comments">Space Forge</option>
-                <option value="comments">Viasat</option>
-                </select>
-                </div>
-                <img src="/public/images/notifications-superadmin-and-analyst.png">
-                <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-                    <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Organisation</b></th>
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Last update</b></th>
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total notifications</b></th>
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>SMS</b></th>
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Email</b></th>
-                    </tr>
-                    </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >All</td>
-                      <td class="govuk-table__cell govuk-body-s">06/01/2023</td>
-                      <td class="govuk-table__cell govuk-body-s" >20,543</td>
-                      <td class="govuk-table__cell govuk-body-s">10,500</td>
-                      <td class="govuk-table__cell govuk-body-s">10,043</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >AAC Clyde Space</td>
-                      <td class="govuk-table__cell govuk-body-s">06/01/2023</td>
-                      <td class="govuk-table__cell govuk-body-s" >1200</td>
-                      <td class="govuk-table__cell govuk-body-s">1000</td>
-                      <td class="govuk-table__cell govuk-body-s">200</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >Airbus</td>
-                      <td class="govuk-table__cell govuk-body-s">06/01/2023</td>
-                      <td class="govuk-table__cell govuk-body-s" >1800</td>
-                      <td class="govuk-table__cell govuk-body-s">900</td>
-                      <td class="govuk-table__cell govuk-body-s">900</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >Astroscale</td>
-                      <td class="govuk-table__cell govuk-body-s">06/01/2023</td>
-                      <td class="govuk-table__cell govuk-body-s" >1600</td>
-                      <td class="govuk-table__cell govuk-body-s">1100</td>
-                      <td class="govuk-table__cell govuk-body-s">500</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >Avanti</td>
-                      <td class="govuk-table__cell govuk-body-s">06/01/2023</td>
-                      <td class="govuk-table__cell govuk-body-s" >2000</td>
-                      <td class="govuk-table__cell govuk-body-s">1300</td>
-                      <td class="govuk-table__cell govuk-body-s">700</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >OneWeb</td>
-                      <td class="govuk-table__cell govuk-body-s">06/01/2023</td>
-                      <td class="govuk-table__cell govuk-body-s" >10</td>
-                      <td class="govuk-table__cell govuk-body-s">5</td>
-                      <td class="govuk-table__cell govuk-body-s">5</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >Inmarsat</td>
-                      <td class="govuk-table__cell govuk-body-s">06/01/2023</td>
-                      <td class="govuk-table__cell govuk-body-s" >1250</td>
-                      <td class="govuk-table__cell govuk-body-s">250</td>
-                      <td class="govuk-table__cell govuk-body-s">1000</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >Viasat</td>
-                      <td class="govuk-table__cell govuk-body-s">06/01/2023</td>
-                      <td class="govuk-table__cell govuk-body-s" >100</td>
-                      <td class="govuk-table__cell govuk-body-s">80</td>
-                      <td class="govuk-table__cell govuk-body-s">20</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p>Download this table [JSON] [CSV]</p>
-                <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    Help with this table
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  This table shows the total number of notifications sent to all users by Mys every 30 days.
-                </div>
-                </details>
-                <h2 class="govuk-heading-m">Event and organisation data</h2>
-                  <h2 class="govuk-heading-m">Upcoming conjunction events</h2>
-                  <p> Total number of conjunction events monitored and a breakdown of their type. </p>
-                  <img src="/public/images/event-type-all.png">
-                  <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-                      <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Upcoming events</b></th>
-                      </tr>
-                      </thead>
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >All</td>
-                        <td class="govuk-table__cell govuk-body-s">2342</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >Events with debris</td>
-                        <td class="govuk-table__cell govuk-body-s">300</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >Events with at least 1 UK Satellite</td>
-                        <td class="govuk-table__cell govuk-body-s">2000</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >Events with 2 Satellites</td>
-                        <td class="govuk-table__cell govuk-body-s">22/02/2023</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p>Download this table [JSON] [CSV]</p>
-                  <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      Help with this table
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    This table shows the total number of conjunction events monitored over 30 day periods.
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                          Notifications sent
+                        </span>
+                      </h2>
+                    </div>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                      <p> Number of total, sms and email notifications sent by Monitor your satellites.</p>
+                      <img src="/public/images/notifications-operator.png">
+                      <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+                            <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Date</b></th>
+                                <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>All</b></th>
+                                <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>SMS</b></th>
+                                <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Email</b></th>
+                            </tr>
+                            </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell govuk-body-s">19/11/2022</td>
+                              <td class="govuk-table__cell govuk-body-s" >2400</td>
+                              <td class="govuk-table__cell govuk-body-s">1000</td>
+                              <td class="govuk-table__cell govuk-body-s">1400</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">24/11/2022</td>
+                              <td class="govuk-table__cell govuk-body-s">2200</td>
+                              <td class="govuk-table__cell govuk-body-s" >1200</td>
+                              <td class="govuk-table__cell govuk-body-s">1000</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-body-s">29/11/2022</td>
+                            <td class="govuk-table__cell govuk-body-s">3000</td>
+                            <td class="govuk-table__cell govuk-body-s" >2000</td>
+                            <td class="govuk-table__cell govuk-body-s">1000</td>
+                        </tr>
+                        </tbody>
+                      </table>
+                      <p>Download this table [JSON] [CSV]</p>
+                      <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Help with this table
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        This table shows the total number of notifications sent by Mys every day, across all users and organisations.
+                      </div>
+                      </details>
+                    </div>
                   </div>
-                  </details>
-                  <h2 class="govuk-heading-m">Objects tracked</h2>
-                  <p> Number of objects tracked and their type (satellite, debris or other).</p>
-                  <img src="/public/images/objects-tracked-all.png">
-                  <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-                      <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total objects tracked</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total satellites tracked</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total debris tracked</th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Other tracked</th>
-                      </tr>
-                      </thead>
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s">2900</td>
-                        <td class="govuk-table__cell govuk-body-s" >350</td>
-                        <td class="govuk-table__cell govuk-body-s">500</td>
-                        <td class="govuk-table__cell govuk-body-s">250</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p>Download this table [JSON] [CSV]</p>
-                  <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      Help with this table
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    This table shows the current number of objects tracked by Mys and their breakdown by type.
-                  </div>
-                  </details>
-                  <h2 class="govuk-heading-m">Events by organisation</h2>
-                  <p> Conjunction events and their probability of collision for all events and for organisation specific events.</p>
-                  <img src="/public/images/event-by-organisation-superadmin-and-analyst.png">
-                  <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-                      <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Source</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Start of 30 days</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>End of 30 days</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total events</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total events >10-3</b></th>
-                          <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total events >10-5</b></th>
-                      </tr>
-                      </thead>
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >Spacetrack</td>
-                        <td class="govuk-table__cell govuk-body-s">22/12/2022</td>
-                        <td class="govuk-table__cell govuk-body-s" >21/01/2023</td>
-                        <td class="govuk-table__cell govuk-body-s">1032</td>
-                        <td class="govuk-table__cell govuk-body-s">250</td>
-                        <td class="govuk-table__cell govuk-body-s">23</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >Spacetrack</td>
-                        <td class="govuk-table__cell govuk-body-s">22/01/2023</td>
-                        <td class="govuk-table__cell govuk-body-s" >21/02/2023</td>
-                        <td class="govuk-table__cell govuk-body-s">1572</td>
-                        <td class="govuk-table__cell govuk-body-s">472</td>
-                        <td class="govuk-table__cell govuk-body-s">98</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s" >Spacetrack</td>
-                        <td class="govuk-table__cell govuk-body-s">22/02/2023</td>
-                        <td class="govuk-table__cell govuk-body-s" >24/03/2023</td>
-                        <td class="govuk-table__cell govuk-body-s">1309</td>
-                        <td class="govuk-table__cell govuk-body-s">341</td>
-                        <td class="govuk-table__cell govuk-body-s">101</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p>Download this table [JSON] [CSV]</p>
-                  <details class="govuk-details" data-module="govuk-details">
-                  <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                      Help with this table
-                    </span>
-                  </summary>
-                  <div class="govuk-details__text">
-                    This table shows the total number and probability of events registered by Mys.
-                  </div>
-                  </details>
-                  <h2 class="govuk-heading-m"> Events by satellite</h2>
-                  <p> This graph shows the registered satellites for each organisation and the number of events each has been involved in, highlighting higher probability events.</p>
-                  <div class="govuk-form-group">
-                <label class="govuk-label" for="sort">
-                  Choose organisation
-                </label>
-                <select class="govuk-select" id="sort" name="sort">
-                <option value="published">AAC Clyde Space</option>
-                <option value="updated" selected>Airbus</option>
-                <option value="views">Astroscale</option>
-                <option value="comments">Avanti</option>
-                <option value="comments">Inmarsat</option>
-                <option value="comments">OneWeb</option>
-                <option value="comments">Open Cosmos</option>
-                <option value="comments">SSTL</option>
-                <option value="comments">Sky and Space Global</option>
-                <option value="comments">Space Forge</option>
-                <option value="comments">Viasat</option>
-                </select>
                 </div>
-                <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-                    <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Satellite name</b></th>
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^5</b></th>
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^3 and >10^5</b></th>
-                        <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>>10^3</b></th>
-                    </tr>
-                    </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >3-F4</td>
-                      <td class="govuk-table__cell govuk-body-s">6</td>
-                      <td class="govuk-table__cell govuk-body-s" >1</td>
-                      <td class="govuk-table__cell govuk-body-s">1</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >4-F2</td>
-                      <td class="govuk-table__cell govuk-body-s">8</td>
-                      <td class="govuk-table__cell govuk-body-s" >2</td>
-                      <td class="govuk-table__cell govuk-body-s">1</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" >5-F2</td>
-                      <td class="govuk-table__cell govuk-body-s">12</td>
-                      <td class="govuk-table__cell govuk-body-s" >4</td>
-                      <td class="govuk-table__cell govuk-body-s">2</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p>Download this table [JSON] [CSV]</p>
-                <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    Help with this table
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  This table shows the total number of events for the whole organisation in 30 day periods.
-                </div>
-                </details>
+<h2 class="govuk-heading-l">Event and organisation data</h2>
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Upcoming conjunction events
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p> Total number of conjunction events monitored and a breakdown of their type. </p>
+      <img src="/public/images/event-type-all.png">
+      <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type</b></th>
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Upcoming events</b></th>
+          </tr>
+          </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s" >All</td>
+            <td class="govuk-table__cell govuk-body-s">2342</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s" >Events with debris</td>
+            <td class="govuk-table__cell govuk-body-s">300</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s" >Events with at least 1 UK Satellite</td>
+            <td class="govuk-table__cell govuk-body-s">2000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s" >Events with 2 Satellites</td>
+            <td class="govuk-table__cell govuk-body-s">22/02/2023</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Download this table [JSON] [CSV]</p>
+      <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with this table
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        This table shows the total number of conjunction events monitored over 30 day periods.
+      </div>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Objects tracked
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <h2 class="govuk-heading-l" id="objects-tracked-by-mys">
+    Objects tracked by Monitor your satellites
+  </h2>
+      <div class="govuk-grid-row">
+<div class="govuk-grid-column-one-half">
+  <div class="govuk-heading-l">2900</div>
+  <div class= "govuk-heading-s">total</div>
+  </div>
+<div class="govuk-grid-column-one-half">
+  <div class="govuk-grid-row govuk-!-padding-top-4">
+    <div class="govuk-grid-column-one-third">
+  <span class="big-number-smallest">
+    <span class="govuk-heading-l">
+        350
+    </span>
+      <span class="govuk-heading-s">satellites</span>
+  </span>
+    </div>
+    <div class="govuk-grid-column-one-third">
+  <span class="big-number-smallest">
+    <span class="govuk-heading-l">
+        500
+    </span>
+      <span class="govuk-heading-s">pieces of debris</span>
+  </span>
+    </div>
+    <div class="govuk-grid-column-one-third">
+  <span class="big-number-smallest">
+    <span class="govuk-heading-l">
+        250
+    </span>
+      <span class="govuk-heading-s">other objects</span>
+  </span>
+    </div>
+  </div>
+</div>
+</div>
+<br/>
+<br/>
+
+      <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total objects tracked</b></th>
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total satellites tracked</b></th>
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Total debris tracked</th>
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Other tracked</th>
+          </tr>
+          </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s">2900</td>
+            <td class="govuk-table__cell govuk-body-s" >350</td>
+            <td class="govuk-table__cell govuk-body-s">500</td>
+            <td class="govuk-table__cell govuk-body-s">250</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Download this table [JSON] [CSV]</p>
+      <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with this table
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        This table shows the current number of objects tracked by Mys and their breakdown by type.
+      </div>
+      </details>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Events by organisation
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <p> Upcoming conjunction events and their probability of collision for all events and organisation specific events. </p>
+      <img src="/public/images/event-by-organisation-superadmin-and-analyst.png">
+      <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type</b></th>
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Upcoming events</b></th>
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^5</b></th>
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^3 and >10^5</b></th>
+              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>>10^3</b></th>
+          </tr>
+          </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s">All</td>
+            <td class="govuk-table__cell govuk-body-s" >25640</td>
+            <td class="govuk-table__cell govuk-body-s" >12820</td>
+            <td class="govuk-table__cell govuk-body-s">10320</td>
+            <td class="govuk-table__cell govuk-body-s">2500</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s">Open Cosmos</td>
+            <td class="govuk-table__cell govuk-body-s" >4088</td>
+            <td class="govuk-table__cell govuk-body-s" >2044</td>
+            <td class="govuk-table__cell govuk-body-s">1572</td>
+            <td class="govuk-table__cell govuk-body-s">472</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s">OneWeb</td>
+            <td class="govuk-table__cell govuk-body-s" >3300</td>
+            <td class="govuk-table__cell govuk-body-s" >1650</td>
+            <td class="govuk-table__cell govuk-body-s">1309</td>
+            <td class="govuk-table__cell govuk-body-s">341</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
+            <td class="govuk-table__cell govuk-body-s" >3300</td>
+            <td class="govuk-table__cell govuk-body-s" >1650</td>
+            <td class="govuk-table__cell govuk-body-s">1309</td>
+            <td class="govuk-table__cell govuk-body-s">341</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell govuk-body-s">Clyde Space</td>
+            <td class="govuk-table__cell govuk-body-s" >3300</td>
+            <td class="govuk-table__cell govuk-body-s" >1650</td>
+            <td class="govuk-table__cell govuk-body-s">1309</td>
+            <td class="govuk-table__cell govuk-body-s">341</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Download this table [JSON] [CSV]</p>
+      <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with this table
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        This table shows the total number and probability of upcoming events.
+      </div>
+      </details>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+          Events by satellite
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+
+                        <h2 class="govuk-heading-m"> Events by satellite</h2>
+                        <p> This graph shows the registered satellites for each organisation and the number of events each has been involved in, highlighting higher probability events.</p>
+                        <div class="govuk-form-group">
+                      <label class="govuk-label" for="sort">
+                        Choose organisation
+                      </label>
+                      <select class="govuk-select" id="sort" name="sort">
+                      <option value="published">AAC Clyde Space</option>
+                      <option value="updated" selected>Airbus</option>
+                      <option value="views">Astroscale</option>
+                      <option value="comments">Avanti</option>
+                      <option value="comments">Inmarsat</option>
+                      <option value="comments">OneWeb</option>
+                      <option value="comments">Open Cosmos</option>
+                      <option value="comments">SSTL</option>
+                      <option value="comments">Sky and Space Global</option>
+                      <option value="comments">Space Forge</option>
+                      <option value="comments">Viasat</option>
+                      </select>
+                      </div>
+                      <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+                          <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Satellite name</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^5</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^3 and >10^5</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>>10^3</b></th>
+                          </tr>
+                          </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" >3-F4</td>
+                            <td class="govuk-table__cell govuk-body-s">6</td>
+                            <td class="govuk-table__cell govuk-body-s" >1</td>
+                            <td class="govuk-table__cell govuk-body-s">1</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" >4-F2</td>
+                            <td class="govuk-table__cell govuk-body-s">8</td>
+                            <td class="govuk-table__cell govuk-body-s" >2</td>
+                            <td class="govuk-table__cell govuk-body-s">1</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" >5-F2</td>
+                            <td class="govuk-table__cell govuk-body-s">12</td>
+                            <td class="govuk-table__cell govuk-body-s" >4</td>
+                            <td class="govuk-table__cell govuk-body-s">2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p>Download this table [JSON] [CSV]</p>
+                      <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Help with this table
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        This table shows the total number of events for the whole organisation in 30 day periods.
+                      </div>
+                      </details>
+    </div>
+  </div>
+</div>
+
+
+
+
+
                   <button data-module="govuk-button" class="govuk-button">
                     Download page as PDF
                     </button>
