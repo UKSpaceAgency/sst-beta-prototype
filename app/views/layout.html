@@ -86,20 +86,85 @@
 
 {% if useAutoStoreData %}
   {% block footer %}
-    {{ govukFooter({
-      meta: {
-        items: [
-          {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
-            text: "GOV.UK Prototype Kit " + releaseVersion
-          },
-          {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
-          }
-        ]
+
+  {% from "govuk/components/footer/macro.njk" import govukFooter %}
+
+{{ govukFooter({
+navigation: [
+  {
+    title: "About",
+    width: "one-third",
+    columns: 1,
+    items: [
+      {
+        href: "/footer/monitoring-operator",
+        text: "Performance monitoring"
+      },
+      {
+        href: "https://www.monitor-your-satellites.service.gov.uk/page/conjunction-analysis-information",
+        text: "Conjunction event analysis information"
+      },
+      {
+        href: "https://www.youtube.com/watch?v=7xgaBjXGGNM",
+        text: "Demonstration video"
+      },
+      {
+        href: "https://dev.monitor-your-satellites.service.gov.uk/page/definitions",
+        text: "Definitions"
       }
-    }) }}
+      ]
+    },
+  {
+    title: "How to use",
+    width: "one-third",
+    columns: 1,
+    items: [
+      {
+        href: "https://www.monitor-your-satellites.service.gov.uk/page/support-and-guidance",
+        text: "Support and guidance"
+      },
+      {
+        href: "https://sst-tech-docs.london.cloudapps.digital/ways-of-working/use-the-api/use-the-api.html",
+        text: "How to use the API"
+      },
+      {
+        href: "https://api.monitor-your-satellites.service.gov.uk/docs",
+        text: "API documentation (swagger)"
+      },
+      {
+        href: "https://sst-tech-docs.london.cloudapps.digital/ways-of-working/manage-ephemeris/manage-ephemeris.html",
+        text: "How to upload ephemeris"
+      }
+    ]
+  },
+  {
+    title: "Legal terms",
+    width: "one-third",
+    columns: 1,
+    items: [
+      {
+        href: "/setup/ts-and-cs",
+        text: "Terms and conditions"
+      },
+      {
+        href: "/setup/data-privacy",
+        text: "Data privacy notice"
+      },
+      {
+        href: "https://www.monitor-your-satellites.service.gov.uk/page/accessibility-statement",
+        text: "Accessibility statement"
+      },
+      {
+        href: "https://www.monitor-your-satellites.service.gov.uk/cookies",
+        text: "Cookies"
+      }
+    ]
+  }
+],
+meta: {
+  html: 'Built by the <a href="#" class="govuk-footer__link">Government Digital Service</a>'
+}
+}) }}
   {% endblock %}
 {% endif %}
 
