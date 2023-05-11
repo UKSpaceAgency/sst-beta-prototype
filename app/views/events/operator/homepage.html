@@ -11,8 +11,11 @@ Upcoming conjunction events
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
+        <p>This table contains all events affecting your satellites</p>
+        {% from "../../templates/mys-conjunction-search-form.njk" import mysConjunctionSearchForm %}
+        {{ mysConjunctionSearchForm() }}
 
-        <! main table listing all conjunction warnings involving satellites owned by this operator>
+        <!-- main table listing all conjunction warnings involving satellites owned by this operator -->
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
           <col>
             <colgroup span="2"></colgroup>
@@ -25,7 +28,7 @@ Upcoming conjunction events
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Miss distance (m)</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision (%)</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision</b></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
@@ -34,8 +37,8 @@ Upcoming conjunction events
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Total</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Mean radial</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Space-Track CDM (%)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>UKSA (%)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Space-Track CDM</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>UKSA</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
@@ -46,8 +49,8 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Discoverer 5</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">230</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">37</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0002"><b><a href="#" class="govuk-link--no-visited-state">abcd-asdas-asdf</a></b></td>
@@ -56,8 +59,8 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Lemur 2</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">469</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="24623">2.4623</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="24623">2.4623e-2</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0003"> <b><a href="#" class="govuk-link--no-visited-state">asdf-gtdas-zdgt</a> </b></td>
@@ -66,8 +69,8 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-64</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">560</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">152</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">0.1543</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">1.543e-3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0004"><b><a href="#" class="govuk-link--no-visited-state">ptyr-bxtte-asdf</a></b></td>
@@ -76,8 +79,8 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-50</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">750</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="2543">0.2543</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="2543">2.543e-3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0021"><b><a href="#" class="govuk-link--no-visited-state">asre-bnyyq-asdf</a></b></td>
@@ -86,8 +89,8 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">260</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">382</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="765">0.0765</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="765">7.65e-4</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0033"><b><a href="#" class="govuk-link--no-visited-state">asdf-asdas-afki</a></b></td>
@@ -96,8 +99,8 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Hyla-6</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">400</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">211</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="143">0.0143</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="143">1.43e-4</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0034"><b><a href="#" class="govuk-link--no-visited-state">asdf-opkll-bcgt</a></b></td>
@@ -106,8 +109,8 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">805</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">103</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="987">0.0987</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="987">9.87e-4</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
           </tbody>
       </table>

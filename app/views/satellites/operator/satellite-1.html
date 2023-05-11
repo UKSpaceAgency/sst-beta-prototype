@@ -21,7 +21,6 @@ Starlink-1862
   <main class="govuk-main-wrapper">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-        <form class="form" action="/admin-threshold-settings-edit" method="post">
       <h1 class="govuk-heading-xl">Starlink-1862</h1>
 </div>
 
@@ -51,7 +50,9 @@ Starlink-1862
 
 
     <h1 class="govuk-heading-l"id="upcoming conjunction events">Upcoming conjunction events</h1>
-    <!This is the same as the table in the homepage, but only shows events involving this particular satellite>
+    {% from "../../templates/mys-conjunction-search-form.njk" import mysConjunctionSearchForm %}
+    <p></p>
+    {{ mysConjunctionSearchForm() }}
     <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
       <thead class="govuk-table__head">
 
@@ -60,7 +61,7 @@ Starlink-1862
           <td class="govuk-table__cell govuk-body-s"></td>
           <td class="govuk-table__cell govuk-body-s"></td>
           <td class="govuk-table__cell govuk-body-s" colspan="2"><b>Miss distance (m)</b></td>
-          <td class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision (%)</b></td>
+          <td class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision</b></td>
         </tr>
 
         <tr class="govuk-table__row">
@@ -76,26 +77,26 @@ Starlink-1862
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
         <td class="govuk-table__cell govuk-body-s" data-sort-value="1"> <b>
-            <a href="/events/operator/event-summary-5" class="govuk-link--no-visited-state" >AAA0001</a> </b>
+            <a href="/events/operator/event-summary-5" class="govuk-link--no-visited-state" >asdf-asdas-asdf</a> </b>
           </td>
           <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
           <td class="govuk-table__cell govuk-body-s">Discoverer 5</td>
           <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">360</td>
           <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">352</td>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1538234">0.1538</td>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="933822">0.0933</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1538234">1.538e-3</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="933822">9.33e-4</td>
         </tr>
             <tr class="govuk-table__row">
           <td class="govuk-table__cell govuk-body-s" data-sort-value="3"> <b>
-            <a href="#" class="govuk-link--no-visited-state">AAA0003</a> </b>
+            <a href="#" class="govuk-link--no-visited-state">bads-basdw-ascs</a> </b>
           </td>
           <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
           <td class="govuk-table__cell govuk-body-s">CMS-01</td>
 
           <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">652</td>
           <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">427</td>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="532134">0.0532</td>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort0value="399283">0.0399</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="532134">5.32e-4</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort0value="399283">3.99e-4</td>
         </tr>
           </tbody>
     </table>
