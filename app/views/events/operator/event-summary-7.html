@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Event bads-basdw-ascs
+Event plan-plans-plan
 {% endblock %}
 
 {% block content %}
@@ -12,10 +12,11 @@ Event bads-basdw-ascs
         <a class="govuk-breadcrumbs__link" href="/events/operator/homepage">Events</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/events/operator/warning-1">bads-basdw-ascs</a>
+        <a class="govuk-breadcrumbs__link" href="/events/operator/warning-1">plan-plans-plan</a>
       </li>
     </ol>
-    <h1 class="govuk-heading-xl">Event bads-basdw-ascs</h1>
+    <strong class="govuk-tag">special only</strong>
+    <h1 class="govuk-heading-xl">Event plan-plans-plan</h1>
 
   </div>
 
@@ -38,25 +39,28 @@ Event bads-basdw-ascs
         <h2 class="govuk-tabs__title">
           Contents
         </h2>
+        
         <ul class="govuk-tabs__list">
-          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#operational">
-              Operational (current orbit)
-            </a>
-          </li>
           <div class="mys-tab-special">
-            <li class="govuk-tabs__list-item">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
               <a class="govuk-tabs__tab" href="#special">
                 Special (planned orbit)
               </a>
             </li>
         </div>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#operational">
+              Operational (current orbit)
+            </a>
+          </li>
+          
         </ul>
-        <div class="govuk-tabs__panel" id="operational">
-          <div class="govuk-inset-text" style="margin-top: 0px">
-            <p class="govuk-body">This tab displays analysis based on <b>operational</b> data (SSN observations and/or O/O Ephemeris). This is based on the current orbit of the satellite (assuming no intervention or maneouvre).</p>
+        
+        <div class="govuk-tabs__panel mys-tab-special" id="special" style="border-color: #1d70b8">
+          <div class="govuk-inset-text" style="margin-top: 0px; border-left-color: 	#1d70b8">
+            <p class="govuk-body">This tab displays analysis based on <b>special</b> ephemerides uploaded by O/Os to Space-Track. This is based on a planned future orbit of the satellite (usually after a manoeuvre).</p>
           </div>
-            <div class="govuk-grid-row">
+          <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-quarter mys-sticky">
               <h3 class="govuk-heading-s">Contents</h3>
               <ul class="moj-side-navigation__list">
@@ -772,84 +776,18 @@ Event bads-basdw-ascs
             
             </div>
         </div>
-        
-        <div class="govuk-tabs__panel govuk-tabs__panel--hidden mys-tab-special" id="special" style="border-color: #1d70b8">
-          <div class="govuk-inset-text" style="margin-top: 0px; border-left-color: 	#1d70b8">
-            <p class="govuk-body">This tab displays analysis based on <b>special</b> ephemerides uploaded by O/Os to Space-Track. This is based on a planned future orbit of the satellite (usually after a manoeuvre).</p>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="operational">
+          <div class="govuk-inset-text" style="margin-top: 0px">
+            <p class="govuk-body">This tab displays analysis based on <b>operational</b> data (SSN observations and/or O/O Ephemeris). This is based on the current orbit of the satellite (assuming no intervention or maneouvre).</p>
           </div>
-          <div class="govuk-grid-row">
+            <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-              <p class="govuk-body-l">We could not find any SPECIAL ephemerides for this event.</p>
-
-                
-              <p class="govuk-body">This may be because:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>No SPECIAL ephemeris files have been uploaded to Space-Track for this object</li>
-                <li>An uploaded SPECIAL ephemeris has not yet been screened by Space-Track (this may take several hours)</li>
-                <li>All uploaded SPECIAL ephemeris generated new conjunction events with different secondary object(s). If these exist, they can be found in the table below.</li>
-              </ul>
-              
-              <h3 class="govuk-heading-m" id="event summary">Other solely SPECIAL data events for Starlink-1862</h2>
-                <p class="govuk-body">Shown below are other events which only contain SPECIAL data - these may be related to a manoeuvre planned in response to this event.</p>
-                {% from "../../templates/mys-conjunction-search-form.njk" import mysConjunctionSearchForm %}
-                <p></p>
-                {{ mysConjunctionSearchForm() }}
-                <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
-                  <thead class="govuk-table__head">
-            
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s"></td>
-                      <td class="govuk-table__cell govuk-body-s"></td>
-                      <td class="govuk-table__cell govuk-body-s"></td>
-                      <td class="govuk-table__cell govuk-body-s"></td>
-                      <td class="govuk-table__cell govuk-body-s" colspan="2"><b>Miss distance (m)</b></td>
-                      <td class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision</b></td>
-                    </tr>
-            
-                    <tr class="govuk-table__row">
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>SPECIAL ephemeris upload time (UTC)</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>Time of closest approach (UTC)</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary object</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Total</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Mean radial</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 18%";>Space-Track CDM</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 112%";>UKSA</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s" data-sort-value="1"> <b>
-                        <a href="/events/operator/event-summary-5" class="govuk-link--no-visited-state" >plan-plans-plan</a> </b><br/>
-                        <strong class="govuk-tag" style="margin-top:5px">special only</strong>
-                      </td>
-                      <td class="govuk-table__cell govuk-body-s">02/02/21 16:32</td>
-                      <td class="govuk-table__cell govuk-body-s">04/02/21 01:53</td>
-                      <td class="govuk-table__cell govuk-body-s">ROCKET BODY 2</td>
-                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">360</td>
-                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">352</td>
-                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1538234">1.538e-7</td>
-                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="933822">9.333e-6</td>
-                    </tr>
-                        <tr class="govuk-table__row">
-                      <td class="govuk-table__cell govuk-body-s" data-sort-value="3"> <b>
-                        <a href="/events/operator/event-summary-6" class="govuk-link--no-visited-state">bado-plans-baad</a> </b><br/>
-                        <strong class="govuk-tag" style="margin-top:5px">special only</strong>
-                      </td>
-                      <td class="govuk-table__cell govuk-body-s">01/02/21 19:00</td>
-                      <td class="govuk-table__cell govuk-body-s">03/02/21 21:59</td>
-                      <td class="govuk-table__cell govuk-body-s">SPACE DEB 4</td>
-            
-                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">47</td>
-                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">20</td>
-                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="532134">1.323e-2</td>
-                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort0value="399283">4.992e-3</td>
-                    </tr>
-                      </tbody>
-                </table>
+              <p class="govuk-body-l">This event does not have any operational analysis because it is <strong class="govuk-tag">special only</strong>.</p> 
+                <p>This means it is an event based solely on SPECIAL ephemeris data (a planned orbit) rather than one which has already occured.</p>
+                <p>If a manoeuvre is executed using the same ephemeris, operational data will appear here after the manoeuvre has been made and screening has taken place by Space-Track.</p>
             </div>
             
-          </div>
+            </div>
         </div>
       </div>
       </div>
