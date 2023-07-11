@@ -65,29 +65,6 @@ Event bads-basdw-ascs
     </ul>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     <h3 class="govuk-heading-m">Filters</h3>
-    <div class="govuk-form-group" hidden>
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-          <b style="margin-bottom: 0px">Filter by Analysis Type</b>
-        </legend>
-        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="data-source" name="data-source-st" type="checkbox" value="space-track" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="organisation">
-              Space-Track<br/>
-              <span style="font-size: 16px; color:#505a5f">Uses fixed hard body radius (5m)</span>
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="data-source" name="data-source-uksa" type="checkbox" value="uksa" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-              UKSA Analysis<br/>
-              <span style="font-size: 16px; color:#505a5f">Uses analyst-selected hard body radius (4.6m)</span>
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -95,7 +72,33 @@ Event bads-basdw-ascs
         </legend>
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
           <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="data-source" name="data-source-st" type="checkbox" value="space-track" checked>
+            <script>
+              const GRAPH_PATHS = {
+                "operational": {
+                  "missDistance": "/public/images/chart-MD.png",
+                  "collisionProbability": "/public/images/chart-PoC.png"
+                },
+                "special": {
+                  "missDistance": "/public/images/special/miss_distance_withspecial.png",
+                  "collisionProbability": "/public/images/special/poc_graph_withspecial.png"
+                }
+              };
+              var specialGraphsShown = true;
+              const toggleSpecialGraphs = function () {
+                // get miss distance graphs
+                const graphMissDistance = document.getElementById("graph-miss-distance");
+                const graphCollisionProbability = document.getElementById("graph-collision-probability");
+                const tableRowSpecialDataSource = document.getElementById("data-source-row-special");
+                const filterSpecialCheckbox = document.getElementById("filter-special");
+                specialGraphsShown = filterSpecialCheckbox.checked;
+
+                var lookup = specialGraphsShown ? "special" : "operational";
+                graphMissDistance.src = GRAPH_PATHS[lookup]["missDistance"];
+                graphCollisionProbability.src = GRAPH_PATHS[lookup]["collisionProbability"];
+                tableRowSpecialDataSource.hidden = !specialGraphsShown;
+              };
+            </script>
+            <input class="govuk-checkboxes__input" id="filter-special" name="filter-special" type="checkbox" value="space-track" onchange="toggleSpecialGraphs()" checked>
             <label class="govuk-label govuk-checkboxes__label" for="organisation">
               Show <strong class="govuk-tag">special</strong> ephemeris<br/>
               <span style="font-size: 16px; color:#505a5f">This is data based on planned, but not executed, manoeuvres</span>
@@ -184,7 +187,7 @@ Event bads-basdw-ascs
                       <div style="background-color:#f3f2f1">
                       <p class="govuk-body-secondary"><p style=color:#505a5f>The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown </p>
     
-                    <img src="/public/images/special/poc_graph_withspecial.png" alt="PoC Chart" width="100%">
+                    <img id="graph-collision-probability" src="/public/images/special/poc_graph_withspecial.png" alt="PoC Chart" width="100%">
                       </div>
     
                     </div>
@@ -205,7 +208,7 @@ Event bads-basdw-ascs
                               <div style="background-color:#f3f2f1">
                               <p class="govuk-body-secondary"><p style=color:#505a5f>The changing expected miss distance leading up to the time of closest approach (TCA). All available data is shown. </p>
     
-                            <img src="/public/images/special/miss_distance_withspecial.png" alt="MD Chart" width="100%">
+                            <img id="graph-miss-distance" src="/public/images/special/miss_distance_withspecial.png" alt="MD Chart" width="100%">
                               </div>
                             </div>
     
@@ -287,7 +290,7 @@ Event bads-basdw-ascs
                     </div>
                     </div>
     
-                    <!-- Collision plane plot -->
+                    <!-- Collision plane plot - CURRENTLY HIDDEN -->
                     <div class="govuk-accordion__section" hidden>
                       <div class="govuk-accordion__section-header">
                         <h2 class="govuk-accordion__section-heading" id="accordion-heading-2a">
@@ -617,7 +620,7 @@ Event bads-basdw-ascs
                           </table>
                         </td>
                       </tr>
-                    <tr class="govuk-table__row">
+                    <tr id="data-source-row-special" class="govuk-table__row">
                       <td class="govuk-table__cell govuk-body-s">Space-Track CDM: ID 987654321<br/><strong class="govuk-tag">special</strong></td>
                       <td class="govuk-table__cell govuk-body-s">03/02/21 14:10</td>
                       <td class="govuk-table__cell govuk-body-s">1.639e-3</td>
