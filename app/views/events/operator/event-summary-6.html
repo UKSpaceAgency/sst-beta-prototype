@@ -72,33 +72,8 @@ Event bads-basdw-ascs
         </legend>
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
           <div class="govuk-checkboxes__item">
-            <script>
-              const GRAPH_PATHS = {
-                "operational": {
-                  "missDistance": "/public/images/chart-MD.png",
-                  "collisionProbability": "/public/images/chart-PoC-3.png"
-                },
-                "special": {
-                  "missDistance": "/public/images/special/miss_distance_withspecial.png",
-                  "collisionProbability": "/public/images/special/poc_graph_withspecial2.png"
-                }
-              };
-              var specialGraphsShown = true;
-              const toggleSpecialGraphs = function () {
-                // get miss distance graphs
-                const graphMissDistance = document.getElementById("graph-miss-distance");
-                const graphCollisionProbability = document.getElementById("graph-collision-probability");
-                const tableRowSpecialDataSource = document.getElementById("data-source-row-special");
-                const filterSpecialCheckbox = document.getElementById("filter-special");
-                specialGraphsShown = filterSpecialCheckbox.checked;
 
-                var lookup = specialGraphsShown ? "special" : "operational";
-                graphMissDistance.src = GRAPH_PATHS[lookup]["missDistance"];
-                graphCollisionProbability.src = GRAPH_PATHS[lookup]["collisionProbability"];
-                tableRowSpecialDataSource.hidden = !specialGraphsShown;
-              };
-            </script>
-            <input class="govuk-checkboxes__input" id="filter-special" name="filter-special" type="checkbox" value="space-track" onchange="toggleSpecialGraphs()" checked>
+            <input class="govuk-checkboxes__input" id="filter-special" name="filter-special" type="checkbox" value="space-track" onchange="toggleSpecialGraphs(this)" checked>
             <label class="govuk-label govuk-checkboxes__label" for="organisation">
               Show <strong class="govuk-tag">special</strong> ephemeris<br/>
               <span style="font-size: 16px; color:#505a5f">This is data based on planned, but not executed, manoeuvres</span>
@@ -183,11 +158,11 @@ Event bads-basdw-ascs
                     </span>
                   </h2>
                 </div>
+    
                     <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                       <div style="background-color:#f3f2f1">
                       <p class="govuk-body-secondary"><p style=color:#505a5f>The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown </p>
-    
-                    <img id="graph-collision-probability" src="/public/images/special/poc_graph_withspecial2.png" alt="PoC Chart" width="100%">
+                      <div><canvas id="collisionEvolutionGraph" width="800" height="400"></canvas></div>
                       </div>
     
                     </div>
@@ -760,6 +735,7 @@ Event bads-basdw-ascs
 
 {% block pageScripts %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 <script>
 
   // BEGIN MTS CODE "LIBRARY"
@@ -1092,5 +1068,173 @@ Event bads-basdw-ascs
   threshSelector.onchange = function (e) {
       newThreshold(parseFloat(threshSelector.value));
   }
+
+// Evolution of Collision probability graph
+
+// Data points for UKSA and Space-Track line
+uksa_data = [{x:"2023-05-19 00:01:32",y:0.00009}, {x:"2023-05-19 14:31:08",y:0.00014}, 
+  {x:"2023-05-20 03:12:02",y:0.00016}, {x:"2023-05-20 16:01:12",y:0.00007}, 
+  {x:"2023-05-21 04:04:32",y:0.00010}, {x:"2023-05-21 17:17:09",y:0.00011}, 
+  {x:"2023-05-22 00:01:47",y:0.00015}, {x:"2023-05-22 16:17:09",y:0.00011}, 
+  {x:"2023-05-23 00:02:47",y:0.00017}];
+st_data = [{x:"2023-05-19 00:01:32",y:0.00019}, {x:"2023-05-19 14:31:08",y:0.00034}, 
+  {x:"2023-05-20 03:12:02",y:0.00029}, {x:"2023-05-20 16:01:12",y:0.00018}, 
+  {x:"2023-05-21 04:04:32",y:0.00026}, {x:"2023-05-21 17:17:09",y:0.00024}, 
+  {x:"2023-05-22 00:01:47",y:0.00041}, {x:"2023-05-22 16:17:09",y:0.00021}, 
+  {x:"2023-05-23 00:02:47",y:0.00024}];
+
+
+coll_ctx = document.getElementById("collisionEvolutionGraph").getContext("2d");
+myLineChart = new Chart(coll_ctx, {
+  type: "line",
+  data: {
+    datasets: [{
+      type:'line',
+      label: 'UKSA',
+      data: uksa_data,
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      tension: 0.7, // increasing makes graph less smooth
+      backgroundColor: colors.orange,
+      borderColor: colors.orange
+    }, {
+      type: 'line',
+      label: 'Space-Track',
+      data: st_data,
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      tension: 0.7,
+      backgroundColor: colors.dblue,
+      borderColor: colors.dblue,
+    },{
+      // Special ephemeris
+      type:'scatter',
+      label: 'SPECIAL ephemeris',
+      data: [{x:"2023-05-22 04:04:32",y:0.00003}],
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      tension: 0.7,
+      backgroundColor: colors.lblue,
+      borderColor: colors.lblue,
+      pointStyle: "triangle",
+      pointRadius: 10,
+      pointHoverRadius: 8,
+  },{
+    // Adding line for TCA
+    type: 'bar',
+    label: 'TCA',
+    data: [{x: "2023-05-23 04:04:04", y: 6e-4} ],
+    maxBarThickness: 2,
+    xAxisID: 'xAxis',
+    yAxisID: 'yAxis',
+    backgroundColor: "red",
+    legend: { hidden: true },
+    }]
+  },
+  options: {
+    scales: {
+      xAxis: {
+        // The axis for this scale is determined from the first letter of the id as `'x'`
+        type: 'time',
+        grid: {display: false},
+        title: {
+          display: true,
+          text: 'Creation date of CDM (UTC)',
+          padding: 20,
+          font: {weight: "bold"}
+        },
+        min: "2023-05-19 00:00:00",
+        max: "2023-05-23 08:00:00",
+        time: {
+          displayFormats: {
+            day: "dd/MM",
+          },
+          unit: 'day',
+          unitStepSize: 1
+        },
+      },
+      yAxis: {
+        type: 'linear',
+        title: {
+          display: true,
+          text: 'Probability of collision',
+          padding: 20,
+          font: {weight: "bold"}
+        },
+        min: 0,
+        max: 6e-4,
+        ticks: {
+          stepSize: 2e-4,
+          // This formats y-axis as 2e-5 instead of 0....
+          callback: (value, index, values) => {
+            return new Intl.NumberFormat("en-US", {
+              notation: "scientific",
+            }).format(value).toLowerCase();
+          }
+        }
+      }
+    },
+    plugins: {
+      tooltip: {
+        mode: "x",  //shows both UKSA and Space-Track value for a time
+        intersect: true,
+        callbacks: {
+          title: function (context) {
+            return context[0].raw.x; // titles event raw time it occured
+          },
+          label: function (context) {
+            let label = context.dataset.label || "";
+            if (label == "TCA"){
+              return "";
+            }
+            if (label) {
+              label += ": ";
+            }
+            var decimal_y = context.raw.y // gets raw y value to show
+            // change to e notation
+            var scientific_y = new Intl.NumberFormat("en-US", {
+              notation: "scientific",
+            }).format(decimal_y).toLowerCase();
+            label += scientific_y; 
+            return label;
+          }
+        }
+      }
+    },
+  }
+});
+
+
+
+
+
+// Logic for toggling SPECIAL
+const GRAPH_PATHS = {
+                "operational": {
+                  "missDistance": "/public/images/chart-MD.png",
+                },
+                "special": {
+                  "missDistance": "/public/images/special/miss_distance_withspecial.png",
+                }
+              };
+              var specialGraphsShown = true;
+              const toggleSpecialGraphs = function (event) {
+                // get miss distance graphs
+                const graphMissDistance = document.getElementById("graph-miss-distance");
+                const tableRowSpecialDataSource = document.getElementById("data-source-row-special");
+                const filterSpecialCheckbox = document.getElementById("filter-special");
+                specialGraphsShown = filterSpecialCheckbox.checked;
+
+                var lookup = specialGraphsShown ? "special" : "operational";
+                graphMissDistance.src = GRAPH_PATHS[lookup]["missDistance"];
+                tableRowSpecialDataSource.hidden = !specialGraphsShown;
+                if (event.checked) {
+                  myLineChart.getDatasetMeta(2).hidden = null;
+                }else {
+                  myLineChart.getDatasetMeta(2).hidden = true;
+                };
+                myLineChart.update();
+              };
+
 </script>
 {% endblock %}
