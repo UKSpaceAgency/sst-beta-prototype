@@ -27,7 +27,14 @@ Event bads-basdw-ascs
       .govuk-grid-column-one-quarter.mys-sticky {
       position: sticky;
       top: 10px;
+      }
     }
+    .not-pressed {
+      background-color: white;
+      color: #1d70b8;
+      border-color: #1d70b8;
+    }
+
   }
   </style>
 
@@ -162,6 +169,12 @@ Event bads-basdw-ascs
                     <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                       <div style="background-color:#f3f2f1">
                       <p class="govuk-body-secondary"><p style=color:#505a5f>The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown </p>
+                      <strong class="govuk-tag">
+                        Linear
+                      </strong>
+                      <strong class="govuk-tag not-pressed">
+                        Log
+                      </strong>                                                                                   
                       <div><canvas id="collisionEvolutionGraph" width="800" height="400"></canvas></div>
                       </div>
     
@@ -1203,8 +1216,6 @@ myLineChart = new Chart(coll_ctx, {
     },
   }
 });
-
-
 
 
 
