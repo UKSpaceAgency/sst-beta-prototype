@@ -96,6 +96,8 @@ Event bads-basdw-ascs
         <a href="#accordion-heading-7">Further information</a>
       </li>
     </ul>
+    <!-- Previous sidebar SPECIAL filter, removed to be replaced with local button-->
+    <!--
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     <h3 class="govuk-heading-m">Filters</h3>
     <div class="govuk-form-group">
@@ -115,6 +117,7 @@ Event bads-basdw-ascs
         </div>
       </fieldset>
     </div>
+  -->
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   </div>
   <div>
@@ -193,12 +196,13 @@ Event bads-basdw-ascs
                 </div>
     
                     <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                      <div style="background-color:#f3f2f1">
-                        <p class="govuk-body-secondary"><p style=color:#505a5f>The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown </p>
-                        <div class="toggle-buttons_button-group__C3NCd" style="float:left; margin-left:10px;">
+                      <div style="background-color:#f3f2f1; padding: 0px 15px 0px 15px">
+                        <p class="govuk-body-secondary"><p style=color:#505a5f>The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown where available. </p>
+                        <p class="govuk-body-secondary" style="color:#505a5f">Evolution of operational event data is displayed as a continuous line. Individual SPECIAL ephemeris probabilities can be turned on or off. </p>
+                        <div class="toggle-buttons_button-group__C3NCd" style="float:left">
                           <button id="poc-toggle-special" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Show SPECIAL ephemeris">Show SPECIAL ephemeris &#9650;</button>
                         </div>
-                        <div class="toggle-buttons_button-group__C3NCd" style="float:right; margin-right:10px;">
+                        <div class="toggle-buttons_button-group__C3NCd" style="float:right">
                           <button class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Linear">Linear</button>
                           <button class="toggle-buttons_button__tbqna" aria-label="Log">Log</button>
                         </div>                      
@@ -221,10 +225,18 @@ Event bads-basdw-ascs
                           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
     
                             <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                              <div style="background-color:#f3f2f1">
-                              <p class="govuk-body-secondary"><p style=color:#505a5f>The changing expected miss distance leading up to the time of closest approach (TCA). All available data is shown. </p>
-    
-                            <img id="graph-miss-distance" src="/public/images/special/miss_distance_withspecial.png" alt="MD Chart" width="100%">
+                              <div style="background-color:#f3f2f1; padding: 0px 15px 0px 15px">
+                              <p class="govuk-body-secondary" style=color:#505a5f>The changing expected miss distance leading up to the time of closest approach (TCA). All available data is shown. </p>
+                              <p class="govuk-body-secondary" style=color:#505a5f>Evolution of operational event data is displayed as a continuous line. Individual SPECIAL ephemeris probabilities can be turned on or off.</p>
+                              <div class="toggle-buttons_button-group__C3NCd" style="float:left;">
+                                <button id="md-toggle-special" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Show SPECIAL ephemeris">Show SPECIAL ephemeris &#9650;</button>
+                              </div>
+                              <div class="toggle-buttons_button-group__C3NCd" style="float:right;">
+                                <button class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Linear">Linear</button>
+                                <button class="toggle-buttons_button__tbqna" aria-label="Log">Log</button>
+                              </div>                      
+                            
+                              <canvas id="missDistanceEvolutionGraph" width="800" height="400"></canvas>
                               </div>
                             </div>
     
@@ -785,7 +797,8 @@ Event bads-basdw-ascs
   const colors = {
       orange: 'rgb(244, 119, 56)',
       lblue: 'rgb(86, 148, 202)',
-      dblue: 'rgb(0, 48, 120)'
+      dblue: 'rgb(0, 48, 120)',
+      yellow: 'rgb(252, 232, 48)'
   };
 
   // generate scatter plot format data from the raw MTS data
@@ -1219,8 +1232,9 @@ myLineChart = new Chart(coll_ctx, {
     },
     plugins: {
       legend: {
+        onClick: null, // prevents corresponding data from disappearing from graph when label clicked on legend
         labels: {
-          // Hide TCA from Legend
+          // Hide TCA and special from Legend
           filter: function(legendItem, data) {
             let label = data.datasets[legendItem.datasetIndex].label || '';
             if (typeof(label) !== 'undefined') {
@@ -1261,9 +1275,202 @@ myLineChart = new Chart(coll_ctx, {
   }
 });
 
+// Evolution of Miss Distance graph
+md_colors = {
+  "Radial": colors.orange,
+  "In-track": colors.lblue,
+  "Cross-track": colors.yellow,
+  "Total": colors.dblue,
+}
 
+// Data points for distance lines
+md_total_data = [{x:"2023-05-19 00:01:32",y:23112}, {x:"2023-05-19 14:31:08",y:22765}, 
+  {x:"2023-05-20 03:12:02",y:21846}, {x:"2023-05-20 16:01:12",y:21920}, 
+  {x:"2023-05-21 04:04:32",y:22187}, {x:"2023-05-21 17:17:09",y:22897}, 
+  {x:"2023-05-22 00:01:47",y:22705}, {x:"2023-05-22 16:17:09",y:23080}, 
+  {x:"2023-05-23 00:02:47",y:23183}];
 
-// Logic for toggling SPECIAL
+md_crosstrack_data = [{x:"2023-05-19 00:01:32",y:14308}, {x:"2023-05-19 14:31:08",y:14017}, 
+  {x:"2023-05-20 03:12:02",y:13950}, {x:"2023-05-20 16:01:12",y:14602}, 
+  {x:"2023-05-21 04:04:32",y:14831}, {x:"2023-05-21 17:17:09",y:14905}, 
+  {x:"2023-05-22 00:01:47",y:14849}, {x:"2023-05-22 16:17:09",y:15023}, 
+  {x:"2023-05-23 00:02:47",y:14673}];
+
+md_intrack_data = [{x:"2023-05-19 00:01:32",y:6882}, {x:"2023-05-19 14:31:08",y:7045}, 
+  {x:"2023-05-20 03:12:02",y:7283}, {x:"2023-05-20 16:01:12",y:7331}, 
+  {x:"2023-05-21 04:04:32",y:7501}, {x:"2023-05-21 17:17:09",y:7493}, 
+  {x:"2023-05-22 00:01:47",y:6510}, {x:"2023-05-22 16:17:09",y:6702}, 
+  {x:"2023-05-23 00:02:47",y:6794}];
+
+md_radial_data = [{x:"2023-05-19 00:01:32",y:2012}, {x:"2023-05-19 14:31:08",y:2382}, 
+  {x:"2023-05-20 03:12:02",y:1702}, {x:"2023-05-20 16:01:12",y:1437}, 
+  {x:"2023-05-21 04:04:32",y:1239}, {x:"2023-05-21 17:17:09",y:1452}, 
+  {x:"2023-05-22 00:01:47",y:2028}, {x:"2023-05-22 16:17:09",y:2305}, 
+  {x:"2023-05-23 00:02:47",y:2062}];
+
+md_special_data = [{x:"2023-05-20 11:38:13", y:2571, type:"Radial"}, {x:"2023-05-22 05:01:49", y:4620, type:"Radial"},
+  {x:"2023-05-20 11:38:13", y:9692, type:"In-track"}, {x:"2023-05-22 05:01:49", y:12935, type:"In-track"},
+  {x:"2023-05-20 11:38:13", y:15997, type:"Cross-track"}, {x:"2023-05-22 05:01:49", y:19730, type:"Cross-track"},
+  {x:"2023-05-20 11:38:13", y:23854, type:"Total"}, {x:"2023-05-22 05:01:49", y:27302, type:"Total"},
+]
+
+coll_ctx = document.getElementById("missDistanceEvolutionGraph").getContext("2d");
+
+mdLineChart = new Chart(coll_ctx, {
+  type: "line",
+  data: {
+    datasets: [{
+      type:'line',
+      label: 'Total',
+      data: md_total_data,
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      tension: 0.7, // increasing makes graph less smooth
+      backgroundColor: md_colors["Total"],
+      borderColor: md_colors["Total"]
+    }, {
+      type: 'line',
+      label: 'Radial',
+      data: md_radial_data,
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      tension: 0.7,
+      backgroundColor: md_colors["Radial"],
+      borderColor: md_colors["Radial"],
+    },{
+      type: 'line',
+      label: 'In-track',
+      data: md_intrack_data,
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      tension: 0.7,
+      backgroundColor: md_colors["In-track"],
+      borderColor: md_colors["In-track"],
+    },{
+      type: 'line',
+      label: 'Cross-track',
+      data: md_crosstrack_data,
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      tension: 0.7,
+      backgroundColor: md_colors["Cross-track"],
+      borderColor: md_colors["Cross-track"],
+    },{
+      // Special ephemeris
+      type:'scatter',
+      label: 'SPECIAL ephemeris',
+      data: md_special_data,
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      tension: 0.7,
+      pointStyle: "triangle",
+      pointRadius: 4,
+      pointHoverRadius: 4,
+      // Correspond bg color with type of data
+      pointBackgroundColor: function(context) {
+        var data_type = context.raw.type
+        return md_colors[data_type];
+      },
+      pointBorderColor: function(context) {
+        var data_type = context.raw.type
+        return md_colors[data_type];
+      }
+
+    },{
+      // Adding line for TCA
+      type: 'bar',
+      label: 'TCA',
+      data: [{x: "2023-05-23 04:04:04", y: 30000} ],
+      maxBarThickness: 2,
+      xAxisID: 'xAxis',
+      yAxisID: 'yAxis',
+      backgroundColor: "red",
+    }]
+  },
+  options: {
+    scales: {
+      xAxis: {
+        // The axis for this scale is determined from the first letter of the id as `'x'`
+        type: 'time',
+        grid: {display: false},
+        title: {
+          display: true,
+          text: 'Creation date of CDM (UTC)',
+          padding: 20,
+          font: {weight: "bold"}
+        },
+        min: "2023-05-19 00:00:00",
+        max: "2023-05-23 08:00:00",
+        time: {
+          displayFormats: {
+            day: "dd/MM",
+          },
+          unit: 'day',
+          unitStepSize: 1
+        },
+      },
+      yAxis: {
+        type: 'linear',
+        title: {
+          display: true,
+          text: 'Miss distance (m)',
+          padding: 20,
+          font: {weight: "bold"}
+        },
+        min: 0,
+        max: 30000,
+        ticks: {
+          stepSize: 10000,
+        }
+      }
+    },
+    plugins: {
+      legend: {
+        onClick: null, // prevents corresponding data from disappearing from graph when label clicked on legend
+        labels: {
+          // Hide TCA and special from Legend
+          filter: function(legendItem, data) {
+            let label = data.datasets[legendItem.datasetIndex].label || '';
+            if (typeof(label) !== 'undefined') {
+              if (legendItem.datasetIndex >= 4){
+                return false;
+              }
+            }
+            return label;
+          }
+        }
+      },
+      tooltip: {
+        mode: "x",  //shows all values for a specific time
+        intersect: true,
+        callbacks: {
+          title: function (context) {
+            // different title if hovered over item in special
+            if (context[0].datasetIndex == 4){
+              return "SPECIAL ephemeris \n" + context[0].raw.x;
+            }
+            return context[0].raw.x; // titles event raw time it occured
+          },
+          label: function (context) {
+            let label = context.dataset.label || "";
+            if (label == "TCA"){
+              return "";
+            }
+            if (label == "SPECIAL ephemeris") {
+              label = context.raw.type;
+            }
+            return label + ": " + context.raw.y
+          }
+
+        }
+      }
+    },
+  }
+});
+
+/*
+Previous logic to toggle special via check box in side bar
+Has been updated to toggle interactive PoC graph, but not updated to toggle interactive Miss Distance graph
 const GRAPH_PATHS = {
                 "operational": {
                   "missDistance": "/public/images/chart-MD.png",
@@ -1291,7 +1498,9 @@ const toggleSpecialGraphs = function (event) {
   };
   myLineChart.update();
 };
+*/
 
+// Logic to toggle Special for PoC graph
 pocSpecialPressed = true;
 function togglePocSpecial(){
   // check if button pressed
@@ -1307,5 +1516,24 @@ function togglePocSpecial(){
 }
 const pocSpecialButton = document.getElementById("poc-toggle-special");
 pocSpecialButton.addEventListener("click", togglePocSpecial);
+
+// Logic to toggle Special for miss distance graph
+mdSpecialPressed = true;
+function toggleMdSpecial(){
+  // check if button pressed
+  if (mdSpecialPressed) {
+    mdSpecialButton.classList.remove("toggle-buttons_active__lRAP7");
+    mdLineChart.getDatasetMeta(4).hidden = true;
+  }else {
+    mdSpecialButton.classList.add("toggle-buttons_active__lRAP7");
+    mdLineChart.getDatasetMeta(4).hidden = null;
+  }
+  mdSpecialPressed = !mdSpecialPressed;
+  mdLineChart.update()
+}
+const mdSpecialButton = document.getElementById("md-toggle-special");
+mdSpecialButton.addEventListener("click", toggleMdSpecial);
+
+
 </script>
 {% endblock %}
