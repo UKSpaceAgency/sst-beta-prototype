@@ -196,7 +196,7 @@ Event bads-basdw-ascs
                       <div style="background-color:#f3f2f1">
                         <p class="govuk-body-secondary"><p style=color:#505a5f>The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown </p>
                         <div class="toggle-buttons_button-group__C3NCd" style="float:left; margin-left:10px;">
-                          <button id="poc-toggle-special" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Toggle SPECIAL ephemeris">Toggle SPECIAL ephemeris</button>
+                          <button id="poc-toggle-special" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Show SPECIAL ephemeris">Show SPECIAL ephemeris &#9650;</button>
                         </div>
                         <div class="toggle-buttons_button-group__C3NCd" style="float:right; margin-right:10px;">
                           <button class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Linear">Linear</button>
@@ -1158,11 +1158,11 @@ myLineChart = new Chart(coll_ctx, {
       xAxisID: 'xAxis',
       yAxisID: 'yAxis',
       tension: 0.7,
-      backgroundColor: colors.orange,
-      borderColor: colors.orange,
+      backgroundColor: colors.dblue,
+      borderColor: colors.dblue,
       pointStyle: "triangle",
-      pointRadius: 10,
-      pointHoverRadius: 8,
+      pointRadius: 4,
+      pointHoverRadius: 4,
     },{
       // Adding line for TCA
       type: 'bar',
@@ -1224,7 +1224,7 @@ myLineChart = new Chart(coll_ctx, {
           filter: function(legendItem, data) {
             let label = data.datasets[legendItem.datasetIndex].label || '';
             if (typeof(label) !== 'undefined') {
-              if (legendItem.datasetIndex >= 3){
+              if (legendItem.datasetIndex >= 2){
                 return false;
               }
             }
