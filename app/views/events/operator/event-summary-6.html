@@ -96,28 +96,6 @@ Event bads-basdw-ascs
         <a href="#accordion-heading-7">Further information</a>
       </li>
     </ul>
-    <!-- Previous sidebar SPECIAL filter, removed to be replaced with local button-->
-    <!--
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-    <h3 class="govuk-heading-m">Filters</h3>
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-          <b style="margin-bottom: 0px">Filter by Data Source</h3>
-        </legend>
-        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-
-            <input class="govuk-checkboxes__input" id="filter-special" name="filter-special" type="checkbox" value="space-track" onchange="toggleSpecialGraphs(this)" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="organisation">
-              Show <strong class="govuk-tag">special</strong> ephemeris<br/>
-              <span style="font-size: 16px; color:#505a5f">This is data based on planned, but not executed, manoeuvres</span>
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-  -->
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   </div>
   <div>
@@ -250,31 +228,7 @@ Event bads-basdw-ascs
                       <div class="govuk-accordion__section-header">
                         <h2 class="govuk-accordion__section-heading" id="accordion-heading-2">
                           <span class="govuk-accordion__section-button" id="evolution-of-miss-distance">
-                            Manoeuvre support <strong class="govuk-tag govuk-tag--grey">Option 1</strong> <strong class="govuk-tag">Feature proposal</strong>
-                          </span>
-                        </h2>
-                      </div>
-                          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-    
-                            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                              <div style="background-color:#f3f2f1; padding-left: 15px; padding-top: 2px; padding-bottom: 10px; padding-right: 15px">
-                              <p class="govuk-body-secondary" style="color:#505a5f">The probability of collision (PoC) for different combinations of number of orbits to TCA and Delta V (amount of burn) of manoeuvre are shown. Move your mouse over the chart to see more details for each option. All available data are shown.</p>
-                              <p style="color:#505a5f">The minimum threshold on the graph (3e-6) is based on NASA CARA guidance.</p>
-    
-                              <div style="width:100%">
-                              <canvas id="myChart"></canvas>
-                              <br/><p>Download Manoeuvre Trade Space data [<a>CSV</a>] [<a>JSON</a>]</p>
-                              </div>
-                              </div>
-                            </div>
-    
-                    </div>
-                    </div>
-                    <div class="govuk-accordion__section ">
-                      <div class="govuk-accordion__section-header">
-                        <h2 class="govuk-accordion__section-heading" id="accordion-heading-2">
-                          <span class="govuk-accordion__section-button" id="evolution-of-miss-distance">
-                            Manoeuvre support <strong class="govuk-tag govuk-tag--grey">Option 2</strong> <strong class="govuk-tag">Feature proposal</strong>
+                            Manoeuvre support <strong class="govuk-tag">Feature proposal</strong>
                           </span>
                         </h2>
                       </div>
@@ -1041,30 +995,7 @@ Event bads-basdw-ascs
   };
 
 
-  // PLOT 1 - NORMAL CHART
-  const ctx = document.getElementById('myChart');
-
-  const set_options = [
-      {
-          thresh: 3e-6,
-          label: "PoC > 3e-6",
-          color: colors.orange,
-          target: -1
-      },
-      {
-          thresh: 1e-8,
-          label: "3e-6 ≥ PoC > 1e-8",
-          color: colors.lblue,
-          target: 0
-      },
-      {
-          thresh: 1e-50,
-          label: "PoC ≤ 1e-9",
-          color: colors.dblue,
-          target: 1
-      }
-  ]
-  const lineDatasets = generateLineDatasets(raw_mts_data, set_options);  
+  // MTS (DYNAMIC BICHROMATIC CHART)
   const scatterDatasets = [
       {
           label: null,
@@ -1072,23 +1003,12 @@ Event bads-basdw-ascs
           type: "scatter",
           elements:{
               point: {
-                  pointStyle: false
+                  pointStyle: false // hide the scatter points altogether
               }
           }
       }
   ];
 
-  let datasets = scatterDatasets.concat(lineDatasets);
-  const labels = Object.keys(raw_mts_data).map(parseFloat);
-  const data = {
-      labels: labels,
-      datasets: datasets
-  };
-  const config = generateConfig(data, set_options);
-
-  new Chart(ctx, config);
-
-  // PLOT 2 - DYNAMIC BICHROMATIC CHART
   const ctx2 = document.getElementById('myChart2');
   let c2 = null;
 
@@ -1469,38 +1389,6 @@ mdLineChart = new Chart(coll_ctx, {
     },
   }
 });
-
-/*
-Previous logic to toggle special via check box in side bar
-Has been updated to toggle interactive PoC graph, but not updated to toggle interactive Miss Distance graph
-const GRAPH_PATHS = {
-                "operational": {
-                  "missDistance": "/public/images/chart-MD.png",
-                },
-                "special": {
-                  "missDistance": "/public/images/special/miss_distance_withspecial.png",
-                }
-              };
-var specialGraphsShown = true;
-const toggleSpecialGraphs = function (event) {
-  // get miss distance graphs
-  const graphMissDistance = document.getElementById("graph-miss-distance");
-  const tableRowSpecialDataSource = document.getElementById("data-source-row-special");
-  const filterSpecialCheckbox = document.getElementById("filter-special");
-  
-  specialGraphsShown = filterSpecialCheckbox.checked;
-
-  var lookup = specialGraphsShown ? "special" : "operational";
-  graphMissDistance.src = GRAPH_PATHS[lookup]["missDistance"];
-  tableRowSpecialDataSource.hidden = !specialGraphsShown;
-  if (event.checked) {
-    myLineChart.getDatasetMeta(2).hidden = null;
-  }else {
-    myLineChart.getDatasetMeta(2).hidden = true;
-  };
-  myLineChart.update();
-};
-*/
 
 // Logic to toggle Special for PoC graph
 pocSpecialPressed = true;
