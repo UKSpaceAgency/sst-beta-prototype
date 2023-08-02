@@ -252,7 +252,25 @@ Event bads-basdw-ascs
                                 </select>
                               </div>
                               <canvas id="myChart2"></canvas>
-                              <br/><p>Download Manoeuvre Trade Space data [<a>CSV</a>] [<a>JSON</a>]</p>
+                              
+                              <div class="toggle-buttons_button-group__C3NCd" style="margin-left: auto; margin-right: auto; margin-top: 15px">
+                                <button id="mts-xaxis-orbits-toggle" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Number of orbits until TCA">Number of orbits until TCA</button>
+                                <button id="mts-xaxis-datetime-toggle" class="toggle-buttons_button__tbqna" aria-label="Datetime">Datetime</button>
+                              </div>   
+                              <details class="govuk-details" data-module="govuk-details">
+                                <summary class="govuk-details__summary">
+                                  <span class="govuk-details__summary-text">
+                                    Help with interpreting manoeuvre trade space plots
+                                  </span>
+                                </summary>
+                                <div class="govuk-details__text">
+                                  <p>The plot shows predicted PoC for different possible manoeuvres based on the last received operational CDM from Space-Track.</p>
+                                  <p>All manoeuvres (delta V) shown are given in the in-track direction.</p>
+                                  <p>These predicted PoCs <b>do not</b> take into account any secondary collisions which may occur as a result of manoeuvring. If you wish to determine secondary collision risk, you should upload a <strong class="govuk-tag">special</strong>
+                                  ephemeris to Space-Track.</p>
+                                </div>
+                              </details>
+                              <p style="padding-bottom: 10px">Download Manoeuvre Trade Space data [<a>CSV</a>] [<a>JSON</a>]</p>
                               </div> 
                               </div>
                             </div>
@@ -747,6 +765,9 @@ Event bads-basdw-ascs
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 <script>
 
+  const PERIOD_MINS = 90;
+  const tcaDatetime = new Date("2021-02-04T11:51:07");
+
   // BEGIN MTS CODE "LIBRARY"
   // ========================
 
@@ -807,7 +828,8 @@ Event bads-basdw-ascs
                   above: option.color
               },
               borderColor: option.color,
-              backgroundColor: option.color
+              backgroundColor: option.color,
+              pointStyle: false
           }
           const min_set = {
               label: null,
@@ -817,7 +839,8 @@ Event bads-basdw-ascs
                   below: option.color
               },
               borderColor: option.color,
-              backgroundColor: option.color
+              backgroundColor: option.color,
+              pointStyle: false
           }
           lineDatasets.push(max_set);
           lineDatasets.push(min_set);
@@ -847,7 +870,6 @@ Event bads-basdw-ascs
               color: colors.dblue,
               target: 1
           }
-          // (thresh * 1e-1).toExponential(0)
       ]
   }
 
@@ -884,8 +906,8 @@ Event bads-basdw-ascs
           scales: {
               x: {
                   title: {
-                      display: true,
-                      text: "Number of orbits until TCA"
+                      display: false,
+                      text: false
                   }
               },
               y: {
@@ -929,7 +951,12 @@ Event bads-basdw-ascs
                           if (context.raw.x !== null) {
                               orbit_label += context.raw.x;
                           }
-                          return [poc_label, dv_label, orbit_label];
+                          let datetime_label = "Datetime: ";
+                          if (context.raw.x !== null) {
+                             const timeTick = new Date(tcaDatetime - (context.raw.x * 1000 * 60 * PERIOD_MINS));
+                             datetime_label += timeTick.toISOString();
+                          }
+                          return [poc_label, dv_label, orbit_label, datetime_label];
                       },
                       labelColor: generateLabelColorCallbackFunction(options)
                   }
@@ -1009,18 +1036,21 @@ Event bads-basdw-ascs
       }
   ];
 
-  const ctx2 = document.getElementById('myChart2');
-  let c2 = null;
+  const chartElement = document.getElementById('myChart2');
+  let chart = null;
 
-  const threshSelector = document.getElementById('threshSelector');
 
-  let threshIndex = 0;
-  let threshCurrent = parseFloat(threshSelector.value);
 
-  const newThreshold = function(thresh) {
-      threshCurrent = thresh;
+  const thresholdSelector = document.getElementById('threshSelector');
 
-      const options = generateBichromaticOptions(threshCurrent);
+  let thresholdIndex = 0;
+  let thresholdCurrent = parseFloat(thresholdSelector.value);
+
+  // renders an MTS plot within the given canvas element
+  const renderMTSPlot = function(threshold, chartElement) {
+      thresholdCurrent = threshold;
+
+      const options = generateBichromaticOptions(thresholdCurrent);
       const newLineDatasets = generateLineDatasets(raw_mts_data, options);
       let newDatasets = scatterDatasets.concat(newLineDatasets);
       const labels = Object.keys(raw_mts_data).map(parseFloat);
@@ -1032,18 +1062,47 @@ Event bads-basdw-ascs
 
       let dynConfig = generateConfig(newData, options);
 
-      if (c2 !== null) {
-          c2.destroy();
+      if (chart !== null) {
+          chart.destroy();
       }
 
-      c2 = new Chart(ctx2, dynConfig);
+      chart = new Chart(chartElement, dynConfig);
   }
 
-  newThreshold(threshCurrent);
+  renderMTSPlot(thresholdCurrent, chartElement);
 
-  threshSelector.onchange = function (e) {
-      newThreshold(parseFloat(threshSelector.value));
+  thresholdSelector.onchange = function (e) {
+      renderMTSPlot(parseFloat(thresholdSelector.value), chartElement);
   }
+
+  // -- X-Axis toggle button
+  const orbitsToggle = document.getElementById("mts-xaxis-orbits-toggle");
+  const datetimeToggle = document.getElementById("mts-xaxis-datetime-toggle");
+  var mtsXAxis = "orbits";
+
+  const toggleButton = function () {
+    mtsXAxis = (mtsXAxis === "orbits") ? "datetime" : "orbits";
+    orbitsToggle.classList.toggle("toggle-buttons_active__lRAP7");
+    datetimeToggle.classList.toggle("toggle-buttons_active__lRAP7");
+
+    if (mtsXAxis === "orbits") {
+      chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
+          return 40.5 - value;
+        };
+      
+    } else {
+      chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
+          const timeTick = new Date(tcaDatetime - ((40.5 - value) * 1000 * 60 * PERIOD_MINS));
+          return (value % 4 === 0) ? timeTick.toISOString() : "";
+        };
+    }
+    chart.update();
+    
+  };
+
+  orbitsToggle.addEventListener("click", toggleButton);
+  datetimeToggle.addEventListener("click", toggleButton);
+
 
 // Evolution of Collision probability graph
 
