@@ -255,8 +255,8 @@ Event bads-basdw-ascs
                               </div>
                               
                               <div class="toggle-buttons_button-group__C3NCd" style="margin-left: auto; margin-right: auto; margin-top: 15px">
-                                <button id="mts-xaxis-orbits-toggle" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Number of orbits until TCA">Number of orbits until TCA</button>
-                                <button id="mts-xaxis-datetime-toggle" class="toggle-buttons_button__tbqna" aria-label="Datetime">Datetime</button>
+                                <button id="mts-xaxis-datetime-toggle" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Date and Time">Date and Time</button>
+                                <button id="mts-xaxis-orbits-toggle" class="toggle-buttons_button__tbqna" aria-label="Number of orbits until TCA">Number of orbits until TCA</button>
                               </div>   
                               <details class="govuk-details" data-module="govuk-details">
                                 <summary class="govuk-details__summary">
@@ -953,7 +953,7 @@ Event bads-basdw-ascs
                           if (context.raw.x !== null) {
                               orbit_label += context.raw.x;
                           }
-                          let datetime_label = "Datetime: ";
+                          let datetime_label = "Date and Time: ";
                           if (context.raw.x !== null) {
                              const timeTick = new Date(tcaDatetime - (context.raw.x * 1000 * 60 * PERIOD_MINS));
                              datetime_label += timeTick.toISOString();
@@ -1082,7 +1082,11 @@ Event bads-basdw-ascs
   // -- X-Axis toggle button
   const orbitsToggle = document.getElementById("mts-xaxis-orbits-toggle");
   const datetimeToggle = document.getElementById("mts-xaxis-datetime-toggle");
-  var mtsXAxis = "orbits";
+  chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
+          const timeTick = new Date(tcaDatetime - ((40.5 - value) * 1000 * 60 * PERIOD_MINS));
+          return (value % 4 === 0) ? getMTPDateString(timeTick) : "";
+        };
+  var mtsXAxis = "datetime";
 
   const toggleButton = function () {
     mtsXAxis = (mtsXAxis === "orbits") ? "datetime" : "orbits";
@@ -1091,7 +1095,7 @@ Event bads-basdw-ascs
 
     if (mtsXAxis === "orbits") {
       chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
-          return 40.5 - value;
+          return String(40.5 - value).padStart(16, " ");
         };
       
     } else {
