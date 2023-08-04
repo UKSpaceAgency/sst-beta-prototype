@@ -251,7 +251,9 @@ Event bads-basdw-ascs
                                     <option value="1e-11">1e-11</option>
                                 </select>
                               </div>
-                              <canvas id="myChart2"></canvas>
+                              <div style="position: relative; min-height: 300px">
+                                <canvas id="myChart2"></canvas>
+                              </div>
                               
                               <div class="toggle-buttons_button-group__C3NCd" style="margin-left: auto; margin-right: auto; margin-top: 15px">
                                 <button id="mts-xaxis-orbits-toggle" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Number of orbits until TCA">Number of orbits until TCA</button>
@@ -899,6 +901,7 @@ Event bads-basdw-ascs
       data: data,
       options: {
           animation: false,
+          maintainAspectRatio: false,
           interaction: {
               mode: 'nearest',
               intersect: false
@@ -974,6 +977,11 @@ Event bads-basdw-ascs
   };
   }
 
+  const getMTPDateString = function (rawDate) {
+    const date = new Date(rawDate);
+    return String(date.getDate()).padStart(2, "0") + "/" + String(date.getMonth() + 1).padStart(2, "0") + " " + String(date.getHours()).padStart(2, "0") + ":" + String(date.getMinutes()).padStart(2, "0");
+  };
+
   // ======================
   // END MTS CODE "LIBRARY"
 
@@ -1039,8 +1047,6 @@ Event bads-basdw-ascs
   const chartElement = document.getElementById('myChart2');
   let chart = null;
 
-
-
   const thresholdSelector = document.getElementById('threshSelector');
 
   let thresholdIndex = 0;
@@ -1049,7 +1055,6 @@ Event bads-basdw-ascs
   // renders an MTS plot within the given canvas element
   const renderMTSPlot = function(threshold, chartElement) {
       thresholdCurrent = threshold;
-
       const options = generateBichromaticOptions(thresholdCurrent);
       const newLineDatasets = generateLineDatasets(raw_mts_data, options);
       let newDatasets = scatterDatasets.concat(newLineDatasets);
@@ -1093,7 +1098,7 @@ Event bads-basdw-ascs
     } else {
       chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
           const timeTick = new Date(tcaDatetime - ((40.5 - value) * 1000 * 60 * PERIOD_MINS));
-          return (value % 4 === 0) ? timeTick.toISOString() : "";
+          return (value % 4 === 0) ? getMTPDateString(timeTick) : "";
         };
     }
     chart.update();
