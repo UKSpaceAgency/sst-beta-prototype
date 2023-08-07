@@ -830,7 +830,7 @@ Event bads-basdw-ascs
               },
               borderColor: option.color,
               backgroundColor: option.color,
-              pointStyle: false
+              pointStyle: false // turn on line points by commenting this out
           }
           const min_set = {
               label: null,
@@ -841,7 +841,7 @@ Event bads-basdw-ascs
               },
               borderColor: option.color,
               backgroundColor: option.color,
-              pointStyle: false
+              pointStyle: false // turn on line points by commenting this out
           }
           lineDatasets.push(max_set);
           lineDatasets.push(min_set);
@@ -1037,7 +1037,7 @@ Event bads-basdw-ascs
           type: "scatter",
           elements:{
               point: {
-                  pointStyle: false // hide the scatter points altogether
+                  pointStyle: false // comment this out to show the scatter data point
               }
           }
       }
@@ -1075,24 +1075,8 @@ Event bads-basdw-ascs
 
   renderMTSPlot(thresholdCurrent, chartElement);
 
-  thresholdSelector.onchange = function (e) {
-      renderMTSPlot(parseFloat(thresholdSelector.value), chartElement);
-  }
-
-  // -- X-Axis toggle button
-  const orbitsToggle = document.getElementById("mts-xaxis-orbits-toggle");
-  const datetimeToggle = document.getElementById("mts-xaxis-datetime-toggle");
-  chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
-          const timeTick = new Date(tcaDatetime - ((40.5 - value) * 1000 * 60 * PERIOD_MINS));
-          return (value % 4 === 0) ? getMTPDateString(timeTick) : "";
-        };
   var mtsXAxis = "datetime";
-
-  const toggleButton = function () {
-    mtsXAxis = (mtsXAxis === "orbits") ? "datetime" : "orbits";
-    orbitsToggle.classList.toggle("toggle-buttons_active__lRAP7");
-    datetimeToggle.classList.toggle("toggle-buttons_active__lRAP7");
-
+  const updateXAxis = function () {
     if (mtsXAxis === "orbits") {
       chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
           return String(40.5 - value).padStart(16, " ");
@@ -1105,7 +1089,24 @@ Event bads-basdw-ascs
         };
     }
     chart.update();
-    
+  }
+
+  // -- Dropdown selector
+  thresholdSelector.onchange = function (e) {
+      renderMTSPlot(parseFloat(thresholdSelector.value), chartElement);
+      updateXAxis();
+  }
+
+  // -- X-Axis toggle button
+  const orbitsToggle = document.getElementById("mts-xaxis-orbits-toggle");
+  const datetimeToggle = document.getElementById("mts-xaxis-datetime-toggle");
+  updateXAxis();
+
+  const toggleButton = function () {
+    mtsXAxis = (mtsXAxis === "orbits") ? "datetime" : "orbits";
+    orbitsToggle.classList.toggle("toggle-buttons_active__lRAP7");
+    datetimeToggle.classList.toggle("toggle-buttons_active__lRAP7");
+    updateXAxis();
   };
 
   orbitsToggle.addEventListener("click", toggleButton);
