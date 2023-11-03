@@ -16,13 +16,13 @@ Upcoming re-entry events
 
         <h1 class="govuk-heading-xl">Upcoming re-entry events</h1>
 
-        <p class="govuk-body">There are currently <b>X</B> re-entry events expected worldwide in the next <b>Y</b> days.</p>
+        <p class="govuk-body">There is currently <b>1</B> re-entry event expected worldwide in the next <b>3</b> days.</p>
 
         <div class="moj-search">
         <form action="#" method="post">
         <div class="govuk-form-group">
           <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-            Find a re-entry event: (Search not yet working)
+            Find a re-entry event:
           </label>
 
           <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by international designator or object common name" aria-describedby="search-hint">
@@ -42,32 +42,38 @@ Upcoming re-entry events
 
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b></b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="5"><b>Object details</b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Event details</b></td>
             </tr>
             <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Your interest</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>International designator</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Object common name</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Object type</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Estimated mass (kg)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Mass (kg)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>UK-licensed object?</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Predicted entry time</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Predicted time of re-entry</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Uncertainty window (mins)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Expected survivability to the ground</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Your interest</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of impact in UK (%)</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  High
+                </strong>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/admin/event-summary-1" class="govuk-link--no-visited-state">2014-071B</a> </b></td>
               <td class="govuk-table__cell govuk-body-s">CZ-2C R/B</td>
               <td class="govuk-table__cell govuk-body-s">ROCKET BODY</td>
               <td class="govuk-table__cell govuk-body-s">4006</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">No</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">21/01/23 16:20</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">NO</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">03/11/23 16:20</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+/- 284.9</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">LIKELY</td>
-  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">HIGH</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.04</td>
             </tr>
           </tbody>
         </col>
@@ -94,7 +100,7 @@ Upcoming re-entry events
       </details>
 
       <h1 class="govuk-heading-xl">Previous re-entry events</h1>
-      <p class="govuk-body">The table below shows all re-entry events monitored by the UKSA since the service began in December 2023.
+      <p class="govuk-body">The table below shows all re-entry events monitored by the UKSA since the service began in November 2023.
         <div class="moj-search">
           <form action="#" method="post">
           <div class="govuk-form-group">
@@ -102,7 +108,7 @@ Upcoming re-entry events
               Find a previous re-entry event:
             </label>
 
-            <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by event or object ID" aria-describedby="search-hint">
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by international designator or object common name" aria-describedby="search-hint">
           </div>
 
           <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
@@ -111,71 +117,50 @@ Upcoming re-entry events
           </form>
           </div>
           <br>
-  <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
-    <col>
-      <colgroup span="1"></colgroup>
-      <colgroup span="1"></colgroup>
-      <colgroup span="1"></colgroup>
-      <colgroup span="2"></colgroup>
-      <colgroup span="3"></colgroup>
-
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"></td>
-        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"></td>
-        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"></td>
-        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of impact (%)</b></td>
-        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Object information</b></td>
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Your interest</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 22%";>Confirmed time of re-entry</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Over the UK</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Over your AoI</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Name</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Mass</th>
-        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>UK-licensed?</th>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">
-          <strong class="govuk-tag govuk-tag--red">
-            High
-          </strong>
-        <td class="govuk-table__cell govuk-body-s"data-sort-value="0001"> <b><a href="/re-entry-events/admin/re-entry-event-summary-5" class="govuk-link--no-visited-state">asdf-asdas-asdf</td>
-        <td class="govuk-table__cell govuk-body-s">04/11/21 16:03</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.01</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.02</td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="/satellites/admin/satellite-1">Discoverer 5</a></td>
-        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
-<td class="govuk-table__cell govuk-body-s">No</td>
-      </tr>
-      <td class="govuk-table__cell">
-        <strong class="govuk-tag govuk-tag--red">
-          High
-        </strong>
-      <td class="govuk-table__cell govuk-body-s"data-sort-value="0001"> <b><a href="/re-entry-events/admin/re-entry-event-summary-5" class="govuk-link--no-visited-state">acfd-asdgr-acfd</td>
-      <td class="govuk-table__cell govuk-body-s">02/11/21 16:03</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.02</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.018</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="/satellites/admin/satellite-1">Lemur 2</a></td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
-<td class="govuk-table__cell govuk-body-s">No</td>
-      </tr>
-      <td class="govuk-table__cell">
-      <td class="govuk-table__cell govuk-body-s"data-sort-value="0001"> <b><a href="/re-entry-events/admin/re-entry-event-summary-5" class="govuk-link--no-visited-state">ayhf-asdgs-asyf</td>
-      <td class="govuk-table__cell govuk-body-s">07/11/22 16:03</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.0001</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.0002</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="/satellites/admin/satellite-1">Debris</a></td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643</td>
-<td class="govuk-table__cell govuk-body-s">Yes</td>
-      </tr>
-    </tbody>
-  </col>
-</table>
+  
+  
+          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+            <col>
+              <colgroup span="5"></colgroup>
+              <colgroup span="4"></colgroup>
+  
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b></b></td>
+                <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="5"><b>Object details</b></td>
+                <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Event details</b></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Your interest</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>International designator</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Object common name</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Object type</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Mass (kg)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>UK-licensed object?</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Confirmed time of re-entry</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Survived to the ground?</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Impacted the UK?</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag govuk-tag--red">
+                    High
+                  </strong>
+                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/admin/event-summary-1" class="govuk-link--no-visited-state">2014-071B</a> </b></td>
+                <td class="govuk-table__cell govuk-body-s">CZ-2C R/B</td>
+                <td class="govuk-table__cell govuk-body-s">ROCKET BODY</td>
+                <td class="govuk-table__cell govuk-body-s">4006</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">NO</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">01/11/23 09:38</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">YES</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">NO</td>
+              </tr>
+            </tbody>
+          </col>
+        </table>
+  
 <a href="/eventhistory" class="govuk-link" download="">Download "Previous events" as a CSV</a><p></p>
 
 <a href="/eventhistory" class="govuk-link" download="">Download "Previous events" as a JSON</a><p></p>
