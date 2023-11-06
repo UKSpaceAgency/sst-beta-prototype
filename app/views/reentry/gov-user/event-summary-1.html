@@ -169,31 +169,46 @@ Object 2014-071B
             <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">United Kingdom</th>
             <td class="govuk-table__cell govuk-body-s">0.04</td>
             <td class="govuk-table__cell govuk-body-s">03/11/2023 16:46</td>
-            <td class="govuk-table__cell govuk-body-s">Low</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+                Low
+              </strong>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">England</th>
             <td class="govuk-table__cell govuk-body-s">0.01</td>
             <td class="govuk-table__cell govuk-body-s">03/11/2023 16:46</td>
-            <td class="govuk-table__cell govuk-body-s">Low</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+                Low
+              </strong>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Northern Ireland</th>
             <td class="govuk-table__cell govuk-body-s">0.03</td>
             <td class="govuk-table__cell govuk-body-s">03/11/2023 16:52</td>
-            <td class="govuk-table__cell govuk-body-s">Low</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+                Low
+              </strong>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Scotland</th>
             <td class="govuk-table__cell govuk-body-s">0.00</td>
             <td class="govuk-table__cell govuk-body-s">N/A</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                N/A
+              </strong>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Wales</th>
             <td class="govuk-table__cell govuk-body-s">0.00</td>
             <td class="govuk-table__cell govuk-body-s">N/A</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--grey">
+                N/A
+              </strong>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-body-s">Sea area</th>
@@ -205,7 +220,10 @@ Object 2014-071B
             <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">UK NAVAREA</th>
             <td class="govuk-table__cell govuk-body-s">0.31</td>
             <td class="govuk-table__cell govuk-body-s">03/11/2023 16:46</td>
-            <td class="govuk-table__cell govuk-body-s">Low</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+                Low
+              </strong>
           </tr>
         </tbody>
       </table> 
@@ -295,22 +313,24 @@ Object 2014-071B
                           <tbody class="govuk-table__body">
                               <tr class="govuk-table__row">
                                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";>Overflight number</th>
-                                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Overflight time (UTC)</th>
+                                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";>Overflight time (UTC)</th>
+                                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";>Probability of re-entry during overflight</th>
                             </tr>
                             <tr class="govuk-table__row">
-                              <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">1</th>
+                              <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 50px">1</th>
                               <td class="govuk-table__cell govuk-body-s">03/11/2023 16:46</td>
+                              <td class="govuk-table__cell govuk-body-s">0.04%</td>
                             </tr>
                           </tbody>
                         </table> 
 
                         <p> Note that the above times are subject to change slightly due to the uncertainties involved. The times
                           above are based on the Monte Carlo runs which uses our high accuracy model. Of the 30,000 re-entry
-                          simulations carried out by the UKSA OA Team, 12 re-entered over the UK indicating that the probability
-                          is likely around 0.04%.</p>
+                          simulations carried out by the UKSA OA Team, 12 re-entered over the UK indicating that <b>the probability
+                          is likely around 0.04%.</b></p>
 
                         <img src="/public/images/Reentry-UK-overflight-map.png" alt="Reentry UK overflight map" width="100%">
-
+                        <p><br></p>
                         <h1 class="govuk-heading-s">Population density risk</h1>
 
                         <p>Each Monte Carlo run outputs a Latitude and Longitude of re-entry, this has then been blended with the
@@ -333,9 +353,11 @@ Object 2014-071B
                         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
   
                           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                           <p class="govuk-body-secondary">This graph shows the evolution of the re-entry window over time.</p>
-
-                           <img src="/public/images/Reentry-event-history.png" alt="Re-entry event history" width="100%">
+                           <p class="govuk-body-secondary">This graph shows the evolution of the predicted time of re-entry as we approach the event.</p>
+                           <img src="/public/images/Reentry-time-history.png" alt="Re-entry time history" width="100%">
+                           <p><br></p>
+                           <p class="govuk-body-secondary">This graph shows the evolution of the predicted probability of re-entry over the UK as we approach the event.</p>
+                           <img src="/public/images/Reentry-probability-history.png" alt="Re-entry probability history" width="100%">
                            </div>
                          </div>
                       </div>
