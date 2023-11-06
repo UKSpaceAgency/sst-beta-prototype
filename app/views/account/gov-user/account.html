@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Setup menu
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Your account information
+      </h1>
+
+    <ul class="app-task-list">
+
+
+
+          <li>
+            <h2 class="app-task-list__section">
+             View your account details
+            </h2>
+            <ul class="app-task-list__items">
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="/account/gov-user/account-information">Account details</a>
+                </span>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="app-task-list__section">
+            Change your notification settings
+            </h2>
+            <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/account/gov-user/threshold-settings-view" aria-describedby="event-thresholds">
+                Event notification thresholds settings
+              </a>
+            </span>
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/account/gov-user/notification-settings-view" aria-describedby="notification-settings">
+                Notification settings
+              </a>
+            </span>
+          </li>
+
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+      View terms and conditions and data privacy notice
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/account/gov-user/ts-and-cs" aria-describedby="terms-of-service">
+                Terms and Conditions
+              </a>
+            </span>
+
+          </li>
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="/account/gov-user/data-privacy" aria-describedby="data-privacy">
+                Data privacy notice
+              </a>
+            </span>
+
+          </li>
+        </ul>
+      </li>
+
+        </ul>
+
+  </div>
+</div>
+
+{% endblock %}
