@@ -72,7 +72,7 @@ Event bads-basdw-ascs
         <a href="#event summary">Event summary</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-1">Evolution of probability of collision</a>
+        <a href="#accordion-heading-1">Probability of collision support</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#accordion-heading-2">Evolution of miss distance</a>
@@ -113,8 +113,8 @@ Event bads-basdw-ascs
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s">CDM ID</th>
-                <td class="govuk-table__cell govuk-body-s">34975478796</td>
-                <td class="govuk-table__cell govuk-body-s">34677867989</td>
+                <td class="govuk-table__cell govuk-body-s">349754787</td>
+                <td class="govuk-table__cell govuk-body-s">346778679</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s">Probability of collision</th>
@@ -128,8 +128,8 @@ Event bads-basdw-ascs
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s">Total miss distance (m)</th>
-                <td class="govuk-table__cell govuk-body-s">362 </td>
-                <td class="govuk-table__cell govuk-body-s">362 </td>
+                <td class="govuk-table__cell govuk-body-s">258 </td>
+                <td class="govuk-table__cell govuk-body-s">258 </td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">Mean radial miss distance (m)</th>
@@ -138,8 +138,8 @@ Event bads-basdw-ascs
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">In-track miss distance (m)</th>
-                <td class="govuk-table__cell govuk-body-s">208</td>
-                <td class="govuk-table__cell  govuk-body-s">208</td>
+                <td class="govuk-table__cell govuk-body-s">10.3</td>
+                <td class="govuk-table__cell  govuk-body-s">10.3</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">Cross-track miss distance (m)</th>
@@ -147,7 +147,7 @@ Event bads-basdw-ascs
                 <td class="govuk-table__cell  govuk-body-s">105</td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header govuk-body-s">Data updated (UTC)</th>
+                <th scope="row" class="govuk-table__header govuk-body-s">Time of update (UTC)</th>
                 <td class="govuk-table__cell  govuk-body-s">04/02/2021 20:19:02.00 </td>
                 <td class="govuk-table__cell govuk-body-s">04/02/2021 08:19:03.00</td>
               </tr>
@@ -162,51 +162,100 @@ Event bads-basdw-ascs
     
     
             <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
-              <!-- Evolution of collision probability -->
+              <!-- Probability of collision support -->
               <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
                   <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
                     <span class="govuk-accordion__section-button" id="evolution-of-probability-of-collision">
-                      Evolution of collision probability
+                      Probability of collision support
                     </span>
                   </h2>
                 </div>
     
                     <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-
-                      <div style="background-color:#f3f2f1; padding: 0px 15px 0px 15px">
-                        <p class="govuk-body-secondary"><p style=color:#505a5f>The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown where available. </p>
-                        <p class="govuk-body-secondary" style="color:#505a5f">Evolution of operational event data is displayed as a continuous line. Individual SPECIAL ephemeris probabilities can be turned on or off. </p>
-                        <div class="toggle-buttons_button-group__C3NCd" style="float:left">
-                          <button id="poc-toggle-special" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Show SPECIAL ephemeris">Show SPECIAL ephemeris &#9650;</button>
+                        <h3 class="govuk-heading-s">Evolution of probability of collision</h3>
+                        <p class="govuk-body-secondary">The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown where available. </p>
+                        <p class="govuk-body-secondary">Evolution of operational event data is displayed as a continuous line. Individual SPECIAL ephemeris probabilities can be turned on or off. </p>
+                        <div style="background-color:#f3f2f1; padding: 0px 15px 0px 15px">
+                          <div class="toggle-buttons_button-group__C3NCd" style="float:left">
+                            <button id="poc-toggle-special" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Show SPECIAL ephemeris">Show SPECIAL ephemeris &#9650;</button>
+                          </div>
+                          <div class="toggle-buttons_button-group__C3NCd" style="float:right">
+                            <button class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Linear">Linear</button>
+                            <button class="toggle-buttons_button__tbqna" aria-label="Log">Log</button>
+                          </div>                      
+                          
+                          <canvas id="collisionEvolutionGraph" width="800" height="400"></canvas>
                         </div>
-                        <div class="toggle-buttons_button-group__C3NCd" style="float:right">
-                          <button class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Linear">Linear</button>
-                          <button class="toggle-buttons_button__tbqna" aria-label="Log">Log</button>
-                        </div>                      
-                        
-                        <canvas id="collisionEvolutionGraph" width="800" height="400"></canvas>
-                      </div>
+                        <br/>
+                        <h3 class="govuk-heading-s">Manoeurve support for probability of collision</h3>
+                        <p class="govuk-body-secondary">The probability of collision (PoC) for different combinations of number of orbits to TCA and Delta V (amount of burn) of manoeuvre are shown. Move your mouse over the chart to see more details for each option. All available data are shown.</p>
+                        <div style="background-color:#f3f2f1; padding-left: 15px; padding-top: 2px; padding-right: 15px">
+                          <div style="width:100%">
+                          <div class="govuk-form-group">
+                          <label class="govuk-label" for="threshSelector"><b>What is your mitigation requirement?</b></label>
+                          <div id="threshSelector-hint" class="govuk-hint">This is the <b>maximum</b> PoC you would be prepared to accept after a manoeuvre</div>
+                            <select class="govuk-select" name="threshSelector" id="threshSelector">
+                                <option value="1e-3">1e-3</option>
+                                <option value="1e-5" selected="selected">1e-5</option>
+                                <option value="1e-6">1e-6</option>
+                                <option value="1e-7">1e-7</option>
+                                <option value="1e-9">1e-9</option>
+                                <option value="1e-11">1e-11</option>
+                            </select>
+                          </div>
+                          <div style="position: relative; min-height: 300px; display: flex; width: 100%">
+                            <div style="flex: 90; flex-shrink: 2; min-height: 300px; min-width: 0;">
+                              <canvas id="myChart2" style="float:left"></canvas>
+                            </div>
+                            <div style="flex: 10; flex-shrink: 0; min-width: 0">
+                              <img src="/public/images/tca_line.png" style="height: 200px; margin-left: -15px; margin-top:30px">
+                            </div>
+                          </div>
+                          
+                          
+                          
+                          
+                          <div class="toggle-buttons_button-group__C3NCd" style="margin-left: auto; margin-right: auto; margin-top: 15px">
+                            <button id="mts-xaxis-datetime-toggle" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Date and Time">Date and Time</button>
+                            <button id="mts-xaxis-orbits-toggle" class="toggle-buttons_button__tbqna" aria-label="Number of orbits until TCA">Number of orbits until TCA</button>
+                          </div>   
+                          <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                Help with interpreting manoeuvre trade space plots
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                              <p>The plot shows predicted PoC for different possible manoeuvres based on the last received operational CDM from Space-Track.</p>
+                              <p>All manoeuvres (delta V) shown are given in the in-track direction.</p>
+                              <p>These predicted PoCs <b>do not</b> take into account any secondary collisions which may occur as a result of manoeuvring. If you wish to determine secondary collision risk, you should upload a <strong class="govuk-tag">special</strong>
+                              ephemeris to Space-Track.</p>
+                            </div>
+                          </details>
+                          <p style="padding-bottom: 10px">Download Manoeuvre Trade Space data [<a>CSV</a>] [<a>JSON</a>]</p>
+                          </div> 
+                        </div>
                       </div>
                     </div>
                     </div>
     
-                    <!-- Evolution of miss distance -->
+                    <!-- Miss distance support -->
                     <div class="govuk-accordion__section ">
                       <div class="govuk-accordion__section-header">
                         <h2 class="govuk-accordion__section-heading" id="accordion-heading-2">
                           <span class="govuk-accordion__section-button" id="evolution-of-miss-distance">
-                            Evolution of miss distance
+                            Miss distance support
                           </span>
                         </h2>
                       </div>
                           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-    
+                            <h3 class="govuk-heading-s">Evolution of miss distance</h3>
+                            <p class="govuk-body-secondary">The changing expected miss distance leading up to the time of closest approach (TCA). All available data is shown. </p>
+                            <p class="govuk-body-secondary">Evolution of operational event data is displayed as a continuous line. Individual SPECIAL ephemeris distances can be turned on or off.</p>
                             <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                               <div style="background-color:#f3f2f1; padding: 0px 15px 0px 15px">
-                              <p class="govuk-body-secondary" style=color:#505a5f>The changing expected miss distance leading up to the time of closest approach (TCA). All available data is shown. </p>
-                              <p class="govuk-body-secondary" style=color:#505a5f>Evolution of operational event data is displayed as a continuous line. Individual SPECIAL ephemeris distances can be turned on or off.</p>
                               <div class="toggle-buttons_button-group__C3NCd" style="float:left;">
                                 <button id="md-toggle-special" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Show SPECIAL ephemeris">Show SPECIAL ephemeris &#9650;</button>
                               </div>
@@ -218,40 +267,15 @@ Event bads-basdw-ascs
                               <canvas id="missDistanceEvolutionGraph" width="800" height="400"></canvas>
                               </div>
                             </div>
-    
-                    </div>
-                    </div>
-    
-                    <!-- Manoeuvre planning support -->
-                    <div class="govuk-accordion__section ">
-                      <div class="govuk-accordion__section-header">
-                        <h2 class="govuk-accordion__section-heading" id="accordion-heading-2">
-                          <span class="govuk-accordion__section-button" id="evolution-of-miss-distance">
-                            Manoeuvre support <strong class="govuk-tag">Feature proposal</strong>
-                          </span>
-                        </h2>
-                      </div>
-                          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-    
-                            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                              <div style="background-color:#f3f2f1; padding-left: 15px; padding-top: 2px; padding-right: 15px">
-                              <p class="govuk-body-secondary" style="color:#505a5f">The probability of collision (PoC) for different combinations of number of orbits to TCA and Delta V (amount of burn) of manoeuvre are shown. Move your mouse over the chart to see more details for each option. All available data are shown.</p>
+
+                            <h3 class="govuk-heading-s">Manoeuvre support for miss distance</h3>
+                            <p class="govuk-body-secondary">The miss distance for different combinations of number of orbits to TCA and Delta V (amount of burn) of manoeuvre are shown. Move your mouse over the chart to see more details for each option. All available data are shown.</p>
+                            <div style="background-color:#f3f2f1; padding-left: 15px; padding-top: 2px; padding-right: 15px">
+                              
     
                               <div style="width:100%">
-                              <div class="govuk-form-group">
-                              <label class="govuk-label" for="threshSelector"><b>What is your mitigation requirement?</b></label>
-                              <div id="threshSelector-hint" class="govuk-hint">This is the <b>maximum</b> PoC you would be prepared to accept after a manoeuvre</div>
-                                <select class="govuk-select" name="threshSelector" id="threshSelector">
-                                    <option value="1e-3">1e-3</option>
-                                    <option value="1e-5" selected="selected">1e-5</option>
-                                    <option value="1e-6">1e-6</option>
-                                    <option value="1e-7">1e-7</option>
-                                    <option value="1e-9">1e-9</option>
-                                    <option value="1e-11">1e-11</option>
-                                </select>
-                              </div>
                               <div style="position: relative; min-height: 300px">
-                                <canvas id="myChart2"></canvas>
+                                <canvas id="mts-miss-distance"></canvas>
                               </div>
                               
                               <div class="toggle-buttons_button-group__C3NCd" style="margin-left: auto; margin-right: auto; margin-top: 15px">
@@ -265,17 +289,15 @@ Event bads-basdw-ascs
                                   </span>
                                 </summary>
                                 <div class="govuk-details__text">
-                                  <p>The plot shows predicted PoC for different possible manoeuvres based on the last received operational CDM from Space-Track.</p>
+                                  <p>The plot shows predicted total miss distance for different possible manoeuvres based on the last received operational CDM from Space-Track.</p>
                                   <p>All manoeuvres (delta V) shown are given in the in-track direction.</p>
-                                  <p>These predicted PoCs <b>do not</b> take into account any secondary collisions which may occur as a result of manoeuvring. If you wish to determine secondary collision risk, you should upload a <strong class="govuk-tag">special</strong>
+                                  <p>These predicted miss distances <b>do not</b> take into account any secondary collisions which may occur as a result of manoeuvring. If you wish to determine secondary collision risk, you should upload a <strong class="govuk-tag">special</strong>
                                   ephemeris to Space-Track.</p>
                                 </div>
                               </details>
                               <p style="padding-bottom: 10px">Download Manoeuvre Trade Space data [<a>CSV</a>] [<a>JSON</a>]</p>
                               </div> 
-                              </div>
                             </div>
-    
                     </div>
                     </div>
     
@@ -849,25 +871,35 @@ Event bads-basdw-ascs
       return lineDatasets;
   }
 
+  // for the sake of the prototype, calculate miss distance
+  // using only the PoC given
+  const getMissDistanceFromPoC = function (PoC) {
+    // WARNING! this does not do anything defensible in terms of astrophysics
+    // it just makes some reasonable looking numbers for the prototype
+    // DO NOT let this enter production code - use real data!
+    let multi = 1.0 / (PoC * 1000);
+    return Math.round(258 + multi) + "m";
+  }
+
   // generate a set of options for the generateLineDatasets function
   //  which produce a bichromatic graph for a certain threshold
-  const generateBichromaticOptions = function(thresh) {
+  const generateBichromaticOptions = function(thresh, isPoCGraph) {
       return [
           {
               thresh: thresh,
-              label: "PoC > " + thresh.toExponential(0),
+              label: isPoCGraph ? "PoC > " + thresh.toExponential(0) : "Total Miss Distance < " + getMissDistanceFromPoC(thresh),
               color: colors.orange,
               target: -1
           },
           {
               thresh: thresh * 1e-1,
-              label: thresh.toExponential(0) + " ≥ PoC > " + (thresh * 1e-1).toExponential(0),
+              label: isPoCGraph ? thresh.toExponential(0) + " ≥ PoC > " + (thresh * 1e-1).toExponential(0) : getMissDistanceFromPoC(thresh) + " ≤ Total Miss Distance < " + getMissDistanceFromPoC((thresh * 1e-1)),
               color: colors.lblue,
               target: 0
           },
           {
               thresh: 1e-50,
-              label: "PoC ≤ " + (thresh * 1e-1).toExponential(0),
+              label: isPoCGraph ? "PoC ≤ " + (thresh * 1e-1).toExponential(0) : "Total Miss Distance ≥ " + getMissDistanceFromPoC((thresh * 1e-1)),
               color: colors.dblue,
               target: 1
           }
@@ -894,7 +926,7 @@ Event bads-basdw-ascs
   }
 
   // generate the correct configuration for given data
-  const generateConfig = function(data, options) {
+  const generateConfig = function(data, options, isPoCGraph) {
       return {
       type: 'line',
       data: data,
@@ -941,8 +973,14 @@ Event bads-basdw-ascs
                       },
                       label: function (context) {
                           let poc_label = 'PoC: ';
+                          let miss_distance_label = 'Total Miss Distance: ';
                           if (context.raw.prob !== null) {
+                            if (isPoCGraph) {
                               poc_label += context.raw.prob.toExponential(4);
+                            }
+                            else {
+                              miss_distance_label += getMissDistanceFromPoC(context.raw.prob);
+                            }
                           }
                           let dv_label = 'Delta V: ';
                           if (context.raw.y !== null) {
@@ -958,7 +996,7 @@ Event bads-basdw-ascs
                              const timeTick = new Date(tcaDatetime - (context.raw.x * 1000 * 60 * PERIOD_MINS));
                              datetime_label += timeTick.toISOString();
                           }
-                          return [poc_label, dv_label, orbit_label, datetime_label];
+                          return [(isPoCGraph ? poc_label : miss_distance_label), dv_label, orbit_label, datetime_label];
                       },
                       labelColor: generateLabelColorCallbackFunction(options)
                   }
@@ -1043,8 +1081,10 @@ Event bads-basdw-ascs
       }
   ];
 
-  const chartElement = document.getElementById('myChart2');
-  let chart = null;
+  const chartElementPoC = document.getElementById('myChart2');
+  const chartElementMissDistance = document.getElementById('mts-miss-distance');
+  let chartPoC = null;
+  let chartMissDistance = null;
 
   const thresholdSelector = document.getElementById('threshSelector');
 
@@ -1052,9 +1092,9 @@ Event bads-basdw-ascs
   let thresholdCurrent = parseFloat(thresholdSelector.value);
 
   // renders an MTS plot within the given canvas element
-  const renderMTSPlot = function(threshold, chartElement) {
+  const renderMTSPlot = function(threshold, chartElement, isPoCGraph) {
       thresholdCurrent = threshold;
-      const options = generateBichromaticOptions(thresholdCurrent);
+      const options = generateBichromaticOptions(thresholdCurrent, isPoCGraph);
       const newLineDatasets = generateLineDatasets(raw_mts_data, options);
       let newDatasets = scatterDatasets.concat(newLineDatasets);
       const labels = Object.keys(raw_mts_data).map(parseFloat);
@@ -1064,36 +1104,46 @@ Event bads-basdw-ascs
           datasets: newDatasets
       }
 
-      let dynConfig = generateConfig(newData, options);
+      let dynConfig = generateConfig(newData, options, isPoCGraph);
 
-      if (chart !== null) {
-          chart.destroy();
+      if (isPoCGraph) {
+        if (chartPoC !== null) {
+          chartPoC.destroy();
+        }
+
+        chartPoC = new Chart(chartElement, dynConfig);
+      } else {
+        if (chartMissDistance !== null) {
+          chartMissDistance.destroy();
+        }
+
+        chartMissDistance = new Chart(chartElement, dynConfig);
       }
-
-      chart = new Chart(chartElement, dynConfig);
+      
   }
 
-  renderMTSPlot(thresholdCurrent, chartElement);
+  renderMTSPlot(thresholdCurrent, chartElementPoC, true);
+  renderMTSPlot(thresholdCurrent, chartElementMissDistance, false);
 
   var mtsXAxis = "datetime";
   const updateXAxis = function () {
     if (mtsXAxis === "orbits") {
-      chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
+      chartPoC.config.options.scales.x.ticks.callback = function (value, index, ticks) {
           return String(40.5 - value).padStart(16, " ");
         };
       
     } else {
-      chart.config.options.scales.x.ticks.callback = function (value, index, ticks) {
+      chartPoC.config.options.scales.x.ticks.callback = function (value, index, ticks) {
           const timeTick = new Date(tcaDatetime - ((40.5 - value) * 1000 * 60 * PERIOD_MINS));
           return (value % 4 === 0) ? getMTPDateString(timeTick) : "";
         };
     }
-    chart.update();
+    chartPoC.update();
   }
 
   // -- Dropdown selector
   thresholdSelector.onchange = function (e) {
-      renderMTSPlot(parseFloat(thresholdSelector.value), chartElement);
+      renderMTSPlot(parseFloat(thresholdSelector.value), chartElementPoC, true);
       updateXAxis();
   }
 
@@ -1274,34 +1324,34 @@ md_colors = {
 }
 
 // Data points for distance lines
-md_total_data = [{x:"2023-05-19 00:01:32",y:23112}, {x:"2023-05-19 14:31:08",y:22765}, 
-  {x:"2023-05-20 03:12:02",y:21846}, {x:"2023-05-20 16:01:12",y:21920}, 
-  {x:"2023-05-21 04:04:32",y:22187}, {x:"2023-05-21 17:17:09",y:22897}, 
-  {x:"2023-05-22 00:01:47",y:22705}, {x:"2023-05-22 16:17:09",y:23080}, 
-  {x:"2023-05-23 00:02:47",y:23183}];
+md_total_data = [{x:"2023-05-19 00:01:32",y:350}, {x:"2023-05-19 14:31:08",y:300}, 
+  {x:"2023-05-20 03:12:02",y:310}, {x:"2023-05-20 16:01:12",y:300}, 
+  {x:"2023-05-21 04:04:32",y:290}, {x:"2023-05-21 17:17:09",y:237}, 
+  {x:"2023-05-22 00:01:47",y:232}, {x:"2023-05-22 16:17:09",y:240}, 
+  {x:"2023-05-23 00:02:47",y:258}];
 
-md_crosstrack_data = [{x:"2023-05-19 00:01:32",y:14308}, {x:"2023-05-19 14:31:08",y:14017}, 
-  {x:"2023-05-20 03:12:02",y:13950}, {x:"2023-05-20 16:01:12",y:14602}, 
-  {x:"2023-05-21 04:04:32",y:14831}, {x:"2023-05-21 17:17:09",y:14905}, 
-  {x:"2023-05-22 00:01:47",y:14849}, {x:"2023-05-22 16:17:09",y:15023}, 
-  {x:"2023-05-23 00:02:47",y:14673}];
+md_crosstrack_data = [{x:"2023-05-19 00:01:32",y:142}, {x:"2023-05-19 14:31:08",y:131}, 
+  {x:"2023-05-20 03:12:02",y:120}, {x:"2023-05-20 16:01:12",y:130}, 
+  {x:"2023-05-21 04:04:32",y:120}, {x:"2023-05-21 17:17:09",y:88}, 
+  {x:"2023-05-22 00:01:47",y:88}, {x:"2023-05-22 16:17:09",y:90}, 
+  {x:"2023-05-23 00:02:47",y:105}];
 
-md_intrack_data = [{x:"2023-05-19 00:01:32",y:6882}, {x:"2023-05-19 14:31:08",y:7045}, 
-  {x:"2023-05-20 03:12:02",y:7283}, {x:"2023-05-20 16:01:12",y:7331}, 
-  {x:"2023-05-21 04:04:32",y:7501}, {x:"2023-05-21 17:17:09",y:7493}, 
-  {x:"2023-05-22 00:01:47",y:6510}, {x:"2023-05-22 16:17:09",y:6702}, 
-  {x:"2023-05-23 00:02:47",y:6794}];
+md_intrack_data = [{x:"2023-05-19 00:01:32",y:15}, {x:"2023-05-19 14:31:08",y:14}, 
+  {x:"2023-05-20 03:12:02",y:13}, {x:"2023-05-20 16:01:12",y:12}, 
+  {x:"2023-05-21 04:04:32",y:11}, {x:"2023-05-21 17:17:09",y:10}, 
+  {x:"2023-05-22 00:01:47",y:9.9}, {x:"2023-05-22 16:17:09",y:10}, 
+  {x:"2023-05-23 00:02:47",y:10.3}];
 
-md_radial_data = [{x:"2023-05-19 00:01:32",y:2012}, {x:"2023-05-19 14:31:08",y:2382}, 
-  {x:"2023-05-20 03:12:02",y:1702}, {x:"2023-05-20 16:01:12",y:1437}, 
-  {x:"2023-05-21 04:04:32",y:1239}, {x:"2023-05-21 17:17:09",y:1452}, 
-  {x:"2023-05-22 00:01:47",y:2028}, {x:"2023-05-22 16:17:09",y:2305}, 
-  {x:"2023-05-23 00:02:47",y:2062}];
+md_radial_data = [{x:"2023-05-19 00:01:32",y:400}, {x:"2023-05-19 14:31:08",y:390}, 
+  {x:"2023-05-20 03:12:02",y:388}, {x:"2023-05-20 16:01:12",y:370}, 
+  {x:"2023-05-21 04:04:32",y:369}, {x:"2023-05-21 17:17:09",y:360}, 
+  {x:"2023-05-22 00:01:47",y:344}, {x:"2023-05-22 16:17:09",y:350}, 
+  {x:"2023-05-23 00:02:47",y:352}];
 
-md_special_data = [{x:"2023-05-20 11:38:13", y:2571, type:"Radial"}, {x:"2023-05-22 05:01:49", y:4620, type:"Radial"},
-  {x:"2023-05-20 11:38:13", y:9692, type:"In-track"}, {x:"2023-05-22 05:01:49", y:12935, type:"In-track"},
-  {x:"2023-05-20 11:38:13", y:15997, type:"Cross-track"}, {x:"2023-05-22 05:01:49", y:19730, type:"Cross-track"},
-  {x:"2023-05-20 11:38:13", y:23854, type:"Total"}, {x:"2023-05-22 05:01:49", y:27302, type:"Total"},
+md_special_data = [{x:"2023-05-20 11:38:13", y:400, type:"Radial"}, {x:"2023-05-22 05:01:49", y:410, type:"Radial"},
+  {x:"2023-05-20 11:38:13", y:20, type:"In-track"}, {x:"2023-05-22 05:01:49", y:20, type:"In-track"},
+  {x:"2023-05-20 11:38:13", y:150, type:"Cross-track"}, {x:"2023-05-22 05:01:49", y:190, type:"Cross-track"},
+  {x:"2023-05-20 11:38:13", y:407, type:"Total"}, {x:"2023-05-22 05:01:49", y:452, type:"Total"},
 ]
 
 coll_ctx = document.getElementById("missDistanceEvolutionGraph").getContext("2d");
@@ -1370,7 +1420,7 @@ mdLineChart = new Chart(coll_ctx, {
       // Adding line for TCA
       type: 'bar',
       label: 'TCA',
-      data: [{x: "2023-05-23 04:04:04", y: 30000} ],
+      data: [{x: "2023-05-23 04:04:04", y: 600} ],
       maxBarThickness: 2,
       xAxisID: 'xAxis',
       yAxisID: 'yAxis',
@@ -1408,9 +1458,9 @@ mdLineChart = new Chart(coll_ctx, {
           font: {weight: "bold"}
         },
         min: 0,
-        max: 30000,
+        max: 600,
         ticks: {
-          stepSize: 10000,
+          stepSize: 200,
         }
       }
     },
