@@ -18,7 +18,6 @@ Event asdf-asdas-asdf
     <h1 class="govuk-heading-xl">Event asdf-asdas-asdf</h1>
   </div>
 
-
   <div class="govuk-grid-row">
 
       </div>
@@ -34,7 +33,7 @@ Event asdf-asdas-asdf
               <a href="#event summary">Executive summary</a>
             </li>
             <li class="moj-side-navigation__item">
-              <a href="#accordion-heading-1">Escalated event summary</a>
+              <a href="#accordion-heading-1">Additional event details</a>
             </li>
             <li class="moj-side-navigation__item">
               <a href="#accordion-heading-2">Additional risk to UK objects</a>
@@ -71,33 +70,17 @@ Event asdf-asdas-asdf
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   </div>
   <div class="govuk-grid-column-three-quarters">
+    <p><b>Report number 1</b>, updated on 01/11/2023 09:00:00</p>
     <h2 class="govuk-heading-l" id="escalated-report">Escalated report <strong class="govuk-tag govuk-tag--blue">Escalated</strong></h2>
     <h3 class="govuk-heading-m" id="escalated-report">Executive summary</h3>
-    <p> The UK Space Agency Orbital Analyst team are monitoring a potential collision on <b>23 Aug 2023</b> at
-      <b>15:46:58 UTC</b> between two objects: a UK licensed payload, <b>Starlink-1862</b>, and a US licensed debris,
-      <b>DISCOVERER 5</b>. The probability that this event will occur is <b>0.09%</b> when reasonable object sizes are used.
-      This is a <b>low probability of collision (PoC)</b>, with Starlink likely to manoeuvre to reduce the PoC. If the
-      event were to occur it could potentially result in a full breakup of both objects, with some UK licensed
-      satellites seeing an increased risk of potential collision events due to the fragments produced. Civilian
-      sensors have been tasked to provide new observations, with a new update expected on <b>25 Aug 2023</b>.
-      The PoC and analysis is subject to change as more data become available, as may be shown in any
-      future reports.</p>
-
-      <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
-        <!-- Escalated event summary -->
-        <div class="govuk-accordion__section ">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-              <span class="govuk-accordion__section-button" id="evolution-of-probability-of-collision">
-                Escalated event summary
-              </span>
-            </h2>
-          </div>
-              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <p>Primary object: <a href="/satellites/operator/satellite-1">Starlink-1862</a></p>
+    <p>Primary object: <a href="/satellites/operator/satellite-1">Starlink-1862</a></p>
                 <p>Secondary object: DISCOVERER 5</p>
                 <table class="govuk-table" style="width: 100%">
                   <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Risk</th>
+                      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
+                    </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Predicted Time of Closest Approach (TCA)</th>
                       <td class="govuk-table__cell">2023-08-23 15:46:58 UTC</td>
@@ -132,6 +115,28 @@ Event asdf-asdas-asdf
                     </tr>
                   </tbody>
                 </table>
+
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
+        <!-- Escalated event summary -->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
+              <span class="govuk-accordion__section-button" id="evolution-of-probability-of-collision">
+                Additional event details
+              </span>
+            </h2>
+          </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <p> The UK Space Agency Orbital Analyst team are monitoring a potential collision on <b>23 Aug 2023</b> at
+                  <b>15:46:58 UTC</b> between two objects: a UK licensed payload, <b>Starlink-1862</b>, and a US licensed debris,
+                  <b>DISCOVERER 5</b>. The probability that this event will occur is <b>0.09%</b> when reasonable object sizes are used.
+                  This is a <b>low probability of collision (PoC)</b>, with Starlink likely to manoeuvre to reduce the PoC. If the
+                  event were to occur it could potentially result in a full breakup of both objects, with some UK licensed
+                  satellites seeing an increased risk of potential collision events due to the fragments produced. Civilian
+                  sensors have been tasked to provide new observations, with a new update expected on <b>25 Aug 2023</b>.
+                  The PoC and analysis is subject to change as more data become available, as may be shown in any
+                  future reports.</p>
       
               </div>
               </div>
