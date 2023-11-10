@@ -83,55 +83,78 @@ Event asdf-asdas-asdf
       The PoC and analysis is subject to change as more data become available, as may be shown in any
       future reports.</p>
 
+      <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
+        <!-- Escalated event summary -->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
+              <span class="govuk-accordion__section-button" id="evolution-of-probability-of-collision">
+                Escalated event summary
+              </span>
+            </h2>
+          </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <p>Primary object: <a href="/satellites/operator/satellite-1">Starlink-1862</a></p>
+                <p>Secondary object: DISCOVERER 5</p>
+                <table class="govuk-table" style="width: 100%">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Predicted Time of Closest Approach (TCA)</th>
+                      <td class="govuk-table__cell">2023-08-23 15:46:58 UTC</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Current Probability of Collision (PoC)</th>
+                      <td class="govuk-table__cell">0.13%</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Predicted miss-distance (m)</th>
+                      <td class="govuk-table__cell">43</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Impact velocity (km/s)</th>
+                      <td class="govuk-table__cell">14.399</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Catastrophic / non-catastrophic</th>
+                      <td class="govuk-table__cell">Catastrophic</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Altitude (km)</th>
+                      <td class="govuk-table__cell">1234</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Approximate latitude / longitude</th>
+                      <td class="govuk-table__cell">31S 146.62W</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Predicted number of fragments generated >10cm</th>
+                      <td class="govuk-table__cell">223</td>
+                    </tr>
+                  </tbody>
+                </table>
       
-      <h3 class="govuk-heading-m" id="event summary">Escalated event summary</h3>
-      <p>Primary object: <a href="/satellites/operator/satellite-1">Starlink-1862</a></p>
-      <p>Secondary object: DISCOVERER 5</p>
-      <table class="govuk-table" style="width: 100%">
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Predicted Time of Closest Approach (TCA)</th>
-            <td class="govuk-table__cell">2023-08-23 15:46:58 UTC</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Current Probability of Collision (PoC)</th>
-            <td class="govuk-table__cell">0.13%</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Predicted miss-distance (m)</th>
-            <td class="govuk-table__cell">43</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Impact velocity (km/s)</th>
-            <td class="govuk-table__cell">14.399</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Catastrophic / non-catastrophic</th>
-            <td class="govuk-table__cell">Catastrophic</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Altitude (km)</th>
-            <td class="govuk-table__cell">1234</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Approximate latitude / longitude</th>
-            <td class="govuk-table__cell">31S 146.62W</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Predicted number of fragments generated >10cm</th>
-            <td class="govuk-table__cell">223</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3 class="govuk-heading-m" id="Additional-risk-to-UK-objects">Additional risk to UK objects</h3>
-      <p>Each UK licensed satellite was screened against the current population of objects as well as the
-        fragments generated by the breakup model. The ‘Current tally’ column is the number of 5 km
-        conjunction events the object currently has per week. The ‘Fragments tally’ column is the number of
-        <b>additional 5km conjunction events</b> that would be expected in the 7 day period after TCA based on
-        the predicted orbits outputted by the breakup model. Also included in the table is the mass of the
-        licensed object and the orbit information.
-        <b>Only the top 30 objects in terms of fragment tally are shown here.</b> </p>
+              </div>
+              </div>
+      
+              <!-- Additional risk to UK objects -->
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading" id="accordion-heading-2">
+                    <span class="govuk-accordion__section-button" id="evolution-of-miss-distance">
+                      Additional risk to UK objects
+                    </span>
+                  </h2>
+                </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      
+                      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                             <p>Each UK licensed satellite was screened against the current population of objects as well as the
+                              fragments generated by the breakup model. The ‘Current tally’ column is the number of 5 km
+                              conjunction events the object currently has per week. The ‘Fragments tally’ column is the number of
+                              <b>additional 5km conjunction events</b> that would be expected in the 7 day period after TCA based on
+                              the predicted orbits outputted by the breakup model. Also included in the table is the mass of the
+                              licensed object and the orbit information.
+                              <b>Only the top 30 objects in terms of fragment tally are shown here.</b> </p>
 
       <table class="govuk-table">
         <thead class="govuk-table_head">
@@ -179,11 +202,26 @@ Event asdf-asdas-asdf
                 </tr>
           
       </table>  
-
-      <h2 class="govuk-heading-m" id="Visualisation-of-conjunction-event">Visualisation of conjunction event</h2>
-      <p>Visualisation of the conjunction event and the relative position of the satellites at the Time of Closest Approach (TCA), over a 2D world map. This includes the flight paths of both objects.</p>
+                       </div>
+                     </div>
+      
+              </div>
+      
+        <!-- Visualisation of conjunction event -->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="accordion-heading-7">
+              <span class="govuk-accordion__section-button" id="further-information">
+                Visualisation of conjunction event</span>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <p>Visualisation of the conjunction event and the relative position of the satellites at the Time of Closest Approach (TCA), over a 2D world map. This includes the flight paths of both objects.</p>
  
       <img src="/public/images/escalated-conjunction-event-visualisation.png" alt="Conjunction event visualisation" width="100%">
+                  </div>
+          </div>
+        </div>
+      
 
 <form class="form" action="/contact-an-analyst/contact-analyst-form" method="post">
 <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
