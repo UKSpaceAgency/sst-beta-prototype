@@ -72,16 +72,13 @@ Event bads-basdw-ascs
         <a href="#event summary">Event summary</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-1">Evolution of collision probability</a>
+        <a href="#accordion-heading-1">Probability of collision support</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-2">Evolution of miss distance</a>
+        <a href="#accordion-heading-2">Miss distance support</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-2a">Manoeuvre support</a>
-      </li>
-      <li class="moj-side-navigation__item" hidden>
-        <a href="#accordion-heading-2b">Collision plane plot</a>
+        <a href="#accordion-heading-2a">Collision plane plot</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#accordion-heading-3">Object data</a>
@@ -162,19 +159,22 @@ Event bads-basdw-ascs
       Contact an UKSA orbital analyst
     </button>
     </form>
+    
+    
             <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
-              <!-- Evoltuion of collision probability -->
-              <div class="govuk-accordion__section">
+              <!-- Probability of collision support -->
+              <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
                   <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
                     <span class="govuk-accordion__section-button" id="evolution-of-probability-of-collision">
-                      Evolution of collision probability
+                      Probability of collision support
                     </span>
                   </h2>
                 </div>
     
                     <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                        <h3 class="govuk-heading-s">Evolution of probability of collision</h3>
                         <p class="govuk-body-secondary">The changing probability of a conjunction event leading up to the time of closest approach (TCA). Data from the UKSA and Space-Track is shown where available. </p>
                         <p class="govuk-body-secondary">Evolution of operational event data is displayed as a continuous line. Individual SPECIAL ephemeris probabilities can be turned on or off. </p>
                         <div style="background-color:#f3f2f1; padding: 0px 15px 0px 15px">
@@ -189,76 +189,69 @@ Event bads-basdw-ascs
                           <canvas id="collisionEvolutionGraph" width="800" height="400"></canvas>
                         </div>
                         <br/>
-                        </div>
-                    </div>
-
-                    <!-- Manoeuvre support -->
-                    <div class="govuk-accordion__section ">
-                      <div class="govuk-accordion__section-header">
-                        <h2 class="govuk-accordion__section-heading" id="accordion-heading-2a">
-                          <span class="govuk-accordion__section-button" id="evolution-of-probability-of-collision">
-                            Manoeuvre support
-                          </span>
-                        </h2>
-                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                              <p class="govuk-body-secondary">The probability of collision (PoC) for different combinations of number of orbits to TCA and Delta V (amount of burn) of manoeuvre are shown. Move your mouse over the chart to see more details for each option. All available data are shown.</p>
-                              <div style="background-color:#f3f2f1; padding-left: 15px; padding-top: 2px; padding-right: 15px">
-                                <div style="width:100%">
-                                <div class="govuk-form-group">
-                                <label class="govuk-label" for="threshSelector"><b>What is your mitigation requirement?</b></label>
-                                <div id="threshSelector-hint" class="govuk-hint">This is the <b>maximum</b> PoC you would be prepared to accept after a manoeuvre</div>
-                                  <select class="govuk-select" name="threshSelector" id="threshSelector">
-                                      <option value="1e-3">1e-3</option>
-                                      <option value="1e-5" selected="selected">1e-5</option>
-                                      <option value="1e-6">1e-6</option>
-                                      <option value="1e-7">1e-7</option>
-                                      <option value="1e-9">1e-9</option>
-                                      <option value="1e-11">1e-11</option>
-                                  </select>
-                                </div>
-                                <div style="position: relative; min-height: 300px; display: flex; width: 100%">
-                                  <div style="flex: 90; flex-shrink: 2; min-height: 300px; min-width: 0;">
-                                    <canvas id="myChart2" style="float:left"></canvas>
-                                  </div>
-                                  <div style="flex: 10; flex-shrink: 0; min-width: 0">
-                                    <img src="/public/images/tca_line.png" style="height: 200px; margin-left: -15px; margin-top:30px">
-                                  </div>
-                                </div>
-
-                                <div class="toggle-buttons_button-group__C3NCd" style="margin-left: auto; margin-right: auto; margin-top: 15px">
-                                  <button id="mts-xaxis-datetime-toggle" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Date and Time">Date and Time</button>
-                                  <button id="mts-xaxis-orbits-toggle" class="toggle-buttons_button__tbqna" aria-label="Number of orbits until TCA">Number of orbits until TCA</button>
-                                </div>   
-                                <details class="govuk-details" data-module="govuk-details">
-                                  <summary class="govuk-details__summary">
-                                    <span class="govuk-details__summary-text">
-                                      Help with interpreting manoeuvre trade space plots
-                                    </span>
-                                  </summary>
-                                  <div class="govuk-details__text">
-                                    <p>The plot shows predicted PoC for different possible manoeuvres based on the last received operational CDM from Space-Track.</p>
-                                    <p>All manoeuvres (delta V) shown are given in the in-track direction.</p>
-                                    <p>These predicted PoCs <b>do not</b> take into account any secondary collisions which may occur as a result of manoeuvring. If you wish to determine secondary collision risk, you should upload a <strong class="govuk-tag">special</strong>
-                                    ephemeris to Space-Track.</p>
-                                  </div>
-                                </details>
-                                <p style="padding-bottom: 10px">Download Manoeuvre Trade Space data [<a>CSV</a>] [<a>JSON</a>]</p>
-                                </div> 
-                              </div>
+                        <h3 class="govuk-heading-s">Manoeurve support for probability of collision</h3>
+                        <p class="govuk-body-secondary">The probability of collision (PoC) for different combinations of number of orbits to TCA and Delta V (amount of burn) of manoeuvre are shown. Move your mouse over the chart to see more details for each option. All available data are shown.</p>
+                        <div style="background-color:#f3f2f1; padding-left: 15px; padding-top: 2px; padding-right: 15px">
+                          <div style="width:100%">
+                          <div class="govuk-form-group">
+                          <label class="govuk-label" for="threshSelector"><b>What is your mitigation requirement?</b></label>
+                          <div id="threshSelector-hint" class="govuk-hint">This is the <b>maximum</b> PoC you would be prepared to accept after a manoeuvre</div>
+                            <select class="govuk-select" name="threshSelector" id="threshSelector">
+                                <option value="1e-3">1e-3</option>
+                                <option value="1e-5" selected="selected">1e-5</option>
+                                <option value="1e-6">1e-6</option>
+                                <option value="1e-7">1e-7</option>
+                                <option value="1e-9">1e-9</option>
+                                <option value="1e-11">1e-11</option>
+                            </select>
+                          </div>
+                          <div style="position: relative; min-height: 300px; display: flex; width: 100%">
+                            <div style="flex: 90; flex-shrink: 2; min-height: 300px; min-width: 0;">
+                              <canvas id="myChart2" style="float:left"></canvas>
                             </div>
-                            </div>        
-
+                            <div style="flex: 10; flex-shrink: 0; min-width: 0">
+                              <img src="/public/images/tca_line.png" style="height: 200px; margin-left: -15px; margin-top:30px">
+                            </div>
+                          </div>
+                          
+                          
+                          
+                          
+                          <div class="toggle-buttons_button-group__C3NCd" style="margin-left: auto; margin-right: auto; margin-top: 15px">
+                            <button id="mts-xaxis-datetime-toggle" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Date and Time">Date and Time</button>
+                            <button id="mts-xaxis-orbits-toggle" class="toggle-buttons_button__tbqna" aria-label="Number of orbits until TCA">Number of orbits until TCA</button>
+                          </div>   
+                          <details class="govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">
+                                Help with interpreting manoeuvre trade space plots
+                              </span>
+                            </summary>
+                            <div class="govuk-details__text">
+                              <p>The plot shows predicted PoC for different possible manoeuvres based on the last received operational CDM from Space-Track.</p>
+                              <p>All manoeuvres (delta V) shown are given in the in-track direction.</p>
+                              <p>These predicted PoCs <b>do not</b> take into account any secondary collisions which may occur as a result of manoeuvring. If you wish to determine secondary collision risk, you should upload a <strong class="govuk-tag">special</strong>
+                              ephemeris to Space-Track.</p>
+                            </div>
+                          </details>
+                          <p style="padding-bottom: 10px">Download Manoeuvre Trade Space data [<a>CSV</a>] [<a>JSON</a>]</p>
+                          </div> 
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+    
                     <!-- Miss distance support -->
                     <div class="govuk-accordion__section ">
                       <div class="govuk-accordion__section-header">
                         <h2 class="govuk-accordion__section-heading" id="accordion-heading-2">
                           <span class="govuk-accordion__section-button" id="evolution-of-miss-distance">
-                            Evolution of miss distance
+                            Miss distance support
                           </span>
                         </h2>
                       </div>
                           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                            <h3 class="govuk-heading-s">Evolution of miss distance</h3>
                             <p class="govuk-body-secondary">The changing expected miss distance leading up to the time of closest approach (TCA). All available data is shown. </p>
                             <p class="govuk-body-secondary">Evolution of operational event data is displayed as a continuous line. Individual SPECIAL ephemeris distances can be turned on or off.</p>
                             <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
@@ -274,9 +267,60 @@ Event bads-basdw-ascs
                               <canvas id="missDistanceEvolutionGraph" width="800" height="400"></canvas>
                               </div>
                             </div>
+
+                            <h3 class="govuk-heading-s">Manoeuvre support for miss distance</h3>
+                            <p class="govuk-body-secondary">The miss distance for different combinations of number of orbits to TCA and Delta V (amount of burn) of manoeuvre are shown. Move your mouse over the chart to see more details for each option. All available data are shown.</p>
+                            <div style="background-color:#f3f2f1; padding-left: 15px; padding-top: 2px; padding-right: 15px">
+                              
+    
+                              <div style="width:100%">
+                              <div style="position: relative; min-height: 300px">
+                                <canvas id="mts-miss-distance"></canvas>
+                              </div>
+                              
+                              <div class="toggle-buttons_button-group__C3NCd" style="margin-left: auto; margin-right: auto; margin-top: 15px">
+                                <button id="mts-xaxis-datetime-toggle" class="toggle-buttons_button__tbqna toggle-buttons_active__lRAP7" aria-label="Date and Time">Date and Time</button>
+                                <button id="mts-xaxis-orbits-toggle" class="toggle-buttons_button__tbqna" aria-label="Number of orbits until TCA">Number of orbits until TCA</button>
+                              </div>   
+                              <details class="govuk-details" data-module="govuk-details">
+                                <summary class="govuk-details__summary">
+                                  <span class="govuk-details__summary-text">
+                                    Help with interpreting manoeuvre trade space plots
+                                  </span>
+                                </summary>
+                                <div class="govuk-details__text">
+                                  <p>The plot shows predicted total miss distance for different possible manoeuvres based on the last received operational CDM from Space-Track.</p>
+                                  <p>All manoeuvres (delta V) shown are given in the in-track direction.</p>
+                                  <p>These predicted miss distances <b>do not</b> take into account any secondary collisions which may occur as a result of manoeuvring. If you wish to determine secondary collision risk, you should upload a <strong class="govuk-tag">special</strong>
+                                  ephemeris to Space-Track.</p>
+                                </div>
+                              </details>
+                              <p style="padding-bottom: 10px">Download Manoeuvre Trade Space data [<a>CSV</a>] [<a>JSON</a>]</p>
+                              </div> 
+                            </div>
                     </div>
                     </div>
-                     
+    
+                    <!-- Collision plane plot - CURRENTLY HIDDEN -->
+                    <div class="govuk-accordion__section" hidden>
+                      <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading" id="accordion-heading-2a">
+                          <span class="govuk-accordion__section-button" id="evolution-of-position-uncertainties">
+                              Collision plane plot   <strong class="govuk-tag">Feature proposal</strong>
+                          </span>
+                        </h2>
+                        
+                      </div>
+                          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                            <p></p>
+                            <div style="background-color:#f3f2f1">
+                              <p class="govuk-body-secondary"><p style=color:#505a5f>The collision plane plot used as an intermediate step in calculating probability of collision. <b>Up to the most recent 3 CDMs are shown on the chart.</b></p>
+      
+                              <img src="/public/images/chart-CPLANE-1.png" alt="Collision Plane Chart" style="width:100%">
+                              </div>
+                    </div>
+                    </div>
+    
             <!-- Object Data -->
             <div class="govuk-accordion__section ">
               <div class="govuk-accordion__section-header">
@@ -614,9 +658,7 @@ Event bads-basdw-ascs
                   </tbody>
               </table>
             </div>
-            <div>
     
-            </div>
             </div>
     
             <!-- Data Validity -->
