@@ -73,8 +73,7 @@ Event asdf-asdas-asdf
     <p><b>Report number 1</b>, updated on 01/11/2023 09:00:00</p>
     <h2 class="govuk-heading-l" id="escalated-report">Escalated report <strong class="govuk-tag govuk-tag--blue">Escalated</strong></h2>
     <h3 class="govuk-heading-m" id="escalated-report">Executive summary</h3>
-    <p>Primary object: <a href="/satellites/operator/satellite-1">Starlink-1862</a></p>
-                <p>Secondary object: DISCOVERER 5</p>
+    <p> The UK Space Agency Orbital Analyst team are monitoring a potential collision, which is summarised in the table below. This is a low probability of collision (PoC), with Starlink likely to manoeuvre to reduce the PoC. If the event were to occur it could potentially result in a full breakup of both objects, with some UK licensed satellites seeing an increased risk of potential collision events due to the fragments produced. 
                 <table class="govuk-table" style="width: 100%">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
@@ -86,15 +85,79 @@ Event asdf-asdas-asdf
                       <td class="govuk-table__cell">2023-08-23 15:46:58 UTC</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Current Probability of Collision (PoC)</th>
+                      <th scope="row" class="govuk-table__header">Probability of Collision (PoC)</th>
                       <td class="govuk-table__cell">0.13%</td>
                     </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Primary object</th>
+                      <td class="govuk-table__cell"><a href="/satellites/operator/satellite-1">Starlink-1862</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Primary object licensing country</th>
+                      <td class="govuk-table__cell">UK</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Secondary object</th>
+                      <td class="govuk-table__cell"><a href="/satellites/operator/satellite-1">DISCOVERER 5</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Secondary object licensing country</th>
+                      <td class="govuk-table__cell">US</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
+        <!-- Potential impact of event-->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="accordion-heading-7">
+              <span class="govuk-accordion__section-button" id="further-information">
+                Potential impact of event</span>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <h3 class="govuk-heading-m" id="Immediate impact">Immediate impact</h3>
+                  <p>Should the collision occur, it would likely result in a full breakup of both objects. In this worst-case scenario, an estimation of the number of fragments greater than 10cm is 223. </p>
+                  <h3 class="govuk-heading-m" id="Immediate impact">Short term impact</h3>
+                  <p>Should the collision occur, the debris would generate an increased risk to satellites in LEO. We are predicting that the event would result in an 8.7% increase in potential collisions across all UK satellites in LEO.</p>
+                  <h3 class="govuk-heading-m" id="Immediate impact">Long term impact</h3>
+                  <p>The collision would occur at an altitude of approximately 1200 km. This is the operational altitude of OneWeb and a significant proportion of debris here would likely have an orbital lifetime exceeding 100 years. The risk would therefore be sustained for significant periods of time and could eventually impact a broad range of satellites and missions including human spaceflight.          
+                  </div>
+        <!-- Guidance on response-->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="accordion-heading-7">
+              <span class="govuk-accordion__section-button" id="further-information">
+                Guidance on response</span>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <h3 class="govuk-heading-m" id="Immediate impact">UK response</h3>
+                  <p>The UKSA are the leads for conjunction reporting and have reached out to the operator to confirm they are aware of the event and that they intend to manoeuvre. Response organisations are included in this distribution list.</p>
+                  <h3 class="govuk-heading-m" id="Immediate impact">International response</h3>
+                  <p>There is currently no information available regarding the actions of international partners in relation to this event.</p>  
+                  <h3 class="govuk-heading-m" id="Immediate impact">Press lines</h3>
+                  <p>We have not seen any press attention on this event.  
+  
+                    UKSA press lines can be found here.</p>          
+                  </div>
+        <!-- Additional event details -->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
+              <span class="govuk-accordion__section-button" id="evolution-of-probability-of-collision">
+                Additional event details
+              </span>
+            </h2>
+          </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <table class="govuk-table" style="width: 100%">
+                  <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Predicted miss-distance (m)</th>
                       <td class="govuk-table__cell">43</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Impact velocity (km/s)</th>
+                      <th scope="row" class="govuk-table__header">Impact speed (km/s)</th>
                       <td class="govuk-table__cell">14.399</td>
                     </tr>
                     <tr class="govuk-table__row">
@@ -115,28 +178,6 @@ Event asdf-asdas-asdf
                     </tr>
                   </tbody>
                 </table>
-
-
-      <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
-        <!-- Escalated event summary -->
-        <div class="govuk-accordion__section ">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-              <span class="govuk-accordion__section-button" id="evolution-of-probability-of-collision">
-                Additional event details
-              </span>
-            </h2>
-          </div>
-              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                <p> The UK Space Agency Orbital Analyst team are monitoring a potential collision on <b>23 Aug 2023</b> at
-                  <b>15:46:58 UTC</b> between two objects: a UK licensed payload, <b>Starlink-1862</b>, and a US licensed debris,
-                  <b>DISCOVERER 5</b>. The probability that this event will occur is <b>0.09%</b> when reasonable object sizes are used.
-                  This is a <b>low probability of collision (PoC)</b>, with Starlink likely to manoeuvre to reduce the PoC. If the
-                  event were to occur it could potentially result in a full breakup of both objects, with some UK licensed
-                  satellites seeing an increased risk of potential collision events due to the fragments produced. Civilian
-                  sensors have been tasked to provide new observations, with a new update expected on <b>25 Aug 2023</b>.
-                  The PoC and analysis is subject to change as more data become available, as may be shown in any
-                  future reports.</p>
       
               </div>
               </div>
@@ -225,6 +266,18 @@ Event asdf-asdas-asdf
       <img src="/public/images/escalated-conjunction-event-visualisation.png" alt="Conjunction event visualisation" width="100%">
                   </div>
           </div>
+
+        <!-- Next steps-->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="accordion-heading-7">
+              <span class="govuk-accordion__section-button" id="further-information">
+                Next steps</span>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <p>With a manoeuvre expected to take place, there is unlikely to be another update prior to the event due to the lower risk; an email will be generated post event.  
+                    For Low Risk events, updates are only sent if the probability breaches a Medium Risk threshold, even if the probability has increased. A close-down report will be sent in all cases. For Medium/High-risk events, updates are sent as soon as new information is available. 
+                      </p>
         </div>
       
 
@@ -233,6 +286,8 @@ Event asdf-asdas-asdf
   Contact an UKSA orbital analyst
 </button>
 </form>
+
+<p>See below the information provided to the operator(s) involved via the Monitor your satellites platform.</p>
 
 <h2 class="govuk-heading-l" id="event summary">Event summary</h2>
       <p>Primary object: <a href="/satellites/operator/satellite-1">Starlink-1862</a></p>
