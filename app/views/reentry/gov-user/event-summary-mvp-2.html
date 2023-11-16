@@ -31,13 +31,13 @@ Event RE-2023-08
         <a href="#executive summary">Executive summary</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#additional event details">Additional event details</a>
+        <a href="#additional event details">Additional object and event details</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#impact on the UK">Impact on the United Kingdom</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#impact on devolved nations">Impact on the Devolved Nations</a>
+        <a href="#impact on home nations">Impact on the Home Nations</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#impact on overseas territories">Impact on British Overseas Territories</a>
@@ -45,9 +45,6 @@ Event RE-2023-08
       <li class="moj-side-navigation__item">
         <a href="#guidance on response">Guidance on response</a>
     </li>
-    <li class="moj-side-navigation__item">
-      <a href="#world overflight map">World overflight map</a>
-      </li>
       <li class="moj-side-navigation__item">
         <a href="#reentry time distribution">Re-entry time distribution</a>
       </li>
@@ -56,6 +53,9 @@ Event RE-2023-08
       </li>
       <li class="moj-side-navigation__item">
         <a href="#event history">Event history</a>
+      </li>
+      <li class="moj-side-navigation__item">
+        <a href="#risk thresholds">Risk thresholds</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#further information">Further information</a>
@@ -73,7 +73,7 @@ Event RE-2023-08
     <table class="govuk-table"style="width:100%">
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Risk level</th>
+          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Risk level (see <a href="#risk thresholds">Risk thresholds</a>)</th>
           <td class="govuk-table__cell govuk-body-s" style="width: 50%"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
         </tr>
         <tr class="govuk-table__row">
@@ -93,12 +93,12 @@ Event RE-2023-08
           <td class="govuk-table__cell govuk-body-s">No</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Predicted time of re-entry (UTC)</th>
-          <td class="govuk-table__cell govuk-body-s" style="width: 50%">03/11/2023 16:20:00</td>
+          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Re-entry time window (UTC)</th>
+          <td class="govuk-table__cell govuk-body-s" style="width: 50%">11:35, 03/11/2023 to 21:05, 03/11/2023  </td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">Uncertainty window (mins)</th>
-          <td class="govuk-table__cell govuk-body-s">+/- 284.9</td>
+          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Predicted time of re-entry (UTC)</th>
+          <td class="govuk-table__cell govuk-body-s" style="width: 50%">16:20, 03/11/2023</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header govuk-body-s">Expected survivability to ground</th>
@@ -108,8 +108,16 @@ Event RE-2023-08
           <th scope="row" class="govuk-table__header govuk-body-s">Probability of re-entry over the UK (%)</th>
           <td class="govuk-table__cell govuk-body-s">0.04</td>
         </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header govuk-body-s">Home Nations potentially affected</th>
+          <td class="govuk-table__cell govuk-body-s">England; Northern Ireland</td>
+        </tr>
       </tbody>
     </table>
+
+    <p>The red dots on the map below indicate the potential re-entry locations of the object (see <a href="#further information">Further Information</a> for more detail on methodology). Zoom and scroll to see potential re-entry locations across the world.</p>
+
+    <img src="/public/images/Reentry-UK-overflight-map.png" alt="Reentry UK overflight map" width="100%"
 
 <form class="form" action="/contact-an-analyst/contact-analyst-form" method="post">
 <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -125,7 +133,7 @@ Event RE-2023-08
                         <div class="govuk-accordion__section-header">
                           <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
                             <span class="govuk-accordion__section-button" id="additional event details">
-                              Additional event details
+                              Additional object and event details
                             </span>
                           </h2>
                         </div>
@@ -193,7 +201,10 @@ Event RE-2023-08
                       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
                         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                          <p>Within the uncertainty window, CZ-2C R/B will overfly the United Kingdom <b>once</b>.</p>
+                          <p>  Analysis from the UK Space Agency indicates that the probability of the object re-entering over the UK
+                            is <b>approximately 0.04%.</b></p>
+                          
+                          <p>Within the uncertainty window, CZ-2C R/B will have <b>1 overflight</b> over the United Kingdom.</p>
   
                           <table class="govuk-table"style="width:100%">
                            <tbody class="govuk-table__body">
@@ -210,12 +221,8 @@ Event RE-2023-08
                            </tbody>
                          </table> 
  
-                         <p> Note that the above times are subject to change slightly due to the uncertainties involved. The times
-                           above are based on the Monte Carlo runs which uses our high accuracy model. Of the 30,000 re-entry
-                           simulations carried out by the UKSA OA Team, 12 re-entered over the UK indicating that <b>the probability
-                           is likely around 0.04%.</b></p>
- 
-                         <img src="/public/images/Reentry-UK-overflight-map.png" alt="Reentry UK overflight map" width="100%"
+                         <p> Note that the above times are subject to change due to the uncertainties involved.</p> 
+
                         </div>
                        </div>
                     </div>
@@ -224,8 +231,8 @@ Event RE-2023-08
                 <div class="govuk-accordion__section ">
                   <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-                      <span class="govuk-accordion__section-button" id="impact on devolved nations">
-                        Impact on the Devolved Nations
+                      <span class="govuk-accordion__section-button" id="impact on home nations">
+                        Impact on the Home Nations
                       </span>
                     </h2>
                   </div>
@@ -351,7 +358,7 @@ Event RE-2023-08
             <td class="govuk-table__cell govuk-body-s">N/A</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Akrotiri and Dhekelia</th>
+            <th scope="row" class="govuk-table__header govuk-body-s">Sovereign Base Areas of Akrotiri and Dhekelia</th>
             <td class="govuk-table__cell govuk-body-s">0.00</td>
             <td class="govuk-table__cell govuk-body-s">N/A</td>
           </tr>
@@ -381,33 +388,14 @@ Event RE-2023-08
 
                         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                           <h1 class="govuk-heading-s">Short term response</h1>
-                          <p>In the event of debris from the re-entry surviving to the ground, we would expect local authorities to coordinate recovery efforts with UKSA and UKSpOC providing support on any additional information related to the re-entry co-ordinated via the Cabinet Office. </p>
+                          <p>In the event of debris from the re-entry surviving to the ground, we would expect local authorities to coordinate recovery efforts with UK Space Agency (UKSA) and UK Space Operations Centre (UKSpOC) providing support on any additional information related to the re-entry co-ordinated via the Cabinet Office. </p>
                           <h1 class="govuk-heading-s">Long term response</h1>
                           <p>China is liable for any damages and associated costs of the response and recovery efforts caused by the re-entry under the terms of the 1972 Space Liability Convention.  </p>
                           <h1 class="govuk-heading-s">International response</h1>
                           <p>There is currently no information available regarding the actions of international partners in relation to this event.</p>
                           <h1 class="govuk-heading-s">Press attention</h1>
-                          <p>We have not seen any press attention on this event. See <a href="/events/operator/definitions" class="govuk-link--no-visited-state">UKSA press lines</a>.</p>
+                          <p>We have not seen any press attention on this event. See <a href="/events/operator/definitions" class="govuk-link--no-visited-state">UK Space Agency press lines</a>.</p>
                         </div>
-                       </div>
-                    </div>
-
-                <!-- World overflight map -->
-                <div class="govuk-accordion__section ">
-                  <div class="govuk-accordion__section-header">
-                    <h2 class="govuk-accordion__section-heading" id="accordion-heading-2">
-                      <span class="govuk-accordion__section-button" id="world overflight map">
-                        World overflight map
-                      </span>
-                    </h2>
-                  </div>
-                      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-
-                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                         <p>The overflight of the object across the world. Each red dot represents the simulated re-entry location from one of 30,000 Monte Carlo runs (<a href="/events/operator/definitions" class="govuk-link--no-visited-state">see definitions</a>).</p> 
-
-                        <img src="/public/images/Reentry-overflight-map.png" alt="Reentry world overflight map" width="100%">
-                    </div>
                        </div>
                     </div>
 
@@ -423,7 +411,7 @@ Event RE-2023-08
                         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
   
                           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                           <p>The distribution of potential re-entry time, based on 30,000 Monte Carlo runs (<a href="/events/operator/definitions" class="govuk-link--no-visited-state">see definitions</a>).</p>
+                           <p>The chart below shows the distribution of potential re-entry times based on analysis from the UK Space Agency (see <a href="#further information">Further Information</a> for more detail on methodology).</p>
   
                           <img src="/public/images/Reentry-time-distribution.png" alt="Reentry time distribution" width="100%">
                            </div>
@@ -442,7 +430,7 @@ Event RE-2023-08
                         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
   
                           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                           <p>The distribution of potential re-entry latitudes, based on 30,000 Monte Carlo runs (<a href="/events/operator/definitions" class="govuk-link--no-visited-state">see definitions</a>).</p>
+                           <p>The chart below shows the distribution of potential re-entry latitudes based on analysis from the UK Space Agency (see <a href="#further information">Further Information</a> for more detail on methodology).</p>
   
                           <img src="/public/images/Reentry-latitude-distribution.png" alt="Reentry latitude distribution" width="100%">
                            </div>
@@ -483,6 +471,41 @@ Event RE-2023-08
         </div>
     </div>
 
+          <!-- Risk thresholds -->
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading" id="accordion-heading-8">
+                <span class="govuk-accordion__section-button" id="risk thresholds">
+                  Risk thresholds</span>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <p>Risk thresholds are calculated according to the probability of the object re-entering over the UK.</p>
+
+                    <table class="govuk-table"style="width:100%">
+                      <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Risk level</th>
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Probability of re-entry over the UK (%)</th>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
+                          <td class="govuk-table__cell govuk-body-s">< 1%</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                          <td class="govuk-table__cell govuk-body-s">1% - 5%</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                          <td class="govuk-table__cell govuk-body-s">> 5%</td>
+                        </tr>
+                      </tbody>
+                    </table> 
+              
+
+                    </div>
+            </div>
+
           <!-- Further Information -->
           <div class="govuk-accordion__section ">
             <div class="govuk-accordion__section-header">
@@ -500,7 +523,7 @@ Event RE-2023-08
           <a href="/reentry/gov-user/homepage-mvp" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
             Return to upcoming re-entry events page</a>
 
-            <a href="/NA" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+            <a href="/NA" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
               Download event as PDF</a>
 
         </div>
