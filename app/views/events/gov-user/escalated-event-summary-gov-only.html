@@ -15,7 +15,7 @@ Event asdf-asdas-asdf
         <a class="govuk-breadcrumbs__link" href="/events/operator/warning-1">asdf-asdas-asdf</a>
       </li>
     </ol>
-    <h1 class="govuk-heading-xl">Event asdf-asdas-asdf</h1>
+    <h1 class="govuk-heading-xl">Event asdf-asdas-asdf <strong class="govuk-tag govuk-tag--blue">Escalated</strong></h1>
   </div>
 
   <div class="govuk-grid-row">
@@ -27,7 +27,7 @@ Event asdf-asdas-asdf
           <h3 class="govuk-heading-s">Contents</h3>
           <ul class="moj-side-navigation__list">
             <li class="moj-side-navigation__item">
-              <a href="#Escalated report">Escalated report</a>
+              <a href="#Executive summary">Executive summary</a>
             </li>
             <li class="moj-side-navigation__item">
               <a href="#Potential impact of event">Potential impact of event</a>
@@ -48,6 +48,9 @@ Event asdf-asdas-asdf
               <a href="#Operator summary">Operator summary</a>
             </li>
             <li class="moj-side-navigation__item">
+              <a href="#Risk thresholds">Risk thresholds</a>
+            </li>
+            <li class="moj-side-navigation__item">
               <a href="#Further information">Further information</a>
             </li>
             </ul>
@@ -56,13 +59,12 @@ Event asdf-asdas-asdf
   </div>
   <div class="govuk-grid-column-three-quarters">
     <p><b>Report number 1</b>, updated on 01/11/2023 09:00:00</p>
-    <h2 class="govuk-heading-l" id="Escalated report">Escalated report <strong class="govuk-tag govuk-tag--blue">Escalated</strong></h2>
-    <h3 class="govuk-heading-m" id="Executive summary">Executive summary</h3>
+    <h2 class="govuk-heading-l" id="Escalated report">Executive summary</h2>
       <p> The UK Space Agency Orbital Analyst team are monitoring a potential collision, which is summarised in the table below. This is a low probability of collision (PoC), with Starlink likely to manoeuvre to reduce the PoC. If the event were to occur it could potentially result in a full breakup of both objects, with some UK licensed satellites seeing an increased risk of potential collision events due to the fragments produced. 
                 <table class="govuk-table" style="width: 100%">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Risk</th>
+                      <th scope="row" class="govuk-table__header">Risk (see <a href="#Risk thresholds">Risk thresholds</a>)</th>
                       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
                     </tr>
                     <tr class="govuk-table__row">
@@ -92,7 +94,7 @@ Event asdf-asdas-asdf
                   </tbody>
                 </table>
 
-      <h3 class="govuk-heading-m" id="Next steps">Next steps</h3>
+      <h3 class="govuk-heading-m" id="Next update">Next update</h3>
       <p>With a manoeuvre expected to take place, there is unlikely to be another update prior to the event due to the lower risk; an email will be generated post event.  
         For Low Risk events, updates are only sent if the probability breaches a Medium Risk threshold, even if the probability has increased. A close-down report will be sent in all cases. For Medium/High-risk events, updates are sent as soon as new information is available.</p>
 
@@ -264,17 +266,70 @@ Event asdf-asdas-asdf
                   </div>
                 </div>
 
-        <!-- Operator summary-->
+        <!-- Operator view-->
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading" id="Operator summary">
+            <h2 class="govuk-accordion__section-heading" id="Operator view">
               <span class="govuk-accordion__section-button" id="further-information">
-                Operator summary</span>
+                Operator view</span>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 <p>The satellite operator of the UK-licensed object has been notified of the conjunction event via the Monitor your satellites platform. Click to see the <a href="event-summary-operator-view-escalated-banner.html">information that operators have received</a>.</p>
 </div>
 </div>
+
+        <!-- Risk thresholds-->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="Risk thresholds">
+              <span class="govuk-accordion__section-button" id="further-information">
+                Risk thresholds</span>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <p>Risk thresholds are calculated accounting for the probability of the collision between the two objects (as calculated by the US), and the number of fragments that would be created by that collision according to statistical modelling.</p>
+                  <table class="govuk-table"style="width:100%">
+                    <col>
+                      <colgroup span="5"></colgroup>
+                      <colgroup span="5"></colgroup>
+          
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"></td>
+                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Probability of collision</b></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 40%";>Average UK fragment tally</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>1% - 5%</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>5% - 10%</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>>10%</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell"><5 </td>
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Very low</strong></th>
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                        </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">5-50 </td>
+                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
+                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">>50 </td>
+                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                      </tr>
+                    </tbody>
+                    </table> 
+                  
+            
+
+                  </div>
+          </div>
 
   <!-- Further Information -->
   <div class="govuk-accordion__section ">
@@ -294,7 +349,7 @@ Event asdf-asdas-asdf
 <a href="/events/operator/homepage" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
   Download report as PDF</a>
 
-  <a href="/events/operator/homepage" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+  <a href="/events/gov-user/homepage" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
     Return to upcoming conjunction events page</a>
 
 </div>
