@@ -12,7 +12,10 @@ Event asdf-asdas-asdf
         <a class="govuk-breadcrumbs__link" href="/events/gov-user/homepage">Events</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/events/operator/warning-1">asdf-asdas-asdf</a>
+        <a class="govuk-breadcrumbs__link" href="/events/operator/event-summary-5">asdf-asdas-asdf</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/events/gov-user/escalated-event-summary-gov-only">Escalated</a>
       </li>
     </ol>
     <h1 class="govuk-heading-xl">Event asdf-asdas-asdf <strong class="govuk-tag govuk-tag--blue">Escalated</strong></h1>
@@ -45,7 +48,10 @@ Event asdf-asdas-asdf
               <a href="#Visualisation of conjunction event">Visualisation of conjunction event</a>
             </li>
             <li class="moj-side-navigation__item">
-              <a href="#Operator summary">Operator summary</a>
+              <a href="#Operator view">Operator view</a>
+            </li>
+            <li class="moj-side-navigation__item">
+              <a href="#Event history">Event history</a>
             </li>
             <li class="moj-side-navigation__item">
               <a href="#Risk thresholds">Risk thresholds</a>
@@ -60,8 +66,10 @@ Event asdf-asdas-asdf
   <div class="govuk-grid-column-three-quarters">
     <p><b>Report number 1</b>, updated on 01/11/2023 09:00:00</p>
     <h2 class="govuk-heading-l" id="Escalated report">Executive summary</h2>
-      <p> The UK Space Agency Orbital Analyst team are monitoring a potential collision, which is summarised in the table below. This is a low probability of collision (PoC), with Starlink likely to manoeuvre to reduce the PoC. If the event were to occur it could potentially result in a full breakup of both objects, with some UK licensed satellites seeing an increased risk of potential collision events due to the fragments produced. 
-                <table class="govuk-table" style="width: 100%">
+      <p> The UK Space Agency is tracking a conjunction event, which is when two objects in space make a close approach. This can result in a collision, potentially damaging the objects involved, limiting or eliminating their capability. A collision event would also release new fragments, increasing the risk of future collisions for other objects. 
+        <hr class="govuk-section-break">
+        <p>This is a low probability of collision (PoC), with Starlink likely to manoeuvre to reduce the PoC. If the event were to occur it could potentially result in a full breakup of both objects, with some UK licensed satellites seeing an increased risk of potential collision events due to the fragments produced.</p>
+        <table class="govuk-table" style="width: 100%">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Risk (see <a href="#Risk thresholds">Risk thresholds</a>)</th>
@@ -69,7 +77,7 @@ Event asdf-asdas-asdf
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Predicted Time of Closest Approach (TCA)</th>
-                      <td class="govuk-table__cell">2023-08-23 15:46:58 UTC</td>
+                      <td class="govuk-table__cell">23/08/2023, 15:46 (UTC)</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Probability of Collision (PoC)</th>
@@ -94,6 +102,11 @@ Event asdf-asdas-asdf
                   </tbody>
                 </table>
 
+                <h3 class="govuk-heading-m" id="Object">Objects</h3>
+                <p><b>OneWeb-0601</b> is an active UK licensed satellite with a mass of approximately 148 kg. OneWeb have a constellation of over 600 UK licensed satellites that operate at 1200 km to provide global high speed internet access.</p>
+                  <hr class="govuk-section-break">
+                 <p><b>Transit 5B-7</b> is a defunct US navigation satellite from 1965 that predates GPS. The satellite has a mass of approximately 60 kg and is highly likely to have small quantities of nuclear material on board for power.</p> 
+                  
       <h3 class="govuk-heading-m" id="Next update">Next update</h3>
       <p>With a manoeuvre expected to take place, there is unlikely to be another update prior to the event due to the lower risk; an email will be generated post event.  
         For Low Risk events, updates are only sent if the probability breaches a Medium Risk threshold, even if the probability has increased. A close-down report will be sent in all cases. For Medium/High-risk events, updates are sent as soon as new information is available.</p>
@@ -270,13 +283,45 @@ Event asdf-asdas-asdf
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading" id="Operator view">
-              <span class="govuk-accordion__section-button" id="further-information">
+              <span class="govuk-accordion__section-button" id="Operator view">
                 Operator view</span>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 <p>The satellite operator of the UK-licensed object has been notified of the conjunction event via the Monitor your satellites platform. Click to see the <a href="event-summary-operator-view-escalated-banner.html">information that operators have received</a>.</p>
 </div>
 </div>
+
+        <!-- Event history-->
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="Event history">
+              <span class="govuk-accordion__section-button" id="Event history">
+                Event history
+              </span>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Report number</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of update (UTC)</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Risk</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of collision (%)</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of closest approach (UTC)</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/gov-user/event-summary-mvp">asdf-asdas-asdf Report 1</span></td>
+                    <td class="govuk-table__cell govuk-body-s">01/11/2023, 09:00</td>
+                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
+                    <td class="govuk-table__cell govuk-body-s">0.13</td>
+                    <td class="govuk-table__cell govuk-body-s">23/08/2023, 15:46</td>
+                  </tr>
+                </tbody>
+            </table> 
+          </div>
+        </div>
 
         <!-- Risk thresholds-->
         <div class="govuk-accordion__section ">
@@ -331,12 +376,12 @@ Event asdf-asdas-asdf
                   </div>
           </div>
 
-  <!-- Further Information -->
+  <!-- Further information -->
   <div class="govuk-accordion__section ">
     <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading" id="Further information">
         <span class="govuk-accordion__section-button" id="further-information">
-          Further Information</span>
+          Further information</span>
           </div>
           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
             <p>To understand more about how this data was generated by the UKSA, see:
