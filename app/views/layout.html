@@ -71,7 +71,7 @@
         </a>
       </div>
       <div class="govuk-header__content">
-        <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        <a href="/homepage" class="govuk-header__link govuk-header__link--service-name">
           {{serviceName}}
         </a>
         <nav aria-label="Menu" class="govuk-header__navigation ">
@@ -115,7 +115,7 @@
   <script>
     const pathname = window.location.pathname + window.location.search;
     if (pathname.includes("/events")) {
-      const navigation_item = document.getElementById("navigation-item-events");
+      const navigation_item = document.getElementById("navigation-item-conjunction");
       navigation_item.classList.add("govuk-header__navigation-item--active")
     } 
     else if (pathname.includes("/satellites")) {
