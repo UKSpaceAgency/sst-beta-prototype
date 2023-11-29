@@ -109,7 +109,7 @@ Event RE-2023-08
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header govuk-body-s">Hazardous materials</th>
-          <td class="govuk-table__cell govuk-body-s">None</td>
+          <td class="govuk-table__cell govuk-body-s">Unknown</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header govuk-body-s">UK-licensed object?</th>
@@ -118,9 +118,26 @@ Event RE-2023-08
       </tbody>
     </table>
 
-    <p>The circles on the map below indicate the potential re-entry locations of the object (see <a href="#further information">Further Information</a> for more detail on methodology). Zoom and scroll to see potential re-entry locations across the world.</p>
+    <p>Each circle on the map below represents one of 30,000 potential re-entry locations of the object (see <a href="#further information">Further Information</a> for more detail on methodology).</p>
+      
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help using this map
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        On this map you can:
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Zoom and scroll to see potential re-entry locations across the world</li>
+        <li>Hover over each circle to see the likely re-entry time</li>
+      </ul>
+      </div>
+    </details>
 
     <img src="/public/images/Reentry-overflight-blue.png" alt="Reentry UK overflight map" width="100%">
+
+    <p>Download the data underpinning the re-entry map [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
 
     <h1 class="govuk-heading-l" id="executive summary">Next update</h1>
 
@@ -254,7 +271,7 @@ Event RE-2023-08
                                 <tr class="govuk-table__row">
                                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";></th>
                                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of re-entry (%)</th>
-                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Overflight time (UTC)</th>
+                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 1 (UTC)</th>
                               </tr>
                               <tr class="govuk-table__row">
                                 <th scope="row" class="govuk-table__header govuk-body-s">England</th>
@@ -300,7 +317,7 @@ Event RE-2023-08
                 <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";></th>
                       <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of re-entry (%)</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Overflight time (UTC)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 1 (UTC)</th>
                       </tr>
                           <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header govuk-body-s">East of England</th>
@@ -372,7 +389,7 @@ Event RE-2023-08
             <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";></th>
                 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of re-entry (%)</th>
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Overflight time (UTC)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 1 (UTC)</th>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-body-s">Anguilla</th>
@@ -385,7 +402,7 @@ Event RE-2023-08
             <td class="govuk-table__cell govuk-body-s">N/A</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">British Antarctic Territory</th>
+            <th scope="row" class="govuk-table__header govuk-body-s">British Antarctic Territory*</th>
             <td class="govuk-table__cell govuk-body-s">0.00</td>
             <td class="govuk-table__cell govuk-body-s">N/A</td>
           </tr>
@@ -447,6 +464,7 @@ Event RE-2023-08
         </tbody>
       </table> 
 
+      <p>* For the purposes of this table, British Antarctic Territory has been limited to the areas surrounding populated facilities in the territory.</p>
                           
                         </div>
                        </div>
