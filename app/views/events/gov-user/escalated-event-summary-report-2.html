@@ -54,7 +54,7 @@ Event asdf-asdas-asdf
               <a href="#Operator view">Operator view</a>
             </li>
             <li class="moj-side-navigation__item">
-              <a href="#Event history">Event history</a>
+              <a href="#Conjunction event history">Conjunction event history</a>
             </li>
             <li class="moj-side-navigation__item">
               <a href="#Risk thresholds">Risk thresholds</a>
@@ -101,13 +101,17 @@ Event asdf-asdas-asdf
       </tbody>
     </table>
 
-    <p>For more information, see the <a href="#Event history">Event history</a>, where you can see and download the content of previous reports.</p>
+    <p>For more information on previous reports relating to this event, see <a href="#Conjunction event history">Conjunction event history</a>, 
+      where you can view and download the content of previous reports.</p>
 
     <h2 class="govuk-heading-l" id="Escalated report">Executive summary</h2>
-      <p> The UK Space Agency is tracking a conjunction event, which is when two objects in space make a close approach. This can result in a collision, potentially damaging the objects involved, limiting or eliminating their capability. A collision event would also release new fragments, increasing the risk of future collisions for other objects. 
-        <hr class="govuk-section-break">
-        <p>This is a low probability of collision (PoC), with Starlink likely to manoeuvre to reduce the PoC. If the event were to occur it could potentially result in a full breakup of both objects, with some UK licensed satellites seeing an increased risk of potential collision events due to the fragments produced.</p>
-                <table class="govuk-table" style="width: 100%">
+    <p> The UK Space Agency is tracking the close approach of two objects, <a href="/satellites/operator/satellite-1">OneWeb-0601</a> and
+       <a href="/satellites/operator/satellite-1">Transit 5B-7</a>.
+       A potential collision could damage the objects involved, limiting or eliminating their capability,
+        as well as releasing new fragments, which would increase the risk of future collisions for other objects. 
+      <hr class="govuk-section-break">
+      <p>This is a low probability of collision (PoC), with Oneweb likely to manoeuvre to reduce the PoC.</p>
+      <table class="govuk-table" style="width: 100%">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Risk (see <a href="#Risk thresholds">Risk thresholds</a>)</th>
@@ -123,27 +127,49 @@ Event asdf-asdas-asdf
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Primary object</th>
-                      <td class="govuk-table__cell"><a href="/satellites/operator/satellite-1">Starlink-1862</a></td>
+                      <td class="govuk-table__cell"><a href="/satellites/operator/satellite-1">OneWeb-0601</a></td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Primary object licensing country</th>
+                      <th scope="row" class="govuk-table__header" style="text-indent: 40px">Licensing country</th>
                       <td class="govuk-table__cell">UK</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Secondary object</th>
-                      <td class="govuk-table__cell"><a href="/satellites/operator/satellite-1">DISCOVERER 5</a></td>
+                      <th scope="row" class="govuk-table__header" style="text-indent: 40px">Mission type</th>
+                      <td class="govuk-table__cell">Commercial communications</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Secondary object licensing country</th>
+                      <th scope="row" class="govuk-table__header" style="text-indent: 40px">Mass (kg)</th>
+                      <td class="govuk-table__cell">148</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header" style="text-indent: 40px">Hazardous materials</th>
+                      <td class="govuk-table__cell">None</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Secondary object</th>
+                      <td class="govuk-table__cell"><a href="/satellites/operator/satellite-1">Transit 5B-7</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header" style="text-indent: 40px">Licensing country</th>
                       <td class="govuk-table__cell">US</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header" style="text-indent: 40px">Mission type</th>
+                      <td class="govuk-table__cell">Defunct</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header" style="text-indent: 40px">Mass (kg)</th>
+                      <td class="govuk-table__cell">60</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header" style="text-indent: 40px">Hazardous materials</th>
+                      <td class="govuk-table__cell">Nuclear material (small amount)</td>
                     </tr>
                   </tbody>
                 </table>
-                <h3 class="govuk-heading-m" id="Object">Objects</h3>
-                <p><b>OneWeb-0601</b> is an active UK licensed satellite with a mass of approximately 148 kg. OneWeb have a constellation of over 600 UK licensed satellites that operate at 1200 km to provide global high speed internet access.</p>
-                  <hr class="govuk-section-break">
-                 <p><b>Transit 5B-7</b> is a defunct US navigation satellite from 1965 that predates GPS. The satellite has a mass of approximately 60 kg and is highly likely to have small quantities of nuclear material on board for power.</p> 
 
+                <h3 class="govuk-body-m">See <a href="#Further information">Further information</a> for more detail on methodology.</h3>
+              
       <h3 class="govuk-heading-m" id="Next update">Next update</h3>
       <p>With a manoeuvre expected to take place, there is unlikely to be another update prior to the event due to the lower risk; an email will be generated post event.  
         For Low Risk events, updates are only sent if the probability breaches a Medium Risk threshold, even if the probability has increased. A close-down report will be sent in all cases. For Medium/High-risk events, updates are sent as soon as new information is available.</p>
@@ -184,9 +210,7 @@ Event asdf-asdas-asdf
                   <h3 class="govuk-heading-m" id="Immediate impact">International response</h3>
                   <p>There is currently no information available regarding the actions of international partners in relation to this event.</p>  
                   <h3 class="govuk-heading-m" id="Immediate impact">Press lines</h3>
-                  <p>We have not seen any press attention on this event.  
-  
-                    UKSA press lines can be found here.</p>          
+                  <p>We have not seen any press attention on this event. See <a href="/events/operator/definitions" class="govuk-link--no-visited-state">UK Space Agency press lines</a>.</p>          
                   </div>
                 </div>
         <!-- Additional event details -->
@@ -210,10 +234,6 @@ Event asdf-asdas-asdf
                       <td class="govuk-table__cell">14.399</td>
                     </tr>
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Catastrophic / non-catastrophic</th>
-                      <td class="govuk-table__cell">Catastrophic</td>
-                    </tr>
-                    <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Altitude (km)</th>
                       <td class="govuk-table__cell">1234</td>
                     </tr>
@@ -224,6 +244,10 @@ Event asdf-asdas-asdf
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Predicted number of fragments generated >10cm</th>
                       <td class="govuk-table__cell">223</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Potential increase in future collisions for UK objects (%)</th>
+                      <td class="govuk-table__cell">8.7</td>
                     </tr>
                   </tbody>
                 </table>
@@ -244,59 +268,209 @@ Event asdf-asdas-asdf
       
                       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                              <p>Each UK licensed satellite was screened against the current population of objects as well as the
-                              fragments generated by the breakup model. The ‘Current tally’ column is the number of 5 km
-                              conjunction events the object currently has per week. The ‘Fragments tally’ column is the number of
-                              <b>additional 5km conjunction events</b> that would be expected in the 7 day period after TCA based on
-                              the predicted orbits outputted by the breakup model. Also included in the table is the mass of the
-                              licensed object and the orbit information.
-                              <b>Only the top 30 objects in terms of fragment tally are shown here.</b> </p>
+                              fragments generated by the breakup model. </p>
+                              <hr class="govuk-section-break">
+                             <p> The ‘Current weekly conjunction events’ column shows the average number of
+                              conjunction events (with a miss distance of 5km or less) that the object currently has per week. The ‘Additional conjunction events (7 days after TCA)’ column shows the number of
+                              <b>additional conjunction events</b> (with a miss distance of 5km or less) that would be expected in the 7 day period after a collision. </p>
+                              <hr class="govuk-section-break">
+                             <p>This projection is based on
+                              the predicted orbits outputted by the breakup model.</p>
+
+                              <hr class="govuk-section-break">
+                              <p><b>Only the top 30 objects in terms of fragment tally are shown here.</b> </p>
 
       <table class="govuk-table">
         <thead class="govuk-table_head">
           <tr class="govuk-table_row">
-                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">NORAD ID</th>
-                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Object name</th>
-                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Object mass (kg)</th>
-                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Current tally</th>
-                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Fragments tally</th>
-                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Apogee(km)</th>
-                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Perigee (km)</th>
-                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Inclination (deg)</th>
+                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 10%">Object name</th>
+                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 8%">Object mass (kg)</th>
+                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Current weekly conjunction events</th>
+                <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Additional conjunction events (7 days after TCA)</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s">48971</td>
-              <td class="govuk-table__cell govuk-body-s">ONEWEB-0253</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0253</a></td>
               <td class="govuk-table__cell govuk-body-s">148</td>
               <td class="govuk-table__cell govuk-body-s">4.5</td>
               <td class="govuk-table__cell govuk-body-s">5.1</td>
-              <td class="govuk-table__cell govuk-body-s">1199</td>
-              <td class="govuk-table__cell govuk-body-s">1196.5</td>
-              <td class="govuk-table__cell govuk-body-s">87.9</td>
             </tr>
             <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-body-s">48971</td>
-                <td class="govuk-table__cell govuk-body-s">ONEWEB-0253</td>
+                <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0023</a></td>
                 <td class="govuk-table__cell govuk-body-s">148</td>
-                <td class="govuk-table__cell govuk-body-s">4.5</td>
-                <td class="govuk-table__cell govuk-body-s">5.1</td>
-                <td class="govuk-table__cell govuk-body-s">1199</td>
-                <td class="govuk-table__cell govuk-body-s">1196.5</td>
-                <td class="govuk-table__cell govuk-body-s">87.9</td>
+                <td class="govuk-table__cell govuk-body-s">2.8</td>
+                <td class="govuk-table__cell govuk-body-s">4.6</td>
               </tr>
               <tr class="govuk-table__row">
-                  <td class="govuk-table__cell govuk-body-s">48971</td>
-                  <td class="govuk-table__cell govuk-body-s">ONEWEB-0253</td>
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0049</a></td>
                   <td class="govuk-table__cell govuk-body-s">148</td>
+                  <td class="govuk-table__cell govuk-body-s">2.3</td>
                   <td class="govuk-table__cell govuk-body-s">4.5</td>
-                  <td class="govuk-table__cell govuk-body-s">5.1</td>
-                  <td class="govuk-table__cell govuk-body-s">1199</td>
-                  <td class="govuk-table__cell govuk-body-s">1196.5</td>
-                  <td class="govuk-table__cell govuk-body-s">87.9</td>
                 </tr>
-          
-      </table>  
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0057</a></td>
+                  <td class="govuk-table__cell govuk-body-s">148</td>
+                  <td class="govuk-table__cell govuk-body-s">3.5</td>
+                  <td class="govuk-table__cell govuk-body-s">4.5</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0008</a></td>
+                    <td class="govuk-table__cell govuk-body-s">148</td>
+                    <td class="govuk-table__cell govuk-body-s">5.5</td>
+                    <td class="govuk-table__cell govuk-body-s">4.1</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0263</a></td>
+                      <td class="govuk-table__cell govuk-body-s">148</td>
+                      <td class="govuk-table__cell govuk-body-s">4.8</td>
+                      <td class="govuk-table__cell govuk-body-s">4.1</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0036</a></td>
+                      <td class="govuk-table__cell govuk-body-s">148</td>
+                      <td class="govuk-table__cell govuk-body-s">2</td>
+                      <td class="govuk-table__cell govuk-body-s">3.8</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0048</a></td>
+                        <td class="govuk-table__cell govuk-body-s">148</td>
+                        <td class="govuk-table__cell govuk-body-s">3.3</td>
+                        <td class="govuk-table__cell govuk-body-s">3.8</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0017</a></td>
+                          <td class="govuk-table__cell govuk-body-s">148</td>
+                          <td class="govuk-table__cell govuk-body-s">3.3</td>
+                          <td class="govuk-table__cell govuk-body-s">3.7</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0056</a></td>
+                          <td class="govuk-table__cell govuk-body-s">148</td>
+                          <td class="govuk-table__cell govuk-body-s">2</td>
+                          <td class="govuk-table__cell govuk-body-s">3.6</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0006</a></td>
+                            <td class="govuk-table__cell govuk-body-s">148</td>
+                            <td class="govuk-table__cell govuk-body-s">2</td>
+                            <td class="govuk-table__cell govuk-body-s">3.6</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0044</a></td>
+                              <td class="govuk-table__cell govuk-body-s">148</td>
+                              <td class="govuk-table__cell govuk-body-s">2.5</td>
+                              <td class="govuk-table__cell govuk-body-s">3.4</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">ONEWEB-0257</a></td>
+                              <td class="govuk-table__cell govuk-body-s">148</td>
+                              <td class="govuk-table__cell govuk-body-s">5.3</td>
+                              <td class="govuk-table__cell govuk-body-s">3.3</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s">ONEWEB-0251</td>
+                                <td class="govuk-table__cell govuk-body-s">148</td>
+                                <td class="govuk-table__cell govuk-body-s">3.3</td>
+                                <td class="govuk-table__cell govuk-body-s">3.3</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s">ONEWEB-0203</td>
+                                  <td class="govuk-table__cell govuk-body-s">148</td>
+                                  <td class="govuk-table__cell govuk-body-s">2.8</td>
+                                  <td class="govuk-table__cell govuk-body-s">3.1</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s">ONEWEB-0053</td>
+                                  <td class="govuk-table__cell govuk-body-s">148</td>
+                                  <td class="govuk-table__cell govuk-body-s">2</td>
+                                  <td class="govuk-table__cell govuk-body-s">3</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-body-s">ONEWEB-0033</td>
+                                    <td class="govuk-table__cell govuk-body-s">148</td>
+                                    <td class="govuk-table__cell govuk-body-s">3.3</td>
+                                    <td class="govuk-table__cell govuk-body-s">3</td>
+                                  </tr>
+                                  <tr class="govuk-table__row">
+                                      <td class="govuk-table__cell govuk-body-s">ONEWEB-0053</td>
+                                      <td class="govuk-table__cell govuk-body-s">148</td>
+                                      <td class="govuk-table__cell govuk-body-s">4.5</td>
+                                      <td class="govuk-table__cell govuk-body-s">2.9</td>
+                                  </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-body-s">ONEWEB-0243</td>
+                      <td class="govuk-table__cell govuk-body-s">148</td>
+                      <td class="govuk-table__cell govuk-body-s">2.3</td>
+                      <td class="govuk-table__cell govuk-body-s">2.7</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-body-s">ONEWEB-0204</td>
+                        <td class="govuk-table__cell govuk-body-s">148</td>
+                        <td class="govuk-table__cell govuk-body-s">7.8</td>
+                        <td class="govuk-table__cell govuk-body-s">2.7</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">ONEWEB-0228</td>
+                          <td class="govuk-table__cell govuk-body-s">148</td>
+                          <td class="govuk-table__cell govuk-body-s">3.8</td>
+                          <td class="govuk-table__cell govuk-body-s">2.7</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">ONEWEB-0213</td>
+                          <td class="govuk-table__cell govuk-body-s">148</td>
+                          <td class="govuk-table__cell govuk-body-s">2</td>
+                          <td class="govuk-table__cell govuk-body-s">2.6</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s">ONEWEB-0209</td>
+                            <td class="govuk-table__cell govuk-body-s">148</td>
+                            <td class="govuk-table__cell govuk-body-s">4.5</td>
+                            <td class="govuk-table__cell govuk-body-s">2.5</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                              <td class="govuk-table__cell govuk-body-s">ONEWEB-0270</td>
+                              <td class="govuk-table__cell govuk-body-s">148</td>
+                              <td class="govuk-table__cell govuk-body-s">5</td>
+                              <td class="govuk-table__cell govuk-body-s">2.5</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell govuk-body-s">ONEWEB-0236</td>
+                              <td class="govuk-table__cell govuk-body-s">148</td>
+                              <td class="govuk-table__cell govuk-body-s">2.9</td>
+                              <td class="govuk-table__cell govuk-body-s">2.5</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s">ONEWEB-0254</td>
+                                <td class="govuk-table__cell govuk-body-s">148</td>
+                                <td class="govuk-table__cell govuk-body-s">1.8</td>
+                                <td class="govuk-table__cell govuk-body-s">2.5</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s">ONEWEB-0251</td>
+                                  <td class="govuk-table__cell govuk-body-s">148</td>
+                                  <td class="govuk-table__cell govuk-body-s">2.5</td>
+                                  <td class="govuk-table__cell govuk-body-s">2.4</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s">ONEWEB-0218</td>
+                                  <td class="govuk-table__cell govuk-body-s">148</td>
+                                  <td class="govuk-table__cell govuk-body-s">5.4</td>
+                                  <td class="govuk-table__cell govuk-body-s">2.4</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-body-s">ONEWEB-0234</td>
+                                    <td class="govuk-table__cell govuk-body-s">148</td>
+                                    <td class="govuk-table__cell govuk-body-s">5.5</td>
+                                    <td class="govuk-table__cell govuk-body-s">2.4</td>
+                                  </tr>
+                                  <tr class="govuk-table__row">
+                                      <td class="govuk-table__cell govuk-body-s">ONEWEB-0223</td>
+                                      <td class="govuk-table__cell govuk-body-s">148</td>
+                                      <td class="govuk-table__cell govuk-body-s">3.2</td>
+                                      <td class="govuk-table__cell govuk-body-s">2.4</td>
+                                  </tr>
+          </table>  
                        </div>
                      </div>
       
@@ -328,12 +502,12 @@ Event asdf-asdas-asdf
 </div>
 </div>
 
-        <!-- Event history-->
+        <!-- Conjunction event history-->
         <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading" id="Event history">
-              <span class="govuk-accordion__section-button" id="Event history">
-                Event history
+            <h2 class="govuk-accordion__section-heading" id="Conjunction event history">
+              <span class="govuk-accordion__section-button" id="Conjunction event history">
+                Conjunction event history
               </span>
           </div>
           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
@@ -349,7 +523,14 @@ Event asdf-asdas-asdf
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/gov-user/event-summary-mvp">asdf-asdas-asdf Report 1</span></td>
+                  <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/gov-user/event-summary-mvp">asdf-asdas-asdf Report 2</span></td>
+                  <td class="govuk-table__cell govuk-body-s">03/11/2023, 09:00</td>
+                  <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
+                  <td class="govuk-table__cell govuk-body-s">6.01</td>
+                  <td class="govuk-table__cell govuk-body-s">23/08/2023, 15:46</td>
+                </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/evnts/gov-user/escalated-event-summary-report-2">asdf-asdas-asdf Report 1</span></td>
                     <td class="govuk-table__cell govuk-body-s">01/11/2023, 09:00</td>
                     <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
                     <td class="govuk-table__cell govuk-body-s">0.13</td>
@@ -357,7 +538,25 @@ Event asdf-asdas-asdf
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell govuk-body-s" colspan="6">
+
+                      <p class="govuk-body-s">This is a low probability of collision (PoC), with OneWeb likely to manoeuvre to reduce the PoC. If the event were to occur it could potentially result in a full breakup of both objects, with some UK licensed satellites seeing an increased risk of potential collision events due to the fragments produced.</p>
                       <table class="govuk-table" style="margin-left: 10px">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Primary object</b></td>
+                          <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">OneWeb-0601</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Primary object licensing country</b></td>
+                          <td class="govuk-table__cell govuk-body-s">UK</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Secondary object</b></td>
+                          <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">Transit 5B-7</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-wwidth-two-thirds"><b>Secondary object licensing country</b></td>
+                          <td class="govuk-table__cell govuk-body-s">US</td>
+                        </tr>
                         <tr class="govuk-table__row">
                           <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Predicted miss-distance (m)</b></td>
                           <td class="govuk-table__cell govuk-body-s">43</td>
@@ -385,14 +584,6 @@ Event asdf-asdas-asdf
                       </table>
                       <a href="/events/operator/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                         Download full report as PDF</a>
-
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/gov-user/event-summary-mvp">asdf-asdas-asdf Report 2</span></td>
-                    <td class="govuk-table__cell govuk-body-s">03/11/2023, 09:00</td>
-                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
-                    <td class="govuk-table__cell govuk-body-s">6.01</td>
-                    <td class="govuk-table__cell govuk-body-s">23/08/2023, 15:46</td>
-                  </tr>
                 </tbody>
             </table> 
           </div>
@@ -406,7 +597,10 @@ Event asdf-asdas-asdf
                 Risk thresholds</span>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                  <p>Risk thresholds are calculated accounting for the probability of the collision between the two objects (as calculated by the US), and the number of fragments that would be created by that collision according to statistical modelling.</p>
+                  <p>Risk thresholds are calculated accounting for the probability of the collision between the two objects (as calculated by the US), and the average number of additional conjunction events that the collision would create for UK satellites.</p>
+<h2 class="govuk-section-break"></h2>
+<p>Any event with an expected maneouvre is automatically categorised as "Low risk".</p>
+
                   <table class="govuk-table"style="width:100%">
                     <col>
                       <colgroup span="5"></colgroup>
@@ -426,7 +620,7 @@ Event asdf-asdas-asdf
                     </thead>
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
-                        <td class="govuk-table__cell"><5 </td>
+                        <td class="govuk-table__cell">5 </td>
                           <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Very low</strong></th>
                           <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
                           <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
@@ -459,6 +653,16 @@ Event asdf-asdas-asdf
           Further information</span>
           </div>
           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <p>The following organisations have been sent this alert:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Cabinet Office</li>
+                <li>Foreign, Commonweatlh and Development Office</li>
+                <li>Government Office for Science</li>
+                <li>Department for Science, Innovation and Technology</li>
+                <li>UK Space Command</li>
+              </ul>
+
             <p>To understand more about how this data was generated by the UKSA, see:
             <a href="/events/operator/definitions" class="govuk-link--no-visited-state">Conjunction event analysis information</a>
             <p><a href="/events/operator/definitions" class="govuk-link--no-visited-state">Help with the information on this page</a></p>
@@ -466,7 +670,7 @@ Event asdf-asdas-asdf
     </div>
     </div>
 
-<a href="/events/operator/homepage" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+<a href="/events/operator/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
   Download report as PDF</a>
 
   <a href="/events/gov-user/homepage" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
