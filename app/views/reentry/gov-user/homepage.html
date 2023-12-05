@@ -18,6 +18,18 @@ Upcoming re-entry events
         <h2 class="govuk-heading-l">Upcoming re-entry events</h2>
 
         <p class="govuk-body">There is currently <b>1</B> re-entry event which meets the UK Space Agency's thresholds for monitoring expected in the next <b>3</b> days.</p>
+        <hr class="govuk-section-break govuk-section-break--s">
+        <p class="govuk-body">Re-entry events are escalated if:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>The event is within 36 hours, involves a large object (as defined by the US SATCAT) and has overflights of the UK mainland in its primary uncertainty window</li>
+          <li>The probability of impacting UK overseas territories is greater than 0.1%</li>
+          <li>The UK has liability for the re-entering object</li>
+          <li>There is press or government interest in the event</li>
+        </ul>
+         
+         <hr class="govuk-section-break govuk-section-break--s">
+
+         <p>For further detail on how risk levels are defined, see 'Risk thresholds' below.</p>
 
         <div class="moj-search">
         <form action="#" method="post">
@@ -128,8 +140,45 @@ Upcoming re-entry events
         </div>
       </details>
 
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+           Risk thresholds
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>Risk thresholds are calculated according to the probability of the object re-entering over the UK.</p>
+
+          <table class="govuk-table"style="width:100%">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Risk level</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Probability of re-entry over the UK (%)</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
+                <td class="govuk-table__cell govuk-body-s">< 1%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                <td class="govuk-table__cell govuk-body-s">1% - 5%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                <td class="govuk-table__cell govuk-body-s">> 5%</td>
+              </tr>
+            </tbody>
+          </table> 
+    
+                </ul>
+        </div>
+      </details>
+
+
+
       <h2 class="govuk-heading-l">Previous re-entry events</h2>
-      <p class="govuk-body">The table below shows all re-entry events monitored by the UKSA since the service began in November 2023.
+      <p class="govuk-body">The table below shows all re-entry events monitored by the UKSA since the service began in November 2023. 
+        The data in this table is that which was presented in the final report for each event.
         <div class="moj-search">
           <form action="#" method="post">
           <div class="govuk-form-group">
@@ -201,7 +250,7 @@ Upcoming re-entry events
     </span>
   </summary>
   <div class="govuk-details__text">
-    <b>This table shows previous re-entry events which met the UK Space Agency's thresholds for monitoring.</b>
+    <b>This table shows previous re-entry events which met the UK Space Agency's thresholds for monitoring. The data in this table is that which was presented in the final report for each event</b>
     <p> </p>
     <ul class="govuk-list govuk-list--bullet">
       <li>Select the <b>Event ID</b> to view more information.</li>
