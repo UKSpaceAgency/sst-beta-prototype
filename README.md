@@ -6,8 +6,11 @@
 ### Before you start
 You will need to ensure you have [Node LTS](https://nodejs.org/en/download/) installed. You can check by running `node --version`.
 
-### Running a local development version
+### Running the prototype locally
 Simply run `npm install` followed by `npm run dev`.
+
+### Additional docs
+* [GOV.UK Prototype Kit Documentation](https://prototype-kit.service.gov.uk/docs/)
 
 ## Licence
 [MIT Licence](LICENCE.txt)
