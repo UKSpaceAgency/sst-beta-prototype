@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Re-entry event RE-2023-08
+Conjunction event asdf-asdas-asdf
 {% endblock %}
 
 {% block content %}
@@ -10,58 +10,34 @@ Re-entry event RE-2023-08
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
+          <a class="govuk-breadcrumbs__link" href="/events/approver/homepage">All conjunction events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">RE-2023-08</a>
+          <a class="govuk-breadcrumbs__link" href="/events/approver/event-summary-update">asdf-asdas-asdf</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/editing-interface">Editing interface</a>
+            <a class="govuk-breadcrumbs__link" href="/events/approver/editing-interface">Editing interface</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/events/approver/review-alert">Review alert</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Edit or escalate re-entry event RE-2023-08</h1>
+      <h1 class="govuk-heading-xl">Are you sure you want to send an alert for conjunction event asdf-asdas-asdf?</h1>
     </div>
   
-    <h1 class="govuk-heading-l">Edit re-entry event RE-2023-08</h1>
 
-
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="more-detail">
-            Add to 'Executive Summary' 
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          Include additional information that is important for users to know, but is not captured elsewhere in the report. 
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under a paragraph which reads: "The UK Space Agency is tracking the upcoming re-entry of an object from space into the Earth’s atmosphere, posing a potential threat to life and property on the ground. All re-entered debris should be considered as hazardous until proven otherwise."
+              <p class="govuk-body">This will send an alert to all government users who have registered for conjunction alerts.</p>
+              <form action="/form-handler" method="post" novalidate>
+                <input type="hidden" name="answers-checked" value="true">
+                <a href="/events/approver/alert-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                    Send alert</a>
+                    <a href="/events/approver/editing-interface" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Return to editing interface</a>
+              </form>
+            </div>
           </div>
-        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="more-detail">
-            Add to 'Press attention'
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          Include details of any press attention related to this event. Leave blank if there has been no press attention.
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear alongside a link to standard UK Space Agency press lines.
-          </div>
-        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-      <a href="/reentry/approver/review-edits" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        Review and publish edits</a>
-
-
-        <h1 class="govuk-heading-l">Escalate re-entry event RE-2023-08</h1>
-
-        <p>No email or SMS alerts related to this event have been sent to UK government users. Click the button below to send an alert to all UK government users who have registered for re-entry alerts.</p>
-
-        <a href="/reentry/approver/review-alert" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-            Send an alert</a>
-
+        </main>
+      </div>
 
   
   {% endblock %}

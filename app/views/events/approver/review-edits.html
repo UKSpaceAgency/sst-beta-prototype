@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Re-entry event RE-2023-08
+Conjunction event asdf-asdas-asdf
 {% endblock %}
 
 {% block content %}
@@ -10,58 +10,107 @@ Re-entry event RE-2023-08
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
+          <a class="govuk-breadcrumbs__link" href="/events/approver/homepage">All conjunction events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">RE-2023-08</a>
+          <a class="govuk-breadcrumbs__link" href="/events/approver/event-summary-update">asdf-asdas-asdf</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/editing-interface">Editing interface</a>
+            <a class="govuk-breadcrumbs__link" href="/events/approver/editing-interface">Editing interface</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/events/approver/review-edits">Review edits</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Edit or escalate re-entry event RE-2023-08</h1>
+      <h1 class="govuk-heading-xl">Review your edits before publishing</h1>
     </div>
   
-    <h1 class="govuk-heading-l">Edit re-entry event RE-2023-08</h1>
-
-
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="more-detail">
-            Add to 'Executive Summary' 
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          Include additional information that is important for users to know, but is not captured elsewhere in the report. 
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under a paragraph which reads: "The UK Space Agency is tracking the upcoming re-entry of an object from space into the Earth’s atmosphere, posing a potential threat to life and property on the ground. All re-entered debris should be considered as hazardous until proven otherwise."
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds-from-desktop">
+              <h2 class="govuk-heading-m">Edits to conjunction event asdf-asdas-asdf</h2>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Add to 'Executive Summary'
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    N/A
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> exec summary</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Add to 'Immediate impact'
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    N/A
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">immediate impact</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Add to 'Short term impact'
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      N/A
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">short term impact</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Add to 'Long term impact'
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      N/A
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">long term impact</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Add to 'UK response'
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      N/A
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">uk response</span></a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Add to 'Press interest'
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      N/A
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> press interest</span></a>
+                    </dd>
+                  </div>
+              </dl>
+              <h2 class="govuk-heading-m">Now publish the changes</h2>
+              <p class="govuk-body">Only publish these changes if you are confident the details you are providing are correct. Please check for any spelling or grammatical errors before publishing.</p>
+              <form action="/form-handler" method="post" novalidate>
+                <input type="hidden" name="answers-checked" value="true">
+                <a href="/events/approver/edit-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                    Publish edits</a>
+                    <a href="/events/approver/editing-interface" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Return to editing interface</a>
+              </form>
+            </div>
           </div>
-        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="more-detail">
-            Add to 'Press attention'
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          Include details of any press attention related to this event. Leave blank if there has been no press attention.
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear alongside a link to standard UK Space Agency press lines.
-          </div>
-        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-      <a href="/reentry/approver/review-edits" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        Review and publish edits</a>
-
-
-        <h1 class="govuk-heading-l">Escalate re-entry event RE-2023-08</h1>
-
-        <p>No email or SMS alerts related to this event have been sent to UK government users. Click the button below to send an alert to all UK government users who have registered for re-entry alerts.</p>
-
-        <a href="/reentry/approver/review-alert" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-            Send an alert</a>
-
+        </main>
+      </div>
 
   
   {% endblock %}

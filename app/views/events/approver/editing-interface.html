@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Re-entry event RE-2023-08
+Conjunction event asdf-asdas-asdf
 {% endblock %}
 
 {% block content %}
@@ -10,19 +10,22 @@ Re-entry event RE-2023-08
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
+            <a class="govuk-breadcrumbs__link" href="/events/approver/homepage">All conjunction events</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/events/operator/event-summary-5">asdf-asdas-asdf</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/events/approver/escalated-event-summary-report-1">Escalated</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">RE-2023-08</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/editing-interface">Editing interface</a>
+            <a class="govuk-breadcrumbs__link" href="/events/approver/editing-interface">Editing interface</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Edit or escalate re-entry event RE-2023-08</h1>
+      <h1 class="govuk-heading-xl">Edit or escalate conjunction event asdf-asdas-asdf</h1>
     </div>
   
-    <h1 class="govuk-heading-l">Edit re-entry event RE-2023-08</h1>
+    <h1 class="govuk-heading-l">Edit conjunction event asdf-asdas-asdf</h1>
 
 
         <h1 class="govuk-label-wrapper">
@@ -31,12 +34,66 @@ Re-entry event RE-2023-08
           </label>
         </h1>
         <div id="more-detail-hint" class="govuk-hint">
-          Include additional information that is important for users to know, but is not captured elsewhere in the report. 
+          Include additional information that is important for users to know, but is not captured elsewhere in the report, such as any manoeuvrees which are likely to be made. 
         </div>
         <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under a paragraph which reads: "The UK Space Agency is tracking the upcoming re-entry of an object from space into the Earth’s atmosphere, posing a potential threat to life and property on the ground. All re-entered debris should be considered as hazardous until proven otherwise."
+            This text will appear under a paragraph which reads: "The UK Space Agency is tracking the close approach of two objects, OneWeb-0601 and Transit 5B-7. A potential collision could damage the objects involved, limiting or eliminating their capability, as well as releasing new fragments, which would increase the risk of future collisions for other objects.
+
+            This is a low probability of collision (PoC), with OneWeb likely to manoeuvre to reduce the PoC."
           </div>
         <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+        <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="more-detail">
+              Add to 'Immediate impact'
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">
+            Include information related to the immediate impact of this event. 
+        </div>
+        <div id="more-detail-hint" class="govuk-hint">
+            This text will appear under a paragraph which reads: "Should the collision occur, it would likely result in a full breakup of both objects. In this worst-case scenario, an estimation of the number of fragments greater than 10cm is 223."
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="more-detail">
+              Add to 'Short term impact'
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">
+            Include information related to the short term impact of this event.
+          </div>
+          <div id="more-detail-hint" class="govuk-hint">
+            This text will appear under a paragraph which reads: "Should the collision occur, the debris would generate an increased risk to satellites in LEO. We are predicting that the event would result in an 8.7% increase in potential collisions across all UK satellites in LEO."
+            </div>
+          <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="more-detail">
+              Add to 'Long term impact'
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">
+            Include information related to the long term impact of this event.
+          </div>
+          <div id="more-detail-hint" class="govuk-hint">
+            This text will appear under a paragraph which reads: "The collision would occur at an altitude of approximately 1200 km. This is the operational altitude of OneWeb and a significant proportion of debris here would likely have an orbital lifetime exceeding 100 years. The risk would therefore be sustained for significant periods of time and could eventually impact a broad range of satellites and missions including human spaceflight."
+            </div>
+          <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="more-detail">
+              Add to 'UK response'
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">
+            Include information related to the UK response to this event.
+          </div>
+          <div id="more-detail-hint" class="govuk-hint">
+            This text will appear under a paragraph which reads: "The UK Space Agency are the leads for conjunction reporting and have reached out to the operator to confirm they are aware of the event and that they intend to manoeuvre. The relevant UK response organisations have received an alert for this event."
+            </div>
+          <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="more-detail">
@@ -51,15 +108,15 @@ Re-entry event RE-2023-08
           </div>
         <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 
-      <a href="/reentry/approver/review-edits" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+      <a href="/events/approver/review-edits" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
         Review and publish edits</a>
 
 
-        <h1 class="govuk-heading-l">Escalate re-entry event RE-2023-08</h1>
+        <h1 class="govuk-heading-l">Escalate conjunction event asdf-asdas-asdf</h1>
 
-        <p>No email or SMS alerts related to this event have been sent to UK government users. Click the button below to send an alert to all UK government users who have registered for re-entry alerts.</p>
+        <p>No email or SMS alerts related to this event have been sent to UK government users. Click the button below to send an alert to all UK government users who have registered for conjunction alerts.</p>
 
-        <a href="/reentry/approver/review-alert" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        <a href="/events/approver/review-alert" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
             Send an alert</a>
 
 
