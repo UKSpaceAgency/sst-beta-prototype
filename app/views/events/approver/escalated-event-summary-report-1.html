@@ -5,17 +5,31 @@ Conjunction event asdf-asdas-asdf
 {% endblock %}
 
 {% block content %}
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading"> You are able to
+      <a class="govuk-notification-banner__link" href="/events/approver/editing-interface">edit or escalate this report</a>.
+    </p>
+  </div>
+</div>
+
 <div class="govuk-width-container">
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/events/gov-user/homepage">All conjunction events</a>
+        <a class="govuk-breadcrumbs__link" href="/events/approver/homepage">All conjunction events</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="/events/operator/event-summary-5">asdf-asdas-asdf</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/events/gov-user/escalated-event-summary-gov-only">Escalated</a>
+        <a class="govuk-breadcrumbs__link" href="/events/approver/escalated-event-summary-report-1">Escalated</a>
       </li>
     </ol>
     <h1 class="govuk-heading-xl">Escalated conjunction event asdf-asdas-asdf</h1>
@@ -41,7 +55,6 @@ Conjunction event asdf-asdas-asdf
             <li class="moj-side-navigation__item">
               <a href="#Guidance on response">Guidance on response</a>
             </li>
-
             <li class="moj-side-navigation__item">
               <a href="#Additional risk to UK objects">Additional risk to UK objects</a>
             </li>
@@ -228,7 +241,7 @@ Conjunction event asdf-asdas-asdf
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
                   <h3 class="govuk-heading-m" id="Immediate impact">UK response</h3>
                   <p>The UK Space Agency are the leads for conjunction reporting and have reached out to the operator to confirm they are aware of the event and that they intend to manoeuvre. The relevant UK response organisations have received an alert for this event (see <a href="#Further information">Further information</a>).</p>  
-                  <h3 class="govuk-heading-m" id="Immediate impact">Press lines</h3>
+                  <h3 class="govuk-heading-m" id="Immediate impact">Press attention</h3>
                   <p>We have not seen any press attention on this event. See <a href="/events/operator/definitions" class="govuk-link--no-visited-state">UK Space Agency press lines</a>.</p>          
                   </div>
                 </div>
@@ -482,7 +495,7 @@ Conjunction event asdf-asdas-asdf
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/gov-user/event-summary-mvp">asdf-asdas-asdf Report 1</span></td>
+                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/approver/event-summary-mvp">asdf-asdas-asdf Report 1</span></td>
                     <td class="govuk-table__cell govuk-body-s">01/11/2023, 09:00</td>
                     <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
                     <td class="govuk-table__cell govuk-body-s">0.13</td>
@@ -573,7 +586,7 @@ Conjunction event asdf-asdas-asdf
     </div>
 
 
-  <a href="/events/gov-user/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  <a href="/events/approver/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
     Return to upcoming conjunction events page</a>
 
     <a href="#" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
