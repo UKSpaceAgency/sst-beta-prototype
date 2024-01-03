@@ -44,16 +44,16 @@
 
 // Potential impact by home nation
 
-        "england":[{
+        "englandNation":[{
             "probability":"0.01",
             "overflightTime1":"03/11/2013, 16:26"}],
-        "northernIreland":[{
+        "northernIrelandNation":[{
             "probability":"0.03",
             "overflightTime1":"03/11/2013, 16:26"}],
-        "scotland":[{
+        "scotlandNation":[{
             "probability":"0.00",
             "overflightTime1":"N/A"}],
-        "wales":[{
+        "walesNation":[{
             "probability":"0.00",
             "overflightTime1":"N/A"}],
 
@@ -106,7 +106,7 @@
                 "overflightTime1":"N/A"}],
             "tyrone":[{
                 "probability":"0.00",
-                "overflightTime1":"N/A"}],
+                "overflightTime1":"N/A"}]
                 } ],
         "scotland": [
             {"aberdeenAndNorthEast":[{
@@ -126,7 +126,7 @@
                 "overflightTime1":"N/A"}],
             "scotlandSouth":[{
                 "probability":"0.00",
-                "overflightTime1":"N/A"}],
+                "overflightTime1":"N/A"}]
                 } ],
         "wales": [
             {"northWales":[{
@@ -140,7 +140,7 @@
                 "overflightTime1":"N/A"}],
             "southEastWales":[{
                 "probability":"0.00",
-                "overflightTime1":"N/A"}],
+                "overflightTime1":"N/A"}]
                 } ],
         "overseasTerritories": [
             {"anguilla":[{
@@ -184,7 +184,7 @@
                 "overflightTime1":"N/A"}],
             "turksAndCaicosIslands":[{
                 "probability":"0.00",
-                "overflightTime1":"N/A"}],
+                "overflightTime1":"N/A"}]
                 } ],
 
 // Guidance on response (pressAttentionAddition to be edited by Approvers via editing interface)
