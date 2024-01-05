@@ -15,18 +15,15 @@ Re-entry event RE-2023-08
         <li class="govuk-breadcrumbs__list-item">
           <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">RE-2023-08</a>
         </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/editing-interface">Editing interface</a>
-          </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/review-alert">Review alert</a>
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/review-alert">Escalate report</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Are you sure you want to send an alert for re-entry event RE-2023-08?</h1>
+      <h1 class="govuk-heading-xl">Escalate re-entry event RE-2023-08?</h1>
     </div>
   
+    <p>UK Government users have not yet been alerted to this event. If escalation is necessary, select the appropriate government users who are to be alerted of this re-entry event. An email will be sent alerting the selected registered users upon clicking the alert button below.</p>
 
-    <p class="govuk-body">If yes, select below which government users will be notified. This will send an alert to selected government users who are registered for conjunction alerts.</p>
 </legend>
 <div id="waste-hint" class="govuk-hint">
   Select all that apply.
@@ -56,12 +53,13 @@ Re-entry event RE-2023-08
         Department for Science, Innovation, and Technology
     </label>
 </div>
-<form action="/form-handler" method="post" novalidate>
-<input type="hidden" name="answers-checked" value="true">
-    <a href="/events/approver/alert-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        Send alert</a>
-        <a href="/events/approver/editing-interface" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Return to editing interface</a>
+<p class="govuk-body">Ensure that all the appropriate individuals and government agencies have been selected before escalating this report. Once the send an alert button has been pressed, an email will be sent automatically.</p>
+</legend>
+    <a href="/reentry/approver/alert-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        Send an alert</a>
+        <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to report</a>
+        <div id="waste-hint" class="govuk-hint"></div>
   </form>
 </div>
 </div>
