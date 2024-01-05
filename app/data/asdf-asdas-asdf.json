@@ -4,7 +4,7 @@
         "reportNumber":"1", 
         "reportTime":"01/11/2023, 09:00", 
 
-// Executive summary 
+// Executive summary (all ...Addition fields can be added/edited by OAs or Approver via editing interface)
 
         "risk":"Low",         
         "tcaTime":"23/08/2023, 15:46", 
@@ -23,7 +23,7 @@
         "secondaryObjectMass":"60",
         "secondaryObjectManoeuvrable":"No",
         "secondaryObjectNoradId":"24926",
-        "likelyManoeuvres":"OneWeb have consistently executed manoeuvres to reduce the PoC in past conjunction events and are expected to do so in this case, although OneWeb's intention to manoeuvre has not been confirmed.",
+        "execSummaryAddition":"",
 
 // Additional event details
 
@@ -34,17 +34,19 @@
         "predictedFragments":"223",
         "increaseInFutureCollisions":"8.7",
 
-// Potential impact of event
+// Potential impact of event (all ...Addition fields can be added/edited by OAs or Approver via editing interface)
 
-        "immediateImpact":"Should the collision occur, it would likely result in a full breakup of both objects. In this worst-case scenario, an estimation of the number of fragments greater than 10cm is 223.",
-        "shortTermImpact":"Should the collision occur, the debris would generate an increased risk to satellites in LEO. We are predicting that the event would result in an 8.7% increase in potential collisions across all UK satellites in LEO.",
-        "longTermImpact":"The collision would occur at an altitude of approximately 1200 km. This is the operational altitude of OneWeb and a significant proportion of debris here would likely have an orbital lifetime exceeding 100 years. The risk would therefore be sustained for significant periods of time and could eventually impact a broad range of satellites and missions including human spaceflight.",
+        "immediateImpactAddition":"",
+        "increasePotentialCollisions":"8.7%",
+        "shortTermImpactAddition":"",
+        "riskAtAltitude":"This is the operational altitude of OneWeb and a significant proportion of debris here would likely have an orbital lifetime exceeding 100 years. The risk would therefore be sustained for significant periods of time and could eventually impact a broad range of satellites and missions including human spaceflight.",
+        "longTermImpactAddition":"",
 
-// Guidance on response
+// Guidance on response (all ...Addition fields to be added by Approver via editing interface)
 
-        "UKresponse":"The UK Space Agency are the leads for conjunction reporting and have reached out to the operator to confirm they are aware of the event and that they intend to manoeuvre. The relevant UK response organisations have received an alert for this event (see Further information).",
-        "pressAttention":"We have not seen any press attention on this event. See UK Space Agency press lines.",
-   
+        "UKresponseAddition":"The UK Space Agency are the leads for conjunction reporting and have reached out to the operator to confirm they are aware of the event and that they intend to manoeuvre. The relevant UK response organisations have received an alert for this event (see Further information).",
+        "pressAttentionAddition":"We have not seen any press attention on this event. See UK Space Agency press lines.",
+
 // Additional risk to UK objects
    
         [

@@ -4,7 +4,7 @@
         "reportNumber":"1",
         "reportTime":"01/11/2023, 09:00", 
 
-// Executive summary (execSummaryAddition to be added by Approver via editing interface)
+// Executive summary (all ...Addition fields can be added/edited by OAs or Approver via editing interface)
 
         "risk":"Low",        
         "probabilityUK":"0.04", 
@@ -187,7 +187,7 @@
                 "overflightTime1":"N/A"}]
                 } ],
 
-// Guidance on response (pressAttentionAddition to be edited by Approvers via editing interface)
+// Guidance on response (all ...Addition fields can be added/edited by OAs or Approver via editing interface)
 
             "pressAttentionAddition":"We have not seen any press attention on this event."
 
