@@ -26,9 +26,38 @@ Conjunction event asdf-asdas-asdf
     </div>
   
 
-              <p class="govuk-body">This will send an alert to all government users who have registered for conjunction alerts.</p>
-              <form action="/form-handler" method="post" novalidate>
-                <input type="hidden" name="answers-checked" value="true">
+              <p class="govuk-body">If yes, select below which government users will be notified. This will send an alert to selected government users who are registered for conjunction alerts.</p>
+            </legend>
+            <div id="waste-hint" class="govuk-hint">
+              Select all that apply.
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Ministry of Defence
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                  Cabinet Office
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                  Home Office
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                    Department for Science, Innovation, and Technology
+                </label>
+              </div>    
+            </div>
+        <form action="/form-handler" method="post" novalidate>
+            <input type="hidden" name="answers-checked" value="true">
                 <a href="/events/approver/alert-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
                     Send alert</a>
                     <a href="/events/approver/editing-interface" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">

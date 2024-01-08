@@ -16,7 +16,7 @@ Re-entry event RE-2023-08
           <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">RE-2023-08</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/editing-interface">Editing interface</a>
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/editing-interface">Edit report</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="/reentry/approver/review-edits">Review edits</a>
@@ -25,43 +25,35 @@ Re-entry event RE-2023-08
       <h1 class="govuk-heading-xl">Review your edits before publishing</h1>
     </div>
   
-    <div class="govuk-width-container">
-        <main class="govuk-main-wrapper " id="main-content" role="main">
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds-from-desktop">
-              <h2 class="govuk-heading-m">Edits to re-entry event RE-2023-08</h2>
-              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Add to 'Executive Summary'
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    {{data['reentry-executive-summary-edit']}}
+    <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Edits to re-entry event RE-2023-08</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Report Section</th>
+            <th scope="col" class="govuk-table__header">Free Text Input</th>
+            <th scope="col" class="govuk-table__header">Make Additional Edits</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Executive Summary</th>
+            <td class="govuk-table__cell">N/A</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> press interest</span></a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Press attention</th>
+            <td class="govuk-table__cell">The UK press have reported on this conjunction event</td>
+            <td class="govuk-table__cell"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> press interest</span></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body">Only publish these changes if you are confident the details you are providing are correct. It is advised that at least two individuals review text edits before they are published on GOV.UK platforms. Check for any spelling or grammatical errors before publishing.</p>
                   </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> exec summary</span></a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Add to 'Press attention'
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    {{data['reentry-press-attention-edit']}}
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> press interest</span></a>
-                  </dd>
-                </div>
-              </dl>
-              <h2 class="govuk-heading-m">Now publish the changes</h2>
-              <p class="govuk-body">Only publish these changes if you are confident the details you are providing are correct. Please check for any spelling or grammatical errors before publishing.</p>
-              <form action="/form-handler" method="post" novalidate>
-                <input type="hidden" name="answers-checked" value="true">
-                <a href="/reentry/approver/edit-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-                    Publish edits</a>
+                </div> 
+                <a href="/reentry/approver/final-preview"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                    Final preview</a>
                     <a href="/reentry/approver/editing-interface" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                        Return to editing interface</a>
+                        Return to edit report</a>
               </form>
             </div>
           </div>
