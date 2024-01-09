@@ -15,52 +15,30 @@ Re-entry event RE-2023-08
         <li class="govuk-breadcrumbs__list-item">
           <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">RE-2023-08</a>
         </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/editing-interface">Edit report</a>
-          </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/review-edits">Review edits</a>
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/escalate-report">Escalate report</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Review your edits before publishing</h1>
+      <h1 class="govuk-heading-xl">Escalate re-entry event RE-2023-08?</h1>
     </div>
-    <h2 class="govuk-heading-m">Free text edits to re-entry event RE-2023-08</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Executive summary
-        </dt>
-        <dd class="govuk-summary-list__value">
-          N/A
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
-        </dd>
+  
+    <p>UK Government users have not yet been alerted to this event. If escalation is necessary, select the appropriate government users who are to be alerted of this re-entry event. Upon review, an email will be sent alerting the selected registered users.</p>
+    <div id="more-detail-hint" class="govuk-hint">
+        Include below the emails of individuals or organisations who are to be alerted of this escalated event.
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Press attention
-        </dt>
-        <dd class="govuk-summary-list__value">
-          The UK press have reported on this conjunction event.
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
-        </dd>
+      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
-  </dl>
-                    <p class="govuk-body">Only publish these changes if you are confident the details you are providing are correct. It is advised that at least two individuals review text edits before they are published on GOV.UK platforms. Check for any spelling or grammatical errors before publishing.</p>
-            </dd>
-        </div> 
-                <a href="/reentry/approver/final-preview"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-                    Final preview</a>
-                    <a href="/reentry/approver/editing-interface" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                        Return to Edit report</a>
-              </form>
-            </div>
-          </div>
-        </main>
-      </div>
+</legend>
+    <a href="/reentry/approver/review-alert" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        Review alert</a>
+        <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to report</a>
+        <div id="waste-hint" class="govuk-hint"></div>
+  </form>
+</div>
+</div>
+</main>
+</div>
 
   
   {% endblock %}
