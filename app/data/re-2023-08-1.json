@@ -4,14 +4,15 @@
         "reportNumber":1,
         "reportTime":"2024-10-02T02:22:35", 
 
-// Executive summary (all ...Addition fields can be added/edited by OAs or Approver via editing interface)
+// Executive summary (all ...Addition fields can be added or edited by Approver user types via editing interface)
 
         "risk":"Low",        
         "probabilityUK":0.04, 
         "timeWindowStart":"2024-10-03T02:20:35",
         "timeWindowEnd":"2024-10-03T12:33:00", 
         "UKOverflightTime":"2024-10-03T11:33:00", 
-        "expectedSurvivability":"Likely - the high-density components and physical shape of rocket bodies can result in an increased chance of survival upon re-entry",
+        "survivability":"Likely",
+        "survivabilityComment":"The high-density components and physical shape of rocket bodies can result in an increased chance of survival upon re-entry",
         "objectName":"CZ-2C R/B",
         "objectType":"Rocket body", 
         "estimatedMass":"4006", 
@@ -191,7 +192,7 @@
                 "overflightTime":null}]
                 } ],
 
-// Guidance on response (all ...Addition fields can be added/edited by OAs or Approver via editing interface)
+// Guidance on response (all ...Addition fields can be added or edited by Approver user types via editing interface)
 
             "pressAttentionAddition":"We have not seen any press attention on this event."
 
