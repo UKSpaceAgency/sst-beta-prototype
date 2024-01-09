@@ -9,6 +9,8 @@
         "risk":"Low",         
         "tcaTime":"2024-10-03T09:22:35",
         "collisionProbability":0.13,
+        "manoeuvreExpected":"Unknown",
+        "manoeuvreComment":"",
         "primaryObjectCommonName":"OneWeb-0601", 
         "primaryObjectLicensingCountry":"UK",
         "primaryObjectType":"Payload",
@@ -33,12 +35,11 @@
         "latitude":33.856,
         "longitude":-77.0384,
         "predictedFragments":223,
-        "increaseInFutureCollisions":8.7,
+        "increaseInFutureCollisions":0.087,
 
 // Potential impact of event (all ...Addition fields can be added/edited by OAs or Approver via editing interface)
 
         "immediateImpactAddition":"",
-        "increasePotentialCollisions":0.087,
         "shortTermImpactAddition":"",
         "riskAtAltitude":"This is the operational altitude of OneWeb and a significant proportion of debris here would likely have an orbital lifetime exceeding 100 years. The risk would therefore be sustained for significant periods of time and could eventually impact a broad range of satellites and missions including human spaceflight.",
         "longTermImpactAddition":"",
