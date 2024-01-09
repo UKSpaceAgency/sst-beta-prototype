@@ -12,6 +12,9 @@ Settings
         <a class="govuk-breadcrumbs__link" href="/account/gov-user/account">Account</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/gov-user/threshold-settings-view">Event threshold settings</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="/account/gov-user/threshold-settings-edit">Edit event threshold settings</a>
       </li>
         </ol>
@@ -20,78 +23,243 @@ Settings
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/account/gov-user/account" method="post">
+        <form class="form" action="/account/operator/account" method="post">
 
           <h1 class="govuk-heading-xl">Edit your event notification threshold settings</h1>
 
-          <p>All users are responsible for their own notification thresholds.</p>
+          <p>It is advised by the UKSA that users should remain with the default conjunction and re-entry threshold settings, unless advised otherwise. In the case that you wish to adjust these threshold settings, changes can be made at any time. </p>
+          <p>In the case of re-entry alerts, non-UK international partners are invited to receive alerts from anywhere in the UK. We may look to add new countries to the list below in future. </p>
 
           <h1 class="govuk-heading-l">Conjunction events</h1>
 
-          <p>There are currently no user-configured thresholds for conjunction alerts for government users.</p>
+         <table class="govuk-table" style="width:100%">
+           <thead class="govuk-table__head">
+             <tr class="govuk-table__row">
+               <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+               <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+             </tr>
+           </thead>
+           <tbody class="govuk-table__body">
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Probability of collision is above:</th>
+               <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+                   <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                 </div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Total miss distance is below:</th>
+               <td class="govuk-table__cell"> <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+                   <div class="govuk-input__suffix" aria-hidden="true">m</div>
+                 </div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Mean radial miss distance is below:</th>
+               <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "200">
+                   <div class="govuk-input__suffix" aria-hidden="true">m</div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Time to event is below:</th>
+               <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "72">
+                   <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+             </tr>
+           </tbody>
+         </table>
+
+         <p><b> The object is licensed by:</b></p>
+
+         <table class="govuk-table" style="width:100%">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header" style="width:50%"></th>
+              <th scope="col" class="govuk-table__header" style="width:10%"></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">Australia</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">United Kingdom</td>
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    </label>
+                  </div>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td scope="row" class="govuk-table__cell">United States</td>
+                  <td class="govuk-table__cell">
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                        <label class="govuk-label govuk-checkboxes__label" for="contact">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                      </div>
+                    </td>
+                  </tr>
+              </tbody>
+        </table>
 
          <h1 class="govuk-heading-l">Re-entry events</h1>
 
-        <p>Send alerts if the re-entry event might impact:</p>
+         <table class="govuk-table" style="width:100%">
+           <thead class="govuk-table__head">
+             <tr class="govuk-table__row">
+               <th scope="col" class="govuk-table__header" style="width:40%">Notification criteria</th>
+               <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+             </tr>
+           </thead>
+           <tbody class="govuk-table__body">
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Probability of re-entry over any Area of Interest is above:</th>
+               <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.1">
+                   <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                 </div></td>
+             </tr>
+             <tr class="govuk-table__row">
+               <th scope="row" class="govuk-table__header">Time to event is below:</th>
+               <td class="govuk-table__cell"><div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "36">
+                   <div class="govuk-input__suffix" aria-hidden="true">hours</div></td>
+             </tr>
+           </tbody>
+         </table>
 
-        <div class="govuk-form-group">
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Anywhere in the United Kingdom
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  England
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                  Northern Ireland
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                  Scotland
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                  Wales
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                  British Overseas Territories
-                </label>
-              </div>
-            </div>
-          </fieldset>
-        </div>
+        <p><b> My areas of interest are:</b></p>
+
+        <table class="govuk-table" style="width:100%">
+         <thead class="govuk-table__head">
+           <tr class="govuk-table__row">
+             <th scope="col" class="govuk-table__header" style="width:50%"></th>
+             <th scope="col" class="govuk-table__header" style="width:10%"></th>
+           </tr>
+         </thead>
+         <tbody class="govuk-table__body">
+
+           <tr class="govuk-table__row">
+             <td scope="row" class="govuk-table__cell"><b>Land area</b></td>
+             <td class="govuk-table__cell"></td>
+                 </div>
+           </tr>
+           <tr class="govuk-table__row">
+             <td scope="row" class="govuk-table__cell"style="text-indent: 40px">United Kingdom</td>
+             <td class="govuk-table__cell">
+               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                 <div class="govuk-checkboxes__item">
+                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                   </label>
+                 </div>
+               </tr>
+               <tr class="govuk-table__row">
+                 <td scope="row" class="govuk-table__cell"style="text-indent: 80px">England</td>
+                 <td class="govuk-table__cell">
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                       <label class="govuk-label govuk-checkboxes__label" for="contact">
+                       </label>
+                     </div>
+                   </div>
+                 </td>
+               </tr>
+               <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell"style="text-indent: 80px">Northern Ireland</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell"style="text-indent: 80px">Scotland</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell"style="text-indent: 80px">Wales</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell"style="text-indent: 40px">Australia</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell"><b>Sea area</b></td>
+                <td class="govuk-table__cell"></td>
+                    </div>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__cell"style="text-indent: 40px">UK NAVAREA</td>
+                <td class="govuk-table__cell">
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                      <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      </label>
+                    </div>
+                  </tr>
+                     </div>
+                   </td>
+                 </tr>
+             </tbody>
+       </table>
+
 
       </fieldset>
       </div>
         <p></p>
         <p></p>
 
-
-            <button class="govuk-button" data-module="govuk-button">
-                  Save and continue
-              </button>
-                </form>
+        <a href="/account/gov-user/account" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+            Save and continue</a>
+                  </form>
+    </div>
+  
+  
   </div>
-
-
-</div>
-  </main>
-</div>
-
-
-{% endblock %}
+    </main>
+  </div>
+  
+  
+  {% endblock %}
