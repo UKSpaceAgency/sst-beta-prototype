@@ -1,89 +1,40 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Re-entry event RE-2023-08
+Conjunction event asdf-asdas-asdf
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-width-container">
+<div class="govuk-width-container">
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
+          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">All conjunction events</a>
         </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">RE-2023-08</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/editing-interface">Edit report</a>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/edit-confirmation">Confirmation</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Edit re-entry event RE-2023-08</h1>
-    </div>
-    <p> If edits or additions are needed to the automatically generated report, these can be made through free text inputs in the below boxes. Once published, these edits will automatically be added to the relevant re-entry event page, and users on automatic distribution lists will be alerted of the amendments to the event. </p>
-    <p> The below boxes can only process <b>plain text</b>. They are not able to process any images or text formatting.</p>
-
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="more-detail">
-            Add to 'Executive Summary' 
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          Include additional information that is important for users to know, but is not captured elsewhere in the report. 
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under a paragraph which reads: "The UK Space Agency is tracking the upcoming re-entry of an object from space into the Earth’s atmosphere, posing a potential threat to life and property on the ground. All re-entered debris should be considered as hazardous until proven otherwise."
+      <div class="govuk-width-container">
+        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                  Edits published
+                </h1>
+                <div class="govuk-panel__body">
+                 Conjunction event<br><strong>asdf-asdas-asdf</strong>
+                </div>
+              </div>
+              <p class="govuk-body">We have sent you a confirmation email.</p>
+              <a href="/conjunctions/approver/escalated-event-summary-report-1" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                View updated event page</a>
+            </div>
           </div>
-        <textarea class="govuk-textarea" id="more-detail" name="tbc" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-        <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="more-detail">
-              Add to 'Potential impact by Home Nation'
-            </label>
-          </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            Include details of any new information relating to the potential impact on Home Nations. Leave blank if Home Nations are not at risk.
-          </div>
-          <textarea class="govuk-textarea" id="more-detail" name="reentry-press-attention-edit" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="more-detail">
-              Add to 'Potential impact by Home Nation region'
-            </label>
-          </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            Include details of any new information relating to the potential impact on the relevant regions of the Home Nations. Leave blank if Home Nations are not at risk.
-          </div>
-          <textarea class="govuk-textarea" id="more-detail" name="reentry-press-attention-edit" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="more-detail">
-              Add to 'Potential impact by British Overseas Territory'
-            </label>
-          </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            Include details of any new information relating to the potential impact on the relevant British Overseas Territories. Leave blank if British Overseas Territories are not at risk.
-          </div>
-          <textarea class="govuk-textarea" id="more-detail" name="reentry-press-attention-edit" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="more-detail">
-            Add to 'Press attention'
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-          Include details of any press attention related to this event. Leave blank if there has been no press attention.
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear alongside a link to standard UK Space Agency press lines.
-          </div>
-        <textarea class="govuk-textarea" id="more-detail" name="reentry-press-attention-edit" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-      <a href="/reentry/approver/review-edits" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        Review edits</a>
-
-
+        </main>
+      </div>
 
   
   {% endblock %}

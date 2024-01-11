@@ -22,25 +22,48 @@ Re-entry event RE-2023-08
       <h1 class="govuk-heading-xl">Escalate re-entry event RE-2023-08?</h1>
     </div>
   
-    <p> This report has already been sent to government and non-government users currently on automatic distribution list one.</p>
-    <p> If it is appropriate to inform further government users and organisations, this page gives you the option to send an escalation alert to additional government users either on distribution list two, or relevant users not currently on an automatic distribution list.</p>
-    
-    <div id="waste-hint" class="govuk-hint">
-        Select if you wish to escalate this report to distribution list two.
-      </div>
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-          <label class="govuk-label govuk-checkboxes__label" for="waste">
-            Distribution list 2
+    <p> This report has already been automatically sent to government and non-government users currently on the Level 1 escalation list. This page allows you to manually escalate the report to the Level 2 escalation list and selected users. </p>
+    <div class="govuk-form-group">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                    Escalate report to escalation list
+                    </h1>
+              </legend>
+              <div id="nationality-hint" class="govuk-hint">
+                Tick the below box if you want to escalate this alert to the Level 2 escalation list. Additional users can be included in the free text box below. 
+            </div>
+            <div id="nationality-hint" class="govuk-hint">
+                Do not tick this box if the Level 2 escalation list have already been alerted of this report, or if you only want to alert certain select individuals and organisations.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                    Escalate report to the Level 2 escalation list
+                  </label>
+                  <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                    
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="more-detail">
+            Escalate report to selected users
           </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+            Provide individual email addresses to receive alerts in the box below. You do not need to add any emails on the existing distribution lists if you have ticked the button above. 
         </div>
-        <div class="govuk-checkboxes__divider">or</div>
-    <div id="more-detail-hint" class="govuk-hint">
-        Include below the emails of individuals or organisations who are to be alerted of this escalated event.
+        <div id="more-detail-hint" class="govuk-hint">
+            Leave box blank if you do not want to individually select individuals to alert.
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
       </div>
-      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    </div>
 </legend>
     <a href="/reentry/approver/review-alert" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
         Review alert</a>
