@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Conjunction event asdf-asdas-asdf
+Re-entry event RE-2023-08
 {% endblock %}
 
 {% block content %}
@@ -10,112 +10,35 @@ Conjunction event asdf-asdas-asdf
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">All conjunction events</a>
+          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Reported conjunction event asdf-asdas-asdf</a>
-          </li>
+          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">RE-2023-08</a>
+        </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/edit-report">Edit report</a>
-          </li>          
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/review-edits">Review edits</a>
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/closedown-report">Close-down report </a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Review your edits before publishing</h1>
+      <h1 class="govuk-heading-xl">Close-down report on re-entry event RE-2023-08?</h1>
     </div>
-    <h2 class="govuk-heading-m">Free text edits to conjunction event asdf-asdas-asdf</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Executive summary
-        </dt>
-        <dd class="govuk-summary-list__value">
-          N/A
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/edit-report">Change<span class="govuk-visually-hidden"> Executive summary</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Manoeuvre expected?
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Expected - OneWeb have confirmed they plan to manoeuvre by 09:00, 08/01/2024
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/edit-report">Change<span class="govuk-visually-hidden"> Manoeuvre expected?</span></a>
-        </dd>
+  
+    <p> Close-down this report if the re-entry event has passed. Government users on distribution lists will be informed that the event has passed and that the report has been closed-down. </p>
+    <div id="more-detail-hint" class="govuk-hint">
+        Leave the box blank if it is not necessary to provide a close-down description of the event.
     </div>
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Immediate impact
-        </dt>
-        <dd class="govuk-summary-list__value">
-          N/A
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/edit-report">Change<span class="govuk-visually-hidden"> Immediate impact</span></a>
-        </dd>
-    </div>
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Short term impact 
-        </dt>
-        <dd class="govuk-summary-list__value">
-          N/A
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/edit-report">Change<span class="govuk-visually-hidden"> Short term impact</span></a>
-        </dd>
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        Long term impact 
-      </dt>
-      <dd class="govuk-summary-list__value">
-        N/A
-      </dd>
-      <dd class="govuk-summary-list__actions">
-        <a class="govuk-link" href="/conjunctions/approver/edit-report">Change<span class="govuk-visually-hidden"> Long term impact</span></a>
-      </dd>
+    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
   </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      UK response 
-    </dt>
-    <dd class="govuk-summary-list__value">
-      N/A
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="/conjunctions/approver/edit-report">Change<span class="govuk-visually-hidden"> UK response</span></a>
-    </dd>
+
+    <a href="/reentry/approver/closedown-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        Close-down event</a>
+        <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to report</a>
+        <div id="waste-hint" class="govuk-hint"></div>
+  </form>
 </div>
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Press attention
-        </dt>
-        <dd class="govuk-summary-list__value">
-          The UK press have reported on this conjunction event.
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/edit-report">Change<span class="govuk-visually-hidden"> Press attention</span></a>
-        </dd>
-    </div>
-  </dl>
-                    <p class="govuk-body">Only publish these changes if you are confident the details you are providing are correct. Check for any spelling or grammatical errors before publishing.</p>
-            </dd>
-        </div> 
-                <a href="/conjunctions/approver/final-preview"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-                    Final preview</a>
-                    <a href="/conjunctions/approver/edit-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                        Return to Edit report</a>
-              </form>
-            </div>
-          </div>
-        </main>
-      </div>
+</div>
+</main>
+</div>
 
   
   {% endblock %}
