@@ -22,48 +22,45 @@ Re-entry event RE-2023-08
       <h1 class="govuk-heading-xl">Escalate re-entry event RE-2023-08?</h1>
     </div>
   
-    <p> This report has already been automatically sent to government and non-government users currently on the Level 1 escalation list. </p>
-    <p> If it is deemed necessary to inform further government users and organisations, this page allows you to escalate the report to the Level 2 escalation list and select additional users to be alerted manually, or just select additional users manually.</p>
+    <p> This report has already been automatically sent to government and non-government users currently on the Level 1 escalation list. This page allows you to manually escalate the report to the Level 2 escalation list and selected users. </p>
     <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Automatically escalate report
-            </h1>
-          </legend>
-          <div id="signIn-hint" class="govuk-hint">
-            Select whether you want to escalate this alert to Level 2 escalation list.
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                    Escalate report to escalation list
+                    </h1>
+              </legend>
+              <div id="nationality-hint" class="govuk-hint">
+                Tick the below box if you want to escalate this alert to the Level 2 escalation list. Additional users can be included in the free text box below. 
+            </div>
+            <div id="nationality-hint" class="govuk-hint">
+                Do not tick this box if the Level 2 escalation list have already been alerted of this report, or if you only want to alert certain select individuals and organisations.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                    Escalate report to the Level 2 escalation list
+                  </label>
+                  <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                    
+                  </div>
                 </div>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
-              <label class="govuk-label govuk-radios__label" for="signIn">
-                Escalate report to Level 2 escalation list
-              </label>
-              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-                Choose this option if the Level two escalation list have not yet been alerted and you wish to bypass its automatic escalation criteria.
               </div>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="signIn-2">
-                Do not escalate report to Level 2 escalation list
-              </label>
-              <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Choose this option if you only want to alert select users on the Level 2 escalation list, or the Level 2 escalation list have already been alerted and you want to manually select additional users to be alerted.
-              </div>
-            </div>
+            </fieldset>
           </div>
-        </fieldset>
-      </div>
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--l" for="more-detail">
-            Manually escalate report
+            Escalate report to selected users
           </label>
         </h1>
         <div id="more-detail-hint" class="govuk-hint">
-            Include below the emails of individuals or organisations who are to be alerted of this escalated event. This can be as well as or instead of escalation to the Level 2 escalation list. Leave box blank if you do not wish to manually alert individuals.
+            Provide individual email addresses to receive alerts in the box below. You do not need to add any emails on the existing distribution lists if you have ticked the button above. 
+        </div>
+        <div id="more-detail-hint" class="govuk-hint">
+            Leave box blank if you do not want to individually select individuals to alert.
         </div>
         <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
       </div>

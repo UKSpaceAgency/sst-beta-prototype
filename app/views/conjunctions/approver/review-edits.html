@@ -1,36 +1,117 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Re-entry event RE-2023-08
+Conjunction event asdf-asdas-asdf
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-width-container">
+  <div class="govuk-width-container">
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
+          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">All conjunction events</a>
         </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Reported conjunction event asdf-asdas-asdf</a>
+          </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/re-entry/approver/alert-confirmation">Confirmation</a>
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/editing-interface">Edit report</a>
+          </li>          
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/review-edits">Review edits</a>
           </li>
       </ol>
-      <div class="govuk-width-container">
-        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <div class="govuk-panel govuk-panel--confirmation">
-                <h1 class="govuk-panel__title">
-                  Alert sent
-                </h1>
-                <div class="govuk-panel__body">
-                 Re-entry event<br><strong>RE-2023-08</strong>
-                </div>
-              </div>
-              <p class="govuk-body">We have sent you a confirmation email.</p>
-              <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-                Return to event page</a>
+      <h1 class="govuk-heading-xl">Review your edits before publishing</h1>
+    </div>
+    <h2 class="govuk-heading-m">Free text edits to conjunction event asdf-asdas-asdf</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Executive summary
+        </dt>
+        <dd class="govuk-summary-list__value">
+          N/A
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Manoeuvre expected?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Expected - OneWeb have confirmed they plan to manoeuvre by 09:00, 08/01/2024
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Immediate impact
+        </dt>
+        <dd class="govuk-summary-list__value">
+          N/A
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Short term impact 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          N/A
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Long term impact 
+      </dt>
+      <dd class="govuk-summary-list__value">
+        N/A
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+      </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      UK response 
+    </dt>
+    <dd class="govuk-summary-list__value">
+      N/A
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+    </dd>
+</div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Press attention
+        </dt>
+        <dd class="govuk-summary-list__value">
+          The UK press have reported on this conjunction event.
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+    </div>
+  </dl>
+                    <p class="govuk-body">Only publish these changes if you are confident the details you are providing are correct. It is advised that at least two individuals review text edits before they are published on GOV.UK platforms. Check for any spelling or grammatical errors before publishing.</p>
+            </dd>
+        </div> 
+                <a href="/conjunctions/approver/final-preview"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                    Final preview</a>
+                    <a href="/conjunctions/approver/editing-interface" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Return to Edit report</a>
+              </form>
             </div>
           </div>
         </main>
