@@ -22,25 +22,51 @@ Re-entry event RE-2023-08
       <h1 class="govuk-heading-xl">Escalate re-entry event RE-2023-08?</h1>
     </div>
   
-    <p> This report has already been sent to government and non-government users currently on automatic distribution list one.</p>
-    <p> If it is appropriate to inform further government users and organisations, this page gives you the option to send an escalation alert to additional government users either on distribution list two, or relevant users not currently on an automatic distribution list.</p>
-    
-    <div id="waste-hint" class="govuk-hint">
-        Select if you wish to escalate this report to distribution list two.
+    <p> This report has already been automatically sent to government and non-government users currently on the Level 1 escalation list. </p>
+    <p> If it is deemed necessary to inform further government users and organisations, this page allows you to escalate the report to the Level 2 escalation list and select additional users to be alerted manually, or just select additional users manually.</p>
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Automatically escalate report
+            </h1>
+          </legend>
+          <div id="signIn-hint" class="govuk-hint">
+            Select whether you want to escalate this alert to Level 2 escalation list.
+                </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn">
+                Escalate report to Level 2 escalation list
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                Choose this option if the Level two escalation list have not yet been alerted and you wish to bypass its automatic escalation criteria.
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="signIn-2">
+                Do not escalate report to Level 2 escalation list
+              </label>
+              <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+                Choose this option if you only want to alert select users on the Level 2 escalation list, or the Level 2 escalation list have already been alerted and you want to manually select additional users to be alerted.
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </div>
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-          <label class="govuk-label govuk-checkboxes__label" for="waste">
-            Distribution list 2
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="more-detail">
+            Manually escalate report
           </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+            Include below the emails of individuals or organisations who are to be alerted of this escalated event. This can be as well as or instead of escalation to the Level 2 escalation list. Leave box blank if you do not wish to manually alert individuals.
         </div>
-        <div class="govuk-checkboxes__divider">or</div>
-    <div id="more-detail-hint" class="govuk-hint">
-        Include below the emails of individuals or organisations who are to be alerted of this escalated event.
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
       </div>
-      <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    </div>
 </legend>
     <a href="/reentry/approver/review-alert" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
         Review alert</a>
