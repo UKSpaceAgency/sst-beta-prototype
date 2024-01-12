@@ -1,0 +1,273 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Edit your notification thresholds
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/gov-user/account">Account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/gov-user/threshold-settings-edit">Edit your notification thresholds</a>
+      </li>
+        </ol>
+        </div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <form class="form" action="/account/operator/account" method="post">
+
+          <h1 class="govuk-heading-xl">Edit your notification thresholds</h1>
+          <p>We will send you notifications according to the thresholds selected on this page.</p>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-visually-hidden">Warning</span>
+              Maintaining the default settings for your organisation is recommended unless advised otherwise by the UK Space Agency.
+            </strong>
+          </div>
+
+
+<br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="which-conjunction-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Conjunction events
+      </h1>
+    </legend>
+    <p><b>Which conjunction notifications would you like to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          Do not receive notifications for government conjunction reports
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          Receive notifications for all government conjunction reports
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Receive notifications for government conjunction reports which meet the UK Space Agency's escalation criteria 
+        </label>
+      </div>
+    </div>
+    <br>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View esclation criteria for government conjunction reports
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Conjunction criteria
+      </div>
+    </details>
+
+    <p><b>How would you like to receive conjunction notifications?</b></p>
+    <div id="how-conjunction-hint" class="govuk-hint">
+      Select all that apply.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="how-conjunction-1" name="how-conjunction" type="checkbox" value="email" checked=checked>
+        <label class="govuk-label govuk-checkboxes__label" for="how-conjunction-1">
+          Email
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="how-conjunction-2" name="how-conjunction" type="checkbox" value="text-message" checked=checked>
+        <label class="govuk-label govuk-checkboxes__label" for="how-conjunction-2">
+          Text message
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="reentry-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Re-entry events
+      </h1>
+    </legend>
+    <p><b>Which re-entry notifications would you like to receive?</b></p>
+    <div id="reentry-hint" class="govuk-hint">
+      Select one option for receiving re-entry notifications affecting your areas of interest (see below).
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+        <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+          Do not receive notifications for government re-entry reports
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+        <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+          Receive notifications for all government re-entry reports
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+        <label class="govuk-label govuk-radios__label" for="reentry-3">
+          Receive notifications for government re-entry reports which meet the UK Space Agency's escalation criteria 
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      View esclation criteria for government re-entry reports
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Re-entry criteria
+  </div>
+</details>
+
+<p><b>Select your areas of interest:</b></p>
+
+                    <table class="govuk-table" style="width:100%">
+                     <thead class="govuk-table__head">
+                       <tr class="govuk-table__row">
+                         <th scope="col" class="govuk-table__header" style="width:50%"></th>
+                         <th scope="col" class="govuk-table__header" style="width:10%"></th>
+                       </tr>
+                     </thead>
+                     <tbody class="govuk-table__body">
+           
+                       <tr class="govuk-table__row">
+                         <td scope="row" class="govuk-table__cell">Anywhere in the United Kingdom</td>
+                         <td class="govuk-table__cell">
+                           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                             <div class="govuk-checkboxes__item">
+                               <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                               <label class="govuk-label govuk-checkboxes__label" for="contact">
+                               </label>
+                             </div>
+                       </tr>
+                       <tr class="govuk-table__row">
+                         <td scope="row" class="govuk-table__cell" style="text-indent: 40px">England</td>
+                         <td class="govuk-table__cell">
+                           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                             <div class="govuk-checkboxes__item">
+                               <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                               <label class="govuk-label govuk-checkboxes__label" for="contact">
+                               </label>
+                             </div>
+                           </tr>
+                           <tr class="govuk-table__row">
+                             <td scope="row" class="govuk-table__cell" style="text-indent: 40px">Northern Ireland</td>
+                             <td class="govuk-table__cell">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                   </label>
+                                 </div>
+                               </div>
+                             </td>
+                           </tr>
+                           <tr class="govuk-table__row">
+                             <td scope="row" class="govuk-table__cell" style="text-indent: 40px">Scotland</td>
+                             <td class="govuk-table__cell">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                   </label>
+                                 </div>
+                               </div>
+                             </td>
+                           </tr>
+                           <tr class="govuk-table__row">
+                             <td scope="row" class="govuk-table__cell" style="text-indent: 40px">Wales</td>
+                             <td class="govuk-table__cell">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=unchecked>
+                                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                   </label>
+                                 </div>
+                               </div>
+                             </td>
+                           </tr>
+                           <tr class="govuk-table__row">
+                             <td scope="row" class="govuk-table__cell" style="text-indent: 40px">British Overseas Territories</td>
+                             <td class="govuk-table__cell">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=checked>
+                                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                   </label>
+                                 </div>
+                               </div>
+                             </td>
+                           </tr>
+                                 </div>
+                               </td>
+                             </tr>
+                         </tbody>
+                   </table>
+
+                   <p><b>How would you like to receive re-entry notifications?</b></p>
+                   <div id="how-reentry-hint" class="govuk-hint">
+                     Select all that apply.
+                   </div>
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="how-reentry-1" name="how-reentry" type="checkbox" value="email" checked=checked>
+                       <label class="govuk-label govuk-checkboxes__label" for="how-reentry-1">
+                         Email
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="how-reentry-2" name="how-reentry" type="checkbox" value="text-message" checked=checked>
+                       <label class="govuk-label govuk-checkboxes__label" for="how-reentry-2">
+                         Text message
+                       </label>
+                     </div>
+                   </div>
+                   <br>
+                   <br>
+      </fieldset>
+      </div>
+        <p></p>
+        <p></p>
+
+        <br>
+
+
+        <a href="/account/gov-user/account" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+            Save and continue</a>
+                  </form>
+    </div>
+  
+  
+  </div>
+    </main>
+  </div>
+  
+  
+  {% endblock %}
