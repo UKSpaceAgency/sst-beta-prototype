@@ -13,54 +13,31 @@ Conjunction event asdf-asdas-asdf
           <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">All conjunction events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Reported conjunction event asdf-asdas-asdf</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalate-report">Escalate report</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/review-alert">Review alert</a>
-          </li>           
+          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Reported conjunction event asdf-asdas-asdf</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/closedown-report">Close-down report </a>
       </ol>
-      <h1 class="govuk-heading-xl">Review edits before sending</h1>
+      <h1 class="govuk-heading-xl">Close-down report on conjunction event asdf-asdas-asdf?</h1>
     </div>
-    <h2 class="govuk-heading-m">Users to be alerted of conjunction event asdf-asdas-asdf</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Escalation to the Level 2 escalation list
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Yes
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/escalate-report">Change<span class="govuk-visually-hidden"> Level 2 escalation list</span></a>
-        </dd>
+  
+    <p> Close-down this report if the conjunction event has passed. Government users on distribution lists will be informed that the event has passed and that the report has been closed-down. </p>
+    <div id="more-detail-hint" class="govuk-hint">
+        Leave the box blank if it is not necessary to provide a close-down description of the event.
     </div>
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Individual email addresses
-        </dt>
-        <dd class="govuk-summary-list__value">
-          N/A
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/escalate-report">Change<span class="govuk-visually-hidden"> Individual email addresses</span></a>
-        </dd>
-      </div>
-  </dl>
-                    <p class="govuk-body">Ensure that all the appropriate individuals and government agencies have been selected before escalating this report. Once the send an alert button has been pressed, an email will be sent automatically.</p>
-            </dd>
-        </div> 
-                <a href="/conjunctions/approver/alert-confirmation"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-                    Send an alert</a>
-                    <a href="/conjunctions/approver/escalate-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                        Return to Escalate report</a>
-              </form>
-            </div>
-          </div>
-        </main>
-      </div>
+    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  </div>
+
+    <a href="/conjunctions/approver/closedown-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        Close-down event</a>
+        <a href="/conjunctions/approver/escalated-event-summary-report-1" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to report</a>
+        <div id="waste-hint" class="govuk-hint"></div>
+  </form>
+</div>
+</div>
+</main>
+</div>
 
   
   {% endblock %}
