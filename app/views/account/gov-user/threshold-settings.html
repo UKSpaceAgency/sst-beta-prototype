@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Edit your notification thresholds
+Edit your notification settings
 {% endblock %}
 
 {% block content %}
@@ -22,8 +22,8 @@ Edit your notification thresholds
       <div class="govuk-grid-column-full">
         <form class="form" action="/account/operator/account" method="post">
 
-          <h1 class="govuk-heading-xl">Edit your notification thresholds</h1>
-          <p>We will send you notifications according to the thresholds selected on this page.</p>
+          <h1 class="govuk-heading-xl">Edit your notification settings</h1>
+          <p>We will send you notifications according to the settings selected on this page.</p>
           <div class="govuk-warning-text">
             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
             <strong class="govuk-warning-text__text">
@@ -50,32 +50,65 @@ Edit your notification thresholds
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
         <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
-          Do not receive notifications for government conjunction reports
+          Do not receive notifications for conjunction events
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
         <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
-          Receive notifications for all government conjunction reports
+          Receive notifications for all escalated conjunction events (on the early distribution list)
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
         <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
-          Receive notifications for government conjunction reports which meet the UK Space Agency's escalation criteria 
+          Receive notifications for the highest priority escalated conjunction events only (on the extended distribution list)
         </label>
       </div>
     </div>
     <br>
     <details class="govuk-details">
+      
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          View esclation criteria for government conjunction reports
+          View criteria for escalating to the early distribution list and extended distribution list
         </span>
       </summary>
+      
       <div class="govuk-details__text">
-        Conjunction criteria
+        <b>Escalating to the early distribution list</b>
+        <p>The early distribution list is notified of all escalated conjunction events. These are events which meet the following criteria:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><5 days until Time of Closest Approach</li>
+            <li>AND for UK-licensed objects:</li>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>0.1% probability of collision</li> 
+                <li>OR press interest</li></ul>
+            <li>AND for non-UK objects:</li> 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Low risk or higher </li>
+              <li>AND no manoeuvre expected</li></ul>
+            <li>OR nominated for escalation by the UK Space Operations Centre</li>
+        </ul>
       </div>
+      
+      <div class="govuk-details__text">
+        <b>Escalating to the extended distribution list</b>
+        <p>The early distribution list is only notified of the highest priority escalated conjunction events. These are events which meet the following criteria in addition to all of the criteria above:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>>5% Probability of Collision</li>
+          <li>OR significant press interest</li>
+            <li>OR for UK-licensed objects:</li> 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>>1% probability of collision</li> 
+              <li>AND no manoeuvre expected</li></ul>
+            <li>OR for non-UK objects:</li> 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Medium risk or higher</li> 
+              <li>AND no manoeuvre expected</li></ul>
+        </ul>
+      </div>
+    
     </details>
 
     <p><b>How would you like to receive conjunction notifications?</b></p>
@@ -116,19 +149,19 @@ Edit your notification thresholds
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
         <label class="govuk-label govuk-radios__label" for="which-reentry-1">
-          Do not receive notifications for government re-entry reports
+          Do not receive notifications for re-entry events
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
         <label class="govuk-label govuk-radios__label" for="which-reentry-2">
-          Receive notifications for all government re-entry reports
+          Receive notifications for all escalated re-entry events (on the early distribution list)
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
         <label class="govuk-label govuk-radios__label" for="reentry-3">
-          Receive notifications for government re-entry reports which meet the UK Space Agency's escalation criteria 
+          Receive notifications for the highest priority escalated re-entry events only (on the extended distribution list)
         </label>
       </div>
     </div>
@@ -136,14 +169,42 @@ Edit your notification thresholds
 </div>
 
 <details class="govuk-details">
+
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      View esclation criteria for government re-entry reports
+      View criteria for escalating to the early distribution list and extended distribution list
     </span>
   </summary>
+  
   <div class="govuk-details__text">
-    Re-entry criteria
+    <b>Escalating to the early distribution list</b>
+    <p>The early distribution list is notified of all escalated conjunction events. These are events which meet the following criteria:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><36 hours until re-entry</li>
+        <li>AND one of the following:</li>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Any “large” object in US SATCAT (except designed for demise) with overflights of the UK mainland</li>
+            <li>OR any “large” object in US SATCAT (except designed for demise) with >0.1% chance of impact in overseas territories</li>
+            <li>OR any UK-licensed object (except designed for demise)</li>
+            <li>OR (anticipated) press interest</li>
+          </ul>   
+        <li>OR nominated for escalation by the UK Space Operations Centre</li>
+    </ul>
   </div>
+  
+  <div class="govuk-details__text">
+    <b>Escalating to the extended distribution list</b>
+    <p>The early distribution list is only notified of the highest priority escalated conjunction events. These are events which meet the following criteria in addition to all of the criteria above:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Debris likely to survive to the ground</li>
+      <li>AND one of the following:</li>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>>0.1% chance of impact in the UK (and overseas territories on case by case basis)</li>
+        <li>OR UK-licensed object</li>
+        <li>OR significant press interest</li></ul>
+    </ul>
+  </div>
+
 </details>
 
 <p><b>Select your areas of interest:</b></p>
