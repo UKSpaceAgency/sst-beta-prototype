@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Review notifications before sending
+Send notifications for escalated conjunction event asdf-asdas-asdf
 {% endblock %}
 
 {% block content %}
@@ -16,51 +16,142 @@ Review notifications before sending
             <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Escalated conjunction event asdf-asdas-asdf</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalate-report">Send notification</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/review-alert">Review notification</a>
-          </li>           
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/send-notifications">Send notifications</a>
+          </li>          
       </ol>
-      <h1 class="govuk-heading-xl">Review notifications before sending</h1>
+      <h1 class="govuk-heading-xl">Send notifications for escalated conjunction event asdf-asdas-asdf</h1>
     </div>
-    <h2 class="govuk-heading-m">Users to receive notifications for conjunction event asdf-asdas-asdf</h2>
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Send notifications to extended distribution list:
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Yes
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/escalate-report">Change<span class="govuk-visually-hidden"> Level 2 escalation list</span></a>
-        </dd>
-    </div>
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-            Send notifications to selected users:
-        </dt>
-        <dd class="govuk-summary-list__value">
-          N/A
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/escalate-report">Change<span class="govuk-visually-hidden"> Individual email addresses</span></a>
-        </dd>
-      </div>
-  </dl>
-                    <p class="govuk-body">Ensure that all the appropriate individuals and government agencies have been selected before sending notifications. The button below will send notifications automatically.</p>
-            </dd>
-        </div> 
-                <a href="/conjunctions/approver/alert-confirmation"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-                    Send notifications</a>
-                    <a href="/conjunctions/approver/escalate-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                        Return to previous page</a>
-              </form>
+  
+    <p> Notifications for escalated conjunction event asdf-asdas-asdf are currently being sent to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+         <li><a href="XXX">early distribution list</a> for conjunction events</li>
+        </ul>
+<br>
+
+
+        <details class="govuk-details">
+      
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                View summary of distribution lists
+              </span>
+            </summary>
+            
+            <div class="govuk-details__text">
+              <p>The <b>early distribution list</b> currently includes recipients from the following organisations:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>UK Space Agency</li>
+                <li>Civil Aviation Authority</li>
+                <li>Ministry of Defence</li>
+              </ul>
             </div>
+            
+            <div class="govuk-details__text">
+                <p>The <b>extended distribution list</b> currently includes recipients from the following organisations:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>UK Space Agency</li>
+                  <li>Civil Aviation Authority</li>
+                  <li>Ministry of Defence</li>
+                  <li>Department of Business, Energy and Industrial Strategy (BEIS)</li>
+                  <li>Cabinet Office</li>
+                  <li>Government Office for Science (GO-Science)</li>
+
+                </ul>
+              </div>
+          
+          </details>
+
+    <details class="govuk-details">
+      
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View criteria for sending notifications to distribution lists
+          </span>
+        </summary>
+        
+        <div class="govuk-details__text">
+          <p>The <b>early distribution list</b> is notified of all escalated conjunction events. These are events which meet the following criteria:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><5 days until Time of Closest Approach</li>
+              <li>AND for UK-licensed objects:</li>
+              <ul class="govuk-list govuk-list--bullet">
+                  <li>0.1% probability of collision</li> 
+                  <li>OR press interest</li></ul>
+              <li>AND for non-UK objects:</li> 
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Low risk or higher </li>
+                <li>AND no manoeuvre expected</li></ul>
+              <li>OR nominated for escalation by the UK Space Operations Centre</li>
+          </ul>
+        </div>
+        
+        <div class="govuk-details__text">
+          <p>The <b>extended distribution list</b> is only notified of the highest priority escalated conjunction events. These are events which meet the following criteria in addition to all of the criteria above:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>>5% Probability of Collision</li>
+            <li>OR significant press interest</li>
+              <li>OR for UK-licensed objects:</li> 
+              <ul class="govuk-list govuk-list--bullet">
+                <li>>1% probability of collision</li> 
+                <li>AND no manoeuvre expected</li></ul>
+              <li>OR for non-UK objects:</li> 
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Medium risk or higher</li> 
+                <li>AND no manoeuvre expected</li></ul>
+          </ul>
+        </div>
+      
+      </details>
+
+    <div class="govuk-form-group">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                    Send notifications to the extended distribution list
+                    </h1>
+              </legend>
+              <div id="nationality-hint" class="govuk-hint">
+                Tick the box below if you want the extended distribution list to receive notifications about this event, including an initial notification and notifications for all subsequent updates. Additional users can be included in the free text box below. 
+            </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                    Send notifications to the extended distribution list
+                  </label>
+                </div>
+            </div>
+            <br>
+
+              
+            </fieldset>
           </div>
-        </main>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="more-detail">
+            Send notifications to selected users
+          </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+            Provide individual email addresses to receive notifications in the box below. Separate each email address with a semi-colon. Do not include any emails on the extended distribution list if you have ticked the button above. 
+        </div>
+        <div id="more-detail-hint" class="govuk-hint">
+            Leave the box blank if you do not want to send notifications to selected users.
+        </div>
+        <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
       </div>
+</legend>
+    <a href="/conjunctions/approver/review-notifications" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        Review notifications</a>
+        <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to previous page</a>
+        <div id="waste-hint" class="govuk-hint"></div>
+  </form>
+</div>
+</div>
+</main>
+</div>
 
   
   {% endblock %}

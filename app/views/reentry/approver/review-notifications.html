@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirmation of notification
+Review notifications before sending
 {% endblock %}
 
 {% block content %}
@@ -10,36 +10,53 @@ Confirmation of notification
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">All conjunction events</a>
+          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Escalated conjunction event asdf-asdas-asdf</a>
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">Escalated re-entry event RE-2023-08</a>
           </li>
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/reentry/approver/send-notifications">Send notifications</a>
+            </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalate-report">Send notification</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/review-alert">Review notification</a>
-          </li> 
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/alert-confirmation">Confirmation</a>
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/review-notifications">Review notification</a>
           </li>
       </ol>
-      <div class="govuk-width-container">
-        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <div class="govuk-panel govuk-panel--confirmation">
-                <h1 class="govuk-panel__title">
-                  Notification sent
-                </h1>
-                <div class="govuk-panel__body">
-                 Escalated conjunction event<br><strong>asdf-asdas-asdf</strong>
-                </div>
-              </div>
-              <p class="govuk-body">We have sent you a confirmation email.</p>
-              <a href="/conjunctions/approver/escalated-event-summary-report-1" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-                Return to event page</a>
+      <h1 class="govuk-heading-xl">Review notifications before sending</h1>
+    </div>
+    <h2 class="govuk-heading-m">Users to receive notifications for escalated re-entry event RE-2023-08</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Send notifications to extended distribution list:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/reentry/approver/send-notifications">Change</a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+            Send notifications to selected users:
+        </dt>
+        <dd class="govuk-summary-list__value">
+          N/A
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/reentry/approver/send-notifications">Change</a>
+        </dd>
+      </div>
+  </dl>
+                    <p class="govuk-body">Ensure that all the appropriate individuals and government agencies have been selected before sending notifications. The button below will send notifications automatically.</p>
+            </dd>
+        </div> 
+                <a href="/reentry/approver/notification-confirmation"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                    Send notifications</a>
+                    <a href="/reentry/approver/send-notifications" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Return to previous page</a>
+              </form>
             </div>
           </div>
         </main>
