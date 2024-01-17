@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Conjunction event asdf-asdas-asdf
+Edit escalated conjunction event asdf-asdas-asdf
 {% endblock %}
 
 {% block content %}
@@ -13,17 +13,17 @@ Conjunction event asdf-asdas-asdf
             <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">All conjunction events</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Reported conjunction event asdf-asdas-asdf</a>
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Escalated conjunction event asdf-asdas-asdf</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/edit-report">Edit report</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Edit conjunction event asdf-asdas-asdf</h1>
+      <h1 class="govuk-heading-xl">Edit escalated conjunction event asdf-asdas-asdf</h1>
     </div>
   
-    <p> If edits or additions are needed to the automatically generated report, these can be made through free text inputs in the below boxes. Once published, these edits will automatically be added to the relevant re-entry event page, and users on automatic distribution lists will be alerted of the amendments to the event. </p>
-    <p> The below boxes can only process <b>plain text</b>. They are not able to process any images or text formatting.</p>
+    <p>If edits or additions are needed to the automatically generated report, these can be made through free text inputs in the boxes below. Once published, these edits will automatically be added to the relevant event page, and users on the appropriate distribution lists will be notified of the update.</p>
+    <p>The boxes below can only process <b>plain text</b>. Do not include images or text formatting.</p>
 
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="more-detail">
@@ -31,20 +31,16 @@ Conjunction event asdf-asdas-asdf
           </label>
         </h1>
         <div id="more-detail-hint" class="govuk-hint">
-          Include additional information that is important for users to know, but is not captured automatically elsewhere in the report. 
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
             This text will appear under a paragraph which reads: "The UK Space Agency is tracking the close approach of two objects, <a href="/satellites/operator/satellite-1">OneWeb-0601</a> and <a href="/satellites/operator/satellite-1">Transit 5B-7</a>. A potential collision could damage the objects involved, limiting or eliminating their capability,
             as well as releasing new fragments, which would increase the risk of future collisions for other objects. This is a low probability of collision (PoC)."
           </div>
         <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 
         <h1 class="govuk-heading-m">Add to 'Manuoeuvre expected?'</h1>
-        <p>If there has been a change in the intention to manoeuvre, make the edits here.</p>
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend">
-              Manoeuvre expected from primary object?
+              Is a manoeuvre expected from the primary object?
             </legend>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
@@ -75,7 +71,7 @@ Conjunction event asdf-asdas-asdf
           </fieldset>
         </div>
           <div id="more-detail-hint" class="govuk-hint">
-              Include additional information relating to any expected manoeuvres or otherwise. This information will be recorded in the executive summary table.
+              Include additional information relating to any expected manoeuvres. This information will be recorded in the executive summary table.
             </div>
           <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 
@@ -84,9 +80,6 @@ Conjunction event asdf-asdas-asdf
               Add to 'Immediate impact'
             </label>
           </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            Include information related to the immediate impact of this event. 
-        </div>
         <div id="more-detail-hint" class="govuk-hint">
             This text will appear under a paragraph which reads: "Should the collision occur, it would likely result in a full breakup of both objects. In this worst-case scenario, an estimation of the number of fragments greater than 10cm is 223."
           </div>
@@ -98,9 +91,6 @@ Conjunction event asdf-asdas-asdf
             </label>
           </h1>
           <div id="more-detail-hint" class="govuk-hint">
-            Include information related to the short term impact of this event.
-          </div>
-          <div id="more-detail-hint" class="govuk-hint">
             This text will appear under a paragraph which reads: "Should the collision occur, the debris would generate an increased risk to satellites in LEO. We are predicting that the event would result in an 8.7% increase in potential collisions across all UK satellites in LEO."
             </div>
           <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
@@ -111,10 +101,7 @@ Conjunction event asdf-asdas-asdf
             </label>
           </h1>
           <div id="more-detail-hint" class="govuk-hint">
-            Include information related to the long term impact of this event, including the orbital lifespan of the debris, and the extent of future risk to satellites and human spaceflight.
-          </div>
-          <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under a paragraph which reads: "The collision would occur at an altitude of approximately 1200 km. The risk from the resulting debris would be sustained for significant periods of time and could eventually impact a broad range of satellites and missions including human spaceflight."
+            This text will appear under a paragraph which reads: "The collision would occur at an altitude of 1234 km. The risk from the resulting debris would be sustained for significant periods of time and could eventually impact a broad range of satellites and missions including human spaceflight."
             </div>
           <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 
@@ -124,10 +111,7 @@ Conjunction event asdf-asdas-asdf
             </label>
           </h1>
           <div id="more-detail-hint" class="govuk-hint">
-            Include information related to the UK response to this event. Include details regarding escalation and risk mitigations if relevant UK response organisations have been alerted.
-          </div>
-          <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under a paragraph which reads: "The UK Space Agency are the leads for conjunction reporting and have reached out to the operator to confirm they are aware of the event and that their manoeuvring intentions."
+            This text will appear under a paragraph which reads: "The UK Space Agency are the leads for conjunction reporting and have reached out to the operator to confirm they are aware of the event and that they intend to manoeuvre."
             </div>
           <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 
@@ -137,15 +121,14 @@ Conjunction event asdf-asdas-asdf
           </label>
         </h1>
         <div id="more-detail-hint" class="govuk-hint">
-          Include details of any press attention related to this event. Leave blank if there has been no press attention.
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear alongside a link to standard UK Space Agency press lines.
+            This text will appear before a link to standard UK Space Agency press lines.
           </div>
         <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 
       <a href="/conjunctions/approver/review-edits" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
         Review edits</a>
+        <a href="/conjunctions/approver/escalated-event-summary-report-1" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Return to previous page</a>
 
 
 

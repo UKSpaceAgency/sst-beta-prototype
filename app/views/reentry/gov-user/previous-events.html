@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Upcoming re-entry events
+Previous re-entry events
 {% endblock %}
 
 {% block content %}
@@ -14,11 +14,11 @@ Upcoming re-entry events
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">Upcoming re-entry events</h1>
+        <h1 class="govuk-heading-xl">Previous re-entry events</h1>
 
         <h2 class="govuk-heading-l">Escalated re-entry events</h2>
 
-        <p class="govuk-body">There is currently <b>1</b> re-entry event which meets the UK Space Agency's thresholds for escalation across UK government. For further detail on how risk and escalation thresholds are defined, see 'Risk and escalation thresholds' below.</p>
+        <p class="govuk-body">This table shows all escalated re-entry events since this service was created in November 2023. The data in this table is that which was presented in the final report for each event.</p>
         <hr class="govuk-section-break govuk-section-break--s">
 
 
@@ -67,7 +67,7 @@ Upcoming re-entry events
                 <strong class="govuk-tag govuk-tag--green">
                   Low
                 </strong>
-              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/approver/event-summary" class="govuk-link--no-visited-state">RE-2023-08 (Escalated)</a></b></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/gov-user/event-summary" class="govuk-link--no-visited-state">RE-2023-08 (Escalated)</a> </b></td>
               <td class="govuk-table__cell govuk-body-s">0.04</td>
               <td class="govuk-table__cell govuk-body-s">03/11/2023, 11:35 to 03/11/2023, 21:05</td>
               <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
@@ -90,13 +90,17 @@ Upcoming re-entry events
           </span>
         </summary>
         <div class="govuk-details__text">
-          <b>This table shows upcoming re-entry events which meet the UK Space Agency's thresholds for escalation.</b>
-          <p> </p>
+          <b>This table shows all previous re-entry events which met the UK Space Agency's thresholds for escalation.</b>
           <ul class="govuk-list govuk-list--bullet">
-            <li>Select the <b>Event ID</b> to view more information.</li>
-            <li>Each Event ID or row represents <b>one re-entry event</b> including all related report updates.</li>
-            <li>Sort the events according to criteria by clicking on the relevant <b>headings</b>.</li>
-
+            <li><36 hours until re-entry</li>
+              <li>AND one of the following:</li>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Any “large” object in US SATCAT (except designed for demise) with overflights of the UK mainland</li>
+                  <li>OR any “large” object in US SATCAT (except designed for demise) with >0.1% chance of impact in overseas territories</li>
+                  <li>OR any UK-licensed object (except designed for demise)</li>
+                  <li>OR (anticipated) press interest</li>
+                </ul>   
+              <li>OR nominated for escalation by the UK Space Operations Centre</li>
           </ul>
         </div>
       </details>
@@ -111,15 +115,10 @@ Upcoming re-entry events
           <h3 class="govuk-heading-s">Escalation criteria</h3>
           <p class="govuk-body">Re-entry events are escalated if:</p>
           <ul class="govuk-list govuk-list--bullet">
-            <li><36 hours until re-entry</li>
-              <li>AND one of the following:</li>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>Any “large” object in US SATCAT (except designed for demise) with overflights of the UK mainland</li>
-                  <li>OR any “large” object in US SATCAT (except designed for demise) with >0.1% chance of impact in overseas territories</li>
-                  <li>OR any UK-licensed object (except designed for demise)</li>
-                  <li>OR (anticipated) press interest</li>
-                </ul>   
-              <li>OR nominated for escalation by the UK Space Operations Centre</li>
+            <li>The event is within 36 hours, involves a large object (as defined by the US SATCAT) and has overflights of the UK mainland in its primary uncertainty window</li>
+            <li>The probability of impacting UK overseas territories is greater than 0.1%</li>
+            <li>The UK has liability for the re-entering object</li>
+            <li>There is press or government interest in the event</li>
           </ul>
 
            <h3 class="govuk-heading-s">Risk thresholds</h3>
@@ -151,9 +150,12 @@ Upcoming re-entry events
         </div>
       </details>
 
+
+
       <h2 class="govuk-heading-l">All re-entry events</h2>
 
-      <p class="govuk-body">There are currently <b>X</B> re-entry events worldwide in the next <b>Y</b> days.</p>
+      <p class="govuk-body">The table below shows all re-entry events monitored by the UKSA since the service began in November 2023. 
+        The data in this table is that which was presented in the final report for each event.
 
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -225,7 +227,7 @@ Upcoming re-entry events
         </span>
       </summary>
       <div class="govuk-details__text">
-        <b>This table shows all upcoming re-entry events worldwide.</b>
+        <b>This table shows all previous re-entry events worldwide.</b>
         <p> </p>
         <ul class="govuk-list govuk-list--bullet">
           <li>Select the <b>event ID</b> to view more information.</li>
@@ -235,11 +237,8 @@ Upcoming re-entry events
       </div>
     </details>
 
-    <a href="/reentry/approver/previous-events" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-      View previous re-entry events</a>
-
-      <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Return to previous page</a>
+    <a href="/reentry/gov-user/homepage" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+      View upcoming re-entry events</a>
 
   </main>
 </div>

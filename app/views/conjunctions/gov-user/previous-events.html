@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Upcoming conjunction events
+Previous conjunction events
 {% endblock %}
 
 {% block content %}
@@ -14,142 +14,161 @@ Upcoming conjunction events
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
+        <h1 class="govuk-heading-xl">Previous conjunction events</h1>
+
         <h2 class="govuk-heading-l">Escalated conjunction events</h2>
 
-        <p class="govuk-body">There is currently <b>1</b> conjunction event which meets the UK Space Agency's thresholds for escalation across UK government. For further detail on how risk levels are defined, see 'Risk and escalation thresholds' below.</p> 
-
-<br>
-        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
-          <col>
-            <colgroup span="3"></colgroup>
-            <colgroup span="2"></colgroup>
-            <colgroup span="2"></colgroup>
-
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Event information</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Probability of collision (%)</b></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Risk</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Time of closest approach (UTC)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>UKSA (refined)</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--green">Low</strong></td>
-              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/gov-user/escalated-event-summary-report-1" class="govuk-link--no-visited-state">asdf-asdas-asdf (Escalated)</a></b></td>
-              <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">OneWeb-0601 (UK-licensed payload)</a></td>
-              <td class="govuk-table__cell govuk-body-s"><a href="#">Transit 5B-7 (US-licensed payload)</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0.13</td>
-            </tr>
-          </tbody>
-          </col>
-        </table>
-
-        <p>Download summary table for escalated conjunction events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
-
-        <p>Download all available data for escalated conjunction events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
-
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Help with this table
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            <b>This table shows upcoming conjunction events involving UK satellites which have met the UK Space Agency's thresholds for escalation across government.</b>
-            <p> </p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Select the <b>Event ID</b> to view more information.</li>
-              <li>Each event ID or row represents <b>one conjunction event</b> including all related CDMs and UKSA analysis.</li>
-              <li>Sort the events according to criteria by clicking on the relevant <b>headings</b>.</li>
+        <p class="govuk-body">This table shows all escalated conjunction events since this service was created in November 2023.
+           The data in this table is that which was presented in the final report for each event.</p>
+          <div class="moj-search">
+            <form action="#" method="post">
+            <div class="govuk-form-group">
+              <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                Find an escalated conjunction event:
+              </label>
   
-            </ul>
-          </div>
-        </details>
+              <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by event or object ID" aria-describedby="search-hint">
+            </div>
+  
+            <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+              Search
+            </button>
+            </form>
+            </div>
+            <br>
 
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-             Risk and escalation thresholds
-            </span>
-          </summary>
-          <div class="govuk-details__text">
 
-            <h3 class="govuk-heading-s">Escalation criteria</h3>
+            <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+              <col>
+                <colgroup span="3"></colgroup>
+                <colgroup span="2"></colgroup>
+                <colgroup span="2"></colgroup>
+    
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Event information</b></td>
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Probability of collision (%)</b></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Risk</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Time of closest approach (UTC)</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>UKSA (refined)</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--green">Low</strong></td>
+                  <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/gov-user/escalated-event-summary-report-1" class="govuk-link--no-visited-state">asdf-asdas-asdf (Escalated)</a></b></td>
+                  <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">OneWeb-0601 (UK-licensed payload)</a></td>
+                  <td class="govuk-table__cell govuk-body-s"><a href="#">Transit 5B-7 (US-licensed payload)</a></td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0.13</td>
+                </tr>
+              </tbody>
+              </col>
+            </table>
 
-            <p class="govuk-body">Conjunction events are escalated if:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li><5 days until Time of Closest Approach</li>
-                <li>AND for UK-licensed objects:</li>
+            <p>Download summary table for previously escalated conjunction events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
+            <p>Download all available data for previously escalated conjunction events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+    
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with this table
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <b>This table shows previous conjunction events involving UK satellites which met the UK Space Agency's thresholds for escalation across government.</b>
+                <p> </p>
                 <ul class="govuk-list govuk-list--bullet">
-                    <li>0.1% probability of collision</li> 
-                    <li>OR press interest</li></ul>
-                <li>AND for non-UK objects:</li> 
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>Low risk or higher </li>
-                  <li>AND no manoeuvre expected</li></ul>
-                <li>OR nominated for escalation by the UK Space Operations Centre</li>
-            </ul>
-
-            <h3 class="govuk-heading-s">Risk thresholds</h3>
-
-            <p>Risk thresholds are calculated accounting for the probability of the collision between the two objects (as calculated by the US), and the average number of additional conjunction events that the collision would create for UK satellites.</p>
-<h2 class="govuk-section-break"></h2>
-<p>Any event with an expected maneouvre is automatically categorised as "Low risk".</p>
-                  <table class="govuk-table"style="width:100%">
-                    <col>
-                      <colgroup span="5"></colgroup>
-                      <colgroup span="5"></colgroup>
-          
-                    <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"></td>
-                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Probability of collision</b></td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 40%";>Average UK fragment tally</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>1% - 5%</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>5% - 10%</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>>10%</th>
-                      </tr>
-                    </thead>
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell">5 </td>
-                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Very low</strong></th>
+                  <li>Select the <b>Event ID</b> to view more information.</li>
+                  <li>Each event ID or row represents <b>one conjunction event</b> including all related CDMs and UKSA analysis.</li>
+                  <li>Sort the events according to criteria by clicking on the relevant <b>headings</b>.</li>
+      
+                </ul>
+              </div>
+            </details>
+    
+            <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+               Risk and escalation thresholds
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+  
+              <h3 class="govuk-heading-s">Escalation criteria</h3>
+  
+              <p class="govuk-body">Conjunction events are escalated if:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><5 days until Time of Closest Approach</li>
+                  <li>AND for UK-licensed objects:</li>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>0.1% probability of collision</li> 
+                      <li>OR press interest</li></ul>
+                  <li>AND for non-UK objects:</li> 
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>Low risk or higher </li>
+                    <li>AND no manoeuvre expected</li></ul>
+                  <li>OR nominated for escalation by the UK Space Operations Centre</li>
+              </ul>
+  
+              <h3 class="govuk-heading-s">Risk thresholds</h3>
+  
+              <p>Risk thresholds are calculated accounting for the probability of the collision between the two objects (as calculated by the US), and the average number of additional conjunction events that the collision would create for UK satellites.</p>
+  <h2 class="govuk-section-break"></h2>
+  <p>Any event with an expected maneouvre is automatically categorised as "Low risk".</p>
+                    <table class="govuk-table"style="width:100%">
+                      <col>
+                        <colgroup span="5"></colgroup>
+                        <colgroup span="5"></colgroup>
+            
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"></td>
+                          <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Probability of collision</b></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 40%";>Average UK fragment tally</th>
+                          <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>1% - 5%</th>
+                          <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>5% - 10%</th>
+                          <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>>10%</th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">5 </td>
+                            <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Very low</strong></th>
+                            <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
+                            <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                          </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">5-50 </td>
                           <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
                           <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
                         </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell">5-50 </td>
-                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
-                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
-                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell">>50 </td>
-                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
-                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
-                        <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
-                      </tr>
-                    </tbody>
-                    </table> 
-                  </ul>
-          </div>
-        </details>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">>50 </td>
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                        </tr>
+                      </tbody>
+                      </table> 
+                    </ul>
+            </div>
+          </details>
 
         <h2 class="govuk-heading-l">All conjunction events</h2>
 
-        <p class="govuk-body">There are currently <b>X</B> conjunction events affecting UK satellites in the next <b>Y</b> days.</p>
+        <p class="govuk-body">This table shows all conjunction events since this service was created in November 2023.
+          The data in this table is that which was presented in the final report for each event.</p>
 
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -277,7 +296,7 @@ Upcoming conjunction events
           </span>
         </summary>
         <div class="govuk-details__text">
-          <b>This table shows all upcoming conjunction events involving UK satellites.</b>
+          <b>This table shows all previous conjunction events involving UK satellites.</b>
           <p> </p>
           <ul class="govuk-list govuk-list--bullet">
             <li>Select the <b>event ID</b> to view more information.</li>
@@ -287,12 +306,8 @@ Upcoming conjunction events
         </div>
       </details>
 
-      <a href="/conjunctions/gov-user/previous-events" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        View previous conjunction events</a>
-
-        <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Return to previous page</a>
-
+      <a href="/conjunctions/gov-user/homepage" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        View upcoming conjunction events</a>
 
   </main>
 </div>

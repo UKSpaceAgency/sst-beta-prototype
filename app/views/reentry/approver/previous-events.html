@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Upcoming re-entry events
+Previous re-entry events
 {% endblock %}
 
 {% block content %}
@@ -14,11 +14,11 @@ Upcoming re-entry events
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">Upcoming re-entry events</h1>
+        <h1 class="govuk-heading-xl">Previous re-entry events</h1>
 
         <h2 class="govuk-heading-l">Escalated re-entry events</h2>
 
-        <p class="govuk-body">There is currently <b>1</b> re-entry event which meets the UK Space Agency's thresholds for escalation across UK government. For further detail on how risk and escalation thresholds are defined, see 'Risk and escalation thresholds' below.</p>
+        <p class="govuk-body">This table shows all escalated re-entry events since this service was created in November 2023. The data in this table is that which was presented in the final report for each event.</p>
         <hr class="govuk-section-break govuk-section-break--s">
 
 
@@ -67,7 +67,7 @@ Upcoming re-entry events
                 <strong class="govuk-tag govuk-tag--green">
                   Low
                 </strong>
-              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/approver/event-summary" class="govuk-link--no-visited-state">RE-2023-08 (Escalated)</a></b></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/approver/event-summary" class="govuk-link--no-visited-state">RE-2023-08 (Escalated)</a> </b></td>
               <td class="govuk-table__cell govuk-body-s">0.04</td>
               <td class="govuk-table__cell govuk-body-s">03/11/2023, 11:35 to 03/11/2023, 21:05</td>
               <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
@@ -90,7 +90,7 @@ Upcoming re-entry events
           </span>
         </summary>
         <div class="govuk-details__text">
-          <b>This table shows upcoming re-entry events which meet the UK Space Agency's thresholds for escalation.</b>
+          <b>This table shows all previous re-entry events which met the UK Space Agency's thresholds for escalation.</b>
           <p> </p>
           <ul class="govuk-list govuk-list--bullet">
             <li>Select the <b>Event ID</b> to view more information.</li>
@@ -151,9 +151,12 @@ Upcoming re-entry events
         </div>
       </details>
 
+
+
       <h2 class="govuk-heading-l">All re-entry events</h2>
 
-      <p class="govuk-body">There are currently <b>X</B> re-entry events worldwide in the next <b>Y</b> days.</p>
+      <p class="govuk-body">The table below shows all re-entry events monitored by the UKSA since the service began in November 2023. 
+        The data in this table is that which was presented in the final report for each event.
 
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -225,7 +228,7 @@ Upcoming re-entry events
         </span>
       </summary>
       <div class="govuk-details__text">
-        <b>This table shows all upcoming re-entry events worldwide.</b>
+        <b>This table shows all previous re-entry events worldwide.</b>
         <p> </p>
         <ul class="govuk-list govuk-list--bullet">
           <li>Select the <b>event ID</b> to view more information.</li>
@@ -235,11 +238,8 @@ Upcoming re-entry events
       </div>
     </details>
 
-    <a href="/reentry/approver/previous-events" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-      View previous re-entry events</a>
-
-      <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Return to previous page</a>
+    <a href="/reentry/approver/homepage" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+      View upcoming re-entry events</a>
 
   </main>
 </div>
