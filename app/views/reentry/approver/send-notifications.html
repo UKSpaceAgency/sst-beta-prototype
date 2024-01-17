@@ -1,52 +1,163 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirmation of edits
+Send notifications for escalated re-entry event RE-2023-08
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-width-container">
+  <div class="govuk-width-container">
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
+          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">All re-entry events</a>
         </li>
-    <li class="govuk-breadcrumbs__list-item">
-      <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">Escalated re-entry event RE-2023-08</a>
-    </li>
-    <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/reentry/approver/edit-report">Edit report</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/reentry/approver/review-edits">Review edits</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/reentry/approver/final-preview">Final preview</a>
-    </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">Escalated re-entry event RE-2023-08</a>
+        </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/edit-confirmation">Confirmation</a>
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/send-notifications">Send notifications</a>
           </li>
       </ol>
-      <div class="govuk-width-container">
-        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <div class="govuk-panel govuk-panel--confirmation">
-                <h1 class="govuk-panel__title">
-                  Edits published
-                </h1>
-                <div class="govuk-panel__body">
-                    Escalated re-entry event<br><strong>RE-2023-08</strong>
-                </div>
-              </div>
+      <h1 class="govuk-heading-xl">Send notifications for escalated re-entry event RE-2023-08</h1>
+    </div>
+  
+    <p> Notifications for escalated re-entry event RE-2023-08 are currently being sent to:</p>
+        <ul class="govuk-list govuk-list--bullet">
+         <li><a href="XXX">early distribution list</a> for re-entry events</li>
+        </ul>
+<br>
 
-              <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-                View updated event page</a>
-            </div>
-          </div>
-        </main>
+<details class="govuk-details">
+          
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        View summary of distribution lists
+      </span>
+    </summary>
+    
+    <div class="govuk-details__text">
+      <p>The <b>early distribution list</b> currently includes recipients from the following organisations:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>UK Space Agency</li>
+        <li>Civil Aviation Authority</li>
+        <li>Ministry of Defence</li>
+        <li>US Department of Defence</li>
+        <li>Japan Ministry of Defence</li>
+        <li>US Space Force</li>
+        <li>Australian Defence force</li>
+        <li>New Zealand Defence Force</li>
+        <li>France Ministry of Armed Forces</li>
+        <li>Canadian Armed Forces</li>
+        <li>Bundeswehr</li>      
+      </ul>
+    </div>
+    
+    <div class="govuk-details__text">
+        <p>The <b>extended distribution list</b> currently includes recipients from the following organisations:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>UK Space Agency</li>
+            <li>Civil Aviation Authority</li>
+            <li>Ministry of Defence</li>
+            <li>Department of Business, Energy and Industrial Strategy (BEIS)</li>
+            <li>Cabinet Office</li>
+            <li>Government Office for Science (GO-Science)</li>
+            <li>Air Accidents Investigation Bureau</li>
+            <li>Department for Levelling Up, Housing and Communities (DLUHC)</li>
+            <li>Home Office</li>
+            <li>Department for Environment, Food and Rural Affairs</li>
+            <li>Department for Transport</li>
+        </ul>
       </div>
+  
+  </details>
+    
+        <details class="govuk-details">
+      
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                View criteria for escalating to the early distribution list and extended distribution list
+              </span>
+            </summary>
+            
+            <div class="govuk-details__text">
+              <p>The <b>early distribution list</b> is notified of all escalated re-entry events. These are events which meet the following criteria:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li><36 hours until re-entry</li>
+                  <li>AND one of the following:</li>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>Any “large” object in US SATCAT (except designed for demise) with overflights of the UK mainland</li>
+                      <li>OR any “large” object in US SATCAT (except designed for demise) with >0.1% chance of impact in overseas territories</li> 
+                      <li>OR any UK-licensed object (except designed for demise)</li> 
+                      <li>OR (anticipated) press interest</li>  
+                      <li>OR nominated by UK Space Operations Centre</li></ul>
+                  </ul>
+              </ul>
+            </div>
+            
+            <div class="govuk-details__text">
+              <p>The <b>extended distribution list</b> is only notified of the highest priority escalated re-entry events. These are events which meet the following criteria in addition to all of the criteria above:</p>
+              <ul class="govuk-list govuk-list--bullet">
+                <li>Debris likely to survive to the ground</li>
+                  <li>AND one of the following:</li>
+                  <ul class="govuk-list govuk-list--bullet">
+                      <li>>0.1% chance of impact in the UK</li>
+                      <li>OR any UK-licensed object (except designed for demise)</li></ul> 
+                  </ul>
+            </div>
+          
+          </details>
+
+          <div class="govuk-form-group">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        Send notifications to the extended distribution list
+                        </h1>
+                  </legend>
+                  <div id="nationality-hint" class="govuk-hint">
+                    Tick the box below if you want the extended distribution list to receive notifications about this event, including an initial notification and notifications for all subsequent updates. Additional users can be included in the free text box below.
+                </div>
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british" aria-describedby="nationality-item-hint">
+                      <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                        Send notifications to the extended distribution list
+                      </label>
+                    </div>
+                </div>
+                <br>
+
+                  
+                </fieldset>
+              </div>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--l" for="more-detail">
+                Send notifications to selected users
+              </label>
+            </h1>
+            <div id="more-detail-hint" class="govuk-hint">
+                Provide individual email addresses to receive notifications in the box below. Separate each email address with a semi-colon. Do not include any emails on the extended distribution list if you have ticked the button above. 
+            </div>
+            <div id="more-detail-hint" class="govuk-hint">
+                Leave the box blank if you do not want to send notifications to selected users.
+            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+    </legend>
+
+    <a href="/reentry/approver/review-notifications" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        Review notifications</a>
+        <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to previous page</a>
+        <div id="waste-hint" class="govuk-hint"></div>
+  </form>
+</div>
+</div>
+</main>
+</div>
 
   
   {% endblock %}
