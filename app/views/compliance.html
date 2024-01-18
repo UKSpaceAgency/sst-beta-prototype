@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Compliance
+{% endblock %}
+
+{% block content %}
+
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Track compliance of UK satellites</h1>
+
+        <p class="govuk-body-m">Select which prototype you would like to visit:</p>
+
+          <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+            <tbody class="govuk-table__body">
+
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/compliance/regulator-user/selectionpage">Regulator</a></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="/reentry/approver/homepage">Approver</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <p>   </p>
+      </div>
+      </div>
+  </main>
+</div>
+
+
+{% endblock %}
