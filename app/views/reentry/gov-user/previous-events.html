@@ -91,16 +91,12 @@ Previous re-entry events
         </summary>
         <div class="govuk-details__text">
           <b>This table shows all previous re-entry events which met the UK Space Agency's thresholds for escalation.</b>
+          <p> </p>
           <ul class="govuk-list govuk-list--bullet">
-            <li><36 hours until re-entry</li>
-              <li>AND one of the following:</li>
-                <ul class="govuk-list govuk-list--bullet">
-                  <li>Any “large” object in US SATCAT (except designed for demise) with overflights of the UK mainland</li>
-                  <li>OR any “large” object in US SATCAT (except designed for demise) with >0.1% chance of impact in overseas territories</li>
-                  <li>OR any UK-licensed object (except designed for demise)</li>
-                  <li>OR (anticipated) press interest</li>
-                </ul>   
-              <li>OR nominated for escalation by the UK Space Operations Centre</li>
+            <li>Select the <b>Event ID</b> to view more information.</li>
+            <li>Each Event ID or row represents <b>one re-entry event</b> including all related report updates.</li>
+            <li>Sort the events according to criteria by clicking on the relevant <b>headings</b>.</li>
+
           </ul>
         </div>
       </details>
@@ -115,10 +111,15 @@ Previous re-entry events
           <h3 class="govuk-heading-s">Escalation criteria</h3>
           <p class="govuk-body">Re-entry events are escalated if:</p>
           <ul class="govuk-list govuk-list--bullet">
-            <li>The event is within 36 hours, involves a large object (as defined by the US SATCAT) and has overflights of the UK mainland in its primary uncertainty window</li>
-            <li>The probability of impacting UK overseas territories is greater than 0.1%</li>
-            <li>The UK has liability for the re-entering object</li>
-            <li>There is press or government interest in the event</li>
+            <li>Less than 36 hours until re-entry</li>
+              <li>AND one of the following:</li>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Any “large” object in US SATCAT (except designed for demise) with overflights of the UK mainland</li>
+                  <li>OR any “large” object in US SATCAT (except designed for demise) with more than 0.1% chance of impact in overseas territories</li>
+                  <li>OR any UK-licensed object (except designed for demise)</li>
+                  <li>OR (anticipated) press interest</li>
+                </ul>   
+              <li>OR nominated for escalation by the UK Space Operations Centre</li>
           </ul>
 
            <h3 class="govuk-heading-s">Risk thresholds</h3>
@@ -133,7 +134,7 @@ Previous re-entry events
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
-                <td class="govuk-table__cell govuk-body-s">< 1%</td>
+                <td class="govuk-table__cell govuk-body-s">Less than 1%</td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
@@ -141,7 +142,7 @@ Previous re-entry events
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
-                <td class="govuk-table__cell govuk-body-s">> 5%</td>
+                <td class="govuk-table__cell govuk-body-s">More than 5%</td>
               </tr>
             </tbody>
           </table> 
