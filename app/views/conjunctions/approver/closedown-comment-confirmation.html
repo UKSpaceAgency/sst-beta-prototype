@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Close down conjunction event asdf-asdas-asdf
+Confirmation of close down
 {% endblock %}
 
 {% block content %}
@@ -10,63 +10,37 @@ Close down conjunction event asdf-asdas-asdf
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">Upcoming conjunction events</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Conjunction event asdf-asdas-asdf: Escalation report</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/closedown-report">Close down</a>
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/previous-events">Previous conjunction events</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/event-passed">Conjunction event asdf-asdas-asdf: Escalation report</a>
+    </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/closedown-comment">Add close down comment</a>
+    </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/closedown-comment-confirmation">Confirmation</a>
+          </li>
       </ol>
-      
-      <h1 class="govuk-heading-xl">Close down conjunction event asdf-asdas-asdf</h1>
-    </div>
-  
-    <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-visually-hidden">Warning</span>
-          This conjunction event will be automatically closed down when it meets close down criteria. 
-        </strong>
+      <div class="govuk-width-container">
+        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                  Close down comment published
+                </h1>
+                <div class="govuk-panel__body">
+                    <strong>Conjunction event asdf-asdas-asdf:</strong><br>Escalation report
+                </div>
+              </div>
+
+              <a href="/conjunctions/approver/event-passed" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                View updated event page</a>
+            </div>
+          </div>
+        </main>
       </div>
-
-    <p>Close down this report if the conjunction event has passed or is no longer relevant to users, and you do not want to rely on it meeting the automatic close down criteria. Users on distribution lists will be informed that the event has passed and that the report has been closed down.</p>
-
-    <details class="govuk-details">
-          
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            View close down criteria
-          </span>
-        </summary>
-        
-        <div class="govuk-details__text">
-          <p>Escalation reports for conjunction events are closed down when:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>The Time of Closest Approach has passed</li>
-            <li>OR the event falls below escalation thresholds</li>
-                    
-          </ul>
-        </div>
-      
-      </details>
-
-    <div id="more-detail-hint" class="govuk-hint">
-        Leave the box blank if it is not necessary to provide a close down description of the event.
-    </div>
-    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-  </div>
-
-    <a href="/conjunctions/approver/closedown-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        Close down event</a>
-        <a href="/conjunctions/approver/event-passed" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Return to previous page</a>
-        <div id="waste-hint" class="govuk-hint"></div>
-  </form>
-</div>
-</div>
-</main>
-</div>
 
   
   {% endblock %}

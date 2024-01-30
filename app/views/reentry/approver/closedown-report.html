@@ -13,7 +13,7 @@ Close down re-entry event re-asghj-kifdy
           <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">Upcoming re-entry events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">Re-entry event re-asghj-kifdy: Escalation report</a>
+          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary">Re-entry event re-asghj-kifdy: Escalation report</a>
         </li>
           <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="/reentry/approver/closedown-report">Close down</a>
@@ -22,7 +22,35 @@ Close down re-entry event re-asghj-kifdy
       <h1 class="govuk-heading-xl">Close down re-entry event re-asghj-kifdy</h1>
     </div>
   
-    <p> Close down this report if the re-entry event has passed. Users on distribution lists will be informed that the event has passed and that the report has been closed down.</p>
+    <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          This re-entry event will be automatically closed down when it meets close down criteria. 
+        </strong>
+      </div>
+
+    <p>Close down this report if the re-entry event has passed or is no longer relevant to users, and you do not want to rely on it meeting the automatic close down criteria. Users on distribution lists will be informed that the event has passed and that the report has been closed down.</p>
+
+    <details class="govuk-details">
+          
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            View close down criteria
+          </span>
+        </summary>
+        
+        <div class="govuk-details__text">
+          <p>Escalation reports for re-entry events are closed down when:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Time to Next Report falls to 0 hours AND Decay Epoch has passed</li>
+            <li>OR the event falls below escalation thresholds</li>
+                    
+          </ul>
+        </div>
+      
+      </details>
+
     <div id="more-detail-hint" class="govuk-hint">
         Leave the box blank if it is not necessary to provide a close down description of the event.
     </div>
