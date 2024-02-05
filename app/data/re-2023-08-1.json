@@ -5,7 +5,18 @@
         "reportTime":"2024-10-02T02:22:35",
         "tipExternalID": 55323,
         "noradID":"40306",
-
+        "objectName":"CZ-2C R/B",
+        "objectType":"Rocket body",
+        "estimatedMass":"4006",
+        "licensingCountry":"People's Republic of China",
+        "internationalDesignator":"2014-071B",
+        "objectHeight":8.0,
+        "objectWidth":3.4,
+        "objectSpan":2.7,
+        "launchingYear":"2014",
+        "apogee":202,
+        "perigee":197,
+        "inclination":97.4,
 // Executive summary (all ...Addition fields can be added or edited by Approver user types via editing interface)
 
         "probability":0.04, // no need to use UK
