@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Send notifications for re-entry event re-asghj-kifdy
+Send alerts for re-entry event re-asghj-kifdy
 {% endblock %}
 
 {% block content %}
@@ -16,138 +16,71 @@ Send notifications for re-entry event re-asghj-kifdy
           <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary">Re-entry event re-asghj-kifdy: Alert</a>
         </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/send-notifications">Send notifications</a>
+            <a class="govuk-breadcrumbs__link" href="/reentry/approver/send-notifications">Send alerts</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Send notifications for re-entry event re-asghj-kifdy</h1>
+      <h1 class="govuk-heading-xl">Send re-entry alert re-asghj-kifdy to additional recipients</h1>
     </div>
   
-    <p> Notifications for re-entry event re-asghj-kifdy are currently being sent to:</p>
-        <ul class="govuk-list govuk-list--bullet">
-         <li><a href="XXX">early distribution list</a> for re-entry events</li>
-         <li><a href="XXX">extended distribution list</a> for re-entry events</li>
-        </ul>
-<br>
+    <p> Re-entry event re-asghj-kifdy is not currently a priority alert. This means alerts are only being sent to those who have signed up to receive all re-entry alerts (<a class="govuk__link" href="/account/approver/distribution-lists">see distribution lists</a>).</p>
+       
+    <details class="govuk-details">
 
-<details class="govuk-details">
-          
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        View summary of distribution lists
-      </span>
-    </summary>
-    
-    <div class="govuk-details__text">
-      <p>The <b>early distribution list</b> currently includes recipients from the following organisations:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>UK Space Agency</li>
-        <li>Civil Aviation Authority</li>
-        <li>Ministry of Defence</li>
-        <li>US Department of Defence</li>
-        <li>Japan Ministry of Defence</li>
-        <li>US Space Force</li>
-        <li>Australian Defence force</li>
-        <li>New Zealand Defence Force</li>
-        <li>France Ministry of Armed Forces</li>
-        <li>Canadian Armed Forces</li>
-        <li>Bundeswehr</li>      
-      </ul>
-    </div>
-    
-    <div class="govuk-details__text">
-        <p>The <b>extended distribution list</b> currently includes recipients from the following organisations:</p>
-        <ul class="govuk-list govuk-list--bullet">
-            <li>UK Space Agency</li>
-            <li>Civil Aviation Authority</li>
-            <li>Ministry of Defence</li>
-            <li>Department of Business, Energy and Industrial Strategy (BEIS)</li>
-            <li>Cabinet Office</li>
-            <li>Government Office for Science (GO-Science)</li>
-            <li>Air Accidents Investigation Bureau</li>
-            <li>Department for Levelling Up, Housing and Communities (DLUHC)</li>
-            <li>Home Office</li>
-            <li>Department for Environment, Food and Rural Affairs</li>
-            <li>Department for Transport</li>
-        </ul>
-      </div>
-  
-  </details>
-    
-        <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Criteria for priority re-entry alerts
+          </span>
+        </summary>
+        
+        <div class="govuk-details__text">
+          <p>Priority re-entry alerts are those with:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Debris likely to survive to the ground</li>
+            <li>AND one of the following:</li>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>More than 0.1% chance of impact in the UK (and overseas territories on case by case basis)</li>
+              <li>OR UK-licensed object</li>
+              <li>OR significant press interest</li></ul>
+          </ul>
+        </div>
       
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                View criteria for escalating to the early distribution list and extended distribution list
-              </span>
-            </summary>
-            
-            <div class="govuk-details__text">
-              <p>The <b>early distribution list</b> is notified of all escalated re-entry events. These are events which meet the following criteria:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Less than 36 hours until re-entry</li>
-                  <li>AND one of the following:</li>
-                  <ul class="govuk-list govuk-list--bullet">
-                      <li>Any “large” object in US SATCAT (except designed for demise) with overflights of the UK mainland</li>
-                      <li>OR any “large” object in US SATCAT (except designed for demise) with more than 0.1% chance of impact in overseas territories</li> 
-                      <li>OR any UK-licensed object (except designed for demise)</li> 
-                      <li>OR (anticipated) press interest</li>  
-                      <li>OR nominated by UK Space Operations Centre</li></ul>
-                  </ul>
-              </ul>
-            </div>
-            
-            <div class="govuk-details__text">
-              <p>The <b>extended distribution list</b> is only notified of the highest priority escalated re-entry events. These are events which meet the following criteria in addition to all of the criteria above:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>Debris likely to survive to the ground</li>
-                  <li>AND one of the following:</li>
-                  <ul class="govuk-list govuk-list--bullet">
-                      <li>More than 0.1% chance of impact in the UK</li>
-                      <li>OR any UK-licensed object (except designed for demise)</li></ul> 
-                  </ul>
-            </div>
-          
-          </details>
+      </details>
 
           <div class="govuk-form-group">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                     <h1 class="govuk-fieldset__heading">
-                        Send notifications to the extended distribution list
+                        Make this a priority re-entry alert
                         </h1>
                   </legend>
                   <div class="govuk-warning-text">
                     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                     <strong class="govuk-warning-text__text">
                       <span class="govuk-visually-hidden">Warning</span>
-                      The extended distribution list are already receiving notifications for Re-entry event re-asghj-kifdy: Alert. 
+                      This is already a priority re-entry alert
                     </strong>
                   </div>
-                </div>
-                <br>
-
-                  
                 </fieldset>
               </div>
           <div class="govuk-form-group">
             <h1 class="govuk-label-wrapper">
               <label class="govuk-label govuk-label--l" for="more-detail">
-                Send notifications to selected users
+                Send alerts to selected users
               </label>
             </h1>
             <div id="more-detail-hint" class="govuk-hint">
-                Provide individual email addresses to receive notifications in the box below. Separate each email address with a semi-colon. Do not include any emails on the extended distribution list if you have ticked the button above. 
+                Provide individual email addresses to receive alerts about this event in the box below. Separate each email address with a semi-colon. Do not include emails of those already receiving alerts according to <a class="govuk__link" href="/account/approver/distribution-lists">current distribution lists</a>. 
             </div>
             <div id="more-detail-hint" class="govuk-hint">
-                Leave the box blank if you do not want to send notifications to selected users.
+                Leave the box blank if you do not want to send alerts to selected users.
             </div>
             <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
           </div>
     </legend>
 
     <a href="/reentry/approver/review-notifications" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        Review notifications</a>
+        Review alerts</a>
         <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Return to previous page</a>
         <div id="waste-hint" class="govuk-hint"></div>
