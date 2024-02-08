@@ -50,10 +50,35 @@ Event 327237-005
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   </div>
   <div class="govuk-grid-column-three-quarters">
-    <h2 class="govuk-heading-l" id="event summary">Event summary - HYLAS 1</h2>
+    <h2 class="govuk-heading-l" id="event summary">Event summary</h2>
     <br>
+    <p><b>Flagged object:</b> Hylas 1</p>
     <p>UKSA's orbital analysis team are reporting on a manoeuvre by Hylas 1 that exceeds current tolerance values for its reporting criteria. Between the 16th and 18th of January 2024 it raised its orbit by approximately 225 km.</p>
-    <p>This table show the positions of HYLAS 1 during this manoeuvre.</p>
+    <p>This section shows the positions of Hylas 1 during this manoeuvre and the dates during which the manoeuvre occured.</p>
+    <h1 class="govuk-heading-s">Manoeuvre date information</h1>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Manoeuvre start date</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">16/01/24</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Manoeuvre end date</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">18/01/24</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">TLE count (in the month prior to manoeuvre end date)</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">31</td>
+        </tr>
+      </tbody>
+    </table></p>
+    <h1 class="govuk-heading-s">Manoeuvre position information</h1>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -90,6 +115,9 @@ Event 327237-005
         </tr>
       </tbody>
     </table></p>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Contact a UKSA orbital analyst
+    </button>
     <br>
 
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -97,7 +125,7 @@ Event 327237-005
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-              Position data
+              Evolution of satellite position
             </span>
           </h2>
         </div>
@@ -107,41 +135,6 @@ Event 327237-005
             <img src="/public/images/HYLAS-1.PNG" alt="HYLAS 1" width="100%">
         </div>
       </div>
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                Manoeuvre date information
-              </span>
-            </h2>
-          </div>
-          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-            <p class="govuk-body">
-              <p>This table show the start date and end date of the flagged manoeuvre, as well as the TLE count in the month prior to the manoeuvre end date.</p>
-              <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header"></th>
-                  <th scope="col" class="govuk-table__header"></th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Manoeuvre start date</th>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">16/01/24</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Manoeuvre end date</th>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">18/01/24</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">TLE count (in the month prior to manoeuvre end date)</th>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">31</td>
-                </tr>
-              </tbody>
-            </table></p>
-          </div>
-        </div>
         <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading">
@@ -350,7 +343,7 @@ Event 327237-005
             </div>
           </div>
         </div>
-          <a href="/compliance/satellite-page" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+          <a href="/compliance/satellite-hylas1" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
             Return to HYLAS 1 satellite page</a>
 
         </div>
