@@ -1,0 +1,278 @@
+     <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Flagged manoeuvre history
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <p>This table shows the position of Hylas 1 after every flagged manoeuvre and the dates over which that manoeuvre occured.</p>
+          <p>Since reporting began, there have been <b>3</b> flagged manoeuvres which exceeded set UKSA tolerance thresholds.</p>
+          <p class="govuk-body"><table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+            <col>
+            <thead class="govuk-table__head">
+              <td class="govuk-table__cell govuk-body-s"></td>
+              <td class="govuk-table__cell govuk-body-s"></td>
+              <td class="govuk-table__cell govuk-body-s"></td>
+              <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Position after manoeuvre</b></td>
+            </tr>
+        
+            
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Monitoring flag event ID</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre start date</th>
+               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre end date</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inc (°)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Apogee (km)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Perigee (km)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Longitude (°)</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="/compliance/37237-001"><b>37237-004</b></a> </b><br/>
+                </td>
+                <td class="govuk-table__cell govuk-body-s">16/01/24</td>
+                <td class="govuk-table__cell govuk-body-s">18/01/24</td>
+                <td class="govuk-table__cell govuk-body-s">3.0</td>
+                <td class="govuk-table__cell govuk-body-s">35701</td>
+                <td class="govuk-table__cell govuk-body-s">35691</td>
+                <td class="govuk-table__cell govuk-body-s">159.6 E</td>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-002</b></a></b><br/>
+                </td>
+                <td class="govuk-table__cell govuk-body-s">11/12/23</td>
+                <td class="govuk-table__cell govuk-body-s">12/12/23</td>
+                <td class="govuk-table__cell govuk-body-s">2.7</td>
+                <td class="govuk-table__cell govuk-body-s">35476</td>
+                <td class="govuk-table__cell govuk-body-s">35466</td>
+                <td class="govuk-table__cell govuk-body-s">139.6 E</td>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-001</b></a></b><br/>
+                </td>
+                <td class="govuk-table__cell govuk-body-s">15/06/23</td>
+                <td class="govuk-table__cell govuk-body-s">18/10/23</td>
+                <td class="govuk-table__cell govuk-body-s">2.5</td>
+                <td class="govuk-table__cell govuk-body-s">34900</td>
+                <td class="govuk-table__cell govuk-body-s">34890</td>
+                <td class="govuk-table__cell govuk-body-s">145 E</td>
+              </tr>
+            </tbody>
+          </table></p>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help with table
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              More information about each manoeuvre can be accessed by clicking on the monitoring flag event ID.
+            </div>
+          </details>
+        </div>
+      </div>           
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              Position change from flagged manoeuvres
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <p class="govuk-body"><table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+            <col>
+            <thead class="govuk-table__head">
+              <td class="govuk-table__cell govuk-body-s"></td>
+              <td class="govuk-table__cell govuk-body-s"></td>
+              <td class="govuk-table__cell govuk-body-s"></td>
+              <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Position change from manoeuvre</b></td>
+            </tr>
+        
+            
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Monitoring flag event ID</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre start date</th>
+               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre end date</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inc (°)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Apogee (km)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Perigee (km)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Longitude (°)</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="/compliance/37237-001"><b>37237-004</b></a><br/>
+                </td>
+                <td class="govuk-table__cell govuk-body-s">16/01/24</td>
+                <td class="govuk-table__cell govuk-body-s">18/01/24</td>
+                <td class="govuk-table__cell govuk-body-s">+ 0.3</td>
+                <td class="govuk-table__cell govuk-body-s">+ 225</td>
+                <td class="govuk-table__cell govuk-body-s">+ 225</td>
+                <td class="govuk-table__cell govuk-body-s">+ 20 E</td>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-002</b></a><br/>
+                </td>
+                <td class="govuk-table__cell govuk-body-s">11/12/23</td>
+                <td class="govuk-table__cell govuk-body-s">12/12/23</td>
+                <td class="govuk-table__cell govuk-body-s">+ 0.2</td>
+                <td class="govuk-table__cell govuk-body-s">- 576</td>
+                <td class="govuk-table__cell govuk-body-s">- 576</td>
+                <td class="govuk-table__cell govuk-body-s">+ 5.4 W</td>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-001</b></a><br/>
+                </td>
+                <td class="govuk-table__cell govuk-body-s">15/10/23</td>
+                <td class="govuk-table__cell govuk-body-s">18/10/23</td>
+                <td class="govuk-table__cell govuk-body-s">+ 0.3</td>
+                <td class="govuk-table__cell govuk-body-s">+ 390</td>
+                <td class="govuk-table__cell govuk-body-s">+ 400</td>
+                <td class="govuk-table__cell govuk-body-s">+ 5 E</td>
+              </tr>
+            </tbody>
+          </table></p>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help with table
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              More information about each manoeuvre can be accessed by clicking on the monitoring flag event ID.
+            </div>
+          </details>
+
+
+
+
+          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+            <col>
+              <colgroup span="4"></colgroup>
+              <colgroup span="2"></colgroup>
+              <colgroup span="2"></colgroup>
+        
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Satellite information</b></td>
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Monitoring flags</b></td>
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Conjunction events</b></td>
+                </tr>
+        
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Common name</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>NORAD ID</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%";>International designator</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%";>Operator</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Date of most recent UKSA monitoring flag</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Most recent monitoring flag ID</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Monitoring flags in past 6 months</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Upcoming conjunction events (9 days to date)</th>
+                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Conjunction events in past month</th>
+        
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="#">OWLID00466</a></td>
+                <td class="govuk-table__cell govuk-body-s">54643</td>
+                <td class="govuk-table__cell govuk-body-s">2022-166B</td>
+                <td class="govuk-table__cell govuk-body-s">OneWeb</td>
+                <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">07/02/24 - manoeuvre ongoing</strong></td>
+                <td class="govuk-table__cell govuk-body-s"><a href="/compliance/37237-001">54643-001</a></td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">30</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="/compliance/satellite-hylas1">HYLAS 1</a></td>
+                <td class="govuk-table__cell govuk-body-s">37237</td>
+                <td class="govuk-table__cell govuk-body-s">2010-065A</td>
+                <td class="govuk-table__cell govuk-body-s">Avanti</td>
+                <td class="govuk-table__cell govuk-body-s">27/01/24</td>
+                <td class="govuk-table__cell govuk-body-s"><a href="/compliance/37237-001">37237-005</a></td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+              </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat HS3-IS</a></td>
+                  <td class="govuk-table__cell govuk-body-s">42814</td>
+                  <td class="govuk-table__cell govuk-body-s">2017-040A</td>
+                  <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
+                  <td class="govuk-table__cell govuk-body-s">24/01/24</td>
+                  <td class="govuk-table__cell govuk-body-s"><a href="#">42814-001</a></td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s"><a href="#">OWLID00007</a></td>
+                    <td class="govuk-table__cell govuk-body-s">45131</td>
+                    <td class="govuk-table__cell govuk-body-s">2020-008A</td>
+                    <td class="govuk-table__cell govuk-body-s">OneWeb</td>
+                    <td class="govuk-table__cell govuk-body-s">12/01/24</td>
+                    <td class="govuk-table__cell govuk-body-s"><a href="#">45131-003</a></td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">10</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">40</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-body-s"><a href="#">SKYNET 4E</a></td>
+                      <td class="govuk-table__cell govuk-body-s">25639</td>
+                      <td class="govuk-table__cell govuk-body-s">1999-009B</td>
+                      <td class="govuk-table__cell govuk-body-s">Airbus</td>
+                      <td class="govuk-table__cell govuk-body-s">03/01/24</td>
+                      <td class="govuk-table__cell govuk-body-s"><a href="#">25639-001</a></td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat 5-F4</a></td>
+                        <td class="govuk-table__cell govuk-body-s">42698</td>
+                        <td class="govuk-table__cell govuk-body-s">2017-025A</td>
+                        <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
+                        <td class="govuk-table__cell govuk-body-s">27/12/23</td>
+                        <td class="govuk-table__cell govuk-body-s"><a href="#">42698-004</a></td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">13</td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26</td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s"><a href="#">NAAL SL0012</a></td>
+                          <td class="govuk-table__cell govuk-body-s">44057</td>
+                          <td class="govuk-table__cell govuk-body-s">2019-010A</td>
+                          <td class="govuk-table__cell govuk-body-s">OneWeb</td>
+                          <td class="govuk-table__cell govuk-body-s">23/12/23</td>
+                          <td class="govuk-table__cell govuk-body-s"><a href="#">44057-001</a></td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s"><a href="#">NSL-2</a></td>
+                            <td class="govuk-table__cell govuk-body-s">55067</td>
+                            <td class="govuk-table__cell govuk-body-s">2023-001BL</td>
+                            <td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
+                            <td class="govuk-table__cell govuk-body-s">15/12/23</td>
+                            <td class="govuk-table__cell govuk-body-s"><a href="#">55067-003</a></td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">27</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
+                </tr>
+            </tbody>
+            </col>
+          </table>

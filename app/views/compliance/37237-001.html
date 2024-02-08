@@ -1,21 +1,26 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Event 327237-005
+Flag 37237-004
 {% endblock %}
 
 {% block content %}
 <div class="govuk-width-container">
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
+
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/compliance/satellite-page">HYLAS 1</a>
+        <a class="govuk-breadcrumbs__link" href="/compliance/list-satellites">UK licensed satellites</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/compliance/MAN001">Event 327237-001</a>
+        <a class="govuk-breadcrumbs__link" href="/satellites/operator/satellite-1">HYLAS 1</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/compliance/37237-001">Flag 37237-004</a>
       </li>
     </ol>
-    <h1 class="govuk-heading-xl">Monitoring flag event 327237-005</h1>
+  </div>
+    <h1 class="govuk-heading-xl">Monitoring flag 37237-004</h1>
   </div>
 
 
@@ -28,13 +33,10 @@ Event 327237-005
     <h3 class="govuk-heading-s">Contents</h3>
     <ul class="moj-side-navigation__list">
       <li class="moj-side-navigation__item">
-        <a href="#event summary">Event summary</a>
+        <a href="#event summary">Flag summary</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-1">Position data</a>
-      </li>
-      <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-2">Manoeuvre date information</a>
+        <a href="#accordion-heading-1">Evolution of satellite position</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#accordion-heading-2a">UKSA criteria thresholds exceeded</a>
@@ -43,19 +45,14 @@ Event 327237-005
         <a href="#accordion-heading-2a">Object data</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-3">Further information</a>
+        <a href="#accordion-heading-3">Operator contact information</a>
       </li>
       </ul>
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   </div>
   <div class="govuk-grid-column-three-quarters">
-    <h2 class="govuk-heading-l" id="event summary">Event summary</h2>
-    <br>
-    <p><b>Flagged object:</b> Hylas 1</p>
-    <p>UKSA's orbital analysis team are reporting on a manoeuvre by Hylas 1 that exceeds current tolerance values for its reporting criteria. Between the 16th and 18th of January 2024 it raised its orbit by approximately 225 km.</p>
-    <p>This section shows the positions of Hylas 1 during this manoeuvre and the dates during which the manoeuvre occured.</p>
-    <h1 class="govuk-heading-s">Manoeuvre date information</h1>
+    <h2 class="govuk-heading-l" id="event summary">Flag summary</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -64,6 +61,14 @@ Event 327237-005
         </tr>
       </thead>
       <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Flagged object</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Hylas 1</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Operator</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Avanti</td>
+        </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Manoeuvre start date</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">16/01/24</td>
@@ -115,6 +120,16 @@ Event 327237-005
         </tr>
       </tbody>
     </table></p>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with this summary
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>This flag has been uploaded by UKSA's orbital analysis team as they have identified and verified an object change that exceeds tolerance thresholds for one or more of UKSA's reporting criteria.</p>
+      </div>
+    </details>
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Contact a UKSA orbital analyst
     </button>
@@ -130,9 +145,19 @@ Event 327237-005
           </h2>
         </div>
         <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-          <p class="govuk-body">
-            <p>This chart show the positions of HYLAS 1 during a manoeuvre that triggered a UKSA monitoring flag.</p>
+            <p>This chart show the positions of HYLAS 1 during this flagged manoeuvre.</p>
             <img src="/public/images/HYLAS-1.PNG" alt="HYLAS 1" width="100%">
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with this chart
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>Altitude or longitude can be turned on or off by selecting the series in the legend below the chart.</p>
+                <p>You can reveal more details about a specific data point by moving your mouse over it or tapping on the data point on touch-enabled screens.</p>
+              </div>
+            </details>
         </div>
       </div>
         <div class="govuk-accordion__section">
@@ -143,10 +168,8 @@ Event 327237-005
               </span>
             </h2>
           </div>
-          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-            <p class="govuk-body">
-            <p>This table shows the reporting criteria that were flagged to UKSA for verification. These flags have been confirmed and show that a manoeuvre has been completed that exceeds the current thresholds for HYLAS 1.</p>  
-            <p>For this event, the flagged criteria are <b>semi-major-axis change</b> and <b>fixed longitude.</b></p> 
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content"> 
+            <p>For this manoeuvre, the flagged criteria were <b>semi-major-axis change</b> and <b>fixed longitude.</b></p> 
               <table class="govuk-table">
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
@@ -198,6 +221,20 @@ Event 327237-005
                 </tr>
               </tbody>
             </table></p>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with table
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>This table shows the reporting criteria that were flagged to UKSA for verification. These flags have been confirmed and show that a manoeuvre has been completed that exceeds the current thresholds for HYLAS 1.</p>
+              </div>
+            </details>
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Request a threshold change
+            </button>
+            <br>
           </div>
         </div>
           <div class="govuk-accordion__section">
@@ -298,12 +335,11 @@ Event 327237-005
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
                 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                Futher information
+                Operator contact information
                 </span>
               </h2>
             </div>
             <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-              <p class="govuk-body">This table provides detail on the operator of the satellite and contact information for that operator.</p>
               <dl class="govuk-summary-list">
                 <div class="govuk-summary-list__row">
                   <dt class="govuk-summary-list__key">
