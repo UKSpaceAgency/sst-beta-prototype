@@ -3,7 +3,10 @@
         "shortID":"RE-20241003-40306",
         "reportNumber":1,
         "reportTime":"2024-10-02T02:22:35",
-        "tipExternalID": 55323,
+        "timeWindowStart":"2024-10-03T02:20:35",
+        "timeWindowEnd":"2024-10-03T12:33:00",
+        "tipExternalID": "55323",
+        "probability":0.04, // no need to use UK
         "noradID":"40306",
         "objectName":"CZ-2C R/B",
         "objectType":"Rocket body",
@@ -18,10 +21,6 @@
         "perigee":197,
         "inclination":97.4,
 // Executive summary (all ...Addition fields can be added or edited by Approver user types via editing interface)
-
-        "probability":0.04, // no need to use UK
-        "timeWindowStart":"2024-10-03T02:20:35",
-        "timeWindowEnd":"2024-10-03T12:33:00",
         "overflightTime":[ // no need to use UK
             "2024-10-03T11:33:00",
             "2024-10-03T13:33:00",
@@ -29,7 +28,6 @@
         ],
         "survivability":"Medium", // or scale [0...1],
         "survivabilityComment":"The high-density components and physical shape of rocket bodies can result in an increased chance of survival upon re-entry",
-        "execSummaryAddition":"",
 
 // Potential impact by UK nation (add overflightTime2 to each nation with a second overflight)
 
@@ -202,10 +200,6 @@
 
 // Guidance on response (all ...Addition fields can be added or edited by Approver user types via editing interface)
 
-        "immediateResponseAddition":"",
-        "recoveryAndCleanUpAddition":"",
-        "liabilityForDamagesAddition":"",
-        "pressAttentionAddition":"We have not seen any press attention on this event.",
 
 // Re-entry overflight map (with 30,000 data points in real version)
         "mapPoints":[
