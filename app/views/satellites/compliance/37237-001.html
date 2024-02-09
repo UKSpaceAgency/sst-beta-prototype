@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Flag 37237-004
+Monitoring flag 37237-004
 {% endblock %}
 
 {% block content %}
@@ -10,13 +10,13 @@ Flag 37237-004
     <ol class="govuk-breadcrumbs__list">
 
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/compliance/list-satellites">UK licensed satellites</a>
+        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/satellite-list">UK-licensed satellites</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/satellites/operator/satellite-1">HYLAS 1</a>
+        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/satellite-hylas1">HYLAS 1</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/compliance/37237-001">Flag 37237-004</a>
+        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/37237-001">Monitoring flag 37237-004</a>
       </li>
     </ol>
   </div>
@@ -33,26 +33,26 @@ Flag 37237-004
     <h3 class="govuk-heading-s">Contents</h3>
     <ul class="moj-side-navigation__list">
       <li class="moj-side-navigation__item">
-        <a href="#event summary">Flag summary</a>
+        <a href="#event summary">Summary</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-1">Evolution of satellite position</a>
+        <a href="#accordion-default-heading-1">Evolution of satellite position</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-2a">UKSA criteria thresholds exceeded</a>
+        <a href="#accordion-default-heading-2">Reason for flag</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-2a">Object data</a>
+        <a href="#accordion-default-heading-3">Object data</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-heading-3">Operator contact information</a>
+        <a href="#accordion-default-heading-4">Operator contact information</a>
       </li>
       </ul>
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
   </div>
   <div class="govuk-grid-column-three-quarters">
-    <h2 class="govuk-heading-l" id="event summary">Flag summary</h2>
+    <h2 class="govuk-heading-l" id="event summary">Summary</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -127,7 +127,7 @@ Flag 37237-004
         </span>
       </summary>
       <div class="govuk-details__text">
-        <p>This flag has been uploaded by UKSA's orbital analysis team as they have identified and verified an object change that exceeds tolerance thresholds for one or more of UKSA's reporting criteria.</p>
+        <p>This flag has been uploaded by UKSA's orbital analysis team as they have identified and verified an object change that exceeds tolerance thresholds for one or more of UKSA's criteria for flagging an object.</p>
       </div>
     </details>
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -163,19 +163,19 @@ Flag 37237-004
         <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                UKSA criteria thresholds exceeded
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Reason for flag
               </span>
             </h2>
           </div>
           <div id="accordion-default-content-1" class="govuk-accordion__section-content"> 
-            <p>For this manoeuvre, the flagged criteria were <b>semi-major-axis change</b> and <b>fixed longitude.</b></p> 
+            <p>This flag was raised because HYLAS 1 exceeded object-specific thresholds for <b>semi-major-axis change</b> and <b>fixed longitude</b>.</p> 
               <table class="govuk-table">
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Reporting criteria</th>
-                        <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Criteria threshold(s) exceeded?</th>
-                        <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Current thresholds for HYLAS 1</th>
+                        <th scope="row" class="govuk-table__header"></th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Threshold(s) exceeded?</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Thresholds for HYLAS 1</th>
                       </tr>
                     </thead>
                     <tbody class="govuk-table__body">
@@ -224,23 +224,21 @@ Flag 37237-004
             <details class="govuk-details">
               <summary class="govuk-details__summary">
                 <span class="govuk-details__summary-text">
-                  Help with table
+                  Help with this table
                 </span>
               </summary>
               <div class="govuk-details__text">
-                <p>This table shows the reporting criteria that were flagged to UKSA for verification. These flags have been confirmed and show that a manoeuvre has been completed that exceeds the current thresholds for HYLAS 1.</p>
+                <p>This table shows which thresholds were exceeded to flag this object to UKSA. These flags have been verified by UKSA Orbital Analysts, confirming that a manoeuvre has been completed that exceeds the current thresholds for HYLAS 1.</p>
               </div>
             </details>
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Request a threshold change
-            </button>
+
             <br>
           </div>
         </div>
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
                   Object data
                 </span>
               </h2>
@@ -334,7 +332,7 @@ Flag 37237-004
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
                 Operator contact information
                 </span>
               </h2>
@@ -379,7 +377,7 @@ Flag 37237-004
             </div>
           </div>
         </div>
-          <a href="/compliance/satellite-hylas1" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+          <a href="/satellites/compliance/satellite-hylas1" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
             Return to HYLAS 1 satellite page</a>
 
         </div>
