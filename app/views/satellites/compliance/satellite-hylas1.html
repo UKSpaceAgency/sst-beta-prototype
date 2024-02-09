@@ -26,7 +26,7 @@ HYLAS 1
     </div>
     <div class="govuk-notification-banner__content">
       <p class="govuk-notification-banner__heading">
-        This satellite has triggered a UKSA monitoring flag in the past month.
+        This satellite has triggered a UKSA monitoring flag in the past 30 days. Flag ID: <a href="/satellites/compliance/37237-001"><b>37237-004</b></a> 
       </p>
     </div>
   </div>
@@ -230,6 +230,7 @@ HYLAS 1
               <p>This table records the position of Hylas 1 over time, tracking positional changes that are within allowed thresholds, such as allowed GEO drift and orbit raising.</p>
             </div>
           </details>
+          <p>Download position history for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
         </div>
       </div>
       <div class="govuk-accordion__section">
@@ -306,8 +307,8 @@ HYLAS 1
               <p>More information about each manoeuvre can be accessed by clicking on the monitoring flag event ID.</p>
             </div>
           </details>
-          <h2 class="govuk-heading-s" id="satellite information">Flagged manoeuvre history</h2>
-          <p>Of these <b>4</b> monitoring flags, <b>3</b> have been caused by manoeuvres which exceeded set UKSA tolerance thresholds.</p>
+          <p>Download monitoring flag history for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+          <h2 class="govuk-heading-s" id="satellite information">Flags due to position change</h2>
           <p class="govuk-body"><table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
             <col>
             <thead class="govuk-table__head">
@@ -376,76 +377,78 @@ HYLAS 1
               <p>More information about each manoeuvre can be accessed by clicking on the monitoring flag event ID.</p>
             </div>
           </details>
+          <p>Download flags due to position change for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
           <h2 class="govuk-heading-s" id="satellite information">Position change from flagged manoeuvres</h2>
-          <br>
-          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-            <col>
-            <thead class="govuk-table__head">
-              <td class="govuk-table__cell govuk-body-s"></td>
-              <td class="govuk-table__cell govuk-body-s"></td>
-              <td class="govuk-table__cell govuk-body-s"></td>
-              <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Position change from manoeuvre</b></td>
-            </tr>
-        
-            
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Monitoring flag event ID</th>
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre start date</th>
-               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre end date</th>
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inc (°)</th>
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Apogee (km)</th>
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Perigee (km)</th>
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Longitude (°)</th>
+            <br>
+            <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+              <col>
+              <thead class="govuk-table__head">
+                <td class="govuk-table__cell govuk-body-s"></td>
+                <td class="govuk-table__cell govuk-body-s"></td>
+                <td class="govuk-table__cell govuk-body-s"></td>
+                <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Position change from manoeuvre</b></td>
               </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237-001"><b>37237-004</b></a><br/>
-                </td>
-                <td class="govuk-table__cell govuk-body-s">16/01/24</td>
-                <td class="govuk-table__cell govuk-body-s">18/01/24</td>
-                <td class="govuk-table__cell govuk-body-s">+ 0.3</td>
-                <td class="govuk-table__cell govuk-body-s">+ 225</td>
-                <td class="govuk-table__cell govuk-body-s">+ 225</td>
-                <td class="govuk-table__cell govuk-body-s">+ 20 E</td>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-002</b></a><br/>
-                </td>
-                <td class="govuk-table__cell govuk-body-s">11/12/23</td>
-                <td class="govuk-table__cell govuk-body-s">12/12/23</td>
-                <td class="govuk-table__cell govuk-body-s">+ 0.2</td>
-                <td class="govuk-table__cell govuk-body-s">- 576</td>
-                <td class="govuk-table__cell govuk-body-s">- 576</td>
-                <td class="govuk-table__cell govuk-body-s">+ 5.4 W</td>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-001</b></a><br/>
-                </td>
-                <td class="govuk-table__cell govuk-body-s">15/10/23</td>
-                <td class="govuk-table__cell govuk-body-s">18/10/23</td>
-                <td class="govuk-table__cell govuk-body-s">+ 0.3</td>
-                <td class="govuk-table__cell govuk-body-s">+ 390</td>
-                <td class="govuk-table__cell govuk-body-s">+ 400</td>
-                <td class="govuk-table__cell govuk-body-s">+ 5 E</td>
-              </tr>
-            </tbody>
-          </table></p>
-          <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                Help with this table
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              <p>This table shows the position of Hylas 1 after every flagged manoeuvre and the dates over which that manoeuvre occured.</p>
-              <p>More information about each manoeuvre can be accessed by clicking on the monitoring flag event ID.</p>
-            </div>
-          </details>
+          
+              
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Monitoring flag event ID</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre start date</th>
+                 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre end date</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inc (°)</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Apogee (km)</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Perigee (km)</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Longitude (°)</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237-001"><b>37237-004</b></a><br/>
+                  </td>
+                  <td class="govuk-table__cell govuk-body-s">16/01/24</td>
+                  <td class="govuk-table__cell govuk-body-s">18/01/24</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 0.3</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 225</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 225</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 20 E</td>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-002</b></a><br/>
+                  </td>
+                  <td class="govuk-table__cell govuk-body-s">11/12/23</td>
+                  <td class="govuk-table__cell govuk-body-s">12/12/23</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 0.2</td>
+                  <td class="govuk-table__cell govuk-body-s">- 576</td>
+                  <td class="govuk-table__cell govuk-body-s">- 576</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 5.4 W</td>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-001</b></a><br/>
+                  </td>
+                  <td class="govuk-table__cell govuk-body-s">15/10/23</td>
+                  <td class="govuk-table__cell govuk-body-s">18/10/23</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 0.3</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 390</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 400</td>
+                  <td class="govuk-table__cell govuk-body-s">+ 5 E</td>
+                </tr>
+              </tbody>
+            </table></p>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with this table
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>This table shows the position of Hylas 1 after every flagged manoeuvre and the dates over which that manoeuvre occured.</p>
+                <p>More information about each manoeuvre can be accessed by clicking on the monitoring flag event ID.</p>
+              </div>
+            </details></p>
+            <p>Download position change due to flagged manoeuvres for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
         </div>
       </div>
       </div>
@@ -521,6 +524,7 @@ HYLAS 1
                 </tr>
                   </tbody>
             </table></p>
+            <p>Download upcoming conjunction events for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
           </div>
         </div>
         <div class="govuk-accordion__section">
@@ -596,6 +600,7 @@ HYLAS 1
                 </tr>
               </tbody>
             </table></p>
+            <p>Download previous conjunction events for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
           </div>
         </div>
         </div>

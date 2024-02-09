@@ -41,11 +41,12 @@ Monitoring flag 37237-004
       <li class="moj-side-navigation__item">
         <a href="#accordion-default-heading-2">Reason for flag</a>
       </li>
-      <li class="moj-side-navigation__item">
-        <a href="#accordion-default-heading-3">Object data</a>
+        <li class="moj-side-navigation__item">
+          <a href="#accordion-default-heading-4">Operator contact information</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-default-heading-4">Operator contact information</a>
+        <a href="#accordion-default-heading-4">Object data</a>
+      </li>
       </li>
       </ul>
 
@@ -63,11 +64,15 @@ Monitoring flag 37237-004
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Flagged object</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/compliance/satellite-hylas1">HYLAS 1</a></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/satellites/compliance/satellite-hylas1">HYLAS 1</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Operator</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">Avanti</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Reason for flag</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">Position change</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Manoeuvre start date</th>
@@ -88,35 +93,33 @@ Monitoring flag 37237-004
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"></th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Position prior to manoeuvre</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Change in position</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Position after manoeuvre</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Inc(°)</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Apogee(km)</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Perigee(km)</th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Longitude(km)</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Inc (°)</th>
+          <th scope="row" class="govuk-table__header">Position prior to manoeuvre</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">2.8</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">+ 0.2</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">3.0</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">35476</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">35466</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">139.6 E</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Apogee (km)</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">35476</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">+ 225</td>
+          <th scope="row" class="govuk-table__header">Position after manoeuvre</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">3.0</td>
           <td class="govuk-table__cell govuk-table__cell--numeric">35701</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">35691</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">159.6 E</td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">Perigee (km)</th>
-        <td class="govuk-table__cell govuk-table__cell--numeric">35466</td>
+        <th scope="row" class="govuk-table__header">Change in position</th>
+        <td class="govuk-table__cell govuk-table__cell--numeric">+0.2</td>
         <td class="govuk-table__cell govuk-table__cell--numeric">+ 225</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric">35691</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Longitude (°)</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">139.6 E</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">+ 20 E</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">159.6 E</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric">+ 225</td>
+        <td class="govuk-table__cell govuk-table__cell--numeric">+ 20 E</td>
         </tr>
       </tbody>
     </table></p>
@@ -201,7 +204,7 @@ Monitoring flag 37237-004
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Fixed inclination</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--turquoise">N/A</strong></td>
                       <td class="govuk-table__cell govuk-table__cell--numeric"></td>
                     </tr>
                     <tr class="govuk-table__row">
@@ -235,10 +238,53 @@ Monitoring flag 37237-004
             <br>
           </div>
         </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              Operator contact information
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Licensee
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Avanti
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Primary contact
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  John Doe
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Telephone number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  +44(0)7912277788
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Email contacts
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">john.doe@avantiplc.com</p>
+                </dd>
+              </div>
+            </div>
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
                   Object data
                 </span>
               </h2>
@@ -329,54 +375,9 @@ Monitoring flag 37237-004
         </table></p>
             </div>
           </div>
-          <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-                Operator contact information
-                </span>
-              </h2>
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-              <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Licensee
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Avanti
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Primary contact
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    John Doe
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Telephone number
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    +44(0)7912277788
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Email contacts
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    <p class="govuk-body">john.doe@avantiplc.com</p>
-                  </dd>
-                    </ul>
-                  </dd>
-                </div>
-              </dl>
-            </div>
           </div>
-        </div>
+          </div>  
+        
           <a href="/satellites/compliance/satellite-hylas1" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
             Return to HYLAS 1 satellite page</a>
 
