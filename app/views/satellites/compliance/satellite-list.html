@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Registered satellites
+Satellites
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@ Registered satellites
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h2 class="govuk-heading-xl">UK licensed satellites</h2>
+        <h2 class="govuk-heading-xl">UK-licensed satellites</h2>
 
         <div class="moj-search">
         <form action="#" method="post">
@@ -73,18 +73,18 @@ Registered satellites
               <td class="govuk-table__cell govuk-body-s"><a href="#">OWLID00466</a></td>
               <td class="govuk-table__cell govuk-body-s">54643</td>
               <td class="govuk-table__cell govuk-body-s">OneWeb</td>
-              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">07/02/24 - manoeuvre ongoing</strong></td>
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">07/02/24 <br> manoeuvre ongoing</strong></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">54643-001</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">14</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">24</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s"><a href="/compliance/satellite-hylas1">HYLAS 1</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">HYLAS 1</a></td>
               <td class="govuk-table__cell govuk-body-s">37237</td>
               <td class="govuk-table__cell govuk-body-s">Avanti</td>
               <td class="govuk-table__cell govuk-body-s">27/01/24</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/compliance/37237-001">37237-004</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237-001">37237-004</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">35</td>
@@ -153,7 +153,7 @@ Registered satellites
           </col>
         </table>
 
-        <p>Download UK licensed satellites [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+        <p>Download summary table of UK-licensed satellites [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
 
         <div class="govuk-inset-text">
           Upcoming known conjunction events and most recent satellite manoeuvres as of 12/02/24 12:35:23.
@@ -169,9 +169,9 @@ Registered satellites
             <b>This table shows details on all UK-licensed satellites.</b>
             <p> </p>
             <ul class="govuk-list govuk-list--bullet">
-              <li>Select the satellite name to view more information.</li>
-              <li>Select the monitoring flag event ID for more information on the satellite's most recent UKSA monitoring flag.</li>
-              <li>Sort the satellites according to criteria by clicking on the relevant headings or using the drop-down filter.</li>
+              <li>Select the <b>satellite name</b> to view more information.</li>
+              <li>Select the <b>monitoring flag ID</b> for more information on the satellite's most recent UKSA monitoring flag.</li>
+              <li>Sort the satellites according to criteria by clicking on the relevant <b>headings</b> or using the <b>drop-down filter</b>.</li>
             </ul>
           </div>
         </details>
