@@ -443,3 +443,99 @@
                       <p>More information about each manoeuvre can be accessed by clicking on the monitoring flag event ID.</p>
                     </div>
                   </details>
+
+
+
+                  <h2 class="govuk-heading-s" id="satellite information">Flags due to position change</h2>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Monitoring flag ID</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Manoeuvre start date</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Manoeuvre end date</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Inc (°)</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Apogee (km)</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Perigee (km)</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Longitude</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open">37237-004</span></td>
+                    <td class="govuk-table__cell govuk-body-s">16/01/24</td>
+                    <td class="govuk-table__cell govuk-body-s">18/01/24</td>
+                    <td class="govuk-table__cell govuk-body-s">3</td>
+                    <td class="govuk-table__cell govuk-body-s">35701</td>
+                    <td class="govuk-table__cell govuk-body-s">35691</td>
+                    <td class="govuk-table__cell govuk-body-s">159.6 E</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s" colspan="6">
+                      <table class="govuk-table" style="margin-left: 30px">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-one-half"><b>Monitoring flag ID</b></td>
+                          <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237-001">37237-004</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-one-half"><b>Position change from manoeuvre</b></td>
+                          <td class="govuk-table__cell govuk-body-s"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-one-half">Inclination (°)</td>
+                          <td class="govuk-table__cell govuk-body-s">+ 0.3</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-one-half">Apogee (km)</td>
+                          <td class="govuk-table__cell govuk-body-s">+ 225</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-one-half">Perigee (km)</td>
+                          <td class="govuk-table__cell govuk-body-s">+ 225</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-one-half">Longitude (°)</td>
+                          <td class="govuk-table__cell govuk-body-s">+20 E</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open">37237-002</span></td>
+                  </td>
+                  <td class="govuk-table__cell govuk-body-s">11/12/23</td>
+                  <td class="govuk-table__cell govuk-body-s">12/12/23</td>
+                  <td class="govuk-table__cell govuk-body-s">2.7</td>
+                  <td class="govuk-table__cell govuk-body-s">35476</td>
+                  <td class="govuk-table__cell govuk-body-s">35466</td>
+                  <td class="govuk-table__cell govuk-body-s">139.6 E</td>
+                </tr>
+              </thead>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open">37237-001</span></td>
+                  </td>
+                  <td class="govuk-table__cell govuk-body-s">15/06/23</td>
+                  <td class="govuk-table__cell govuk-body-s">18/10/23</td>
+                  <td class="govuk-table__cell govuk-body-s">2.5</td>
+                  <td class="govuk-table__cell govuk-body-s">34900</td>
+                  <td class="govuk-table__cell govuk-body-s">34890</td>
+                  <td class="govuk-table__cell govuk-body-s">145 E</td>
+                </tr>
+              </tbody>
+            </table></p>
+            <details class="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Help with this table
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>This table shows the position of Hylas 1 after every flagged manoeuvre and the dates over which that manoeuvre occured.</p>
+                <p>More information about each manoeuvre can be accessed by clicking on the monitoring flag event ID.</p>
+              </div>
+            </details>
+            <p>Download flags due to position change for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+                </tr>
+        </div>
+        </div>
+      </div>
+      <br>
