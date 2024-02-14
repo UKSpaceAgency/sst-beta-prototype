@@ -1,0 +1,244 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Avanti
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">UK-licensed satellites</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Avanti</a>
+          </li>
+        </ol>
+      </div>
+
+</div>
+<main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Avanti</h1>
+        <h2 class="govuk-heading-l">Monitoring flags for Avanti satellites
+        </h2>
+
+        <p class="govuk-body">This table contains a history of all monitoring flags for all Avanti satellites. The most recent flags are found at the top of the table. All flags have been checked by orbital analysts at the UKSA and have been verified as legitimate.</p>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Filter by satellite
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">HYLAS 1</option>
+    <option value="updated" selected>HYLAS 2</option>
+    <option value="views">HYLAS 4</option>
+  </select>
+</div>
+
+  <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+    <col>
+      <colgroup span="3"></colgroup>
+      <colgroup span="2"></colgroup>
+      <colgroup span="2"></colgroup>
+            
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Object information</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Monitoring flags</b></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Monitoring flag ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Flagged object</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Date of flag</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Reason for flag</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Flag status</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Total number of flags for this object</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">37237-004</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">HYLAS 1</a></td>
+              <td class="govuk-table__cell govuk-body-s">17/01/24</td>
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">Unexpected position change</strong></td>
+              <td class="govuk-table__cell govuk-body-s">Closed</td>
+              <td class="govuk-table__cell govuk-body-s">15</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">38741-002</a></td>
+                <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 2</a></td>
+                <td class="govuk-table__cell govuk-body-s">03/01/24</td>
+                <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as expected</strong></td>
+                <td class="govuk-table__cell govuk-body-s">Closed</td>
+                <td class="govuk-table__cell govuk-body-s">4</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">43272-001</a></td>
+                <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 4</a></td>
+                <td class="govuk-table__cell govuk-body-s">27/12/23</td>
+                <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">Expected manoeuvre</strong></td>
+                <td class="govuk-table__cell govuk-body-s">Closed</td>
+                <td class="govuk-table__cell govuk-body-s">7</td>
+              </tr>
+          </tbody>
+          </col>
+        </table>
+
+        <p>Download summary table for satellite flags [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
+        <p>Download all available data for satellite flags [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with this table
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Click the links to see more detail on either the flag itself or the flagged object.
+            <p>
+            </ul>
+          </div>
+        </details>
+        <br>
+
+        <h2 class="govuk-heading-l">Analysis of flags for Avanti satellites</h2>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Total flags by satellite
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                <p class="govuk-body"><img src="/public/images/percentagebysatellite.PNG" alt="Percentage flags" width="60%"></p>
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Satellite</th>
+                      <th scope="col" class="govuk-table__header">Number of flags</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">HYLAS 1</td>
+                      <td class="govuk-table__cell">8</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">HYLAS 2</td>
+                      <td class="govuk-table__cell">4</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">HYLAS 4</td>
+                      <td class="govuk-table__cell">2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                    Total flags by type and satellite
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                <p class="govuk-body"><img src="/public/images/flagsbytype2.PNG" alt="Total flags" width="60%"></p>
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header govuk-body-s">Satellite</th>
+                      <th scope="col" class="govuk-table__header govuk-body-s">Manoeuvre not as expected</th>
+                      <th scope="col" class="govuk-table__header govuk-body-s">Unexpected position change</th>
+                      <th scope="col" class="govuk-table__header govuk-body-s">No recent data</th>
+                      <th scope="col" class="govuk-table__header govuk-body-s">Expected manoeuvre</th>
+                      <th scope="col" class="govuk-table__header govuk-body-s">Total flags</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">HYLAS 1</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">HYLAS 2</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">4</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">HYLAS 4</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><b>Total</b></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">8</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <br>
+          <h2 class="govuk-heading-l">Analysis of flags for all operators</h2>
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+              <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                      Total flags by operator
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                  <p class="govuk-body">This is the content for Writing well for the web.</p>
+                </div>
+              </div>
+              <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                      Total flags
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                  <p class="govuk-body">This is the content for Writing well for the web.</p>
+                </div>
+              </div>
+            </div>
+
+        <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Return to previous page</a>
+
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
