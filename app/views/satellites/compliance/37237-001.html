@@ -36,10 +36,10 @@ Monitoring flag 37237-004
         <a href="#event summary">Summary</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-default-heading-1">Evolution of satellite position</a>
+        <a href="#accordion-default-heading-1">Reason for flag</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#accordion-default-heading-2">Reason for flag</a>
+        <a href="#accordion-default-heading-2">Evolution of satellite position</a>
       </li>
         <li class="moj-side-navigation__item">
           <a href="#accordion-default-heading-4">Operator contact information</a>
@@ -54,10 +54,12 @@ Monitoring flag 37237-004
   </div>
   <div class="govuk-grid-column-three-quarters">
     <h2 class="govuk-heading-l" id="event summary">Summary</h2>
+    <p>UKSA's orbital analysis team have monitored Hylas 1 as it has completed a position change. </p> 
+    <p> This position change is <b>unexpected</b> and has not been reported by the operator to the CAA or UKSA. The position change was identified as HYLAS 1 exceeded the tolerance thresholds for one or more of UKSA's reporting criteria.</p>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header">Object information</th>
           <th scope="col" class="govuk-table__header"></th>
         </tr>
       </thead>
@@ -71,12 +73,26 @@ Monitoring flag 37237-004
           <td class="govuk-table__cell govuk-table__cell--numeric">37237</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Operator</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">Avanti</td>
+          <th scope="row" class="govuk-table__header">International designator</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">	2010-065A</td>
         </tr>
         <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Operator</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="/satellites/compliance/operatorview">Avanti</a></td>
+        </tr>
+      </tbody>
+    </table></p>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Flag information</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Reason for flag</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">Position change</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">unexpected position change</strong></td></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Position change start date</th>
@@ -93,41 +109,6 @@ Monitoring flag 37237-004
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">TLE count (in the month prior to flag)</th>
           <td class="govuk-table__cell govuk-table__cell--numeric">31</td>
-        </tr>
-      </tbody>
-    </table></p>
-    <h1 class="govuk-heading-s">Position information</h1>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"></th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Inc(°)</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Apogee(km)</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Perigee(km)</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Longitude(km)</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Position prior to movement</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">2.8</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">35476</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">35466</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">139.6 E</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Position after movement</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">3.0</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">35701</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">35691</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">159.6 E</td>
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">Change in position</th>
-        <td class="govuk-table__cell govuk-table__cell--numeric">+0.2</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric">+ 225</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric">+ 225</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric">+ 20 E</td>
         </tr>
       </tbody>
     </table></p>
@@ -151,97 +132,142 @@ Monitoring flag 37237-004
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-              Evolution of satellite position
+              Reason for flag
             </span>
           </h2>
         </div>
-        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-            <p>This chart show the positions of HYLAS 1 during this flagged position change.</p>
-            <img src="/public/images/HYLAS-1.PNG" alt="HYLAS 1" width="100%">
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Help with this chart
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                <p>Altitude or longitude can be turned on or off by selecting the series in the legend below the chart.</p>
-                <p>You can reveal more details about a specific data point by moving your mouse over it or tapping on the data point on touch-enabled screens.</p>
-              </div>
-            </details>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content"> 
+          <p>This flag was raised because HYLAS 1 exceeded object-specific monitoring thresholds. As no manoeuvre was expected, exceeding these thresholds has flagged the move as an unexpected position change.</p> 
+            <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header"></th>
+                      <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Threshold(s) exceeded?</th>
+                      <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Current thresholds</th>
+                      <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Actual position change</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">TLE age</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">7 days</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Fixed semi-major-axis change</th>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Semi-major-axis change</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">Yes</strong></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">2 km</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">225 km</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Semi-major-axis change rate</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Fixed inclination</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--turquoise">N/A</strong></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Inclination change</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Fixed longitude</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">Yes</strong></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Longitude drift rate</th>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+              </tr>
+            </tbody>
+          </table></p>
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help with this table
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>This table shows which thresholds were exceeded to flag this object to UKSA. These flags have been verified by orbital analysis at UKSA. </p>
+            </div>
+          </details>
         </div>
       </div>
         <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading">
               <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                Reason for flag
+                Evolution of satellite position
               </span>
             </h2>
           </div>
-          <div id="accordion-default-content-1" class="govuk-accordion__section-content"> 
-            <p>This flag was raised because HYLAS 1 exceeded object-specific thresholds for <b>semi-major-axis change</b> and <b>fixed longitude</b>.</p> 
-              <table class="govuk-table">
-                    <thead class="govuk-table__head">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header"></th>
-                        <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Threshold(s) exceeded?</th>
-                        <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Thresholds for HYLAS 1</th>
-                      </tr>
-                    </thead>
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">TLE age</th>
-                        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
-                        <td class="govuk-table__cell govuk-table__cell--numeric">7 days</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Fixed semi-major-axis change</th>
-                        <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
-                        <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Semi-major-axis change</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">Yes</strong></td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric">2 km</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Semi-major-axis change rate</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Fixed inclination</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--turquoise">N/A</strong></td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Inclination change</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Fixed longitude</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--blue">Yes</strong></td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Longitude drift rate</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--grey">No</strong></td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <h1 class="govuk-heading-s">Position information</h1>
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header"></th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Inc(°)</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Apogee(km)</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Perigee(km)</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Longitude(°)</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Position prior to movement</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">2.8</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">35476</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">35466</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">139.6 E</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Position after movement</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">3.0</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">35701</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">35691</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">159.6 E</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Change in position</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">+0.2</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">+ 225</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">+ 225</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">+ 20 E</td>
                 </tr>
               </tbody>
             </table></p>
-            <details class="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Help with this table
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                <p>This table shows which thresholds were exceeded to flag this object to UKSA. These flags have been verified by orbital analysis at UKSA. </p>
-              </div>
-            </details>
+            <br>
+              <p>This chart show the positions of HYLAS 1 during this flagged position change.</p>
+              <img src="/public/images/HYLAS-1.PNG" alt="HYLAS 1" width="100%">
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Help with this chart
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>Altitude or longitude can be turned on or off by selecting the series in the legend below the chart.</p>
+                  <p>You can reveal more details about a specific data point by moving your mouse over it or tapping on the data point on touch-enabled screens.</p>
+                </div>
+              </details>
 
             <br>
           </div>
