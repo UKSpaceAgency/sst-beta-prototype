@@ -144,8 +144,8 @@ Avanti
                             <th scope="col" class="govuk-table__header govuk-body-s">Total flags raised</th>
                             <th scope="col" class="govuk-table__header govuk-body-s">Manoeuvre not as expected</th>
                             <th scope="col" class="govuk-table__header govuk-body-s">Unexpected position change</th>
-                            <th scope="col" class="govuk-table__header govuk-body-s">No recent data</th>
                             <th scope="col" class="govuk-table__header govuk-body-s">Expected manoeuvre</th>
+                            <th scope="col" class="govuk-table__header govuk-body-s">No recent data</th>
                           </tr>
                         </thead>
                         <tbody class="govuk-table__body">
@@ -154,16 +154,16 @@ Avanti
                             <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15</td>
                             <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5</td>
                             <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
-                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5</td>
                             <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5</td>
                           </tr>
                           <tr class="govuk-table__row">
                               <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 2</a></td>
                               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4</td>
                               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
                               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
                               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
                           </tr>
                           <tr class="govuk-table__row">
                               <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 4</a></td>
@@ -259,97 +259,143 @@ Avanti
                 <div class="govuk-accordion__section-header">
                   <h2 class="govuk-accordion__section-heading">
                     <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                      Total flags by operator
-                    </span>
+                      UK average by type of flag
+                      </span>
                   </h2>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
                   <p>Avanti have had <b>26</b> flags raised since reporting began in 2024, with an average number of flags by satellite of <b>8.7</b>. <b>23%</b> of these were expected position changes and <b>73%</b> were from unexpected changes or data quality issues.</p>
-                  <p>The percentage of flags regarding unexpected changes or data quality issues is the highest across all operators. </p>
                   <br>
-                  <div class="moj-search">
-                    <form action="#" method="post">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-                        Find an operator:
-                      </label>
-            
-                      <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by operator name" aria-describedby="search-hint">
+                  <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header"></th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Avanti</th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">Average across UK operators</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Average number of flags by satellite</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">8.7</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">4.6</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Flags from expected manoeuvres</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">23%</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">48%</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Flags from manoeuvre not as expected</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">35%</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">22%</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Flags from unexpected position change</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">19%</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">17%</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Flags from no recent data</th>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">23%</td>
+                        <td class="govuk-table__cell govuk-table__cell--numeric">13%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+                  <div class="govuk-accordion__section">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                          Total flags by operator
+                        </span>
+                      </h2>
                     </div>
-            
-                    <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
-                      Search
-                    </button>
-                    </form>
-                    </div>
-                    <br>
-                  <p class="govuk-body"> <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
-                    <col>
-                      <colgroup span="3"></colgroup>
-                      <colgroup span="2"></colgroup>
-                      <colgroup span="2"></colgroup>
-                            
-                          <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b></b></td>
-                              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Total flags</b></td>
-                              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Type of flag</b></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <th scope="col" class="govuk-table__header govuk-body-s">Operator</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s">Total number of flags</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s">Average number of flags by satellite</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s">Flags from expected manoeuvres (%)</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s">Flags from manoeuvre not as expected (%)</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s">Flags from unexpected position change (%)</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s">Flags from no recent data (%)</th>
-                            </tr>
-                          </thead>
-                          <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">Avanti</a></td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">8.7</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">35%</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">19%</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s"><a href="#">SES</a></td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">93</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3.4</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">55%</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">25%</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7%</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">13%</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat</a></td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">100</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3.7</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">34%</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">28%</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15%</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
-                              </tr>
-                          </tbody>
-                          </col>
-                        </table>
-                        <p>Download this table [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
-
-                        <details class="govuk-details" data-module="govuk-details">
-                          <summary class="govuk-details__summary">
-                            <span class="govuk-details__summary-text">
-                              Help with this table
-                            </span>
-                          </summary>
-                          <div class="govuk-details__text">
-                            This table compares the number and type of flag by operator.
-                            <p>
-                            </ul>
-                          </div>
-                        </details>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+                      <p class="govuk-body"><div class="moj-search">
+                        <form action="#" method="post">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                            Find an operator:
+                          </label>
+                
+                          <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by operator name" aria-describedby="search-hint">
+                        </div>
+                
+                        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+                          Search
+                        </button>
+                        </form>
+                        </div>
+                        <br>
+                      <p class="govuk-body"> <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+                        <col>
+                          <colgroup span="3"></colgroup>
+                          <colgroup span="2"></colgroup>
+                          <colgroup span="2"></colgroup>
+                                
+                              <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b></b></td>
+                                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Total flags</b></td>
+                                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Type of flag</b></td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                  <th scope="col" class="govuk-table__header govuk-body-s">Operator</th>
+                                  <th scope="col" class="govuk-table__header govuk-body-s">Total number of flags</th>
+                                  <th scope="col" class="govuk-table__header govuk-body-s">Average number of flags by satellite</th>
+                                  <th scope="col" class="govuk-table__header govuk-body-s">Flags from expected manoeuvres (%)</th>
+                                  <th scope="col" class="govuk-table__header govuk-body-s">Flags from manoeuvre not as expected (%)</th>
+                                  <th scope="col" class="govuk-table__header govuk-body-s">Flags from unexpected position change (%)</th>
+                                  <th scope="col" class="govuk-table__header govuk-body-s">Flags from no recent data (%)</th>
+                                </tr>
+                              </thead>
+                              <tbody class="govuk-table__body">
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">Avanti</a></td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">8.7</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">35%</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">19%</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-body-s"><a href="#">SES</a></td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">93</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3.4</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">55%</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">25%</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7%</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">13%</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat</a></td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">100</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3.7</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">34%</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">28%</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15%</td>
+                                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
+                                  </tr>
+                              </tbody>
+                              </col>
+                            </table>
+                            <p>Download this table [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+    
+                            <details class="govuk-details" data-module="govuk-details">
+                              <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text">
+                                  Help with this table
+                                </span>
+                              </summary>
+                              <div class="govuk-details__text">
+                                This table compares the number and type of flag by operator.
+                                <p>
+                                </ul>
+                              </div>
+                            </details>                  
                 </div>
               </div>
             </div>
