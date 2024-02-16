@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+AAA0001 Evolution of collision probability
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/conjunctions/analyst/homepage">Events</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/conjunctions/analyst/warning-1">Event AAA0001</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/conjunctions/analyst/warning-1-probaility-evolution">Evolution of conjunction probability</a>
+    </li>
+      </ol>
+      </div>
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">AAA0001: Evolution of collision probability</h1>
+            <p></p>
+            <p> This graph shows the changing probability of a conjunction event occuring over time.
+            Data from both the Space-Track and UKSA is shown. </p>
+            <p><b>TCA</b> = Time of closest approach.
+              <img src="/public/images/chart-2.png" alt="User icon">
+
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  This data is OFFICIAL. Do not share outside the UKSA or your organisation.
+                </strong>
+              </div>
+
+            </div>
+          </main>
+</div>
+
+
+{% endblock %}
