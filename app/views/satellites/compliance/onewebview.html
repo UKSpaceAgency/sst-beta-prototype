@@ -69,20 +69,25 @@ OneWeb
         </tr>
   </tbody>
 </table>
-        <br>
+        <h2 class="govuk-heading-s">Summary of OneWeb monitoring flags</h2>
+        <p class="govuk-body">This table contains a history of all monitoring flags for all OneWeb satellites.</p>
 
-        <h2 class="govuk-heading-l">Monitoring flags</h2>
-        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-          <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                  All OneWeb monitoring flags
-                </span>
-              </h2>
-            </div>
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content">
-              <p class="govuk-body">        <p class="govuk-body">This table contains a history of all monitoring flags for all OneWeb satellites. The most recent flags are found at the top of the table. All flags have been checked by orbital analysts at the UKSA and have been verified as legitimate.</p>
+              <div class="moj-search">
+                <form action="#" method="post">
+                <div class="govuk-form-group">
+                  <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                    Find a satellite:
+                  </label>
+        
+                  <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by common name or NORAD ID" aria-describedby="search-hint">
+                </div>
+        
+                <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+                  Search
+                </button>
+                </form>
+                </div>
+                <br>
 
               <div class="govuk-form-group">
                 <label class="govuk-label" for="sort">
@@ -177,8 +182,9 @@ OneWeb
                           </ul>
                         </div>
                       </details></p>
-            </div>
-          </div>
+
+        <h2 class="govuk-heading-l">Monitoring statistics</h2>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
             <div class="govuk-accordion__section">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">

@@ -10,7 +10,7 @@ Avanti
     <div class="govuk-breadcrumbs">
         <ol class="govuk-breadcrumbs__list">
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="#">UK-licensed satellites</a>
+            <a class="govuk-breadcrumbs__link" href="#">UK-licensed satellites and operators</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="#">Avanti</a>
@@ -35,7 +35,7 @@ Avanti
         <a href="#satellite information">Operator summary</a>
       </li>
     <li class="moj-side-navigation__item">
-      <a href="#monitoring information">Monitoring flags</a>
+      <a href="#monitoring information">Monitoring statistics</a>
     </li>
       <li class="moj-side-navigation__item">
         <a href="#conjunction events">Conjunction events</a>
@@ -69,20 +69,8 @@ Avanti
         </tr>
   </tbody>
 </table>
-        <br>
-
-        <h2 class="govuk-heading-l">Monitoring flags</h2>
-        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-          <div class="govuk-accordion__section">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                  All Avanti monitoring flags
-                </span>
-              </h2>
-            </div>
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content">
-              <p class="govuk-body">        <p class="govuk-body">This table contains a history of all monitoring flags for all Avanti satellites. The most recent flags are found at the top of the table. All flags have been checked by orbital analysts at the UKSA and have been verified as legitimate.</p>
+        <h2 class="govuk-heading-s">Summary of Avanti monitoring flags</h2>
+        <p class="govuk-body">This table contains a history of all monitoring flags for all Avanti satellites.</p>
 
               <div class="govuk-form-group">
                 <label class="govuk-label" for="sort">
@@ -120,35 +108,35 @@ Avanti
                               <td class="govuk-table__cell govuk-body-s"><a href="#">38741-003</a></td>
                               <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 2</a></td>
                               <td class="govuk-table__cell govuk-body-s">26/02/24</td>
-                              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as expected</strong></td>
-                              <td class="govuk-table__cell govuk-body-s">Ongoing</td>
+                              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as planned</strong></td>
+                              <td class="govuk-table__cell govuk-body-s">Ongoing manoeuvre</td>
                           </tr>
                             <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237">37237-004</a></td>
                             <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">HYLAS 1</a></td>
                             <td class="govuk-table__cell govuk-body-s">17/01/24</td>
                             <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">Unexpected position change</strong></td>
-                            <td class="govuk-table__cell govuk-body-s">Closed on 18/01/24</td>
+                            <td class="govuk-table__cell govuk-body-s">Position change completed (18/01/24)</td>
                           </tr>
                           <tr class="govuk-table__row">
                               <td class="govuk-table__cell govuk-body-s"><a href="#">38741-002</a></td>
                               <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 2</a></td>
                               <td class="govuk-table__cell govuk-body-s">03/01/24</td>
-                              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as expected</strong></td>
-                              <td class="govuk-table__cell govuk-body-s">Closed on 05/01/24</td>
+                              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as planned</strong></td>
+                              <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (05/01/24)</td>
                           </tr>
                           <tr class="govuk-table__row">
                               <td class="govuk-table__cell govuk-body-s"><a href="#">43272-001</a></td>
                               <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 4</a></td>
                               <td class="govuk-table__cell govuk-body-s">27/12/23</td>
-                              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">Expected manoeuvre</strong></td>
-                              <td class="govuk-table__cell govuk-body-s">Closed on 28/12/23</td>
+                              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">Manoeuvre as planned</strong></td>
+                              <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (28/12/23)</td>
                             </tr>
                             <tr class="govuk-table__row">
                                 <td class="govuk-table__cell govuk-body-s"><a href="#">37237-003</a></td>
                                 <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/satellite-hylas1">HYLAS 1</a></td>
                                 <td class="govuk-table__cell govuk-body-s">21/12/23</td>
-                                <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">no recent data</strong></td>
-                                <td class="govuk-table__cell govuk-body-s">Closed on 21/12/23</td>
+                                <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Missing data</strong></td>
+                                <td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (21/12/23)</td>
                             </tr>
                         </tbody>
                         </col>
@@ -170,8 +158,9 @@ Avanti
                           </ul>
                         </div>
                       </details></p>
-            </div>
-          </div>
+
+        <h2 class="govuk-heading-l">Monitoring statistics</h2>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
             <div class="govuk-accordion__section">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">

@@ -10,7 +10,10 @@ HYLAS 1
     <ol class="govuk-breadcrumbs__list">
 
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/satellite-list">UK-licensed satellites</a>
+        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/satellite-list">UK-licensed satellites and operators</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/operatorview">Avanti</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="/satellites/compliance/satellite-hylas1">HYLAS 1</a>
@@ -157,13 +160,14 @@ HYLAS 1
       <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
         <col>
         <thead class="govuk-table__head">
-          <td class="govuk-table__cell govuk-body-s" colspan="3"><b>Flag details</b></td>
+          <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Flag details</b></td>
           <td class="govuk-table__cell govuk-body-s" colspan="4"><b>New position and position change (if applicable)</b></td>
         </tr>
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag ID</th>
             <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag date</th>
             <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 4%">Reason for flag</th>
+            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 4%">Flag status</th>
             <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%">Inclination (°)</th>
             <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%">Apogee (km)</th>
             <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%">Perigee (km)</th>
@@ -175,6 +179,7 @@ HYLAS 1
             <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237-001"><b>37237-004</b></a></td>
             <td class="govuk-table__cell govuk-body-s">16/01/24</td>
             <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">Unexpected position change</strong></td>
+            <td class="govuk-table__cell govuk-body-s">Ongoing position change</td>
             <td class="govuk-table__cell govuk-body-s">3 (+0.2)</td>
             <td class="govuk-table__cell govuk-body-s">35701 (+225)</td>
             <td class="govuk-table__cell govuk-body-s">35691 (+225)</td>
@@ -199,7 +204,7 @@ HYLAS 1
               <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
                 <col>
                 <thead class="govuk-table__head">
-                  <td class="govuk-table__cell govuk-body-s" colspan="3"><b>Flag details</b></td>
+                  <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Flag details</b></td>
                   <td class="govuk-table__cell govuk-body-s" colspan="4"><b>New position and position change (if applicable)</b></td>
                 </tr>
             
@@ -208,6 +213,7 @@ HYLAS 1
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag ID</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag date</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Reason for flag</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag status</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Inclination (°)</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Apogee (km)</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Perigee (km)</th>
@@ -220,6 +226,7 @@ HYLAS 1
                     <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237-001"><b>37237-003</b></a></td>
                     <td class="govuk-table__cell govuk-body-s">02/01/24</td>
                     <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Missing data</strong></td>
+                    <td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (05/01/24)</td>
                     <td class="govuk-table__cell govuk-body-s"></td>
                     <td class="govuk-table__cell govuk-body-s"></td>
                     <td class="govuk-table__cell govuk-body-s"></td>
@@ -228,7 +235,8 @@ HYLAS 1
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-002</b></a></td>
                     <td class="govuk-table__cell govuk-body-s">11/09/23</td>
-                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">Expected manoeuvre</strong></td>
+                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">manoeuvre as planned</strong></td>
+                    <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (12/09/23)</td>
                     <td class="govuk-table__cell govuk-body-s">2.7 (+0.2)</td>
                     <td class="govuk-table__cell govuk-body-s">35475 (+203)</td>
                     <td class="govuk-table__cell govuk-body-s">35471 (+203)</td>
@@ -237,7 +245,8 @@ HYLAS 1
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-<br>001</b></a></td>
                     <td class="govuk-table__cell govuk-body-s">15/06/23</td>
-                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as expected</strong></td>
+                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as planned</strong></td>
+                    <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (19/06/23)</td>
                     <td class="govuk-table__cell govuk-body-s">2.5 (+2.3)</td>
                     <td class="govuk-table__cell govuk-body-s">35285 (+189)</td>
                     <td class="govuk-table__cell govuk-body-s">35280 (+189)</td>
@@ -270,8 +279,11 @@ HYLAS 1
                   </h2>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-                  <p>This table shows the position of HYLAS 1 at every received TLE.</p>
+                  <p>This section shows the position of HYLAS 1 at every received TLE.</p>
+                  <p>TLE data is pulled from SpaceTrack.org and may occasionally be faulty. All flagged position changes have been verified by UKSA Orbital Analysts.</p>
                   <p class="govuk-body">
+                    <img src="/public/images/celestrak.PNG" alt="HYLAS 1" width="100%">
+                    <br>
                     
                     <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
                       <col>
@@ -281,7 +293,7 @@ HYLAS 1
                       </tr>
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
-                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Date of TLE</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Date of TLE (UTC)</th>
                         <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inc (°)</th>
                         <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Apogee (km)</th>
                         <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Perigee (km)</th>
@@ -335,6 +347,7 @@ HYLAS 1
                   </table></p>
         
                   <p>Download position history for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
                 </div>
               </div>
 
