@@ -10,7 +10,10 @@ HYLAS 1
     <ol class="govuk-breadcrumbs__list">
 
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/satellite-list">UK-licensed satellites</a>
+        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/satellite-list">Satellite position monitoring</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/satellites/compliance/operatorview">Avanti</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
         <a class="govuk-breadcrumbs__link" href="/satellites/compliance/satellite-hylas1">HYLAS 1</a>
@@ -26,7 +29,7 @@ HYLAS 1
     </div>
     <div class="govuk-notification-banner__content">
       <p class="govuk-notification-banner__heading">
-        This satellite has triggered a UKSA monitoring flag in the past 30 days. Flag ID: <a href="/satellites/compliance/37237-001"><b>37237-004</b></a> (27/01/24)
+        This satellite has caused 1 monitoring flag in the past 30 days. Most recent flag ID: <a href="/satellites/compliance/37237-001"><b>37237-004</b></a> (27/01/24)
       </p>
     </div>
   </div>
@@ -59,7 +62,7 @@ HYLAS 1
   <div class="govuk-grid-column-three-quarters">
 
         <h2 class="govuk-heading-l" id="satellite information">Satellite information</h2>
-
+        <p>Space-Track is the main source of all object data.</p>
 
           <table class="govuk-table">
             <tbody class="govuk-table__body">
@@ -79,8 +82,13 @@ HYLAS 1
                 <th scope="row" class="govuk-table__header">Object type</th>
                 <td class="govuk-table__cell">Payload</td>
               </tr>
+            </tbody>
+          </table>
+          <h2 class="govuk-heading-s" id="satellite information">License information</h2>
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Licensing country</th>
+              <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Country</th>
               <td class="govuk-table__cell">UK</td>
             </tr>
             <tr class="govuk-table__row">
@@ -92,6 +100,26 @@ HYLAS 1
               <td class="govuk-table__cell">2010</td>
         </tbody>
       </table>
+      <h2 class="govuk-heading-s" id="satellite information">Orbital information</h2>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Apogee (km)</th>
+          <td class="govuk-table__cell">35701</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Perigee (km)</th>
+          <td class="govuk-table__cell">35691</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Inclination (°) </th>
+          <td class="govuk-table__cell">3</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Period (minutes) </th>
+          <td class="govuk-table__cell">1440.47</td>
+    </tbody>
+  </table>
 
       <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
         <div class="govuk-accordion__section">
@@ -103,7 +131,7 @@ HYLAS 1
             </h2>
           </div>
           <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-            <p>ESA DISCOS provides additional object data where available. Contact ESA DISCOS if your satellite data is incorrect.</p>
+            <p>ESA DISCOS provides additional object data where available.</p>
             <p>ESA DISCOS data was last updated on: 07/02/2024 02:48:48 UTC</p>
       
             <table class="govuk-table">
@@ -152,22 +180,23 @@ HYLAS 1
     <br>
     <h2 class="govuk-heading-l" id="monitoring information">Monitoring information</h2>  
 
-    <p><b>1 monitoring flag</b> has been raised for HYLAS 1 in the past 30 days, due to an unexpected change in position. 
+    <p><b>1 monitoring flag</b> has been raised for HYLAS 1 in the past 30 days. 
 
       <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
         <col>
         <thead class="govuk-table__head">
-          <td class="govuk-table__cell govuk-body-s" colspan="3"><b>Flag details</b></td>
-          <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Position change (if applicable)</b></td>
+          <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Flag details</b></td>
+          <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Position after change and size of change (if applicable)</b></td>
         </tr>
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag ID</th>
             <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag date</th>
-            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Reason for flag</th>
-            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Inclination (°)</th>
-            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Apogee (km)</th>
-            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Perigee (km)</th>
-            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Longitude</th>
+            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 4%">Reason for flag</th>
+            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 4%">Flag status</th>
+            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%">Inclination (°)</th>
+            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%">Apogee (km)</th>
+            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%">Perigee (km)</th>
+            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%">Longitude</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -175,10 +204,11 @@ HYLAS 1
             <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237-001"><b>37237-004</b></a></td>
             <td class="govuk-table__cell govuk-body-s">16/01/24</td>
             <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">Unexpected position change</strong></td>
-            <td class="govuk-table__cell govuk-body-s">+ 0.5</td>
-            <td class="govuk-table__cell govuk-body-s">+ 801</td>
-            <td class="govuk-table__cell govuk-body-s">+ 801</td>
-            <td class="govuk-table__cell govuk-body-s">+ 14 E</td>
+            <td class="govuk-table__cell govuk-body-s">Ongoing position change</td>
+            <td class="govuk-table__cell govuk-body-s">3 (+0.2)</td>
+            <td class="govuk-table__cell govuk-body-s">35701 (+225)</td>
+            <td class="govuk-table__cell govuk-body-s">35691 (+225)</td>
+            <td class="govuk-table__cell govuk-body-s">159.6 E (+20E)</td>
           </tr>
         </tbody>
       </table>
@@ -199,8 +229,8 @@ HYLAS 1
               <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
                 <col>
                 <thead class="govuk-table__head">
-                  <td class="govuk-table__cell govuk-body-s" colspan="3"><b>Flag details</b></td>
-                  <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Position change (if applicable)</b></td>
+                  <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Flag details</b></td>
+                  <td class="govuk-table__cell govuk-body-s" colspan="4"><b>Position after change and size of change (if applicable)</b></td>
                 </tr>
             
                 
@@ -208,6 +238,7 @@ HYLAS 1
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag ID</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag date</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Reason for flag</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Flag status</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Inclination (°)</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Apogee (km)</th>
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 7%">Perigee (km)</th>
@@ -220,6 +251,7 @@ HYLAS 1
                     <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/37237-001"><b>37237-003</b></a></td>
                     <td class="govuk-table__cell govuk-body-s">02/01/24</td>
                     <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Missing data</strong></td>
+                    <td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (05/01/24)</td>
                     <td class="govuk-table__cell govuk-body-s"></td>
                     <td class="govuk-table__cell govuk-body-s"></td>
                     <td class="govuk-table__cell govuk-body-s"></td>
@@ -228,20 +260,22 @@ HYLAS 1
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-002</b></a></td>
                     <td class="govuk-table__cell govuk-body-s">11/09/23</td>
-                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">Expected manoeuvre</strong></td>
-                    <td class="govuk-table__cell govuk-body-s">+ 0.2</td>
-                    <td class="govuk-table__cell govuk-body-s">+ 203</td>
-                    <td class="govuk-table__cell govuk-body-s">+ 203</td>
-                    <td class="govuk-table__cell govuk-body-s">+ 2 E</td>
+                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">manoeuvre as planned</strong></td>
+                    <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (12/09/23)</td>
+                    <td class="govuk-table__cell govuk-body-s">2.7 (+0.2)</td>
+                    <td class="govuk-table__cell govuk-body-s">35475 (+203)</td>
+                    <td class="govuk-table__cell govuk-body-s">35471 (+203)</td>
+                    <td class="govuk-table__cell govuk-body-s">139 E (+2E)</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell govuk-body-s"><a href="#"><b>37237-<br>001</b></a></td>
                     <td class="govuk-table__cell govuk-body-s">15/06/23</td>
-                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as expected</strong></td>
-                    <td class="govuk-table__cell govuk-body-s">+ 2.3</td>
-                    <td class="govuk-table__cell govuk-body-s">+ 189</td>
-                    <td class="govuk-table__cell govuk-body-s">+ 189</td>
-                    <td class="govuk-table__cell govuk-body-s">+ 6 E</td>
+                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as planned</strong></td>
+                    <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (19/06/23)</td>
+                    <td class="govuk-table__cell govuk-body-s">2.5 (+2.3)</td>
+                    <td class="govuk-table__cell govuk-body-s">35285 (+189)</td>
+                    <td class="govuk-table__cell govuk-body-s">35280 (+189)</td>
+                    <td class="govuk-table__cell govuk-body-s">130 E (+6E)</td>
                   </tr>
                 </tbody>
               </table></p>
@@ -270,8 +304,11 @@ HYLAS 1
                   </h2>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-                  <p>This table shows the position of HYLAS 1 from the first TLE received each month, alongside all flagged position changes.</p>
+                  <p>This section shows the position of HYLAS 1 at every received TLE.</p>
+                  <p>TLE data is pulled from SpaceTrack.org and may occasionally be faulty. All flagged position changes have been verified by UKSA Orbital Analysts.</p>
                   <p class="govuk-body">
+                    <img src="/public/images/celestrak.PNG" alt="HYLAS 1" width="100%">
+                    <br>
                     
                     <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
                       <col>
@@ -281,7 +318,7 @@ HYLAS 1
                       </tr>
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
-                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Date of TLE</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Date of TLE (UTC)</th>
                         <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inc (°)</th>
                         <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Apogee (km)</th>
                         <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Perigee (km)</th>
@@ -290,64 +327,52 @@ HYLAS 1
                     </thead>
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s">16/02/24 16:29</td>
+                        <td class="govuk-table__cell govuk-body-s">18/02/24 16:29</td>
                         <td class="govuk-table__cell govuk-body-s">3.0</td>
                         <td class="govuk-table__cell govuk-body-s">35701</td>
                         <td class="govuk-table__cell govuk-body-s">35691</td>
-                        <td class="govuk-table__cell govuk-body-s">159 E</td>
-                      </tr>
-                      <td class="govuk-table__cell govuk-body-s">16/02/24 07:23</td>
-                      <td class="govuk-table__cell govuk-body-s">+ 0.5</td>
-                      <td class="govuk-table__cell govuk-body-s">+ 801</td>
-                      <td class="govuk-table__cell govuk-body-s">+ 801</td>
-                      <td class="govuk-table__cell govuk-body-s">+ 14 E</td>
+                        <td class="govuk-table__cell govuk-body-s">159.6 E</td>
                     </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell govuk-body-s">15/02/24 12:23</td>
-                        <td class="govuk-table__cell govuk-body-s">2.5</td>
-                        <td class="govuk-table__cell govuk-body-s">34900</td>
-                        <td class="govuk-table__cell govuk-body-s">34890</td>
-                        <td class="govuk-table__cell govuk-body-s">145 E</td>
+                        <td class="govuk-table__cell govuk-body-s">2.8</td>
+                        <td class="govuk-table__cell govuk-body-s">35476</td>
+                        <td class="govuk-table__cell govuk-body-s">35466</td>
+                        <td class="govuk-table__cell govuk-body-s">139.6 E</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell govuk-body-s">14/02/24 11:56</td>
-                        <td class="govuk-table__cell govuk-body-s">2.6</td>
-                        <td class="govuk-table__cell govuk-body-s">34903</td>
-                        <td class="govuk-table__cell govuk-body-s">34898</td>
-                        <td class="govuk-table__cell govuk-body-s">146 E</td>
+                        <td class="govuk-table__cell govuk-body-s">2.8</td>
+                        <td class="govuk-table__cell govuk-body-s">35475</td>
+                        <td class="govuk-table__cell govuk-body-s">35468</td>
+                        <td class="govuk-table__cell govuk-body-s">140 E</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell govuk-body-s">12/02/24 15:03</td>
-                        <td class="govuk-table__cell govuk-body-s">2.6</td>
-                        <td class="govuk-table__cell govuk-body-s">34878</td>
-                        <td class="govuk-table__cell govuk-body-s">34882</td>
-                        <td class="govuk-table__cell govuk-body-s">145 E</td>
+                        <td class="govuk-table__cell govuk-body-s">2.8</td>
+                        <td class="govuk-table__cell govuk-body-s">35475</td>
+                        <td class="govuk-table__cell govuk-body-s">35468</td>
+                        <td class="govuk-table__cell govuk-body-s">140 E</td>
                       </tr>
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell govuk-body-s">11/02/24 23:05</td>
-                        <td class="govuk-table__cell govuk-body-s">2.5</td>
-                        <td class="govuk-table__cell govuk-body-s">34900</td>
-                        <td class="govuk-table__cell govuk-body-s">34890</td>
-                        <td class="govuk-table__cell govuk-body-s">145 E</td>
+                        <td class="govuk-table__cell govuk-body-s">2.8</td>
+                        <td class="govuk-table__cell govuk-body-s">35474</td>
+                        <td class="govuk-table__cell govuk-body-s">35470</td>
+                        <td class="govuk-table__cell govuk-body-s">139 E</td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s">09/02/24 21:34</td>
-                        <td class="govuk-table__cell govuk-body-s">+ 0.2</td>
-                        <td class="govuk-table__cell govuk-body-s">+ 203</td>
-                        <td class="govuk-table__cell govuk-body-s">+ 203</td>
-                        <td class="govuk-table__cell govuk-body-s">+ 2 E</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td class="govuk-table__cell govuk-body-s">06/02/24 14:22</td>
-                        <td class="govuk-table__cell govuk-body-s">2.3</td>
-                        <td class="govuk-table__cell govuk-body-s">34697</td>
-                        <td class="govuk-table__cell govuk-body-s">34687</td>
-                        <td class="govuk-table__cell govuk-body-s">143 E</td>
+                        <td class="govuk-table__cell govuk-body-s">09/02/24 14:22</td>
+                        <td class="govuk-table__cell govuk-body-s">2.7</td>
+                        <td class="govuk-table__cell govuk-body-s">35476</td>
+                        <td class="govuk-table__cell govuk-body-s">35471</td>
+                        <td class="govuk-table__cell govuk-body-s">139.5 E</td>
                       </tr>
                     </tbody>
                   </table></p>
         
                   <p>Download position history for HYLAS 1 [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
                 </div>
               </div>
 
