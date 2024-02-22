@@ -3,7 +3,10 @@
         "shortID":"RE-20241003-40306",
         "reportNumber":1,
         "reportTime":"2024-10-02T02:22:35",
-        "tipExternalID": 55323,
+        "timeWindowStart":"2024-10-03T02:20:35",
+        "timeWindowEnd":"2024-10-03T12:33:00",
+        "tipExternalID": "55323",
+        "probability":0.04, // no need to use UK
         "noradID":"40306",
         "objectName":"CZ-2C R/B",
         "objectType":"Rocket body",
@@ -18,10 +21,6 @@
         "perigee":197,
         "inclination":97.4,
 // Executive summary (all ...Addition fields can be added or edited by Approver user types via editing interface)
-
-        "probability":0.04, // no need to use UK
-        "timeWindowStart":"2024-10-03T02:20:35",
-        "timeWindowEnd":"2024-10-03T12:33:00",
         "overflightTime":[ // no need to use UK
             "2024-10-03T11:33:00",
             "2024-10-03T13:33:00",
@@ -29,183 +28,178 @@
         ],
         "survivability":"Medium", // or scale [0...1],
         "survivabilityComment":"The high-density components and physical shape of rocket bodies can result in an increased chance of survival upon re-entry",
-        "execSummaryAddition":"",
 
 // Potential impact by UK nation (add overflightTime2 to each nation with a second overflight)
-
-        "englandNation":{
-            "probability":0.01,
-            "overflightTime":["2024-10-03T02:20:35", "2024-10-03T03:20:35"]},
-        "northernIrelandNation":{
-            "probability":0.03,
-            "overflightTime":["2024-10-03T02:20:35", "2024-10-03T03:20:35"]},
-        "scotlandNation":{
-            "probability":0.00,
-            "overflightTime":[]},
-        "walesNation":{
-            "probability":0.00,
-            "overflightTime":[]},
+        "impact": {
+            "englandNation":{
+                "probability":0.01,
+                "overflightTime":["2024-10-03T02:20:35", "2024-10-03T03:20:35"]},
+            "northernIrelandNation":{
+                "probability":0.03,
+                "overflightTime":["2024-10-03T02:20:35", "2024-10-03T03:20:35"]},
+            "scotlandNation":{
+                "probability":0.00,
+                "overflightTime":[]},
+            "walesNation":{
+                "probability":0.00,
+                "overflightTime":[]},
 
 // Potential impact by UK region (add overflightTime2 to each region with a second overflight)
 
-        "england": [
-            {"eastOfEngland":{
-                "probability":0.0,
-                "overflightTime":null},
-            "eastMidlands":{
-                "probability":0.0,
-                "overflightTime":null},
-            "london":{
-                "probability":0.0,
-                "overflightTime":null},
-            "northEast":{
-                "probability":0.0,
-                "overflightTime":null},
-            "northWest":{
-                "probability":0.0,                        
-                "overflightTime":null},
-            "southEast":{
-                "probability":0.0,
-                "overflightTime":null},
-            "southWest":{
-                "probability":0.0,
-                "overflightTime":null},
-            "westMidlands":{
-                "probability":0.0,                        
-                "overflightTime":null},
-            "yorkshireAndNorthHumber":{
-                "probability":0.0,
-                "overflightTime":null}
-            } ],
-        "northernIreland": [
-            {"antrimAndNewtownabbey":{
-                "probability":0.0,
-                "overflightTime":null},
-            "ardsAndNorthDown":{
-                "probability":0.0,
-                "overflightTime":null},
-            "armaghCityBanbridgeAndCraigavon":{
-                "probability":0.0,
-                "overflightTime":null},
-            "belfast":{
-                "probability":0.0,
-                "overflightTime":null},
-            "causewayCoastAndGlens":{
-                "probability":0.0,
-                "overflightTime":null},
-            "derryAndStrabane":{
-                "probability":0.0,
-                "overflightTime":null},
-            "fermanaghAndOmagh":{
-                "probability":0.0,
-                "overflightTime":null},
-            "lisburnAndCastlereagh":{
-                "probability":0.0,
-                "overflightTime":null},
-            "midAndEastAntrim":{
-                "probability":0.0,
-                "overflightTime":null},
-            "midUlster":{
-                "probability":0.0,
-                "overflightTime":null},
-            "newryMourneAndDown":{
-                "probability":0.0,
-                "overflightTime":null}
+            "england": [
+                {"eastOfEngland":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "eastMidlands":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "london":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "northEast":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "northWest":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "southEast":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "southWest":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "westMidlands":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "yorkshireAndNorthHumber":{
+                    "probability":0.0,
+                    "overflightTime":null}
                 } ],
-        "scotland": [
-            {"centralScotland":{
-                "probability":0.0,
-                "overflightTime":null},
-            "glasgow":{
-                "probability":0.0,
-                "overflightTime":null},
-            "highlandsAndIslands":{
-                "probability":0.0,
-                "overflightTime":null},
-            "lothian":{
-                "probability":0.0,
-                "overflightTime":null},
-            "midScotlandAndFife":{
-                "probability":0.0,                        
-                "overflightTime":null},
-            "northEastScotland":{
-                "probability":0.0,                        
-                "overflightTime":null},
-            "southScotland":{
-                "probability":0.0,                        
-                "overflightTime":null},
-            "westScotland":{
-                "probability":0.0,
-                "overflightTime":null}
-                } ],
-        "wales": [
-            {"northWales":{
-                "probability":0.0,
-                "overflightTime":null},
-            "midWales":{
-                "probability":0.0,
-                "overflightTime":null},
-            "southWestWales":{
-                "probability":0.0,
-                "overflightTime":null},
-            "southEastWales":{
-                "probability":0.0,
-                "overflightTime":null}
-                } ],
+            "northernIreland": [
+                {"antrimAndNewtownabbey":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "ardsAndNorthDown":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "armaghCityBanbridgeAndCraigavon":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "belfast":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "causewayCoastAndGlens":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "derryAndStrabane":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "fermanaghAndOmagh":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "lisburnAndCastlereagh":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "midAndEastAntrim":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "midUlster":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "newryMourneAndDown":{
+                    "probability":0.0,
+                    "overflightTime":null}
+                    } ],
+            "scotland": [
+                {"centralScotland":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "glasgow":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "highlandsAndIslands":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "lothian":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "midScotlandAndFife":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "northEastScotland":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "southScotland":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "westScotland":{
+                    "probability":0.0,
+                    "overflightTime":null}
+                    } ],
+            "wales": [
+                {"northWales":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "midWales":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "southWestWales":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "southEastWales":{
+                    "probability":0.0,
+                    "overflightTime":null}
+                    }],
 
 // Potential impact by overseas territory (add overflightTime2 to each region with a second overflight)
             
-        "overseasTerritories": [
-            {"anguilla":{
-                "probability":0.0,
-                "overflightTime":null},
-            "bermuda":{
-                "probability":0.0,
-                "overflightTime":null},
-            "britishAntarcticTerritory":{
-                "probability":0.0,
-                "overflightTime":null},
-            "britishIndianOceanTerritory":{
-                "probability":0.0,
-                "overflightTime":null},
-            "britishVirginIslands":{
-                "probability":0.0,
-                "overflightTime":null},
-            "caymanIslands":{
-                "probability":0.0,
-                "overflightTime":null},
-            "falklandIslands":{
-                "probability":0.0,
-                "overflightTime":null},
-            "gibraltar":{
-                "probability":0.0,
-                "overflightTime":null},
-            "montserrat":{
-                "probability":0.0,
-                "overflightTime":null},
-            "pitcairnIslands":{
-                "probability":0.0,
-                "overflightTime":null},
-            "saintHelenaAscensionAndTristanDaCunha":{
-                "probability":0.0,
-                "overflightTime":null},
-            "southGeorgiaAndTheSouthSandwichIslands":{
-                "probability":0.0,
-                "overflightTime":null},
-            "sovereignBaseAreasOfAkrotiriAndDhekelia":{
-                "probability":0.0,
-                "overflightTime":null},
-            "turksAndCaicosIslands":{
-                "probability":0.0,
-                "overflightTime":null}
-                } ],
-
+            "overseasTerritories": [
+                {"anguilla":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "bermuda":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "britishAntarcticTerritory":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "britishIndianOceanTerritory":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "britishVirginIslands":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "caymanIslands":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "falklandIslands":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "gibraltar":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "montserrat":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "pitcairnIslands":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "saintHelenaAscensionAndTristanDaCunha":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "southGeorgiaAndTheSouthSandwichIslands":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "sovereignBaseAreasOfAkrotiriAndDhekelia":{
+                    "probability":0.0,
+                    "overflightTime":null},
+                "turksAndCaicosIslands":{
+                    "probability":0.0,
+                    "overflightTime":null}
+                    }]
+            },
 // Guidance on response (all ...Addition fields can be added or edited by Approver user types via editing interface)
 
-        "immediateResponseAddition":"",
-        "recoveryAndCleanUpAddition":"",
-        "liabilityForDamagesAddition":"",
-        "pressAttentionAddition":"We have not seen any press attention on this event.",
 
 // Re-entry overflight map (with 30,000 data points in real version)
         "mapPoints":[
