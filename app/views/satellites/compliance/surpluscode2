@@ -141,3 +141,93 @@
                                 </ul>
                               </div>
                             </details>                 
+
+                            <h2 class="govuk-heading-l">UK-licensed operators</h2>
+        <div class="moj-search">
+          <form action="#" method="post">
+          <div class="govuk-form-group">
+            <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+              Find an operator:
+            </label>
+  
+            <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by operator name" aria-describedby="search-hint">
+          </div>
+  
+          <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+            Search
+          </button>
+          </form>
+          </div>
+          <br>
+          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+          <col>
+            <colgroup span="3"></colgroup>
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+                  
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Operator information</b></td>
+                    <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="5"><b>Past monitoring flags</b></td>
+                    <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Conjunctions</b></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Operator</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>UK licensed satellites</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Number of flags</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre as planned</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Manoeuvre not as planned</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Unexpected position change</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Missing data</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Upcoming conjunction events</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s"><a href="/satellites/compliance/operatorview">Avanti</a></td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">35%</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">19%</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-body-s"><a href="#">SES</a></td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">56</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">93</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">55%</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">25%</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7%</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">13%</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">10</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat</a></td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">30</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">100</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">34%</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">28%</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15%</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
+                      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">56</td>
+                    </tr>
+                </tbody>
+                </col>
+              </table>
+              <p>Download this table [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Help with this table
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  This table compares the number and type of flag by operator.
+                  <p>
+                  </ul>
+                </div>
+              </details> 
+              <br>
