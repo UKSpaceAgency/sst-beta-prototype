@@ -14,10 +14,10 @@ UK organisations
               <form action="#" method="post">
               <div class="govuk-form-group">
                 <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-                  Find an operator:
+                  Find an organisation:
                 </label>
       
-                <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by operator name" aria-describedby="search-hint">
+                <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by organisation name" aria-describedby="search-hint">
               </div>
       
               <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
@@ -34,47 +34,48 @@ UK organisations
                       
                     <thead class="govuk-table__head">
                       <tr class="govuk-table__row">
-                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b></b></td>
-                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Total flags</b></td>
-                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Type of flag</b></td>
+                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b></b></td>
+                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Conjunction events</b></td>
+                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Re-entry events</b></td>
+                        <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Monitoring flags</b></td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <th scope="col" class="govuk-table__header govuk-body-s">Operator</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s">Total number of flags</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s">Average number of flags by satellite</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s">Flags from expected manoeuvres (%)</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s">Flags from manoeuvre not as expected (%)</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s">Flags from unexpected position change (%)</th>
-                        <th scope="col" class="govuk-table__header govuk-body-s">Flags from no recent data (%)</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Organisation</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Number of UK-licensed satellites</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Upcoming conjunction events</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Conjunction events past month</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Upcoming re-entry events</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Re-entry events past year</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Monitoring flags past month</th>
                       </tr>
                     </thead>
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
                         <td class="govuk-table__cell govuk-body-s"><a href="/organisations/avanti">Avanti</a></td>
-                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26</td>
-                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">8.7</td>
-                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
-                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">35%</td>
-                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">19%</td>
-                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">13</td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">34</td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+                        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4</td>
                       </tr>
                       <tr class="govuk-table__row">
                           <td class="govuk-table__cell govuk-body-s"><a href="#">SES</a></td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">93</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3.4</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">55%</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">25%</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7%</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">13%</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">27</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">6</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">17</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
                       </tr>
                       <tr class="govuk-table__row">
                           <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat</a></td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">100</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3.7</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">34%</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">28%</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15%</td>
-                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">23%</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">18</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">33</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+                          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7</td>
                         </tr>
                     </tbody>
                     </col>
