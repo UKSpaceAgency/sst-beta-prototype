@@ -7,9 +7,8 @@ UK organisations
 {% block content %}
 
 
-<h2 class="govuk-heading-l">UK organisations</h2>
-
-<br>
+<h2 class="govuk-heading-xl">UK organisations</h2>
+<p>This table contains information on all UK-licensed organisations.</p>
             <p class="govuk-body"><div class="moj-search">
               <form action="#" method="post">
               <div class="govuk-form-group">
@@ -93,5 +92,117 @@ UK organisations
                       <p>
                       </ul>
                     </div>
-                  </details>                 
+                  </details>     
+                
+                  <h2 class="govuk-heading-l">Event and organisation data</h2>
+                  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+                    <div class="govuk-accordion__section">
+                      <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                            Conjunction events by organisation
+                          </span>
+                        </h2>
+                      </div>
+                      <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                        <p class="govuk-body">Conjunction events and their probability of collision for events relating to an organisation.</p>
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="sort">
+                            Filter by organisation
+                          </label>
+                          <select class="govuk-select" id="sort" name="sort">
+                            <option value="published">All organisations</option>
+                            <option value="updated" selected>OneWeb</option>
+                            <option value="views">AAC Clyde Space</option>
+                            <option value="comments">SSTL</option>
+                          </select>
+                        </div>
+                        <img src="/public/images/allorgconjunctions.PNG" alt="HYLAS 1" width="80%">
+                        <br>
+                        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+                          <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Events</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><1e-5</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><1e-3 and >1e-5</b></th>
+                              <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>>1e-3</b></th>
+                          </tr>
+                          </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s">All</td>
+                            <td class="govuk-table__cell govuk-body-s" >25640</td>
+                            <td class="govuk-table__cell govuk-body-s" >12820</td>
+                            <td class="govuk-table__cell govuk-body-s">10320</td>
+                            <td class="govuk-table__cell govuk-body-s">2500</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s">Open Cosmos</td>
+                            <td class="govuk-table__cell govuk-body-s" >4088</td>
+                            <td class="govuk-table__cell govuk-body-s" >2044</td>
+                            <td class="govuk-table__cell govuk-body-s">1572</td>
+                            <td class="govuk-table__cell govuk-body-s">472</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s">OneWeb</td>
+                            <td class="govuk-table__cell govuk-body-s" >3300</td>
+                            <td class="govuk-table__cell govuk-body-s" >1650</td>
+                            <td class="govuk-table__cell govuk-body-s">1309</td>
+                            <td class="govuk-table__cell govuk-body-s">341</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
+                            <td class="govuk-table__cell govuk-body-s" >3300</td>
+                            <td class="govuk-table__cell govuk-body-s" >1650</td>
+                            <td class="govuk-table__cell govuk-body-s">1309</td>
+                            <td class="govuk-table__cell govuk-body-s">341</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s">Clyde Space</td>
+                            <td class="govuk-table__cell govuk-body-s" >3300</td>
+                            <td class="govuk-table__cell govuk-body-s" >1650</td>
+                            <td class="govuk-table__cell govuk-body-s">1309</td>
+                            <td class="govuk-table__cell govuk-body-s">341</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p>Download this table [JSON] [CSV]</p>
+                      <details class="govuk-details" data-module="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Help with this table
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        This table shows the total number and probability of upcoming events.
+                      </div>
+                      </details>
+                      </div>
+                    </div>
+                    <div class="govuk-accordion__section">
+                      <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                          <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                            Re-entry events by organisation
+                          </span>
+                        </h2>
+                      </div>
+                      <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+                        <p class="govuk-body">This is the content for Writing well for specialists.</p>
+                      </div>
+                    </div>
+                    <div class="govuk-accordion__section">
+                      <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                          <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                            Monitoring flags by organisation
+                          </span>
+                        </h2>
+                      </div>
+                      <div id="accordion-default-content-3" class="govuk-accordion__section-content">
+                        <p class="govuk-body">This is the content for Know your audience.</p>
+                      </div>
+                    </div>
+                  </div>
 {% endblock %}
