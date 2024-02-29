@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Registered satellites
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">UK-licensed satellites</h1>
+
+<table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+    <thead class="govuk-table__head">
+  
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"></td>
+        <td class="govuk-table__cell govuk-body-s"></td>
+        <td class="govuk-table__cell govuk-body-s"></td>
+        <td class="govuk-table__cell govuk-body-s" colspan="2"><b></td>
+        <td class="govuk-table__cell govuk-body-s" colspan="3"><b></td>
+      </tr>
+  
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Common name</th>
+        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>NORAD ID</th>
+        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>International designator</th>
+        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Orbit</th>
+        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>SMA altitude</th>
+        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Longitude</th>
+        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Launch date</th>
+        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Monitoring flags in the past 30 days</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><a href="/satellites/regulator/hylas1">HYLAS 1</a></td>
+          <td class="govuk-table__cell govuk-body-s">37237</td>
+          <td class="govuk-table__cell govuk-body-s">2010-065A</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">GEO</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">159.6 E</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2010</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2</td>
+        </tr>
+      <tr class="govuk-table__row">
+      <td class="govuk-table__cell govuk-body-s">HYLAS 2</td>
+        <td class="govuk-table__cell govuk-body-s">38741</td>
+        <td class="govuk-table__cell govuk-body-s">2012-043B</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">GEO</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">31.1 E</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2012</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3</td>
+      </tr>
+          <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s">HYLAS 4</td>
+        <td class="govuk-table__cell govuk-body-s">43272</td>
+        <td class="govuk-table__cell govuk-body-s">2018-033B</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">GEO</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">33.5 W</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2018</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
+      </tr>
+        </tbody>
+  </table>
+  <p>Download UK-licensed satellites [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+      </div>
+      </div>
+  </main>
+</div>
+
+
+{% endblock %}
