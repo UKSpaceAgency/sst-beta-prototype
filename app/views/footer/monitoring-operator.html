@@ -29,19 +29,16 @@ Upcoming conjunction events
                   <a href="#accordion-heading-3">Notifications sent</a>
                 </li>
                 </ul>
-                <h3 class="govuk-heading-s">Event and organisation data</h3>
+                <h3 class="govuk-heading-s">Event and object data</h3>
                 <ul class="moj-side-navigation__list">
                 <li class="moj-side-navigation__item">
                   <a href="#accordion-heading-4">Upcoming conjunction events</a>
                 </li>
                 <li class="moj-side-navigation__item">
+                  <a href="#accordion-heading-4">Re-entry events by type</a>
+                </li>
+                <li class="moj-side-navigation__item">
                   <a href="#accordion-heading-5">Objects tracked</a>
-                </li>
-                <li class="moj-side-navigation__item">
-                  <a href="#accordion-heading-6">Events by organisation</a>
-                </li>
-                <li class="moj-side-navigation__item">
-                  <a href="#accordion-heading-6">Events be satellite</a>
                 </li>
                 </ul>
                 <h2 class="govuk-heading-l">Performance monitoring</h2>
@@ -326,7 +323,7 @@ Upcoming conjunction events
 
 
 
-                    <h2 class="govuk-heading-l">Event and organisation data</h2>
+                    <h2 class="govuk-heading-l">Event and object data</h2>
 
                     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
                       <div class="govuk-accordion__section ">
@@ -379,6 +376,60 @@ Upcoming conjunction events
                           </details>
                         </div>
                       </div>
+                      <div class="govuk-accordion__section">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                              Re-entry events by type
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+                          <p class="govuk-body"><p> Total number of re-entry events monitored and a breakdown of their type. </p>
+                          <img src="/public/images/reentrytype.png"></p>
+                          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
+                              <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type</b></th>
+                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Upcoming events</b></th>
+                              </tr>
+                              </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" >All</td>
+                                <td class="govuk-table__cell govuk-body-s">80</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" >Payload</td>
+                                <td class="govuk-table__cell govuk-body-s">15</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" >Rocket body</td>
+                                <td class="govuk-table__cell govuk-body-s">27</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" >Debris</td>
+                                <td class="govuk-table__cell govuk-body-s">5</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" >Unknown</td>
+                                <td class="govuk-table__cell govuk-body-s">33</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>Download this table [JSON] [CSV]</p>
+                          <details class="govuk-details" data-module="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              Help with this table
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            This table shows the number of upcoming re-entry events.
+                          </div>
+                          </details>
+                        </div>
+                      </div>
                       <div class="govuk-accordion__section ">
                         <div class="govuk-accordion__section-header">
                           <h2 class="govuk-accordion__section-heading">
@@ -392,13 +443,11 @@ Upcoming conjunction events
                         Objects tracked by Monitor space hazards
                       </h2>
                           <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-one-half">
+                    <div class="govuk-grid-column-one-quarter">
                       <div class="govuk-heading-l">2900</div>
                       <div class= "govuk-heading-s">total</div>
                       </div>
-                    <div class="govuk-grid-column-one-half">
-                      <div class="govuk-grid-row govuk-!-padding-top-4">
-                        <div class="govuk-grid-column-one-third">
+                        <div class="govuk-grid-column-one-quarter">
                       <span class="big-number-smallest">
                         <span class="govuk-heading-l">
                             350
@@ -406,7 +455,7 @@ Upcoming conjunction events
                           <span class="govuk-heading-s">satellites</span>
                       </span>
                         </div>
-                        <div class="govuk-grid-column-one-third">
+                        <div class="govuk-grid-column-one-quarter">
                       <span class="big-number-smallest">
                         <span class="govuk-heading-l">
                             500
@@ -414,7 +463,7 @@ Upcoming conjunction events
                           <span class="govuk-heading-s">pieces of debris</span>
                       </span>
                         </div>
-                        <div class="govuk-grid-column-one-third">
+                        <div class="govuk-grid-column-one-quarter">
                       <span class="big-number-smallest">
                         <span class="govuk-heading-l">
                             250
@@ -423,9 +472,6 @@ Upcoming conjunction events
                       </span>
                         </div>
                       </div>
-                    </div>
-                    </div>
-                    <br/>
                     <br/>
                           <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
                               <thead class="govuk-table__head">
@@ -454,110 +500,6 @@ Upcoming conjunction events
                           </summary>
                           <div class="govuk-details__text">
                             This table shows the current number of objects tracked by Monitor space hazards and their breakdown by type.
-                          </div>
-                          </details>
-                        </div>
-                      </div>
-                      <div class="govuk-accordion__section ">
-                        <div class="govuk-accordion__section-header">
-                          <h2 class="govuk-accordion__section-heading">
-                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                              Events by organisation
-                            </span>
-                          </h2>
-                        </div>
-                        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-                            <p> Upcoming conjunction events and their probability of collision for all events and organisation specific events. </p>
-                          <img src="/public/images/event-by-organisation-operator.png">
-                          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-                              <thead class="govuk-table__head">
-                              <tr class="govuk-table__row">
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Type</b></th>
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Upcoming events</b></th>
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^5</b></th>
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^3 and >10^5</b></th>
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>>10^3</b></th>
-                              </tr>
-                              </thead>
-                            <tbody class="govuk-table__body">
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s">All</td>
-                                <td class="govuk-table__cell govuk-body-s" >601</td>
-                                <td class="govuk-table__cell govuk-body-s" >520</td>
-                                <td class="govuk-table__cell govuk-body-s">40</td>
-                                <td class="govuk-table__cell govuk-body-s">20</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s">Open Cosmos</td>
-                                <td class="govuk-table__cell govuk-body-s" >18</td>
-                                <td class="govuk-table__cell govuk-body-s" >6</td>
-                                <td class="govuk-table__cell govuk-body-s">4</td>
-                                <td class="govuk-table__cell govuk-body-s">8</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <p>Download this table [JSON] [CSV]</p>
-                          <details class="govuk-details" data-module="govuk-details">
-                          <summary class="govuk-details__summary">
-                            <span class="govuk-details__summary-text">
-                              Help with this table
-                            </span>
-                          </summary>
-                          <div class="govuk-details__text">
-                            This table shows the total number and probability of upcoming events.
-                          </div>
-                          </details>
-                        </div>
-                      </div>
-                      <div class="govuk-accordion__section ">
-                        <div class="govuk-accordion__section-header">
-                          <h2 class="govuk-accordion__section-heading">
-                            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-                              Events by satellite
-                            </span>
-                          </h2>
-                        </div>
-                        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-                          <p> This graph shows the registered satellites your organisation has and the number of events each has been involved in, highlighting higher probability events.</p>
-                          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
-                              <thead class="govuk-table__head">
-                              <tr class="govuk-table__row">
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>Satellite name</b></th>
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^5</b></th>
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b><10^3 and >10^5</b></th>
-                                  <th scope="colgroup" class="govuk-table__cell govuk-body-s"><b>>10^3</b></th>
-                              </tr>
-                              </thead>
-                            <tbody class="govuk-table__body">
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" >3-F4</td>
-                                <td class="govuk-table__cell govuk-body-s">6</td>
-                                <td class="govuk-table__cell govuk-body-s" >1</td>
-                                <td class="govuk-table__cell govuk-body-s">1</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" >4-F2</td>
-                                <td class="govuk-table__cell govuk-body-s">8</td>
-                                <td class="govuk-table__cell govuk-body-s" >2</td>
-                                <td class="govuk-table__cell govuk-body-s">1</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" >5-F2</td>
-                                <td class="govuk-table__cell govuk-body-s">12</td>
-                                <td class="govuk-table__cell govuk-body-s" >4</td>
-                                <td class="govuk-table__cell govuk-body-s">2</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <p>Download this table [JSON] [CSV]</p>
-                          <details class="govuk-details" data-module="govuk-details">
-                          <summary class="govuk-details__summary">
-                            <span class="govuk-details__summary-text">
-                              Help with this table
-                            </span>
-                          </summary>
-                          <div class="govuk-details__text">
-                            This table shows the total number of events for each of your registered satellites in 30 day periods.
                           </div>
                           </details>
                         </div>
