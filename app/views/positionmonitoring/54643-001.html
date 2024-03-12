@@ -134,8 +134,8 @@ Monitoring flag 54643-001
           </h2>
         </div>
         <div id="accordion-default-content-1" class="govuk-accordion__section-content"> 
-          <p>This flag was raised because ONEWEB-0528 did not manoeuvre as planned.</p> 
-          <h1 class="govuk-heading-m">Manoeuvre plan reported by operator</h1>
+          <p>This flag was raised because ONEWEB-0528 did not manoeuvre as planned. This is determined by UKSA analysts comparing the manoeuvre plan shared by the operator with actual satellite position data.</p> 
+          <h1 class="govuk-heading-s">Manoeuvre dates</h1>
 
           <table class="govuk-table"style="width:100%">
             <tbody class="govuk-table__body">
@@ -148,10 +148,21 @@ Monitoring flag 54643-001
                 <th scope="row" class="govuk-table__header govuk-body-s">Expected manoeuvre dates</th>
                 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15/01/24</td>
                 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15/02/24</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Actual manoeuvre dates</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">17/01/24</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26/02/24</td>
             </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-body-s">Divergence from plan</th>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2 days</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">11 days</td>
+          </tr>
           </tbody>
         </table>
 
+        <h1 class="govuk-heading-s">Position prior to manoeuvre</h1>
         <table class="govuk-table"style="width:100%">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -173,45 +184,18 @@ Monitoring flag 54643-001
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header govuk-body-s">Expected position after manoeuvre</th>
+              <th scope="row" class="govuk-table__header govuk-body-s">Actual position prior to manoeuvre</th>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1178</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1176</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1178</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1009</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Expected change in position</th>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 168</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 167</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 168</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
             </tr>
           </tbody>
         </table>
         <br>
-        <h1 class="govuk-heading-m">Manoeuvre information reported by UKSA</h1>
+        <h1 class="govuk-heading-s">Position after manoeuvre</h1>
 
-        <table class="govuk-table"style="width:100%">
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%"></th>
-              <th scope="row" class="govuk-table__header govuk-body-s govuk-table__cell--numeric" style="width: 25%"><b>Start date</b></th>
-              <th scope="row" class="govuk-table__header govuk-body-s govuk-table__cell--numeric" style="width: 25%"><b>End date</b></th>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header govuk-body-s">Actual manoeuvre dates</th>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">17/01/24</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26/02/24</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Divergence from plan</th>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2 days</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">11 days</td>
-        </tr>
-        </tbody>
-      </table>
       <table class="govuk-table"style="width:100%">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
@@ -225,28 +209,28 @@ Monitoring flag 54643-001
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Actual position prior to manoeuvre</th>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1009</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Actual position after manoeuvre</th>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1297</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
-            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">Divergence from planned final position</th>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 120</td>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 121</td>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 120</td>
-          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+        <th scope="row" class="govuk-table__header govuk-body-s">Expected position after manoeuvre</th>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1178</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1176</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1178</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header govuk-body-s">Actual position after manoeuvre</th>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1297</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
+        <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header govuk-body-s">Divergence from planned final position</th>
+    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 120</td>
+    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 121</td>
+    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 120</td>
+    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
           </tr>
         </tbody>
       </table>
