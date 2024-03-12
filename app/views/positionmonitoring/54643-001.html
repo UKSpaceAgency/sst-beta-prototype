@@ -135,53 +135,121 @@ Monitoring flag 54643-001
         </div>
         <div id="accordion-default-content-1" class="govuk-accordion__section-content"> 
           <p>This flag was raised because ONEWEB-0528 did not manoeuvre as planned.</p> 
-            <table class="govuk-table">
-                  <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header"></th>
-                      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Manoeuvre plan reported by operator</th>
-                      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Manoeuvre information reported by UKSA</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Manoeuvre start date</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric">15/01/24</td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric">17/01/24</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Manoeuvre completion date</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric">15/02/24</td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric">26/02/24</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Inclination after manoeuvre</th>
-                      <td class="govuk-table__cell govuk-table__cell--numeric">87.9</td>
-                      <td class="govuk-table__cell govuk-table__cell--numeric">87.9</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Apogee after manoeuvre</th>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">1178</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">1298</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Perigee after manoeuvre</th>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">1176</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">1297</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">SMA altitude after manoeuvre</th>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">1178</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">1298</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Longitude after manoeuvre</th>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
-                    <td class="govuk-table__cell govuk-table__cell--numeric">N/A</td>
-                  </tr>
+          <h1 class="govuk-heading-m">Manoeuvre plan reported by operator</h1>
+
+          <table class="govuk-table"style="width:100%">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s govuk-table__cell--numeric" style="width: 50%"></th>
+                <th scope="row" class="govuk-table__header govuk-body-s govuk-table__cell--numeric" style="width: 25%"><b>Start date</b></th>
+                <th scope="row" class="govuk-table__header govuk-body-s govuk-table__cell--numeric" style="width: 25%"><b>End date</b></th>
               </tr>
-            </tbody>
-          </table></p>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Expected manoeuvre dates</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15/01/24</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15/02/24</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table"style="width:100%">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header" style="width: 30%"></th>
+              <th scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric" style="width: 15%">Inclination (°)</th>
+              <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric" style="width: 15%">Apogee (km)</th>
+              <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric" style="width: 15%">Perigee (km)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric" style="width: 15%">Altitude (km)</th>
+              <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric" style="width: 15%">Longitude</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-body-s">Expected position prior to manoeuvre</th>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1009</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-body-s">Expected position after manoeuvre</th>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1178</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1176</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1178</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body-s">Expected change in position</th>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 168</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 167</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 168</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <h1 class="govuk-heading-m">Manoeuvre information reported by UKSA</h1>
+
+        <table class="govuk-table"style="width:100%">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%"></th>
+              <th scope="row" class="govuk-table__header govuk-body-s govuk-table__cell--numeric" style="width: 25%"><b>Start date</b></th>
+              <th scope="row" class="govuk-table__header govuk-body-s govuk-table__cell--numeric" style="width: 25%"><b>End date</b></th>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-body-s">Actual manoeuvre dates</th>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">17/01/24</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26/02/24</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body-s">Divergence from plan</th>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2 days</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">11 days</td>
+        </tr>
+        </tbody>
+      </table>
+      <table class="govuk-table"style="width:100%">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="width: 30%"></th>
+            <th scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric" style="width: 15%">Inclination (°)</th>
+            <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric" style="width: 15%">Apogee (km)</th>
+            <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric" style="width: 15%">Perigee (km)</th>
+            <th scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric" style="width: 15%">Altitude (km)</th>
+            <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric" style="width: 15%">Longitude</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body-s">Actual position prior to manoeuvre</th>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1009</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body-s">Actual position after manoeuvre</th>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1297</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
+            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header govuk-body-s">Divergence from planned final position</th>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 120</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 121</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 120</td>
+          <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+          </tr>
+        </tbody>
+      </table>
           <details class="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -208,33 +276,37 @@ Monitoring flag 54643-001
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header"></th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Inc(°)</th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Apogee(km)</th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Perigee(km)</th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">SMA altitude (km)</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric">Inclination (°)</th>
+                  <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric">Apogee (km)</th>
+                  <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric">Perigee (km)</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric">Altitude (km)</th>
+                  <th scope="col" class="govuk-table__header  govuk-body-s govuk-table__header--numeric">Longitude</th>
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Position prior to movement</th>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">87.9</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1010</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1009</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1010</td>
+                  <th scope="row" class="govuk-table__header govuk-body-s">Position prior to manoeuvre</th>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1009</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Position after movement</th>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">87.9</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1298</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1295</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1297</td>
+                  <th scope="row" class="govuk-table__header govuk-body-s">Position after manoeuvre</th>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1295</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1297</td>
+                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Change in position</th>
-                <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">+ 288</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">+ 284</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">+ 286</td>
+                <th scope="row" class="govuk-table__header govuk-body-s">Change in position</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 288</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 284</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 286</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
                 </tr>
               </tbody>
             </table></p>
