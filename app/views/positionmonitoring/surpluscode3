@@ -1,0 +1,81 @@
+<table class="govuk-table"style="width:100%">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s" style="width: 40%">Position prior to movement</th>
+                <td class="govuk-table__cell govuk-body-s" style="width: 30%"></td>
+                <td class="govuk-table__cell govuk-body-s" style="width: 30%"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Inclination (°)</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Apogee (km)</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1010</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Perigee (km)</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1009</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"></td>
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Altitude (km)</th>
+              <td class="govuk-table__cell  govuk-body-s govuk-table__cell--numeric">1010</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"></td>
+            </tr>
+          </tbody>
+        </table>
+            <table class="govuk-table"style="width:100%">
+              <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s" style="width: 25%"></th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" style="width: 30%"><b>Manoeuvre plan reported by operator</b></td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" style="width: 30%"><b>Manoeuvre information reported by UKSA</b></td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" style="width: 15%"><b>Divergence from plan</b></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Manoeuvre start date</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15/01/24</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">17/01/24</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2 days</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Manoeuvre completion date</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15/02/24</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">26/02/24</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">11 days</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Inclination after manoeuvre</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9°</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.9°</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Apogee after manoeuvre</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1178</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 120</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Perigee after manoeuvre</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1176</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1297</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 121</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Altitude after manoeuvre</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1178</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1298</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+ 120</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s">Longitude after manoeuvre</th>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
+              </tr>
+            </tbody>
+          </table>

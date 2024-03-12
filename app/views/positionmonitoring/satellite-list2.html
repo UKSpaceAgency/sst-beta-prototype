@@ -65,12 +65,11 @@ Track UK satellite positions
                   </td>
                   <td class="govuk-table__cell govuk-body-s">
                     <label class="govuk-label" for="sort">
-                      <b>Select time period:</b>
+                      <b>Select one or more statuses:</b>
                     </label>
                     <select class="govuk-select" id="sort" name="sort">
-                      <option value="flag-raised">Flags raised in past 30 days</option>
-                      <option value="no-flag">Flags raised in past 60 days</option>
-                      <option value="no-flag">Flags raised in past year</option>
+                      <option value="flag-raised">Flag raised in past 30 days</option>
+                      <option value="no-flag">No flag raised in past 30 days</option>
                     </select>
                   </td>
               </tbody>
@@ -96,12 +95,12 @@ Track UK satellite positions
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>NORAD ID</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Operator</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Orbit</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Altitude (km)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>SMA altitude (km)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 6%";>Longitude (°)</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Flag ID</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Date of flag</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Reason for flag</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Flag status</th>  
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Most recent flag ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Date of most recent flag</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Reason for most recent flag</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Object status</th>  
             </tr>
           </thead>
           <tbody class="govuk-table__body">
@@ -202,16 +201,16 @@ Track UK satellite positions
                           <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (18/12/23)</td>
               </tr>
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell govuk-body-s"><a href="/satellites/regulator/hylas1">HYLAS 1</a></td>
-                <td class="govuk-table__cell govuk-body-s">37237</td>
-                <td class="govuk-table__cell govuk-body-s"><a href="/organisations/avanti">Avanti</a></td>
+                <td class="govuk-table__cell govuk-body-s"><a href="#">SES 5</a></td>
+                <td class="govuk-table__cell govuk-body-s">38652</td>
+                <td class="govuk-table__cell govuk-body-s"><a href="#">SES</a></td>
                 <td class="govuk-table__cell govuk-body-s">GEO</td>
     <td class="govuk-table__cell govuk-body-s">N/A</td>
-    <td class="govuk-table__cell govuk-body-s">159.6 E</td>
-                <td class="govuk-table__cell govuk-body-s"><a href="#">37237-003</a></td>
-                <td class="govuk-table__cell govuk-body-s">28/11/23</td>
-                <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Missing data</strong></td>
-                <td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (05/12/23)</td>
+    <td class="govuk-table__cell govuk-body-s">5 E</td>
+                <td class="govuk-table__cell govuk-body-s">N/A</td>
+                <td class="govuk-table__cell govuk-body-s">N/A</td>
+                <td class="govuk-table__cell govuk-body-s">N/A</td>
+                <td class="govuk-table__cell govuk-body-s">No flags recorded</td>
     </tr>
           </tbody>
           </col>
