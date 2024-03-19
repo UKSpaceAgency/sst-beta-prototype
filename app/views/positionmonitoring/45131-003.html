@@ -77,10 +77,6 @@ Monitoring flag 45131-001
           <th scope="row" class="govuk-table__header">Operator</th>
           <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">OneWeb</a></td>
         </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">OneWeb plane</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">Not yet assigned to plane</td>
-        </tr>
       </tbody>
     </table></p>
     <table class="govuk-table">
@@ -128,7 +124,7 @@ Monitoring flag 45131-001
         </span>
       </summary>
       <div class="govuk-details__text">
-        <p>This flag has been uploaded by UKSA's orbital analysis team as they have verified an object change that exceeds tolerance thresholds for one or more of UKSA's flagging criteria.</p>
+        <p>This flag has been uploaded by UKSA's orbital analysis team as they have verified an object change that exceeds tolerance thresholds for TLE age.</p>
       </div>
     </details>
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -150,8 +146,8 @@ Monitoring flag 45131-001
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Month</th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">TLEs received during the month</th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric"">Number of TLE flags raised</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">TLEs received during the month</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Number of TLE flags raised</th>
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
@@ -195,7 +191,7 @@ Monitoring flag 45131-001
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  <p>This table shows the number of TLEs received for OWLID00007 for each calendar month over the past three years.</p>
+                  <p>This table shows the number of TLEs received for ONEWEB-0013 for each calendar month over the past three years.</p>
                 </div>
               </details>
             <br>
@@ -211,27 +207,29 @@ Monitoring flag 45131-001
             </div>
             <div id="accordion-default-content-2" class="govuk-accordion__section-content">
               <p class="govuk-body">   
-                <p>The most recent TLE was reported on 16/02/24.</p>         
+                <p>The most recent TLE was reported on 16/02/24.</p>   
                 <table class="govuk-table">
-                <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header"></th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Inclination</th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Apogee (km)</th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Perigee (km)</th>
-                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">SMA Altitude</th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Position on date of most recent TLE</th>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">87.9</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1227</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1224</td>
-                  <td class="govuk-table__cell govuk-table__cell--numeric">1226</td>
-                  </tr>
-              </tbody>
-            </table></p></p>
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header"></th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Inclination (°)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Apogee (km)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Perigee (km)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Altitude (km)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Longitude (°)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-body-m">Position on date of most recent TLE</th>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">87.9</td>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">1227</td>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">1224</td>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">1226</td>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">N/A</td>
+                    </tr>
+                  </tbody>
+                </table></p></p>
             <br>
             <details class="govuk-details">
                 <summary class="govuk-details__summary">

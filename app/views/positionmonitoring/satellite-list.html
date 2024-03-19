@@ -13,7 +13,7 @@ Track UK satellite positions
         <div class="moj-search">
         <form action="#" method="post">
         <div class="govuk-form-group">
-        <p>This table contains information on any changes to the status of UK-licensed satellites. </p> 
+        <p>This table contains information on any changes to the status and positions of UK-licensed satellites. </p> 
           <p>These changes in status are identified through 4 different types of flags related to satellite position, manoeuvres undertaken, and data quality. More detail on each flag can be found by clicking on the flag ID.</p>
           <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
             Find a satellite:
@@ -45,6 +45,7 @@ Track UK satellite positions
                     <b>Select one or more operators:</b>
                   </label>
                   <select class="govuk-select" id="sort" name="sort">
+                    <option value="airbus">All operators</option>
                     <option value="airbus">Airbus</option>
                     <option value="avantu">Avanti</option>
                     <option value="clydespace">ClydeSpace</option>
@@ -61,6 +62,7 @@ Track UK satellite positions
                       <option value="meo">MEO</option>
                       <option value="geo">GEO</option>
                       <option value="other">Other</option>
+                      <option value="other">All orbits</option>
                     </select>
                   </td>
                   <td class="govuk-table__cell govuk-body-s">
@@ -70,7 +72,9 @@ Track UK satellite positions
                     <select class="govuk-select" id="sort" name="sort">
                       <option value="flag-raised">Flags raised in past 30 days</option>
                       <option value="no-flag">Flags raised in past 60 days</option>
+                      <option value="no-flag">Flags raised in past 180 days</option>
                       <option value="no-flag">Flags raised in past year</option>
+                      <option value="no-flag">All flags raised</option>
                     </select>
                   </td>
               </tbody>
@@ -127,7 +131,7 @@ Track UK satellite positions
               <td class="govuk-table__cell govuk-body-s"><a href="/positionmonitoring/54643-001">54643-001</a></td>
               <td class="govuk-table__cell govuk-body-s">21/01/24</td>
               <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as planned</strong></td>
-              <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (26/02/24)</td>
+              <td class="govuk-table__cell govuk-body-s">Manoeuvre finished (26/02/24)</td>
             </tr>
             <tr class="govuk-table__row">
                 <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat HS3-IS</a></td>
@@ -139,7 +143,7 @@ Track UK satellite positions
                 <td class="govuk-table__cell govuk-body-s"><a href="/positionmonitoring/42814-001">42814-001</a></td>
                 <td class="govuk-table__cell govuk-body-s">19/01/24</td>                
                 <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">manoeuvre as planned</strong></td>
-                <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (26/01/24)</td>
+                <td class="govuk-table__cell govuk-body-s">Manoeuvre finished (26/01/24)</td>
               </tr>
               <tr class="govuk-table__row">
                   <td class="govuk-table__cell govuk-body-s"><a href="#">ONEWEB-0013</a></td>
@@ -163,7 +167,7 @@ Track UK satellite positions
                     <td class="govuk-table__cell govuk-body-s"><a href="#">25639-001</a></td>
                     <td class="govuk-table__cell govuk-body-s">03/01/24</td>
                     <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">manoeuvre as planned</strong></td>
-                    <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (04/01/24)</td>
+                    <td class="govuk-table__cell govuk-body-s">Manoeuvre finished (04/01/24)</td>
                   </tr>
                   <tr class="govuk-table__row">
                       <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat 5-F4</a></td>
@@ -175,7 +179,7 @@ Track UK satellite positions
                       <td class="govuk-table__cell govuk-body-s"><a href="#">42698-004</a></td>
                       <td class="govuk-table__cell govuk-body-s">27/12/23</td>
                       <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">manoeuvre as planned</strong></td>
-                      <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (30/12/23)</td>
+                      <td class="govuk-table__cell govuk-body-s">Manoeuvre finished (30/12/23)</td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell govuk-body-s"><a href="#">NAAL SL0012</a></td>
@@ -187,7 +191,7 @@ Track UK satellite positions
                         <td class="govuk-table__cell govuk-body-s"><a href="#">44057-001</a></td>
                         <td class="govuk-table__cell govuk-body-s">23/12/23</td>
                         <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">Unexpected position change</strong></td>
-                        <td class="govuk-table__cell govuk-body-s">Position change completed (25/12/23)</td>
+                        <td class="govuk-table__cell govuk-body-s">Position change finished (25/12/23)</td>
                       </tr>
                       <tr class="govuk-table__row">
                           <td class="govuk-table__cell govuk-body-s"><a href="#">NSL-2</a></td>
@@ -199,7 +203,7 @@ Track UK satellite positions
                           <td class="govuk-table__cell govuk-body-s"><a href="#">55067-003</a></td>
                           <td class="govuk-table__cell govuk-body-s">15/12/23</td>
                           <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">manoeuvre not as planned</strong></td>
-                          <td class="govuk-table__cell govuk-body-s">Manoeuvre completed (18/12/23)</td>
+                          <td class="govuk-table__cell govuk-body-s">Manoeuvre finished (18/12/23)</td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell govuk-body-s"><a href="/satellites/regulator/hylas1">HYLAS 1</a></td>
@@ -217,7 +221,7 @@ Track UK satellite positions
           </col>
         </table>
 
-        <p>Download summary table of UK-licensed satellites [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+        <p>Download summary table of monitoring flags for UK-licensed satellites [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
 
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
@@ -229,11 +233,11 @@ Track UK satellite positions
             <ul class="govuk-list govuk-list--bullet">
               <li>Select the <b>satellite common name</b> for more information about the satellite in question.</li>
               <li>Select the <b>operator name</b> for an overview of all that operator's satellites.</li>
-              <li>Select the <b>most recent flag ID</b> for more information on the satellite's most recent monitoring flag.</li>
+              <li>Select the <b>flag ID</b> for more information on the satellite monitoring flag.</li>
               <li>Sort the satellites according to criteria by clicking on the relevant <b>headings</b>.</li> 
               <li>Filter the list of satellites by clicking <b>Apply filters to this table</b> below the search bar.</li>
             </ul>
-            <p>This table includes most recent satellite monitoring flags as of 12/02/24 12:35:23.</p>
+            <p>This table includes most recent satellite monitoring flags as of 19/03/24 12:35:23.</p>
           </div>
         </details>
           <br>
