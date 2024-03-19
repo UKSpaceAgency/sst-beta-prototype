@@ -229,6 +229,17 @@ HYLAS 1
             </div>
             <div id="accordion-default-content-1" class="govuk-accordion__section-content">
                 <p class="govuk-body">
+
+                  <label class="govuk-label" for="sort">
+                    Filter by type of flag
+                  </label>
+                  <select class="govuk-select" id="sort" name="sort">
+                    <option value="published">Manoeuvre as planned</option>
+                    <option value="updated">Manoeuvre not as planned</option>
+                    <option value="views">Unexpected position change</option>
+                    <option value="views">Missing data</option>
+                    <option value="views" selected>All flags</option>
+                  </select>
                   
               <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">
                 <col>
