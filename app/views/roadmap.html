@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Roadmap
+{% endblock %}
+
+{% block content %}
+
+
+
+  <div class="govuk-grid-row">
+
+      </div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <h3 class="govuk-heading-s">Contents</h3>
+    <ul class="moj-side-navigation__list">
+      <li class="moj-side-navigation__item">
+        <a href="#now">What we are working on now</a>
+      </li>
+      <li class="moj-side-navigation__item">
+        <a href="#next">What we will work on next</a>
+      </li>
+        <li class="moj-side-navigation__item">
+          <a href="#later">What we will work on later</a>
+      </li>
+      </li>
+      </ul>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+    <h2 class="govuk-heading-l" id="now">Roadmap</h2>
+    <p>The Monitor Space Hazards roadmap shows what we’re working on currently and what we will be working on in future.</p>
+    <p>This roadmap is a guide and not exhaustive, with some things potentially subject to change.</p> 
+    <br>
+    <h2 class="govuk-heading-m" id="event summary">What we are working on now</h2>
+    <br>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Launch our public beta of Monitor Space Hazard’s re-entry service </li>
+  <li>Improve our re-entry service based on user feedback</li>
+  <li>Develop a conjunction alert service that provides information and alerts on high risk conjunction events to approved government users</li>
+  <li>Provide links and access to the Met Office's Space Weather information.</li>
+  <li>Improve iteratively our Manoeuvre Trade Space Plots</li>
+  <li>Provide more detailed information on our performance monitoring and statistics page</li>
+</ul>
+<br>
+<h2 class="govuk-heading-m" id="next">What we will work on next</h2>
+<br>
+<ul class="govuk-list govuk-list--bullet">
+<li>Develop our satellite activity monitoring service to support the CAA in their satellite orbital licence monitoring and regulatory work</li>
+<li>Undertake an alpha into how to digitise fragmentation alerts for users</li>
+<li>Provide events and UI filtering for conjunctions and re-entries</li>
+<li>Increase further the number and type of statistics provided</li>
+<li>Provide more detailed event information by organisation</li>
+<li>Hide 0% Probability of Collision events</li>
+</ul>
+<br>
+<h2 class="govuk-heading-m" id="later">What we will work on later</h2>
+<br>
+<ul class="govuk-list govuk-list--bullet">
+<li>Provide a ‘Contacting other operators’ feature</li>
+<li>Add a Space Environment Statistics page, supported by debris vs debris CDMs, fragmentation alerts and additional object tracking</li>
+<li>Incorporate UK CDMs and Ephemeris data</li>
+<li>Conduct a discovery into options for academic and public facing interfaces</li>
+<li>Provide proximity and environment alerts to operators and government users.   </li>
+</ul>
+ <br>         
+                </div>
+        </div>
+
+
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
