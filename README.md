@@ -1,5 +1,5 @@
-# Monitor space hazards (prototype)
-`sst-beta-prototype` is a hi-fi prototype based on the [GOV.UK prototype kit](https://prototype-kit.service.gov.uk/docs/). It is used to test future possible designs and features for the Monitor space hazards service. Monitor Space Hazards is the space hazards tracking service for UK operators and approved government employees. It includes the formerly Monitor your satellites collision avoidance service, as well as a re-entry and satellite activity monitoring service. 
+# Monitor Space Hazards (prototype)
+`sst-beta-prototype` is a hi-fi prototype based on the [GOV.UK prototype kit](https://prototype-kit.service.gov.uk/docs/). It is used to test future possible designs and features for the Monitor Space Hazards service. Monitor Space Hazards is the space hazards tracking service for UK operators and approved government employees. It includes the formerly Monitor your satellites collision avoidance service, as well as a re-entry and satellite activity monitoring service. 
 
 ## Technical documentation
 
