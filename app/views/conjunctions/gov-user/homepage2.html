@@ -6,25 +6,17 @@ Upcoming conjunction events
 
 {% block content %}
 
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+
+</div>
 <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
         <h1 class="govuk-heading-xl">Track conjunction events</h1>
-        <table class="govuk-table">
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Upcoming conjunction alerts</th>
-              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Upcoming conjunction events</th>
-              <td class="govuk-table__cell govuk-table__cell--numeric">2400</td>
-            </tr>
-          </tbody>
-        </table>
 
-        <p class="govuk-body">The table below displays all conjunction events which meet the UK Space Agency's thresholds for alerting UK government. For further detail on how risk and alert thresholds are defined, see 'Help with this table' below.</p> 
+        <p class="govuk-body">There is currently <b>1</b> upcoming conjunction event which meets the UK Space Agency's thresholds for alerting UK government. For further detail on how risk and alert thresholds are defined, see 'Help with this table' below.</p> 
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
           <col>
             <colgroup span="3"></colgroup>
@@ -50,26 +42,10 @@ Upcoming conjunction events
             <tr class="govuk-table__row">
               <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--green">Low</strong></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/gov-user/escalated-event-summary-report-1" class="govuk-link--no-visited-state">asdf-asdas-asdf (Alert)</a></b></td>
-              <td class="govuk-table__cell govuk-body-s">13/04/24 11:51</td>
+              <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
               <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">OneWeb-0601 (UK-licensed payload)</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Transit 5B-7 (US-licensed payload)</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0.13</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--grey">Event passed</strong></td>
-              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="#" class="govuk-link--no-visited-state">bdaw-breas-gres (Alert)</a></b></td>
-              <td class="govuk-table__cell govuk-body-s">03/03/24 13:43</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">Starlink-31 (US-licensed payload)</a></td>
-              <td class="govuk-table__cell govuk-body-s"><a href="#">Transit 5B-7 (US-licensed payload)</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--grey">Event passed</strong></td>
-              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="#" class="govuk-link--no-visited-state">gere-grewr-bfds (Alert)</a></b></td>
-              <td class="govuk-table__cell govuk-body-s">16/02/24 09:51</td>
-              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">OneWeb-0601 (UK-licensed payload)</a></td>
-              <td class="govuk-table__cell govuk-body-s"><a href="#">Starlin-21 (US-licensed payload)</a></td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0</td>
             </tr>
           </tbody>
           </col>
@@ -153,9 +129,17 @@ Upcoming conjunction events
         </details>
 <br>
 
-<h2 class="govuk-heading-m">All upcoming conjunction events</h2>
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-<p class="govuk-body">This table contains all tracked conjunction events, including conjunction events that meet the UK Space Agency's thresholds for alerting UK government.</p>
+        <h2 class="govuk-heading-l">All upcoming conjunction events</h2>
+
+        <p class="govuk-body">There are currently <b>X</B> upcoming conjunction events affecting UK satellites.</p>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-visually-hidden">Warning</span>
+            The table below contains conjunction reports limited to data drawn directly from Space Track. The table above contains more detail about events meeting the UK Space Agency's thresholds for performing additional analysis and alerting UK government. 
+          </strong>
+        </div>
 
         <div class="moj-search">
         <form action="#" method="post">
@@ -172,7 +156,8 @@ Upcoming conjunction events
         </button>
         </form>
         </div>
-        <br>
+
+<br>
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
           <col>
             <colgroup span="2"></colgroup>
@@ -182,26 +167,25 @@ Upcoming conjunction events
 
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Event information</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Event information</b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Miss distance (m)</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision (%)</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision</b></td>
             </tr>
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Event ID</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Time of closest approach (UTC)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Time of closest approach (UTC)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Mean radial</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Total</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Space-Track CDM</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>UKSA</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>UKSA</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-                <tr class="govuk-table__row">
-              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/gov-user/escalated-event-summary-5" class="govuk-link--no-visited-state">asdf-vewaw-btrw</a> </b></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/gov-user/escalated-event-summary-5" class="govuk-link--no-visited-state">asdf-asdas-asdf</a> </b></td>
               <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
               <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">Starlink-1862</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Discoverer 5</a></td>
@@ -211,18 +195,16 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">4.4987e-6</td>
             </tr>
             <tr class="govuk-table__row">
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/gov-user/escalated-event-summary-report-1" class="govuk-link--no-visited-state">asdf-asdas-asdf                    </a></b></td>
-                    <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
-                    <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">OneWeb-0601</a></td>
-                    <td class="govuk-table__cell govuk-body-s"><a href="#">Transit 5B-7</a></td>
-                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">15</td>
-                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">12</td>
-                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">0.07</td>
-                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0.13</td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0003"> <b><a href="#" class="govuk-link--no-visited-state">asdf-gtdas-zdgt</a> </b></td>
+              <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1862</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-64</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">560</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">152</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">1.543e-6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543"></td>
             </tr>
             <tr class="govuk-table__row">
-                <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0004"><b><a href="#" class="govuk-link--no-visited-state">ptyr-bxtte-asdf</a></b></td>
               <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1317</a></td>
@@ -233,7 +215,6 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543"></td>
             </tr>
             <tr class="govuk-table__row">
-                <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0021"><b><a href="#" class="govuk-link--no-visited-state">asre-bnyyq-asdf</a></b></td>
               <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Spacebee-52</a></td>
@@ -244,7 +225,6 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543"></td>
             </tr>
             <tr class="govuk-table__row">
-                <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0033"><b><a href="#" class="govuk-link--no-visited-state">asdf-asdas-afki</a></b></td>
               <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-0064</a></td>
@@ -255,7 +235,6 @@ Upcoming conjunction events
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543"></td>
             </tr>
             <tr class="govuk-table__row">
-                <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0034"><b><a href="#" class="govuk-link--no-visited-state">asdf-opkll-bcgt</a></b></td>
               <td class="govuk-table__cell govuk-body-s">14/02/21 01:05</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-0050</a></td>
@@ -269,7 +248,9 @@ Upcoming conjunction events
           </col>
         </table>
 
-        <p>Download upcoming conjunction events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+        <p>Download summary table for all upcoming events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
+        <p>Download all available data for all upcoming events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -287,6 +268,9 @@ Upcoming conjunction events
           </ul>
         </div>
       </details>
+
+      <a href="/conjunctions/gov-user/previous-events" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+        View previous conjunction events</a>
 
         <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Return to previous page</a>
