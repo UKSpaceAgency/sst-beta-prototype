@@ -1,0 +1,89 @@
+          <div class="govuk-width-container">
+            <div class="govuk-footer__navigation">
+              <div class="govuk-footer__section govuk-grid-column-full">
+                <h2 class="govuk-footer__heading govuk-heading-m">Upcoming events [for your organisation]</h2>
+                <ul class="govuk-footer__list">
+                  <li class="govuk-footer__list-item">
+                    <p>          <div class="govuk-footer__section govuk-grid-column-one-third">
+                      <h2 class="govuk-footer__heading govuk-heading-s">Upcoming conjunction events</h2>
+                      <ul class="govuk-footer__list">
+                        <li class="govuk-footer__list-item">
+                          <p><div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-quarter">
+                              <div class="govuk-heading-l">250</div>
+                              </div></p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="govuk-footer__section govuk-grid-column-one-third">
+                      <h2 class="govuk-footer__heading govuk-heading-s">Highest PoC in upcoming events</h2>
+                      <ul class="govuk-footer__list">
+                        <li class="govuk-footer__list-item">
+                          <p><div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-quarter">
+                              <div class="govuk-heading-l">1.0093e-3</div>
+                              </div></p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="govuk-footer__section govuk-grid-column-one-third">
+                      <h2 class="govuk-footer__heading govuk-heading-s">Upcoming re-entry events</h2>
+                      <ul class="govuk-footer__list">
+                        <li class="govuk-footer__list-item">
+                          <p><div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-quarter">
+                              <div class="govuk-heading-l">2</div>
+                              </div></p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    </p>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="govuk-footer__section govuk-grid-column-full">
+                          <h2 class="govuk-footer__heading govuk-heading-m">Objects tracked by Monitor Space Hazards</h2>
+                          <ul class="govuk-footer__list">
+                            <li class="govuk-footer__list-item">
+                              <p><p><div class="govuk-grid-row">
+                                <div class="govuk-grid-column-one-quarter">
+                                  <div class="govuk-heading-l">2900</div>
+                                  <div class= "govuk-heading-s">total</div>
+                                  </div>
+                                    <div class="govuk-grid-column-one-quarter">
+                                  <span class="big-number-smallest">
+                                    <span class="govuk-heading-l">
+                                        350
+                                    </span>
+                                      <span class="govuk-heading-s">satellites</span>
+                                  </span>
+                                    </div>
+                                    <div class="govuk-grid-column-one-quarter">
+                                  <span class="big-number-smallest">
+                                    <span class="govuk-heading-l">
+                                        500
+                                    </span>
+                                      <span class="govuk-heading-s">pieces of debris</span>
+                                  </span>
+                                    </div>
+                                    <div class="govuk-grid-column-one-quarter">
+                                  <span class="big-number-smallest">
+                                    <span class="govuk-heading-l">
+                                        250
+                                    </span>
+                                      <span class="govuk-heading-s">other objects</span>
+                                  </span>
+                                    </div>
+                                  </div></p>
+                              </a>
+                            </li>
+                          </ul>
+                        </div></p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
