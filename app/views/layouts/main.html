@@ -5,6 +5,9 @@
     
     {% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
     #1f70b8
+    {% block headIcons %}
+    <link rel="shortcut icon" href="{{ asset_path }}images/favicon.ico?0.18.3" type="image/x-icon" />
+    {% endblock %}
     {% block header %}
         {# Set serviceName in config.js. #}
         <style>
