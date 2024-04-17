@@ -1,0 +1,402 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Monitoring flag 45131-001
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/monitoring/satellite-list">Monitoring</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/monitoring/37237-001">Monitoring flag 45131-003</a>
+      </li>
+    </ol>
+  </div>
+    <h1 class="govuk-heading-xl">Monitoring flag 45131-003</h1>
+  </div>
+
+
+  <div class="govuk-grid-row">
+
+      </div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <h3 class="govuk-heading-s">Contents</h3>
+    <ul class="moj-side-navigation__list">
+      <li class="moj-side-navigation__item">
+        <a href="#event summary">Summary</a>
+      </li>
+      <li class="moj-side-navigation__item">
+        <a href="#accordion-default-heading-1">TLE history</a>
+      </li>
+      <li class="moj-side-navigation__item">
+        <a href="#accordion-default-heading-2">Most recent recorded position</a>
+      </li>
+        <li class="moj-side-navigation__item">
+          <a href="#accordion-default-heading-4">Operator contact information</a>
+      </li>
+      <li class="moj-side-navigation__item">
+        <a href="#accordion-default-heading-4">Object data</a>
+      </li>
+      </li>
+      </ul>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  </div>
+  <div class="govuk-grid-column-three-quarters">
+    <h2 class="govuk-heading-l" id="event summary">Summary</h2>
+    <p>UKSA's orbital analysis team identified that ONEWEB-0013 did not generate a TLE within the expected timeframe. </p> 
+    <p> The current threshold for TLE age for ONEWEB-0013 is 7 days and it took 10 days to record a TLE.</p>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Object information</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Flagged object</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">ONEWEB-0013</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">NORAD ID</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">45131</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">International designator</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2020-008A</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Operator</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">OneWeb</a></td>
+        </tr>
+      </tbody>
+    </table></p>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Flag information</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Reason for flag</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><strong class="govuk-tag govuk-tag--turquoise">missing data</strong></td></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Date of TLE prior to flag</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">16/02/24</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Date of first TLE after flag</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">26/02/24</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Reporting threshold for TLE age (days)</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">7</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Days threshold exceeded by</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Flag issued date</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">23/02/24</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">TLE count in month prior to flag</th>
+          <td class="govuk-table__cell govuk-table__cell--numeric">6</td>
+        </tr>
+      </tbody>
+    </table></p>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with this summary
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p>This flag has been uploaded by UKSA's orbital analysis team as they have verified an object change that exceeds tolerance thresholds for TLE age.</p>
+      </div>
+    </details>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Contact a UKSA orbital analyst
+    </button>
+    <br>
+
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                TLE history
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Month</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">TLEs received during the month</th>
+                  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Number of TLE flags raised</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">February 2024</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">January 2024</th>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">30</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">December 2023</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">35</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">November 2023</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">24</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">October 2023</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">32</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">September 2023</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+                </tr>
+              </tbody>
+            </table></p>
+            <br>
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Help with this table
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>This table shows the number of TLEs received for ONEWEB-0013 for each calendar month over the past three years.</p>
+                </div>
+              </details>
+            <br>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Most recent recorded position
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+              <p class="govuk-body">   
+                <p>The most recent TLE was reported on 16/02/24.</p>   
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header"></th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Inclination (°)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Apogee (km)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Perigee (km)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Altitude (km)</th>
+                      <th scope="col" class="govuk-table__header govuk-body-m govuk-table__header--numeric">Longitude (°)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-body-m">Position on date of most recent TLE</th>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">87.9</td>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">1227</td>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">1224</td>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">1226</td>
+                      <td class="govuk-table__cell govuk-body-m govuk-table__cell--numeric">N/A</td>
+                    </tr>
+                  </tbody>
+                </table></p></p>
+            <br>
+            <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Help with this table
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>This table shows the position of OneWeb-0013 on 16/02/24.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              Operator contact information
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Licensee
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  OneWeb
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Primary contact
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  John Doe
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Telephone number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  +44(0)7912277777
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Email contacts
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">john.doe@oneweb.net</p>
+                </dd>
+              </div>
+            </div>
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Object data
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+              <p class="govuk-body">
+                <p>Space-Track is the main source of object data.</p>
+                <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Common name</th>
+                    <td class="govuk-table__cell">ONEWEB-0013</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">NORAD ID</th>
+                    <td class="govuk-table__cell">45131</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">International designator</th>
+                    <td class="govuk-table__cell">2020-008A</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Object type</th>
+                    <td class="govuk-table__cell">PAYLOAD</td>
+              </tbody>
+            </table>
+    
+            <h2 class="govuk-heading-s">License information</h2>   
+    
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Country</th>
+                  <td class="govuk-table__cell">UK</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Launching site</th>
+                  <td class="govuk-table__cell">TTMTR</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Launch date</th>
+                  <td class="govuk-table__cell">2020</td>
+            </tbody>
+          </table>
+    
+          <h2 class="govuk-heading-s">Additional object data</h2> 
+          <p>ESA DISCOS provides additional object data where available. Contact ESA DISCOS if your satellite data is incorrect.</p>
+          <p>ESA DISCOS data was last updated on: 07/02/2024 02:48:48 UTC</p>
+    
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header" span="1" style="width: 50%">Shape</th>
+                <td class="govuk-table__cell">Box + 2 Pan</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Mass (kg)</th>
+                <td class="govuk-table__cell">148</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Average cross section (m²)</th>
+                <td class="govuk-table__cell">2.96</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Maximum cross section (m²)</th>
+                <td class="govuk-table__cell">4.05</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Minimum cross section (m²)</th>
+                <td class="govuk-table__cell">1.43</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Height (m)</th>
+                <td class="govuk-table__cell">1.3</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Width (m)</th>
+                <td class="govuk-table__cell">1</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Depth (m)</th>
+                <td class="govuk-table__cell">1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Span (m)</th>
+              <td class="govuk-table__cell">5</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Diameter</th>
+                <td class="govuk-table__cell"></td>
+          </tbody>
+        </table></p>
+            </div>
+          </div>
+          </div>
+          </div>  
+        
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+            Return to ONEWEB-0013 satellite page</a>
+
+        </div>
+        </div>
+
+
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
