@@ -59,37 +59,588 @@ Add a new user
 <input class="govuk-input" id="event-name" name="event-name" type="text">
 </div>
 
-  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-      <b>Select an account type<b>
-    </legend>
-    <div id="sign-in-hint" class="govuk-hint">
-      What type of access will this user require to the organisation on Monitor space hazards?
+<h1 class="govuk-heading-l">Select an account type</h1>
+    <div id="changedName-hint" class="govuk-hint">
+      What type of access will this user require to Monitor space hazards?
+    </div>
+
+<div class="govuk-radios" data-module="govuk-radios">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+    <label class="govuk-label govuk-radios__label" for="contact">
+      Government Admin
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+    <p><b>Which conjunction alerts would you like the user to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
     </div>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="sign-in">
-          Administrator
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          No conjunction alerts
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="sign-in-2">
-          Operator
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          All conjunction alerts 
         </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority and Ministry of Defence
+        </div>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="sign-in-2">
-          User
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Only priority conjunction alerts 
         </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
       </div>
+      <br>
+      <p><b>Which re-entry alerts would you like the user to receive?</b></p>
+      <div id="reentry-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+            No re-entry alerts
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+            All re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for UK Space Agency, Civil Aviation Authority, Ministry of Defence and international partners
+          </div>
+          </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Re-entry alerts for UK satellites only
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Only priority re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for all other government departments
+          </div>
+        </div>
+      </div>
+    </fieldset>
     </div>
-
-  </fieldset>
+    </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+    <label class="govuk-label govuk-radios__label" for="contact-2">
+      Government User
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+    <p><b>Which conjunction alerts would you like the user to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          No conjunction alerts
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          All conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority and Ministry of Defence
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Only priority conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
+      </div>
+      <br>
+      <p><b>Which re-entry alerts would you like the user to receive?</b></p>
+      <div id="reentry-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+            No re-entry alerts
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+            All re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for UK Space Agency, Civil Aviation Authority, Ministry of Defence and international partners
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Re-entry alerts for UK satellites only
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Only priority re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for all other government departments
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
+    <label class="govuk-label govuk-radios__label" for="contact-2">
+      Agency User
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+    <p><b>Which conjunction alerts would you like the user to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          No conjunction alerts
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          All conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority and Ministry of Defence
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Only priority conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
+      </div>
+      <br>
+      <p><b>Which re-entry alerts would you like the user to receive?</b></p>
+      <div id="reentry-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+            No re-entry alerts
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+            All re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for UK Space Agency, Civil Aviation Authority, Ministry of Defence and international partners
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Re-entry alerts for UK satellites only
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Only priority re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for all other government departments
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-4">
+    <label class="govuk-label govuk-radios__label" for="contact-2">
+      Agency Admin
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+    <p><b>Which conjunction alerts would you like the user to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          No conjunction alerts
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          All conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority and Ministry of Defence
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Only priority conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
+      </div>
+      <br>
+      <p><b>Which re-entry alerts would you like the user to receive?</b></p>
+      <div id="reentry-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+            No re-entry alerts
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+            All re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for UK Space Agency, Civil Aviation Authority, Ministry of Defence and international partners
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Re-entry alerts for UK satellites only
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Only priority re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for all other government departments
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="contact-5" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-5">
+    <label class="govuk-label govuk-radios__label" for="contact-5">
+      Agency Analyst
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-5">
+    <p><b>Which conjunction alerts would you like the user to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          No conjunction alerts
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          All conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority and Ministry of Defence
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Only priority conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
+      </div>
+      <br>
+      <p><b>Which re-entry alerts would you like the user to receive?</b></p>
+      <div id="reentry-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+            No re-entry alerts
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+            All re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for UK Space Agency, Civil Aviation Authority, Ministry of Defence and international partners
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Re-entry alerts for UK satellites only
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Only priority re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for all other government departments
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="contact-6" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-6">
+    <label class="govuk-label govuk-radios__label" for="contact-6">
+      Agency Approver
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-6">
+    <p><b>Which conjunction alerts would you like the user to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          No conjunction alerts
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          All conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority and Ministry of Defence
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Only priority conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
+      </div>
+      <br>
+      <p><b>Which re-entry alerts would you like the user to receive?</b></p>
+      <div id="reentry-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+            No re-entry alerts
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+            All re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for UK Space Agency, Civil Aviation Authority, Ministry of Defence and international partners
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Re-entry alerts for UK satellites only
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Only priority re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for all other government departments
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="contact-7" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-7">
+    <label class="govuk-label govuk-radios__label" for="contact-7">
+      Agency Superuser
+    </label>
+  </div>
+  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-7">
+    <p><b>Which conjunction alerts would you like the user to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          No conjunction alerts
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          All conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority and Ministry of Defence
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Only priority conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
+      </div>
+      <br>
+      <p><b>Which re-entry alerts would you like the user to receive?</b></p>
+      <div id="reentry-hint" class="govuk-hint">
+        Select one option.
+      </div>
+      <div class="govuk-radios" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+            No re-entry alerts
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+          <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+            All re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for UK Space Agency, Civil Aviation Authority, Ministry of Defence and international partners
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Re-entry alerts for UK satellites only
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+          <label class="govuk-label govuk-radios__label" for="reentry-3">
+            Only priority re-entry alerts for their areas of interest
+          </label>
+          <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+            Recommended for all other government departments
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
 </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+    <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+      Satellite User
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+      Satellite Operator
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+      Satellite Admin
+    </label>
+  </div>
+
+
+</fieldset>
+</div>
+<br>
 
 <details class="govuk-details" data-module="govuk-details">
 <summary class="govuk-details__summary">
