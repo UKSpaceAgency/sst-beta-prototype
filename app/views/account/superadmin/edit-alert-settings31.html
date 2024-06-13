@@ -6,20 +6,20 @@ Edit your alert settings
 
 {% block content %}
 <div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/account/superadmin/account">Account</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/account/superadmin/distribution-lists">View distribution lists</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Edit a user's alert settings</a>
-      </li>
-        </ol>
-        </div>
-
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/account/superadmin/account">Account</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="/account/superadmin/distribution-lists">View distribution lists</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Edit a user's alert settings</a>
+    </li>
+      </ol>
+      </div>
+      
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
@@ -95,6 +95,27 @@ Edit your alert settings
     
     </details>
 
+    <p><b>How would you like the user to receive conjunction alerts?</b></p>
+    <div id="how-conjunction-hint" class="govuk-hint">
+      Select all that apply.
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="how-conjunction-1" name="how-conjunction" type="checkbox" value="email" checked=checked>
+        <label class="govuk-label govuk-checkboxes__label" for="how-conjunction-1">
+          Email
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="how-conjunction-2" name="how-conjunction" type="checkbox" value="text-message">
+        <label class="govuk-label govuk-checkboxes__label" for="how-conjunction-2">
+          Text message
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
 <br>
 
 <div class="govuk-form-group">
@@ -145,7 +166,7 @@ Edit your alert settings
     </div>
   </fieldset>
 </div>
-<br>
+
 <details class="govuk-details">
 
   <summary class="govuk-details__summary">
@@ -254,6 +275,31 @@ Edit your alert settings
                    </table>
                    <p>Notification settings are currently only available for ares of interest within the UK and its overseas territories. The service plans to add addiitonal areas of interest for international users in the future.</p>
 
+
+                   <p><b>How would you like the user to receive re-entry notifications?</b></p>
+                   <div id="how-reentry-hint" class="govuk-hint">
+                     Select all that apply.
+                   </div>
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="how-reentry-1" name="how-reentry" type="checkbox" value="email" checked=checked>
+                       <label class="govuk-label govuk-checkboxes__label" for="how-reentry-1">
+                         Email
+                       </label>
+                     </div>
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="how-reentry-2" name="how-reentry" type="checkbox" value="text-message">
+                       <label class="govuk-label govuk-checkboxes__label" for="how-reentry-2">
+                         Text message
+                       </label>
+                     </div>
+                   </div>
+                   <br>
+                   <br>
+      </fieldset>
+      </div>
+        <p></p>
+        <p></p>
 
         <br>
 
