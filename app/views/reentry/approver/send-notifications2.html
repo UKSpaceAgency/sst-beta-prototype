@@ -22,11 +22,11 @@ Send alerts for re-entry event re-asghj-kifdy
       <br>
       <h1 class="govuk-heading-xl">Send alert to additional recipients</h1>
     </div>
-  
     <p>This page shows you the current distribution status of the re-entry alert and allows you to manually distribute the alert to additional recipients.</p>
     <p>If it is not already, you can choose to make the alert a priority re-entry alert. You are also able to manually select individual emails to send the alert to.</p>
+    <h2 class="govuk-heading-m">Current alert distribution</h2>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Report Status</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Distribution list</th>
@@ -35,19 +35,19 @@ Send alerts for re-entry event re-asghj-kifdy
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">All re-entry alerts</th>
+            <th scope="row" class="govuk-table__header">1. All re-entry alerts</th>
             <td class="govuk-table__cell"><strong class="govuk-tag">
                 Sent to distribution list
               </strong></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Priority re-entry alerts only</th>
+            <th scope="row" class="govuk-table__header">2. Priority re-entry alerts only</th>
             <td class="govuk-table__cell">        <strong class="govuk-tag govuk-tag--grey">
                 Not sent to distribution list
               </strong></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Individually selected recipients</th>
+            <th scope="row" class="govuk-table__header">3. Individually selected recipients</th>
             <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">
                 Not sent to any individually selected recipients
               </strong></td>
@@ -64,8 +64,13 @@ Send alerts for re-entry event re-asghj-kifdy
           </span>
         </summary>
         <div class="govuk-details__text">
-            <a class="govuk__link" href="/account/approver/distribution-lists">see distribution lists</a>
-          <p>Priority re-entry alerts are those with:</p>
+          <b>Distribution lists:</b>
+          <br>
+           You are able to what distribution list users are currently on in the account section (<a class="govuk__link" href="/account/approver/distribution-lists">View distribution lists</a>)
+           <br>
+           <br>
+           <b>Priority re-entry alert criteria for automatic distribution:</b>
+           <br>
           <ul class="govuk-list govuk-list--bullet">
             <li>Debris likely to survive to the ground</li>
             <li>AND one of the following:</li>
@@ -74,20 +79,16 @@ Send alerts for re-entry event re-asghj-kifdy
               <li>OR UK-licensed object</li>
               <li>OR significant press interest</li></ul>
           </ul>
-        </div>
-      
+        <p>You can use this page to make an alert 'priority' before it meets the automatic distribution criteria.</p>
+      </div>
       </details>
+      <br>
+      <h2 class="govuk-heading-m">Change alert distribution</h2>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h1 class="govuk-fieldset__heading">
-              Edit report status
-            </h1>
-          </legend>
-          <div id="contact-hint" class="govuk-hint">
-            Select whether you would like to send this alert to additional recipients
-          </div>
+<p>Select whether you would like to send this alert to additional recipients.</p>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
