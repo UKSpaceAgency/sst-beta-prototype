@@ -1,0 +1,383 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+View distribution lists
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/account">Account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/distribution-lists">View distribution lists</a>
+      </li>
+        </ol>
+        </div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <form class="form" action="/account/approver/account" method="post">
+
+          <h1 class="govuk-heading-xl">View distribution lists</h1>
+
+          <p>We will send notifications according to the distribution lists outlined on this page.</p>
+
+          <h2 class="govuk-heading-l">Distribution lists for conjunction events</h1>
+
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Receive all conjunction alerts
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Name</th>
+                      <th scope="col" class="govuk-table__header">Email</th>
+                      <th scope="col" class="govuk-table__header">Organisation/department</th>
+                      <th scope="col" class="govuk-table__header">Phone number</th>
+                      <th scope="col" class="govuk-table__header"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                    Receive only priority conjunction alerts
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header">Name</th>
+                      <th scope="col" class="govuk-table__header">Email</th>
+                      <th scope="col" class="govuk-table__header">Organisation/department</th>
+                      <th scope="col" class="govuk-table__header">Phone number</th>
+                      <th scope="col" class="govuk-table__header"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">Joe Bloggs</td>
+                      <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                      <td class="govuk-table__cell">Department of Government</td>
+                      <td class="govuk-table__cell">44 0123 94546</td>
+                      <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+          </div>
+
+          <h2 class="govuk-heading-l">Distribution lists for re-entry events</h1>
+
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+              <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                      Receive all re-entry alerts
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Name</th>
+                        <th scope="col" class="govuk-table__header">Email</th>
+                        <th scope="col" class="govuk-table__header">Organisation/department</th>
+                        <th scope="col" class="govuk-table__header">Phone number</th>
+                        <th scope="col" class="govuk-table__header"></th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+                <div class="govuk-accordion__section">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                        Receive re-entry alerts for UK satellites only
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <table class="govuk-table">
+                      <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">Name</th>
+                          <th scope="col" class="govuk-table__header">Email</th>
+                          <th scope="col" class="govuk-table__header">Organisation/department</th>
+                          <th scope="col" class="govuk-table__header">Phone number</th>
+                          <th scope="col" class="govuk-table__header"></th>
+                        </tr>
+                      </thead>
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Joe Bloggs</td>
+                          <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                          <td class="govuk-table__cell">Department of Government</td>
+                          <td class="govuk-table__cell">44 0123 94546</td>
+                          <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Joe Bloggs</td>
+                          <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                          <td class="govuk-table__cell">Department of Government</td>
+                          <td class="govuk-table__cell">44 0123 94546</td>
+                          <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Joe Bloggs</td>
+                          <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                          <td class="govuk-table__cell">Department of Government</td>
+                          <td class="govuk-table__cell">44 0123 94546</td>
+                          <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Joe Bloggs</td>
+                          <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                          <td class="govuk-table__cell">Department of Government</td>
+                          <td class="govuk-table__cell">44 0123 94546</td>
+                          <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Joe Bloggs</td>
+                          <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                          <td class="govuk-table__cell">Department of Government</td>
+                          <td class="govuk-table__cell">44 0123 94546</td>
+                          <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">Joe Bloggs</td>
+                          <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                          <td class="govuk-table__cell">Department of Government</td>
+                          <td class="govuk-table__cell">44 0123 94546</td>
+                          <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+  
+              <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                      Receive only priority re-entry alerts
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                  <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Name</th>
+                        <th scope="col" class="govuk-table__header">Email</th>
+                        <th scope="col" class="govuk-table__header">Organisation/department</th>
+                        <th scope="col" class="govuk-table__header">Phone number</th>
+                        <th scope="col" class="govuk-table__header"></th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Joe Bloggs</td>
+                        <td class="govuk-table__cell">joebloggs@dept.gov.uk</td>
+                        <td class="govuk-table__cell">Department of Government</td>
+                        <td class="govuk-table__cell">44 0123 94546</td>
+                        <td class="govuk-table__cell"><a href="/account/superadmin/edit-alert-settings">Edit</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+        <a href="/account/superadmin/account" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+            Return to previous page</a>
+                  </form>
+    </div>
+  
+  
+  </div>
+    </main>
+  </div>
+  
+  
+  {% endblock %}

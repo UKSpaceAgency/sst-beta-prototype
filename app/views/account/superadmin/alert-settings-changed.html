@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirmation
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">View distribution lists</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Edit alert settings</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Confirmation</a>
+        </li>
+      </ol>
+      <div class="govuk-width-container">
+        <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-three-quarters">
+              <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                  Alert settings changed
+                </h1>
+                <div class="govuk-panel__body">
+                    [email address] has new alert settings. These can be viewed in the Account section.<strong></strong><br>
+                </div>
+              </div>
+
+              <a href="/account/superadmin/account" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                Return to account page</a>
+            </div>
+          </div>
+        </main>
+      </div>
+
+  
+  {% endblock %}
