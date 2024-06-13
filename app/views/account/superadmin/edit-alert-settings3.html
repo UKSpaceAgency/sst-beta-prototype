@@ -1,0 +1,272 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Edit your alert settings
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/account">Account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/distribution-lists">View distribution lists</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Edit a user's alert settings</a>
+      </li>
+        </ol>
+        </div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <form class="form" action="/account/operator/account" method="post">
+
+          <h1 class="govuk-heading-xl">Edit a user's alert settings</h1>
+
+          <p>We will send the user notifications according to the settings selected on this page.</p>
+
+<br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="which-conjunction-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Conjunction alerts
+      </h1>
+    </legend>
+    <p><b>Which conjunction alerts would you like the user to receive?</b></p>
+    <div id="which-conjunction-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-1" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-1">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-1">
+          No conjunction alerts
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-2" name="which-conjunction" type="radio" value="phone" data-aria-controls="conditional-which-conjunction-2">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-2">
+          All conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority and Ministry of Defence
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-conjunction-3" name="which-conjunction" type="radio" value="text" data-aria-controls="conditional-which-conjunction-3">
+        <label class="govuk-label govuk-radios__label" for="which-conjunction-3">
+          Only priority conjunction alerts 
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
+      </div>
+    </div>
+    <br>
+    <details class="govuk-details">
+      
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Criteria for priority conjunction alerts
+        </span>
+      </summary>
+      
+      <div class="govuk-details__text">
+        <p>Priority conjunction alerts are those with:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>More than 5% Probability of Collision</li>
+          <li>OR significant press interest</li>
+            <li>OR for UK-licensed objects:</li> 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>More than 1% probability of collision</li> 
+              <li>AND no manoeuvre expected</li></ul>
+            <li>OR for non-UK objects:</li> 
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Medium risk or higher</li> 
+              <li>AND no manoeuvre expected</li></ul>
+        </ul>
+      </div>
+    
+    </details>
+
+<br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="reentry-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Re-entry alerts
+      </h1>
+    </legend>
+    <p><b>Which re-entry alerts would you like the user to receive?</b></p>
+    <div id="reentry-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-reentry-1" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-1">
+        <label class="govuk-label govuk-radios__label" for="which-reentry-1">
+          No re-entry alerts
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="which-reentry-2" name="which-reentry" type="radio" value="phone" data-aria-controls="conditional-which-reentry-2">
+        <label class="govuk-label govuk-radios__label" for="which-reentry-2">
+          All re-entry alerts for their areas of interest
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for UK Space Agency, Civil Aviation Authority, Ministry of Defence and international partners
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+        <label class="govuk-label govuk-radios__label" for="reentry-3">
+          Re-entry alerts for UK satellites only
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="reentry-3" name="reentry" type="radio" value="text" data-aria-controls="conditional-reentry-3">
+        <label class="govuk-label govuk-radios__label" for="reentry-3">
+          Only priority re-entry alerts for their areas of interest
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Recommended for all other government departments
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<br>
+<details class="govuk-details">
+
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Criteria for priority re-entry alerts
+    </span>
+  </summary>
+  
+  <div class="govuk-details__text">
+    <p>Priority re-entry alerts are those with:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Debris likely to survive to the ground</li>
+      <li>AND one of the following:</li>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>More than 0.1% chance of impact in the UK (and overseas territories on case by case basis)</li>
+        <li>OR UK-licensed object</li>
+        <li>OR significant press interest</li></ul>
+    </ul>
+  </div>
+
+</details>
+
+<p><b>Select the user's areas of interest:</b></p>
+
+                    <table class="govuk-table" style="width:100%">
+                     <thead class="govuk-table__head">
+                       <tr class="govuk-table__row">
+                         <th scope="col" class="govuk-table__header" style="width:50%"></th>
+                         <th scope="col" class="govuk-table__header" style="width:10%"></th>
+                       </tr>
+                     </thead>
+                     <tbody class="govuk-table__body">
+           
+                       <tr class="govuk-table__row">
+                         <td scope="row" class="govuk-table__cell">Anywhere in the United Kingdom</td>
+                         <td class="govuk-table__cell">
+                           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                             <div class="govuk-checkboxes__item">
+                               <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=checked>
+                               <label class="govuk-label govuk-checkboxes__label" for="contact">
+                               </label>
+                             </div>
+                       </tr>
+                       <tr class="govuk-table__row">
+                         <td scope="row" class="govuk-table__cell" style="text-indent: 40px">England</td>
+                         <td class="govuk-table__cell">
+                           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                             <div class="govuk-checkboxes__item">
+                               <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=checked>
+                               <label class="govuk-label govuk-checkboxes__label" for="contact">
+                               </label>
+                             </div>
+                           </tr>
+                           <tr class="govuk-table__row">
+                             <td scope="row" class="govuk-table__cell" style="text-indent: 40px">Northern Ireland</td>
+                             <td class="govuk-table__cell">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=checked>
+                                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                   </label>
+                                 </div>
+                               </div>
+                             </td>
+                           </tr>
+                           <tr class="govuk-table__row">
+                             <td scope="row" class="govuk-table__cell" style="text-indent: 40px">Scotland</td>
+                             <td class="govuk-table__cell">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=checked>
+                                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                   </label>
+                                 </div>
+                               </div>
+                             </td>
+                           </tr>
+                           <tr class="govuk-table__row">
+                             <td scope="row" class="govuk-table__cell" style="text-indent: 40px">Wales</td>
+                             <td class="govuk-table__cell">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=checked>
+                                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                   </label>
+                                 </div>
+                               </div>
+                             </td>
+                           </tr>
+                           <tr class="govuk-table__row">
+                             <td scope="row" class="govuk-table__cell">British Overseas Territories</td>
+                             <td class="govuk-table__cell">
+                               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="text" data-aria-controls="conditional-contact" checked=checked>
+                                   <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                   </label>
+                                 </div>
+                               </div>
+                             </td>
+                           </tr>
+                                 </div>
+                               </td>
+                             </tr>
+                         </tbody>
+                   </table>
+                   <p>Notification settings are currently only available for ares of interest within the UK and its overseas territories. The service plans to add addiitonal areas of interest for international users in the future.</p>
+
+
+        <br>
+
+
+        <a href="/account/superadmin/alert-settings-changed" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+            Save and continue</a>
+                  </form>
+    </div>
+  
+  
+  </div>
+    </main>
+  </div>
+  
+  
+  {% endblock %}
