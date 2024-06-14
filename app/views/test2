@@ -1,0 +1,48 @@
+ <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <h1 class="govuk-heading-l"><div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-heading-l"></div>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-l">250</h2>
+                    </div>
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-heading-m"></div>
+                    </div></h1>
+              <p class="govuk-body"><div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                  <div class="govuk-heading-s">Upcoming conjunction events</div>
+                  </div></p>
+            </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <h2 class="govuk-heading-l">0.101%</h2>
+              <p class="govuk-body"><div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-heading-l"></div>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-s">Highest PoC in upcoming events</h2>
+                    </div>
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-heading-m"></div>
+                    </div></p>
+            </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <h1 class="govuk-heading-s">Upcoming re-entry events</h1>
+              <p class="govuk-body"><div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                  <div class="govuk-heading-l"></div>
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-l">2</h2>
+                    </div>
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-heading-m"></div>
+                    </div></p>
+                    </div>
+            </div>
+          </div>
+        </main>
