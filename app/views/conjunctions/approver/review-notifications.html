@@ -6,55 +6,55 @@ Review alerts before sending
 
 {% block content %}
 
-<div class="govuk-width-container">
+  <div class="govuk-width-container">
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">Upcoming conjunction events</a>
+          <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/homepage">Track conjunction events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/escalated-event-summary-report-1">Conjunction event asdf-asdas-asdf: Alert</a>
+            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/event-summary">Conjunction event asdf-asdas-asdf: Alert</a>
           </li>
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/send-notifications">Send alerts</a>
+            </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/send-notifications">Send alerts</a>
+            <a class="govuk-breadcrumbs__link" href="#">Review alerts</a>
           </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/conjunctions/approver/review-notifications">Review alerts</a>
-          </li>           
       </ol>
-      <h1 class="govuk-heading-xl">Review alerts before sending</h1>
+      <br>
+      <h1 class="govuk-heading-xl">Review new alert distribution before sending</h1>
     </div>
-
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             Make this a priority conjunction alert:
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Yes
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/send-notifications">Change<span class="govuk-visually-hidden"></span></a>
-        </dd>
-    </div>
-    <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-            Send notifications to selected users:
-        </dt>
-        <dd class="govuk-summary-list__value">
-          N/A
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="/conjunctions/approver/send-notifications">Change<span class="govuk-visually-hidden"> Individual email addresses</span></a>
-        </dd>
-      </div>
-  </dl>
-                    <p class="govuk-body">Ensure that all the appropriate individuals and government agencies have been selected before sending alerts. The button below will send alerts automatically.</p>
-            </dd>
-        </div> 
-                <a href="/conjunctions/approver/notifications-confirmation"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/conjunctions/approver/send-notifications">Change<span class="govuk-visually-hidden"> name</span></a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Send alerts to selected users:
+          </dt>
+          <dd class="govuk-summary-list__value">
+            N/A
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="/conjunctions/approver/send-notifications">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+              </li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    <p>Ensure that all the appropriate individuals and government agencies have been selected before sending alerts. The button below will send alerts automatically.</p>
+                <a href="/reentry/approver/notifications-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
                     Send alerts</a>
-                    <a href="/conjunctions/approver/send-notifications" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    <a href="/reentry/approver/send-notifications" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                         Return to previous page</a>
               </form>
             </div>
