@@ -6,42 +6,21 @@ Upcoming conjunction events
 
 {% block content %}
 
-<main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">Track conjunction events (Monitor your satellites)</h1>
-        <table class="govuk-table">
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Upcoming conjunction alerts</th>
-              <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Upcoming conjunction events</th>
-              <td class="govuk-table__cell govuk-table__cell--numeric">12,331</td>
-            </tr>
-          </tbody>
-        </table>
-        <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                Help with this table
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-              This service tracks all upcoming conjunction events for UK licenced objects. The service reports on two types of conjunction event.
-              <br>
-              <br>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><b>Upcoming conjunction alerts</b>: all upcoming conjunction events that meet the UK Space Agency's thresholds for alerting UK government
-                <li><b>Upcoming conjunction events</b>: all upcoming conjunction events, including those which have not met alerting thresholds, either for a specific operator or all UK-licenced satellites</li>
-              </ul>
-            </div>
-          </details>
-<h2 class="govuk-heading-m">All upcoming conjunction events</h2>
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-<p class="govuk-body">This table shows upcoming conjunction events. Satellite operators only will see events involving their satellites. Government users will see all upcoming conjunction involving UK licensed satellites. </p>
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/conjunctions/gov-user/homepage3">Track conjunction events</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Historical events</a>
+        </li>
+      </ol>
+      <br>
+        <h1 class="govuk-heading-xl">All past conjunction events</h1>
+       
+<p class="govuk-body">This table shows all past conjunction events. Satellite operators only will see events involving their satellites. Government users will see all past conjunction involving UK licensed satellites. </p>
 
         <div class="moj-search">
         <form action="#" method="post">
@@ -172,9 +151,9 @@ Upcoming conjunction events
           </col>
         </table>
 
-        <p>Download upcoming conjunction events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+        <p>Download past conjunction events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
 
-        <div class="govuk-inset-text">Upcoming conjunction events as of 04/04/2024 07:09:36.</div>
+        <div class="govuk-inset-text">All past conjunction events as of 04/04/2024 07:09:36.</div>
 
         <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
@@ -183,7 +162,7 @@ Upcoming conjunction events
               </span>
             </summary>
             <div class="govuk-details__text">
-              <b>This table shows upcoming conjunction events involving UK satellites.</b>
+              <b>This table shows past conjunction events involving UK satellites.</b>
               <p> </p>
               <ul class="govuk-list govuk-list--bullet">
                 <li>Select the <b>Event ID</b> to view more information.</li>
@@ -192,17 +171,15 @@ Upcoming conjunction events
               </ul>
               <p><b>"Your interest" column:</b></p>
               <ul class="govuk-list govuk-list--bullet">
-                <li><b>Satellite operators:</b> The high interest tag refers to events involving an operator's satellite that exceed a certain risk threshold</li>
-                <li><b>Government users:</b> The high interest tag refers to events where an alert has been issued across government by the UK Space Agency</li>
+                <li><b>Satellite operators:</b> The high interest tag refers to past events where an operator's satellite exceeded a certain risk threshold</li>
+                <li><b>Government users:</b> The high interest tag refers to past events where an alert was issued across government by the UK Space Agency</li>
               </ul>
             </div>
           </details>
 
-          <a href="/conjunctions/gov-user/historical-events" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-            View historical events</a>
-      
-            <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Return to previous page</a>
+        <a href="/conjunctions/gov-user/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Return to previous page</a>
+
 
   </main>
 </div>
