@@ -1,0 +1,303 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Upcoming conjunction events
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Track conjunction events</h1>
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Upcoming conjunction alerts</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Upcoming conjunction events</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">12,331</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="govuk-body">The table below displays all conjunction events which meet the UK Space Agency's thresholds for alerting UK government. For further detail on how risk and alert thresholds are defined, see 'Help with this table' below.</p> 
+        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+          <col>
+            <colgroup span="3"></colgroup>
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Event information</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Probability of collision (%)</b></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 3%";>Risk to UK satellites</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Event ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Time of closest approach (UTC)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>UKSA analysis</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--green">Low</strong></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/approver/escalated-event-summary-report-1" class="govuk-link--no-visited-state">asdf-asdas-asdf (Alert)</a></b></td>
+              <td class="govuk-table__cell govuk-body-s">13/04/24 11:51</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">OneWeb-0601 (UK-licensed payload)</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Transit 5B-7 (US-licensed payload)</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0.13</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--grey">Event passed</strong></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="#" class="govuk-link--no-visited-state">bdaw-breas-gres (Alert)</a></b></td>
+              <td class="govuk-table__cell govuk-body-s">03/03/24 13:43</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">Starlink-31 (US-licensed payload)</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Transit 5B-7 (US-licensed payload)</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--grey">Event passed</strong></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="#" class="govuk-link--no-visited-state">gere-grewr-bfds (Alert)</a></b></td>
+              <td class="govuk-table__cell govuk-body-s">16/02/24 09:51</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">OneWeb-0601 (UK-licensed payload)</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Starlin-21 (US-licensed payload)</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0</td>
+            </tr>
+          </tbody>
+          </col>
+        </table>
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with this table
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <b>This table shows upcoming conjunction events involving UK satellites which have met the UK Space Agency's thresholds for alerting UK government.</b>
+            <p> </p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Select the <b>Event ID</b> to view more information.</li>
+              <li>Each event ID or row represents <b>one conjunction event</b> including all related CDMs and UKSA analysis.</li>
+              <li>Sort the alerts according to criteria by clicking on the relevant <b>headings</b>.</li>
+  
+            </ul>
+            <h3 class="govuk-heading-s">Alert thresholds</h3>
+
+            <p class="govuk-body">Alerts about conjunction events are produced if:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Less than 5 days until Time of Closest Approach</li>
+                <li>AND for UK-licensed objects:</li>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>More than 0.1% probability of collision</li> 
+                    <li>OR press interest</li></ul>
+                <li>AND for non-UK objects:</li> 
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>Low risk or higher </li>
+                  <li>AND no manoeuvre expected</li></ul>
+                <li>OR nominated for escalation by the UK Space Operations Centre</li>
+            </ul>
+
+            <h3 class="govuk-heading-s">Risk thresholds</h3>
+
+            <p>Risk thresholds are calculated accounting for the probability of the collision between the two objects (as calculated by the US), and the average number of additional 5km conjunction events experienced by individual UK satellites within the 7 day period after collision.</p>
+            <h2 class="govuk-section-break"></h2>
+            <p>Any event with an expected maneouvre is automatically categorised as "Low risk".</p>
+                              <table class="govuk-table"style="width:100%">
+                                <col>
+                                  <colgroup span="5"></colgroup>
+                                  <colgroup span="5"></colgroup>
+                      
+                                <thead class="govuk-table__head">
+                                  <tr class="govuk-table__row">
+                                    <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"></td>
+                                    <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Probability of collision</b></td>
+                                  </tr>
+                                  <tr class="govuk-table__row">
+                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Average additional conjunction events for individual satellites</th>
+                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 17%";>1% - 5%</th>
+                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 17%";>5% - 10%</th>
+                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 17%";>More than 10%</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="govuk-table__body">
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">Less than 5</td>
+                                      <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Very low</strong></th>
+                                      <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
+                                      <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                                    </tr>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">5 - 50</td>
+                                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
+                                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                                  </tr>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">More than 50</td>
+                                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                                  </tr>
+                                </tbody>
+                                </table> 
+                  </ul>
+          </div>
+        </details>
+<br>
+
+<h2 class="govuk-heading-m">All upcoming conjunction events</h2>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+<p class="govuk-body">This table contains all tracked conjunction events, including conjunction events that meet the UK Space Agency's thresholds for alerting UK government.</p>
+
+        <div class="moj-search">
+        <form action="#" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Find a conjunction event:
+          </label>
+
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by event or object ID" aria-describedby="search-hint">
+        </div>
+
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+        </form>
+        </div>
+        <br>
+        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+          <col>
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Event information</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Miss distance (m)</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision (%)</b></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Event ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Time of closest approach (UTC)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Mean radial</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Total</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Space-Track CDM</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 11%";>UKSA</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/gov-user/escalated-event-summary-5" class="govuk-link--no-visited-state">asdf-vewaw-btrw</a> </b></td>
+              <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">Starlink-1862</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Discoverer 5</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">230</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">37</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-4</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">4.4987e-6</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/gov-user/escalated-event-summary-report-1" class="govuk-link--no-visited-state">asdf-asdas-asdf                    </a></b></td>
+                    <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
+                    <td class="govuk-table__cell govuk-body-s"><a href="/satellites/admin/satellite-1">OneWeb-0601</a></td>
+                    <td class="govuk-table__cell govuk-body-s"><a href="#">Transit 5B-7</a></td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">15</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">12</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">0.07</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">0.13</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0004"><b><a href="#" class="govuk-link--no-visited-state">ptyr-bxtte-asdf</a></b></td>
+              <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1317</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-50</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">750</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="2543">2.543e-7</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543"></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0021"><b><a href="#" class="govuk-link--no-visited-state">asre-bnyyq-asdf</a></b></td>
+              <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Spacebee-52</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">260</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">382</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="765">6.543e-8</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543"></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0033"><b><a href="#" class="govuk-link--no-visited-state">asdf-asdas-afki</a></b></td>
+              <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-0064</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Hyla-6</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">400</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">211</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="143">4.32e-7</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543"></td>
+            </tr>
+            <tr class="govuk-table__row">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0034"><b><a href="#" class="govuk-link--no-visited-state">asdf-opkll-bcgt</a></b></td>
+              <td class="govuk-table__cell govuk-body-s">14/02/21 01:05</td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-0050</a></td>
+              <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">805</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">103</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="987">1.723e-4</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">4.3676e-5</td>
+            </tr>
+          </tbody>
+          </col>
+        </table>
+
+        <p>Download upcoming conjunction events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with this table
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <b>This table shows all upcoming conjunction events involving UK satellites.</b>
+          <p> </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Select the <b>event ID</b> to view more information.</li>
+            <li>Each event ID or row represents <b>one conjunction event</b> including all related CDMs and UKSA analysis.</li>
+            <li>Sort the events according to criteria by clicking on the relevant <b>headings</b>.</li>
+          </ul>
+        </div>
+      </details>
+
+        <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Return to previous page</a>
+
+
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
+
