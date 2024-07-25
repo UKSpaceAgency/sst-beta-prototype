@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Edit your alert settings
+Alert settings
 {% endblock %}
 
 {% block content %}
@@ -12,10 +12,7 @@ Edit your alert settings
         <a class="govuk-breadcrumbs__link" href="/account/superadmin/account">Account</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/account/superadmin/distribution-lists">View distribution lists</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Edit a user's alert settings</a>
+        <a class="govuk-breadcrumbs__link" href="#">Choose a user's alert settings</a>
       </li>
         </ol>
         </div>
@@ -23,9 +20,9 @@ Edit your alert settings
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <form class="form" action="/account/operator/account" method="post">
+        <form class="form" action="/account/superadmin/account" method="post">
 
-          <h1 class="govuk-heading-xl">Edit a user's alert settings</h1>
+          <h1 class="govuk-heading-xl">Choose a user's alert settings</h1>
 
           <p>We will send the user notifications according to the settings selected on this page.</p>
 
@@ -268,7 +265,6 @@ Edit your alert settings
 
 
         <br>
-
 
         <a href="/account/superadmin/alert-settings-changed" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
             Save and continue</a>
