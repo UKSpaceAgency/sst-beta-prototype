@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check user details
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/account">Account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/invite-new-members">Add a new user</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/choose-alert-settings">Choose a user's alert settings</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/superadmin/check-user-details">Check user details</a>
+      </li>
+        </ol>
+        </div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <form class="form" action="/account/superadmin/account" method="post">
+
+          <h1 class="govuk-heading-xl">Check user details before adding the new user</h1>
+
+          <h2 class="govuk-heading-m">User details</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Name
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Astronaut
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/account/superadmin/invite-new-members">Change<span class="govuk-visually-hidden"> name</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Organisation
+              </dt>
+              <dd class="govuk-summary-list__value">
+                UKSA
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/account/superadmin/invite-new-members">Change<span class="govuk-visually-hidden"> Organisation</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email
+              </dt>
+              <dd class="govuk-summary-list__value">
+                email@uksa.gov.uk
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/account/superadmin/invite-new-members">Change<span class="govuk-visually-hidden"> Email</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Phone number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/account/superadmin/invite-new-members">Change<span class="govuk-visually-hidden"> Phone number</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Account type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Government user
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/account/superadmin/invite-new-members">Change<span class="govuk-visually-hidden"> Email</span></a>
+                </dd>
+              </div>
+          </dl>
+          <h2 class="govuk-heading-m">Notification settings</h2>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Conjunction alerts
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Only priority conjunction alerts
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/account/superadmin/choose-alert-settings">Change<span class="govuk-visually-hidden"> previous application number</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Re-entry alerts
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Only priority re-entry alerts
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/account/superadmin/choose-alert-settings">Change<span class="govuk-visually-hidden"> licence type</span></a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Areas of interest
+              </dt>
+              <dd class="govuk-summary-list__value">
+                England, Scotland, British Overseas Territories
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="/account/superadmin/choose-alert-settings">Change<span class="govuk-visually-hidden"> home address</span></a>
+              </dd>
+            </div>
+          </dl>
+          <h2 class="govuk-heading-m">Now add the new user</h2>
+          <p class="govuk-body">By clicking Add new user below, you will be sending the individual an email to set up an account on Monitor Space Hazards.</p>
+          <a href="/account/superadmin/invite-success" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+            Add new user</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  {% endblock %}
