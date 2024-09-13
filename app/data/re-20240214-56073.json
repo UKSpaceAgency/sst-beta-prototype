@@ -252,23 +252,24 @@
           "probability": 0.0,
           "overflight_time": []
         }
-    },
-    "map_points": [
-      {
-        "overflight": "2024-08-17T03:05:29.927",
-        "latitude": 33.856,
-        "longitude": -77.0384,
-        "pass": 1,
-        "region": "england.east_of_england",
-        "fragments": [
-          {
-            "latitude":51.789777009283156,
-            "longitude":-10.741834510453879,
-            "numFrags":0.004549678415060043,
-            "region": "england.east_of_england"
-          }
-        ]
-      }
-    ]
+      },
+      "map_points": [
+        {
+          "overflight": "2024-08-17T03:05:29.927",
+          "latitude": 33.856,
+          "longitude": -77.0384,
+          "pass": 1,
+          "region": "england.east_of_england",
+          "fragments": [
+            {
+              "latitude": 51.789777009283156,
+              "longitude": -10.741834510453879,
+              "numFrags": 0.004549678415060043,
+              "region": "england.east_of_england"
+            }
+          ]
+        }
+      ]
+    }
   }
 ]
