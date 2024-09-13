@@ -29,21 +29,24 @@
     "survivability_comment": "The high-density components and physical shape of rocket bodies can result in an increased chance of survival upon re-entry",
     "impact": {
       "by_nation": {
-        "england": {
-          "probability": 0.01,
-          "overflight_time": ["2024-10-03T02:20:35", "2024-10-03T03:20:35"]
+        "england_nation": {
+          "probability": 0.0028,
+          "overflight_time": [
+            "2024-08-17T08:16:13.635",
+            "2024-08-17T09:48:28.410"
+          ]
         },
-        "northern_ireland": {
-          "probability": 0.03,
-          "overflight_time": ["2024-10-03T02:20:35", "2024-10-03T03:20:35"]
-        },
-        "scotland": {
-          "probability": 0,
+        "northern_ireland_nation": {
+          "probability": 0.0,
           "overflight_time": []
         },
-        "wale": {
-          "probability": 0,
+        "scotland_nation": {
+          "probability": 0.0,
           "overflight_time": []
+        },
+        "wales_nation": {
+          "probability": 2.3333334e-4,
+          "overflight_time": ["2024-08-17T09:48:48.466"]
         }
       },
       "england": {
@@ -239,20 +242,32 @@
           "probability": 0,
           "overflight_time": null
         }
-      }
+      },
+      "maritime_and_airspace": {
+        "shanwick_airspace": {
+          "probability": 0.0,
+          "overflight_time": []
+        },
+        "uk_navarea": {
+          "probability": 0.0,
+          "overflight_time": []
+        }
     },
     "map_points": [
       {
+        "overflight": "2024-08-17T03:05:29.927",
         "latitude": 33.856,
-        "longitude": -77.0384
-      },
-      {
-        "latitude": 33.856,
-        "longitude": -77.0384
-      },
-      {
-        "latitude": 33.856,
-        "longitude": -77.0384
+        "longitude": -77.0384,
+        "pass": 1,
+        "region": "england.east_of_england",
+        "fragments": [
+          {
+            "latitude":51.789777009283156,
+            "longitude":-10.741834510453879,
+            "numFrags":0.004549678415060043,
+            "region": "england.east_of_england"
+          }
+        ]
       }
     ]
   }
