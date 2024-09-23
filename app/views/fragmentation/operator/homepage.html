@@ -1,0 +1,242 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Fragmentation events
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-xl">Fragmentation events</h2>
+            <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Current fragmentation alerts</th>
+              <td class="govuk-table__cell">10</td>
+            </tr>
+          </tbody>
+        </table>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with this table
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            This service reports all current fragmentation alerts, including those which pose a risk to UK operated satellites or Human Spaceflight missions. 
+            <br>
+            <br>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><b>Upcoming fragmentation alerts</b>: all upcoming fragmentation events that meet the UK Space Agency's thresholds for alerting UK government
+              <li><b>Past fragmentation events</b>: all tracked fragmentation events, including those which did not meet alerting thresholds</li>
+            </ul>
+          </div>
+        </details>
+        <h2 class="govuk-heading-m">All fragmentation events (upcoming and past)</h2>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <p class="govuk-body">This table contains all tracked tragmentation events, including fragmentation events that meet the UK Space Agency's thresholds for alerting UK government. For further detail on how risk and alert thresholds are defined, see 'Help with this table' below.</p>
+  
+        <div class="moj-search">
+            <form action="#" method="post">
+            <div class="govuk-form-group">
+              <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                Find a fragmentation event:
+              </label>
+      
+              <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by event ID or object ID" aria-describedby="search-hint">
+            </div>
+      
+            <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+              Search
+            </button>
+            </form>
+            </div>
+        <br>
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Apply filters to this table
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changedName">
+                        View all fragmentation events and alerts
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="changedName-2">
+                        Only view upcoming fragmentation alerts
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="sort">
+                      Filter by
+                    </label>
+                    <select class="govuk-select" id="sort" name="sort">
+                      <option value="published" selected>All</option>
+                      <option value="published">Upcoming</option>
+                      <option value="updated">Past</option>
+                    </select>
+                  </div>
+            </div>
+          </details>
+        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+          <col>
+            <colgroup span="5"></colgroup>
+            <colgroup span="4"></colgroup>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="5"><b>Event details</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Object details</b></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Risk to the UK</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Event ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inclination</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Number of known fragments</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Object</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Object type</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Launching state</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Medium
+                </strong>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary" class="govuk-link--no-visited-state">fr-aheb-angkem</a></b></td>
+              <td class="govuk-table__cell govuk-body-s">13/09/2024 06:54:17</td>
+              <td class="govuk-table__cell govuk-body-s">98.21</td>
+              <td class="govuk-table__cell govuk-body-s"> <100 </td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">RESURS P1</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Payload</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">JPN</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                    <strong class="govuk-tag govuk-tag--green">
+                      Low
+                    </strong>
+                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary" class="govuk-link--no-visited-state">fr-akndkne-dnknie</a></b></td>
+                <td class="govuk-table__cell govuk-body-s">13/09/2024 08:14:40</td>
+                <td class="govuk-table__cell govuk-body-s">96.70</td>
+                <td class="govuk-table__cell govuk-body-s">~30</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">H-2A DEB</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Debris</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">US</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag govuk-tag--green">
+                    Low
+                  </strong>
+                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary" class="govuk-link--no-visited-state">fr-amnkgl-aknla</a> </b></td>
+                <td class="govuk-table__cell govuk-body-s">13/09/2024 09:46:19</td>
+                <td class="govuk-table__cell govuk-body-s">94.21</td>
+                <td class="govuk-table__cell govuk-body-s">~50</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">COSMOS 2261</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Payload</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">CIS</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">
+                          High
+                        </strong>
+                    <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary" class="govuk-link--no-visited-state">fr-aknke-angle</a></b></td>
+                    <td class="govuk-table__cell govuk-body-s">13/09/2024 10:17:39</td>
+                    <td class="govuk-table__cell govuk-body-s">87.45</td>
+                    <td class="govuk-table__cell govuk-body-s">>100</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">FALCON 9 R/B</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Rocket body</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">US</td>
+                  </tr>
+                  
+          </tbody>
+        </col>
+      </table>
+
+      <p>Download all fragmenation events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
+      <div class="govuk-inset-text">Upcoming and previous known fragmentation events as of 18/09/2024 11:09:36.</div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with this table
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <b>This table shows all upcoming and previous tracked fragmenation events that have been identified by Space-Track and ingested into Monitor space hazards, including events which pose a risk to UK satellites and Human Spaceflight missions. Higher risk events contain additional analysis by UKSA's Orbital Analysts at the National Space Operations Centre.</b>
+          <p> </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Select the <b>Event ID</b> to view more information</li>
+            <li>Each Event ID or row represents <b>one fragmenation event</b></li>
+            <li>Sort the alerts according to criteria by clicking on the relevant <b>headings</b></li>
+
+          </ul>
+          <h3 class="govuk-heading-s">Alert thresholds</h3>
+          <p class="govuk-body">Alerts about fragmentation events are produced if:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>there is an increased risk of a potential collision with a UK operated satellites or Human Spaceflight mission</li>
+                            <li>OR nominated for escalation by the National Space Operations Centre</li>
+          </ul>
+
+           <h3 class="govuk-heading-s">Risk thresholds</h3>
+
+          <p>Risk thresholds are calculated according to the probability of the object affecting UK operated satellites or Human Spaceflight mission.</p>
+
+          <table class="govuk-table"style="width:100%">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Risk level</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Increase in potential collision with UK satellites (%)</th>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
+                <td class="govuk-table__cell govuk-body-s">Less than 1%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
+                <td class="govuk-table__cell govuk-body-s">1% - 5%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
+                <td class="govuk-table__cell govuk-body-s">More than 5%</td>
+              </tr>
+            </tbody>
+          </table> 
+    
+                </ul>
+        </div>
+      </details>
+
+
+
+      <br>
+
+      <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Return to previous page</a>
+
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
