@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Send alerts for re-entry event re-asghj-kifdy
+Send alerts for fragmentation event fr-aheb-angkem
 {% endblock %}
 
 {% block content %}
@@ -10,20 +10,20 @@ Send alerts for re-entry event re-asghj-kifdy
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">Upcoming re-entry events</a>
+          <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/homepage">Fragmentation events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary">Re-entry event re-asghj-kifdy: Alert</a>
+          <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/event-summary">Fragmentation event fr-aheb-angkem</a>
         </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/send-notifications">Send alerts</a>
+            <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/send-notifications">Send alerts</a>
           </li>
       </ol>
       <br>
       <h1 class="govuk-heading-xl">Send alert to additional recipients</h1>
     </div>
-    <p>This page shows you the current distribution status of the re-entry alert and allows you to manually distribute the alert to additional recipients.</p>
-    <p>If it is not already, you can choose to make the alert a priority re-entry alert. You are also able to manually select individual emails to send the alert to.</p>
+    <p>This page shows you the current distribution status of the fragmentation event and allows you to manually distribute the alert to additional recipients.</p>
+    <p>If it is not already, you can choose to make the event a priority fragmentation event. You are also able to manually select individual emails to send the alert to.</p>
     <h2 class="govuk-heading-m">Current alert distribution</h2>
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <table class="govuk-table">
@@ -35,13 +35,13 @@ Send alerts for re-entry event re-asghj-kifdy
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="text-indent: 40px">All re-entry alerts</th>
+            <th scope="row" class="govuk-table__header" style="text-indent: 40px">All fragmentation events</th>
             <td class="govuk-table__cell"><strong class="govuk-tag">
                 Sent to distribution list
               </strong></td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="text-indent: 40px">Priority re-entry alerts only</th>
+            <th scope="row" class="govuk-table__header" style="text-indent: 40px">Priority fragmentation events only</th>
             <td class="govuk-table__cell">        <strong class="govuk-tag govuk-tag--grey">
                 Not sent to  distribution list
               </strong></td>
@@ -62,7 +62,7 @@ Send alerts for re-entry event re-asghj-kifdy
 
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-            Distribution lists and re-entry alert critera
+            Distribution lists and fragmentation alert critera
           </span>
         </summary>
         <div class="govuk-details__text">
@@ -71,31 +71,27 @@ Send alerts for re-entry event re-asghj-kifdy
            You are able to what distribution list users are currently on in the account section (<a class="govuk__link" href="/account/approver/distribution-lists">View distribution lists</a>)
            <br>
            <br>
-           <b>Priority re-entry alert criteria for automatic distribution:</b>
+           <b>Priority fragmentation alert criteria for automatic distribution:</b>
            <br>
           <ul class="govuk-list govuk-list--bullet">
-            <li>Debris likely to survive to the ground</li>
-            <li>AND one of the following:</li>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>More than 0.1% chance of impact in the UK (and overseas territories on case by case basis)</li>
-              <li>OR UK-licensed object</li>
-              <li>OR significant press interest</li></ul>
+            <li>More than 5% increase in potential collisions with UK satellites and/or Human Spaceflight missions</li>
+            <li>OR significant press interest</li>
           </ul>
-        <p>You can use this page to make an alert 'priority' before it meets the automatic distribution criteria.</p>
+        <p>You can use this page to make an event 'priority' before it meets the automatic distribution criteria.</p>
       </div>
       </details>
       <br>
-      <h2 class="govuk-heading-m">Change alert distribution</h2>
+      <h2 class="govuk-heading-m">Change event distribution</h2>
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-<p>Select whether you would like to send this alert to additional recipients.</p>
+<p>Select whether you would like to send this event to additional recipients.</p>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-2">
               <label class="govuk-label govuk-checkboxes__label" for="contact-2">
-                Priority re-entry alerts only
+                Priority fragmentation events only
               </label>
             </div>
             <div class="govuk-checkboxes__item">
@@ -104,7 +100,7 @@ Send alerts for re-entry event re-asghj-kifdy
                 Individually selected recipients
               </label>
             <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                If you wish to send the alert to individual recipients not currently recieving alerts, you can do so here
+                If you wish to send the alert to individual recipients not currently recieving fragmentation events, you can do so here
               </div>
             <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
               <div class="govuk-form-group">
@@ -118,9 +114,9 @@ Send alerts for re-entry event re-asghj-kifdy
         </fieldset>
       </div>
 
-    <a href="/reentry/approver/review-notifications" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+    <a href="/fragmentation/approver/review-notifications" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
         Review selection</a>
-        <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        <a href="/fragmentation/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
             Return to previous page</a>
         <div id="waste-hint" class="govuk-hint"></div>
   </form>
