@@ -82,6 +82,13 @@
           },
           "title": "Overseas Territories",
           "type": "object"
+        },
+        "maritime_and_airspace": {
+          "additionalProperties": {
+            "$ref": "#/$defs/_OverflightProbability"
+          },
+          "title": "Maritime And Airspace",
+          "type": "object"
         }
       },
       "required": [
@@ -90,7 +97,8 @@
         "northern_ireland",
         "scotland",
         "wales",
-        "overseas_territories"
+        "overseas_territories",
+        "maritime_and_airspace"
       ],
       "title": "_ReentryEventReportImpact",
       "type": "object"
