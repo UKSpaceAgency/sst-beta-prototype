@@ -1,0 +1,346 @@
+{
+  "$defs": {
+    "ConjunctionRisk": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "title": "ConjunctionRisk",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "title": "Updated At",
+      "type": "string"
+    },
+    "short_id": {
+      "title": "Short Id",
+      "type": "string"
+    },
+    "report_number": {
+      "title": "Report Number",
+      "type": "integer"
+    },
+    "report_time": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Report Time"
+    },
+    "risk": {
+      "$ref": "#/$defs/ConjunctionRisk"
+    },
+    "tca_time": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tca Time"
+    },
+    "collision_probability": {
+      "title": "Collision Probability",
+      "type": "number"
+    },
+    "manoeuvre_expected": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Manoeuvre Expected"
+    },
+    "primary_object_common_name": {
+      "title": "Primary Object Common Name",
+      "type": "string"
+    },
+    "primary_object_norad_id": {
+      "title": "Primary Object Norad Id",
+      "type": "string"
+    },
+    "primary_object_licensing_country": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Licensing Country"
+    },
+    "primary_object_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Type"
+    },
+    "primary_object_mission": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Mission"
+    },
+    "primary_object_mass": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Mass"
+    },
+    "primary_object_manoeuvrable": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Manoeuvrable"
+    },
+    "secondary_object_common_name": {
+      "title": "Secondary Object Common Name",
+      "type": "string"
+    },
+    "secondary_object_norad_id": {
+      "title": "Secondary Object Norad Id",
+      "type": "string"
+    },
+    "secondary_object_licensing_country": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Licensing Country"
+    },
+    "secondary_object_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Type"
+    },
+    "secondary_object_mission": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Mission"
+    },
+    "secondary_object_mass": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Mass"
+    },
+    "secondary_object_manoeuvrable": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Manoeuvrable"
+    },
+    "miss_distance": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Miss Distance"
+    },
+    "impact_speed": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Impact Speed"
+    },
+    "altitude": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Altitude"
+    },
+    "latitude": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Latitude"
+    },
+    "longitude": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Longitude"
+    },
+    "predicted_fragments": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Predicted Fragments"
+    },
+    "increase_in_future_collisions": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Increase In Future Collisions"
+    },
+    "is_active": {
+      "default": true,
+      "title": "Is Active",
+      "type": "boolean"
+    },
+    "uploaded_by_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uploaded By Id"
+    },
+    "deleted_by_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deleted By Id"
+    }
+  },
+  "required": [
+    "short_id",
+    "report_number",
+    "risk",
+    "collision_probability",
+    "primary_object_common_name",
+    "primary_object_norad_id",
+    "secondary_object_common_name",
+    "secondary_object_norad_id"
+  ],
+  "title": "ConjunctionReport",
+  "type": "object"
+}
