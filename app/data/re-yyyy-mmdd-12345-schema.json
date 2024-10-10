@@ -150,6 +150,15 @@
       "title": "Time Window End",
       "type": "string"
     },
+    "decay_epoch": {
+      "format": "date-time",
+      "title": "Decay Epoch",
+      "type": "string"
+    },
+    "uncertainty_window": {
+      "title": "Uncertainty Window",
+      "type": "integer"
+    },
     "report_number": {
       "title": "Report Number",
       "type": "integer"
@@ -378,6 +387,8 @@
     "norad_id",
     "time_window_start",
     "time_window_end",
+    "decay_epoch",
+    "uncertainty_window",
     "report_number",
     "report_time",
     "probability",
