@@ -76,11 +76,11 @@
           "title": "Wales",
           "type": "object"
         },
-        "overseas_territories": {
+        "overseas_territories_and_crown_dependencies": {
           "additionalProperties": {
             "$ref": "#/$defs/_OverflightProbability"
           },
-          "title": "Overseas Territories",
+          "title": "Overseas Territories And Crown Dependencies",
           "type": "object"
         },
         "maritime_and_airspace": {
@@ -97,7 +97,7 @@
         "northern_ireland",
         "scotland",
         "wales",
-        "overseas_territories",
+        "overseas_territories_and_crown_dependencies",
         "maritime_and_airspace"
       ],
       "title": "_ReentryEventReportImpact",
