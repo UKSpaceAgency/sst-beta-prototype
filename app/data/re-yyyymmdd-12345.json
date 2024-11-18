@@ -186,7 +186,7 @@
         "overflight_time": null
       }
     },
-    "overseas_territories": {
+    "overseas_territories_and_crown_dependencies": {
       "anguilla": {
         "probability": 0,
         "overflight_time": null
@@ -211,11 +211,19 @@
         "probability": 0,
         "overflight_time": null
       },
+       "channel_islands": {
+        "probability": 0,
+        "overflight_time": null
+      },
       "falkland_islands": {
         "probability": 0,
         "overflight_time": null
       },
       "gibraltar": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "isle_of_man": {
         "probability": 0,
         "overflight_time": null
       },
@@ -250,6 +258,10 @@
         "overflight_time": []
       },
       "uk_navarea": {
+        "probability": 0.0,
+        "overflight_time": []
+      },
+      "uk_airspace": {
         "probability": 0.0,
         "overflight_time": []
       }
