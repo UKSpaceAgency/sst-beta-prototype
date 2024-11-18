@@ -15,7 +15,7 @@ Fragmentation events
         <table class="govuk-table">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Current fragmentation alerts</th>
+              <th scope="row" class="govuk-table__header">Current fragmentation alerts relevant to your satellites</th>
               <td class="govuk-table__cell">10</td>
             </tr>
           </tbody>
@@ -55,7 +55,7 @@ Fragmentation events
             </button>
             </form>
             </div>
-        <br>
+        <br><!-- commenting out filters as potentially not needed
         <details class="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -90,7 +90,7 @@ Fragmentation events
                     </select>
                   </div>
             </div>
-          </details>
+          </details>-->
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
           <col>
             <colgroup span="5"></colgroup>
@@ -238,5 +238,7 @@ Fragmentation events
 <script>
 window.MOJFrontend.initAll()
 </script>
+
+
 
 {% endblock %}
