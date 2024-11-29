@@ -51,21 +51,7 @@ width="32"
                 </div>
                 </div>
         </header>
-        <script>
-            const pathname = window.location.pathname + window.location.search;
-            if (pathname.includes("/events")) {
-            const navigation_item = document.getElementById("navigation-item-conjunction");
-            navigation_item.classList.add("govuk-header__navigation-item--active")
-            } 
-            else if (pathname.includes("/satellites")) {
-            const navigation_item = document.getElementById("navigation-item-satellites");
-            navigation_item.classList.add("govuk-header__navigation-item--active");
-            }
-            else if (pathname.includes("/account")) {
-            const navigation_item = document.getElementById("navigation-item-account");
-            navigation_item.classList.add("govuk-header__navigation-item--active");
-            }
-        </script>
+
         {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
         <div class="govuk-width-container">
 
@@ -89,23 +75,22 @@ width="32"
                       <a class="moj-primary-navigation__link" href="/homepage">Home</a>
                     </li>
                     <li class="moj-primary-navigation__item">
-                      <a class="moj-primary-navigation__link" href="/conjunctions">Conjunctions</a>
+                      <a class="moj-primary-navigation__link" id="navigation-item-conjunction" href="/conjunctions">Conjunctions</a>
                     </li>
                     <li class="moj-primary-navigation__item">
-                      <a class="moj-primary-navigation__link" href="/reentry">Re-entries</a>
+                      <a class="moj-primary-navigation__link" id="navigation-item-reentry" href="/reentry">Re-entries</a>
                     </li>
                     <li class="moj-primary-navigation__item">
-                      <a class="moj-primary-navigation__link" href="/monitoring">Monitoring</a>
+                      <a class="moj-primary-navigation__link" id="navigation-item-monitoring" href="/monitoring">Monitoring</a>
                     </li>
                       <li class="moj-primary-navigation__item">
-                        <a class="moj-primary-navigation__link" href="/satellites">Satellites</a>
+                        <a class="moj-primary-navigation__link" id="navigation-item-satellites" href="/satellites">Satellites</a>
                       </li>
                       <li class="moj-primary-navigation__item">
-                        <a class="moj-primary-navigation__link" href="/fragmentation"  aria-current="page">Fragmentation</a>
-                        <!-- aria-current="page" sets which link is the active one, change this if testing a different feature-->
+                        <a class="moj-primary-navigation__link" id="navigation-item-fragmentation" href="/fragmentation" >Fragmentation</a>
                       </li>                       
                       <li class="moj-primary-navigation__item">
-                        <a class="moj-primary-navigation__link" href="/account">Account</a>
+                        <a class="moj-primary-navigation__link" id="navigation-item-account" href="/account">Account</a>
                       </li>
                       <li class="moj-primary-navigation__item">
                         <a class="moj-primary-navigation__link" href="/">Sign out</a>
@@ -117,6 +102,51 @@ width="32"
             </div>
           
           </div>
+          <script>
+            /* this doesn't seem to work so commenting out and replacing using aria-active - SM
+              const pathname = window.location.pathname + window.location.search;
+              if (pathname.includes("/events")) {
+              const navigation_item = document.getElementById("navigation-item-conjunction");
+              navigation_item.classList.add("govuk-header__navigation-item--active")
+              } 
+              else if (pathname.includes("/satellites")) {
+              const navigation_item = document.getElementById("navigation-item-satellites");
+              navigation_item.classList.add("govuk-header__navigation-item--active");
+              }
+              else if (pathname.includes("/account")) {
+              const navigation_item = document.getElementById("navigation-item-account");
+              navigation_item.classList.add("govuk-header__navigation-item--active");
+              }
+            */
+            const pathname = window.location.pathname + window.location.search;
+            if (pathname.includes("/events")) {
+              const navigation_item = document.getElementById("navigation-item-conjunction");
+              navigation_item.ariaCurrent = "page";
+            } 
+            if (pathname.includes("/reentry")) {
+              const navigation_item = document.getElementById("navigation-item-reentry");
+              navigation_item.ariaCurrent = "page";
+            } 
+            if (pathname.includes("/monitoring")) {
+              const navigation_item = document.getElementById("navigation-item-monitoring");
+              navigation_item.ariaCurrent = "page";
+            } 
+            if (pathname.includes("/satellites")) {
+              const navigation_item = document.getElementById("navigation-item-satellites");
+              navigation_item.ariaCurrent = "page";
+            } 
+            if (pathname.includes("/fragmentation")) {
+              const navigation_item = document.getElementById("navigation-item-fragmentation");
+              navigation_item.ariaCurrent = "page";
+            } 
+            if (pathname.includes("/account")) {
+              navigation_item = document.getElementById("navigation-item-account");
+              navigation_item.ariaCurrent = "page";
+            } 
+  
+  
+  
+          </script>  
 
         
     {% endblock %}
