@@ -5,6 +5,8 @@ Starlink-1862
 {% endblock %}
 
 {% block content %}
+
+<!-- Used this temporarily for version control reasons. If you see this file you can delete - SM -->
 <div class="govuk-width-container">
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
@@ -40,6 +42,10 @@ Starlink-1862
         <a href="#previous conjunction events">Previous conjunction events</a>
       </li>
 
+      <li class="moj-side-navigation__item">
+        <a href="#conjunction-alert-thresholds">Conjunction alert thresholds</a>
+      </li>
+
 
     </ul>
 
@@ -49,7 +55,7 @@ Starlink-1862
   <div class="govuk-grid-column-three-quarters">
 
 
-    <h1 class="govuk-heading-l"id="upcoming conjunction events">Upcoming conjunction events</h1>
+    <h1 class="govuk-heading-l" id="upcoming conjunction events">Upcoming conjunction events</h1>
     {% from "../../templates/mys-conjunction-search-form.njk" import mysConjunctionSearchForm %}
     <p></p>
     {{ mysConjunctionSearchForm() }}
@@ -241,11 +247,86 @@ Starlink-1862
 
   </table>
 
+
+  <!-- Section to add-->
+  <h2 class="govuk-heading-l" id="conjunction-alert-thresholds">Conjunction alert thresholds</h2>
+  <p style="color:red">If only default alerts are configured</p>
+  <p>Your default alert thresholds apply to this satellite.</p>
+  <p>You will recieve a notification only if an event meets all of the thresholds you have set.</p>
+
+  <a href="/account/operator/conjunction-notification-threshold-settings-3">
+    <div class="govuk-button">
+      Configure notification thresholds
+    </div>
+  </a>
+
+  <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 6%";><b>Notification criteria</b></th>
+        <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 6%";><b>Threshold</b></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><b>Probability of collision is above (percent):</b></td>
+        <td class="govuk-table__cell govuk-body-s">0.01%</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><b>Total miss distance is below (metres):</b></td>
+        <td class="govuk-table__cell govuk-body-s">1000m</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><b>Mean radial miss distance is below (metres):</b></td>
+        <td class="govuk-table__cell govuk-body-s">1000</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><b>Time to conjunction event is below (hours):</b></td>
+        <td class="govuk-table__cell govuk-body-s">72</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="color:red">If an individual threshold configured</p>
+
+  <p>You have configured individual alert thresholds for this satellite</p>
+  <p>You will recieve a notification only if an event meets all of the thresholds you have set.</p>
+
+  <a href="/account/operator/conjunction-notification-threshold-settings-3">
+    <div class="govuk-button">
+      Configure notification thresholds
+    </div>
+  </a>
+
+  <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 6%";><b>Notification criteria</b></th>
+        <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 6%";><b>Threshold</b></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><b>Total miss distance is below (metres):</b></td>
+        <td class="govuk-table__cell govuk-body-s">2000m</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="color:red">If alerts disabled for satellite</p>
+  <p>You have disabled notifications for conjunction events involving this satellite</p>
+
+  <a href="/account/operator/conjunction-notification-threshold-settings-3">
+    <div class="govuk-button">
+      Configure notification thresholds
+    </div>
+  </a>
+
+
+
   <br><a href= "/satellites/operator/satellite-list" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
                     Return to all satellites</a>
   <p></p>
-
-
 
 
 </div>
