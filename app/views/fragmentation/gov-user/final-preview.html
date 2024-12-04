@@ -1,27 +1,45 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Re-entry event re-asghj-kifdy: Alert
+Preview your edits before publishing
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/reentry/gov-user/homepage">Upcoming re-entry events</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/reentry/gov-user/event-summary-2-overflights">Re-entry event re-asghj-kifdy: Alert</a>
-      </li>
-    </ol>
-    <h1 class="govuk-heading-xl">Re-entry event re-asghj-kifdy: Alert</h1>
-  </div>
 
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/homepage">Fragmentation events</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/event-summary">Fragmentation event fr-aheb-angkem</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/edit-report">Edit report</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/review-edits">Review edits</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/final-preview">Final preview</a>
+      </ol>
+      <h1 class="govuk-heading-xl">Preview your edits before publishing</h1>
+    </div>
 
-  <div class="govuk-grid-row">
-
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
       </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading"> Ensure you review before publishing. 
+        </p> It is advised that at least two individuals review text edits before they are published on GOV.UK platforms.
+        </p>
+      </div>
+    </div>
+
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-quarter">
@@ -31,25 +49,22 @@ Re-entry event re-asghj-kifdy: Alert
         <a href="#executive summary">Executive summary</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#additional event details">Additional object and orbit details</a>
+        <a href="#fragmentation event summary">Fragmentation event summary</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#impact by home nation">Potential impact by UK nation</a>
+        <a href="#event details">Event details</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#impact by region">Potential impact by UK region</a>
-      </li>
-      <li class="moj-side-navigation__item">
-        <a href="#impact on overseas territories">Potential impact on British Overseas Territory</a>
+        <a href="#potential impact of event">Potential impact of event</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#guidance on response">Guidance on response</a>
-    </li>
-      <li class="moj-side-navigation__item">
-        <a href="#event history">Re-entry event history</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#risk thresholds">Risk thresholds</a>
+        <a href="#object details">Object details</a>
+    </li>
+      <li class="moj-side-navigation__item">
+        <a href="#UK and Human spaceflight risk">UK and Human Spaceflight risk</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#further information">Further information</a>
@@ -60,89 +75,64 @@ Re-entry event re-asghj-kifdy: Alert
   </div>
   <div class="govuk-grid-column-three-quarters">
 
-<p><b>Report 1</b>, updated on 01/11/2023, 09:00am UTC</p>
+<p><b>Report 1</b>, updated on 20/09/2024, 09:00am (UTC)</p>
 
     <h1 class="govuk-heading-l" id="executive summary">Executive summary</h1>
 
-    <p>The UK Space Agency is tracking the upcoming re-entry of an object from space into the Earth’s atmosphere, posing a potential threat to life and property on the ground. All re-entered debris should be considered as hazardous until proven otherwise.</p>
+    <p>The UK Space Agency is actively monitoring a non-UK fragmentation event involving RESURS P1 (NORAD 60374). Current tracking shows approximately 340 pieces of debris associated with this fragmentation, though work continues to identify and catalogue other potential debris objects. This number could therefore change significantly as more data is received.</p>
+     
+     <p>This is a medium risk event due to the number of fragments produced, with some UK licensed satellites, as well as Human Spaceflight Missions, seeing an increased risk of potential collision. The UK Space Agency is tracking the upcoming re-entry of an object from space into the Earth’s atmosphere, posing a potential threat to life and property on the ground. All re-entered debris should be considered as hazardous until proven otherwise.</p>
+
+     <h1 class="govuk-heading-l" id="fragmentation event summary">Fragmentation event summary</h1>
+
+     <p>Fragmenting object: RESURS P1 </p>
 
     <table class="govuk-table"style="width:100%">
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Risk to the UK (see <a href="#risk thresholds">Risk thresholds</a>)</th>
-          <td class="govuk-table__cell govuk-body-s" style="width: 50%"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
+          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Event time (UTC)</th>
+          <td class="govuk-table__cell govuk-body-s" style="width: 50%"> 2024-09-13 06:54:17 </td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">Probability of re-entry over the UK (%)</th>
-          <td class="govuk-table__cell govuk-body-s">0.09</td>
+          <th scope="row" class="govuk-table__header govuk-body-s">Inclination (°)</th>
+          <td class="govuk-table__cell govuk-body-s">98.21</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">Re-entry time window worldwide (UTC)</th>
-          <td class="govuk-table__cell govuk-body-s" style="width: 50%">03/11/2023, 11:35 to 03/11/2023, 21:05</td>
+          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Number of known fragments</th>
+          <td class="govuk-table__cell govuk-body-s" style="width: 50%">>340</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">UK overflight time(s) (UTC)</th>
-          <td class="govuk-table__cell govuk-body-s"></td>
+          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">UK satellites with increased risk of conjunction</th>
+          <td class="govuk-table__cell govuk-body-s" style="width: 50%">11</td>
         </tr>
         <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">Overflight 1</th>
-            <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s" style="text-indent: 40px">Overflight 2</th>
-            <td class="govuk-table__cell govuk-body-s">03/11/2023, 19:46</td>
-          </tr>
+          <th scope="row" class="govuk-table__header govuk-body-s">Increase in potential collisions with UK satellites (%)</th>
+          <td class="govuk-table__cell govuk-body-s">1.1%</td>
+        </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">Expected survivability to ground</th>
-          <td class="govuk-table__cell govuk-body-s">Likely – the high-density components and physical shape of rocket bodies can result in an increased chance of survival upon re-entry</td>
+          <th scope="row" class="govuk-table__header govuk-body-s">Initial risk assessment</th>
+          <td class="govuk-table__cell govuk-body-s"> <strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header govuk-body-s">Affected regime</th>
+          <td class="govuk-table__cell govuk-body-s">LEO</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header govuk-body-s">Object type</th>
-          <td class="govuk-table__cell govuk-body-s">	CZ-2C R/B (Rocket body)</td>
+          <td class="govuk-table__cell govuk-body-s">Payload</td>
         </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">Estimated mass</th>
-          <td class="govuk-table__cell govuk-body-s">4006 kg (with 10-40% of this mass surviving to the ground)</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">Licensing country</th>
-          <td class="govuk-table__cell govuk-body-s">People's Republic of China</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">UK nations potentially affected</th>
-          <td class="govuk-table__cell govuk-body-s">England; Northern Ireland</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">UK regions potentially affected</th>
-          <td class="govuk-table__cell govuk-body-s"><b>England:</b> East Midlands; South East; South West; Yorkshire and the Humber; <b>Northern Ireland:</b> Armagh; Derry/Londonderry; Tyrone</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">British Overseas Territories potentially affected</th>
-          <td class="govuk-table__cell govuk-body-s">N/A</td>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body-s">Mass (kg)</th>
+            <td class="govuk-table__cell govuk-body-s">5800</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-body-s">Launching State</th>
+            <td class="govuk-table__cell govuk-body-s">JPN</td>
+          </tr>
+
         </tr>
       </tbody>
     </table>
-
-    <p>Each circle on the map below represents one of 30,000 potential re-entry locations of the object.</p>
-      
-  <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-        Help using this map
-      </span>
-    </summary>
-    <div class="govuk-details__text">
-      On this map you can:
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Zoom and scroll to see potential re-entry locations across the world</li>
-      <li>Hover over each circle to see the potential re-entry time</li>
-    </ul>
-    </div>
-  </details>
-
-    <img src="/public/images/Reentry-2-overflights-blue.png" alt="Reentry UK overflight map" width="100%">
-
-    <p>Download the data from the re-entry map [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
 
     <h3 class="govuk-body-m">See <a href="#Further information">Further information</a> for more detail on methodology used in this report and the organisations that have been sent this alert.</h3>
 
@@ -150,25 +140,24 @@ Re-entry event re-asghj-kifdy: Alert
 
     <p>For Low Risk events, updates are only sent if the event breaches a higher risk threshold. For Medium and High Risk events, updates are sent as soon as new information is available. A close-down report will be sent in all cases.</p>
 
-
-<form class="form" action="/contact-an-analyst/contact-analyst-form" method="post">
-<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Contact the UK Space Agency for more information
-</button>
-</form>
-
+    <form class="form" action="/contact-an-analyst/contact-analyst-form" method="post">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Contact the UK Space Agency for more information
+      </button>
+      </form>
 
         <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
 
-                      <!-- Additional event details -->
+                      <!-- Event details -->
                       <div class="govuk-accordion__section ">
                         <div class="govuk-accordion__section-header">
                           <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-                            <span class="govuk-accordion__section-button" id="additional event details">
-                              Additional object and orbit details
+                            <span class="govuk-accordion__section-button" id="event details">
+                              Event details
                             </span>
                           </h2>
                         </div>
+                        
                             <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
       
                               <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
@@ -176,53 +165,123 @@ Re-entry event re-asghj-kifdy: Alert
                                 <table class="govuk-table"style="width:100%">
                                   <tbody class="govuk-table__body">
                                     <tr class="govuk-table__row">
-                                      <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Object details</th>
-                                      <td class="govuk-table__cell govuk-body-s" style="width: 50%"></td>
+                                      <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Event time (UTC)</th>
+                                      <td class="govuk-table__cell govuk-body-s" style="width: 50%">2024-09-13 06:54:17</td>
                                     </tr>
                                     <tr class="govuk-table__row">
-                                      <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">International designator</th>
-                                      <td class="govuk-table__cell govuk-body-s">2014-071B</td>
+                                      <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Inclination (°)</th>
+                                      <td class="govuk-table__cell govuk-body-s" style="width: 50%">89.0</td>
                                     </tr>
                                     <tr class="govuk-table__row">
-                                      <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">NORAD ID</th>
-                                      <td class="govuk-table__cell govuk-body-s">40306</td>
+                                      <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Number of known fragments</th>
+                                      <td class="govuk-table__cell govuk-body-s" style="width: 50%">>340</td>
                                     </tr>
                                     <tr class="govuk-table__row">
-                                      <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Object dimensions</th>
-                                      <td class="govuk-table__cell govuk-body-s">Height 8.0m x Width 3.4m x Span 2.7m</td>
+                                      <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Object Apogee</th>
+                                      <td class="govuk-table__cell govuk-body-s" style="width: 50%">856</td>
                                     </tr>
                                   <tr class="govuk-table__row">
-                                    <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Launching year</th>
-                                    <td class="govuk-table__cell  govuk-body-s">2014</td>
+                                    <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Object Perigee</th>
+                                    <td class="govuk-table__cell govuk-body-s" style="width: 50%">797</td>
                                   </tr>
-                                    <tr class="govuk-table__row">
-                                      <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Orbit details</th>
-                                      <td class="govuk-table__cell govuk-body-s" style="width: 50%"></td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                      <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Apogee (km)</th>
-                                      <td class="govuk-table__cell govuk-body-s">202</td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                      <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Perigee (km)</th>
-                                      <td class="govuk-table__cell govuk-body-s">197</td>
-                                    </tr>
-                                    <tr class="govuk-table__row">
-                                      <th scope="row" class="govuk-table__header govuk-body-s"style="text-indent: 40px">Inclination</th>
-                                      <td class="govuk-table__cell govuk-body-s">97.4°</td>
-                                    </tr>
                                   </tbody>
                                 </table>
+
+                                <h3 class="govuk-heading-m" id="executive summary">Actual fragment data</h3>
+
+                                <img src="/public/images/Apogee chart.png" alt="Apogee Chart" width="100%">
+                                <details class="govuk-details">
+                                  <summary class="govuk-details__summary">
+                                    <span class="govuk-details__summary-text">
+                                      Help with this chart
+                                    </span>
+                                  </summary>
+                                  <div class="govuk-details__text">
+                                    Hold for text
+                                  </div>
+                                </details>
+
+                                <h3 class="govuk-heading-m" id="executive summary">Fragments at altitude</h3>
+
+                                <img src="/public/images/number of fragments.png" alt="Number of Fragments" width="100%">
+                                <details class="govuk-details">
+                                  <summary class="govuk-details__summary">
+                                    <span class="govuk-details__summary-text">
+                                      Help with this chart
+                                    </span>
+                                  </summary>
+                                  <div class="govuk-details__text">
+                                    Hold for text
+                                  </div>
+                                </details>
+                                <h3 class="govuk-heading-m" id="executive summary">Fragments location</h3>
+
+                                <img src="/public/images/fragment location.png" alt="Fragment location" width="100%">
+
+                                <p>Download the data from the fragmentation charts [<a href="#">JSON</a>][<a href="#">CSV</a>]</p> 
+
                               </div>
                              </div>
                           </div>
 
-                                    <!-- Impact on Home Nations -->
+
+
+                                    <!-- Potential impact of event-->
                 <div class="govuk-accordion__section ">
                   <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
                       <span class="govuk-accordion__section-button" id="impact by home nation">
-                        Potential impact by UK nation
+                       Pontential impact of event
+                      </span>
+                    </h2>
+                  </div>
+                      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                          <p>This incident has been intially assess as MEDIUM RISK due to the number of reported fragments released</p>
+                          <P><b>Short term</b></P>
+                          <p>The fragment tally is currently assessed to be >300 pieces of debris, released at approximately 350km. As more information is received, the number of fragments could change significantly.</p>
+                            
+                           <p>Our collision assessments show a 1.1% increase in potential collisions involving UK satellites in LEO. Conjunction screening will take place once data is catalogued and will be distributed as per normal via Monitor Space Hazards.</p>
+
+                           <P><b>Long term</b></P>
+                          <p>At this altitude, the majority of debris will decay quickly. Therefore, the debris cloud poses a low, long-term risk to satellites and manned spacecraft. Understanding the extent of the debris generated will take weeks and the full extent will never be understood as fragments below 10cm will not be able to be tracked and catalogued. </p>
+                            
+                        </div>
+                       </div>
+                    </div>
+
+       <!-- Guidance on response-->
+       <div class="govuk-accordion__section ">
+       <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
+         <span class="govuk-accordion__section-button" id="impact by region">
+          Guidance on response
+         </span>
+        </h2>
+       </div>
+         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                                      
+           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+            <P><b>UK response</b></P>
+            <p>Sovereign sensors have been tasked to provide data on the fragments. Observations have been received; more will be generated over the weekend.</p>
+
+             <P><b>Press attention</b></P>
+
+            <p>We have not seen any press attention on this event. See <a href="/events/operator/definitions" class="govuk-link--no-visited-state">UK Space Agency press lines</a>.</p>
+              
+                    </div>
+                    </div>
+                </div>
+
+                                    <!-- Object details-->
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
+                      <span class="govuk-accordion__section-button" id="impact on overseas territories">
+                       Object details
                       </span>
                     </h2>
                   </div>
@@ -232,393 +291,270 @@ Re-entry event re-asghj-kifdy: Alert
 
                           <table class="govuk-table"style="width:100%">
                             <tbody class="govuk-table__body">
-                                <tr class="govuk-table__row">
-                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";></th>
-                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of re-entry (%)</th>
-                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 1 (UTC)</th>
-                                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 2 (UTC)</th>
+                              <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Object Common Name</th>
+                                <td class="govuk-table__cell govuk-body-s" style="width: 50%">RESURS P1</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-body-s">England</th>
-                                <td class="govuk-table__cell govuk-body-s">0.06</td>
-                                <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:25</td>
-                                <td class="govuk-table__cell govuk-body-s">03/11/2023, 19:45</td>
+                                <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">NORAD ID</th>
+                                <td class="govuk-table__cell govuk-body-s" style="width: 50%">60374</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-body-s">Northern Ireland</th>
-                                <td class="govuk-table__cell govuk-body-s">0.03</td>
-                                <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
-                                <td class="govuk-table__cell govuk-body-s">N/A</td>
+                                <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">International Designator</th>
+                                <td class="govuk-table__cell govuk-body-s" style="width: 50%">2024-14OU</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-body-s">Scotland</th>
-                                <td class="govuk-table__cell govuk-body-s">0.00</td>
-                                <td class="govuk-table__cell govuk-body-s">N/A</td>
-                                <td class="govuk-table__cell govuk-body-s">N/A</td>
+                                <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Object type</th>
+                                <td class="govuk-table__cell govuk-body-s" style="width: 50%">Payload</td>
                               </tr>
-                              <tr class="govuk-table__row">
-                                <th scope="row" class="govuk-table__header govuk-body-s">Wales</th>
-                                <td class="govuk-table__cell govuk-body-s">0.00</td>
-                                <td class="govuk-table__cell govuk-body-s">N/A</td>
-                                <td class="govuk-table__cell govuk-body-s">N/A</td>
-                              </tr>
+                            <tr class="govuk-table__row">
+                              <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Mass (kg)</th>
+                              <td class="govuk-table__cell govuk-body-s" style="width: 50%">5800</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Launching state</th>
+                              <td class="govuk-table__cell govuk-body-s" style="width: 50%">JPN</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Launching year</th>
+                              <td class="govuk-table__cell govuk-body-s" style="width: 50%">2024</td>
+                            </tr>
                             </tbody>
-                          </table> 
+                          </table>
+                          </div>
+                          </div>
 
-                          <h3 class="govuk-body-m">See <a href="#Further information">Further information</a> for more detail on methodology used in this report.</h3>
-                        </div>
-                       </div>
-                    </div>
-
-       <!-- Impact on UK regions-->
-       <div class="govuk-accordion__section ">
-       <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-         <span class="govuk-accordion__section-button" id="impact by region">
-        Potential impact by UK region
-         </span>
-        </h2>
-       </div>
-         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                                      
-           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                
-            <h3 class="govuk-heading-m">England</h3>
-            <table class="govuk-table"style="width:100%">
-              <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";></th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of re-entry (%)</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 1 (UTC)</th>
-                      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 2 (UTC)</th>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">East of England</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">East Midlands</th>
-                      <td class="govuk-table__cell govuk-body-s">0.03</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                      <td class="govuk-table__cell govuk-body-s">03/11/2023, 19:46</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">London</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">North East</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">North West</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">South East</th>
-                      <td class="govuk-table__cell govuk-body-s">0.01</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                      <td class="govuk-table__cell govuk-body-s">03/11/2023, 19:46</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">South West</th>
-                      <td class="govuk-table__cell govuk-body-s">0.01</td>
-                      <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">West Midlands</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Yorkshire and the Humber</th>
-                      <td class="govuk-table__cell govuk-body-s">0.01</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                      <td class="govuk-table__cell govuk-body-s">03/11/2023, 19:46</td>
-                    </tr>
-              </tbody>
-            </table> 
-
-            <h3 class="govuk-heading-m">Northern Ireland</h3>
-                                      
-            <table class="govuk-table"style="width:100%">
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";></th>
-                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of re-entry (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 1 (UTC)</th>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Antrim and Newtownabbey</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Ards and North Down</th>
-                      <td class="govuk-table__cell govuk-body-s">0.01</td>
-                      <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Armagh City, Banbridge and Craigavon</th>
-                      <td class="govuk-table__cell govuk-body-s">0.01</td>
-                      <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Belfast</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Causeway Coast and Glens</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Derry and Strabane</th>
-                      <td class="govuk-table__cell govuk-body-s">0.01</td>
-                      <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Fermanagh and Omagh</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Lisburn and Castlereagh</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Mid and East Antrim</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Mid Ulster</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-body-s">Newry, Mourne and Down</th>
-                      <td class="govuk-table__cell govuk-body-s">0.00</td>
-                      <td class="govuk-table__cell govuk-body-s">N/A</td>
-                    </tr>
-                      </tbody>
-                    </table> 
-
-                    <p>Only UK nations which are at risk from this re-entry are included in the table(s) above.</p>
-
-            <h3 class="govuk-body-m">See <a href="#Further information">Further information</a> for more detail on methodology used in this report.</h3>
-                    </div>
-                    </div>
-                </div>
-
-                                    <!-- Impact on British Overseas Territories-->
+    
+            <!-- UK and Human Spaceflight risk -->
                 <div class="govuk-accordion__section ">
                   <div class="govuk-accordion__section-header">
                     <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-                      <span class="govuk-accordion__section-button" id="impact on overseas territories">
-                        Potential impact by British Overseas Territory
+                      <span class="govuk-accordion__section-button" id="UK and Human Spaceflight risk">
+                        UK and Human Spaceflight risk
                       </span>
                     </h2>
                   </div>
                       <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
                         <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
- 
-      <table class="govuk-table"style="width:100%">
-        <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";></th>
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Probability of re-entry (%)</th>
-                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of overflight 1 (UTC)</th>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Anguilla</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Bermuda</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">British Antarctic Territory*</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">British Indian Ocean Territory</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">British Virgin Islands</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Cayman Islands</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Falkland Islands</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Gibraltar</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Montserrat</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Pitcairn Islands</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">	Saint Helena, Ascension and Tristan da Cunha</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">South Georgia and the South Sandwich Islands</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Sovereign Base Areas of Akrotiri and Dhekelia</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Turks and Caicos Islands</th>
-            <td class="govuk-table__cell govuk-body-s">0.00</td>
-            <td class="govuk-table__cell govuk-body-s">N/A</td>
-          </tr>
-        </tbody>
-      </table> 
+                         
 
-      <p>* For the purposes of this table, British Antarctic Territory has been limited to the areas surrounding populated facilities in the territory.</p>
 
-      <h3 class="govuk-body-m">See <a href="#Further information">Further information</a> for more detail on methodology used in this report.</h3>
+                          <p>Each UK licensed satellite was screened against the current population of objects as well as the fragments generated by the breakup model. The ‘Current Tally’ column is the number of 5 km conjunction events the object currently has per week. The ‘Fragments Tally’ column is the number of <b>additional 5 km conjunction events</b> that would be expected in the 7-day period after the event based on the predicted orbits outputted by the breakup model. Also included in the table is the mass of the licensed object and the orbit information.  </p>
                           
-                        </div>
-                       </div>
-                    </div>
-               
-            <!-- Guidance on response -->
-                <div class="govuk-accordion__section ">
-                  <div class="govuk-accordion__section-header">
-                    <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-                      <span class="govuk-accordion__section-button" id="guidance on response">
-                        Guidance on response
-                      </span>
-                    </h2>
-                  </div>
-                      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <p><b>UK objects affected</b></p>
 
-                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                          <h1 class="govuk-heading-m">Immediate response</h1>
-                          <p>The UK Space Agency is responsible for the monitoring of re-entry of objects from space into Earth’s atmosphere, providing warnings and alerts across HM Government. UKSA will act as subject matter experts, providing advice and guidance on how to deal with the incident. This includes coordinating public communications about the event.</p>
-                          <p>In the event of debris from the re-entry surviving to the ground, local authorities are responsible for any incident response and should follow standard response activities for the damage caused using existing Chemical, Biological, Radiological and Nuclear (CBRN) and/or plane crash policies.</p>
-                          <p>Cabinet Office will take on the lead for incident response coordination if the impacts are significant or are across multiple sectors.</p>
-                          <p>All re-entered debris should be considered as hazardous until proven otherwise. Debris objects should not be disposed of nor made available to the public. An appropriate hazmat response (i.e testing by fire service) should take place first.</p>
-                          <h1 class="govuk-heading-m">Recovery and clean up</h1>
-                          <p><b>Decontamination:</b> If the object is contaminated with hazardous material, it should be decontaminated. Decontamination is led by Defra who are the Lead Government Department for decontamination in England, in liaison with local authorities.</p>
-                          <p><b>Storage:</b> The object should be sent to storage by a specialist supplier in the local area, as agreed and organised by Defra.</p>
-                          <p><b>Release:</b> If the object has been declared safe (by Defra), UKSA will direct it’s release to either: MOD Defence Intelligence if the object is of Chinese or Russian origin; the owner of the object or the state liable for the object, organised via the Foreign, Commonwealth and Development Office; or the Air Accident Investigation Bureau or the Civil Aviation Authority if the object is UK-licensed.</p>
-                          <p><b>Disposal:</b> If the object cannot be declared safe or decontaminated, it should disposed of as per standard procedures held by Defra.</p>
-                          <p><b>Incident close down:</b> When departments agree that recovery can be handled through Business As Usual structures, the incident can be closed down. The UK Space Agency and Cabinet Office will confirm close down of the event to all parties involved.</p>
-                          <h1 class="govuk-heading-m">Liability for damages</h1>
-                          <p>People's Republic of China is liable for any damages and associated costs of the response and recovery efforts caused by the re-entry under the terms of the 1972 Space Liability Convention.  </p>
-                          <h1 class="govuk-heading-m">Press attention</h1>
-                          <p>We have not seen any press attention on this event. See <a href="/events/operator/definitions" class="govuk-link--no-visited-state">UK Space Agency press lines</a>.</p>
+                          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+                            <col>
+                              <colgroup span="5"></colgroup>
+                              <colgroup span="4"></colgroup>
+                  
+                            <thead class="govuk-table__head">
+                              <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Object Name</th>
+                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Norad ID</th>
+                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Mass</th>
+                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Current Tally</th>
+                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Fragments Tally</th>
+                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Apogee</th>
+                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Perigee</th>
+                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inclination</th>
+                              </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">O3B FM16</a></b></td>
+                                <td class="govuk-table__cell govuk-body-s">499506</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 7.0 </td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">589.8</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.5</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 8</a></b></td>
+                                <td class="govuk-table__cell govuk-body-s">6300645</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 8</a></b></td>
+                                <td class="govuk-table__cell govuk-body-s">6300645</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 8</a></b></td>
+                                <td class="govuk-table__cell govuk-body-s">6300645</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SKYNET 4</a></b></td>
+                                <td class="govuk-table__cell govuk-body-s">425477</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">148.0</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">DIAMOND GREEN</a></b></td>
+                                <td class="govuk-table__cell govuk-body-s">173927</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">68</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7.0</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.4</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">HYLAS 6</a></b></td>
+                                <td class="govuk-table__cell govuk-body-s">175928</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">28</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 9.0</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.2</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">ECHOSTAR 21</a></b></td>
+                                <td class="govuk-table__cell govuk-body-s">163966</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">137</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 10.0</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.2</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 14</a></b></td>
+                                  <td class="govuk-table__cell govuk-body-s">019475</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">29</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">100.2</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.6</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">O3B FM12</a></b></td>
+                                  <td class="govuk-table__cell govuk-body-s">274967</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">65</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">9.0</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.1</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                                </tr>
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SKYNET 4E</a></b></td>
+                                  <td class="govuk-table__cell govuk-body-s">382640</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">17</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15.3</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.1</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                                </tr>
+                              
+                            </tbody>
+                          </col>
+                        </table>
+                        <details class="govuk-details">
+                          <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                              Help with this table
+                            </span>
+                          </summary>
+                          <div class="govuk-details__text">
+                            Hold for text
+                          </div>
+                        </details>
+                        <p><b>Human spaceflight affected</b></p>
+
+                        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+                          <col>
+                            <colgroup span="5"></colgroup>
+                            <colgroup span="4"></colgroup>
+                
+                          <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Object Name</th>
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Norad ID</th>
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Mass</th>
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Current Tally</th>
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Fragments Tally</th>
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Apogee</th>
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Perigee</th>
+                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inclination</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">O3B FM16</a></b></td>
+                              <td class="govuk-table__cell govuk-body-s">499506</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">96000</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2.5</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">937</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">918</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">19.3</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 4</a></b></td>
+                              <td class="govuk-table__cell govuk-body-s">275038</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4500000</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3.6</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.8</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">246</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">313</td>
+                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">24.7</td>
+                            </tr>
+                           
+                                  
+                          </tbody>
+                        </col>
+                      </table>
+
+                      <details class="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Help with this table
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          Hold for text
                         </div>
-                       </div>
+                      </details>
+
+                      </div>
                       </div>
 
-                 <!-- Event history -->
-                <div class="govuk-accordion__section ">
-                    <div class="govuk-accordion__section-header">
-                      <h2 class="govuk-accordion__section-heading" id="accordion-heading-6">
-                        <span class="govuk-accordion__section-button" id="event history">
-                          Re-entry event history
-                </span>
-            </h2>
-          </div>
-          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-            <table class="govuk-table">
-              <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Report number</th>
-                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of report (UTC)</th>
-                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Risk</th>
-                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of re-entry over the UK (%)</th>
-                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">UK overflight time(s) (UTC)</th>
-                </tr>
-              </thead>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/gov-user/event-summary-mvp">re-asghj-kifdy Report 1</span></td>
-                    <td class="govuk-table__cell govuk-body-s">01/11/2023, 09:00</td>
-                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
-                    <td class="govuk-table__cell govuk-body-s">0.09</td>
-                    <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26; 03/11/2023, 19:46</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s" colspan="6">
-                      <table class="govuk-table" style="margin-left: 10px">
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Re-entry time window worldwide (UTC)</b></td>
-                          <td class="govuk-table__cell govuk-body-s">11:35, 03/11/2023 to 21:05, 03/11/2023</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Home Nations potentially affected</b></td>
-                          <td class="govuk-table__cell govuk-body-s">England; Northern Ireland</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Regions potentially affected</b></td>
-                          <td class="govuk-table__cell govuk-body-s"><b>England:</b> East Midlands; South East; South West; Yorkshire and the Humber; <b>Northern Ireland:</b> Armagh; Derry/Londonderry; Tyrone</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>British Overseas Territories potentially affected</b></td>
-                          <td class="govuk-table__cell govuk-body-s">N/A</td>  
-                      </table>
-                      <a href="/events/operator/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                        Download full report as PDF</a>
-                  </tr>
-                </tbody>
-            </table> 
-        </div>
-    </div>
-
-          <!-- Risk thresholds -->
+          <!-- Further Information -->
           <div class="govuk-accordion__section ">
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading" id="accordion-heading-8">
-                <span class="govuk-accordion__section-button" id="risk thresholds">
-                  Risk thresholds</span>
+                <span class="govuk-accordion__section-button" id="further information">
+                  Further Information</span>
                   </div>
                   <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                    <p>Risk thresholds are calculated according to the probability of the object re-entering over the UK.</p>
+                    <p>Risk thresholds are calculated according to the increase in potential collisions with UK satelites.</p>
 
                     <table class="govuk-table"style="width:100%">
                       <tbody class="govuk-table__body">
@@ -640,46 +576,19 @@ Re-entry event re-asghj-kifdy: Alert
                         </tr>
                       </tbody>
                     </table> 
-              
 
-                    </div>
-            </div>
-
-          <!-- Further Information -->
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading" id="accordion-heading-8">
-                <span class="govuk-accordion__section-button" id="further information">
-                  Further Information</span>
-                  </div>
-                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                    <p>Notifications for this report have been sent to the <b>early distribution list</b> for escalated re-entry reports. This currently includes recipients from the following organisations:</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>UK Space Agency</li>
-                      <li>Civil Aviation Authority</li>
-                      <li>Ministry of Defence</li>
-                      <li>US Department of Defence</li>
-                      <li>Japan Ministry of Defence</li>
-                      <li>US Space Force</li>
-                      <li>Australian Defence force</li>
-                      <li>New Zealand Defence Force</li>
-                      <li>France Ministry of Armed Forces</li>
-                      <li>Canadian Armed Forces</li>
-                      <li>Bundeswehr</li>     
-                    </ul>
-                    
                     <p>To understand more about how this data was generated by the UKSA, see:</p>
-                    <p><a href="/events/operator/definitions" class="govuk-link--no-visited-state">Re-entry event analysis information</a></p>
-                    <p><a href="/events/operator/definitions" class="govuk-link--no-visited-state">Help with the information on re-entry events</a></p>
+                    <p><a href="/events/operator/definitions" class="govuk-link--no-visited-state">Fragmentation event analysis information</a></p>
+                    <p><a href="/events/operator/definitions" class="govuk-link--no-visited-state">Help with the information on fragmentation events</a></p>
                     </div>
             </div>
           </div>
-          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-            Download event as PDF</a>
-          <a href="/reentry/gov-user/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Return to previous page</a>
 
-
+            <a href="/fragmentation/approver/edit-confirmation" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+              Publish edits</a>
+      
+              <a href="/fragmentation/approver/review-edits" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Return to previous page</a>
 
         </div>
         </div>
@@ -691,7 +600,6 @@ Re-entry event re-asghj-kifdy: Alert
     </div>
   </main>
 </div>
-
 
 {% endblock %}
 

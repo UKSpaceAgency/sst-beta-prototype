@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Edit re-entry event re-asghj-kifd
+Review your edits before publishing
 {% endblock %}
 
 {% block content %}
@@ -10,101 +10,69 @@ Edit re-entry event re-asghj-kifd
     <div class="govuk-breadcrumbs">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">Upcoming re-entry events</a>
+          <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/homepage">Fragmentation events</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary">Re-entry event re-asghj-kifdy: Alert</a>
+          <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/event-summary">Fragmentation event fr-aheb-angkem</a>
         </li>
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/edit-report">Edit report</a>
+            <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/edit-report">Edit report</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/fragmentation/approver/review-edits">Review edits</a>
           </li>
       </ol>
-      <h1 class="govuk-heading-xl">Edit re-entry event re-asghj-kifdy</h1>
+      <h1 class="govuk-heading-xl">Review your edits before publishing</h1>
     </div>
-    <p>If edits or additions are needed to the automatically generated report, these can be made through free text inputs in the boxes below. Once published, these edits will automatically be added to the relevant event page, and users on the appropriate distribution lists will be notified of the update.</p>
-    <p>The below boxes can only process <b>plain text</b>. Do not include images or text formatting.</p>
-
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="more-detail">
-            Add to 'Executive Summary' 
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under a paragraph which reads: "The UK Space Agency is tracking the upcoming re-entry of an object from space into the Earth’s atmosphere, posing a potential threat to life and property on the ground. All re-entered debris should be considered as hazardous until proven otherwise."
+    <h2 class="govuk-heading-m">Free text edits to fragmentation event fr-aheb-angkem</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Executive summary
+        </dt>
+        <dd class="govuk-summary-list__value">
+          N/A
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/fragmentation/approver/edit-report">Change<span class="govuk-visually-hidden"> name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Potnetial impact of event
+        </dt>
+        <dd class="govuk-summary-list__value">
+          N/A
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/fragmentation/approver/edit-report">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Guidance on response
+        </dt>
+        <dd class="govuk-summary-list__value">
+          N/A
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/fragmentation/approver/edit-report">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+        </dd>
+    </div>
+    
+  </dl>
+                    <p class="govuk-body">Only confirm these changes if you are confident the details you are providing are correct. Check for any spelling or grammatical errors before confirming.</p>
+            </dd>
+        </div> 
+                <a href="/fragmentation/approver/final-preview"" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+                    See final preview</a>
+                    <a href="/fragmentation/approver/edit-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                        Return to previous page</a>
+              </form>
+            </div>
           </div>
-        <textarea class="govuk-textarea" id="more-detail" name="tbc" rows="5" aria-describedby="more-detail-hint"></textarea>
-        <a href="/reentry/approver/edit-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Clear 'Executive Summary' text</a>
-
-        <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="more-detail">
-              Add to 'Immediate response'
-            </label>
-          </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under paragraphs which read: 
-            <br>
-            <br>"The UK Space Agency is responsible for the monitoring of re-entry of objects from space into Earth’s atmosphere, providing warnings and alerts across HM Government. UKSA will act as subject matter experts, providing advice and guidance on how to deal with the incident. This includes coordinating public communications about the event.
-            <br>
-            <br>In the event of debris from the re-entry surviving to the ground, local authorities are responsible for any incident response and should follow standard response activities for the damage caused using existing Chemical, Biological, Radiological and Nuclear (CBRN) and/or plane crash policies.
-            <br>
-            <br>Cabinet Office will take on the lead for incident response coordination if the impacts are significant or are across multiple sectors.
-            <br>
-            <br>All re-entered debris should be considered as hazardous until proven otherwise. Debris objects should not be disposed of nor made available to the public. An appropriate hazmat response (i.e testing by fire service) should take place first."
-          </div>
-          <textarea class="govuk-textarea" id="more-detail" name="reentry-press-attention-edit" rows="5" aria-describedby="more-detail-hint"></textarea>
-          <a href="/reentry/approver/edit-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Clear 'Immediate response' text</a>
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="more-detail">
-              Add to 'Recovery and clean up'
-            </label>
-          </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under paragraphs which read: 
-            <br>
-            <br>"Decontamination: If the object is contaminated with hazardous material, it should be decontaminated. Decontamination is led by Defra who are the Lead Government Department for decontamination in England, in liaison with local authorities.
-            <br>
-            <br>Storage: The object should be sent to storage by a specialist supplier in the local area, as agreed and organised by Defra.
-            <br>
-            <br>Release: If the object has been declared safe (by Defra), UKSA will direct it’s release to either: MOD Defence Intelligence if the object is of Chinese or Russian origin; the owner of the object or the state liable for the object, organised via the Foreign, Commonwealth and Development Office; or the Air Accident Investigation Bureau or the Civil Aviation Authority if the object is UK-licensed.
-            <br>
-            <br>Disposal: If the object cannot be declared safe or decontaminated, it should disposed of as per standard procedures held by Defra.
-            <br>
-            <br>Incident close down: When departments agree that recovery can be handled through Business As Usual structures, the incident can be closed down. The UK Space Agency and Cabinet Office will confirm close down of the event to all parties involved."
-          </div>
-          <textarea class="govuk-textarea" id="more-detail" name="reentry-press-attention-edit" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="more-detail">
-              Add to 'Liability for damages'
-            </label>
-          </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            This text will appear under a paragraph which reads: "People's Republic of China is liable for any damages and associated costs of the response and recovery efforts caused by the re-entry under the terms of the 1972 Space Liability Convention."
-          </div>
-          <textarea class="govuk-textarea" id="more-detail" name="reentry-press-attention-edit" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="more-detail">
-            Add to 'Press attention'
-          </label>
-        </h1>
-        <div id="more-detail-hint" class="govuk-hint">
-            Include details of any press attention related to this event. Leave blank if there has been no press attention.
-        </div>
-        <div id="more-detail-hint" class="govuk-hint">
-            This text will appear alongside a link to standard UK Space Agency press lines.
-          </div>
-        <textarea class="govuk-textarea" id="more-detail" name="reentry-press-attention-edit" rows="5" aria-describedby="more-detail-hint"></textarea>
-
-      <a href="/reentry/approver/review-edits" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        Review edits</a>
-
-        <a href="/reentry/approver/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Return to previous page</a>
-
-
+        </main>
+      </div>
 
   
   {% endblock %}

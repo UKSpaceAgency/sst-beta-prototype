@@ -1,0 +1,287 @@
+{
+  "short_id": "re-20240214-56073",
+  "report_number": 1,
+  "report_time": "2024-10-02T02:22:35",
+  "time_window_start": "2024-02-14T09:01:00",
+  "time_window_end": "2024-02-14T14:01:00",
+  "tip_external_id": "22557",
+  "probability": 0.04,
+  "norad_id": "56073",
+  "object_name": "CZ-2C R/B",
+  "object_type": "Rocket body",
+  "estimated_mass": 4006,
+  "license_country": "People's Republic of China",
+  "international_designator": "2014-071B",
+  "object_height": 8,
+  "object_width": 3.4,
+  "object_span": 2.7,
+  "launching_year": 2014,
+  "apogee": 202,
+  "perigee": 197,
+  "inclination": 97.4,
+  "overflight_time": [
+    "2024-10-03T11:33:00",
+    "2024-10-03T13:33:00",
+    "2024-10-03T15:33:00"
+  ],
+  "survivability": "Likely",
+  "survivability_comment": "The high-density components and physical shape of rocket bodies can result in an increased chance of survival upon re-entry",
+  "impact": {
+    "by_nation": {
+      "england_nation": {
+        "probability": 0.0028,
+        "overflight_time": [
+          "2024-08-17T08:16:13.635",
+          "2024-08-17T09:48:28.410"
+        ]
+      },
+      "northern_ireland_nation": {
+        "probability": 0.0,
+        "overflight_time": []
+      },
+      "scotland_nation": {
+        "probability": 0.0,
+        "overflight_time": []
+      },
+      "wales_nation": {
+        "probability": 0.00023333334,
+        "overflight_time": [
+          "2024-08-17T09:48:48.466"
+        ]
+      }
+    },
+    "england": {
+      "east_of_england": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "east_midlands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "london": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "north_east": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "north_west": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "south_east": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "south_west": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "west_midlands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "yorkshire_and_north_humber": {
+        "probability": 0,
+        "overflight_time": null
+      }
+    },
+    "northern_ireland": {
+      "antrim_and_newtownabbey": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "ards_and_north_down": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "armagh_city_banbridge_and_craigavon": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "belfast": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "causeway_coast_and_glens": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "derry_and_strabane": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "fermanagh_and_omagh": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "lisburn_and_castlereagh": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "mid_and_east_antrim": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "mid_ulster": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "newry_mourne_and_down": {
+        "probability": 0,
+        "overflight_time": null
+      }
+    },
+    "scotland": {
+      "central_scotland": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "glasgow": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "highlands_and_islands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "lothian": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "mid_scotland_and_fife": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "north_east_scotland": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "south_scotland": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "west_scotland": {
+        "probability": 0,
+        "overflight_time": null
+      }
+    },
+    "wales": {
+      "north_wales": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "mid_wales": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "south_west_wales": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "south_east_wales": {
+        "probability": 0,
+        "overflight_time": null
+      }
+    },
+    "overseas_territories_and_crown_dependencies": {
+      "anguilla": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "bermuda": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "british_antarctic_territory": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "british_indian_ocean_territory": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "british_virgin_islands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "cayman_islands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+       "channel_islands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "falkland_islands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "gibraltar": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "isle_of_man": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "montserrat": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "pitcairn_islands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "saint_helena_ascension_and_tristan_da_cunha": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "south_georgia_and_the_south_sandwich_islands": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "sovereign_base_areas_of_akrotiri_and_dhekelia": {
+        "probability": 0,
+        "overflight_time": null
+      },
+      "turks_and_caicos_islands": {
+        "probability": 0,
+        "overflight_time": null
+      }
+    },
+    "maritime_and_airspace": {
+      "shanwick_airspace": {
+        "probability": 0.0,
+        "overflight_time": []
+      },
+      "uk_navarea": {
+        "probability": 0.0,
+        "overflight_time": []
+      },
+      "uk_airspace": {
+        "probability": 0.0,
+        "overflight_time": []
+      }
+    }
+  },
+  "map_points": [
+    {
+      "overflight": "2024-08-17T03:05:29.927",
+      "latitude": 33.856,
+      "longitude": -77.0384,
+      "pass": 1,
+      "region": "england.east_of_england",
+      "fragments": [
+        {
+          "latitude": 51.789777009283156,
+          "longitude": -10.741834510453879,
+          "numFrags": 0.0045496784150600433,
+          "region": "england.east_of_england"
+        }
+      ]
+    }
+  ]
+}

@@ -15,7 +15,7 @@ Fragmentation events
         <table class="govuk-table">
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Current fragmentation alerts</th>
+              <th scope="row" class="govuk-table__header">Current fragmentation alerts relevant to your satellites</th>
               <td class="govuk-table__cell">10</td>
             </tr>
           </tbody>
@@ -55,7 +55,7 @@ Fragmentation events
             </button>
             </form>
             </div>
-        <br>
+        <br><!-- commenting out filters as potentially not needed
         <details class="govuk-details">
             <summary class="govuk-details__summary">
               <span class="govuk-details__summary-text">
@@ -90,7 +90,7 @@ Fragmentation events
                     </select>
                   </div>
             </div>
-          </details>
+          </details>-->
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
           <col>
             <colgroup span="5"></colgroup>
@@ -118,7 +118,7 @@ Fragmentation events
                 <strong class="govuk-tag govuk-tag--yellow">
                   Medium
                 </strong>
-              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary" class="govuk-link--no-visited-state">fr-aheb-angkem</a></b></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/operator/event-summary" class="govuk-link--no-visited-state">fr-aheb-angkem</a></b></td>
               <td class="govuk-table__cell govuk-body-s">13/09/2024 06:54:17</td>
               <td class="govuk-table__cell govuk-body-s">98.21</td>
               <td class="govuk-table__cell govuk-body-s"> <100 </td>
@@ -131,7 +131,7 @@ Fragmentation events
                     <strong class="govuk-tag govuk-tag--green">
                       Low
                     </strong>
-                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary" class="govuk-link--no-visited-state">fr-akndkne-dnknie</a></b></td>
+                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/operator/event-summary" class="govuk-link--no-visited-state">fr-akndkne-dnknie</a></b></td>
                 <td class="govuk-table__cell govuk-body-s">13/09/2024 08:14:40</td>
                 <td class="govuk-table__cell govuk-body-s">96.70</td>
                 <td class="govuk-table__cell govuk-body-s">~30</td>
@@ -144,7 +144,7 @@ Fragmentation events
                   <strong class="govuk-tag govuk-tag--green">
                     Low
                   </strong>
-                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary" class="govuk-link--no-visited-state">fr-amnkgl-aknla</a> </b></td>
+                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/operator/event-summary" class="govuk-link--no-visited-state">fr-amnkgl-aknla</a> </b></td>
                 <td class="govuk-table__cell govuk-body-s">13/09/2024 09:46:19</td>
                 <td class="govuk-table__cell govuk-body-s">94.21</td>
                 <td class="govuk-table__cell govuk-body-s">~50</td>
@@ -157,7 +157,7 @@ Fragmentation events
                         <strong class="govuk-tag govuk-tag--red">
                           High
                         </strong>
-                    <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary" class="govuk-link--no-visited-state">fr-aknke-angle</a></b></td>
+                    <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/operator/event-summary" class="govuk-link--no-visited-state">fr-aknke-angle</a></b></td>
                     <td class="govuk-table__cell govuk-body-s">13/09/2024 10:17:39</td>
                     <td class="govuk-table__cell govuk-body-s">87.45</td>
                     <td class="govuk-table__cell govuk-body-s">>100</td>
@@ -238,5 +238,7 @@ Fragmentation events
 <script>
 window.MOJFrontend.initAll()
 </script>
+
+
 
 {% endblock %}

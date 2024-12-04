@@ -1,18 +1,31 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Re-entry event re-asghj-kifdy: Alert
+Fragmentation event fr-aheb-angkem
 {% endblock %}
 
 {% block content %}
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading"> You are able to
+      <a class="govuk-notification-banner__link" href="/reentry/approver/edit-report">edit this alert</a> or <a class="govuk-notification-banner__link" href="/reentry/approver/send-notifications">send this alert to additional recipients</a>
+  </div>
+</div>
+
 <div class="govuk-width-container">
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/reentry/gov-user/homepage">Upcoming re-entry events</a>
+        <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">Upcoming re-entry events</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/reentry/gov-user/event-summary-update">Re-entry event re-asghj-kifdy: Alert</a>
+        <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary-update">Re-entry event re-asghj-kifdy: Alert</a>
       </li>
     </ol>
     <h1 class="govuk-heading-xl">Re-entry event re-asghj-kifdy: Alert</h1>
@@ -429,7 +442,6 @@ Re-entry event re-asghj-kifdy: Alert
                                   </table> 
 
                                   <p>Only UK nations which are at risk from this re-entry are included in the table(s) above.</p>
-                                  
                           <h3 class="govuk-body-m">See <a href="#Further information">Further information</a> for more detail on methodology used in this report.</h3>
                         </div>
                        </div>
@@ -583,14 +595,14 @@ Re-entry event re-asghj-kifdy: Alert
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Report number</th>
                   <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of report (UTC)</th>
-                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Risk</th>
+                  <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Risk to the UK</th>
                   <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Probability of re-entry over the UK (%)</th>
                   <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">UK overflight time(s) (UTC)</th>
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/gov-user/event-summary">re-asghj-kifdy Report 1</span></td>
+                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/approver/event-summary">re-asghj-kifdy Report 1</span></td>
                     <td class="govuk-table__cell govuk-body-s">01/11/2023, 09:00</td>
                     <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
                     <td class="govuk-table__cell govuk-body-s">0.04</td>
@@ -600,27 +612,26 @@ Re-entry event re-asghj-kifdy: Alert
                     <td class="govuk-table__cell govuk-body-s" colspan="6">
                       <table class="govuk-table" style="margin-left: 10px">
                         <tr class="govuk-table__row">
-                          <tr class="govuk-table__row">
-                            <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Re-entry time window worldwide (UTC)</b></td>
-                            <td class="govuk-table__cell govuk-body-s">11:35, 03/11/2023 to 21:05, 03/11/2023</td>
-                          </tr>
-                          <tr class="govuk-table__row">
-                            <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Home Nations potentially affected</b></td>
-                            <td class="govuk-table__cell govuk-body-s">England; Northern Ireland</td>
-                          </tr>
-                          <tr class="govuk-table__row">
-                            <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Regions potentially affected</b></td>
-                            <td class="govuk-table__cell govuk-body-s"><b>England:</b> South West; <b>Northern Ireland:</b> Armagh; Derry/Londonderry; Tyrone</td>
-                          </tr>
-                          <tr class="govuk-table__row">
-                            <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>British Overseas Territories potentially affected</b></td>
-                            <td class="govuk-table__cell govuk-body-s">N/A</td>   
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Re-entry time window worldwide (UTC)</b></td>
+                          <td class="govuk-table__cell govuk-body-s">11:35, 03/11/2023 to 21:05, 03/11/2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Home Nations potentially affected</b></td>
+                          <td class="govuk-table__cell govuk-body-s">England; Northern Ireland</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>Regions potentially affected</b></td>
+                          <td class="govuk-table__cell govuk-body-s"><b>England:</b> South West; <b>Northern Ireland:</b> Armagh; Derry/Londonderry; Tyrone</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s govuk-!-width-two-thirds"><b>British Overseas Territories potentially affected</b></td>
+                          <td class="govuk-table__cell govuk-body-s">N/A</td>   
                       </table>
                       <a href="/events/operator/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
                         Download full report as PDF</a>
 
                   <tr class="govuk-table__row">
-                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/gov-user/event-summary-update">re-asghj-kifdy Report 2</span></td>
+                    <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/approver/event-summary-update">re-asghj-kifdy Report 2</span></td>
                     <td class="govuk-table__cell govuk-body-s">02/11/2023, 09:00</td>
                     <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
                     <td class="govuk-table__cell govuk-body-s">1.23</td>
@@ -696,12 +707,13 @@ Re-entry event re-asghj-kifdy: Alert
                     </div>
             </div>
           </div>
+ 
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+            Download event as PDF</a>
+          <a href="/reentry/approver/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Return to previous page</a>
+            
 
-            <a href="#" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-              Download event as PDF</a>
-
-              <a href="/reentry/gov-user/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Return to previous page</a>
 
         </div>
         </div>
