@@ -52,6 +52,27 @@ Track conjunction events
                     </label>
                   </div>
                 </div>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="changedName">
+                      LEO regime
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="changedName-2">
+                      MEO regime
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="changedName-2">
+                      GEO regime
+                    </label>
+                  </div>
+                </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
               <div class="govuk-form-group">
@@ -63,6 +84,8 @@ Track conjunction events
                     <option value="published">Upcoming</option>
                     <option value="updated">Past</option>
                   </select>
+                  </div>
+                  <div>
                 </div>
           </div>
         </details>
@@ -77,7 +100,7 @@ Track conjunction events
             <tr class="govuk-table__row">
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Event information</b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Miss distance (m)</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Miss distance (m)</b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision</b></td>
             </tr>
             <tr class="govuk-table__row">
@@ -88,6 +111,7 @@ Track conjunction events
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Total</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Mean radial</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Regime</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Space-Track CDM</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>UKSA</th>
             </tr>
@@ -101,6 +125,7 @@ Track conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Discoverer 5</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">230</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">37</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
@@ -112,6 +137,7 @@ Track conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Lemur 2</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">469</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="24623">2.4623e-2</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
@@ -123,6 +149,7 @@ Track conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-64</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">560</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">152</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">GEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">1.543e-3</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
@@ -134,6 +161,7 @@ Track conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-50</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">750</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="2543">2.543e-3</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
@@ -145,6 +173,7 @@ Track conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">260</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">382</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="765">7.65e-4</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
@@ -156,6 +185,7 @@ Track conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Hyla-6</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">400</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">211</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="143">1.43e-4</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
@@ -167,6 +197,7 @@ Track conjunction events
               <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">805</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">103</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="987">9.87e-4</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
