@@ -38,7 +38,7 @@ Track conjunction events
             </span>
           </summary>
           <div class="govuk-details__text">
-              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="changedName">
@@ -53,25 +53,32 @@ Track conjunction events
                   </div>
                 </div>
                 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios govuk-radios--inline  govuk-radios--small" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                    <input class="govuk-radios__input" id="LEOFilter" name="changedName" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="changedName">
                       LEO regime
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                    <input class="govuk-radios__input" id="MEOFilter" name="changedName" type="radio" value="no">
                     <label class="govuk-label govuk-radios__label" for="changedName-2">
                       MEO regime
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                    <input class="govuk-radios__input" id="GEOFilter" name="changedName" type="radio" value="no">
                     <label class="govuk-label govuk-radios__label" for="changedName-2">
                       GEO regime
                     </label>
                   </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="AllFilter" name="changedName" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="changedName-2">
+                      All regimes
+                    </label>
+                  </div>
+
                 </div>
               </fieldset>
               <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
@@ -98,106 +105,106 @@ Track conjunction events
 
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Event information</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Event information</b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Objects</b></td>
-              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Miss distance (m)</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Miss distance (m)</b></td>
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision</b></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Your interest</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Time of closest approach (UTC)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Regime</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Primary</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Secondary</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Total</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Mean radial</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Regime</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Space-Track CDM</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>UKSA</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row leo">
               <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--red">High</strong></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/operator/event-summary-5" class="govuk-link--no-visited-state">asdf-asdas-asdf</a> </b></td>
               <td class="govuk-table__cell govuk-body-s">04/02/21 11:51</td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="LEO">LEO</td>
               <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1">Starlink-1862</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Discoverer 5</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">230</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">37</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row leo">
               <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--red">High</strong></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0002"><b><a href="#" class="govuk-link--no-visited-state">abcd-asdas-asdf</a></b></td>
               <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="LEO">LEO</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1861</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Lemur 2</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">469</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="24623">2.4623e-2</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row geo">
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0003"> <b><a href="#" class="govuk-link--no-visited-state">asdf-gtdas-zdgt</a> </b></td>
               <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="GEO">GEO</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1862</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-64</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">560</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">152</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">GEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="1543">1.543e-3</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
-              <tr class="govuk-table__row">
+              <tr class="govuk-table__row leo">
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0004"><b><a href="#" class="govuk-link--no-visited-state">ptyr-bxtte-asdf</a></b></td>
               <td class="govuk-table__cell govuk-body-s">14/02/21 03:49</td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="LEO">LEO</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Starlink-1317</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-50</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">750</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">852</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="2543">2.543e-3</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row leo">
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0021"><b><a href="#" class="govuk-link--no-visited-state">asre-bnyyq-asdf</a></b></td>
               <td class="govuk-table__cell govuk-body-s">10/02/21 04:19</td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="LEO">LEO</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Spacebee-52</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">260</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">382</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="765">7.65e-4</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row leo">
               <td class="govuk-table__cell"></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0033"><b><a href="#" class="govuk-link--no-visited-state">asdf-asdas-afki</a></b></td>
               <td class="govuk-table__cell govuk-body-s">12/02/21 19:00</td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="LEO">LEO</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-0064</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Hyla-6</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">400</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">211</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="143">1.43e-4</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
-            <tr class="govuk-table__row">
+            <tr class="govuk-table__row leo">
               <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--red">High</strong></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0034"><b><a href="#" class="govuk-link--no-visited-state">asdf-opkll-bcgt</a></b></td>
               <td class="govuk-table__cell govuk-body-s">14/02/21 01:05</td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="LEO">LEO</td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Oneweb-0050</a></td>
               <td class="govuk-table__cell govuk-body-s"><a href="#">Debris</a></td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">805</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">103</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">LEO</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="987">9.87e-4</td>
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="12643">1.2643e-2</td>
             </tr>
@@ -236,7 +243,45 @@ Track conjunction events
 
 <script src="<sst-alpha>/<application>.js"></script>
 <script>
-window.MOJFrontend.initAll()
+//window.MOJFrontend.initAll()
+
+function leo_only(e) {
+  for (i=0;i<leo_sats.length;i++){
+    leo_sats[i].style.display = "table-row";
+  }
+  for (i=0;i<geo_sats.length;i++){
+    geo_sats[i].style.display = "none";
+  }
+}
+function geo_only(e) {
+  for (i=0;i<leo_sats.length;i++){
+    leo_sats[i].style.display = "none";
+  }
+  for (i=0;i<geo_sats.length;i++){
+    geo_sats[i].style.display = "table-row";
+  }
+}
+function all_regimes (e) {
+  for (i=0;i<leo_sats.length;i++){
+    leo_sats[i].style.display = "table-row";
+  }
+  for (i=0;i<geo_sats.length;i++){
+    geo_sats[i].style.display = "table-row";
+  }
+}
+
+leo_filter = document.getElementById("LEOFilter");
+geo_filter = document.getElementById("GEOFilter");
+all_filter = document.getElementById("AllFilter");
+
+leo_sats = document.getElementsByClassName("leo");
+geo_sats = document.getElementsByClassName("geo");
+
+leo_filter.addEventListener("click", leo_only);
+geo_filter.addEventListener("click", geo_only);
+all_filter.addEventListener("click", all_regimes);
+
+
 </script>
 
 {% endblock %}
