@@ -38,62 +38,65 @@ Track conjunction events
             </span>
           </summary>
           <div class="govuk-details__text">
-              <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-                    <label class="govuk-label govuk-radios__label" for="changedName">
-                      View all conjunction events 
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="changedName-2">
-                      Only view high interest conjunction events
-                    </label>
-                  </div>
-                </div>
-                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-                <div class="govuk-radios govuk-radios--inline  govuk-radios--small" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="LEOFilter" name="changedName" type="radio" value="yes">
-                    <label class="govuk-label govuk-radios__label" for="changedName">
-                      LEO regime
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="MEOFilter" name="changedName" type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="changedName-2">
-                      MEO regime
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="GEOFilter" name="changedName" type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="changedName-2">
-                      GEO regime
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="AllFilter" name="changedName" type="radio" value="no">
-                    <label class="govuk-label govuk-radios__label" for="changedName-2">
-                      All regimes
-                    </label>
-                  </div>
 
-                </div>
-              </fieldset>
-              <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-              <div class="govuk-form-group">
-                  <label class="govuk-label" for="sort">
-                    Filter by
-                  </label>
-                  <select class="govuk-select" id="sort" name="sort">
-                    <option value="published" selected>All</option>
-                    <option value="published">Upcoming</option>
-                    <option value="updated">Past</option>
-                  </select>
-                  </div>
-                  <div>
-                </div>
+            <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="AllEventsAlerts" name="changedName" type="radio" value="yes" checked>
+                <label class="govuk-label govuk-radios__label" for="changedName">
+                  View all events and alerts 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changedName-2">
+                  Only view conjunction alerts
+                </label>
+              </div>
+            </div>
+
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <div class="govuk-radios govuk-radios--inline  govuk-radios--small" data-module="govuk-radios">
+              <label class="govuk-label">
+                Regime
+              </label>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="AllFilter" name="radio2" type="radio" value="yes" checked>
+                <label class="govuk-label govuk-radios__label" for="changedName-2" >
+                  All 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="LEOFilter" name="radio2" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="radio1">
+                  Low Earth Orbit (LEO)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="MEOFilter" name="radio2" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changedName-2">
+                  Medium Earth Orbit (MEO)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="GEOFilter" name="radio2" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changedName-2">
+                  Geostationary Orbit (GEO)
+                </label>
+              </div>
+            </div>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+                Filter by
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="published">All</option>
+                <option value="published" selected>Upcoming</option>
+                <option value="updated">Past</option>
+              </select>
+              </div>
+              <div>
+            </div>
           </div>
         </details>
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>

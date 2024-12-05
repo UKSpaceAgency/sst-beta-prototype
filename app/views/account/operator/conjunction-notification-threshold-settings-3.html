@@ -65,7 +65,8 @@ Settings
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Would you like to alter your default or individual thresholds?
+
+              Would you like to alter your default or per-satellite thresholds?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
@@ -97,7 +98,7 @@ Settings
 
             <p>You will recieve a notification only if an event meets all of the thresholds you have set.</p>
 
-            <p>These thresholds will apply to all satellites that you have not configured custom notifications for. Setting a custom notification for a satellite will override these settings for that satellite.</p>
+            <p>These thresholds will apply to all satellites that you have not configured per-satellite notifications for. Setting a per-satellite notification will override these settings for that satellite.</p>
 
             <p>You can adjust and enable specific notification thresholds below. Uncheck boxes for notification criteria you do not wish to filter by.</p>
 
@@ -186,10 +187,12 @@ Settings
 
 
             <div class="govuk-button" id="addButton">
-              New custom notification
+
+              New per-satellite notification
             </div>
             <div class="govuk-button" id="addButton" onclick="alert('This will delete all individual satellite notifications you have configured. Are you sure?')">
-              Delete all custom notifications
+              Delete all per-satellite notifications
+
             </div>
 
             <!--Create a notification setting-->
@@ -197,7 +200,7 @@ Settings
 
               <div class="govuk-form-group">
                 <label class="govuk-label" for="sort">
-                  Satellite to create custom threshold for
+                  Satellite to create per-satellite threshold for
                 </label>
                 <select class="govuk-select" name="sort" id="satSelect">
                   <option value="published" selected>Select satellite</option>
@@ -295,8 +298,7 @@ Settings
                 Save settings
               </div>    
             </div>
-
-            <p>This table shows all satellites you have set custom notification settings for. Creating a custom notification for a satellite will override your default thresholds for that satellite.</p>
+            <p>This table shows all satellites you have set per-satellite notification settings for. Creating a per-satellite notification will override your default thresholds for that satellite.</p>
 
             <p>If you set thresholds for a satellite, you will recieve a notification only if an event meets all of the thresholds you have set.</p>
 
@@ -361,7 +363,9 @@ Settings
 </div>
 
 <script>
-  /* Select whether to edit individual or default settings */
+
+  /* Select whether to edit per-satelllite or default settings */
+
   function defaultView (e){
     defaultSection.style.display = "block";
     individualSection.style.display = "none";
