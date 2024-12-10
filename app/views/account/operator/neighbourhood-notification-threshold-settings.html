@@ -1,0 +1,325 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Settings
+{% endblock %}
+
+{% block content %}
+<style>
+  #custom-sat-notification-1 {
+    display: none;
+  }
+  .govuk-table__header, .govuk-table__cell {
+    vertical-align: middle;
+  }
+  .govuk-table__cell {
+    font-weight: normal;
+  }
+  .satellite-setting {
+    margin-top: -20px;
+    margin-bottom: 5px;
+    width: calc(100% - 70px);
+  }
+  .satellite-setting th{
+    width: 370px;
+    border-bottom: none;
+  }
+  .satellite-setting td{
+    border-bottom: none;
+  }
+  .editSatBtn {
+    color: #1d70b8;
+  }
+  .no-border th, .no-border td{
+    border: none;
+  }
+  #default-label {
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/operator/account">Account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="">Neighbourhood threshold settings</a>
+      </li>
+    </ol>
+  </div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Alter your neighbourhood notification thresholds (GEO only)</h1>
+      <p>Changes made on this page will apply only to the contact information registered to this account. They will not affect other users in your organisation. </p>
+
+      <p>You are responsible for the safe operation of your satellites and should choose settings which allow you to do this.</p>
+                
+      <p>The suggested settings are examples of thresholds, not recommendations.</p>
+      <br>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Would you like to alter your default or per-satellite neighbourhood thresholds?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="default-radio" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Default neighbourhood notification thresholds
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="individual-radio" name="whereDoYouLive" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                Per-satellite neighbourhood notification thresholds
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      
+
+
+        <!--Default settings for all satellites-->
+        <div id="default-section" style="display:none">
+          <h2 class="govuk-heading-l">
+              Default neighbourhood notification thresholds for all satellites
+          </h2>
+
+          <form class="form">
+
+            <p>Configure these settings to define what you consider to be the neighbourhood of your satellites in GEO, and decide which alerts you recieve about these neighbourhoods.</p>
+
+            <p>These neighbourhood settings will apply to all satellites that you have not configured per-satellite notifications for. Setting a per-satellite notification will override these settings for that satellite.</p>
+
+            <br>
+            <table class="govuk-table satellite-setting">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">   
+                  <th scope="row" class="govuk-table__cell"><b>Neighbourhood radius definition (km):</b></th>
+                  <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "100000">
+                      <div class="govuk-input__suffix" aria-hidden="true">km</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="tick" type="checkbox" data-aria-controls="conditional-contact" checked>
+                <label class="govuk-label govuk-checkboxes__label">Notify me when an object enters my neighbourhood</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="tick" type="checkbox" data-aria-controls="conditional-contact" checked>
+                <label class="govuk-label govuk-checkboxes__label">Notify me when an object leaves my neighbourhood</label>
+              </div>
+            </div>
+            <br><br>
+
+              <button class="govuk-button" data-module="govuk-button">
+                Update default settings
+              </button>
+            </form>
+          </div>
+        </div>
+
+
+          <!-- Per satellite notifications-->
+          <div id="individual-section"  style="display:none">
+            <h2 class="govuk-heading-l" id="accordion-heading-2">
+                Per-satellite neighbourhood notification thresholds
+            </h2>
+
+
+            <div class="govuk-button" id="addButton">
+              New per-satellite neighbourhood
+            </div>
+            <div class="govuk-button" id="addButton" onclick="alert('This will delete all individual satellite notifications you have configured. Are you sure?')">
+              Delete all per-satellite neighbourhoods
+            </div>
+
+            <!--Create a notification setting-->
+            <div id="custom-sat-notification-1">
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Satellite to create per-satellite neighbourhood for
+                </label>
+                <select class="govuk-select" name="sort" id="satSelect">
+                  <option value="published" selected>Select satellite</option>
+                  <option value="updated">Skynet 3A</option>
+                  <option value="views">Skynet 4C - edit</option>
+                  <option value="views">Skynet 5A - edit</option>
+                  <option value="comments">Skynet 5B - edit</option>
+                  <option value="comments">Skynet 6A</option>
+                  <option value="comments">Skynet 6D</option>
+                </select>
+              </div>
+              
+              <div id="custom-sat-notification-2">
+                <p>You can adjust and enable specific notification thresholds for your selected satellite below.</p>
+                <br>
+                <table class="govuk-table satellite-setting">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell"><b>Neighbourhood radius definition (km):</b></th>
+                      <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "100000">
+                          <div class="govuk-input__suffix" aria-hidden="true">km</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="tick" type="checkbox" data-aria-controls="conditional-contact" checked>
+                    <label class="govuk-label govuk-checkboxes__label">Notify me when an object enters my neighbourhood</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="tick" type="checkbox" data-aria-controls="conditional-contact" checked>
+                    <label class="govuk-label govuk-checkboxes__label">Notify me when an object leaves my neighbourhood</label>
+                  </div>
+                </div>
+    
+                <br><br>
+              </div>
+              <div class="govuk-button" id="cancelButton">
+                Cancel
+              </div>
+              <div class="govuk-button" id="saveButton">
+                Save settings
+              </div>    
+            </div>
+
+            <p>This table shows all satellites you have set per-satellite notification settings for. Creating a per-satellite neighbourhood setting will override your default settings for that satellite.</p>
+
+            <p>Configure these settings to define what you consider to be the neighbourhood of your satellites in GEO, and decide which alerts you recieve about these neighbourhoods.</p>
+  
+          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b></b></td>
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b></b></td>
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Notify me of</b></td>
+                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Configure</b></td>            
+            
+                </tr>
+    
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%;">Satellite</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%;">Neighbourhood radius (km)</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%;">Neighbourhood entries</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%;">Neighbourhood exits</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 4%;"></th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 4%;"></th>  
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">Skynet 4C</a></td>
+                  <td class="govuk-table__cell govuk-body-s">100000</td>
+                  <td class="govuk-table__cell govuk-body-s">Yes</td>
+                  <td class="govuk-table__cell govuk-body-s">Yes</td>
+                  <td class="govuk-table__cell govuk-body-s"><a class="editSatBtn">edit</a></td>
+                  <td class="govuk-table__cell govuk-body-s" ><a href="">delete</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">Skynet 5A</a></td>
+                  <td class="govuk-table__cell govuk-body-s">200000</td>
+                  <td class="govuk-table__cell govuk-body-s">No</td>
+                  <td class="govuk-table__cell govuk-body-s">Yes</td>
+                  <td class="govuk-table__cell govuk-body-s"><a class="editSatBtn">edit</a></td>
+                  <td class="govuk-table__cell govuk-body-s" ><a href="">delete</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">Skynet 5B</a></td>
+                  <td class="govuk-table__cell govuk-body-s">100000</td>
+                  <td class="govuk-table__cell govuk-body-s">No</td>
+                  <td class="govuk-table__cell govuk-body-s">No</td>
+                  <td class="govuk-table__cell govuk-body-s"><a class="editSatBtn">edit</a></td>
+                  <td class="govuk-table__cell govuk-body-s" ><a href="">delete</a></td>
+                </tr>
+              </tbody>
+            </col>
+          </table>
+        </div>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  /* Select whether to edit per-satelllite or default settings */
+  function defaultView (e){
+    defaultSection.style.display = "block";
+    individualSection.style.display = "none";
+  }
+  function individualView (e){
+    defaultSection.style.display = "none";
+    individualSection.style.display = "block";
+  }
+
+  defaultSection = document.getElementById("default-section");
+  individualSection = document.getElementById("individual-section");
+  defaultRadio = document.getElementById("default-radio");
+  individualRadio = document.getElementById("individual-radio");
+
+
+  defaultRadio.addEventListener("click", defaultView);
+  individualRadio.addEventListener("click", individualView);
+
+
+  /* Logic for adding/editing individual satellite */
+  function showAddSat (e) {
+    custSatNotBig.style.display = "block";
+    custSatNot.style.display = "none";
+    addButton.style.display = "none";
+    saveSat.style.display = "none";
+    cancelSat.style.display = "inline-block";
+  }
+
+  function satSelected (e) {
+    custSatNotBig.style.display = "block";
+    custSatNot.style.display = "block";
+    addButton.style.display = "none";
+    saveSat.style.display = "inline-block";
+    cancelSat.style.display = "inline-block";
+  }
+  function endSatEdit (e) {
+    custSatNotBig.style.display = "none";
+    addButton.style.display = "inline-block";
+
+  }
+  addButton = document.getElementById("addButton");
+  custSatNotBig = document.getElementById("custom-sat-notification-1");
+  custSatNot = document.getElementById("custom-sat-notification-2");
+  saveSat = document.getElementById("saveButton");
+  cancelSat = document.getElementById("cancelButton");
+  satSelect = document.getElementById("satSelect");
+  editBtns = document.getElementsByClassName("editSatBtn");
+
+  addButton.addEventListener("click", showAddSat);
+  satSelect.addEventListener("change", satSelected); 
+  cancelSat.addEventListener("click", endSatEdit);
+  saveSat.addEventListener("click", endSatEdit);
+
+  for (i=0; i<3; i++){
+    let j=i;
+    editBtns[i].addEventListener("click", function(e){
+      satSelect.selectedIndex = j+2;
+      satSelected (e);
+    });
+  }
+
+
+</script>
+
+
+{% endblock %}

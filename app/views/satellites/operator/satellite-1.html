@@ -46,6 +46,11 @@ Starlink-1862
         <a href="#conjunction-alert-thresholds">Conjunction alert thresholds</a>
       </li>
 
+      <li class="moj-side-navigation__item">
+        <a href="#satellite-neighbourhood">Satellite neighbourhood</a>
+      </li>
+
+
 
     </ul>
 
@@ -248,7 +253,6 @@ Starlink-1862
   </table>
 
 
-  <!-- Section to add-->
   <h2 class="govuk-heading-l" id="conjunction-alert-thresholds">Conjunction alert thresholds</h2>
   <p style="color:red">If only default alerts are configured</p>
   <p>Your default alert thresholds apply to this satellite.</p>
@@ -319,6 +323,56 @@ Starlink-1862
   <a href="/account/operator/conjunction-notification-threshold-settings-3">
     <div class="govuk-button">
       Configure notification thresholds
+    </div>
+  </a>
+  <br><br>
+
+  <h2 class="govuk-heading-l" id="satellite-neighbourhood">Satellite neighbourbood</h2>
+  
+  <p>You have set the neighbourhood radius of this satellite to <b>100000km</b></p>
+  <p>All tracked satellites in this region are displayed below</p>
+
+  <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 6%";><b>Satellite</b></th>
+        <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 6%";><b>Norad ID</b></th>
+        <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 6%";><b>International designator</b></th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><a href="http://localhost:3000/satellites/operator/satellite-1">INMARSAT 6-F1</a></td>
+        <td class="govuk-table__cell govuk-body-s">50319</td>
+        <td class="govuk-table__cell govuk-body-s">2021-128A</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><a href="http://localhost:3000/satellites/operator/satellite-1">INTELSAT 12</a></td>
+        <td class="govuk-table__cell govuk-body-s">26590</td>
+        <td class="govuk-table__cell govuk-body-s">	2000-068A</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="govuk-heading-m">Neighbourhood alert settings</h3>
+  <table class="govuk-table" style="width:100%" data-module=moj-sortable-table>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><b>Notify me when an object enters my neighbourhood</b></td>
+        <td class="govuk-table__cell govuk-body-s">Yes</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell govuk-body-s"><b>Notify me when an object leaves my neighbourhood</b></td>
+        <td class="govuk-table__cell govuk-body-s">No</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <br>
+
+  <a href="/account/operator/neighbourhood-notification-threshold-settings">
+    <div class="govuk-button">
+      Configure neighbourbood
     </div>
   </a>
 
