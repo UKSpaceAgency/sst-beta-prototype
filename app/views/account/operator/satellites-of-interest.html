@@ -1,0 +1,238 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Settings
+{% endblock %}
+
+{% block content %}
+<style>
+  #custom-sat-notification-1 {
+    display: none;
+  }
+  .govuk-table__header, .govuk-table__cell {
+    vertical-align: middle;
+  }
+  .govuk-table__cell {
+    font-weight: normal;
+  }
+  .satellite-setting {
+    margin-top: -20px;
+    margin-left: 70px; 
+    margin-bottom: 5px;
+    width: calc(100% - 70px);
+  }
+  .satellite-setting th{
+    width: 550px;
+  }
+  .inactive {
+    opacity: 40%;
+  }
+  .editSatBtn {
+    color: #1d70b8;
+  }
+  .no-border th, .no-border td{
+    border: none;
+  }
+  #default-label {
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/account/operator/account">Account</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="">Configure satellies of interest</a>
+      </li>
+    </ol>
+  </div>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+          <!-- Per satellite notifications-->
+          <div id="individual-section">
+            <h1 class="govuk-heading-l" id="accordion-heading-2">
+                Configure alerts for satellites of interest
+            </h1>
+
+
+            <div class="govuk-button" id="addButton">
+              Add satellite of interest
+            </div>
+
+            <!--Create a notification setting-->
+            <div id="custom-sat-notification-1">
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Satellite
+                </label>
+                <select class="govuk-select" name="sort" id="satSelect">
+                  <option value="published" selected>Select satellite</option>
+                  <option value="updated">Skynet 3A</option>
+                  <option value="views">Skynet 4C - edit</option>
+                  <option value="views">Skynet 5A - edit</option>
+                  <option value="comments">Skynet 5B - edit</option>
+                  <option value="comments">Skynet 6A</option>
+                  <option value="comments">Skynet 6D</option>
+                </select>
+              </div>
+              
+              <div id="custom-sat-notification-2">
+                <p>You can adjust and enable specific notification thresholds for your selected satellite below. Uncheck boxes for notification criteria you do not wish to filter by.</p>
+
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="tick-all" type="checkbox" data-behaviour="exclusive" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-checkboxes__label">Event Type #1</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="tick" type="checkbox" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-checkboxes__label">Event Type #2</label>
+                  </div>
+                  <table class="govuk-table satellite-setting inactive" style="width:100%">
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">   
+                        <th scope="row" class="govuk-table__cell">Threshold is above: </th>
+                        <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.01">
+                            <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="tick" type="checkbox" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-checkboxes__label">Event Type #3</label>
+                  </div>
+                  <table class="govuk-table satellite-setting inactive" style="width:100%">
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">   
+                        <th scope="row" class="govuk-table__cell">Threshold is above: </th>
+                        <td class="govuk-table__cell">  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false" value = "0.01">
+                            <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                <br>
+              </div>
+              <div class="govuk-button" id="cancelButton">
+                Cancel
+              </div>
+              <div class="govuk-button" id="saveButton">
+                Save settings
+              </div>    
+            </div>
+          </div>
+
+          <p>This table shows all satellites of interest you have selected, and the notifications you have set for them.</p>
+  
+          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+              <thead class="govuk-table__head">    
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Satellite</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Event type #1</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Event type #2</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Event type #3</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 7%";></th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 7%";></th>  
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">Skynet 4C</a></td>
+                  <td class="govuk-table__cell govuk-body-s">Yes</td>
+                  <td class="govuk-table__cell govuk-body-s">0.5</td>
+                  <td class="govuk-table__cell govuk-body-s">1000</td>
+                  <td class="govuk-table__cell govuk-body-s"><a class="editSatBtn">edit</a></td>
+                  <td class="govuk-table__cell govuk-body-s" ><a href="">delete</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">Skynet 5A</a></td>
+                  <td class="govuk-table__cell govuk-body-s">Yes</td>
+                  <td class="govuk-table__cell govuk-body-s">0.7</td>
+                  <td class="govuk-table__cell govuk-body-s"></td>
+                  <td class="govuk-table__cell govuk-body-s"><a class="editSatBtn">edit</a></td>
+                  <td class="govuk-table__cell govuk-body-s"><a href="">delete</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">Skynet 5B</a></td>
+                  <td class="govuk-table__cell govuk-body-s">No</td>
+                  <td class="govuk-table__cell govuk-body-s"></td>
+                  <td class="govuk-table__cell govuk-body-s">1000</td>
+                  <td class="govuk-table__cell govuk-body-s"><a class="editSatBtn">edit</a></td>
+                  <td class="govuk-table__cell govuk-body-s"><a href="">delete</a></td>
+                </tr>
+              </tbody>
+            </col>
+          </table>
+        </div>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  /* Logic for adding/editing individual satellite */
+  function showAddSat (e) {
+    custSatNotBig.style.display = "block";
+    custSatNot.style.display = "none";
+    addButton.style.display = "none";
+    saveSat.style.display = "none";
+    cancelSat.style.display = "inline-block";
+  }
+
+  function satSelected (e) {
+    custSatNotBig.style.display = "block";
+    custSatNot.style.display = "block";
+    addButton.style.display = "none";
+    saveSat.style.display = "inline-block";
+    cancelSat.style.display = "inline-block";
+  }
+  function endSatEdit (e) {
+    custSatNotBig.style.display = "none";
+    addButton.style.display = "inline-block";
+
+  }
+  addButton = document.getElementById("addButton");
+  custSatNotBig = document.getElementById("custom-sat-notification-1");
+  custSatNot = document.getElementById("custom-sat-notification-2");
+  saveSat = document.getElementById("saveButton");
+  cancelSat = document.getElementById("cancelButton");
+  satSelect = document.getElementById("satSelect");
+  editBtns = document.getElementsByClassName("editSatBtn");
+
+  addButton.addEventListener("click", showAddSat);
+  satSelect.addEventListener("change", satSelected); 
+  cancelSat.addEventListener("click", endSatEdit);
+  saveSat.addEventListener("click", endSatEdit);
+
+  for (i=0; i<3; i++){
+    let j=i;
+    editBtns[i].addEventListener("click", function(e){
+      satSelect.selectedIndex = j+2;
+      satSelected (e);
+    });
+  }
+
+/* Grey out unchecked boxes */
+  document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
+    checkbox.addEventListener('change', (event) => {
+      const table = checkbox.closest('.govuk-checkboxes__item').nextElementSibling;
+      if (table && table.tagName === 'TABLE') {
+        table.classList.toggle('inactive', !checkbox.checked);
+      }
+    });
+  });
+
+
+</script>
+
+
+{% endblock %}
