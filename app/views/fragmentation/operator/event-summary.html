@@ -12,7 +12,8 @@ Fragmentation event fr-aheb-angkem
     margin-bottom: 20px;
   }
   #gabbardDynamic {
-    height: 300px;
+    height: 350px !important;
+    margin-bottom: 20px;
   }
   #dateSlider {
     width: 90%;
@@ -42,9 +43,29 @@ Fragmentation event fr-aheb-angkem
   .frag-img {
     margin-bottom: 20px;
   }
-
+  #showSats {
+    float:right;
+  }
+  #showSats label{
+    font-size: 16px;
+  }
+  .float-left {
+    float: left;
+  }
 
 </style>
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading"> You are able to
+      <a class="govuk-notification-banner__link" href="/fragmentation/approver/edit-report">edit this alert</a> or <a class="govuk-notification-banner__link" href="/fragmentation/approver/send-notifications">send this alert to additional recipients</a>
+  </div>
+</div>
 
 <div class="govuk-width-container">
   <div class="govuk-breadcrumbs">
@@ -71,14 +92,15 @@ Fragmentation event fr-aheb-angkem
       <li class="moj-side-navigation__item">
         <a href="#executive summary">Executive summary</a>
       </li>
-      <li class="moj-side-navigation__item">
-        <a href="#fragmentation event summary">Fragmentation event summary</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#event details">Event details</a>
       </li>
       <li class="moj-side-navigation__item">
-        <a href="#potential impact of event">Potential impact of event</a>
+        <a href="#UK and Human spaceflight risk">Risk to your assets</a>
+      </li>
+      <li class="moj-side-navigation__item">
+        <a href="#cause analysis">Analysis of potential event cause</a>
       </li>
       <li class="moj-side-navigation__item">
         <a href="#guidance on response">Guidance on response</a>
@@ -86,9 +108,6 @@ Fragmentation event fr-aheb-angkem
       <li class="moj-side-navigation__item">
         <a href="#object details">Object details</a>
     </li>
-      <li class="moj-side-navigation__item">
-        <a href="#UK and Human spaceflight risk">UK and Human Spaceflight risk</a>
-      </li>
       <li class="moj-side-navigation__item">
         <a href="#further information">Further information</a>
       </li>
@@ -102,16 +121,14 @@ Fragmentation event fr-aheb-angkem
 
     <h1 class="govuk-heading-l" id="executive summary">Executive summary</h1>
 
-    <p>The UK Space Agency is actively monitoring a non-UK fragmentation event involving RESURS P1 (NORAD 60374). Current tracking shows approximately 88 pieces of debris associated with this fragmentation, though work continues to identify and catalogue other potential debris objects. This number could therefore change significantly as more data is received.</p>
+    <p>The UK Space Agency is actively monitoring a non-UK fragmentation event involving RESURS P1. Current tracking shows approximately 88 pieces of debris associated with this fragmentation, though work continues to identify and catalogue other potential debris objects. This number could therefore change significantly as more data is received.</p>
      
-     <p>This is a medium risk event due to the number of fragments produced, with some UK licensed satellites, as well as Human Spaceflight Missions, seeing an increased risk of potential collision. The UK Space Agency is tracking the upcoming re-entry of an object from space into the Earth’s atmosphere, posing a potential threat to life and property on the ground. All re-entered debris should be considered as hazardous until proven otherwise.</p>
-
-     <h1 class="govuk-heading-l" id="fragmentation event summary">Fragmentation event summary</h1>
-
-     <p>Fragmenting object: RESURS P1 </p>
-
     <table class="govuk-table"style="width:100%">
       <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Fragmenting object common name</th>
+          <td class="govuk-table__cell govuk-body-s" style="width: 50%"> RESURS P1</td>
+        </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Event time (UTC)</th>
           <td class="govuk-table__cell govuk-body-s" style="width: 50%"> 2024-10-08 19:14:17</td>
@@ -123,6 +140,10 @@ Fragmentation event fr-aheb-angkem
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Number of known fragments</th>
           <td class="govuk-table__cell govuk-body-s" style="width: 50%">>88</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Modelled number of fragments</th>
+          <td class="govuk-table__cell govuk-body-s" style="width: 50%">240</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">UK satellites with increased risk of conjunction</th>
@@ -144,14 +165,10 @@ Fragmentation event fr-aheb-angkem
           <th scope="row" class="govuk-table__header govuk-body-s">Object type</th>
           <td class="govuk-table__cell govuk-body-s">Payload</td>
         </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Mass (kg)</th>
-            <td class="govuk-table__cell govuk-body-s">5800</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-body-s">Launching State</th>
-            <td class="govuk-table__cell govuk-body-s">JPN</td>
-          </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header govuk-body-s">Launching State</th>
+          <td class="govuk-table__cell govuk-body-s">JPN</td>
+        </tr>
 
         </tr>
       </tbody>
@@ -200,6 +217,10 @@ Fragmentation event fr-aheb-angkem
                                       <td class="govuk-table__cell govuk-body-s" style="width: 50%">>88</td>
                                     </tr>
                                     <tr class="govuk-table__row">
+                                      <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Modelled number of fragments</th>
+                                      <td class="govuk-table__cell govuk-body-s" style="width: 50%">240</td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
                                       <th scope="row" class="govuk-table__header govuk-body-s"style="width: 50%">Object Apogee</th>
                                       <td class="govuk-table__cell govuk-body-s" style="width: 50%">856</td>
                                     </tr>
@@ -219,11 +240,22 @@ Fragmentation event fr-aheb-angkem
                     <!--Graphs start here-->
                                 <p><b>Gabbard Plot</b></p>
                                 <div class="graphContainer">
-                                  <p class="gabbardInfo">Date: <span id="selectedDate"></span></p>
-                                  <p class="gabbardInfo">Known fragments: <span id="knownFragments"></span></p>
-                                  <div><canvas id="gabbardDynamic"></canvas></div> <!-- container canvas inside its own div to prevent infinite scrolling bug-->
+                                  <div class="float-left">
+                                    <p class="gabbardInfo">Date: <span id="selectedDate"></span></p>
+                                    <p class="gabbardInfo">Known fragments: <span id="knownFragments"></span></p>
+                                  </div>
+                                  <div class="govuk-checkboxes--small" id="showSats" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="showSatsBtn" name="waste" type="checkbox" checked>
+                                      <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                        Show your satellites
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div><canvas id="gabbardDynamic" height="350"></canvas></div> <!-- container canvas inside its own div to prevent infinite scrolling bug-->
+                                  <p class="gabbardInfo">Toggle observation date:</p>
                                   <div class="slider-container">
-                                    <input type="range" id="dateSlider" min="0" max="7" value="0" step="1">
+                                    <input type="range" id="dateSlider" min="0" max="7" value="7" step="1">
                                     <div class="labels">
                                       <p><span>03/10/24</span></p>
                                       <p><span>04/10/24</span></p>
@@ -235,8 +267,9 @@ Fragmentation event fr-aheb-angkem
                                       <p><span>25/10/24</span></p>
                                     </div>
                                   </div>
+
                                 </div>
-                              
+                                
                                 <details class="govuk-details">
                                   <summary class="govuk-details__summary">
                                     <span class="govuk-details__summary-text">
@@ -248,10 +281,11 @@ Fragmentation event fr-aheb-angkem
                                     Full fragmentation event data can be viewed or downloaded <a href="#">here</a>.
                                   </div>
                                 </details>
+
                                 <!--
+
                                 <p><b>Fragments at altitude</b></p>
                                 <p>SMA histogram of actual fragments data at 2024-10-08 19:14:17 UTC</p>
-
 
                                 <div class="graphContainer">
                                   <canvas id="fragmentsChart" width="800" height="400"></canvas>
@@ -268,26 +302,26 @@ Fragmentation event fr-aheb-angkem
                                   </div>
                                 </details>-->
 
-                                <!--<p><b>Fragments location</b></p>
-                                <p>Actual fragments shown at 	2024-10-08 19:14:17 UTC</p>
-                                <img src="/public/images/3d fragments.png" alt="Fragment location" width="100%" class="frag-img">
-                                <img src="/public/images/2d fragments.png" alt="Fragment location" width="100%" class="frag-img">
+                                <!--
+                                <p><b>Fragments location</b></p>
+                                <p>Actual fragments shown at 2024-10-27 15:43</p>
+                                <img src="/public/images/2d fragments.png" alt="Fragment location" width="100%">
+                                <img src="/public/images/3d fragments.png" alt="Fragment location" width="100%">
 
-                  
                                 <details class="govuk-details">
                                   <summary class="govuk-details__summary">
                                     <span class="govuk-details__summary-text">
-                                      Help with this map
+                                      Help with this chart
                                     </span>
                                   </summary>
                                   <div class="govuk-details__text">
-                                    Full fragmentation event data can be viewed or downloaded <a href="#">here</a>.
+                                    Hold for text
                                   </div>
                                 </details>-->
 
+
                                 <p><b>Longitude plot</b></p>
                                 <p>This plot shows the dispersion of the debris fragments and their movement over a one-day period as of 27 October 24; fragments have been identified since the initial breakup on 3 October and are shown in red, with UK objects shown in green.
-                                  Despite UK satellites operating in the vicinity of the break-up, risk remains low.
                                   </p>
                                 <img src="/public/images/Longitude plot.png" alt="Longitude plot" width="100%" class="frag-img">
 
@@ -303,12 +337,15 @@ Fragmentation event fr-aheb-angkem
                                   </div>
                                 </details>
 
+                                <!--
                                 <p><b>Combined fragment separation distance</b></p>
-                                <p>Pinch Point analysis showing actual fragments at 2024-10-08 19:14:17 UTC</p>
-                                <div class="graphContainer">
-                                  <canvas id="separationChart" width="800" height="400"></canvas>
-                                </div>
+                                <p>Pinch Point analysis showing actual fragments at 2024-10-08 19:14:17 UTC</p>-->
 
+                                <!--
+                                <div class="graphContainer" style="display:none">
+                                  <canvas id="separationChart" width="800" height="400"></canvas>
+                                </div>--->
+                                <!--
                                 <details class="govuk-details">
                                   <summary class="govuk-details__summary">
                                     <span class="govuk-details__summary-text">
@@ -319,45 +356,148 @@ Fragmentation event fr-aheb-angkem
                                     Full fragmentation event data can be viewed or downloaded <a href="#">here</a>.
                                   </div>
                                 </details>
-                                </div>
+                                </div>-->
 
                                 <p>Download the data from the fragmentation charts [<a href="#">JSON</a>][<a href="#">CSV</a>]</p> 
                               </div>
                           </div>
 
+            <!-- Risk to your assets -->
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
+                  <span class="govuk-accordion__section-button" id="UK and Human spaceflight risk">
+                    Risk to your assets
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
 
-                                    <!-- Potential impact of event-->
-                <div class="govuk-accordion__section ">
-                  <div class="govuk-accordion__section-header">
-                    <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-                      <span class="govuk-accordion__section-button" id="impact by home nation">
-                       Potential impact of event
-                      </span>
-                    </h2>
-                  </div>
-                      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                      <!--Key "risk" in the frag JSON -->
+                      <p>Due to the high mass and energy of this event, a substantial number of fragments have been generated. Work is ongoing to assess the risk to UK licensed satellites however it's likely that those at lower altitudes such as newly launched OneWeb satellites, Davinci and the Diamond series of CubeSats will have a significant increase in the number of potential collisions due to tracked and untracked debris. Both the International Space Station and the Tiangong Space Station orbit within the affected region and so we would expect to see a significant increase in risk over the short-medium term because of this event.</p>
+      
+                      <p>This incident has been intially assessed as MEDIUM RISK due to the effect on the number of potential collisions with UK Satellites.</p>
 
-                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                      <p><b>Your satellites affected</b></p>
 
-                          <p>This incident has been intially assess as MEDIUM RISK due to the number of reported fragments released</p>
-                          <P><b>Short term</b></P>
-                          <p>The fragment tally is currently assessed to be >300 pieces of debris, released at approximately 350km. As more information is received, the number of fragments could change significantly.</p>
-                            
-                           <p>Our collision assessments show a 1.1% increase in potential collisions involving UK satellites in LEO. Conjunction screening will take place once data is catalogued and will be distributed as per normal via Monitor Space Hazards.</p>
+                     
+                      <p>Each of your satellites was screened against the current population of objects as well as the fragments generated by the breakup model. </p>
 
-                           <P><b>Long term</b></P>
-                          <p>At this altitude, the majority of debris will decay quickly. Therefore, the debris cloud poses a low, long-term risk to satellites and manned spacecraft. Understanding the extent of the debris generated will take weeks and the full extent will never be understood as fragments below 10cm will not be able to be tracked and catalogued. </p>
-                            
-                        </div>
-                       </div>
-                    </div>
+                      <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+                        <col>
+                          <colgroup span="5"></colgroup>
+                          <colgroup span="4"></colgroup>
+              
+                        <thead class="govuk-table__head">
+                          <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Object Name</th>
+                            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Norad ID</th>
+                            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Current Tally</th>
+                            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Fragments Tally</th>
+                            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Apogee</th>
+                            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Perigee</th>
+                            <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inclination</th>
+                          </tr>
+                        </thead>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">YOURSAT 11</a></b></td>
+                            <td class="govuk-table__cell govuk-body-s">499506</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 7.0 </td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">589.8</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.5</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">YOURSAT 2</a></b></td>
+                            <td class="govuk-table__cell govuk-body-s">6300645</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">YOURSAT 8</a></b></td>
+                            <td class="govuk-table__cell govuk-body-s">6300645</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">YOURSAT 3</a></b></td>
+                            <td class="govuk-table__cell govuk-body-s">6300645</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">YOURSAT 1</a></b></td>
+                            <td class="govuk-table__cell govuk-body-s">425477</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">148.0</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                          </tr>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">YOURSAT 7</a></b></td>
+                            <td class="govuk-table__cell govuk-body-s">173927</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7.0</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.4</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
+                            <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
+                          </tr>
+                        </tbody>
+                      </col>
+                    </table>
+                    <details class="govuk-details">
+                      <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Help with this table
+                        </span>
+                      </summary>
+                      <div class="govuk-details__text">
+                        The ‘Current Tally’ column is the number of 5 km conjunction events the object currently has per week. The ‘Fragments Tally’ column is the number of <b>additional 5 km conjunction events</b> that would be expected in the 7-day period after the event based on the predicted orbits outputted by the breakup model. Also included in the table is the mass of the licensed object and the orbit information.  
+                      </div>
+                    </details>
+                </div>
+              </div>
 
+      <!-- Guidance on response-->
+      <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
+              <span class="govuk-accordion__section-button" id="cause analysis">
+              Analysis of potential event cause
+              </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                                      
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p>At present, the UK Space Agency believes the most likely cause of this event to be a collision between RESURS P1 and METEOR 1-11.</p>
+
+            <!--from conjunction_commentary in fragmentation JSON -->
+            <p>Hold for commentary on the collision provided by orbital analysts through API.</p>
+          </div>
+        </div>
+      </div>
+      
+              
        <!-- Guidance on response-->
        <div class="govuk-accordion__section ">
        <div class="govuk-accordion__section-header">
       <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-         <span class="govuk-accordion__section-button" id="impact by region">
+         <span class="govuk-accordion__section-button" id="guidance on response">
           Guidance on response
          </span>
         </h2>
@@ -380,8 +520,8 @@ Fragmentation event fr-aheb-angkem
                                     <!-- Object details-->
                 <div class="govuk-accordion__section ">
                   <div class="govuk-accordion__section-header">
-                    <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-                      <span class="govuk-accordion__section-button" id="impact on overseas territories">
+                    <h2 class="govuk-accordion__section-heading" id="object details">
+                      <span class="govuk-accordion__section-button">
                        Object details
                       </span>
                     </h2>
@@ -425,226 +565,6 @@ Fragmentation event fr-aheb-angkem
                           </div>
                           </div>
 
-    
-            <!-- UK and Human Spaceflight risk -->
-                <div class="govuk-accordion__section ">
-                  <div class="govuk-accordion__section-header">
-                    <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
-                      <span class="govuk-accordion__section-button" id="UK and Human Spaceflight risk">
-                        UK and Human Spaceflight risk
-                      </span>
-                    </h2>
-                  </div>
-                      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-
-                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                         
-                          <p>Each UK licensed satellite was screened against the current population of objects as well as the fragments generated by the breakup model. The ‘Current Tally’ column is the number of 5 km conjunction events the object currently has per week. The ‘Fragments Tally’ column is the number of <b>additional 5 km conjunction events</b> that would be expected in the 7-day period after the event based on the predicted orbits outputted by the breakup model. Also included in the table is the mass of the licensed object and the orbit information.  </p>
-                          
-                          <p><b>UK objects affected</b></p>
-
-                          <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
-                            <col>
-                              <colgroup span="5"></colgroup>
-                              <colgroup span="4"></colgroup>
-                  
-                            <thead class="govuk-table__head">
-                              <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Object Name</th>
-                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Norad ID</th>
-                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Mass</th>
-                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Current Tally</th>
-                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Fragments Tally</th>
-                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Apogee</th>
-                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Perigee</th>
-                                <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inclination</th>
-                              </tr>
-                            </thead>
-                            <tbody class="govuk-table__body">
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">O3B FM16</a></b></td>
-                                <td class="govuk-table__cell govuk-body-s">499506</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 7.0 </td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">589.8</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.5</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 8</a></b></td>
-                                <td class="govuk-table__cell govuk-body-s">6300645</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 8</a></b></td>
-                                <td class="govuk-table__cell govuk-body-s">6300645</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 8</a></b></td>
-                                <td class="govuk-table__cell govuk-body-s">6300645</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 4.8 </td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SKYNET 4</a></b></td>
-                                <td class="govuk-table__cell govuk-body-s">425477</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">42</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">148.0</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.6</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">DIAMOND GREEN</a></b></td>
-                                <td class="govuk-table__cell govuk-body-s">173927</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">68</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">7.0</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.4</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">HYLAS 6</a></b></td>
-                                <td class="govuk-table__cell govuk-body-s">175928</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">28</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 9.0</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.2</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">ECHOSTAR 21</a></b></td>
-                                <td class="govuk-table__cell govuk-body-s">163966</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">137</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"> 10.0</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1.2</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                  <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 14</a></b></td>
-                                  <td class="govuk-table__cell govuk-body-s">019475</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">29</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">100.2</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.6</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                                </tr>
-                                <tr class="govuk-table__row">
-                                  <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">O3B FM12</a></b></td>
-                                  <td class="govuk-table__cell govuk-body-s">274967</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">65</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">9.0</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.1</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                                </tr>
-                                <tr class="govuk-table__row">
-                                  <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SKYNET 4E</a></b></td>
-                                  <td class="govuk-table__cell govuk-body-s">382640</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">17</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">15.3</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.1</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">598.8</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">593.3</td>
-                                  <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">87.2</td>
-                                </tr>
-                              
-                            </tbody>
-                          </col>
-                        </table>
-                        <details class="govuk-details">
-                          <summary class="govuk-details__summary">
-                            <span class="govuk-details__summary-text">
-                              Help with this table
-                            </span>
-                          </summary>
-                          <div class="govuk-details__text">
-                            Hold for text
-                          </div>
-                        </details>
-                        <p><b>Human spaceflight affected</b></p>
-
-                        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
-                          <col>
-                            <colgroup span="5"></colgroup>
-                            <colgroup span="4"></colgroup>
-                
-                          <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Object Name</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Norad ID</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Mass</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Current Tally</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Fragments Tally</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Apogee</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Perigee</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Inclination</th>
-                            </tr>
-                          </thead>
-                          <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">O3B FM16</a></b></td>
-                              <td class="govuk-table__cell govuk-body-s">499506</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">96000</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2.5</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">937</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">918</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">19.3</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/satellites" class="govuk-link--no-visited-state">SES 4</a></b></td>
-                              <td class="govuk-table__cell govuk-body-s">275038</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">4500000</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">3.6</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">0.8</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">246</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">313</td>
-                              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">24.7</td>
-                            </tr>
-                           
-                                  
-                          </tbody>
-                        </col>
-                      </table>
-
-                      <details class="govuk-details">
-                        <summary class="govuk-details__summary">
-                          <span class="govuk-details__summary-text">
-                            Help with this table
-                          </span>
-                        </summary>
-                        <div class="govuk-details__text">
-                          Hold for text
-                        </div>
-                      </details>
-
-                      </div>
-                      </div>
-
           <!-- Further Information -->
           <div class="govuk-accordion__section ">
             <div class="govuk-accordion__section-header">
@@ -675,11 +595,11 @@ Fragmentation event fr-aheb-angkem
                         </tr>
                       </tbody>
                     </table> 
+                    <p>Modelled fragmentation data is calculated according to the NASA breakup model. Our methodology and assumptions are detailed <a href="/">here</a>.</p>
 
-                    <p>To understand more about how this data was generated by the UKSA, see:</p>
-                    <p><a href="/events/operator/definitions" class="govuk-link--no-visited-state">Fragmentation event analysis information</a></p>
-                    <p><a href="/events/operator/definitions" class="govuk-link--no-visited-state">Help with the information on fragmentation events</a></p>
-                    </div>
+                    <p>Event time is estimated using pinch point analysis. Our methodology and assumptions are detailed <a href="/">here</a>.</p>
+
+                  </div>
             </div>
           </div>
 
@@ -706,7 +626,8 @@ Fragmentation event fr-aheb-angkem
 const colors = {
       orange: 'rgb(244, 119, 56)',
       lblue: 'rgb(86, 148, 202)',
-      dblue: 'rgb(0, 48, 120)'
+      dblue: 'rgb(0, 48, 120)',
+      purple: 'rgb(128, 22, 80)'
   };
 
 
@@ -791,6 +712,11 @@ const allGabbardData = {
 ],
 }
 
+satData = [
+  {period: 99.6, apogee: 712.45, perigee: 607.49, name:"YOURSAT 11"}, {period: 101.6, apogee: 807.31, perigee: 749.74, name:"YOURSAT 2"},
+  {period: 100.2, apogee: 732.4, perigee: 673.18, name:"YOURSAT 8"}, {period: 104.4, apogee: 985.33, perigee: 785.5, name:"YOURSAT 3"},
+]
+
 const dates = ["03/10/24", "04/10/24", "06/10/24", "09/10/24", "11/10/24","15/10/24", "19/10/24", "25/10/24"]
 
 // Set default displayed date
@@ -800,11 +726,16 @@ const knownFragmentsElement = document.getElementById("knownFragments");
 const slider = document.getElementById("dateSlider");
 selectedDateElement.textContent = dates[0];
 
-// Display graph
+// Set data to first date
 apogeePerigeeData = allGabbardData["03/10/24"]
+
 // Separate data points for apogee and perigee
 apogeeData = apogeePerigeeData.map(point => ({ x: point.period, y: point.apogee }));
 perigeeData = apogeePerigeeData.map(point => ({ x: point.period, y: point.perigee }));
+
+satApogeeData = satData.map(point => ({ x: point.period, y: point.apogee }));
+satPerigeeData = satData.map(point => ({ x: point.period, y: point.perigee }));
+
 
 knownFragmentsElement.textContent = apogeePerigeeData.length;
 
@@ -815,20 +746,41 @@ dynamicGabbardChart = new Chart(GDtx, {
   data: {
     datasets: [
       {
-        label: 'Apogee',
+        label: 'Fragment Apogee',
         data: apogeeData,
-        backgroundColor: colors.lblue,
-        borderColor: colors.lblue,
+        backgroundColor: colors.dblue,
+        borderColor: colors.dblue,
         showLine: false,
-        pointRadius: 1.5, // Set the point radius to 1
+        pointRadius: 1.5, 
       },
       {
-        label: 'Perigee',
+        label: 'Fragment Perigee',
         data: perigeeData,
         backgroundColor: colors.orange,
         borderColor: colors.orange,
         showLine: false,
-        pointRadius: 1.5, // Set the point radius to 1
+        pointRadius: 1.5,
+      },
+      {
+        label: 'Satellite Apogee',
+        data: satApogeeData,
+        backgroundColor: colors.purple,
+        borderColor: colors.purple,
+        showLine: false,
+        pointRadius: 7, 
+        hoverRadius: 9,
+        pointStyle: "cross",
+      },
+      {
+        label: 'Satellite Perigee',
+        data: satPerigeeData,
+        backgroundColor: colors.purple,
+        borderColor: colors.purple,
+        showLine: false,
+        pointRadius: 7, 
+        hoverRadius: 9,
+        //rotation: 60,
+        pointStyle: "cross",
       }
     ]
   },
@@ -847,8 +799,8 @@ dynamicGabbardChart = new Chart(GDtx, {
             weight: "bold"
           }
         },
-        min: 88,
-        max: 114,
+        min: 92,
+        max: 111,
 
         ticks: {
           stepSize: 1, // Adjust this value to control x-axis grid spacing
@@ -874,10 +826,16 @@ dynamicGabbardChart = new Chart(GDtx, {
       },
     },
     interaction: {
-      mode: 'index',
-      axis: 'y'
+      mode: 'x',
+      intersect: false,
     },
     plugins: {
+      legend: {
+        position: 'bottom',
+        labels: {
+          usePointStyle: true,
+        }
+      },
       tooltip: {
         enabled: true,
         //displayColors: false,
@@ -887,16 +845,31 @@ dynamicGabbardChart = new Chart(GDtx, {
           // Custom tooltip content
           label: () => null, // Hide default labels
           afterBody: (tooltipItems) => {
-            // Extract period, apogee, and perigee values from the tooltipItems array
-            const period = tooltipItems[0].raw.x;
-            const apogeePoint = apogeeData.find(p => p.x === period);
-            const perigeePoint = perigeeData.find(p => p.x === period);
+            // Identify dataset of hover
+            dataset = tooltipItems[0].dataset.label;
 
-            return [
-              `Period: ${period} mins`,
-              `🔵 Apogee Altitude: ${apogeePoint.y} km`,
-              `🟠 Perigee Altitude: ${perigeePoint.y} km`
-            ];
+            period = tooltipItems[0].raw.x;
+
+            if (dataset == "Fragment Apogee" | dataset == "Fragment Perigee") {
+              apogeePoint = apogeeData.find(p => p.x === period);
+              perigeePoint = perigeeData.find(p => p.x === period);
+
+              return [
+                `Period: ${period} mins`,
+                `🔵 Apogee Altitude: ${apogeePoint.y} km`,
+                `🟠 Perigee Altitude: ${perigeePoint.y} km`
+              ];
+            }
+            else {
+              satellite = satData.find(p => p.period === period);
+              return [
+                `Satellite: ${satellite.name}`,
+                `Period: ${period} mins`,
+                `🔵 Apogee Altitude: ${satellite.apogee} km`,
+                `🟠 Perigee Altitude: ${satellite.perigee} km`
+              ];
+
+            }
           }
         }
       }
@@ -943,9 +916,26 @@ const updateDate = () => {
     }
 };
 
+function toggleSats(e){
+  if (dynamicGabbardChart.data.datasets[2].hidden){
+    dynamicGabbardChart.data.datasets[2].hidden = false;
+    dynamicGabbardChart.data.datasets[3].hidden = false;
+  }
+  else {
+    dynamicGabbardChart.data.datasets[2].hidden = true;
+    dynamicGabbardChart.data.datasets[3].hidden = true;
+  }
+  dynamicGabbardChart.update()
+}
+
 // Attach event listener for slider input
 slider.addEventListener('input', updateDate);
 
+showSatsBtn = document.getElementById("showSatsBtn");
+showSatsBtn.addEventListener('change', toggleSats);
+
+
+/*
 //
 // Code for fragment bar chart
 //
@@ -1013,6 +1003,9 @@ new Chart(
   fragmentConfig
 );
 
+*/
+
+/*
 // Creating the fragment separation graph
 // Generate 20 approximate y-values to mimic the trend in your graph
 const separationDataPoints = [
@@ -1090,5 +1083,6 @@ const separationChart = new Chart(ctx, {
         }
     }
 });
+*/
 </script>
 {% endblock %}
