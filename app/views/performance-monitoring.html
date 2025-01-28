@@ -221,13 +221,13 @@ Performance monitoring
                               <fieldset class="govuk-fieldset" style="display:inline;">
                                 <div class="govuk-radios govuk-radios--small govuk-radios--inline" data-module="govuk-radios">
                                   <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" type="radio" value="linear" checked>
+                                    <input class="govuk-radios__input" type="radio" value="linear" name="logLinear" checked>
                                     <label class="govuk-label govuk-radios__label" for="changedName">
                                       Linear
                                     </label>
                                   </div>
                                   <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" type="radio" value="log">
+                                    <input class="govuk-radios__input" type="radio" value="log" name="logLinear">
                                     <label class="govuk-label govuk-radios__label" for="changedName">
                                       Log
                                     </label>
@@ -779,12 +779,13 @@ Performance monitoring
           datasets: [{
               label: 'Space-Track',
               data: tip_datasets.last7days.data,
-              borderColor: '#005ea5',
-              backgroundColor: '#005ea5',
+              borderColor: '#12436D',
+              borderWidth: 2,
+              backgroundColor: '#12436D',
               tension: 0.3,
               pointStyle: 'circle',
-              pointRadius: 4,
-              pointBackgroundColor: '#005ea5'
+              pointRadius: 2,
+              pointBackgroundColor: '#12436D'
           }]
       },
       options: {
@@ -890,7 +891,9 @@ Performance monitoring
           plugins: {
               legend: {
                   position: 'left',
-                  color: "black",
+                  labels: {
+                    color: "black",
+                  },
                   title: {
                     text: "Object type",
                     display: true,
