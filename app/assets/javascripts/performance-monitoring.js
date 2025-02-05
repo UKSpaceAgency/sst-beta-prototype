@@ -111,8 +111,8 @@
     '12': {
         labels: ['01/2024', '02/2024', '03/2024', '04/2024', '05/2024', '06/2024', '07/2024', '08/2024', '09/2024', '10/2024', '11/2024', '12/2024'],
         data: {
-            users: [50, 60, 55, 70, 80, 75, 65, 85, 90, 95, 100, 110],
-            orgs: [8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 10, 10]
+            users: [50, 60, 61, 70, 80, 81, 84, 85, 90, 95, 100, 110],
+            orgs: [19, 22, 23, 28, 35, 36, 36, 37, 38, 42, 45, 51]
         }
     },
     'all': {
@@ -131,7 +131,7 @@
           labels: user_currentData.labels,
           datasets: [
               { label: 'User accounts', data: user_currentData.data.users, backgroundColor: '#F46A25', yAxisID: "y" },
-              { label: 'Organisations', data: user_currentData.data.orgs, backgroundColor: '#12436D', yAxisID: "y2" }
+              { label: 'Organisations', data: user_currentData.data.orgs, backgroundColor: '#12436D', yAxisID: "y" }
           ]
       },
       options: {
@@ -164,7 +164,7 @@
                 color: "black",
               }
             }, 
-            y2: { 
+            /*y2: { 
               position: 'right',
               grid: {
                 display: false,
@@ -181,7 +181,7 @@
               ticks: {
                 color: "black",
               }
-            },
+            },*/
           },
           plugins: {
             legend: {
