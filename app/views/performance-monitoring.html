@@ -52,7 +52,7 @@ Performance monitoring
               <h3 class="govuk-heading-s">Service usage</h3>
               <ul class="moj-side-navigation__list">
                 <li class="moj-side-navigation__item">
-                  <a href="#accordion-heading-11">New organisations and users</a>
+                  <a href="#accordion-heading-11">Organisations and users</a>
                 </li>
               </ul>
               <h3 class="govuk-heading-s">Conjunction events</h3>
@@ -74,7 +74,7 @@ Performance monitoring
                 </li>                           
               </ul>
 
-                <h3 class="govuk-heading-s">Re-entry event data</h3>
+                <h3 class="govuk-heading-s">Re-entry events</h3>
                 <ul class="moj-side-navigation__list">
                 <li class="moj-side-navigation__item">
                   <a href="#accordion-heading-9">Re-entry events by type</a>
@@ -457,7 +457,7 @@ Performance monitoring
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
                 <span class="govuk-accordion__section-button" id="accordion-heading-11">
-                  New organisations and users
+                  Organisations and users
                 </span>
               </h2>
             </div>
@@ -491,8 +491,8 @@ Performance monitoring
                   <thead>
                       <tr>
                           <th class="govuk-table__header">Month</th>
-                          <th class="govuk-table__header">Number of new users</th>
-                          <th class="govuk-table__header">Number of new organisations</th>
+                          <th class="govuk-table__header">Number of user accounts</th>
+                          <th class="govuk-table__header">Number of organisations</th>
                       </tr>
                   </thead>
                   <tbody class="govuk-table__body" id="user-table"></tbody>    
@@ -505,7 +505,7 @@ Performance monitoring
                   </span>
                 </summary>
                 <div class="govuk-details__text">
-                  This table shows the number of new users and organisations that have joined the service each month.
+                  This table shows the number of users and organisations signed up to the service each month.
                 </div>
               </details>                     
 
@@ -616,7 +616,7 @@ Performance monitoring
               </span>
             </summary>
             <div class="govuk-details__text">
-              This table shows the total number of conjunction events monitored over 30 day periods.
+              This table shows the number of conjunction events between different object types.
             </div>
           </details>
 
@@ -671,7 +671,7 @@ Performance monitoring
               </span>
             </summary>
             <div class="govuk-details__text">
-              This table shows the total number of conjunction events monitored between different probability of collision (PoC) thresholds by month.
+              This table shows the number of conjunction events between different object types per month.
             </div>
           </details>                 
 
@@ -973,7 +973,7 @@ Performance monitoring
       </div>
     </div>
 
-    <h2 class="govuk-heading-l">Re-entry event data</h2>
+    <h2 class="govuk-heading-l">Re-entry events</h2>
 
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
       <div class="govuk-accordion__section ">
@@ -986,7 +986,7 @@ Performance monitoring
         </div>
         <div id="accordion-default-content-3" class="govuk-accordion__section-content">
 
-          <p class="govuk-body">Total number of re-entry events monitored and a breakdown of their type. </p>
+          <h2 class="govuk-heading-s">Total number of re-entry events monitored and a breakdown of their type. </h2>
           <div class="graphContainer">
             <div style="float: left;margin-bottom:10px;">
               <h4 class="govuk-heading-s" style="margin: 8px 0px 5px 0px;">
@@ -1062,6 +1062,62 @@ Performance monitoring
               This table shows the number of re-entry events by different object types and level of event.
             </div>
           </details>
+
+          <h2 class="govuk-heading-s">Monthly number of re-entry events monitored and a breakdown of their type. </h2>
+
+          <div class="graphContainer">
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <h4 class="govuk-heading-s" style="margin: 8px 20px 0px 0px;float:left;">
+                  Data range
+                </h4>
+                    <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios" style="float:left">
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="twelve-months" name="time-range-typebar" type="radio" value="12" checked>
+                          <label class="govuk-label govuk-radios__label" for="twelve-months">
+                              12 months
+                          </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="all-time" name="time-range-typebar" type="radio" value="all">
+                          <label class="govuk-label govuk-radios__label" for="all-time">
+                              All time
+                          </label>
+                      </div>
+                  </div>
+              </fieldset>
+            </div>
+            <canvas id="reentryTypeBar"></canvas>   
+          </div>
+          <div style="overflow:auto;max-height:300px;">
+            <table class="govuk-table govuk-!-font-size-16">
+              <thead>
+                  <tr>
+                      <th class="govuk-table__header">Month</th>
+                      <th class="govuk-table__header">Payload</th>
+                      <th class="govuk-table__header">Debris</th>
+                      <th class="govuk-table__header">Rocket body</th>
+                      <th class="govuk-table__header">Unknown</th>
+                      <th class="govuk-table__header" style="padding-right:10px">Total</th>                    
+                  </tr>
+              </thead>
+              <tbody class="govuk-table__body" id="rtb-table"></tbody>    
+            </table> 
+          </div>
+
+          <br>
+          <p class="govuk-body">Download this table [JSON] [CSV]</p>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help with this table
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              This table shows the number of re-entry events by different object types per month.
+            </div>
+          </details>                 
+
         </div>
       </div>
     </div>
