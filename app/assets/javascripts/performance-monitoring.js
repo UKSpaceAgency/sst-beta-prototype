@@ -111,8 +111,8 @@
     '12': {
         labels: ['01/2024', '02/2024', '03/2024', '04/2024', '05/2024', '06/2024', '07/2024', '08/2024', '09/2024', '10/2024', '11/2024', '12/2024'],
         data: {
-            users: [5, 6, 5, 7, 8, 0, 6, 8, 9, 9, 6, 3],
-            orgs: [1, 0, 2, 1, 3, 0, 0, 2, 3, 3, 1, 2]
+            users: [50, 60, 55, 70, 80, 75, 65, 85, 90, 95, 100, 110],
+            orgs: [8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 10, 10]
         }
     },
     'all': {
@@ -130,23 +130,48 @@
       data: {
           labels: user_currentData.labels,
           datasets: [
-              { label: 'New users', data: user_currentData.data.users, backgroundColor: '#F46A25' },
-              { label: 'New organisations', data: user_currentData.data.orgs, backgroundColor: '#12436D' }
+              { label: 'User accounts', data: user_currentData.data.users, backgroundColor: '#F46A25', yAxisID: "y" },
+              { label: 'Organisations', data: user_currentData.data.orgs, backgroundColor: '#12436D', yAxisID: "y2" }
           ]
       },
       options: {
           responsive: true,
           scales: { 
+            
             x: { 
               title: { display: false, text: 'Month' },
               ticks: {
                 color: "black",
               },
+              grid: {
+                display: false,
+              },        
             },
             y: { 
               title: { 
-                display: false, 
-                text: 'Number recieved',
+                display: true, 
+                text: 'Number of user accounts',
+                color: "black",
+                font: {
+                  size: 14,
+                  weight: "bold"
+                }
+              } ,
+              grid: {
+                display: false,
+              },        
+              ticks: {
+                color: "black",
+              }
+            }, 
+            y2: { 
+              position: 'right',
+              grid: {
+                display: false,
+              },        
+              title: { 
+                display: true, 
+                text: 'Number of organisations',
                 color: "black",
                 font: {
                   size: 14,
@@ -156,7 +181,7 @@
               ticks: {
                 color: "black",
               }
-            } 
+            },
           },
           plugins: {
             legend: {
@@ -169,7 +194,7 @@
               },
             }
           }
-      }
+        }
   });
   function updateUserTable() {
       const tableBody = document.getElementById('user-table');
@@ -613,4 +638,104 @@
 
   // Initial table update
   updateTable(datasets.last7days);
+
+////////////////////////////////////////
+// Re-entries type bar
+///////////////////////////////////////
+
+const rtb_ctx = document.getElementById('reentryTypeBar').getContext('2d');
+
+const rtb_datasets = {
+  '12': {
+      labels: ['01/2024', '02/2024', '03/2024', '04/2024', '05/2024', '06/2024', '07/2024', '08/2024', '09/2024', '10/2024', '11/2024', '12/2024'],
+      data: {
+          payload: [100, 121, 40, 60, 50, 55, 60, 65, 70, 92, 60, 55, 70, 80, 75, 65, 85, 90, 95, 100, 110],
+          debris: [50, 60, 40, 70, 82, 75, 65, 45, 50, 55, 60, 65, 70, 70, 60, 55, 74, 90, 95, 100, 110],
+          rocket_body: [25, 30, 35, 40, 45, 20, 55, 60, 32, 40, 50, 24, 10, 40, 65, 55, 75, 32, 52, 14, 33],
+          unknown: [50, 60, 40, 70, 82, 75, 65, 45, 50, 55, 60, 65, 70, 70, 60, 55, 74, 90, 95, 100, 110],
+      }
+  },    
+};
+let rtb_currentData = rtb_datasets['12'];
+
+const rtb_chart = new Chart(rtb_ctx, {
+    type: 'bar',
+    data: {
+        labels: ctb_currentData.labels,
+        datasets: [
+            { label: 'Payload       ', data: rtb_currentData.data.payload, backgroundColor: '#12436D' },
+            { label: 'Debris        ', data: rtb_currentData.data.debris, backgroundColor: '#F46A25' },
+            { label: 'Rocket body        ', data: rtb_currentData.data.rocket_body, backgroundColor: '#801650' },
+            { label: 'Unknown', data: rtb_currentData.data.unknown, backgroundColor: '#A285D1' }
+        ]
+    },
+    options: {
+        responsive: true,
+        scales: { 
+          x: { 
+            stacked: true,
+            title: { display: false, text: 'Month' },
+            ticks: {
+              color: "black",
+            },
+          },
+          y: { 
+            stacked: true,
+            title: { 
+              display: false, 
+              text: 'Number recieved',
+              color: "black",
+              font: {
+                size: 14,
+                weight: "bold"
+              }
+            } ,
+            ticks: {
+              color: "black",
+            }
+          } 
+        },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            padding: 10,
+            title: {
+              text: "Object type",
+              display: true,
+              color: "black",
+              padding: 25,
+              font: {
+                size: 18,
+                weight: "bold",
+              },
+            },
+            labels: {
+              color: "black",
+              padding: -20,
+              font: {
+                size: 14,
+              }
+            },
+          }
+        }
+    }
+});
+function updateRtbTable() {
+    const tableBody = document.getElementById('rtb-table');
+    tableBody.innerHTML = '';
+    ctb_currentData.labels.slice().reverse().forEach((label, i) => {
+        total = rtb_currentData.data.payload[i] + rtb_currentData.data.debris[i] + rtb_currentData.data.rocket_body[i] + rtb_currentData.data.unknown[i];
+        const row = `<tr class="govuk-table__row">
+            <td class="govuk-table__cell">${label}</td>
+            <td class="govuk-table__cell">${rtb_currentData.data.payload[i]}</td>
+            <td class="govuk-table__cell">${rtb_currentData.data.debris[i]}</td>
+            <td class="govuk-table__cell">${rtb_currentData.data.rocket_body[i]}</td>
+            <td class="govuk-table__cell">${rtb_currentData.data.unknown[i]}</td>
+            <td class="govuk-table__cell govuk-body-s">${total}</td>
+          </tr>`;
+        tableBody.innerHTML += row;
+    });
+}
+
+updateRtbTable();
 
