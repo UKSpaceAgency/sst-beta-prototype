@@ -582,27 +582,52 @@ Re-entry event re-asghj-kifdy: Alert
                 <span class="govuk-accordion__section-button" id="risk thresholds">
                   Risk thresholds</span>
                   </div>
-                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-                    <p>Risk thresholds are calculated according to the probability of the object re-entering over the UK.</p>
 
-                    <table class="govuk-table"style="width:100%">
-                      <tbody class="govuk-table__body">
-                          <tr class="govuk-table__row">
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Risk level</th>
-                              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Probability of re-entry over the UK (%)</th>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
-                          <td class="govuk-table__cell govuk-body-s">Less than 1%</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
-                          <td class="govuk-table__cell govuk-body-s">1% - 5%</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
-                          <td class="govuk-table__cell govuk-body-s">More than 5%</td>
-                        </tr>
+                  <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%">          
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>Risk criteria</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>Value</th>
+                        <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>Risk rating</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">Criteria 1</td>
+                          <td class="govuk-table__cell govuk-body-s">0.02%</td>
+                          <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--green">
+                            Low
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <td class="govuk-table__cell govuk-body-s">Criteria 2</td>
+                          <td class="govuk-table__cell govuk-body-s">0.05%</td>
+                          <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">
+                            High
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-body-s">Criteria 3</td>
+                        <td class="govuk-table__cell govuk-body-s">37</td>
+                        <td class="govuk-table__cell govuk-body-s">
+                          <strong class="govuk-tag govuk-tag--green">
+                            Low
+                          </strong>
+                        </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell govuk-body-s"><b>Overall risk</b></td>
+                        <td class="govuk-table__cell govuk-body-s ">0.04%</td>
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--yellow">
+                            Medium
+                          </strong>
+                        </td>
+                      </tr>
                       </tbody>
                     </table> 
               
