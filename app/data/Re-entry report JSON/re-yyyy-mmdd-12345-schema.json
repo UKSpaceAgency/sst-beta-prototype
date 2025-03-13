@@ -1,5 +1,14 @@
 {
   "$defs": {
+    "ReentryRisk": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "title": "ReentryRisk",
+      "type": "string"
+    },
     "ReentrySurvivability": {
       "enum": [
         "Highly likely",
@@ -156,21 +165,110 @@
       "type": "string"
     },
     "uncertainty_window": {
-      "title": "Uncertainty Window",
-      "type": "integer"
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uncertainty Window"
     },
     "report_number": {
       "title": "Report Number",
       "type": "integer"
+    },
+    "alert_type": {
+      "items": {
+        "enum": [
+          "priority",
+          "standard",
+          "uk_satellites_only"
+        ],
+        "type": "string"
+      },
+      "title": "Alert Type",
+      "type": "array"
     },
     "report_time": {
       "format": "date-time",
       "title": "Report Time",
       "type": "string"
     },
-    "probability": {
-      "title": "Probability",
+    "monte_carlo_probability": {
+      "title": "Monte Carlo Probability",
       "type": "number"
+    },
+    "monte_carlo_risk": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ReentryRisk"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "fragments_probability": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fragments Probability"
+    },
+    "fragments_risk": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ReentryRisk"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "fragments_number": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fragments Number"
+    },
+    "human_casualty_probability": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Human Casualty Probability"
+    },
+    "human_casualty_risk": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ReentryRisk"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
     },
     "survivability": {
       "$ref": "#/$defs/ReentrySurvivability"
@@ -388,10 +486,10 @@
     "time_window_start",
     "time_window_end",
     "decay_epoch",
-    "uncertainty_window",
     "report_number",
+    "alert_type",
     "report_time",
-    "probability",
+    "monte_carlo_probability",
     "survivability",
     "overflight_time"
   ],
