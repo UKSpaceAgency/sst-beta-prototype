@@ -3,10 +3,10 @@
         "short_id": "frag-20250101-5917-19120",
         "report_number": 1,
         "event_epoch": "2025-10-02T02:22:35",
-        "model_frags": 100,
-        "known_frags": 100,
-        "frag_type": "collision",
-        "frag_type_comment": "collision reported by 18th SDS",
+        "model_fragments": 100,
+        "known_fragments": 100,
+        "fragmentation_type": "Collision",
+        "fragmentation_type_comment": "Collision reported by 18th SDS",
         "affected_regime": "LEO",
         "conjunction_event_id": "qjjzqdv-zwbdkbb-rlxjza",
         "conjunction_commentary": "Conjunction commentary here....",
@@ -42,7 +42,7 @@
                 "object_name": "AAC-AIS-SAT2",
                 "mass": null,
                 "current_tally": 11.3,
-                "frag_tally": 10.8,
+                "fragmentation_tally": 10.8,
                 "apogee": 674.2,
                 "perigee": 584.3,
                 "inclination": 98.1
@@ -52,7 +52,7 @@
                 "object_name": "ONEWEB-0455",
                 "mass": 148,
                 "current_tally": 16,
-                "frag_tally": 8.8,
+                "fragmentation_tally": 8.8,
                 "apogee": 828.2,
                 "perigee": 801,
                 "inclination": 87.5
@@ -62,7 +62,7 @@
                 "object_name": "ONEWEB-0707",
                 "mass": null,
                 "current_tally": 29.5,
-                "frag_tally": 8.3,
+                "fragmentation_tally": 8.3,
                 "apogee": 856,
                 "perigee": 846.6,
                 "inclination": 87.1
@@ -72,7 +72,7 @@
                 "object_name": "ONEWEB-0721",
                 "mass": null,
                 "current_tally": 19,
-                "frag_tally": 8,
+                "fragmentation_tally": 8,
                 "apogee": 876.3,
                 "perigee": 863.4,
                 "inclination": 86.7
@@ -82,7 +82,7 @@
                 "object_name": "ONEWEB-0701",
                 "mass": null,
                 "current_tally": 35.5,
-                "frag_tally": 7,
+                "fragmentation_tally": 7,
                 "apogee": 868,
                 "perigee": 861,
                 "inclination": 87.1
@@ -92,7 +92,7 @@
                 "object_name": "ONEWEB-0706",
                 "mass": null,
                 "current_tally": 29.3,
-                "frag_tally": 6.8,
+                "fragmentation_tally": 6.8,
                 "apogee": 872.2,
                 "perigee": 863.8,
                 "inclination": 87.1
@@ -102,7 +102,7 @@
                 "object_name": "TOPSAT",
                 "mass": 115,
                 "current_tally": 12.3,
-                "frag_tally": 6.5,
+                "fragmentation_tally": 6.5,
                 "apogee": 692.8,
                 "perigee": 670.7,
                 "inclination": 98.2
@@ -112,7 +112,7 @@
                 "object_name": "ONEWEB-0708",
                 "mass": null,
                 "current_tally": 29.8,
-                "frag_tally": 6.5,
+                "fragmentation_tally": 6.5,
                 "apogee": 862.7,
                 "perigee": 853.9,
                 "inclination": 87.1
@@ -122,7 +122,7 @@
                 "object_name": "PROSPERO (BLACK ARROW)",
                 "mass": 65.41,
                 "current_tally": 16,
-                "frag_tally": 6.3,
+                "fragmentation_tally": 6.3,
                 "apogee": 1266.1,
                 "perigee": 525,
                 "inclination": 82
@@ -132,7 +132,7 @@
                 "object_name": "OSCAR 22 (UoSAT 5)",
                 "mass": 47.08,
                 "current_tally": 19.8,
-                "frag_tally": 6,
+                "fragmentation_tally": 6,
                 "apogee": 757.7,
                 "perigee": 746.5,
                 "inclination": 98.4
@@ -142,7 +142,7 @@
                 "object_name": "IRAS",
                 "mass": 1063.43,
                 "current_tally": 21.3,
-                "frag_tally": 5.8,
+                "fragmentation_tally": 5.8,
                 "apogee": 905.1,
                 "perigee": 876.9,
                 "inclination": 99
@@ -152,7 +152,7 @@
                 "object_name": "ONEWEB-0705",
                 "mass": null,
                 "current_tally": 23.5,
-                "frag_tally": 5.8,
+                "fragmentation_tally": 5.8,
                 "apogee": 853.6,
                 "perigee": 845,
                 "inclination": 87.2
@@ -162,7 +162,7 @@
                 "object_name": "ONEWEB-0698",
                 "mass": null,
                 "current_tally": 16,
-                "frag_tally": 5.5,
+                "fragmentation_tally": 5.5,
                 "apogee": 624.6,
                 "perigee": 615.6,
                 "inclination": 86.6
@@ -172,7 +172,7 @@
                 "object_name": "ONEWEB-0700",
                 "mass": null,
                 "current_tally": 36,
-                "frag_tally": 5,
+                "fragmentation_tally": 5,
                 "apogee": 876,
                 "perigee": 872,
                 "inclination": 87.1
@@ -182,7 +182,7 @@
                 "object_name": "ONEWEB-0290",
                 "mass": 148,
                 "current_tally": 4.3,
-                "frag_tally": 4.8,
+                "fragmentation_tally": 4.8,
                 "apogee": 1194.5,
                 "perigee": 1193,
                 "inclination": 87.9
@@ -192,7 +192,7 @@
                 "object_name": "POSAT 1",
                 "mass": 50,
                 "current_tally": 23,
-                "frag_tally": 4.8,
+                "fragmentation_tally": 4.8,
                 "apogee": 792.9,
                 "perigee": 779.5,
                 "inclination": 98.7
@@ -202,7 +202,7 @@
                 "object_name": "OSCAR 14 (UOSAT 3)",
                 "mass": 45.09,
                 "current_tally": 18.5,
-                "frag_tally": 4.8,
+                "fragmentation_tally": 4.8,
                 "apogee": 789.9,
                 "perigee": 773.5,
                 "inclination": 98.9
@@ -212,7 +212,7 @@
                 "object_name": "ONEWEB-0688",
                 "mass": null,
                 "current_tally": 16.3,
-                "frag_tally": 4.8,
+                "fragmentation_tally": 4.8,
                 "apogee": 623.8,
                 "perigee": 616.4,
                 "inclination": 86.6
@@ -222,7 +222,7 @@
                 "object_name": "ONEWEB-0041",
                 "mass": 148,
                 "current_tally": 4.5,
-                "frag_tally": 4.3,
+                "fragmentation_tally": 4.3,
                 "apogee": 1091,
                 "perigee": 1064.5,
                 "inclination": 87.9
@@ -232,7 +232,7 @@
                 "object_name": "DMC 2",
                 "mass": 97,
                 "current_tally": 13,
-                "frag_tally": 4.3,
+                "fragmentation_tally": 4.3,
                 "apogee": 647.9,
                 "perigee": 646.4,
                 "inclination": 97.8
@@ -242,7 +242,7 @@
                 "object_name": "ONEWEB-0695",
                 "mass": null,
                 "current_tally": 15.3,
-                "frag_tally": 4.3,
+                "fragmentation_tally": 4.3,
                 "apogee": 622.6,
                 "perigee": 617.6,
                 "inclination": 86.6
@@ -252,7 +252,7 @@
                 "object_name": "ONEWEB-0687",
                 "mass": null,
                 "current_tally": 16,
-                "frag_tally": 4,
+                "fragmentation_tally": 4,
                 "apogee": 624,
                 "perigee": 616.1,
                 "inclination": 86.6
@@ -262,7 +262,7 @@
                 "object_name": "ONEWEB-0699",
                 "mass": null,
                 "current_tally": 33.3,
-                "frag_tally": 4,
+                "fragmentation_tally": 4,
                 "apogee": 865.7,
                 "perigee": 860.9,
                 "inclination": 87.1
@@ -272,7 +272,7 @@
                 "object_name": "ONEWEB-0702",
                 "mass": null,
                 "current_tally": 14.5,
-                "frag_tally": 4,
+                "fragmentation_tally": 4,
                 "apogee": 624.6,
                 "perigee": 615.4,
                 "inclination": 86.6
@@ -282,7 +282,7 @@
                 "object_name": "ONEWEB-0026",
                 "mass": 148,
                 "current_tally": 3.3,
-                "frag_tally": 3.8,
+                "fragmentation_tally": 3.8,
                 "apogee": 1218.8,
                 "perigee": 1216.6,
                 "inclination": 87.9
@@ -292,7 +292,7 @@
                 "object_name": "ONEWEB-0120",
                 "mass": 148,
                 "current_tally": 3,
-                "frag_tally": 3.8,
+                "fragmentation_tally": 3.8,
                 "apogee": 1214.9,
                 "perigee": 1212.5,
                 "inclination": 87.9
@@ -302,7 +302,7 @@
                 "object_name": "ONEWEB-0293",
                 "mass": 148,
                 "current_tally": 5.3,
-                "frag_tally": 3.8,
+                "fragmentation_tally": 3.8,
                 "apogee": 1194.8,
                 "perigee": 1192.6,
                 "inclination": 87.9
@@ -312,7 +312,7 @@
                 "object_name": "ONEWEB-0442",
                 "mass": 148,
                 "current_tally": 3.5,
-                "frag_tally": 3.8,
+                "fragmentation_tally": 3.8,
                 "apogee": 1195.4,
                 "perigee": 1192,
                 "inclination": 87.9
@@ -322,7 +322,7 @@
                 "object_name": "ONEWEB-0451",
                 "mass": 148,
                 "current_tally": 4.8,
-                "frag_tally": 3.8,
+                "fragmentation_tally": 3.8,
                 "apogee": 1194.9,
                 "perigee": 1192.5,
                 "inclination": 87.9
@@ -332,7 +332,7 @@
                 "object_name": "ONEWEB-0598",
                 "mass": 148,
                 "current_tally": 4.3,
-                "frag_tally": 3.8,
+                "fragmentation_tally": 3.8,
                 "apogee": 1218.5,
                 "perigee": 1216.8,
                 "inclination": 87.9
@@ -344,7 +344,7 @@
                 "object_name": "ISS (ZARYA)",
                 "mass": 450000,
                 "current_tally": 1,
-                "frag_tally": 0.5,
+                "fragmentation_tally": 0.5,
                 "apogee": 420.1,
                 "perigee": 409.8,
                 "inclination": 51.6
@@ -354,13 +354,13 @@
                 "object_name": "CSS (TIANHE-1)",
                 "mass": 96000,
                 "current_tally": 1.3,
-                "frag_tally": 0.3,
+                "fragmentation_tally": 0.3,
                 "apogee": 389.7,
                 "perigee": 387.3,
                 "inclination": 41.5
             }
         ],
-        "actual_frag_tles": [
+        "actual_fragment_tles": [
             [
                 "1 80600U          24227.94720388 +.00001687 +00000-0 +38166-3 0 00019",
                 "2 80600 089.0442 350.2429 0116052 040.8068 320.1758 14.51616761001089"
