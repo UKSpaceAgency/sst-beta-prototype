@@ -1,6 +1,6 @@
 [
     {
-        "short_id": "frag-20250101-5917-19120",
+        "short_id": "fe-20250101-12345",
         "report_number": 1,
         "event_epoch": "2025-10-02T02:22:35",
         "model_fragments": 100,
@@ -13,9 +13,9 @@
         "object_history": "[FOR EXPLOSION/FAILURE BASED FRAGS – IF INFO IS AVAILIABLE] Outside of the direct risk based on the fragments generated, there is potential longer term risk to objects on orbit due to other RSOs with similar bus or components thought to be related to the cause of this fragmentation.  There is likely >XX number of satellites on orbit that share a {bus type/known problematic component}. ",
         "risk": "Due to the high mass and energy of this event, a substantial number of fragments have been generated. Work is ongoing to assess the risk to UK licensed satellites however it’s likely that those at lower altitudes such as newly launched OneWeb satellites, Davinci and the Diamond series of CubeSats will have a significant increase in the number of potential collisions due to tracked and untracked debris. Both the International Space Station and the Tiangong Space Station orbit within the affected region and so we would expect to see a significant increase in risk over the short-medium term because of this event.",
         "primary_object": {
-            "norad_id": "5917",
-            "common_name": "METEOR 1-11",
-            "object_type": "PAYLOAD",
+            "norad_id": "12345",
+            "common_name": "COSMOS 1174 DEB",
+            "object_type": "DEBRIS",
             "estimated_mass": 1280,
             "licensing_country": "CIS",
             "international_designator": "1972-022A",
@@ -25,9 +25,9 @@
             "inclination": 81.22
         },
         "secondary_object": {
-            "norad_id": "19120",
-            "common_name": "SL-16 R/B",
-            "object_type": "ROCKET BODY",
+            "norad_id": "54321",
+            "common_name": "CZ-6A DEB",
+            "object_type": "DEBRIS",
             "estimated_mass": 8225.97,
             "licensing_country": "CIS",
             "international_designator": "1988-039B",
