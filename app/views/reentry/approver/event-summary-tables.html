@@ -271,7 +271,7 @@ Re-entry event re-asghj-kifdy: Alert
                       console.log('Overflight selection changed to:', selectedValue, '(' + selectedText + ')');
 
                       // Hide all overflight time columns first
-                      const allOverflightColumns = document.querySelectorAll('.col3-1, .col3-2, .col3-3');
+                      const allOverflightColumns = document.querySelectorAll('.colO-1, .colO-2, .colO-3');
                       allOverflightColumns.forEach(col => {
                         col.classList.add('hidden');
                       });
@@ -280,13 +280,13 @@ Re-entry event re-asghj-kifdy: Alert
                       let targetColumnClass = '';
                       switch (selectedValue) {
                         case 'Overflight1':
-                          targetColumnClass = 'col3-1';
+                          targetColumnClass = 'colO-1';
                           break;
                         case 'Overflight2':
-                          targetColumnClass = 'col3-2';
+                          targetColumnClass = 'colO-2';
                           break;
                         case 'Overflight3':
-                          targetColumnClass = 'col3-3';
+                          targetColumnClass = 'colO-3';
                           break;
                       }
 
@@ -329,6 +329,29 @@ Re-entry event re-asghj-kifdy: Alert
                   if (selectElement) {
                     console.log('Overflight select found:', selectElement.id, 'Current value:', selectElement.value);
                   }
+                  document.getElementById('clearAllFiltersLink').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Reset the dropdown to default (you might want to set it to a specific value)
+  const overflightSelect = document.getElementById('Overflightselect');
+  if (overflightSelect) {
+    overflightSelect.selectedIndex = 0; // or set to a specific value like overflightSelect.value = 'Overflight1';
+    overflightSelect.dispatchEvent(new Event('change'));
+  }
+
+  // Show all overflight columns
+  const allOverflightColumns = document.querySelectorAll('.colO-1, .colO-2, .colO-3');
+  allOverflightColumns.forEach(col => {
+    col.classList.remove('hidden');
+  });
+
+  // Optionally clear the summary
+  const summaryElement = document.getElementById('overflight-summary');
+  if (summaryElement) {
+    summaryElement.textContent = 'All filters cleared';
+  }
+});
+
                 });
 
                 // Optional: Listen for custom overflight change events
@@ -343,16 +366,17 @@ Re-entry event re-asghj-kifdy: Alert
                     Toggle overflights
                   </span>
                 </summary>
-
-                <hr class="divider">
+<p class="govuk-body-s" style="margin-top: 10px; float: right;">
+  <a href="#" id="clearAllFiltersLink">Clear all filters</a>
+</p>
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="Overflightselect" style="font-size: 16px;"><b>
                       Choose Overflight
                     </b></label>
                   <select class="govuk-select" id="Overflightselect" name="Overflightselect" style="font-size: 16px;">
-                    <option value="Overflight1" selected>Overflight 1</option>
+                    <option value="Overflight1">Overflight 1</option>
                     <option value="Overflight2">Overflight 2</option>
-                    <option value="Overflight3">Overflight 3</option>
+                    <option value="Overflight3"selected>Overflight 3</option>
                   </select>
               </details>
               <table class="govuk-table" style="width:100%">
@@ -360,54 +384,54 @@ Re-entry event re-asghj-kifdy: Alert
                   <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
                       style="width: 30%;"></th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col2-1" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colC-1" aria-sort="none" span="1"
                       style="width: 10%;">Probability of debris impact (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col2-2" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colC-2" aria-sort="none" span="1"
                       style="width: 10%;">Probability of re-entry over UK (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col2-3" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colC-3" aria-sort="none" span="1"
                       style="width: 10%;">Probability of UK casualty risk (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col3-1" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colO-1" aria-sort="none" span="1"
                       style="width: 10%;">Time of overflight 1 (UTC)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col3-2" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colO-2" aria-sort="none" span="1"
                       style="width: 10%;">Time of overflight 2 (UTC)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col3-3" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colO-3" aria-sort="none" span="1"
                       style="width: 10%;">Time of overflight 3 (UTC)</th>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">England</th>
-                    <td class="govuk-table__cell govuk-body-s col2-1">0.31</td>
-                    <td class="govuk-table__cell govuk-body-s col2-2">0.01</td>
-                    <td class="govuk-table__cell govuk-body-s col2-3">0.02</td>
-                    <td class="govuk-table__cell govuk-body-s col3-1">03/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col3-2">03/12/2023, 16:27</td>
-                    <td class="govuk-table__cell govuk-body-s col3-3">03/10/2023, 16:28</td>
+                    <td class="govuk-table__cell govuk-body-s colC-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Northern Ireland</th>
-                    <td class="govuk-table__cell govuk-body-s col2-1">0.21</td>
-                    <td class="govuk-table__cell govuk-body-s col2-2">0.03</td>
-                    <td class="govuk-table__cell govuk-body-s col2-3">0.21</td>
-                    <td class="govuk-table__cell govuk-body-s col3-1">04/11/2023, 16:29</td>
-                    <td class="govuk-table__cell govuk-body-s col3-2">04/12/2023, 16:23</td>
-                    <td class="govuk-table__cell govuk-body-s col3-3">04/10/2023, 16:24</td>
+                    <td class="govuk-table__cell govuk-body-s colC-1">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colC-2">0.03</td>
+                    <td class="govuk-table__cell govuk-body-s colC-3">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colO-1">04/11/2023, 16:29</td>
+                    <td class="govuk-table__cell govuk-body-s colO-2">04/12/2023, 16:23</td>
+                    <td class="govuk-table__cell govuk-body-s colO-3">04/10/2023, 16:24</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Scotland</th>
-                    <td class="govuk-table__cell govuk-body-s col2-1">0.11</td>
-                    <td class="govuk-table__cell govuk-body-s col2-2">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s col2-3">0.20</td>
-                    <td class="govuk-table__cell govuk-body-s col3-1">N/A</td>
-                    <td class="govuk-table__cell govuk-body-s col3-2">05/11/2023, 16:21</td>
-                    <td class="govuk-table__cell govuk-body-s col3-3">05/12/2023, 16:22</td>
+                    <td class="govuk-table__cell govuk-body-s colC-1">0.11</td>
+                    <td class="govuk-table__cell govuk-body-s colC-2">0.00</td>
+                    <td class="govuk-table__cell govuk-body-s colC-3">0.20</td>
+                    <td class="govuk-table__cell govuk-body-s colO-1">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s colO-2">05/11/2023, 16:21</td>
+                    <td class="govuk-table__cell govuk-body-s colO-3">05/12/2023, 16:22</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Wales</th>
-                    <td class="govuk-table__cell govuk-body-s col2-1">0.41</td>
-                    <td class="govuk-table__cell govuk-body-s col2-2">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s col2-3">0.21</td>
-                    <td class="govuk-table__cell govuk-body-s col3-1">N/A</td>
-                    <td class="govuk-table__cell govuk-body-s col3-2">06/11/2023, 16:20</td>
-                    <td class="govuk-table__cell govuk-body-s col3-3">06/12/2023, 15:26</td>
+                    <td class="govuk-table__cell govuk-body-s colC-1">0.41</td>
+                    <td class="govuk-table__cell govuk-body-s colC-2">0.00</td>
+                    <td class="govuk-table__cell govuk-body-s colC-3">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colO-1">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s colO-2">06/11/2023, 16:20</td>
+                    <td class="govuk-table__cell govuk-body-s colO-3">06/12/2023, 15:26</td>
                   </tr>
                 </tbody>
               </table>
@@ -424,12 +448,298 @@ Re-entry event re-asghj-kifdy: Alert
           </div>
         </div>
 
-        <!-- Impact on Home Nations - Checkboxes -->
+        <!-- Impact on Home Nations - Checkboxes D1 -->
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
               <span class="govuk-accordion__section-button" id="impact by home nation">
-                Potential impact by UK nation - Checkboxes
+                Potential impact by UK nation - Checkboxes design 1
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content"
+            aria-labelledby="accordion-default-heading-1">
+
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content"
+              aria-labelledby="accordion-default-heading-1">
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  console.log('DOM loaded, setting up event listeners');
+
+                  // Use event delegation on the document
+                  document.addEventListener('change', function (event) {
+                    console.log('Change event detected:', event.target);
+
+                    // Check if it's a checkbox with data-column attribute
+                    if (event.target.type === 'checkbox' && event.target.hasAttribute('data-column')) {
+                      const checkbox = event.target;
+                      const columnClass = checkbox.getAttribute('data-column');
+
+                      console.log('Checkbox:', checkbox.id, 'Column class:', columnClass, 'Checked:', checkbox.checked);
+
+                      // Find all elements with this column class
+                      const cells = document.querySelectorAll('.' + columnClass);
+                      console.log('Found cells:', cells.length);
+
+                      // Toggle visibility
+                      cells.forEach(cell => {
+                        if (checkbox.checked) {
+                          cell.classList.remove('hidden');
+                        } else {
+                          cell.classList.add('hidden');
+                        }
+                        console.log('Cell:', cell, 'Hidden:', cell.classList.contains('hidden'));
+                      });
+                    }
+// Clear filters button logic
+const clearFiltersBtn = document.getElementById('clear-filters-btn');
+if (clearFiltersBtn) {
+  clearFiltersBtn.addEventListener('click', function () {
+    console.log('Clear filters button clicked');
+
+    // 1. Reset all checkboxes to checked and show their columns
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][data-column]');
+    checkboxes.forEach(cb => {
+      cb.checked = true;
+      const columnClass = cb.getAttribute('data-column');
+      const cells = document.querySelectorAll('.' + columnClass);
+      cells.forEach(cell => cell.classList.remove('hidden'));
+    });
+
+    // 2. Set dropdown to Overflight 3 (initial default)
+    const overflightSelect = document.getElementById('Overflightselect1');
+    if (overflightSelect) {
+      overflightSelect.value = 'Overflight3';
+    }
+
+    // 3. Show ALL overflight columns, overriding selection
+    const allOverflightColumns = document.querySelectorAll('.colO1-1, .colO1-2, .colO1-3');
+    allOverflightColumns.forEach(col => col.classList.remove('hidden'));
+
+    // 4. Optional: update summary
+    const summaryElement = document.getElementById('overflight-summary');
+    if (summaryElement) {
+      summaryElement.textContent = 'All overflights shown (default)';
+    }
+
+    // 5. Dispatch a custom event (if needed elsewhere)
+    const customEvent = new CustomEvent('overflightChanged', {
+      detail: {
+        value: 'Overflight3',
+        text: 'Overflight 3',
+        columnClass: 'ALL'
+      }
+    });
+    document.dispatchEvent(customEvent);
+  });
+}
+                    // Handle overflight selection changes
+                    if (event.target.id === 'Overflightselect1') {
+                      const selectedValue = event.target.value;
+                      const selectedText = event.target.options[event.target.selectedIndex].text;
+
+                      console.log('Overflight selection changed to:', selectedValue, '(' + selectedText + ')');
+
+                      // Hide all overflight time columns first
+                      const allOverflightColumns = document.querySelectorAll('.colO1-1, .colO1-2, .colO1-3');
+                      allOverflightColumns.forEach(col => {
+                        col.classList.add('hidden');
+                      });
+
+                      // Show only the selected overflight column
+                      let targetColumnClass = '';
+                      switch (selectedValue) {
+                        case 'Overflight1':
+                          targetColumnClass = 'colO1-1';
+                          break;
+                        case 'Overflight2':
+                          targetColumnClass = 'colO1-2';
+                          break;
+                        case 'Overflight3':
+                          targetColumnClass = 'colO1-3';
+                          break;
+                      }
+
+                      if (targetColumnClass) {
+                        const selectedColumns = document.querySelectorAll('.' + targetColumnClass);
+                        selectedColumns.forEach(col => {
+                          col.classList.remove('hidden');
+                        });
+                        console.log('Showing columns with class:', targetColumnClass);
+                      }
+
+                      // Optional: Update a summary element if it exists
+                      const summaryElement = document.getElementById('overflight-summary');
+                      if (summaryElement) {
+                        summaryElement.textContent = selectedText + ' selected';
+                      }
+
+                      // Optional: Trigger custom event for other parts of the application
+                      const customEvent = new CustomEvent('overflightChanged', {
+                        detail: {
+                          value: selectedValue,
+                          text: selectedText,
+                          columnClass: targetColumnClass
+                        }
+                      });
+                      document.dispatchEvent(customEvent);
+                    }
+                  });
+
+                  // Initialize overflight display on page load
+                  const overflightSelect1 = document.getElementById('Overflightselect1');
+                  if (overflightSelect1) {
+                    // Trigger the change event to set initial state
+                    const changeEvent = new Event('change');
+                    overflightSelect1.dispatchEvent(changeEvent);
+                  }
+
+                  // Log all checkboxes found
+                  const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+                  console.log('All checkboxes found:', allCheckboxes.length);
+                  allCheckboxes.forEach(cb => {
+                    console.log('Checkbox:', cb.id, 'data-column:', cb.getAttribute('data-column'));
+                  });
+
+                  // Log overflight select element
+                  const selectElement = document.getElementById('Overflightselect1');
+                  if (selectElement) {
+                    console.log('Overflight select found:', selectElement.id, 'Current value:', selectElement.value);
+                  }
+                });
+
+                // Optional: Listen for custom overflight change events
+                document.addEventListener('overflightChanged', function (event) {
+                  console.log('Custom overflight event received:', event.detail);
+                  // Add any additional functionality here
+                });
+              </script>
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text" style="font-size: 16px;">
+                    Toggle risk probabilities and overflights
+                  </span>
+                </summary>
+
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes"
+                  style="display: flex; gap: 8px; font-size: 9px;">
+
+                  <div class="govuk-checkboxes__item" style="display: flex; ">
+                    <input class="govuk-checkboxes__input" id="fragments" name="metrics2" type="checkbox"
+                      value="fragments2" data-column="colC1-1" style="cursor: pointer;"
+                      checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="fragments2"
+                      style="cursor: pointer; font-size: 16px;">
+                      Probability of debris impact (%)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item" style="display: flex; ">
+                    <input class="govuk-checkboxes__input" id="reentry" name="metrics2" type="checkbox" value="reentry2"
+                      data-column="colC1-2" style="cursor: pointer;" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="reentry2"
+                      style="cursor: pointer; font-size: 16px;">
+                      Probability of re-entry over UK (%)
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item" style="display: flex; ">
+                    <input class="govuk-checkboxes__input" id="casualty" name="metrics2" type="checkbox"
+                      value="casualty2" data-column="colC1-3" style="cursor: pointer;"
+                      checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="casualty2"
+                      style="cursor: pointer; font-size: 16px;">
+                      Probability of UK casualty risk (%)
+                    </label>
+                  </div>
+                </div>
+                <hr class="divider">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="Overflightselect1" style="font-size: 16px;"><b>
+                      Choose Overflight
+                    </b></label>
+                  <select class="govuk-select" id="Overflightselect1" name="Overflightselect1" style="font-size: 16px;">
+                    <option value="Overflight1">Overflight 1</option>
+                    <option value="Overflight2">Overflight 2</option>
+                    <option value="Overflight3" selected>Overflight 3</option>
+                  </select>
+                  <button id="clear-filters-btn" type="button" class="govuk-button govuk-button--secondary" style="margin-top: 10px; float: right;">
+  Clear filters
+</button>
+              </details>
+              <table class="govuk-table" style="width:100%">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
+                      style="width: 30%;"></th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC1-1" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of debris impact (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC1-2" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of re-entry over UK (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC1-3" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of UK casualty risk (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO1-1" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 1 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO1-2" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 2 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO1-3" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 3 (UTC)</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">England</th>
+                    <td class="govuk-table__cell govuk-body-s colC1-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC1-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC1-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Northern Ireland</th>
+                    <td class="govuk-table__cell govuk-body-s colC1-1">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colC1-2">0.03</td>
+                    <td class="govuk-table__cell govuk-body-s colC1-3">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-1">04/11/2023, 16:29</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-2">04/12/2023, 16:23</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-3">04/10/2023, 16:24</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Scotland</th>
+                    <td class="govuk-table__cell govuk-body-s colC1-1">0.11</td>
+                    <td class="govuk-table__cell govuk-body-s colC1-2">0.00</td>
+                    <td class="govuk-table__cell govuk-body-s colC1-3">0.20</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-1">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-2">05/11/2023, 16:21</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-3">05/12/2023, 16:22</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Wales</th>
+                    <td class="govuk-table__cell govuk-body-s colC1-1">0.41</td>
+                    <td class="govuk-table__cell govuk-body-s colC1-2">0.00</td>
+                    <td class="govuk-table__cell govuk-body-s colC1-3">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-1">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-2">06/11/2023, 16:20</td>
+                    <td class="govuk-table__cell govuk-body-s colO1-3">06/12/2023, 15:26</td>
+                  </tr>
+                </tbody>
+              </table>
+              <style>
+                .hidden {
+                  display: none !important;
+                }
+              </style>
+
+              <h3 class="govuk-body-m" style="font-size: 16px;">See <a href="#Further information">Further
+                  information</a> for more detail on
+                methodology used in this report.</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Impact on Home Nations - Checkboxes D2 -->
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
+              <span class="govuk-accordion__section-button" id="impact by home nation">
+                Potential impact by UK nation - Checkboxes design 2
               </span>
             </h2>
           </div>
@@ -469,14 +779,14 @@ Re-entry event re-asghj-kifdy: Alert
                     }
 
                     // Handle overflight selection changes
-                    if (event.target.id === 'Overflightselect') {
+                    if (event.target.id === 'Overflightselect2') {
                       const selectedValue = event.target.value;
                       const selectedText = event.target.options[event.target.selectedIndex].text;
 
                       console.log('Overflight selection changed to:', selectedValue, '(' + selectedText + ')');
 
                       // Hide all overflight time columns first
-                      const allOverflightColumns = document.querySelectorAll('.col3-1, .col3-2, .col3-3');
+                      const allOverflightColumns = document.querySelectorAll('.colO2-1, .colO2-2, .colO2-3');
                       allOverflightColumns.forEach(col => {
                         col.classList.add('hidden');
                       });
@@ -485,13 +795,13 @@ Re-entry event re-asghj-kifdy: Alert
                       let targetColumnClass = '';
                       switch (selectedValue) {
                         case 'Overflight1':
-                          targetColumnClass = 'col3-1';
+                          targetColumnClass = 'colO2-1';
                           break;
                         case 'Overflight2':
-                          targetColumnClass = 'col3-2';
+                          targetColumnClass = 'colO2-2';
                           break;
                         case 'Overflight3':
-                          targetColumnClass = 'col3-3';
+                          targetColumnClass = 'colO2-3';
                           break;
                       }
 
@@ -520,13 +830,54 @@ Re-entry event re-asghj-kifdy: Alert
                       document.dispatchEvent(customEvent);
                     }
                   });
+// Clear filters logic for Overflightselect2
+const clearFiltersBtn2 = document.getElementById('clear-filters-btn-2');
+if (clearFiltersBtn2) {
+  clearFiltersBtn2.addEventListener('click', function () {
+    console.log('Clear filters button 2 clicked');
 
+    // 1. Reset checkboxes (colC2-*) to checked and show their columns
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][data-column^="colC2-"]');
+    checkboxes.forEach(cb => {
+      cb.checked = true;
+      const columnClass = cb.getAttribute('data-column');
+      const cells = document.querySelectorAll('.' + columnClass);
+      cells.forEach(cell => cell.classList.remove('hidden'));
+    });
+
+    // 2. Set dropdown to Overflight 3
+    const overflightSelect2 = document.getElementById('Overflightselect2');
+    if (overflightSelect2) {
+      overflightSelect2.value = 'Overflight3';
+    }
+
+    // 3. Show all Overflight columns (colO2-*)
+    const overflightCols = document.querySelectorAll('.colO2-1, .colO2-2, .colO2-3');
+    overflightCols.forEach(col => col.classList.remove('hidden'));
+
+    // 4. Update summary text (optional)
+    const summaryElement = document.getElementById('overflight-summary');
+    if (summaryElement) {
+      summaryElement.textContent = 'All overflights shown (default)';
+    }
+
+    // 5. Fire custom event
+    const customEvent = new CustomEvent('overflightChanged', {
+      detail: {
+        value: 'Overflight3',
+        text: 'Overflight 3',
+        columnClass: 'ALL'
+      }
+    });
+    document.dispatchEvent(customEvent);
+  });
+}
                   // Initialize overflight display on page load
-                  const overflightSelect = document.getElementById('Overflightselect');
-                  if (overflightSelect) {
+                  const overflightSelect2 = document.getElementById('Overflightselect2');
+                  if (overflightSelect2) {
                     // Trigger the change event to set initial state
                     const changeEvent = new Event('change');
-                    overflightSelect.dispatchEvent(changeEvent);
+                    overflightSelect2.dispatchEvent(changeEvent);
                   }
 
                   // Log all checkboxes found
@@ -537,7 +888,7 @@ Re-entry event re-asghj-kifdy: Alert
                   });
 
                   // Log overflight select element
-                  const selectElement = document.getElementById('Overflightselect');
+                  const selectElement = document.getElementById('Overflightselect2');
                   if (selectElement) {
                     console.log('Overflight select found:', selectElement.id, 'Current value:', selectElement.value);
                   }
@@ -557,11 +908,10 @@ Re-entry event re-asghj-kifdy: Alert
                 </summary>
 
                 <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes"
-                  style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 9px; white-space: wrap;">
-
+                  style="float: left; gap: 8px; font-size: 9px;">
                   <div class="govuk-checkboxes__item" style="display: flex; ">
                     <input class="govuk-checkboxes__input" id="fragments" name="metrics2" type="checkbox"
-                      value="fragments2" data-column="col2-1" style="width: 16px; height: 16px; cursor: pointer;"
+                      value="fragments2" data-column="colC2-1"
                       checked>
                     <label class="govuk-label govuk-checkboxes__label" for="fragments2"
                       style="cursor: pointer; font-size: 16px;">
@@ -570,87 +920,89 @@ Re-entry event re-asghj-kifdy: Alert
                   </div>
                   <div class="govuk-checkboxes__item" style="display: flex; ">
                     <input class="govuk-checkboxes__input" id="reentry" name="metrics2" type="checkbox" value="reentry2"
-                      data-column="col2-2" style="width: 16px; height: 16px; cursor: pointer;" checked>
+                      data-column="colC2-2"checked>
                     <label class="govuk-label govuk-checkboxes__label" for="reentry2"
-                      style="cursor: pointer; font-size: 16px;">
+                      style="font-size: 16px;">
                       Probability of re-entry over UK (%)
                     </label>
                   </div>
 
                   <div class="govuk-checkboxes__item" style="display: flex; ">
                     <input class="govuk-checkboxes__input" id="casualty" name="metrics2" type="checkbox"
-                      value="casualty2" data-column="col2-3" style="width: 16px; height: 16px; cursor: pointer;"
+                      value="casualty2" data-column="colC2-3"
                       checked>
                     <label class="govuk-label govuk-checkboxes__label" for="casualty2"
-                      style="cursor: pointer; font-size: 16px;">
+                      style="font-size: 16px;">
                       Probability of UK casualty risk (%)
                     </label>
                   </div>
                 </div>
-                <hr class="divider">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="Overflightselect" style="font-size: 16px;"><b>
+                <div class="govuk-form-group" style="float: right">
+                  <label class="govuk-label" for="Overflightselect2" ><b>
                       Choose Overflight
                     </b></label>
-                  <select class="govuk-select" id="Overflightselect" name="Overflightselect" style="font-size: 16px;">
-                    <option value="Overflight1" selected>Overflight 1</option>
+                  <select class="govuk-select" id="Overflightselect2" name="Overflightselect2" style="font-size: 16px;">
+                    <option value="Overflight1">Overflight 1</option>
                     <option value="Overflight2">Overflight 2</option>
-                    <option value="Overflight3">Overflight 3</option>
+                    <option value="Overflight3" selected>Overflight 3</option>
                   </select>
+                  <button class="govuk-button" id="clear-filters-btn-2" type="button">
+  Clear filters
+</button>
               </details>
               <table class="govuk-table" style="width:100%">
                 <tbody class="govuk-table__body">
                   <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
                       style="width: 30%;"></th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col2-1" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colC2-1" aria-sort="none" span="1"
                       style="width: 10%;">Probability of debris impact (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col2-2" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colC2-2" aria-sort="none" span="1"
                       style="width: 10%;">Probability of re-entry over UK (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col2-3" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colC2-3" aria-sort="none" span="1"
                       style="width: 10%;">Probability of UK casualty risk (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col3-1" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colO2-1" aria-sort="none" span="1"
                       style="width: 10%;">Time of overflight 1 (UTC)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col3-2" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colO2-2" aria-sort="none" span="1"
                       style="width: 10%;">Time of overflight 2 (UTC)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col3-3" aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s colO2-3" aria-sort="none" span="1"
                       style="width: 10%;">Time of overflight 3 (UTC)</th>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">England</th>
-                    <td class="govuk-table__cell govuk-body-s col2-1">0.31</td>
-                    <td class="govuk-table__cell govuk-body-s col2-2">0.01</td>
-                    <td class="govuk-table__cell govuk-body-s col2-3">0.02</td>
-                    <td class="govuk-table__cell govuk-body-s col3-1">03/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col3-2">03/12/2023, 16:27</td>
-                    <td class="govuk-table__cell govuk-body-s col3-3">03/10/2023, 16:28</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Northern Ireland</th>
-                    <td class="govuk-table__cell govuk-body-s col2-1">0.21</td>
-                    <td class="govuk-table__cell govuk-body-s col2-2">0.03</td>
-                    <td class="govuk-table__cell govuk-body-s col2-3">0.21</td>
-                    <td class="govuk-table__cell govuk-body-s col3-1">04/11/2023, 16:29</td>
-                    <td class="govuk-table__cell govuk-body-s col3-2">04/12/2023, 16:23</td>
-                    <td class="govuk-table__cell govuk-body-s col3-3">04/10/2023, 16:24</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-1">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-2">0.03</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-3">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-1">04/11/2023, 16:29</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-2">04/12/2023, 16:23</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-3">04/10/2023, 16:24</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Scotland</th>
-                    <td class="govuk-table__cell govuk-body-s col2-1">0.11</td>
-                    <td class="govuk-table__cell govuk-body-s col2-2">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s col2-3">0.20</td>
-                    <td class="govuk-table__cell govuk-body-s col3-1">N/A</td>
-                    <td class="govuk-table__cell govuk-body-s col3-2">05/11/2023, 16:21</td>
-                    <td class="govuk-table__cell govuk-body-s col3-3">05/12/2023, 16:22</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-1">0.11</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-2">0.00</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-3">0.20</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-1">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-2">05/11/2023, 16:21</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-3">05/12/2023, 16:22</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Wales</th>
-                    <td class="govuk-table__cell govuk-body-s col2-1">0.41</td>
-                    <td class="govuk-table__cell govuk-body-s col2-2">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s col2-3">0.21</td>
-                    <td class="govuk-table__cell govuk-body-s col3-1">N/A</td>
-                    <td class="govuk-table__cell govuk-body-s col3-2">06/11/2023, 16:20</td>
-                    <td class="govuk-table__cell govuk-body-s col3-3">06/12/2023, 15:26</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-1">0.41</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-2">0.00</td>
+                    <td class="govuk-table__cell govuk-body-s colC2-3">0.21</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-1">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-2">06/11/2023, 16:20</td>
+                    <td class="govuk-table__cell govuk-body-s colO2-3">06/12/2023, 15:26</td>
                   </tr>
                 </tbody>
               </table>
@@ -869,13 +1221,13 @@ Re-entry event re-asghj-kifdy: Alert
                     </div>
                   </div>
                   <div class="govuk-form-group" style="float: right;">
-                    <label class="govuk-label" for="Overflightselect" style="font-size: 16px;"><b>
+                    <label class="govuk-label" for="Overflightselect3" style="font-size: 16px;"><b>
                         Choose Overflight
                       </b></label>
-                    <select class="govuk-select" id="OverflightSelect" name="Overflightselect" style="font-size: 16px;">
-                      <option value="Overflight1" selected>Overflight 1</option>
-                      <option value="Overflight2">Overflight 2</option>
-                      <option value="Overflight3">Overflight 3</option>
+                    <select class="govuk-select" id="OverflightSelect3" name="Overflightselect3" style="font-size: 16px;">
+                      <option value="OverflightO1">Overflight 1</option>
+                      <option value="OverflightO2">Overflight 2</option>
+                      <option value="OverflightO3"selected>Overflight 3</option>
                     </select>
                   </div>
               </details>
@@ -890,11 +1242,11 @@ Re-entry event re-asghj-kifdy: Alert
                       style="width: 10% " ;>Probability of re-entry over UK (%)</th>
                     <th scope="col" class="govuk-table__header govuk-body-s col-casualty" aria-sort="none" span="1"
                       style="width: 10% " ;>Probability of UK casualty risk (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col-Overflight1 " aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s col-OverflightO1 " aria-sort="none" span="1"
                       style="width: 10%" ;>Time of overflight 1 (UTC)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col-Overflight2 " aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s col-OverflightO2 " aria-sort="none" span="1"
                       style="width: 10% " ;>Time of overflight 2 (UTC)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s col-Overflight3 " aria-sort="none" span="1"
+                    <th scope="col" class="govuk-table__header govuk-body-s col-OverflightO3 " aria-sort="none" span="1"
                       style="width: 10% " ;>Time of overflight 3 (UTC)</th>
 
                   </tr>
@@ -903,90 +1255,90 @@ Re-entry event re-asghj-kifdy: Alert
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.20</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.02</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.10</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">03/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">03/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">03/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">N/A</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Bermuda</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.30</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.10</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.20</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">04/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">04/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">04/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">04/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">04/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">04/12/2023, 16:26</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">British Antarctic Territory*</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.05</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.20</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.10</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">05/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">05/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">05/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">05/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">05/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">05/12/2023, 16:26</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">British Indian Ocean Territory</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.15</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.30</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.05</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">06/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">06/12/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">06/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">06/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">N/A</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">British Virgin Islands</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.08</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.10</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.20</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">07/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">07/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">07/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">07/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">07/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">07/12/2023, 16:26</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Cayman Islands</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.09</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.08</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">08/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">08/12/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">08/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">08/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">N/A</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Falkland Islands</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.30</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.15</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">09/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">09/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">09/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">09/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">09/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">09/12/2023, 16:26</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Gibraltar</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.20</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.00</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.10</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">10/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">10/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">10/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">10/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">10/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">10/12/2023, 16:26</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Montserrat</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.00</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.20</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.05</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">03/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">03/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">03/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">03/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">03/12/2023, 16:26</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Pitcairn Islands</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.10</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.08</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.01</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">04/09/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">04/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">04/09/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">04/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">N/A</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s"> Saint Helena, Ascension and Tristan da
@@ -994,9 +1346,9 @@ Re-entry event re-asghj-kifdy: Alert
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.40</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.20</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.05</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">05/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">05/12/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">05/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">05/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">N/A</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">South Georgia and the South Sandwich
@@ -1004,9 +1356,9 @@ Re-entry event re-asghj-kifdy: Alert
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.50</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.07</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.09</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">06/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">06/12/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">06/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">06/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">N/A</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Sovereign Base Areas of Akrotiri and
@@ -1014,25 +1366,25 @@ Re-entry event re-asghj-kifdy: Alert
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.08</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.00</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">03/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">03/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">N/A</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">N/A</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Turks and Caicos Islands</th>
                     <td class="govuk-table__cell govuk-body-s col-fragments">0.20</td>
                     <td class="govuk-table__cell govuk-body-s col-reentry hidden">0.10</td>
                     <td class="govuk-table__cell govuk-body-s col-casualty hidden">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight1">07/10/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight2 hidden">07/11/2023, 16:26</td>
-                    <td class="govuk-table__cell govuk-body-s col-Overflight3 hidden">07/12/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO1">07/10/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO2 hidden">07/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s col-OverflightO3 hidden">07/12/2023, 16:26</td>
                   </tr>
                 </tbody>
               </table>
               <script>
                 document.addEventListener('DOMContentLoaded', function () {
                   const probabilityRadios = document.querySelectorAll('input[name="changedName"]');
-                  const overflightSelect = document.getElementById('OverflightSelect');
+                  const overflightSelect3 = document.getElementById('OverflightSelect3');
 
                   // Function to update probability column visibility
                   function updateProbabilityColumns() {
@@ -1052,9 +1404,9 @@ Re-entry event re-asghj-kifdy: Alert
                   }
 
                   // Function to update overflight column visibility
-                  function updateOverflightColumns() {
-                    const selectedValue = overflightSelect.value;
-                    const overflightColumns = ['Overflight1', 'Overflight2', 'Overflight3'];
+                                  function updateOverflightColumns() {
+                    const selectedValue = overflightSelect3.value;
+                    const overflightColumns = ['OverflightO1', 'OverflightO2', 'OverflightO3'];
 
                     overflightColumns.forEach(col => {
                       const elements = document.querySelectorAll(`.col-${col}`);
@@ -1067,13 +1419,12 @@ Re-entry event re-asghj-kifdy: Alert
                       });
                     });
                   }
-
                   // Event listeners
                   probabilityRadios.forEach(radio => {
                     radio.addEventListener('change', updateProbabilityColumns);
                   });
 
-                  overflightSelect.addEventListener('change', updateOverflightColumns);
+                  overflightSelect3.addEventListener('change', updateOverflightColumns);
 
                   // Initial setup
                   updateProbabilityColumns();
@@ -1123,14 +1474,14 @@ Re-entry event re-asghj-kifdy: Alert
                   </select>
                 </div>
                 <div class="govuk-form-group" style="float: right">
-                  <label class="govuk-label" for="Overflightselect" style="font-size: 16px;"><b>
+                  <label class="govuk-label" for="Overflightselect4" style="font-size: 16px;"><b>
                       Choose Overflight
                     </b></label>
-                  <select class="govuk-select" id="OverflightSelects" name="Overflightselect"
+                  <select class="govuk-select" id="OverflightSelect4" name="Overflightselect4"
                     style="font-size: 16px; display: inline-block;">
-                    <option value="Overflight1" selected>Overflight 1</option>
+                    <option value="Overflight1">Overflight 1</option>
                     <option value="Overflight2">Overflight 2</option>
-                    <option value="Overflight3">Overflight 3</option>
+                    <option value="Overflight3"selected>Overflight 3</option>
                   </select>
                 </div>
               </details>
@@ -1287,7 +1638,7 @@ Re-entry event re-asghj-kifdy: Alert
               <script>
                 document.addEventListener('DOMContentLoaded', function () {
                   const probabilitySelect = document.getElementById('Sort');
-                  const overflightSelect = document.getElementById('OverflightSelects');
+                  const overflightSelect4 = document.getElementById('OverflightSelect4');
 
                   // Function to update probability column visibility
                   function updateProbabilityColumns() {
@@ -1308,7 +1659,7 @@ Re-entry event re-asghj-kifdy: Alert
 
                   // Function to update overflight column visibility
                   function updateOverflightColumns() {
-                    const selectedValue = overflightSelect.value;
+                    const selectedValue = overflightSelect4.value;
                     const overflightColumns = ['Overflight1', 'Overflight2', 'Overflight3'];
 
                     overflightColumns.forEach(col => {
@@ -1327,7 +1678,7 @@ Re-entry event re-asghj-kifdy: Alert
                   probabilitySelect.addEventListener('change', updateProbabilityColumns);
 
 
-                  overflightSelect.addEventListener('change', updateOverflightColumns);
+                  overflightSelect4.addEventListener('change', updateOverflightColumns);
 
                   // Initial setup
                   updateProbabilityColumns();
