@@ -36,14 +36,14 @@ Re-entry event re-asghj-kifdy: Alert
       <h3 class="govuk-heading-s">Contents</h3>
       <ul class="moj-side-navigation__list">
 
-        <li class="moj-side-navigation__item">
+        <li class="moj-side-navigation__item" >
           <a href="#event summary">Event summary</a>
         </li>
         <li class="moj-side-navigation__item">
-          <a href="#additional event details">Event details</a>
+          <a href="#event details">Event details</a>
         </li>
         <li class="moj-side-navigation__item">
-          <a href="#impact by home nation">Potential impact by region</a>
+          <a href="#impact by regions">Potential impact by region</a>
         </li>
         <li class="moj-side-navigation__item">
           <a href="#guidance on response">Guidance on response</a>
@@ -202,7 +202,7 @@ Re-entry event re-asghj-kifdy: Alert
 
 
       <div class="govuk-accordion" data-module="govuk-accordion" id="visualisations">
-
+<h1 class="govuk-heading-l" id="event details">Event details</h1>
         <!-- Additional event details -->
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
@@ -264,7 +264,8 @@ Re-entry event re-asghj-kifdy: Alert
             </div>
           </div>
         </div>
-        <!-- Impact on Home Nations - Overflight toggle -->
+        <h1 class="govuk-heading-l" id="impact by regions">Potential impact by region</h1>
+        <!-- Impact on Home Nations - Overflight toggle 
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
@@ -468,9 +469,9 @@ Re-entry event re-asghj-kifdy: Alert
                 methodology used in this report.</h3>
             </div>
           </div>
-        </div>
+        </div>-->
 
-        <!-- Impact on Home Nations - Checkboxes D1 -->
+        <!-- Impact on Home Nations - Checkboxes D1 
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
@@ -754,13 +755,13 @@ Re-entry event re-asghj-kifdy: Alert
                 methodology used in this report.</h3>
             </div>
           </div>
-        </div>
+        </div>-->
         <!-- Impact on Home Nations - Checkboxes D2 -->
         <div class="govuk-accordion__section ">
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading" id="accordion-heading-1">
               <span class="govuk-accordion__section-button" id="impact by home nation">
-                Potential impact by UK nation - Checkboxes design 2
+                Potential impact by UK nation
               </span>
             </h2>
           </div>
@@ -1050,63 +1051,307 @@ Re-entry event re-asghj-kifdy: Alert
 
             <div id="accordion-default-content-1" class="govuk-accordion__section-content"
               aria-labelledby="accordion-default-heading-1">
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  console.log('DOM loaded, setting up event listeners');
 
-              <h3 class="govuk-heading-m">England</h3>
+                  // Use event delegation on the document
+                  document.addEventListener('change', function (event) {
+                    console.log('Change event detected:', event.target);
+
+                    // Check if it's a checkbox with data-column attribute
+                    if (event.target.type === 'checkbox' && event.target.hasAttribute('data-column')) {
+                      const checkbox = event.target;
+                      const columnClass = checkbox.getAttribute('data-column');
+
+                      console.log('Checkbox:', checkbox.id, 'Column class:', columnClass, 'Checked:', checkbox.checked);
+
+                      // Find all elements with this column class
+                      const cells = document.querySelectorAll('.' + columnClass);
+                      console.log('Found cells:', cells.length);
+
+                      // Toggle visibility
+                      cells.forEach(cell => {
+                        if (checkbox.checked) {
+                          cell.classList.remove('hidden');
+                        } else {
+                          cell.classList.add('hidden');
+                        }
+                        console.log('Cell:', cell, 'Hidden:', cell.classList.contains('hidden'));
+                      });
+                    }
+
+                    // Handle overflight selection changes
+                    if (event.target.id === 'Overflightselect3') {
+                      const selectedValue = event.target.value;
+                      const selectedText = event.target.options[event.target.selectedIndex].text;
+
+                      console.log('Overflight selection changed to:', selectedValue, '(' + selectedText + ')');
+
+                      // Hide all overflight time columns first
+                      const allOverflightColumns = document.querySelectorAll('.colO3-1, .colO3-2, .colO3-3');
+                      allOverflightColumns.forEach(col => {
+                        col.classList.add('hidden');
+                      });
+
+                      // Show only the selected overflight column
+                      let targetColumnClass = '';
+                      switch (selectedValue) {
+                        case 'Overflight1':
+                          targetColumnClass = 'colO3-1';
+                          break;
+                        case 'Overflight2':
+                          targetColumnClass = 'colO3-2';
+                          break;
+                        case 'Overflight3':
+                          targetColumnClass = 'colO3-3';
+                          break;
+                      }
+
+                      if (targetColumnClass) {
+                        const selectedColumns = document.querySelectorAll('.' + targetColumnClass);
+                        selectedColumns.forEach(col => {
+                          col.classList.remove('hidden');
+                        });
+                        console.log('Showing columns with class:', targetColumnClass);
+                      }
+
+                      // Optional: Update a summary element if it exists
+                      const summaryElement = document.getElementById('overflight-summary');
+                      if (summaryElement) {
+                        summaryElement.textContent = selectedText + ' selected';
+                      }
+
+                      // Optional: Trigger custom event for other parts of the application
+                      const customEvent = new CustomEvent('overflightChanged', {
+                        detail: {
+                          value: selectedValue,
+                          text: selectedText,
+                          columnClass: targetColumnClass
+                        }
+                      });
+                      document.dispatchEvent(customEvent);
+                    }
+                  });
+                  // Clear filters logic for Overflightselect2
+                  const clearFiltersBtn3 = document.getElementById('clear-filters-btn-3');
+                  if (clearFiltersBtn3) {
+                    clearFiltersBtn3.addEventListener('click', function () {
+                      console.log('Clear filters button 3 clicked');
+
+                      // 1. Reset checkboxes (colC3-*) to checked and show their columns
+                      const checkboxes = document.querySelectorAll('input[type="checkbox"][data-column^="colC3-"]');
+                      checkboxes.forEach(cb => {
+                        cb.checked = true;
+                        const columnClass = cb.getAttribute('data-column');
+                        const cells = document.querySelectorAll('.' + columnClass);
+                        cells.forEach(cell => cell.classList.remove('hidden'));
+                      });
+
+                      // 2. Set dropdown to Overflight 3
+                      const overflightSelect3 = document.getElementById('Overflightselect3');
+                      if (overflightSelect3) {
+                        overflightSelect3.value = 'Overflight3';
+                      }
+
+                      // 3. Show all Overflight columns (colO3-*)
+                      const overflightCols = document.querySelectorAll('.colO3-1, .colO3-2, .colO3-3');
+                      overflightCols.forEach(col => col.classList.remove('hidden'));
+
+                      // 4. Update summary text (optional)
+                      const summaryElement = document.getElementById('overflight-summary');
+                      if (summaryElement) {
+                        summaryElement.textContent = 'All overflights shown (default)';
+                      }
+
+                      // 5. Fire custom event
+                      const customEvent = new CustomEvent('overflightChanged', {
+                        detail: {
+                          value: 'Overflight3',
+                          text: 'Overflight 3',
+                          columnClass: 'ALL'
+                        }
+                      });
+                      document.dispatchEvent(customEvent);
+                    });
+                  }
+                  // Initialize overflight display on page load
+                  const overflightSelect3 = document.getElementById('Overflightselect3');
+                  if (overflightSelect3) {
+                    // Trigger the change event to set initial state
+                    const changeEvent = new Event('change');
+                    overflightSelect3.dispatchEvent(changeEvent);
+                  }
+
+                  // Log all checkboxes found
+                  const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+                  console.log('All checkboxes found:', allCheckboxes.length);
+                  allCheckboxes.forEach(cb => {
+                    console.log('Checkbox:', cb.id, 'data-column:', cb.getAttribute('data-column'));
+                  });
+
+                  // Log overflight select element
+                  const selectElement = document.getElementById('Overflightselect3');
+                  if (selectElement) {
+                    console.log('Overflight select found:', selectElement.id, 'Current value:', selectElement.value);
+                  }
+                });
+
+                // Optional: Listen for custom overflight change events
+                document.addEventListener('overflightChanged', function (event) {
+                  console.log('Custom overflight event received:', event.detail);
+                  // Add any additional functionality here
+                });
+              </script>
+              <div class="toggle-section">
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text" style="font-size: 16px;">
+                    Toggle risk probabilities and overflights
+                  </span>
+                </summary>
+
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes"
+                  style="float: left; gap: 8px; font-size: 9px;">
+                  <div class="govuk-checkboxes__item" style="display: flex; ">
+                    <input class="govuk-checkboxes__input" id="fragments" name="metrics2" type="checkbox"
+                      value="fragments2" data-column="colC3-1" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="fragments2"
+                      style="cursor: pointer; font-size: 16px;">
+                      Probability of debris impact (%)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item" style="display: flex; ">
+                    <input class="govuk-checkboxes__input" id="reentry" name="metrics2" type="checkbox" value="reentry2"
+                      data-column="colC3-2" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="reentry2" style="font-size: 16px;">
+                      Probability of re-entry over UK (%)
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item" style="display: flex; ">
+                    <input class="govuk-checkboxes__input" id="casualty" name="metrics2" type="checkbox"
+                      value="casualty2" data-column="colC3-3" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="casualty2" style="font-size: 16px;">
+                      Probability of UK casualty risk (%)
+                    </label>
+                  </div>
+                </div>
+                <div class="govuk-form-group" style="float: right">
+                  <label class="govuk-label" for="Overflightselect3"><b>
+                      Choose Overflight
+                    </b></label>
+                  <select class="govuk-select" id="Overflightselect3" name="Overflightselect3" style="font-size: 16px;">
+                    <option value="Overflight1">Overflight 1</option>
+                    <option value="Overflight2">Overflight 2</option>
+                    <option value="Overflight3" selected>Overflight 3</option>
+                  </select>
+                  <button class="govuk-button" id="clear-filters-btn-3" type="button">
+                    Clear filters
+                  </button>
+              </details>
+              </div>
+              <div class="regionssection">
+              <h3 class="govuk-heading-m" style="clear: both">England</h3>
 
               <table class="govuk-table" style="width:100%">
                 <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
+                                    <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
-                      style="width: 30%" ;></th>
-                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
-                      style="width: 10%" ;>Probability of re-entry (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
-                      style="width: 10%" ;>Time of overflight 1 (UTC)</th>
+                      style="width: 30%;"></th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-1" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of debris impact (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-2" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of re-entry over UK (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-3" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of UK casualty risk (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-1" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 1 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-2" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 2 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-3" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 3 (UTC)</th>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">East of England</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">East Midlands</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">London</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">North East</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">North West</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">South East</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">South West</th>
-                    <td class="govuk-table__cell govuk-body-s">0.01</td>
-                    <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">West Midlands</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Yorkshire and the Humber</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                 </tbody>
               </table>
@@ -1115,74 +1360,271 @@ Re-entry event re-asghj-kifdy: Alert
 
               <table class="govuk-table" style="width:100%">
                 <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
+                                                     <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
-                      style="width: 30%" ;></th>
-                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
-                      style="width: 10%" ;>Probability of re-entry (%)</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
-                      style="width: 10%" ;>Time of overflight 1 (UTC)</th>
+                      style="width: 30%;"></th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-1" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of debris impact (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-2" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of re-entry over UK (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-3" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of UK casualty risk (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-1" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 1 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-2" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 2 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-3" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 3 (UTC)</th>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Antrim and Newtownabbey</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Ards and North Down</th>
-                    <td class="govuk-table__cell govuk-body-s">0.01</td>
-                    <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Armagh City, Banbridge and Craigavon</th>
-                    <td class="govuk-table__cell govuk-body-s">0.01</td>
-                    <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Belfast</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Causeway Coast and Glens</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Derry and Strabane</th>
-                    <td class="govuk-table__cell govuk-body-s">0.01</td>
-                    <td class="govuk-table__cell govuk-body-s">03/11/2023, 16:26</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Fermanagh and Omagh</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Lisburn and Castlereagh</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Mid and East Antrim</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                   <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header govuk-body-s">Mid Ulster</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3 class="govuk-heading-m">Wales</h3>
+
+              <table class="govuk-table" style="width:100%">
+                <tbody class="govuk-table__body">
+                                                     <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
+                      style="width: 30%;"></th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-1" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of debris impact (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-2" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of re-entry over UK (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-3" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of UK casualty risk (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-1" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 1 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-2" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 2 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-3" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 3 (UTC)</th>
                   </tr>
                   <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s">Newry, Mourne and Down</th>
-                    <td class="govuk-table__cell govuk-body-s">0.00</td>
-                    <td class="govuk-table__cell govuk-body-s">N/A</td>
+                    <th scope="row" class="govuk-table__header govuk-body-s">North Wales</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Mid Wales</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">South West Wales</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">South East Wales</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3 class="govuk-heading-m">Scotland</h3>
+
+              <table class="govuk-table" style="width:100%">
+                <tbody class="govuk-table__body">
+                                                     <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1"
+                      style="width: 30%;"></th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-1" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of debris impact (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-2" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of re-entry over UK (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colC3-3" aria-sort="none" span="1"
+                      style="width: 10%;">Probability of UK casualty risk (%)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-1" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 1 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-2" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 2 (UTC)</th>
+                    <th scope="col" class="govuk-table__header govuk-body-s colO3-3" aria-sort="none" span="1"
+                      style="width: 10%;">Time of overflight 3 (UTC)</th>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Central Scotland</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Glasgow</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Highlands and Islands</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Lothian</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">Mid Scotland and Fife</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">North East Scotland</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">South Scotland</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-body-s">West Scotland</th>
+<td class="govuk-table__cell govuk-body-s colC3-1">0.31</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-2">0.01</td>
+                    <td class="govuk-table__cell govuk-body-s colC3-3">0.02</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-1">03/11/2023, 16:26</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-2">03/12/2023, 16:27</td>
+                    <td class="govuk-table__cell govuk-body-s colO3-3">03/10/2023, 16:28</td>
                   </tr>
                 </tbody>
               </table>
 
               <p>Only UK nations which are at risk from this re-entry are included in the table(s) above.</p>
-
+             </div>
               <h3 class="govuk-body-m">See <a href="#Further information">Further information</a> for more detail on
                 methodology used in this report.</h3>
             </div>
