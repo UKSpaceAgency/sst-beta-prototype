@@ -1,0 +1,6 @@
+2025-07-22T14:19:34.191Z
+cwd: ~\Downloads\sst-beta-prototype
+package: govuk-prototype-kit@13.17.0
+argv: C:\Program Files\nodejs\node.exe ~\AppData\Local\npm-cache\_npx\751a68202a4807b7\node_modules\govuk-prototype-kit\bin\cli migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]
