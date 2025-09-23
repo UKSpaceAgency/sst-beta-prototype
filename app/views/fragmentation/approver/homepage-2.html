@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Fragmentation events
+Track fragmentation events
 {% endblock %}
 
 {% block content %}
@@ -9,13 +9,30 @@ Fragmentation events
 <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <h2 class="govuk-heading-xl">Fragmentation events</h2>
+        <h2 class="govuk-heading-xl">Track fragmentation events</h2>
             <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <h2 class="govuk-heading-m">All fragmentation events (upcoming and past)</h2>
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">All fragmentation events</th>
+              <td class="govuk-table__cell">7</td>
+            </tr>
+          </tbody>
+        </table>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with this table
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            This service tracks all fragmentation events worldwide, including those which pose a risk to UK satellites.
+          </div>
+        </details>
+        <h2 class="govuk-heading-m">All fragmentation events</h2>
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <p class="govuk-body">This table contains all tracked tragmentation events, including fragmentation events that meet the UK Space Agency's thresholds for alerting UK government. For further detail on how risk and alert thresholds are defined, see 'Help with this table' below.</p>
-  
+
         <div class="moj-search">
             <form action="#" method="post">
             <div class="govuk-form-group">
@@ -64,7 +81,7 @@ Fragmentation events
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 8%";>Risk</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Event ID</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of fragmentation (UTC)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Affected regime</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Number of known fragments</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Object</th>
@@ -132,7 +149,7 @@ Fragmentation events
 
       <p>Download all fragmenation events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
 
-      <div class="govuk-inset-text">Upcoming and previous known fragmentation events as of 18/09/2024 11:09:36.</div>
+      <div class="govuk-inset-text">All known fragmentation events as of 18/09/2024 11:09:36.</div>
 
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
@@ -141,21 +158,13 @@ Fragmentation events
           </span>
         </summary>
         <div class="govuk-details__text">
-          <b>This table shows all upcoming and previous tracked fragmenation events that have been identified by Space-Track and ingested into Monitor space hazards, including events which pose a risk to UK satellites and Human Spaceflight missions. Higher risk events contain additional analysis by UKSA's Orbital Analysts at the National Space Operations Centre.</b>
-          <p> </p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Select the <b>Event ID</b> to view more information</li>
-            <li>Each Event ID or row represents <b>one fragmenation event</b></li>
-            <li>Sort the alerts according to criteria by clicking on the relevant <b>headings</b></li>
+          <p>This table shows all previous tracked fragmenation events that have been identified by Space-Track and ingested into Monitor space hazards, including events which pose a risk to UK satellites and Human Spaceflight missions. Higher risk events contain additional analysis by UKSA's Orbital Analysts at the National Space Operations Centre.</p>
+          <p>Select the <b>event ID</b> to view more information</p>
+          <p>Each Event ID or row represents <b>one fragmenation event</b> including all related NSpOC analysis</p>
+          <p>Sort the alerts according to criteria by clicking on the relevant <b>headings</b></p>
 
           </ul>
-          <h3 class="govuk-heading-s">Alert thresholds</h3>
-          <p class="govuk-body">Alerts about fragmentation events are produced if:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>there is an increased risk of a potential collision with a UK operated satellites or Human Spaceflight mission</li>
-                            <li>OR nominated for escalation by the National Space Operations Centre</li>
-          </ul>
-
+          
            <h3 class="govuk-heading-s">Risk thresholds</h3>
 
           <p>Risk thresholds are calculated according to the probability of the object affecting UK operated satellites or Human Spaceflight mission.</p>
