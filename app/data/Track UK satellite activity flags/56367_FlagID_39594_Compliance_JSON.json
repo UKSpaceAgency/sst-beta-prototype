@@ -1,0 +1,538 @@
+[
+    {
+        "common_name": "O3BF04",
+        "norad_id": 56367,
+        "international_designator": "2023-059A",
+        "operator": null,
+
+        "orbit_type": "MEO",
+        "orbit_period": 287.934,
+        "inclination": 0.0420537,
+        "apogee": 8072.64,
+        "perigee": 8059.17,
+        "altitude": 8066.0,
+        "longitude": 0.47,
+
+        "object_type": "PAYLOAD",
+        "object_shape": "Box + 2 Pan",
+        "object_mass": 1700.0,
+        "object_avg_x_section": null,
+        "object_max_x_section": null,
+        "object_min_x_section": null,
+        "object_height": 1.2,
+        "object_width": 3.0,
+        "object_depth": 3.0,
+        "object_span": 27.0,
+        "object_diameter": null,
+
+        "flag_id": 39594,
+        "flag_date": "2025-09-23T05:13:01",
+        "flag_type": "Inc fixed",
+        "flag_status": "Flag Ongoing",
+        "priority_flag": false ,
+        "latest_flag_count": 15,
+        "latest_tle_epoch": "2025-09-22T17:18:56",
+        "tle_count_this_month": 48,
+        "licensing_country": "SES",
+        "launch_site": "AFETR",
+        "launch_date": "2023-04-28",
+
+        "flag_states": [
+           {
+                 "flag_tle_age_status": true,
+                 "flag_tle_age_threshold": 7.0,
+                 "flag_tle_age_violation_value": 0
+           },
+           {
+                 "flag_fixed_sma_status": true,
+                 "flag_fixed_sma_original_value": 14444.0,
+                 "flag_fixed_sma_upper_threshold": 5.0,
+                 "flag_fixed_sma_lower_threshold": 5.0,
+                 "flag_fixed_sma_violation_value": 14444.0
+           },
+           {
+                 "flag_sma_chg_status": true,
+                 "flag_sma_chg_upper_threshold": 2.0,
+                 "flag_sma_chg_lower_threshold": 2.0,
+                 "flag_sma_chg_violation_value": 0.0
+           },
+           {
+                 "flag_sma_rate_status": false,
+                 "flag_sma_rate_threshold": null,
+                 "flag_sma_rate_violation_value": null
+           },
+           {
+                 "flag_fixed_inc_status": true,
+                 "flag_fixed_inc_original_value": 0.05,
+                 "flag_fixed_inc_upper_threshold": 0.02,
+                 "flag_fixed_inc_lower_threshold": 0.02,
+                 "flag_fixed_inc_violation_value": 0.0420537
+           },
+           {
+                 "flag_inc_chg_status": false,
+                 "flag_inc_chg_upper_threshold": null,
+                 "flag_inc_chg_lower_threshold": null,
+                 "flag_inc_chg_violation_value": null
+           },
+           {
+                 "flag_fixed_long_status": false,
+                 "flag_fixed_long_original_value": null,
+                 "flag_fixed_long_upper_threshold": null,
+                 "flag_fixed_long_lower_threshold": null,
+                 "flag_fixed_long_violation_value": null
+           },
+           {
+                 "flag_long_change_status": false,
+                 "flag_long_change_upper_threshold": null,
+                 "flag_long_change_lower_threshold": null,
+                 "flag_long_change_violation_value": null
+           },
+           {
+                 "flag_move_status": false,
+                 "flag_move_plan": null
+           }
+        ],
+
+        "manoeuvre_information": [
+           {
+                 "pre_move_inc": null,
+                 "pre_move_apo": null,
+                 "pre_move_per": null,
+                 "pre_move_long": null,
+                 "pre_move_alt": null,
+                 
+                 "expected_move_start_date": null,
+                 "expected_move_end_date": null,
+                 "planned_inc_post_move": null,
+                 "planned_apo_post_move": null,
+                 "planned_per_post_move": null,
+                 "planned_long_post_move": null,
+                 "planned_alt_post_move": null,
+                 
+                 "actual_move_start_date": null,
+                 "actual_move_end_date": null,
+                 "actual_inc_post_move": null,
+                 "actual_apo_post_move": null,
+                 "actual_per_post_move": null,
+                 "actual_long_post_move": null,
+                 "actual_alt_post_move": null,
+                 
+                 "planned_change_in_inc": null,
+                 "planned_change_in_apo": null,
+                 "planned_change_in_per": null,
+                 "planned_change_in_long": null,
+                 "planned_change_in_alt": null,
+                 
+                 "actual_change_in_start_date": null,
+                 "actual_change_in_end_date": null,
+                 "actual_change_in_inc": null,
+                 "actual_change_in_apo": null,
+                 "actual_change_in_per": null,
+                 "actual_change_in_long": null,
+                 "actual_change_in_alt": null
+                 
+           }
+        ],
+
+        "manoeuvre_plot_data": [
+          {
+                 "num_of_manoeuvre_data_points": null,
+                 "array_of_manoeuvre_data_points": null
+          }
+        ],
+
+        "tle_history_data": [
+           {
+                 "num_of_tle_history_data_points": 48,
+                 "array_of_tle_history_data_points": [
+                    {
+                         "epoch": "2025-09-22T17:18:56",
+                         "inclination": 0.0421,
+                         "raan": 8.97,
+                         "altitude": 8070.0,
+                         "apogee": 8072.64,
+                         "perigee": 8059.17
+                    },
+                    {
+                         "epoch": "2025-09-22T07:43:15",
+                         "inclination": 0.042,
+                         "raan": 8.98,
+                         "altitude": 8070.0,
+                         "apogee": 8072.64,
+                         "perigee": 8059.18
+                    },
+                    {
+                         "epoch": "2025-09-21T17:19:44",
+                         "inclination": 0.042,
+                         "raan": 8.89,
+                         "altitude": 8070.0,
+                         "apogee": 8072.63,
+                         "perigee": 8059.19
+                    },
+                    {
+                         "epoch": "2025-09-21T12:31:53",
+                         "inclination": 0.0419,
+                         "raan": 8.79,
+                         "altitude": 8070.0,
+                         "apogee": 8072.63,
+                         "perigee": 8059.19
+                    },
+                    {
+                         "epoch": "2025-09-21T02:56:12",
+                         "inclination": 0.0419,
+                         "raan": 8.72,
+                         "altitude": 8070.0,
+                         "apogee": 8072.62,
+                         "perigee": 8059.2
+                    },
+                    {
+                         "epoch": "2025-09-19T22:09:08",
+                         "inclination": 0.0418,
+                         "raan": 8.58,
+                         "altitude": 8070.0,
+                         "apogee": 8072.6,
+                         "perigee": 8059.22
+                    },
+                    {
+                         "epoch": "2025-09-19T17:21:18",
+                         "inclination": 0.0417,
+                         "raan": 8.55,
+                         "altitude": 8070.0,
+                         "apogee": 8072.6,
+                         "perigee": 8059.22
+                    },
+                    {
+                         "epoch": "2025-09-19T07:45:37",
+                         "inclination": 0.0417,
+                         "raan": 8.5,
+                         "altitude": 8070.0,
+                         "apogee": 8072.59,
+                         "perigee": 8059.23
+                    },
+                    {
+                         "epoch": "2025-09-18T22:09:56",
+                         "inclination": 0.0417,
+                         "raan": 8.38,
+                         "altitude": 8070.0,
+                         "apogee": 8072.58,
+                         "perigee": 8059.23
+                    },
+                    {
+                         "epoch": "2025-09-18T17:22:05",
+                         "inclination": 0.0417,
+                         "raan": 8.33,
+                         "altitude": 8070.0,
+                         "apogee": 8072.58,
+                         "perigee": 8059.23
+                    },
+                    {
+                         "epoch": "2025-09-18T02:58:33",
+                         "inclination": 0.0416,
+                         "raan": 8.23,
+                         "altitude": 8070.0,
+                         "apogee": 8072.57,
+                         "perigee": 8059.24
+                    },
+                    {
+                         "epoch": "2025-09-17T17:22:52",
+                         "inclination": 0.0416,
+                         "raan": 8.23,
+                         "altitude": 8070.0,
+                         "apogee": 8072.56,
+                         "perigee": 8059.26
+                    },
+                    {
+                         "epoch": "2025-09-17T02:59:21",
+                         "inclination": 0.0415,
+                         "raan": 8.03,
+                         "altitude": 8070.0,
+                         "apogee": 8072.55,
+                         "perigee": 8059.27
+                    },
+                    {
+                         "epoch": "2025-09-16T12:35:49",
+                         "inclination": 0.0414,
+                         "raan": 7.92,
+                         "altitude": 8070.0,
+                         "apogee": 8072.54,
+                         "perigee": 8059.28
+                    },
+                    {
+                         "epoch": "2025-09-16T03:00:08",
+                         "inclination": 0.0414,
+                         "raan": 7.83,
+                         "altitude": 8070.0,
+                         "apogee": 8072.53,
+                         "perigee": 8059.28
+                    },
+                    {
+                         "epoch": "2025-09-15T12:36:36",
+                         "inclination": 0.0413,
+                         "raan": 7.73,
+                         "altitude": 8070.0,
+                         "apogee": 8072.52,
+                         "perigee": 8059.29
+                    },
+                    {
+                         "epoch": "2025-09-14T17:25:14",
+                         "inclination": 0.0413,
+                         "raan": 7.7,
+                         "altitude": 8070.0,
+                         "apogee": 8072.49,
+                         "perigee": 8059.31
+                    },
+                    {
+                         "epoch": "2025-09-14T12:37:23",
+                         "inclination": 0.0412,
+                         "raan": 7.53,
+                         "altitude": 8070.0,
+                         "apogee": 8072.5,
+                         "perigee": 8059.31
+                    },
+                    {
+                         "epoch": "2025-09-14T03:01:42",
+                         "inclination": 0.0412,
+                         "raan": 7.55,
+                         "altitude": 8070.0,
+                         "apogee": 8072.49,
+                         "perigee": 8059.31
+                    },
+                    {
+                         "epoch": "2025-09-13T22:13:52",
+                         "inclination": 0.0411,
+                         "raan": 7.4,
+                         "altitude": 8070.0,
+                         "apogee": 8072.48,
+                         "perigee": 8059.32
+                    },
+                    {
+                         "epoch": "2025-09-12T17:26:49",
+                         "inclination": 0.041,
+                         "raan": 7.07,
+                         "altitude": 8070.0,
+                         "apogee": 8072.47,
+                         "perigee": 8059.33
+                    },
+                    {
+                         "epoch": "2025-09-12T12:38:58",
+                         "inclination": 0.0409,
+                         "raan": 7.03,
+                         "altitude": 8070.0,
+                         "apogee": 8072.46,
+                         "perigee": 8059.33
+                    },
+                    {
+                         "epoch": "2025-09-11T17:27:36",
+                         "inclination": 0.0408,
+                         "raan": 6.83,
+                         "altitude": 8070.0,
+                         "apogee": 8072.46,
+                         "perigee": 8059.34
+                    },
+                    {
+                         "epoch": "2025-09-10T22:16:14",
+                         "inclination": 0.0408,
+                         "raan": 6.74,
+                         "altitude": 8070.0,
+                         "apogee": 8072.44,
+                         "perigee": 8059.35
+                    },
+                    {
+                         "epoch": "2025-09-10T12:40:32",
+                         "inclination": 0.0407,
+                         "raan": 6.68,
+                         "altitude": 8070.0,
+                         "apogee": 8072.43,
+                         "perigee": 8059.35
+                    },
+                    {
+                         "epoch": "2025-09-09T22:17:01",
+                         "inclination": 0.0406,
+                         "raan": 6.53,
+                         "altitude": 8070.0,
+                         "apogee": 8072.41,
+                         "perigee": 8059.35
+                    },
+                    {
+                         "epoch": "2025-09-09T17:29:10",
+                         "inclination": 0.0406,
+                         "raan": 6.52,
+                         "altitude": 8070.0,
+                         "apogee": 8072.41,
+                         "perigee": 8059.35
+                    },
+                    {
+                         "epoch": "2025-09-09T03:05:38",
+                         "inclination": 0.0405,
+                         "raan": 6.34,
+                         "altitude": 8070.0,
+                         "apogee": 8072.4,
+                         "perigee": 8059.35
+                    },
+                    {
+                         "epoch": "2025-09-08T17:29:57",
+                         "inclination": 0.0405,
+                         "raan": 6.41,
+                         "altitude": 8070.0,
+                         "apogee": 8072.39,
+                         "perigee": 8059.35
+                    },
+                    {
+                         "epoch": "2025-09-08T03:06:25",
+                         "inclination": 0.0404,
+                         "raan": 6.37,
+                         "altitude": 8070.0,
+                         "apogee": 8072.39,
+                         "perigee": 8059.36
+                    },
+                    {
+                         "epoch": "2025-09-07T22:18:35",
+                         "inclination": 0.0404,
+                         "raan": 6.31,
+                         "altitude": 8070.0,
+                         "apogee": 8072.38,
+                         "perigee": 8059.36
+                    },
+                    {
+                         "epoch": "2025-09-07T12:42:54",
+                         "inclination": 0.0403,
+                         "raan": 6.14,
+                         "altitude": 8070.0,
+                         "apogee": 8072.38,
+                         "perigee": 8059.37
+                    },
+                    {
+                         "epoch": "2025-09-07T03:07:13",
+                         "inclination": 0.0403,
+                         "raan": 6.09,
+                         "altitude": 8070.0,
+                         "apogee": 8072.37,
+                         "perigee": 8059.37
+                    },
+                    {
+                         "epoch": "2025-09-06T17:31:32",
+                         "inclination": 0.0403,
+                         "raan": 5.98,
+                         "altitude": 8070.0,
+                         "apogee": 8072.37,
+                         "perigee": 8059.38
+                    },
+                    {
+                         "epoch": "2025-09-06T03:08",
+                         "inclination": 0.0401,
+                         "raan": 5.29,
+                         "altitude": 8070.0,
+                         "apogee": 8072.34,
+                         "perigee": 8059.41
+                    },
+                    {
+                         "epoch": "2025-09-05T12:44:29",
+                         "inclination": 0.0401,
+                         "raan": 5.3,
+                         "altitude": 8070.0,
+                         "apogee": 8072.33,
+                         "perigee": 8059.41
+                    },
+                    {
+                         "epoch": "2025-09-05T07:56:38",
+                         "inclination": 0.0401,
+                         "raan": 5.44,
+                         "altitude": 8070.0,
+                         "apogee": 8072.33,
+                         "perigee": 8059.41
+                    },
+                    {
+                         "epoch": "2025-09-04T22:20:57",
+                         "inclination": 0.0401,
+                         "raan": 5.49,
+                         "altitude": 8070.0,
+                         "apogee": 8072.33,
+                         "perigee": 8059.41
+                    },
+                    {
+                         "epoch": "2025-09-04T17:33:07",
+                         "inclination": 0.0401,
+                         "raan": 5.57,
+                         "altitude": 8070.0,
+                         "apogee": 8072.34,
+                         "perigee": 8059.4
+                    },
+                    {
+                         "epoch": "2025-09-04T03:09:35",
+                         "inclination": 0.0401,
+                         "raan": 5.6,
+                         "altitude": 8070.0,
+                         "apogee": 8072.33,
+                         "perigee": 8059.41
+                    },
+                    {
+                         "epoch": "2025-09-03T17:33:54",
+                         "inclination": 0.0401,
+                         "raan": 5.9,
+                         "altitude": 8070.0,
+                         "apogee": 8072.34,
+                         "perigee": 8059.4
+                    },
+                    {
+                         "epoch": "2025-09-03T03:10:23",
+                         "inclination": 0.04,
+                         "raan": 5.58,
+                         "altitude": 8070.0,
+                         "apogee": 8072.33,
+                         "perigee": 8059.42
+                    },
+                    {
+                         "epoch": "2025-09-02T17:34:42",
+                         "inclination": 0.04,
+                         "raan": 5.64,
+                         "altitude": 8070.0,
+                         "apogee": 8072.33,
+                         "perigee": 8059.42
+                    },
+                    {
+                         "epoch": "2025-09-02T07:59:01",
+                         "inclination": 0.0399,
+                         "raan": 5.05,
+                         "altitude": 8070.0,
+                         "apogee": 8072.29,
+                         "perigee": 8059.45
+                    },
+                    {
+                         "epoch": "2025-09-02T03:11:10",
+                         "inclination": 0.0399,
+                         "raan": 5.02,
+                         "altitude": 8070.0,
+                         "apogee": 8072.29,
+                         "perigee": 8059.45
+                    },
+                    {
+                         "epoch": "2025-09-01T17:35:29",
+                         "inclination": 0.0398,
+                         "raan": 4.93,
+                         "altitude": 8070.0,
+                         "apogee": 8072.29,
+                         "perigee": 8059.45
+                    },
+                    {
+                         "epoch": "2025-09-01T07:59:48",
+                         "inclination": 0.0398,
+                         "raan": 4.93,
+                         "altitude": 8070.0,
+                         "apogee": 8072.29,
+                         "perigee": 8059.45
+                    },
+                    {
+                         "epoch": "2025-09-01T03:11:58",
+                         "inclination": 0.0398,
+                         "raan": 4.86,
+                         "altitude": 8070.0,
+                         "apogee": 8072.29,
+                         "perigee": 8059.45
+                    }
+                 ]
+           }
+        ]
+
+
+    }
+]
