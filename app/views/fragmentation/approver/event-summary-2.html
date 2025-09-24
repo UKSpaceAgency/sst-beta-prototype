@@ -115,14 +115,10 @@ Fragmentation event fr-aheb-angkem
 
     <!-- EVENT SUMMARY SECTION 1 -->
     <h1 class="govuk-heading-l" id="Event summary">Event summary</h1>
-    <p>The UK Space Agency is actively monitoring a non-UK fragmentation event involving RESURS P1. Current tracking shows approximately 88 pieces of debris associated with this fragmentation, though work continues to identify and catalogue other potential debris objects. This number could therefore change significantly as more data is received. The event was identified as a  <strong class="govuk-tag govuk-tag--yellow">Medium</strong> risk.</p>
+    <p>The UK Space Agency is actively monitoring a non-UK fragmentation event involving RESURS P1. Current tracking shows approximately 88 pieces of debris associated with this fragmentation, though work continues to identify and catalogue other potential debris objects. This number could therefore change significantly as more data is received.</p>
     <h2 class="govuk-heading-m" id="event summary">Event summary</h2>
     <table class="govuk-table"style="width:100%">
       <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-body-s">Initial risk assessment</th>
-          <td class="govuk-table__cell govuk-body-s"> <strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
-        </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header govuk-body-s" style="width: 50%">Event time (UTC)</th>
           <td class="govuk-table__cell govuk-body-s" style="width: 50%"> 2024-10-08 19:14:17</td>
@@ -162,7 +158,7 @@ Fragmentation event fr-aheb-angkem
 
     <h3 class="govuk-heading-m" id="Event summary">Next update</h3>
 
-    <p>For Low Risk events, updates are only sent if the event breaches a higher risk threshold. For Medium and High Risk events, updates are sent as soon as new information is available. A close-down report will be sent in all cases.</p>
+    <p>A close-down report will be sent for each event.</p>
 
     <form class="form" action="/contact-an-analyst/contact-analyst-form" method="post">
       <button class="govuk-button" data-module="govuk-button">
@@ -244,7 +240,6 @@ Fragmentation event fr-aheb-angkem
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Report number</th>
               <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Time of report (UTC)</th>
-              <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 9%">Risk to UK objects</th>
               <th scope="col" class="govuk-table__header app-custom-class govuk-body-s" aria-sort="ascending" span="1" style="width: 15%">Predicted time of closest approach (UTC)</th>
             </tr>
           </thead>
@@ -252,13 +247,11 @@ Fragmentation event fr-aheb-angkem
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/reentry/approver/event-summary-mvp">asdf-asdas-asdf Report 2</span></td>
               <td class="govuk-table__cell govuk-body-s">03/11/2023, 09:00:02</td>
-              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
               <td class="govuk-table__cell govuk-body-s">23/08/2023, 15:46:54</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell govuk-body-s"><span class="govuk-details__summary govuk-details__summary-text" style="list-style-type: disclosure-open" href="/evnts/approver/escalated-event-summary-report-2">asdf-asdas-asdf Report 1</span></td>
               <td class="govuk-table__cell govuk-body-s">01/11/2023, 09:00:40</td>
-              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
               <td class="govuk-table__cell govuk-body-s">23/08/2023, 15:46:45</td>
             </tr>
             </tbody>
@@ -565,50 +558,37 @@ Fragmentation event fr-aheb-angkem
     <!-- ADDITIONAL INFORMATION SECTION 5 -->
     <h1 class="govuk-heading-l" id="additional-info">Additional information</h1>
     <div class="govuk-accordion" data-module="govuk-accordion" id="additional-info-accordion">
-      <!--Risk thresholds-->
-        <div class="govuk-accordion__section">
+      <!--Alerting procedure-->
+      <div class="govuk-accordion__section">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading" id="additional-info-heading-1">
             <span class="govuk-accordion__section-button" aria-controls="additional-info-content-1" id="additional-info-section-1">
-              Risk thresholds
+              Alerting procedure
             </span>
           </h2>
         </div>
         <div id="additional-info-content-1" class="govuk-accordion__section-content" aria-labelledby="additional-info-heading-1">
-            <p>Risk thresholds are calculated according to the probability of the object colliding with UK satellites.</p>
-            <table class="govuk-table"style="width:100%">
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Risk level</th>
-                    <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Probability of collisions with UK satellites</th>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></th>
-                    <td class="govuk-table__cell govuk-body-s">Less than 1%</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></th>
-                    <td class="govuk-table__cell govuk-body-s">1% - 5%</td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header govuk-body-s"><strong class="govuk-tag govuk-tag--red">High</strong></th>
-                    <td class="govuk-table__cell govuk-body-s">More than 5%</td>
-                  </tr>
-                </tbody>
-              </table> 
-           <details class="govuk-details">
-             <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Help with this table
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                  This table shows the risk thresholds and levels used to assess how a fragmentation event could pose a risk to UK satellites.<br>
-              </div>
-            </details>
-          </div>
+          <h3 class="govuk-heading-m">Standard fragmentation alert</h3>
+          <p>If this report is classified as a standard fragmentation alert, then it has been distributed only to key UK government organisations (National Space Operations Centre, Ministry of Defence, Cabinet Office, Civil Aviation Authority) and international partners.</p>
+          <p>The criteria for producing a standard fragmentation alert is the following:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>X</li>
+              <li>Y</li>
+              <li>Z</li>
+            </ul>
+          </p>
+          <h3 class="govuk-heading-m">Priority fragmentation alert</h3>
+          <p>If this report is classified as a priority fragmentation alert, then it has been distributed more widely across UK devolved and central government departments.</p>
+          <p>The criteria for producing a priority fragmentation alert is debris likely to survive to the ground and one of the following:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>X</li>
+              <li>Y</li>
+              <li>Z</li>
+            </ul>
+          </p>
         </div>
-        <!--Further Information-->
+      </div>
+      <!--Further Information-->
         <div class="govuk-accordion__section">
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading" id="additional-info-heading-2">
