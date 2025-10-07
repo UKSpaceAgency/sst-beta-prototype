@@ -49,25 +49,6 @@ Track fragmentation events
             </form>
             </div>
         <br>
-        <details class="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">
-                Apply filters to this table
-              </span>
-            </summary>
-            <div class="govuk-details__text">
-                <div class="govuk-form-group">
-                    <label class="govuk-label" for="sort">
-                      Filter by
-                    </label>
-                    <select class="govuk-select" id="sort" name="sort">
-                      <option value="published" selected>All</option>
-                      <option value="published">Upcoming</option>
-                      <option value="updated">Past</option>
-                    </select>
-                </div>
-            </div>
-          </details>
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
           <col>
             <colgroup span="5"></colgroup>
@@ -80,11 +61,12 @@ Track fragmentation events
               <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Fragmentation risk</b></td>
             </tr>
             <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Risk level</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Event ID</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time of fragmentation (UTC)</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Affected regime</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Primary object</th>
-              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Secondary object</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Primary</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Secondary</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Number of known fragments</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Modelled number of fragments</th>
               <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>UK satellites with increased risk of conjunction</th>
@@ -93,11 +75,12 @@ Track fragmentation events
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
               <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary-2" class="govuk-link--no-visited-state">fr-aheb-angkem</a></b></td>
               <td class="govuk-table__cell govuk-body-s">15/09/2024 06:54:17</td>
               <td class="govuk-table__cell govuk-body-s">GEO</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">RESURS P1</td>
-              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">METEOR 1</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="#">RESURS P1</a></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="#">METEOR 1</a></td>
               <td class="govuk-table__cell govuk-body-s"> 100 </td>
               <td class="govuk-table__cell govuk-body-s"> 90 </td>
               <td class="govuk-table__cell govuk-body-s"> 4 </td>
@@ -105,35 +88,38 @@ Track fragmentation events
               <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Collision</td>
             </tr>
             <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
                 <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary-2" class="govuk-link--no-visited-state">fr-akndkne-dnknie</a></b></td>
                 <td class="govuk-table__cell govuk-body-s">13/09/2024 08:14:40</td>
                 <td class="govuk-table__cell govuk-body-s">LEO</td>
-                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">H-2A DEB</td>
-                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">METEOR 2</td>
-                <td class="govuk-table__cell govuk-body-s">~30</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="#">H-2A DEB</a></td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="#">METEOR 2</a></td>
+                <td class="govuk-table__cell govuk-body-s">30</td>
                 <td class="govuk-table__cell govuk-body-s">23</td>
                 <td class="govuk-table__cell govuk-body-s"> 10 </td>
                 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Debris</td>
-                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Structural failure</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Unknown</td>
             </tr>
             <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--yellow">Medium</strong></td>
                 <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary-2" class="govuk-link--no-visited-state">fr-amnkgl-aknla</a> </b></td>
                 <td class="govuk-table__cell govuk-body-s">13/09/2024 09:46:19</td>
                 <td class="govuk-table__cell govuk-body-s">LEO</td>
-                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">COSMOS 2261</td>
-                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">METEOR 3</td>
-                <td class="govuk-table__cell govuk-body-s">~50</td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="#">COSMOS 2261</a></td>
+                <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="#">METEOR 3</a></td>
+                <td class="govuk-table__cell govuk-body-s">50</td>
                 <td class="govuk-table__cell govuk-body-s">33</td>
                 <td class="govuk-table__cell govuk-body-s">5 </td>
                 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Payload</td>
                 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Explosion</td>
                 </tr>
                 <tr class="govuk-table__row">
+                    <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
                     <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/fragmentation/approver/event-summary-2" class="govuk-link--no-visited-state">fr-aknke-angle</a></b></td>
                     <td class="govuk-table__cell govuk-body-s">13/09/2024 10:17:39</td>
                     <td class="govuk-table__cell govuk-body-s">MEO</td>
-                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">FALCON 9 R/B</td>
-                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">METEOR 4</td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="#">FALCON 9 R/B</a></td>
+                    <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric"><a href="#">METEOR 4</a></td>
                     <td class="govuk-table__cell govuk-body-s">100</td>
                     <td class="govuk-table__cell govuk-body-s">78</td>
                     <td class="govuk-table__cell govuk-body-s">30</td>
