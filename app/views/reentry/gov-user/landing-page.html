@@ -1,0 +1,214 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Track re-entry events
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h2 class="govuk-heading-xl">Track re-entry events</h2>
+            <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Upcoming re-entry alerts</th>
+              <td class="govuk-table__cell">1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Upcoming re-entry events worldwide</th>
+              <td class="govuk-table__cell">5</td>
+            </tr>
+          </tbody>
+        </table>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with this table
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            This service tracks all upcoming re-entry events worldwide, including those which pose a risk to the UK. The service reports on two types of re-entry event.
+            <br>
+            <br>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><b>Upcoming re-entry alerts</b>: all upcoming re-entry events that meet the UK Space Agency's thresholds for alerting UK government
+              <li><b>Upcoming re-entry events worldwide</b>: all upcoming re-entry events worldwide, including those which have not met alerting thresholds</li>
+            </ul>
+          </div>
+        </details>
+        <h2 class="govuk-heading-m">All re-entry events (upcoming and past)</h2>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <p class="govuk-body">This table contains all tracked re-entry events, including re-entry events that meet the UK Space Agency's thresholds for alerting UK government. For further detail on how risk and alert thresholds are defined, see 'Help with this table' below.</p>
+  
+        <div class="moj-search">
+            <form action="#" method="post">
+            <div class="govuk-form-group">
+              <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                Find a re-entry event:
+              </label>
+      
+              <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by event or object ID" aria-describedby="search-hint">
+            </div>
+      
+            <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+              Search
+            </button>
+            </form>
+            </div>
+        <br>
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Apply filters to this table
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changedName">
+                        View all re-entry events and alerts
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="changedName-2">
+                        Only view re-entry alerts
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="sort">
+                      Filter by
+                    </label>
+                    <select class="govuk-select" id="sort" name="sort">
+                      <option value="published" selected>All</option>
+                      <option value="published">Upcoming</option>
+                      <option value="updated">Past</option>
+                    </select>
+                  </div>
+            </div>
+          </details>
+        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:107%" data-module=moj-sortable-table>
+          <col>
+            <colgroup span="25"></colgroup>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 1%";>Risk</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";>Event ID</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";>Object</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 1%";>Debris impact in UK (%)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="2" style="width: 40%";>Date</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 1%";>Time (UTC)</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 1%";>Window (mins)</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Low
+                </strong>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/gov-user/event-summary" class="govuk-link--no-visited-state">RE000001</a></b></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">CZ-2C R/B (Rocket body)</td>
+              <td class="govuk-table__cell govuk-body-s">0.04</td>
+              <td class="govuk-table__cell govuk-body-s">Thursday November 25 2025</td>
+              <td class="govuk-table__cell govuk-body-s">16:26</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+/- 120</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Medium
+                </strong>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/gov-user/event-summary" class="govuk-link--no-visited-state">RE-2025-001</a></b></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">HYLAS 1</td>
+              <td class="govuk-table__cell govuk-body-s">0.06</td>
+              <td class="govuk-table__cell govuk-body-s">Friday October 31 2025</td>
+              <td class="govuk-table__cell govuk-body-s">16:26</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+/- 1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  High
+                </strong>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/gov-user/event-summary" class="govuk-link--no-visited-state">RE-20253010-12345</a></b></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">LANDSAT 4</td>
+              <td class="govuk-table__cell govuk-body-s">0.12</td>
+              <td class="govuk-table__cell govuk-body-s">Friday May 4 2025</td>
+              <td class="govuk-table__cell govuk-body-s">16:26</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+/- 60</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  No risk
+                </strong>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/gov-user/event-summary" class="govuk-link--no-visited-state">RE-25-001</a></b></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">STARLINK-6105</td>
+              <td class="govuk-table__cell govuk-body-s">0.04</td>
+              <td class="govuk-table__cell govuk-body-s">30/10/2025</td>
+              <td class="govuk-table__cell govuk-body-s">16:26</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+/- 120</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Low
+                </strong>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/gov-user/event-summary" class="govuk-link--no-visited-state">RE000123</a></b></td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">CZ-2C R/B (Rocket body)</td>
+              <td class="govuk-table__cell govuk-body-s">0.04</td>
+              <td class="govuk-table__cell govuk-body-s">October 30 2025</td>
+              <td class="govuk-table__cell govuk-body-s">16:26</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">+/- 120</td>
+            </tr>
+          </tbody>
+        </col>
+      </table>
+
+      <p>Download all re-entry events [<a href="#">JSON</a>][<a href="#">CSV</a>]</p>
+
+      <div class="govuk-inset-text">Upcoming and previous known re-entry events as of 04/04/2024 07:09:36.</div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with this table
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <b>This table shows all upcoming and previous re-entry events that have been identified by Space-Track and ingested into Monitor space hazards, including events which pose a risk to the UK. Higher risk events contain additional analysis by UKSA's Orbital Analysts at the National Space Operations Centre.</b>
+          <p> </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Select the <b>Event ID</b> to view more information</li>
+            <li>Each Event ID or row represents <b>one re-entry event</b> including all related alert updates</li>
+            <li>Sort the alerts according to criteria by clicking on the relevant <b>headings</b></li>
+
+          </ul>
+        </div>
+      </details>
+
+
+
+      <br>
+
+      <a href="/homepage" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Return to previous page</a>
+
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}

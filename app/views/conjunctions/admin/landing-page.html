@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Upcoming conjunction events
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+
+</div>
+<main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Upcoming conjunction events</h1>
+
+        <p class="govuk-body">There are currently <b>X</B> conjunction events affecting UK satellites in the next <b>Y</b> days.</p>
+
+        <div class="moj-search">
+        <form action="#" method="post">
+        <div class="govuk-form-group">
+          <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+            Find a conjunction event:
+          </label>
+
+          <input class="govuk-input moj-search__input " id="search" name="search" type="search" placeholder="Search by event or object ID" aria-describedby="search-hint">
+        </div>
+
+        <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button">
+          Search
+        </button>
+        </form>
+        </div>
+        <br>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Apply filters to this table
+            </span>
+          </summary>
+
+          <div class="govuk-details__text">
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changedName">
+                LEO regime
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changedName-2">
+                MEO regime
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changedName-2">
+                GEO regime
+              </label>
+            </div>
+          </div>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="sort">
+                  Filter by
+                </label>
+                <select class="govuk-select" id="sort" name="sort">
+                  <option value="published" selected>All</option>
+                  <option value="published">Upcoming</option>
+                  <option value="published">Past</option>
+                </select>
+              </div>
+        </div>
+        </details>
+      </br>
+<br>
+        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+          <col>
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <colgroup span="1"></colgroup>
+            <colgroup span="2"></colgroup>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Event information</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Probability of collision (%)</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Miss distance (m)</b></td>
+              <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Time of Closest Approach (UTC)</b></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 5%";>Risk</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 47%";>Event</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 9%";>Space-Track CDM</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 9%";>NSpOC</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 5%";>Total</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 50%";>Date</th>
+              <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Time</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"><strong class="govuk-tag govuk-tag--green">
+                  Low
+                </strong></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/admin/event-summary-5" class="govuk-link--no-visited-state">Conjunction: RAPIDEYE 2 vs Starlink-31123</a> </b></td>
+              <td class="govuk-table__cell govuk-body-s">1.236e-2</td>
+              <td class="govuk-table__cell govuk-body-s">7.156e-6</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1125</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Friday 25 May 2025</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">21:56:08</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"><strong class="govuk-tag govuk-tag--yellow">
+                  Medium
+                </strong></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/admin/event-summary-5" class="govuk-link--no-visited-state">Conjunction: ONEWEB-0621 vs COSMOS 20</a> </b></td>
+              <td class="govuk-table__cell govuk-body-s">1.264e-2</td>
+              <td class="govuk-table__cell govuk-body-s">7.115e-3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">1056</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">Thursday 5 August 2025</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">21:07:10</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"><strong class="govuk-tag govuk-tag--red">
+                  High
+                </strong></td></td>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/admin/event-summary-5" class="govuk-link--no-visited-state">Conjunction: KAZSTSAT vs AEROCUBE 6A</a> </b></td>
+              <td class="govuk-table__cell govuk-body-s">1.264e-2</td>
+              <td class="govuk-table__cell govuk-body-s">7.455e-3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">230</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5/12/2025</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">21:07:08</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"><strong class="govuk-tag govuk-tag--red">
+                  High
+                </strong></td>>
+              <td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/conjunctions/admin/event-summary-5" class="govuk-link--no-visited-state">Conjunction: RAPIDEYE 2 vs Starlink-31123</a> </b></td>
+              <td class="govuk-table__cell govuk-body-s">1.264e-2</td>
+              <td class="govuk-table__cell govuk-body-s">7.156e-3</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">12457</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">5 January 2026</td>
+              <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">21:07:08</td>
+            </tr>
+          </tbody>
+        </col>
+      </table>
+<a href="/eventhistory" class="govuk-link" download="">Download "Upcoming events" as a CSV</a><p></p>
+
+<a href="/eventhistory" class="govuk-link" download="">Download "Upcoming events" as a JSON</a><p></p>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with this table
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <b>This table shows upcoming conjunction events involving UK satellites.</b>
+          <p> </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Select the <b>event ID</b> to view more information.</li>
+            <li>Each event ID or row represents <b>one conjunction event</b> including all related CDMs and UKSA analysis.</li>
+
+          </ul>
+        </div>
+      </details>
+
+
+  </main>
+</div>
+<script src="<sst-alpha>/<application>.js"></script>
+<script>
+window.MOJFrontend.initAll()
+</script>
+
+{% endblock %}
