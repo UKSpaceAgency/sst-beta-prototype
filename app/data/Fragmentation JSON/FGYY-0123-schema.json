@@ -1,0 +1,357 @@
+{
+  "$defs": {
+    "AffectedRegime": {
+      "enum": [
+        "GEO",
+        "LEO",
+        "MEO",
+        "Lunar"
+      ],
+      "title": "AffectedRegime",
+      "type": "string"
+    },
+    "FragmentationType": {
+      "enum": [
+        "Accidental",
+        "Aerodynamics",
+        "Anomalous",
+        "Collision",
+        "Deliberate",
+        "Electrical",
+        "Explosion",
+        "Propulsion",
+        "Small Impactor",
+        "Unknown"
+      ],
+      "title": "FragmentationType",
+      "type": "string"
+    },
+    "Risk": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "title": "Risk",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "title": "Updated At",
+      "type": "string"
+    },
+    "short_id": {
+      "title": "Short Id",
+      "type": "string"
+    },
+    "event_epoch": {
+      "format": "date-time",
+      "title": "Event Epoch",
+      "type": "string"
+    },
+    "year": {
+      "title": "Year",
+      "type": "integer"
+    },
+    "event_number": {
+      "title": "Event Number",
+      "type": "integer"
+    },
+    "risk": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Risk"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "modelled_fragments": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Modelled Fragments"
+    },
+    "known_fragments": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Known Fragments"
+    },
+    "fragmentation_type": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/FragmentationType"
+        }
+      ],
+      "default": "Unknown"
+    },
+    "affected_regime": {
+      "$ref": "#/$defs/AffectedRegime"
+    },
+    "conjunction_event_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Conjunction Event Id"
+    },
+    "alert_type": {
+      "enum": [
+        "priority",
+        "closedown"
+      ],
+      "title": "Alert Type",
+      "type": "string"
+    },
+    "executive_summary_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Executive Summary Comment"
+    },
+    "closed_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Closed Comment"
+    },
+    "uk_response_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uk Response Comment"
+    },
+    "press_attention_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Press Attention Comment"
+    },
+    "object_history_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Object History Comment"
+    },
+    "orbital_analyst_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Orbital Analyst Comment"
+    },
+    "spaceflight_risk_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Spaceflight Risk Comment"
+    },
+    "fragmentation_type_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fragmentation Type Comment"
+    },
+    "primary_object_common_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Common Name"
+    },
+    "primary_object_norad_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Norad Id"
+    },
+    "primary_object_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Type"
+    },
+    "primary_object_licensing_country": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Object Licensing Country"
+    },
+    "secondary_object_common_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Common Name"
+    },
+    "secondary_object_norad_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Norad Id"
+    },
+    "secondary_object_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Type"
+    },
+    "secondary_object_licensing_country": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Object Licensing Country"
+    },
+    "is_active": {
+      "default": true,
+      "title": "Is Active",
+      "type": "boolean"
+    },
+    "report_number": {
+      "title": "Report Number",
+      "type": "integer"
+    },
+    "report_time": {
+      "format": "date-time",
+      "title": "Report Time",
+      "type": "string"
+    }
+  },
+  "required": [
+    "short_id",
+    "event_epoch",
+    "year",
+    "event_number",
+    "affected_regime",
+    "alert_type",
+    "report_number",
+    "report_time"
+  ],
+  "title": "FragmentationEvent",
+  "type": "object"
+}

@@ -1,0 +1,586 @@
+{
+  "$defs": {
+    "ReentrySurvivability": {
+      "enum": [
+        "Highly likely",
+        "Likely",
+        "Unlikely",
+        "Highly unlikely"
+      ],
+      "title": "ReentrySurvivability",
+      "type": "string"
+    },
+    "Risk": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "title": "Risk",
+      "type": "string"
+    },
+    "_OverflightProbability": {
+      "properties": {
+        "atmospheric_probability": {
+          "title": "Atmospheric Probability",
+          "type": "number"
+        },
+        "fragments_probability": {
+          "title": "Fragments Probability",
+          "type": "number"
+        },
+        "human_casualty_probability": {
+          "title": "Human Casualty Probability",
+          "type": "number"
+        },
+        "overflight_time": {
+          "anyOf": [
+            {
+              "items": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Overflight Time"
+        }
+      },
+      "required": [
+        "atmospheric_probability",
+        "fragments_probability",
+        "human_casualty_probability"
+      ],
+      "title": "_OverflightProbability",
+      "type": "object"
+    },
+    "_ReentryEventReportImpact": {
+      "properties": {
+        "by_nation": {
+          "additionalProperties": {
+            "$ref": "#/$defs/_OverflightProbability"
+          },
+          "title": "By Nation",
+          "type": "object"
+        },
+        "england": {
+          "additionalProperties": {
+            "$ref": "#/$defs/_OverflightProbability"
+          },
+          "title": "England",
+          "type": "object"
+        },
+        "northern_ireland": {
+          "additionalProperties": {
+            "$ref": "#/$defs/_OverflightProbability"
+          },
+          "title": "Northern Ireland",
+          "type": "object"
+        },
+        "scotland": {
+          "additionalProperties": {
+            "$ref": "#/$defs/_OverflightProbability"
+          },
+          "title": "Scotland",
+          "type": "object"
+        },
+        "wales": {
+          "additionalProperties": {
+            "$ref": "#/$defs/_OverflightProbability"
+          },
+          "title": "Wales",
+          "type": "object"
+        },
+        "overseas_territories_and_crown_dependencies": {
+          "additionalProperties": {
+            "$ref": "#/$defs/_OverflightProbability"
+          },
+          "title": "Overseas Territories And Crown Dependencies",
+          "type": "object"
+        },
+        "maritime_and_airspace": {
+          "additionalProperties": {
+            "$ref": "#/$defs/_OverflightProbability"
+          },
+          "title": "Maritime And Airspace",
+          "type": "object"
+        }
+      },
+      "required": [
+        "by_nation",
+        "england",
+        "northern_ireland",
+        "scotland",
+        "wales",
+        "overseas_territories_and_crown_dependencies",
+        "maritime_and_airspace"
+      ],
+      "title": "_ReentryEventReportImpact",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "updated_at": {
+      "format": "date-time",
+      "title": "Updated At",
+      "type": "string"
+    },
+    "short_id": {
+      "title": "Short Id",
+      "type": "string"
+    },
+    "norad_id": {
+      "title": "Norad Id",
+      "type": "string"
+    },
+    "tip_external_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tip External Id"
+    },
+    "time_window_start": {
+      "format": "date-time",
+      "title": "Time Window Start",
+      "type": "string"
+    },
+    "time_window_end": {
+      "format": "date-time",
+      "title": "Time Window End",
+      "type": "string"
+    },
+    "decay_epoch": {
+      "format": "date-time",
+      "title": "Decay Epoch",
+      "type": "string"
+    },
+    "uncertainty_window": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uncertainty Window"
+    },
+    "report_number": {
+      "title": "Report Number",
+      "type": "integer"
+    },
+    "closed_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Closed Comment"
+    },
+    "executive_summary_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Executive Summary Comment"
+    },
+    "immediate_response_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Immediate Response Comment"
+    },
+    "uk_response_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uk Response Comment"
+    },
+    "damages_liability_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Damages Liability Comment"
+    },
+    "press_attention_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Press Attention Comment"
+    },
+    "alert_type": {
+      "items": {
+        "enum": [
+          "priority",
+          "standard",
+          "uk-licensed",
+          "closedown"
+        ],
+        "type": "string"
+      },
+      "title": "Alert Type",
+      "type": "array"
+    },
+    "report_time": {
+      "format": "date-time",
+      "title": "Report Time",
+      "type": "string"
+    },
+    "atmospheric_probability": {
+      "title": "Atmospheric Probability",
+      "type": "number"
+    },
+    "atmospheric_risk": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Risk"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "fragments_probability": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fragments Probability"
+    },
+    "fragments_risk": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Risk"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "fragments_number": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fragments Number"
+    },
+    "human_casualty_probability": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Human Casualty Probability"
+    },
+    "human_casualty_risk": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Risk"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "survivability": {
+      "$ref": "#/$defs/ReentrySurvivability"
+    },
+    "survivability_comment": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Survivability Comment"
+    },
+    "overflight_time": {
+      "items": {
+        "format": "date-time",
+        "type": "string"
+      },
+      "title": "Overflight Time",
+      "type": "array"
+    },
+    "is_active": {
+      "default": true,
+      "title": "Is Active",
+      "type": "boolean"
+    },
+    "object_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Object Name"
+    },
+    "object_type": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Object Type"
+    },
+    "estimated_mass": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Estimated Mass"
+    },
+    "licensing_country": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Licensing Country"
+    },
+    "international_designator": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "International Designator"
+    },
+    "object_height": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Object Height"
+    },
+    "object_width": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Object Width"
+    },
+    "object_span": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Object Span"
+    },
+    "launching_year": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Launching Year"
+    },
+    "apogee": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Apogee"
+    },
+    "perigee": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Perigee"
+    },
+    "inclination": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Inclination"
+    },
+    "impact": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/_ReentryEventReportImpact"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "file_name": {
+      "default": "unknown-filename.json",
+      "title": "File Name",
+      "type": "string"
+    },
+    "uploaded_by_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uploaded By Id"
+    },
+    "deleted_by_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Deleted By Id"
+    }
+  },
+  "required": [
+    "short_id",
+    "norad_id",
+    "time_window_start",
+    "time_window_end",
+    "decay_epoch",
+    "report_number",
+    "alert_type",
+    "report_time",
+    "atmospheric_probability",
+    "survivability",
+    "overflight_time"
+  ],
+  "title": "ReentryEventReport",
+  "type": "object"
+}
