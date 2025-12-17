@@ -32,5 +32,5 @@ router.post('/account/superadmin/invite-new-member', function(request, response)
     } else {
         response.redirect("/account/superadmin/check-user-details2")
     }
-})
 
+})
