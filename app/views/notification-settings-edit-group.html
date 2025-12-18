@@ -124,7 +124,7 @@ Edit your threshold notification settings
         <a class="govuk-breadcrumbs__link" href="/notification-settings">Notification settings</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <span class="govuk-breadcrumbs__link">Edit group</span>
+        <span class="govuk-breadcrumbs__link">Edit custom setting</span>
       </li>
     </ol>
   </div>
@@ -133,25 +133,32 @@ Edit your threshold notification settings
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">Edit group</h1>
+        <h1 class="govuk-heading-xl">Edit custom setting</h1>
 
         <form method="post" action="/notification-settings-group-check">
 
 
           <!-- 1. Group name -->
-          <h2 class="govuk-heading-l">1. Choose a group name</h2>
+<h2 class="govuk-heading-l">1. Choose a name</h2>
 
-          <div class="govuk-form-group">
-            <span id="group-name-hint" class="govuk-hint">
-              Give the group a clear name that reflects the satellites it contains, for example “LEO satellites” or “satellite A”.
-            </span>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="group-name">
+    Custom setting name
+  </label>
 
-            <input class="govuk-input govuk-!-width-two-thirds"
-                   id="group-name"
-                   name="group-name"
-                   type="text"
-                   aria-describedby="group-name-hint">
-          </div>
+  <div id="group-name-hint" class="govuk-hint">
+    Give the custom setting a clear name that reflects the satellites it applies to,
+    for example “LEO satellites” or “satellite A”.
+  </div>
+
+  <input
+    class="govuk-input govuk-!-width-two-thirds"
+    id="group-name"
+    name="group-name"
+    type="text"
+    aria-describedby="group-name-hint">
+</div>
+
 
           <!-- 2. Satellites -->
 <!-- 2. Satellites (Option A: toolbar + table) -->
@@ -476,7 +483,7 @@ Edit your threshold notification settings
 
           <!-- 3. Thresholds -->
           <h2 class="govuk-heading-l">
-            3. Choose when we notify you about this group
+            3. Choose when we notify you about these satellites
           </h2>
 
           <div id="group-thresholds" class="govuk-form-group">
@@ -623,7 +630,7 @@ Edit your threshold notification settings
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="group-disable" type="checkbox" data-behaviour="exclusive">
                 <label class="govuk-label govuk-checkboxes__label" for="group-disable">
-                  Disable all notifications for this group
+                  Disable all notifications for these satellites
                 </label>
               </div>
 
