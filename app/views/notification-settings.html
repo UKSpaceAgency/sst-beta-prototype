@@ -161,7 +161,7 @@ View your notification settings configuration
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
         <!-- Satellite groups + thresholds table -->
         <h2 class="govuk-heading-l">
-          Conjunction event thresholds for satellite groups
+          Customise your notification settings for conjunction events
         </h2>
 
         <p class="govuk-body">
@@ -179,7 +179,7 @@ View your notification settings configuration
                 </tr>
     
                 <tr class="govuk-table__row">
-                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Satellite group name</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Satellites</th>
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Notification setting</th>
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Probability of Collision (%)</th>
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Total miss distance (m)</th>
@@ -232,7 +232,7 @@ View your notification settings configuration
         <a class="govuk-button govuk-!-margin-top-4"
           data-module="govuk-button"
           href="/notification-settings-edit-group">
-          Create a new satellite group
+          Add custom notification settings
         </a>
 
 
@@ -245,7 +245,7 @@ View your notification settings configuration
           <div class="govuk-details__text">
             <p class="govuk-body">
               <strong>Custom thresholds set</strong> means you will receive notifications when a conjunction event
-              meets <strong>all</strong> selected thresholds for that group.
+              involving any satellite selected for that group meets <strong>all</strong> selected thresholds.
             </p>
             <p class="govuk-body">
               <strong>Notifications disabled </strong> means we will not send any notifications about conjunction events for satellites in this group.
@@ -254,9 +254,7 @@ View your notification settings configuration
               <strong>Do not notify for conjunctions with</strong> lets you stop notifications when satellites in this group are in a conjunction with a specific object. This can be useful when you are running tests with that object.
             </p>
              <p class="govuk-body">
-              To change the satellites in a group or its thresholds, select the group name in the table or the edit button.
-            </p>
-
+            </p> You can change or delete each of the custom settings listed in the table by selecting 'edit' or 'delete'.
           </div>
         </details>
 
