@@ -124,7 +124,7 @@ Edit your threshold notification settings
         <a class="govuk-breadcrumbs__link" href="/notification-settings">Notification settings</a>
       </li>
       <li class="govuk-breadcrumbs__list-item">
-        <span class="govuk-breadcrumbs__link">Edit custom notification</span>
+        <span class="govuk-breadcrumbs__link">Add custom thresholds</span>
       </li>
     </ol>
   </div>
@@ -133,28 +133,28 @@ Edit your threshold notification settings
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">Edit custom notification</h1>
+        <h1 class="govuk-heading-xl">Add custom thresholds</h1>
 
-        <form method="post" action="/notification-settings-group-check">
+        <form method="post" action="/notification-settings-custom-check">
 
 
-          <!-- 1. Group name -->
+          <!-- 1. Custom thresholds name -->
 <h2 class="govuk-heading-l">1. Choose a name</h2>
 
 <div class="govuk-form-group">
-  <label class="govuk-label" for="group-name">
+  <label class="govuk-label" for="custom-name">
     Custom notification name
   </label>
 
-  <div id="group-name-hint" class="govuk-hint">
-    Give the custom notification a clear name that reflects the satellites it applies to,
+  <div id="custom-name-hint" class="govuk-hint">
+    Give the custom thresholds a clear name that reflects the satellites they apply to,
     for example “LEO satellites” or “satellite A”.
   </div>
 
   <input
     class="govuk-input govuk-!-width-two-thirds"
-    id="group-name"
-    name="group-name"
+    id="custom-name"
+    name="custom-name"
     type="text"
     aria-describedby="group-name-hint">
 </div>
@@ -483,7 +483,7 @@ Edit your threshold notification settings
 
           <!-- 3. Thresholds -->
           <h2 class="govuk-heading-l">
-            3. Choose when we notify you about these satellites
+            3. Set custom thresholds or disable notifications
           </h2>
 
           <div id="group-thresholds" class="govuk-form-group">
@@ -500,25 +500,24 @@ Edit your threshold notification settings
                 </label>
 
                 <div id="group-custom-thresholds-hint" class="govuk-hint govuk-checkboxes__hint">
-                  Select the thresholds that matter to you. You’ll only get a notification if a conjunction event crosses all of the chosen thresholds.
-                </div>
+                  We will send you notifications when a conjunction event crosses all of the thresholds you have set. You do not have to specify thresholds for all criteria - if you do not, the default thresholds set by NSpOC will apply. 
               </div>
 
               <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                   id="group-custom-thresholds-conditional">
+                   id="custom-thresholds-conditional">
 
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input"
-                         id="group-poc"
+                         id="custom-poc"
                          type="checkbox"
-                         data-aria-controls="group-poc-conditional">
-                  <label class="govuk-label govuk-checkboxes__label" for="group-poc">
+                         data-aria-controls="custom-poc-conditional">
+                  <label class="govuk-label govuk-checkboxes__label" for="customp-poc">
                     Probability of collision is above
                   </label>
                 </div>
 
                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                     id="group-poc-conditional">
+                     id="custom-poc-conditional">
                   <table class="govuk-table satellite-setting" style="width:100%">
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
@@ -538,16 +537,16 @@ Edit your threshold notification settings
 
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input"
-                         id="group-total-miss"
+                         id="custom-total-miss"
                          type="checkbox"
-                         data-aria-controls="group-total-miss-conditional">
-                  <label class="govuk-label govuk-checkboxes__label" for="group-total-miss">
+                         data-aria-controls="custom-total-miss-conditional">
+                  <label class="govuk-label govuk-checkboxes__label" for="custom-total-miss">
                     Total miss distance is below
                   </label>
                 </div>
 
                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                     id="group-total-miss-conditional">
+                     id="custom-total-miss-conditional">
                   <table class="govuk-table satellite-setting" style="width:100%">
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
@@ -567,16 +566,16 @@ Edit your threshold notification settings
 
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input"
-                         id="group-radial-miss"
+                         id="custom-radial-miss"
                          type="checkbox"
-                         data-aria-controls="group-radial-miss-conditional">
-                  <label class="govuk-label govuk-checkboxes__label" for="group-radial-miss">
+                         data-aria-controls="custom-radial-miss-conditional">
+                  <label class="govuk-label govuk-checkboxes__label" for="custom-radial-miss">
                     Mean radial miss distance is below
                   </label>
                 </div>
 
                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                     id="group-radial-miss-conditional">
+                     id="custom-radial-miss-conditional">
                   <table class="govuk-table satellite-setting" style="width:100%">
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
@@ -596,16 +595,16 @@ Edit your threshold notification settings
 
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input"
-                         id="group-tca"
+                         id="custom-tca"
                          type="checkbox"
-                         data-aria-controls="group-tca-conditional">
-                  <label class="govuk-label govuk-checkboxes__label" for="group-tca">
+                         data-aria-controls="custom-tca-conditional">
+                  <label class="govuk-label govuk-checkboxes__label" for="custom-tca">
                     Time to conjunction event is below
                   </label>
                 </div>
 
                 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                     id="group-tca-conditional">
+                     id="custom-tca-conditional">
                   <table class="govuk-table satellite-setting" style="width:100%">
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
@@ -645,7 +644,7 @@ Edit your threshold notification settings
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="exception-hint">
               <div id="exception-hint" class="govuk-hint">
-                Set an exception to stop notifications for events involving specific satellites.
+                Set an exception to stop notifications for conjunction events between a satellite from this group and another specified satellite.
               </div>
 
               <div class="govuk-radios" data-module="govuk-radios">
@@ -694,7 +693,7 @@ Edit your threshold notification settings
 
    <a class="govuk-button govuk-!-margin-top-4"
           data-module="govuk-button"
-          href="/notification-settings-group-check">
+          href="/notification-settings-custom-check">
           Continue
         </a>
 
