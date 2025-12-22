@@ -1,200 +1,318 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-View your notification settings
+Notification settings
 {% endblock %}
 
 {% block content %}
+<style>
+  .govuk-table__header, .govuk-table__cell {
+    vertical-align: middle;
+  }
+  .govuk-table__cell {
+    font-weight: normal;
+  }
+  .threshold-style {
+    vertical-align: middle;
+	margin-top: -20px;
+    margin-left: 70px; 
+    margin-bottom: 5px;
+    width: calc(100% - 70px);
+  }
+  .threshold-style th{
+    width: 550px;
+  }
+  .inactive {
+    opacity: 40%;
+  }
+  .editSatBtn {
+    color: #1d70b8;
+  }
+  .no-border th, .no-border td{
+    border: none;
+  }
+  #default-label {
+    margin-bottom: 10px;
+  }
+</style>
 
 <div class="govuk-width-container">
-
-  <div class="govuk-breadcrumbs">
+    <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/account/operator/account">Account</a>
+        <a class="govuk-breadcrumbs__link" href="/account/operator/account">
+          Account
+        </a>
       </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <span class="govuk-breadcrumbs__link">Notification settings</span>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">
+        Notification settings
       </li>
     </ol>
-  </div>
+    </div>
 
   <main class="govuk-main-wrapper" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-
-        <h1 class="govuk-heading-xl">
-          Your notification settings
-        </h1>
-
-        <p class="govuk-body">
-          This page allows you to adjust your notification settings for conjunction events. 
-        </p>
+        <h1 class="govuk-heading-xl">Notification settings
+          </h1>
+          <p class="govuk-body">
+          This page allows you to adjust your notification settings for conjunction events.
+          </p>
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-                <!-- Communication preferences -->
-<h2 class="govuk-heading-l">
-  Communication preferences
-</h2>
-
-<p class="govuk-body">
-  Select the type of updates you want to receive, and the frequency and format of those updates.
-</p>
-
-<div class="govuk-accordion" data-module="govuk-accordion" id="communication-preferences">
-
-  <!-- 1. Notification type -->
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h3 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button">
-          Notification type
-        </span>
-      </h3>
-    </div>
-
-    <div class="govuk-accordion__section-content">
-      <p class="govuk-body">
-        Receive notifications when:
-      </p>
-
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="event-new" name="event-new" type="checkbox">
-          <label class="govuk-label govuk-checkboxes__label" for="event-new">
-            A new conjunction event meets your thresholds
-          </label>
-        </div>
-
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="event-updated" name="event-updated" type="checkbox">
-          <label class="govuk-label govuk-checkboxes__label" for="event-updated">
-            An updated conjunction event meets your thresholds
-          </label>
-        </div>
-
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="event-nspoc" name="event-nspoc" type="checkbox">
-          <label class="govuk-label govuk-checkboxes__label" for="event-nspoc">
-            New NSpOC analysis is uploaded
-          </label>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- 2. Notification frequency -->
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h3 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button">
-          Notification frequency
-        </span>
-      </h3>
-    </div>
-
-    <div class="govuk-accordion__section-content">
-
-      <p class="govuk-body">
-        How often do you want to receive notifications? We'll group together notifications into one email or SMS. 
-      </p>
-
-      <div class="govuk-form-group">
-        <select class="govuk-select govuk-!-width-one-half" id="delivery-frequency" name="delivery-frequency">
-          <option value="12-hours" selected>Every 2 hours (default)</option>
-          <option value="6-hours">Every 12 hours</option>
-          <option value="3-hours">Every 24 hours</option>
-        </select>
-      </div>
-
-    </div>
-  </div>
-
-
-  <!-- 3. Notification format -->
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h3 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button">
-          Notification format
-        </span>
-      </h3>
-    </div>
-
-    <div class="govuk-accordion__section-content">
-
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="delivery-email" name="delivery-email" type="checkbox">
-          <label class="govuk-label govuk-checkboxes__label" for="delivery-email">
-            Email
-          </label>
-        </div>
-
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="delivery-sms" name="delivery-sms" type="checkbox">
-          <label class="govuk-label govuk-checkboxes__label" for="delivery-sms">
-            SMS
-          </label>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-</div>
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-        <!-- Custom thresholds -->
+        <!-- Communication preferences -->
         <h2 class="govuk-heading-l">
-          Custom thresholds
-        </h2>
+          Communication preferences
+          </h2>
+          <p class="govuk-body">
+            You can choose the type of updates you want to receive, and the frequency and format of those updates.
+          </p>
 
-        <p class="govuk-body">
-          This table lists the custom thresholds you have set for specific satellites. Add custom thresholds using the button below, or edit existing custom thresholds using the links in the table.
-        </p>
+          <!-- What type of notifications do you want to receive? -->
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                What type of notifications do you want to receive?
+              </h3>
+            </legend>
+              <p class="govuk-body">
+                Receive notifications when:
+              </p>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="event-new" name="event-new" type="checkbox">
+                  <label class="govuk-label govuk-checkboxes__label" for="event-new">
+                    A new conjunction event meets your thresholds
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="event-updated" name="event-updated" type="checkbox">
+                  <label class="govuk-label govuk-checkboxes__label" for="event-updated">
+                    An updated conjunction event meets your thresholds
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="event-nspoc" name="event-nspoc" type="checkbox">
+                  <label class="govuk-label govuk-checkboxes__label" for="event-nspoc">
+                    New NSpOC analysis is uploaded for a conjunction event which meets your thresholds
+                  </label>
+                </div>
+                </div>
+          </fieldset>
+          </div>
 
-        <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+          <!-- How frequent should notifications be? -->
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+              How frequent should notifications be?
+              </h3>
+            </legend>
+            <p class="govuk-body">
+              We'll group together notifications into one email or SMS. 
+            </p>
+            <div class="govuk-form-group">
+              <select class="govuk-select govuk-!-width-one-half" id="delivery-frequency" name="delivery-frequency">
+                <option value="2-hours" selected>Every 2 hours (default)</option>
+                <option value="12-hours">Every 12 hours</option>
+                <option value="24-hours">Every 24 hours</option>
+              </select>
+            </div> 
+          </fieldset>
+          </div>
+
+          <!-- What format should notifications be? -->
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+              What format should notifications be?
+              </h3>
+            </legend>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="delivery-email" name="delivery-email" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="delivery-email">
+                  Email
+                </label>
+              </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="delivery-sms" name="delivery-sms" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label" for="delivery-sms">
+                  SMS
+                </label>
+              </div>
+            </fieldset>
+          </div>
+           
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <!-- General thresholds -->
+        <h2 class="govuk-heading-l">
+          General thresholds
+          </h2>
+          <p class="govuk-body">
+            We will send you notifications when a conjunction event crosses all of the thresholds you have set. You do not have to specify thresholds for all criteria - if you do not, the default thresholds set by NSpOC will apply.
+          </p>
+          <p class="govuk-body">
+          You are responsible for the safe operation of your satellites and should choose settings which allow you to do this. The default thresholds may not be the most appropriate thresholds for your satellites.
+          </p>
+          <p class="govuk-body">
+          You can set general thresholds which apply to all satellites, then create exceptions by specifying custom thresholds which apply to specific satellites or disabling notifications altogether for specific satellites.
+          </p>
+
+          <table class="govuk-table no-border" style="width:100%" id="general-thresholds">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" style="width:40%">Criteria</th>
+                <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+              </tr>
+            </thead>
+          </table>
+
+            <!-- Probability of collision threshold -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="general-poc-check" name="general-poc-check" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision</label>
+              </div>
+                <table class="govuk-table threshold-style inactive">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell">Probability of collision is above:
+                      </th>
+                      <td class="govuk-table__cell">  
+                        <div class="govuk-input__wrapper"> 
+                          <input class="govuk-input govuk-input--width-5" id="general-poc-value" name="general-poc-value" type="text" spellcheck="false" value = "0.01">
+                          <div class="govuk-input__suffix" aria-hidden="true">%
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            <!-- total mean distance threshold -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="general-tmd-check" name="general-tmd-check" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Total miss distance</label>
+              </div>
+                <table class="govuk-table threshold-style inactive">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell">Total miss distance is above:
+                      </th>
+                      <td class="govuk-table__cell">  
+                        <div class="govuk-input__wrapper"> 
+                          <input class="govuk-input govuk-input--width-5" id="general-tmd-value" name="general-tmd-value" type="text" spellcheck="false" value = "1000">
+                          <div class="govuk-input__suffix" aria-hidden="true">metres
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            
+            <!-- mean radial distance threshold -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="general-mrd-check" name="general-mrd-check" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Mean radial distance</label>
+              </div>
+                <table class="govuk-table threshold-style inactive">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell">Mean radial distance is below:
+                      </th>
+                      <td class="govuk-table__cell">  
+                        <div class="govuk-input__wrapper"> 
+                          <input class="govuk-input govuk-input--width-5" id="general-mrd-value" name="general-mrd-value" type="text" spellcheck="false" value = "1000">
+                          <div class="govuk-input__suffix" aria-hidden="true">metres
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+            <!-- time to conjunction event threshold-->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="general-tce-check" name="general-tce-check" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Time till conjunction event
+                </label>
+              </div>
+                <table class="govuk-table threshold-style inactive">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell">Time till conjunction event is below:
+                      </th>
+                      <td class="govuk-table__cell">  
+                        <div class="govuk-input__wrapper"> 
+                          <input class="govuk-input govuk-input--width-5" id="general-tce-value" name="general-tce-value" type="text" spellcheck="false" value = "1">
+                          <div class="govuk-input__suffix" aria-hidden="true">hour(s)
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <!-- Custom thresholds -->
+        <div>
+          <h2 class="govuk-heading-l">
+            Custom thresholds
+          </h2>
+          <p class="govuk-body">
+            This table lists the custom thresholds you have set for specific satellites. Add custom thresholds using the button below, or edit existing custom thresholds using the links in the table.
+          </p>
+        </div>
+
+                <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
               <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b></b></td>
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Thresholds</b></td>
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Exception</b></td> 
-                  <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Configure</b></td>            
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b></b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Thresholds</b></th>
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Exception</b></th> 
+                  <th scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Configure</b></th>            
                 </tr>
     
                 <tr class="govuk-table__row">
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Satellites</th>
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Notification setting</th>
-                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Probability of Collision (%)</th>
+                  <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Probability of collision (%)</th>
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Total miss distance (m)</th>
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Mean radial miss distance (m)</th>
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Time to conjunction event (hrs)</th>
                   <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Do not notify for conjunctions with</th>
-                  <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 7%";></th>
-                  <th scope="col" class="govuk-table__header govuk-body-s" span="1" style="width: 7%";></th>  
+                  <th scope="col" class="govuk-table__header govuk-body-s"> <span class="govuk-visually-hidden">Edit</span></th>
+                  <th scope="col" class="govuk-table__header govuk-body-s"><span class="govuk-visually-hidden">Delete</span></th>
                 </tr>
               </thead>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">Skynet 4C</a></td>
+                  <td class="govuk-table__cell govuk-body-s">Skynet 4C</a></td>
                   <td class="govuk-table__cell govuk-body-s">Custom thresholds set</td>
-                  <td class="govuk-table__cell govuk-body-s"></td>
-                  <td class="govuk-table__cell govuk-body-s"></td>
-                  <td class="govuk-table__cell govuk-body-s"></td>
-                  <td class="govuk-table__cell govuk-body-s"></td>
+                  <td class="govuk-table__cell govuk-body-s">0.02</td>
+                  <td class="govuk-table__cell govuk-body-s">3000</td>
+                  <td class="govuk-table__cell govuk-body-s">1500</td>
+                  <td class="govuk-table__cell govuk-body-s">12</td>
                   <td class="govuk-table__cell govuk-body-s"></td>
                   <td class="govuk-table__cell govuk-body-s"><a href="">edit</a></td>
                   <td class="govuk-table__cell govuk-body-s" ><a href="">delete</a></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">LEO satellites</a></td>
+                  <td class="govuk-table__cell govuk-body-s">LEO satellites</a></td>
                   <td class="govuk-table__cell govuk-body-s">Notifications disabled</td>
                   <td class="govuk-table__cell govuk-body-s"></td>
                   <td class="govuk-table__cell govuk-body-s"></td>
@@ -205,7 +323,7 @@ View your notification settings
                   <td class="govuk-table__cell govuk-body-s"><a href="">delete</a></td>
                 </tr>
                 <tr class="govuk-table__row">
-                  <td class="govuk-table__cell govuk-body-s"><a href="/satellites/operator/satellite-1" class="govuk-link--no-visited-state">All satellites</a></td>
+                  <td class="govuk-table__cell govuk-body-s">UK-licensed satellites</a></td>
                   <td class="govuk-table__cell govuk-body-s">Custom thresholds set</td>
                   <td class="govuk-table__cell govuk-body-s"></td>
                   <td class="govuk-table__cell govuk-body-s">2000</td>
@@ -216,42 +334,32 @@ View your notification settings
                   <td class="govuk-table__cell govuk-body-s"><a href="">delete</a></td>
                 </tr>
               </tbody>
-            </col>
           </table>
         </div>
 
+        <!-- add custom thresholds button -->
         <a class="govuk-button govuk-!-margin-top-4"
           data-module="govuk-button"
           href="/notification-settings-edit-group">
           Add custom thresholds
         </a>
 
-
-        <details class="govuk-details govuk-!-margin-top-4">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Help with this table
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            <p class="govuk-body">
-              <strong>Custom thresholds set</strong> means you will receive notifications when a conjunction event
-              involving any satellite in that group meets <strong>all</strong> selected thresholds.
-            </p>
-            <p class="govuk-body">
-              <strong>Notifications disabled </strong> means we will not send any notifications about conjunction events for satellites in this group.
-            </p>
-            <p class="govuk-body">
-              <strong>Do not notify for conjunctions with</strong> lets you stop notifications for conjunction events between a satellite from this group and another specified satellite. This can be useful when you are running tests with that object.
-            </p>
-             <p class="govuk-body">
-            </p> You can change or delete each of the custom thresholds listed in the table by selecting 'edit' or 'delete'.
+      <!-- content above here -->
           </div>
-        </details>
-
-      </div>
     </div>
   </main>
 </div>
+
+  <script>
+    /* Grey out unchecked boxes */
+  document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
+    checkbox.addEventListener('change', (event) => {
+      const table = checkbox.closest('.govuk-checkboxes__item').nextElementSibling;
+      if (table && table.tagName === 'TABLE') {
+        table.classList.toggle('inactive', !checkbox.checked);
+      }
+    });
+  });
+  </script>
 
 {% endblock %}
