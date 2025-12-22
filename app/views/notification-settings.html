@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-View your notification settings configuration
+View your notification settings
 {% endblock %}
 
 {% block content %}
@@ -31,14 +31,6 @@ View your notification settings configuration
           This page allows you to adjust your notification settings for conjunction events. 
         </p>
 
-        <p class="govuk-body">
-          You can choose which notifications you receive, how you receive them and how often. 
-        </p>
-
-        <p class="govuk-body">
-          You also have the ability to set custom thresholds for conjunction events and choose which satellites they apply to. 
-        </p>
-
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
                 <!-- Communication preferences -->
@@ -47,24 +39,24 @@ View your notification settings configuration
 </h2>
 
 <p class="govuk-body">
-  Tell us what kind of updates you want to receive, and how you want to get them. 
+  Select the type of updates you want to receive, and the frequency and format of those updates.
 </p>
 
 <div class="govuk-accordion" data-module="govuk-accordion" id="communication-preferences">
 
-  <!-- 1. Send me notifications for events -->
+  <!-- 1. Notification type -->
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h3 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button">
-          What you want to be notified about
+          Notification type
         </span>
       </h3>
     </div>
 
     <div class="govuk-accordion__section-content">
       <p class="govuk-body">
-        Receive notifications when a:
+        Receive notifications when:
       </p>
 
       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -72,14 +64,14 @@ View your notification settings configuration
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="event-new" name="event-new" type="checkbox">
           <label class="govuk-label govuk-checkboxes__label" for="event-new">
-            New conjunction event meets your thresholds
+            A new conjunction event meets your thresholds
           </label>
         </div>
 
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="event-updated" name="event-updated" type="checkbox">
           <label class="govuk-label govuk-checkboxes__label" for="event-updated">
-            Updated conjunction event meets your thresholds
+            An updated conjunction event meets your thresholds
           </label>
         </div>
 
@@ -95,12 +87,12 @@ View your notification settings configuration
   </div>
 
 
-  <!-- 2. Group notifications together -->
+  <!-- 2. Notification frequency -->
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h3 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button">
-          How often do you want to receive notifications?
+          Notification frequency
         </span>
       </h3>
     </div>
@@ -108,14 +100,14 @@ View your notification settings configuration
     <div class="govuk-accordion__section-content">
 
       <p class="govuk-body">
-        We'll group together notifications into one email or SMS. 
+        How often do you want to receive notifications? We'll group together notifications into one email or SMS. 
       </p>
 
       <div class="govuk-form-group">
         <select class="govuk-select govuk-!-width-one-half" id="delivery-frequency" name="delivery-frequency">
           <option value="12-hours" selected>Every 2 hours (default)</option>
           <option value="6-hours">Every 12 hours</option>
-          <option value="3-hours">Once a day</option>
+          <option value="3-hours">Every 24 hours</option>
         </select>
       </div>
 
@@ -123,12 +115,12 @@ View your notification settings configuration
   </div>
 
 
-  <!-- 3. Delivery method -->
+  <!-- 3. Notification format -->
   <div class="govuk-accordion__section">
     <div class="govuk-accordion__section-header">
       <h3 class="govuk-accordion__section-heading">
         <span class="govuk-accordion__section-button">
-          How would you like to be notified? 
+          Notification format
         </span>
       </h3>
     </div>
@@ -159,14 +151,13 @@ View your notification settings configuration
 </div>
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-        <!-- Satellite groups + thresholds table -->
+        <!-- Custom thresholds -->
         <h2 class="govuk-heading-l">
-          Customise your notification settings for conjunction events
+          Custom thresholds
         </h2>
 
         <p class="govuk-body">
-          This table allows you to control when you receive notifications for a conjunction event.
-          By setting thresholds, you can choose which thresholds are most important to you and which satellites matter most.
+          This table lists the custom thresholds you have set for specific satellites. Add custom thresholds using the button below, or edit existing custom thresholds using the links in the table.
         </p>
 
         <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
@@ -232,7 +223,7 @@ View your notification settings configuration
         <a class="govuk-button govuk-!-margin-top-4"
           data-module="govuk-button"
           href="/notification-settings-edit-group">
-          Add custom notification settings
+          Add custom thresholds
         </a>
 
 
@@ -245,16 +236,16 @@ View your notification settings configuration
           <div class="govuk-details__text">
             <p class="govuk-body">
               <strong>Custom thresholds set</strong> means you will receive notifications when a conjunction event
-              involving any satellite selected for that group meets <strong>all</strong> selected thresholds.
+              involving any satellite in that group meets <strong>all</strong> selected thresholds.
             </p>
             <p class="govuk-body">
               <strong>Notifications disabled </strong> means we will not send any notifications about conjunction events for satellites in this group.
             </p>
             <p class="govuk-body">
-              <strong>Do not notify for conjunctions with</strong> lets you stop notifications when satellites in this group are in a conjunction with a specific object. This can be useful when you are running tests with that object.
+              <strong>Do not notify for conjunctions with</strong> lets you stop notifications for conjunction events between a satellite from this group and another specified satellite. This can be useful when you are running tests with that object.
             </p>
              <p class="govuk-body">
-            </p> You can change or delete each of the custom settings listed in the table by selecting 'edit' or 'delete'.
+            </p> You can change or delete each of the custom thresholds listed in the table by selecting 'edit' or 'delete'.
           </div>
         </details>
 
