@@ -7,6 +7,35 @@ Edit your threshold notification settings
 {% block content %}
 
 <style>
+/* Greyed-out questions for setting thresholds */
+  .govuk-table__header, .govuk-table__cell {
+    vertical-align: middle;
+  }
+  .govuk-table__cell {
+    font-weight: normal;
+  }
+  .threshold-style {
+    vertical-align: middle;
+	margin-top: -20px;
+    margin-left: 70px; 
+    margin-bottom: 5px;
+    width: calc(100% - 70px);
+  }
+  .threshold-style th{
+    width: 550px;
+  }
+  .inactive {
+    opacity: 40%;
+  }
+  .editSatBtn {
+    color: #1d70b8;
+  }
+  .no-border th, .no-border td{
+    border: none;
+  }
+  #default-label {
+    margin-bottom: 10px;
+  }
 
 /* Make the columns behave predictably */
 #satellite-table {
@@ -87,11 +116,11 @@ Edit your threshold notification settings
   }
 
   /* Indent threshold checkboxes + their conditional blocks */
-  #group-custom-thresholds-conditional .govuk-checkboxes__item {
+  #custom-thresholds-conditional .govuk-checkboxes__item {
     margin-left: 25px;
   }
 
-  #group-custom-thresholds-conditional .govuk-checkboxes__conditional {
+  #custom-thresholds-conditional .govuk-checkboxes__conditional {
     margin-left: 25px;
   }
   /* Tighten spacing between search and filters */
@@ -478,164 +507,150 @@ Edit your threshold notification settings
   </tbody>
 </table>
 
-
           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
           <!-- 3. Thresholds -->
-          <h2 class="govuk-heading-l">
-            3. Set custom thresholds or disable notifications
-          </h2>
+           <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="custom-or-disable-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        3. Set custom thresholds or disable notifications
+      </h1>
+    </legend>
+    <div id="custom-or-disable" class="govuk-hint">
+      Select one option
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="custom-thresholds-check" name="custom-or-disable" type="radio" value="custom-thresholds-check" data-aria-controls="conditional-custom-thresholds-check">
+        <label class="govuk-label govuk-radios__label" for="custom-thresholds-check">
+          Set custom thresholds
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-custom-thresholds-check">
+       <!-- custom thresholds -->
+          <p class="govuk-body">
+            We will send you notifications when a conjunction event involving any satellite in this group crosses all of the thresholds you have set. You do not have to specify thresholds for all criteria.
+          </p>
+          <p class="govuk-body">
+          You are responsible for the safe operation of your satellites and should choose settings which allow you to do this. The example thresholds may not be the most appropriate thresholds for your satellites.
+          </p>
 
-          <div id="group-thresholds" class="govuk-form-group">
+          <table class="govuk-table no-border" style="width:100%" id="custom-thresholds-questions">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header" style="width:40%">Criteria</th>
+                <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+              </tr>
+            </thead>
+          </table>
+
+            <!-- Probability of collision threshold -->
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input"
-                       id="group-custom-thresholds"
-                       type="checkbox"
-                       data-aria-controls="group-custom-thresholds-conditional"
-                       aria-describedby="group-custom-thresholds-hint">
-                <label class="govuk-label govuk-checkboxes__label" for="group-custom-thresholds">
-                  Use custom notification thresholds
-                </label>
-
-                <div id="group-custom-thresholds-hint" class="govuk-hint govuk-checkboxes__hint">
-                  We will send you notifications when a conjunction event crosses all of the thresholds you have set. You do not have to specify thresholds for all criteria - if you do not, the default thresholds set by NSpOC will apply. 
+                <input class="govuk-checkboxes__input" id="custom-poc-check" name="custom-poc-check" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision</label>
+              </div>
+                <table class="govuk-table threshold-style inactive">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell">Probability of collision is above:
+                      </th>
+                      <td class="govuk-table__cell">  
+                        <div class="govuk-input__wrapper"> 
+                          <input class="govuk-input govuk-input--width-5" id="custom-poc-value" name="custom-poc-value" type="text" spellcheck="false" value = "0.01">
+                          <div class="govuk-input__suffix" aria-hidden="true">%
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
 
-              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                   id="custom-thresholds-conditional">
-
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input"
-                         id="custom-poc"
-                         type="checkbox"
-                         data-aria-controls="custom-poc-conditional">
-                  <label class="govuk-label govuk-checkboxes__label" for="customp-poc">
-                    Probability of collision is above
-                  </label>
-                </div>
-
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                     id="custom-poc-conditional">
-                  <table class="govuk-table satellite-setting" style="width:100%">
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__cell">
-                          <span class="govuk-visually-hidden">Probability of collision is above:</span>
-                        </th>
-                        <td class="govuk-table__cell">
-                          <div class="govuk-input__wrapper">
-                            <input class="govuk-input govuk-input--width-5" name="group-poc-value" type="text" spellcheck="false">
-                            <div class="govuk-input__suffix" aria-hidden="true">%</div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input"
-                         id="custom-total-miss"
-                         type="checkbox"
-                         data-aria-controls="custom-total-miss-conditional">
-                  <label class="govuk-label govuk-checkboxes__label" for="custom-total-miss">
-                    Total miss distance is below
-                  </label>
-                </div>
-
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                     id="custom-total-miss-conditional">
-                  <table class="govuk-table satellite-setting" style="width:100%">
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__cell">
-                          <span class="govuk-visually-hidden">Total miss distance is below:</span>
-                        </th>
-                        <td class="govuk-table__cell">
-                          <div class="govuk-input__wrapper">
-                            <input class="govuk-input govuk-input--width-5" name="group-total-miss-value" type="text" spellcheck="false">
-                            <div class="govuk-input__suffix" aria-hidden="true">m</div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input"
-                         id="custom-radial-miss"
-                         type="checkbox"
-                         data-aria-controls="custom-radial-miss-conditional">
-                  <label class="govuk-label govuk-checkboxes__label" for="custom-radial-miss">
-                    Mean radial miss distance is below
-                  </label>
-                </div>
-
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                     id="custom-radial-miss-conditional">
-                  <table class="govuk-table satellite-setting" style="width:100%">
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__cell">
-                          <span class="govuk-visually-hidden">Mean radial miss distance is below:</span>
-                        </th>
-                        <td class="govuk-table__cell">
-                          <div class="govuk-input__wrapper">
-                            <input class="govuk-input govuk-input--width-5" name="group-radial-miss-value" type="text" spellcheck="false">
-                            <div class="govuk-input__suffix" aria-hidden="true">m</div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input"
-                         id="custom-tca"
-                         type="checkbox"
-                         data-aria-controls="custom-tca-conditional">
-                  <label class="govuk-label govuk-checkboxes__label" for="custom-tca">
-                    Time to conjunction event is below
-                  </label>
-                </div>
-
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
-                     id="custom-tca-conditional">
-                  <table class="govuk-table satellite-setting" style="width:100%">
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__cell">
-                          <span class="govuk-visually-hidden">Time to conjunction is below:</span>
-                        </th>
-                        <td class="govuk-table__cell">
-                          <div class="govuk-input__wrapper">
-                            <input class="govuk-input govuk-input--width-5" name="group-tca-value" type="text" spellcheck="false">
-                            <div class="govuk-input__suffix" aria-hidden="true">hours</div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-              </div>
-
-              <div class="govuk-checkboxes__divider">or</div>
-
+            <!-- total mean distance threshold -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="group-disable" type="checkbox" data-behaviour="exclusive">
-                <label class="govuk-label govuk-checkboxes__label" for="group-disable">
-                  Disable all notifications for these satellites
-                </label>
+                <input class="govuk-checkboxes__input" id="custom-tmd-check" name="custom-tmd-check" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Total miss distance</label>
               </div>
-
+                <table class="govuk-table threshold-style inactive">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell">Total miss distance is above:
+                      </th>
+                      <td class="govuk-table__cell">  
+                        <div class="govuk-input__wrapper"> 
+                          <input class="govuk-input govuk-input--width-5" id="custom-tmd-value" name="custom-tmd-value" type="text" spellcheck="false" value = "1000">
+                          <div class="govuk-input__suffix" aria-hidden="true">metres
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
             </div>
-          </div>
+            
+            <!-- mean radial distance threshold -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="custom-mrd-check" name="custom-mrd-check" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Mean radial distance</label>
+              </div>
+                <table class="govuk-table threshold-style inactive">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell">Mean radial distance is below:
+                      </th>
+                      <td class="govuk-table__cell">  
+                        <div class="govuk-input__wrapper"> 
+                          <input class="govuk-input govuk-input--width-5" id="custom-mrd-value" name="custom-mrd-value" type="text" spellcheck="false" value = "1000">
+                          <div class="govuk-input__suffix" aria-hidden="true">metres
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
 
+            <!-- time to conjunction event threshold-->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="custom-tce-check" name="custom-tce-check" type="checkbox">
+                <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Time till conjunction event
+                </label>
+              </div>
+                <table class="govuk-table threshold-style inactive">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">   
+                      <th scope="row" class="govuk-table__cell">Time till conjunction event is below:
+                      </th>
+                      <td class="govuk-table__cell">  
+                        <div class="govuk-input__wrapper"> 
+                          <input class="govuk-input govuk-input--width-5" id="custom-tce-value" name="custom-tce-value" type="text" spellcheck="false" value = "1">
+                          <div class="govuk-input__suffix" aria-hidden="true">hour(s)
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="disable-notifications" name="custom-or-disable" type="radio" value="disable-notifications" data-aria-controls="conditional-disable-notifications">
+        <label class="govuk-label govuk-radios__label" for="disable-notifications">
+          Disable all notifications
+        </label>
+      </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+ 
           <!-- 4. Exceptions -->
           <h2 class="govuk-heading-l">
             4. Add an exception?
@@ -858,6 +873,16 @@ const noFiltersApplied = !term && selectedRegimes.length === 0 && licValue === "
     // Init
     applyFiltersToTable();
     updateCounts();
+  });
+
+    /* Grey out unchecked boxes */
+  document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
+    checkbox.addEventListener('change', (event) => {
+      const table = checkbox.closest('.govuk-checkboxes__item').nextElementSibling;
+      if (table && table.tagName === 'TABLE') {
+        table.classList.toggle('inactive', !checkbox.checked);
+      }
+    });
   });
 </script>
 
