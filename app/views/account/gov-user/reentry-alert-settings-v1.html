@@ -1,0 +1,47 @@
+ {% extends "layout.html" %}
+
+ <!-- Title -->
+{% block pageTitle %}
+Notification settings
+{% endblock %}
+
+<!-- Page content -->
+{% block content %}
+
+<!-- Breadcrumbs links-->
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/account/gov-user/account">
+Account
+</a>
+</li>
+<li class="govuk-breadcrumbs__list-item" aria-current="page">
+Notification settings
+</li>
+</ol>
+</div> <!-- class="govuk-breadcrumbs"-->
+</div> <!-- class="govuk-width-container"-->
+
+<!-- Page layout -->
+<main class="govuk-main-wrapper" id="main-content" role="main">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+<!-- Page title -->
+<h1 class="govuk-heading-xl">Alert settings
+</h1>
+
+<!-- Page intro -->
+<p class="govuk-body">
+This page allows you to choose which alerts you receive.
+</p>
+
+</div> <!-- class="govuk-grid-column-full" -->
+</div> <!-- class="govuk-grid-row" -->
+</main> 
+
+
+
+{% endblock %}
