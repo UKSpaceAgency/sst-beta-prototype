@@ -1,0 +1,114 @@
+ {% extends "layout.html" %}
+
+ <!-- Title -->
+{% block pageTitle %}
+Notification settings
+{% endblock %}
+
+<!-- Page content -->
+{% block content %}
+
+<!-- Breadcrumbs links-->
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/account/gov-user/account">
+Account
+</a>
+</li>
+<li class="govuk-breadcrumbs__list-item" aria-current="page">
+Notification settings
+</li>
+</ol>
+</div> <!-- class="govuk-breadcrumbs"-->
+</div> <!-- class="govuk-width-container"-->
+
+<!-- Page layout -->
+<main class="govuk-main-wrapper" id="main-content" role="main">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+<!-- Page title -->
+<h1 class="govuk-heading-xl">Alert settings
+</h1>
+
+<!-- Page intro -->
+<p class="govuk-body">
+This page allows you to choose which alerts you receive.
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<!-- Set up accordions -->
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+<!-- Conjunction events -->
+<!-- header-->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h1 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+Conjunction events
+</span>
+</h1>
+</div> <!-- class="govuk-accordion__section-header" -->
+
+<!-- content -->
+<div id="accordion-default-content-1" class="govuk-accordion__section-content">
+<!-- CONTENT HERE -->
+</div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<!-- Re-entry events  -->
+<!-- header -->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h1 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+Re-entry events
+</span>
+</h1>
+</div> <!-- class="govuk-accordion__section-header" -->
+<!-- content -->
+<div id="accordion-default-content-2" class="govuk-accordion__section-content">
+<!-- CONTENT HERE-->
+</div> <!-- id="accordion-default-content-2" class="govuk-accordion__section-content"> -->
+</div> <!--class="govuk-accordion__section"> --> 
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<!-- fragmentation events --> 
+ <!-- Header -->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+Fragmentation events
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header" -->
+
+<!-- content -->
+<div id="accordion-default-content-3" class="govuk-accordion__section-content">
+<!-- CONTENT HERE -->
+</div> <!-- id="accordion-default-content-3" class="govuk-accordion__section-content" -->
+</div> <!--class="govuk-accordion__section" --> 
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<!-- Save preferences -->
+<form method="post" action="conjunction-notification-settings-confirmation">
+<button class="govuk-button" data-module="govuk-button">
+Save notification settings
+</button>
+</form>
+
+</div> <!-- class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" -->
+</div> <!-- class="govuk-grid-column-full" -->
+</div> <!-- class="govuk-grid-row" -->
+</main> 
+
+{% endblock %}
