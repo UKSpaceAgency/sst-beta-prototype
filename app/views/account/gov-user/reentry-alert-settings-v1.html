@@ -1,6 +1,6 @@
- {% extends "layout.html" %}
+{% extends "layout.html" %}
 
- <!-- Title -->
+<!-- Title -->
 {% block pageTitle %}
 Notification settings
 {% endblock %}
@@ -30,13 +30,78 @@ Notification settings
 <div class="govuk-grid-column-full">
 
 <!-- Page title -->
-<h1 class="govuk-heading-xl">Alert settings
+<h1 class="govuk-heading-xl">Re-entry alert settings
 </h1>
 
 <!-- Page intro -->
 <p class="govuk-body">
-This page allows you to choose which alerts you receive.
+This page allows you to choose which re-entry alerts you receive.
 </p>
+
+<!-- Which re-entry alerts would you like to receive? -->
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="which-alerts-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+Which re-entry alerts would you like to receive? 
+</h1>
+</legend>
+<div id="which-alerts-hint" class="govuk-hint">
+Select one option.
+</div> <!--  id="which-alerts-hint" class="govuk-hint -->
+<!-- all options for which re-entry alerts would you like to receive?  -->
+<div class="govuk-radios" data-module="govuk-radios"> 
+<!-- Do not receive re-entry alerts -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="no-alerts" name="which-alerts" type="radio" value="no-alerts" aria-describedby="no-alerts-item-hint">
+<label class="govuk-label govuk-radios__label" for="no-alerts">
+Do not receive re-entry alerts
+</label>
+</div> <!-- class="govuk-radios__item" for Do not receive re-entry alerts -->
+<!-- All re-entry alerts for UK-licensed satellites -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="all-UK-licensed" name="which-alerts" type="radio" value="all-UK-licensed" aria-describedby="all-UK-licensed-item-hint">
+<label class="govuk-label govuk-radios__label" for="all-UK-licensed">
+All re-entry alerts for UK-licensed satellites
+</label>
+<div id="all-UK-licensed-hint" class="govuk-hint govuk-radios__hint">
+Recommended for Foreign, Commonwealth and Development Office (FCDO) and Department of Business, Energy and Industrial Strategy (BEIS) teams concerned with UK liability
+</div>
+</div> <!-- class="govuk-radios__item" for All re-entry alerts for UK-licensed satellites -->
+<!-- All re-entry alerts for your areas of interest -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="all-areas-of-interest" name="which-alerts" type="radio" value="all-areas-of-interest" aria-describedby="all-areas-of-interest-item-hint">
+<label class="govuk-label govuk-radios__label" for="all-areas-of-interest">
+All re-entry alerts for your areas of interest
+</label>
+<div id="all-areas-of-interest-hint" class="govuk-hint govuk-radios__hint">
+Recommended for National Space Operations Centre, Civil Aviation Authority, Ministry of Defence and international partners
+</div>
+</div> <!-- class="govuk-radios__item" for All re-entry alerts for your areas of interest -->
+<!-- Only priority re-entry alerts for your areas of interst -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="priority-areas-of-interest" name="which-alerts" type="radio" value="priority-areas-of-interest" aria-describedby="priority-areas-of-interest-item-hint">
+<label class="govuk-label govuk-radios__label" for="priority-areas-of-interest">
+Only priority re-entry alerts for your areas of interest
+</label>
+<div id="priority-areas-of-interest-hint" class="govuk-hint govuk-radios__hint">
+Recommended for all other government departments
+</div>
+</div> <!-- class="govuk-radios__item" for Only priority re-entry alerts for your areas of interest -->
+</div> <!-- class="govuk-radios" data-module="govuk-radios" for all options for which re-entry alerts would you like to receive -->
+</fieldset> <!-- which re-entry alerts would you like to receive? -->
+</div> <!-- class="govuk-form-group for which re-entry alerts would you like to receive?-->
+
+<!-- Select areas of interest -->
+<div class="govuk-form-group">
+<div id="areas-hint" class="govuk-hint">
+<p class="govuk-hint">These settings will only apply if you selected 'All re-entry alerts for your areas of interest' or 'Only priority re-entry alerts for your areas of interest' above.
+</p>
+<p class="govuk-hint"> Click 'Show' to view areas in each category. Select all that apply. 
+</p>
+</div> <!--  id="areas-hint" class="govuk-hint -->
+
+
 
 </div> <!-- class="govuk-grid-column-full" -->
 </div> <!-- class="govuk-grid-row" -->
