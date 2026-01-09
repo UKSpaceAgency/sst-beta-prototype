@@ -1,5 +1,47 @@
 {% extends "layout.html" %}
 
+<!-- Javascript to make 'select all' options work -->
+<!-- for UK nations -->
+<script>
+  (function () {
+    const container = document.getElementById('uk-nations-checkboxes');
+    if (!container) return;
+
+    const selectAll = document.getElementById('uk-nations-all');
+    const items = Array.from(container.querySelectorAll('input[name="uk-nations"]'));
+
+    function setAll(checked) {
+      items.forEach(cb => cb.checked = checked);
+    }
+
+    function updateSelectAllState() {
+      const allChecked = items.every(cb => cb.checked);
+      const noneChecked = items.every(cb => !cb.checked);
+
+      // Only tick "Select all" when all are checked
+      // If none are checked, keep it unticked
+      selectAll.checked = allChecked && !noneChecked;
+    }
+
+    // When "Select all" is clicked
+    selectAll.addEventListener('change', function (e) {
+      setAll(e.target.checked);
+    });
+
+    // When any individual checkbox changes
+    items.forEach(cb => {
+      cb.addEventListener('change', function () {
+        // If an item is unchecked, "Select all" must be unchecked
+        if (!cb.checked) selectAll.checked = false;
+
+        // If all items become checked, tick "Select all"
+        updateSelectAllState();
+      });
+    });
+  })();
+</script>
+
+
 <!-- Title -->
 {% block pageTitle %}
 Notification settings
@@ -93,20 +135,66 @@ Recommended for all other government departments
 </div> <!-- class="govuk-form-group for which re-entry alerts would you like to receive?-->
 
 <!-- Select areas of interest -->
+<h2 class="govuk-heading-l"> Select areas of interest
+</h2>
+<p class="govuk-body">
+Click 'show' to view and select the areas in each category. Select all that apply.
+</p>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+<div class="govuk-accordion__section"> <!-- UK nations header + fieldset -->
+<div class="govuk-accordion__section-header"> <!-- UK nations header -->
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+UK nations
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header"> UK nations header -->
+<div id="accordion-default-content-1" class="govuk-accordion__section-content"> <!-- UK nations fieldset -->
 <div class="govuk-form-group">
-<div id="areas-hint" class="govuk-hint">
-<p class="govuk-hint">These settings will only apply if you selected 'All re-entry alerts for your areas of interest' or 'Only priority re-entry alerts for your areas of interest' above.
-</p>
-<p class="govuk-hint"> Click 'Show' to view areas in each category. Select all that apply. 
-</p>
-</div> <!--  id="areas-hint" class="govuk-hint -->
-
-
+  <fieldset class="govuk-fieldset" aria-describedby="uk-nations-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        UK nations
+      </h1>
+    </legend>
+    <div id="uk-nations-hint" class="govuk-hint">
+      Select all that apply
+    </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes" >
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="all-uk-nations" name="uk-nations-all" type="checkbox" value="all-uk-nations">
+        <label class="govuk-label govuk-checkboxes__label" for="all-uk-nations">
+          Select all
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="england" name="uk-nations" type="checkbox" value="england">
+        <label class="govuk-label govuk-checkboxes__label" for="england">
+          England
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="scotland" name="uk-nations" type="checkbox" value="scotland">
+        <label class="govuk-label govuk-checkboxes__label" for="scotland">
+          Scotland
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="wales" name="uk-nations" type="checkbox" value="wales">
+        <label class="govuk-label govuk-checkboxes__label" for="wales">
+          Wales
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+</div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content"> UK nations fieldset -->
+</div> <!-- <!-- class="govuk-accordion__section" UK nations header + fieldset -->
+</div> <!-- select areas of interest accordion) -->
 
 </div> <!-- class="govuk-grid-column-full" -->
 </div> <!-- class="govuk-grid-row" -->
 </main> 
-
 
 
 {% endblock %}
