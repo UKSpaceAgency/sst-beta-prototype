@@ -1,47 +1,5 @@
 {% extends "layout.html" %}
 
-<!-- Javascript to make 'select all' options work -->
-<!-- for UK nations -->
-<script>
-  (function () {
-    const container = document.getElementById('uk-nations-checkboxes');
-    if (!container) return;
-
-    const selectAll = document.getElementById('uk-nations-all');
-    const items = Array.from(container.querySelectorAll('input[name="uk-nations"]'));
-
-    function setAll(checked) {
-      items.forEach(cb => cb.checked = checked);
-    }
-
-    function updateSelectAllState() {
-      const allChecked = items.every(cb => cb.checked);
-      const noneChecked = items.every(cb => !cb.checked);
-
-      // Only tick "Select all" when all are checked
-      // If none are checked, keep it unticked
-      selectAll.checked = allChecked && !noneChecked;
-    }
-
-    // When "Select all" is clicked
-    selectAll.addEventListener('change', function (e) {
-      setAll(e.target.checked);
-    });
-
-    // When any individual checkbox changes
-    items.forEach(cb => {
-      cb.addEventListener('change', function () {
-        // If an item is unchecked, "Select all" must be unchecked
-        if (!cb.checked) selectAll.checked = false;
-
-        // If all items become checked, tick "Select all"
-        updateSelectAllState();
-      });
-    });
-  })();
-</script>
-
-
 <!-- Title -->
 {% block pageTitle %}
 Notification settings
@@ -141,60 +99,281 @@ Recommended for all other government departments
 Click 'show' to view and select the areas in each category. Select all that apply.
 </p>
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-<div class="govuk-accordion__section"> <!-- UK nations header + fieldset -->
-<div class="govuk-accordion__section-header"> <!-- UK nations header -->
+<div class="govuk-accordion__section"> <!-- UK nations accordion -->
+<div class="govuk-accordion__section-header"> <!-- UK nations accordion header -->
 <h2 class="govuk-accordion__section-heading">
 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
 UK nations
 </span>
 </h2>
-</div> <!-- class="govuk-accordion__section-header"> UK nations header -->
+</div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-1" class="govuk-accordion__section-content"> <!-- UK nations fieldset -->
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="uk-nations-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h1 class="govuk-fieldset__heading">
-        UK nations
-      </h1>
-    </legend>
-    <div id="uk-nations-hint" class="govuk-hint">
-      Select all that apply
-    </div>
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes" >
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="all-uk-nations" name="uk-nations-all" type="checkbox" value="all-uk-nations">
-        <label class="govuk-label govuk-checkboxes__label" for="all-uk-nations">
-          Select all
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="england" name="uk-nations" type="checkbox" value="england">
-        <label class="govuk-label govuk-checkboxes__label" for="england">
-          England
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="scotland" name="uk-nations" type="checkbox" value="scotland">
-        <label class="govuk-label govuk-checkboxes__label" for="scotland">
-          Scotland
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="wales" name="uk-nations" type="checkbox" value="wales">
-        <label class="govuk-label govuk-checkboxes__label" for="wales">
-          Wales
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+<div class="govuk-form-group"> <!-- UK nations -->
+<fieldset class="govuk-fieldset" aria-describedby="uk-nations-hint">
+<!-- UK nations legend and hint -->
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+<h1 class="govuk-fieldset__heading">Select UK nations of interest</h1>
+</legend>
+<div id="uk-nations-hint" class="govuk-hint">Select all that apply
+</div> 
+<!-- UK nations checkboxes-->
+<div class="govuk-checkboxes js-select-all" data-module="govuk-checkboxes">
+<!-- Select all checkbox -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__toggle" id="uk-nations-all" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="uk-nations-all">
+Select all
+</label>
+</div> <!-- Select all -->
+
+<!-- Options -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item" id="uk-nations-england" name="uk-nations" type="checkbox" value="england">
+<label class="govuk-label govuk-checkboxes__label" for="uk-nations-england">
+England
+</label>
+</div> <!-- England -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="uk-nations-scotland" name="uk-nations" type="checkbox" value="scotland">
+<label class="govuk-label govuk-checkboxes__label" for="uk-nations-scotland">
+Scotland
+</label>
+</div> <!-- Scotland -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="uk-nations-wales" name="uk-nations" type="checkbox" value="wales">
+<label class="govuk-label govuk-checkboxes__label" for="uk-nations-wales">
+Wales
+</label>
+</div> <!-- Wales -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="uk-nations-northern-ireland" name="uk-nations" type="checkbox" value="northern-ireland">
+<label class="govuk-label govuk-checkboxes__label" for="uk-nations-northern-ireland">
+Northern Ireland
+</label>
+</div> <!-- Northern Ireland -->
+
+</div> <!-- class="govuk-checkboxes js-select-all" data-module="govuk-checkboxes"> for UK nations-->
+</fieldset>
+</div> <!-- class="govuk-form-group"  UK nations-->
 </div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content"> UK nations fieldset -->
-</div> <!-- <!-- class="govuk-accordion__section" UK nations header + fieldset -->
-</div> <!-- select areas of interest accordion) -->
+</div> <!-- <!-- class="govuk-accordion__section" UK nations accordion -->
+
+<div class="govuk-accordion__section"> <!-- Overseas territories accordion -->
+<div class="govuk-accordion__section-header"> <!-- Overseas territories header -->
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+British Overseas Territories and Crown Dependencies
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header"> Overseas territories header -->
+<div id="accordion-default-content-1" class="govuk-accordion__section-content"> <!-- Overseas territories fieldset -->
+<div class="govuk-form-group"> <!-- overseas territories group -->
+<fieldset class="govuk-fieldset" aria-describedby="overseas-hint"> <!-- overseas territories fieldset -->
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+<h1 class="govuk-fieldset__heading">Select British Overseas Territories and Crown Dependencies of interest</h1>
+</legend>
+
+<div id="overseas-hint" class="govuk-hint">Select all that apply
+</div>
+
+<div class="govuk-checkboxes js-select-all" data-module="govuk-checkboxes">
+<!-- Select all -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__toggle" id="overseas-all" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="overseas-all">
+Select all
+</label>
+</div>
+
+<!-- Options -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="overseas-anguilla" name="overseas" type="checkbox" value="anguilla">
+<label class="govuk-label govuk-checkboxes__label" for="overseas-anguilla">
+Anguilla
+</label>
+</div> <!-- Anguilla -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="overseas-bermuda" name="overseas" type="checkbox" value="bermuda">
+<label class="govuk-label govuk-checkboxes__label" for="overseas-bermuda">
+Bermuda
+</label>
+</div> <!-- Bermuda -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="overseas-british-antarctic-territory" name="overseas" type="checkbox" value="british-antarctic-territory">
+<label class="govuk-label govuk-checkboxes__label" for="overseas-british-antarctic-territory">
+British Antarctic Territory*
+</label>
+</div> <!-- British Antarctic Territory -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="overseas-british-indian-ocean-territory" name="overseas" type="checkbox" value="british-indian-ocean-territory">
+<label class="govuk-label govuk-checkboxes__label" for="overseas-british-indian-ocean-territory">
+British Indian Ocean Territory
+</label>
+</div> <!-- British Indian Ocean Territory -->
+
+</div>
+</fieldset> <!-- overseas territories -->
+</div> <!-- class="govuk-form-group"> overseas territories group -->
+<p id="antarctic-paragraph" class="govuk-body">
+* For the purposes of this table, British Antarctic Territory has been limited to the areas surrounding populated facilities in the territory.
+</p>
+</div> <!-- class="govuk-accordion__section"> Overseas territories fieldset -->
+</div> <!-- class="govuk-accordion__section">  Overseas territories accordion -->
+
+<div class="govuk-accordion__section"> <!-- Airspace and Maritime accordion -->
+<div class="govuk-accordion__section-header"> <!-- Airspace and Maritime header -->
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+Airspace and Maritime regions
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header"> Airspace and Maritime header -->
+<div id="accordion-default-content-1" class="govuk-accordion__section-content"> <!-- Airspace and Maritime fieldset -->
+<div class="govuk-form-group"> <!-- Airspace and Maritime group -->
+<fieldset class="govuk-fieldset" aria-describedby="airspace-maritime-hint"> <!-- Airspace and Maritime fieldset -->
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+<h1 class="govuk-fieldset__heading">Select Airspace and Maritime regions</h1>
+</legend>
+
+<div id="airspace-maritime-hint" class="govuk-hint">Select all that apply
+</div>
+
+<div class="govuk-checkboxes js-select-all" data-module="govuk-checkboxes">
+<!-- Select all -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__toggle" id="airspace-maritime-all" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="airspace-maritime-all">
+Select all
+</label>
+</div>
+
+<!-- Options -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="airspace-maritime-uk-navarea" name="airspace-maritime" type="checkbox" value="uk-navarea">
+<label class="govuk-label govuk-checkboxes__label" for="airspace-maritime-uk-navarea">
+UK Navarea
+</label>
+</div> <!-- UK Navarea -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="airspace-maritime-london-fir" name="airspace-maritime" type="checkbox" value="london-fir">
+<label class="govuk-label govuk-checkboxes__label" for="airspace-maritime-london-fir">
+London FIR
+</label>
+</div> <!-- London FIR -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="airspace-maritime-scotland-fir" name="airspace-maritime" type="checkbox" value="scotland-fir">
+<label class="govuk-label govuk-checkboxes__label" for="airspace-maritime-scotland-fir">
+Scotland FIR
+</label>
+</div> <!-- Scotland FIR -->
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input js-select-all__item"
+id="airspace-maritime-shanwick-oceanic-fir" name="airspace-maritime" type="checkbox" value="shanwick-oceanic-fir">
+<label class="govuk-label govuk-checkboxes__label" for="airspace-maritime-shanwick-oceanic-fir">
+Shanwick Oceanic FIR
+</label>
+</div> <!-- Shanwick Oceanic FIR -->
+
+</div> <!-- class="govuk-checkboxes js-select-all" data-module="govuk-checkboxes" -->
+</fieldset> <!-- airspace-maritime territories -->
+</div> <!-- class="govuk-form-group"> airspace-maritime territories group -->
+</div> <!-- class="govuk-accordion__section"> Overseas territories fieldset -->
+</div> <!-- class="govuk-accordion__section">  Overseas territories accordion -->
+</div> <!-- select areas of interest accordion -->
+
+<!-- How would you like to receive alerts? -->
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="how-alerts-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+How would you like to receive alerts?
+</h1>
+</legend>
+<div id="how-alerts-hint" class="govuk-hint">
+Select one option.
+</div> <!--  id="how-alerts-hint" class="govuk-hint -->
+<!-- all options for How would you like to receive alerts?  -->
+<div class="govuk-radios" data-module="govuk-radios"> 
+<!-- Text -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="text" name="how-alerts" type="radio" value="text" aria-describedby="text-item-hint">
+<label class="govuk-label govuk-radios__label" for="text">
+Text
+</label>
+</div> <!-- class="govuk-radios__item" for text -->
+<!-- Email -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="email" name="how-alerts" type="radio" value="email" aria-describedby="email-item-hint">
+<label class="govuk-label govuk-radios__label" for="email">
+Email
+</label>
+</div> <!-- class="govuk-radios__item" for Email -->
+</div> <!-- class="govuk-radios" data-module="govuk-radios" for all options for how would you like to receive alerts? -->
+</fieldset> <!-- how would you like to receive alerts? -->
+</div> <!-- class="govuk-form-group for how would you like to receive alerts?-->
 
 </div> <!-- class="govuk-grid-column-full" -->
 </div> <!-- class="govuk-grid-row" -->
 </main> 
 
+<!-- Javascript to make 'select all' options work -->
+<!-- for UK nations -->
+<script>
+(function () {
+function initSelectAll(container) {
+const toggle = container.querySelector('.js-select-all__toggle');
+const items = Array.from(container.querySelectorAll('.js-select-all__item'))
+.filter((el) => !el.disabled);
+
+if (!toggle || items.length === 0) return;
+
+function updateToggleState() {
+const checkedCount = items.filter((el) => el.checked).length;
+
+// If you want the “mixed” state for partial selections:
+// (Note: indeterminate is a real checkbox state, set via JS) :contentReference[oaicite:1]{index=1}
+toggle.indeterminate = checkedCount > 0 && checkedCount < items.length;
+
+toggle.checked = checkedCount === items.length;
+toggle.disabled = items.length === 0;
+}
+
+toggle.addEventListener('change', () => {
+const shouldCheck = toggle.checked;
+items.forEach((el) => {
+el.checked = shouldCheck;
+// Trigger change handlers if you have any elsewhere
+el.dispatchEvent(new Event('change', { bubbles: true }));
+});
+updateToggleState();
+});
+
+items.forEach((el) => el.addEventListener('change', updateToggleState));
+
+updateToggleState();
+}
+
+document.querySelectorAll('.js-select-all').forEach(initSelectAll);
+})();
+</script>
 
 {% endblock %}
