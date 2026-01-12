@@ -7,59 +7,59 @@ Edit your threshold notification settings
 {% block content %}
 
 <style>
-/* Greyed-out questions for setting thresholds */
-  .govuk-table__header, .govuk-table__cell {
-    vertical-align: middle;
-  }
-  .govuk-table__cell {
-    font-weight: normal;
-  }
-  .threshold-style {
-    vertical-align: middle;
-	margin-top: -20px;
-    margin-left: 70px; 
-    margin-bottom: 5px;
-    width: calc(100% - 70px);
-  }
-  .threshold-style th{
-    width: 550px;
-  }
-  .inactive {
-    opacity: 40%;
-  }
-  .editSatBtn {
-    color: #1d70b8;
-  }
-  .no-border th, .no-border td{
-    border: none;
-  }
-  #default-label {
-    margin-bottom: 10px;
-  }
+/* -->>Greyed-out questions for setting thresholds */
+.govuk-table__header, .govuk-table__cell {
+vertical-align: middle;
+}
+.govuk-table__cell {
+font-weight: normal;
+}
+.threshold-style {
+vertical-align: middle;
+margin-top: -20px;
+margin-left: 70px; 
+margin-bottom: 5px;
+width: calc(100% - 70px);
+}
+.threshold-style th{
+width: 550px;
+}
+.inactive {
+opacity: 40%;
+}
+.editSatBtn {
+color: #1d70b8;
+}
+.no-border th, .no-border td{
+border: none;
+}
+#default-label {
+margin-bottom: 10px;
+}
 
 /* Make the columns behave predictably */
 #satellite-table {
-  table-layout: fixed;
-  width: 100%;
+table-layout: fixed;
+width: 100%;
 }
 
 /* Keep headers/cells tidy */
 #satellite-table th,
 #satellite-table td {
-  vertical-align: middle;
+vertical-align: middle;
 }
 
 /* Only allow wrapping in the name column */
 #satellite-table th:nth-child(1),
 #satellite-table td:nth-child(1) {
-  overflow-wrap: anywhere;
+overflow-wrap: anywhere;
 }
 
 /* Fix the “big gap” look: left-align NORAD instead of numeric/right-aligned */
 #satellite-table th:nth-child(2),
 #satellite-table td:nth-child(2) {
-  text-align: left !important;
-  white-space: nowrap;
+text-align: left !important;
+white-space: nowrap;
 }
 
 /* Keep regime/licensing on one line */
@@ -67,834 +67,834 @@ Edit your threshold notification settings
 #satellite-table td:nth-child(3),
 #satellite-table th:nth-child(4),
 #satellite-table td:nth-child(4) {
-  white-space: nowrap;
+white-space: nowrap;
 }
 
 /* Select column: narrow + centered */
 #satellite-table th:nth-child(5),
 #satellite-table td:nth-child(5) {
-  text-align: center;
+text-align: center;
 }
 
 #satellite-table td:nth-child(5) .govuk-checkboxes {
-  margin-bottom: 0;
+margin-bottom: 0;
 }
 
+/* Keep table cells aligned */
+#group-thresholds .govuk-table__header,
+#group-thresholds .govuk-table__cell {
+vertical-align: middle;
+}
+#group-thresholds .govuk-table__cell {
+font-weight: normal;
+}
 
-  /* Keep table cells aligned */
-  #group-thresholds .govuk-table__header,
-  #group-thresholds .govuk-table__cell {
-    vertical-align: middle;
-  }
+/* Remove conditional left border + padding that causes wonky indent */
+#group-thresholds .govuk-checkboxes__conditional {
+border-left: 0;
+padding-left: 0;
+margin-left: 0;
+}
 
-  #group-thresholds .govuk-table__cell {
-    font-weight: normal;
-  }
+/* Match the alignment from your other page */
+#group-thresholds .satellite-setting {
+margin-top: -20px;
+margin-left: 70px;
+margin-bottom: 5px;
+width: calc(100% - 70px);
+}
 
-  /* Remove conditional left border + padding that causes wonky indent */
-  #group-thresholds .govuk-checkboxes__conditional {
-    border-left: 0;
-    padding-left: 0;
-    margin-left: 0;
-  }
+/* Fixed left column width so inputs line up */
+#group-thresholds .satellite-setting th {
+width: 550px;
+}
+#group-thresholds .satellite-setting td {
+text-align: right;
+}
 
-  /* Match the alignment from your other page */
-  #group-thresholds .satellite-setting {
-    margin-top: -20px;
-    margin-left: 70px;
-    margin-bottom: 5px;
-    width: calc(100% - 70px);
-  }
-
-  /* Fixed left column width so inputs line up */
-  #group-thresholds .satellite-setting th {
-    width: 550px;
-  }
-
-  #group-thresholds .satellite-setting td {
-    text-align: right;
-  }
-
-  /* Indent threshold checkboxes + their conditional blocks */
-  #custom-thresholds-conditional .govuk-checkboxes__item {
-    margin-left: 25px;
-  }
-
-  #custom-thresholds-conditional .govuk-checkboxes__conditional {
-    margin-left: 25px;
-  }
-  /* Tighten spacing between search and filters */
+/* Indent threshold checkboxes + their conditional blocks */
+#custom-thresholds-conditional .govuk-checkboxes__item {
+margin-left: 25px;
+}
+#custom-thresholds-conditional .govuk-checkboxes__conditional {
+margin-left: 25px;
+}
+/* Tighten spacing between search and filters */
 #satellite-filters.govuk-details {
-  margin-top: 0;
-  margin-bottom: 10px;
+margin-top: 0;
+margin-bottom: 10px;
 }
 .sat-toolbar {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
-
 .sat-selection-bar {
-  display: flex;
-  gap: 15px;
-  align-items: baseline;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+display: flex;
+gap: 15px;
+align-items: baseline;
+flex-wrap: wrap;
+margin-bottom: 10px;
 }
-
 
 </style>
 
+<!-- Breadcrumbs -->
 <div class="govuk-width-container">
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/account/operator/account">Account</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="/account/operator/conjunction-notification-settings">Notification settings</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <span class="govuk-breadcrumbs__link">Add custom settings</span>
-      </li>
-    </ol>
-  </div>
-
-  <main class="govuk-main-wrapper" id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-
-        <h1 class="govuk-heading-xl">Add custom settings</h1>
-
-        <form method="post" action="/account/operator/conjunction-notification-settings-check-custom">
-
-
-          <!-- 1. Custom thresholds name -->
-<h2 class="govuk-heading-l">1. Choose a name</h2>
-
-<div class="govuk-form-group">
-  <label class="govuk-label" for="custom-name">
-    Custom notification name
-  </label>
-
-  <div id="custom-name-hint" class="govuk-hint">
-    Give the custom thresholds a clear name that reflects the satellites they apply to,
-    for example “LEO satellites” or “satellite A”.
-  </div>
-
-  <input
-    class="govuk-input govuk-!-width-two-thirds"
-    id="custom-name"
-    name="custom-name"
-    type="text"
-    aria-describedby="group-name-hint">
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/account/operator/account">Account</a>
+</li>
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/account/operator/conjunction-notification-settings">Notification settings</a>
+</li>
+<li class="govuk-breadcrumbs__list-item">
+<span class="govuk-breadcrumbs__link">Add custom settings</span>
+</li>
+</ol>
 </div>
 
+<!-- page layout -->
+<main class="govuk-main-wrapper" id="main-content" role="main">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
 
-          <!-- 2. Satellites -->
-<!-- 2. Satellites (Option A: toolbar + table) -->
+<!-- title -->
+<h1 class="govuk-heading-xl">Add custom settings</h1>
+
+<!-- Turn page into a form (where submission leads to a 'check settings' page) -->
+<form method="post" action="/account/operator/conjunction-notification-settings-check-custom">
+
+<!-- 1. Custom thresholds name -->
+<h2 class="govuk-heading-l">
+1. Choose a name
+</h2>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="custom-name">
+Custom notification name
+</label>
+
+<div id="custom-name-hint" class="govuk-hint">
+Give the custom thresholds a clear name that reflects the satellites they apply to,
+for example “LEO satellites” or “satellite A”.
+</div> <!-- id="custom-name-hint" class="govuk-hint" -->
+
+<input
+class="govuk-input govuk-!-width-two-thirds"
+id="custom-name"
+name="custom-name"
+type="text"
+aria-describedby="group-name-hint">
+</div> <!-- class="govuk-form-group" -->
+
+<!-- 2. Add Satellites -->
 <h2 class="govuk-heading-l">2. Add satellites to this group</h2>
 
 <p class="govuk-body">
-  Search and filter the list, then select the satellites you want to include.
+Search and filter the list, then select the satellites you want to include.
 </p>
 
 <!-- Toolbar: Search row -->
 <div class="govuk-form-group sat-toolbar">
-  <label class="govuk-label govuk-label--s" for="satellite-search">
-    Search satellites
-  </label>
+<label class="govuk-label govuk-label--s" for="satellite-search">
+Search satellites
+</label>
 
-  <div class="govuk-grid-row govuk-!-margin-bottom-1">
-    <div class="govuk-grid-column-two-thirds">
-      <input class="govuk-input"
-             id="satellite-search"
-             name="satellite-search"
-             type="text"
-             placeholder="Search by object name or NORAD ID">
-    </div>
+<div class="govuk-grid-row govuk-!-margin-bottom-1">
+<div class="govuk-grid-column-two-thirds">
+<input class="govuk-input"
+id="satellite-search"
+name="satellite-search"
+type="text"
+placeholder="Search by object name or NORAD ID">
+</div> <!-- class="govuk-grid-column-two-thirds" -->
 
-    <div class="govuk-grid-column-one-third">
-      <button class="govuk-button govuk-!-margin-top-1"
-              data-module="govuk-button"
-              type="button"
-              id="satellite-search-btn">
-        Search
-      </button>
-    </div>
-  </div>
-</div>
+<div class="govuk-grid-column-one-third">
+<button class="govuk-button govuk-!-margin-bottom-1"
+data-module="govuk-button"
+type="button"
+id="satellite-search-btn">
+Search
+</button>
+</div> <!-- class="govuk-grid-column-one-third" -->
+</div> <!-- class="govuk-grid-row govuk-!-margin-bottom-1" -->
+</div> <!-- class="govuk-form-group sat-toolbar" -->
 
 <!-- Filters (collapsed) + clear filters -->
 <div class="govuk-!-margin-bottom-2">
-  <details id="satellite-filters" class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">Filter satellites</span>
-    </summary>
+<details id="satellite-filters" class="govuk-details" data-module="govuk-details">
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">Filter satellites</span>
+</summary>
 
-    <div class="govuk-details__text">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-          <div class="govuk-form-group govuk-!-margin-bottom-6">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              Orbital regime
-            </legend>
+<div class="govuk-details__text">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-one-half">
+<div class="govuk-form-group govuk-!-margin-bottom-6">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Orbital regime
+</legend>
 
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="regime-geo" name="regime" type="checkbox" value="GEO">
-                <label class="govuk-label govuk-checkboxes__label" for="regime-geo">GEO</label>
-              </div>
+<!-- Regime filter -->
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="regime-geo" name="regime" type="checkbox" value="GEO">
+<label class="govuk-label govuk-checkboxes__label" for="regime-geo">GEO</label>
+</div> <!-- govuk-checkboxes__item" -->
 
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO">
-                <label class="govuk-label govuk-checkboxes__label" for="regime-leo">LEO</label>
-              </div>
-            </div>
-           </div>
-          </fieldset>
-        </div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO">
+<label class="govuk-label govuk-checkboxes__label" for="regime-leo">LEO</label>
+</div> <!-- govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</div> <!-- class="govuk-form-group govuk-!-margin-bottom-6" -->
+</fieldset>
+</div> <!-- class="govuk-grid-column-one-half" -->
 
-        <div class="govuk-grid-column-one-half">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--s" for="licensing-country">
-              Licensing state
-            </label>
+<!-- licensing state filter -->
+<div class="govuk-grid-column-one-half">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-label--s" for="licensing-state">
+Licensing state
+</label>
 
-            <select class="govuk-select" id="licensing-country" name="licensing-country">
-              <option value="any" selected>Any</option>
-              <option value="uk">United Kingdom</option>
-              <option value="us">United States</option>
-              <option value="fr">France</option>
-              <option value="de">Germany</option>
-            </select>
-          </div>
-        </div>
-      </div>
+<select class="govuk-select" id="licensing-state" name="licensing-state">
+<option value="any" selected>Any</option>
+<option value="uk">United Kingdom</option>
+<option value="us">United States</option>
+<option value="fr">France</option>
+<option value="de">Germany</option>
+</select>
+</div> <!-- class="govuk-form-group"-->
+</div> <!-- class="govuk-grid-column-one-half" -->
+</div> <!-- class="govuk-grid-row" -->
 
-      <p class="govuk-body govuk-!-margin-bottom-0">
-        <a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
-      </p>
+<p class="govuk-body govuk-!-margin-bottom-0">
+<a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
+</p>
 
-    </div>
-  </details>
-</div>
+</div> <!-- class="govuk-details__text" -->
+</details> <!-- id="satellite-filters" class="govuk-details" data-module="govuk-details -->
+</div> <!-- class="govuk-!-margin-bottom-2" -->
 
 <!-- Selection + results summary row -->
 <div class="sat-selection-bar">
-  <p class="govuk-body govuk-!-margin-bottom-0">
-    <strong>Showing:</strong> <span id="results-count">0</span>
-  </p>
+<p class="govuk-body govuk-!-margin-bottom-0">
+<strong>Showing:</strong> <span id="results-count">0</span>
+</p>
 
-  <p class="govuk-body govuk-!-margin-bottom-0">
-    <strong>Selected:</strong> <span id="selected-count">0</span>
-  </p>
+<p class="govuk-body govuk-!-margin-bottom-0">
+<strong>Selected:</strong> <span id="selected-count">0</span>
+</p>
 
-  <p class="govuk-body govuk-!-margin-bottom-0">
-    <a href="#" class="govuk-link" id="clear-selection">Clear selection</a>
-  </p>
+<p class="govuk-body govuk-!-margin-bottom-0">
+<a href="#" class="govuk-link" id="clear-selection">Clear selection</a>
+</p>
 
-  <div class="govuk-checkboxes govuk-!-margin-bottom-0" data-module="govuk-checkboxes">
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
-      <label class="govuk-label govuk-checkboxes__label" for="select-all">
-        Select all results
-      </label>
-    </div>
-  </div>
-</div>
+<div class="govuk-checkboxes govuk-!-margin-bottom-0" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="select-all" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="select-all">
+Select all results
+</label>
+</div> <!-- class="govuk-checkboxes__item">-->
+</div> <!-- class="govuk-checkboxes govuk-!-margin-bottom-0" data-module="govuk-checkboxes" -->
+</div> <!-- class="sat-selection-bar" -->
 
-          <!-- Satellite selection table -->
+<!-- Satellite selection table -->
 <table class="govuk-table" id="satellite-table" data-module="moj-sortable-table">
+
 <colgroup>
-  <col style="width: 36%;">
-  <col style="width: 12%;">  <!-- NORAD -->
-  <col style="width: 14%;">  <!-- Regime -->
-  <col style="width: 30%;">  <!-- Licensing -->
-  <col style="width: 70px;"> <!-- Select -->
+<col style="width: 36%;">
+<col style="width: 12%;">  <!-- NORAD -->
+<col style="width: 14%;">  <!-- Regime -->
+<col style="width: 30%;">  <!-- Licensing -->
+<col style="width: 70px;"> <!-- Select -->
 </colgroup>
 
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <!-- Set one column to ascending if you want an initial sort state -->
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending">Object name</th>
-
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">
-  NORAD ID
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<!-- Set one column to ascending if you want an initial sort state -->
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending">Object name</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">
+NORAD ID
 </th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Orbital regime</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Licensing state</th>
+<!-- Not sortable -->
+<th scope="col" class="govuk-table__header govuk-body-s">Select</th>
+</tr>
+</thead>
 
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Orbital regime</th>
-      <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Licensing state</th>
+<tbody class="govuk-table__body">
+    
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">Skynet 4C</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="27838">27838</td>
+<td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">United Kingdom</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-1" name="satellites" type="checkbox" value="skynet-4c">
+<label class="govuk-label govuk-checkboxes__label" for="sat-1">
+<span class="govuk-visually-hidden">Select Skynet 4C</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-      <!-- Not sortable -->
-      <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
-    </tr>
-  </thead>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">Skynet 5A</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="40420">40420</td>
+<td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">United Kingdom</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-2" name="satellites" type="checkbox" value="skynet-5a">
+<label class="govuk-label govuk-checkboxes__label" for="sat-2">
+<span class="govuk-visually-hidden">Select Skynet 5A</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">Skynet 4C</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="27838">27838</td>
-      <td class="govuk-table__cell govuk-body-s">GEO</td>
-      <td class="govuk-table__cell govuk-body-s">United Kingdom</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-1" name="satellites" type="checkbox" value="skynet-4c">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-1">
-              <span class="govuk-visually-hidden">Select Skynet 4C</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">Skynet 6A</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="46949">46949</td>
+<td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">United Kingdom</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-3" name="satellites" type="checkbox" value="skynet-6a">
+<label class="govuk-label govuk-checkboxes__label" for="sat-3">
+<span class="govuk-visually-hidden">Select Skynet 6A</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">Skynet 5A</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="40420">40420</td>
-      <td class="govuk-table__cell govuk-body-s">GEO</td>
-      <td class="govuk-table__cell govuk-body-s">United Kingdom</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-2" name="satellites" type="checkbox" value="skynet-5a">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-2">
-              <span class="govuk-visually-hidden">Select Skynet 5A</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">Aurora-LEO 1</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55101">55101</td>
+<td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">United States</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-4" name="satellites" type="checkbox" value="aurora-leo-1">
+<label class="govuk-label govuk-checkboxes__label" for="sat-4">
+<span class="govuk-visually-hidden">Select Aurora-LEO 1</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">Skynet 6A</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="46949">46949</td>
-      <td class="govuk-table__cell govuk-body-s">GEO</td>
-      <td class="govuk-table__cell govuk-body-s">United Kingdom</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-3" name="satellites" type="checkbox" value="skynet-6a">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-3">
-              <span class="govuk-visually-hidden">Select Skynet 6A</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">Aurora-LEO 2</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55102">55102</td>
+<td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">United States</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-5" name="satellites" type="checkbox" value="aurora-leo-2">
+<label class="govuk-label govuk-checkboxes__label" for="sat-5">
+<span class="govuk-visually-hidden">Select Aurora-LEO 2</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">Aurora-LEO 1</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55101">55101</td>
-      <td class="govuk-table__cell govuk-body-s">LEO</td>
-      <td class="govuk-table__cell govuk-body-s">United States</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-4" name="satellites" type="checkbox" value="aurora-leo-1">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-4">
-              <span class="govuk-visually-hidden">Select Aurora-LEO 1</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">Gallica-LEO 7</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="53317">53317</td>
+<td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">France</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-6" name="satellites" type="checkbox" value="gallica-leo-7">
+<label class="govuk-label govuk-checkboxes__label" for="sat-6">
+<span class="govuk-visually-hidden">Select Gallica-LEO 7</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">Aurora-LEO 2</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55102">55102</td>
-      <td class="govuk-table__cell govuk-body-s">LEO</td>
-      <td class="govuk-table__cell govuk-body-s">United States</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-5" name="satellites" type="checkbox" value="aurora-leo-2">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-5">
-              <span class="govuk-visually-hidden">Select Aurora-LEO 2</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">RheinSat 3</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50991">50991</td>
+<td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">Germany</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-7" name="satellites" type="checkbox" value="rheinsat-3">
+<label class="govuk-label govuk-checkboxes__label" for="sat-7">
+<span class="govuk-visually-hidden">Select RheinSat 3</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">Gallica-LEO 7</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="53317">53317</td>
-      <td class="govuk-table__cell govuk-body-s">LEO</td>
-      <td class="govuk-table__cell govuk-body-s">France</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-6" name="satellites" type="checkbox" value="gallica-leo-7">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-6">
-              <span class="govuk-visually-hidden">Select Gallica-LEO 7</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">RheinSat 4</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50992">50992</td>
+<td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">Germany</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-8" name="satellites" type="checkbox" value="rheinsat-4">
+<label class="govuk-label govuk-checkboxes__label" for="sat-8">
+<span class="govuk-visually-hidden">Select RheinSat 4</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">RheinSat 3</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50991">50991</td>
-      <td class="govuk-table__cell govuk-body-s">GEO</td>
-      <td class="govuk-table__cell govuk-body-s">Germany</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-7" name="satellites" type="checkbox" value="rheinsat-3">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-7">
-              <span class="govuk-visually-hidden">Select RheinSat 3</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">PolarWatch 12</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="60120">60120</td>
+<td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">United Kingdom</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-9" name="satellites" type="checkbox" value="polarwatch-12">
+<label class="govuk-label govuk-checkboxes__label" for="sat-9">
+<span class="govuk-visually-hidden">Select PolarWatch 12</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">RheinSat 4</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50992">50992</td>
-      <td class="govuk-table__cell govuk-body-s">LEO</td>
-      <td class="govuk-table__cell govuk-body-s">Germany</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-8" name="satellites" type="checkbox" value="rheinsat-4">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-8">
-              <span class="govuk-visually-hidden">Select RheinSat 4</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">OceanScan 5</td>
+<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="61205">61205</td>
+<td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">France</td>
+<td class="govuk-table__cell">
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input satellite-checkbox" id="sat-10" name="satellites" type="checkbox" value="oceanscan-5">
+<label class="govuk-label govuk-checkboxes__label" for="sat-10">
+<span class="govuk-visually-hidden">Select OceanScan 5</span>
+</label>
+</div> <!-- class="govuk-checkboxes__item"-->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</td>
+</tr>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">PolarWatch 12</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="60120">60120</td>
-      <td class="govuk-table__cell govuk-body-s">LEO</td>
-      <td class="govuk-table__cell govuk-body-s">United Kingdom</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-9" name="satellites" type="checkbox" value="polarwatch-12">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-9">
-              <span class="govuk-visually-hidden">Select PolarWatch 12</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
+<!-- No results message row -->
+<tr class="govuk-table__row" id="no-results-row" style="display:none">
+<td class="govuk-table__cell" colspan="5">
+<p class="govuk-body govuk-!-margin-bottom-0">No satellites match your search and filters.</p>
+</td>
+</tr>
+</tbody>
 
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-body-s">OceanScan 5</td>
-      <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="61205">61205</td>
-      <td class="govuk-table__cell govuk-body-s">LEO</td>
-      <td class="govuk-table__cell govuk-body-s">France</td>
-      <td class="govuk-table__cell">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input satellite-checkbox" id="sat-10" name="satellites" type="checkbox" value="oceanscan-5">
-            <label class="govuk-label govuk-checkboxes__label" for="sat-10">
-              <span class="govuk-visually-hidden">Select OceanScan 5</span>
-            </label>
-          </div>
-        </div>
-      </td>
-    </tr>
-
-    <!-- No results message row -->
-    <tr class="govuk-table__row" id="no-results-row" style="display:none">
-      <td class="govuk-table__cell" colspan="5">
-        <p class="govuk-body govuk-!-margin-bottom-0">No satellites match your search and filters.</p>
-      </td>
-    </tr>
-  </tbody>
 </table>
 
-          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-          <!-- 3. Thresholds -->
-           <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="custom-or-disable-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        3. Set custom thresholds or disable notifications
-      </h1>
-    </legend>
-    <div id="custom-or-disable" class="govuk-hint">
-      Select one option
-    </div>
+<!-- 3. Thresholds -->
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="custom-or-disable-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+3. Set custom thresholds or disable notifications
+</h1>
+</legend>
+<div id="custom-or-disable-hint" class="govuk-hint">
+Select one option
+</div> <!-- id="custom-or-disable" class="govuk-hint" -->
 
 <!-- Disable notifications option -->
 <div class="govuk-radios" data-module="govuk-radios">
-</div>
-  <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="disable-notifications" name="custom-or-disable" type="radio" value="disable-notifications" data-aria-controls="conditional-disable-notifications">
-    <label class="govuk-label govuk-radios__label" for="disable-notifications">
-    Disable all notifications
-    </label>
-      <div id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint">
-      Disabling notifications for these satellites will override other custom settings if they conflict.
-      </div>
-  </div>
+</div> <!-- class="govuk-radios" data-module="govuk-radios" -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="disable-notifications" name="custom-or-disable" type="radio" value="disable-notifications" data-aria-controls="conditional-disable-notifications">
+<label class="govuk-label govuk-radios__label" for="disable-notifications">
+Disable all notifications
+</label>
+<div id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint">
+Disabling notifications for these satellites will override other custom settings if they conflict.
+</div> <!-- id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint" -->
+</div> <!-- lass="govuk-radios__item" -->
 <!-- custom thresholds -->
-  <div class="govuk-radios" data-module="govuk-radios">
-    <div class="govuk-radios__item">
-    <input class="govuk-radios__input" id="custom-thresholds-yes" name="custom-or-disable" type="radio" value="custom-thresholds-yes" data-aria-controls="conditional-custom-thresholds-yes">
-    <label class="govuk-label govuk-radios__label" for="custom-thresholds-yes">
-    Set custom thresholds
-    </label>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-custom-thresholds-yes">
-        <p class="govuk-body">
-        We will send you notifications when a conjunction event involving any satellite in this group crosses all of the thresholds you have set. You do not have to specify thresholds for all criteria.
-        </p>
-        <p class="govuk-body">
-        You are responsible for the safe operation of your satellites and should choose settings which allow you to do this. The example thresholds may not be the most appropriate thresholds for your satellites.
-        </p>
+<div class="govuk-radios" data-module="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="custom-thresholds-yes" name="custom-or-disable" type="radio" value="custom-thresholds-yes" data-aria-controls="conditional-custom-thresholds-yes">
+<label class="govuk-label govuk-radios__label" for="custom-thresholds-yes">
+Set custom thresholds
+</label>
+<div id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint">
+We will send you notifications when a conjunction event involving any satellite in this group crosses all of the thresholds you have set. You do not have to specify thresholds for all criteria.
+</div> <!-- id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint" -->
 
-        <table class="govuk-table no-border" style="width:100%" id="custom-thresholds-questions">
-        <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header" style="width:40%">Criteria</th>
-        <th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
-        </tr>
-        </thead>
-        </table>
+<!-- this section only appears once button is selected -->
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-custom-thresholds-yes">
 
-        <!-- Probability of collision threshold -->
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="custom-poc-check" name="custom-poc-check" type="checkbox">
-        <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision</label>
-        </div>
-        <table class="govuk-table threshold-style inactive">
-        <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">   
-        <th scope="row" class="govuk-table__cell">Probability of collision is above:
-        </th>
-        <td class="govuk-table__cell">  
-        <div class="govuk-input__wrapper"> 
-        <input class="govuk-input govuk-input--width-5" id="custom-poc-value" name="custom-poc-value" type="text" spellcheck="false" value = "0.01">
-        <div class="govuk-input__suffix" aria-hidden="true">%
-        </div>
-        </div>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        </div>
+<table class="govuk-table no-border" style="width:100%" id="custom-thresholds-questions">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th scope="col" class="govuk-table__header" style="width:40%">Criteria</th>
+<th scope="col" class="govuk-table__header" style="width:20%">Threshold</th>
+</tr>
+</thead>
+</table>
 
-        <!-- total mean distance threshold -->
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="custom-tmd-check" name="custom-tmd-check" type="checkbox">
-        <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Total miss distance</label>
-        </div>
-        <table class="govuk-table threshold-style inactive">
-        <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">   
-        <th scope="row" class="govuk-table__cell">Total miss distance is above:
-        </th>
-        <td class="govuk-table__cell">  
-        <div class="govuk-input__wrapper"> 
-        <input class="govuk-input govuk-input--width-5" id="custom-tmd-value" name="custom-tmd-value" type="text" spellcheck="false" value = "1000">
-        <div class="govuk-input__suffix" aria-hidden="true">metres
-        </div>
-        </div>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        </div>
+<!-- Probability of collision threshold -->
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-poc-check" name="custom-poc-check" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<table class="govuk-table threshold-style inactive">
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">   
+<th scope="row" class="govuk-table__cell">Probability of collision is above:
+</th>
+<td class="govuk-table__cell">  
+<div class="govuk-input__wrapper"> 
+<input class="govuk-input govuk-input--width-5" id="custom-poc-value" name="custom-poc-value" type="text" spellcheck="false" value = "0.01">
+<div class="govuk-input__suffix" aria-hidden="true">%
+</div> <!-- class="govuk-input__suffix" aria-hidden="true">% -->
+</div> <!-- class="govuk-input__wrapper" -->
+</td>
+</tr>
+</tbody>
+</table>
+</div> <!-- lass="govuk-checkboxes" data-module="govuk-checkboxes" -->
 
-        <!-- mean radial distance threshold -->
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="custom-mrd-check" name="custom-mrd-check" type="checkbox">
-        <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Mean radial distance</label>
-        </div>
-        <table class="govuk-table threshold-style inactive">
-        <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">   
-        <th scope="row" class="govuk-table__cell">Mean radial distance is below:
-        </th>
-        <td class="govuk-table__cell">  
-        <div class="govuk-input__wrapper"> 
-        <input class="govuk-input govuk-input--width-5" id="custom-mrd-value" name="custom-mrd-value" type="text" spellcheck="false" value = "1000">
-        <div class="govuk-input__suffix" aria-hidden="true">metres
-        </div>
-        </div>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        </div>
+<!-- total mean distance threshold -->
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-tmd-check" name="custom-tmd-check" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Total miss distance</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<table class="govuk-table threshold-style inactive">
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">   
+<th scope="row" class="govuk-table__cell">Total miss distance is above:
+</th>
+<td class="govuk-table__cell">  
+<div class="govuk-input__wrapper"> 
+<input class="govuk-input govuk-input--width-5" id="custom-tmd-value" name="custom-tmd-value" type="text" spellcheck="false" value = "1000">
+<div class="govuk-input__suffix" aria-hidden="true">metres
+</div> <!-- class="govuk-input__suffix" aria-hidden="true">metres -->
+</div> <!-- class="govuk-input__wrapper" -->
+</td>
+</tr>
+</tbody>
+</table>
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
 
-        <!-- time to conjunction event threshold-->
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="custom-tce-check" name="custom-tce-check" type="checkbox">
-        <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Time till conjunction event
-        </label>
-        </div>
-        <table class="govuk-table threshold-style inactive">
-        <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">   
-        <th scope="row" class="govuk-table__cell">Time till conjunction event is below:
-        </th>
-        <td class="govuk-table__cell">  
-        <div class="govuk-input__wrapper"> 
-        <input class="govuk-input govuk-input--width-5" id="custom-tce-value" name="custom-tce-value" type="text" spellcheck="false" value = "1">
-        <div class="govuk-input__suffix" aria-hidden="true">hour(s)
-        </div>
-        </div>
-        </td>
-        </tr>
-        </tbody>
-        </table>
-        </div>
-        </div>
-    </div>
-  </div>
+<!-- mean radial distance threshold -->
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-mrd-check" name="custom-mrd-check" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Mean radial distance</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<table class="govuk-table threshold-style inactive">
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">   
+<th scope="row" class="govuk-table__cell">Mean radial distance is below:
+</th>
+<td class="govuk-table__cell">  
+<div class="govuk-input__wrapper"> 
+<input class="govuk-input govuk-input--width-5" id="custom-mrd-value" name="custom-mrd-value" type="text" spellcheck="false" value = "1000">
+<div class="govuk-input__suffix" aria-hidden="true">metres
+</div> <!-- class="govuk-input__suffix" aria-hidden="true">metres -->
+</div> <!-- class="govuk-input__wrapper" -->
+</td>
+</tr>
+</tbody>
+</table>
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+
+<!-- time to conjunction event threshold-->
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-tce-check" name="custom-tce-check" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Time till conjunction event
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<table class="govuk-table threshold-style inactive">
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">   
+<th scope="row" class="govuk-table__cell">Time till conjunction event is below:
+</th>
+<td class="govuk-table__cell">  
+<div class="govuk-input__wrapper"> 
+<input class="govuk-input govuk-input--width-5" id="custom-tce-value" name="custom-tce-value" type="text" spellcheck="false" value = "1">
+<div class="govuk-input__suffix" aria-hidden="true">hour(s)
+</div> <!-- class="govuk-input__suffix" aria-hidden="true">hour(s) -->
+</div> <!-- class="govuk-input__wrapper" -->
+</td>
+</tr>
+</tbody>
+</table>
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+
 </div>
+</div> <!-- class="govuk-radios__item" -->
+</div> <!-- class="govuk-radios" data-module="govuk-radios" -->
+
 </fieldset>
+</div> <!-- class="govuk-form-group" -->
+
+
+<!-- 4. Exceptions -->
+<h2 class="govuk-heading-l">
+4. Add an exception?
+</h2>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="exception-hint">
+
+<div id="exception-hint" class="govuk-hint">
+Set an exception to disable notifications for conjunction events between a satellite from this group and another specified satellite. Exceptions will override other custom settings if they conflict.
+</div> <!-- id="exception-hint" class="govuk-hint" -->
+
+<div class="govuk-radios" data-module="govuk-radios">
+
+<div class="govuk-radios__item">
+<input class="govuk-radios__input"
+id="exception-yes"
+name="add-exception"
+type="radio"
+value="yes"
+data-aria-controls="exception-conditional">
+<label class="govuk-label govuk-radios__label" for="exception-yes">
+Yes
+</label>
+</div> <!-- class="govuk-radios__item" -->
+
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+id="exception-conditional">
+<label class="govuk-label" for="norad-ids">
+Do not notify me if a conjunction event involves:
+</label>
+<textarea class="govuk-textarea govuk-!-width-two-thirds"
+id="norad-ids"
+name="norad-ids"
+rows="4"
+placeholder="Enter NORAD IDs separated by semi-colons. For example: 12345;45678"></textarea>
+</div> <!-- class="govuk-radios__conditional govuk-radios__conditional--hidden" -->
+
+<div class="govuk-radios__item">
+<input class="govuk-radios__input"
+id="exception-no"
+name="add-exception"
+type="radio"
+value="no"
+checked>
+<label class="govuk-label govuk-radios__label" for="exception-no">
+No
+</label>
+</div> <!-- class="govuk-radios__item" -->
+
+</div> <!-- class="govuk-radios" data-module="govuk-radios" -->
+</fieldset>
+</div> <!-- class="govuk-form-group" -->
+
+
+
+
+<a class="govuk-button govuk-!-margin-top-4"
+data-module="govuk-button"
+href="/account/operator/conjunction-notification-settings-check-custom">
+Continue
+</a>
+
 </div>
-
- 
-          <!-- 4. Exceptions -->
-          <h2 class="govuk-heading-l">
-            4. Add an exception?
-          </h2>
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="exception-hint">
-              <div id="exception-hint" class="govuk-hint">
-                Set an exception to disable notifications for conjunction events between a satellite from this group and another specified satellite. Exceptions will override other custom settings if they conflict.
-              </div>
-
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input"
-                         id="exception-yes"
-                         name="add-exception"
-                         type="radio"
-                         value="yes"
-                         data-aria-controls="exception-conditional">
-                  <label class="govuk-label govuk-radios__label" for="exception-yes">
-                    Yes
-                  </label>
-                </div>
-
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                     id="exception-conditional">
-                  <label class="govuk-label" for="norad-ids">
-                    Do not notify me if a conjunction event involves:
-                  </label>
-
-                  <textarea class="govuk-textarea govuk-!-width-two-thirds"
-                            id="norad-ids"
-                            name="norad-ids"
-                            rows="4"
-                            placeholder="Enter NORAD IDs separated by semi-colons. For example: 12345;45678"></textarea>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input"
-                         id="exception-no"
-                         name="add-exception"
-                         type="radio"
-                         value="no"
-                         checked>
-                  <label class="govuk-label govuk-radios__label" for="exception-no">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
-          
-
-
-   <a class="govuk-button govuk-!-margin-top-4"
-          data-module="govuk-button"
-          href="/account/operator/conjunction-notification-settings-check-custom">
-          Continue
-        </a>
-
-      </div>
-    </div>
-  </main>
+</div>
+</main>
 </div>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const table = document.getElementById("satellite-table");
-    if (!table) return;
+document.addEventListener("DOMContentLoaded", () => {
+const table = document.getElementById("satellite-table");
+if (!table) return;
 
-    const tbody = table.querySelector("tbody");
-    const rows = Array.from(tbody.querySelectorAll("tr.govuk-table__row:not(#no-results-row)"));
-    const noResultsRow = document.getElementById("no-results-row");
+const tbody = table.querySelector("tbody");
+const rows = Array.from(tbody.querySelectorAll("tr.govuk-table__row:not(#no-results-row)"));
+const noResultsRow = document.getElementById("no-results-row");
 
-    const searchInput = document.getElementById("satellite-search");
-    const searchBtn = document.getElementById("satellite-search-btn");
-    const regimeCheckboxes = Array.from(document.querySelectorAll('input[name="regime"]'));
-    const licensingSelect = document.getElementById("licensing-country");
-    const clearFilters = document.getElementById("clear-filters");
+const searchInput = document.getElementById("satellite-search");
+const searchBtn = document.getElementById("satellite-search-btn");
+const regimeCheckboxes = Array.from(document.querySelectorAll('input[name="regime"]'));
+const licensingSelect = document.getElementById("licensing-state");
+const clearFilters = document.getElementById("clear-filters");
 
-    const selectedCountEl = document.getElementById("selected-count");
-    const resultsCountEl = document.getElementById("results-count");
-    const clearSelectionLink = document.getElementById("clear-selection");
-    const selectAll = document.getElementById("select-all"); // keep ONLY ONE in the page
+const selectedCountEl = document.getElementById("selected-count");
+const resultsCountEl = document.getElementById("results-count");
+const clearSelectionLink = document.getElementById("clear-selection");
+const selectAll = document.getElementById("select-all"); // keep ONLY ONE in the page
 
-    function normalise(s) {
-      return (s || "").toString().trim().toLowerCase();
-    }
+function normalise(s) {
+return (s || "").toString().trim().toLowerCase();
+}
 
-    function licensingValueToName(val) {
-      const map = {
-        any: "",
-        uk: "united kingdom",
-        us: "united states",
-        fr: "france",
-        de: "germany"
-      };
-      return map[val] || normalise(val);
-    }
+function licensingValueToName(val) {
+const map = {
+any: "",
+uk: "united kingdom",
+us: "united states",
+fr: "france",
+de: "germany"
+};
+return map[val] || normalise(val);
+}
 
-    function getRowCheckbox(row) {
-      return row.querySelector(".satellite-checkbox");
-    }
+function getRowCheckbox(row) {
+return row.querySelector(".satellite-checkbox");
+}
 
-    function isRowVisible(row) {
-      return row.style.display !== "none";
-    }
+function isRowVisible(row) {
+return row.style.display !== "none";
+}
 
-    function getVisibleRows() {
-      return rows.filter(isRowVisible);
-    }
+function getVisibleRows() {
+return rows.filter(isRowVisible);
+}
 
-    function getVisibleCheckboxes() {
-      return getVisibleRows().map(getRowCheckbox).filter(Boolean);
-    }
+function getVisibleCheckboxes() {
+return getVisibleRows().map(getRowCheckbox).filter(Boolean);
+}
 
-    function getAllCheckboxes() {
-      return rows.map(getRowCheckbox).filter(Boolean);
-    }
+function getAllCheckboxes() {
+return rows.map(getRowCheckbox).filter(Boolean);
+}
 
-    function updateCounts() {
-      const allCbs = getAllCheckboxes();
-      const selectedCount = allCbs.filter(cb => cb.checked).length;
-      if (selectedCountEl) selectedCountEl.textContent = String(selectedCount);
+function updateCounts() {
+const allCbs = getAllCheckboxes();
+const selectedCount = allCbs.filter(cb => cb.checked).length;
+if (selectedCountEl) selectedCountEl.textContent = String(selectedCount);
 
-      const visibleCount = getVisibleRows().length;
-      if (resultsCountEl) resultsCountEl.textContent = String(visibleCount);
+const visibleCount = getVisibleRows().length;
+if (resultsCountEl) resultsCountEl.textContent = String(visibleCount);
 
-      if (selectAll) {
-        const visibleCbs = getVisibleCheckboxes();
-        if (!visibleCbs.length) {
-          selectAll.checked = false;
-          selectAll.indeterminate = false;
-        } else {
-          const allChecked = visibleCbs.every(cb => cb.checked);
-          const anyChecked = visibleCbs.some(cb => cb.checked);
-          selectAll.checked = allChecked;
-          selectAll.indeterminate = anyChecked && !allChecked;
-        }
-      }
-    }
+if (selectAll) {
+const visibleCbs = getVisibleCheckboxes();
+if (!visibleCbs.length) {
+selectAll.checked = false;
+selectAll.indeterminate = false;
+} else {
+const allChecked = visibleCbs.every(cb => cb.checked);
+const anyChecked = visibleCbs.some(cb => cb.checked);
+selectAll.checked = allChecked;
+selectAll.indeterminate = anyChecked && !allChecked;
+}
+}
+}
 
-    function applyFiltersToTable() {
-      const term = normalise(searchInput ? searchInput.value : "");
-      const selectedRegimes = regimeCheckboxes
-        .filter(cb => cb.checked)
-        .map(cb => normalise(cb.value)); // GEO/LEO -> geo/leo
+function applyFiltersToTable() {
+const term = normalise(searchInput ? searchInput.value : "");
+const selectedRegimes = regimeCheckboxes
+.filter(cb => cb.checked)
+.map(cb => normalise(cb.value)); // GEO/LEO -> geo/leo
 
-      const licValue = licensingSelect ? licensingSelect.value : "any";
+const licValue = licensingSelect ? licensingSelect.value : "any";
 const licName = licensingValueToName(licValue);
 
 // ✅ Default: show ALL satellites when no filters
 const noFiltersApplied = !term && selectedRegimes.length === 0 && licValue === "any";
-      if (noFiltersApplied) {
-        rows.forEach(r => r.style.display = "");
-        if (noResultsRow) noResultsRow.style.display = "none";
-        updateCounts();
-        return;
-      }
+if (noFiltersApplied) {
+rows.forEach(r => r.style.display = "");
+if (noResultsRow) noResultsRow.style.display = "none";
+updateCounts();
+return;
+}
 
-      rows.forEach(row => {
-        const cells = row.querySelectorAll("th, td");
-        const objectName = normalise(cells[0]?.textContent);
-        const norad = normalise(cells[1]?.textContent);
-        const regime = normalise(cells[2]?.textContent);
-        const licensing = normalise(cells[3]?.textContent);
+rows.forEach(row => {
+const cells = row.querySelectorAll("th, td");
+const objectName = normalise(cells[0]?.textContent);
+const norad = normalise(cells[1]?.textContent);
+const regime = normalise(cells[2]?.textContent);
+const licensing = normalise(cells[3]?.textContent);
 
-        const matchesSearch = !term || objectName.includes(term) || norad.includes(term);
-        const matchesRegime = selectedRegimes.length === 0 || selectedRegimes.includes(regime);
-        const matchesLicensing = (licValue === "any") || (licensing === licName);
+const matchesSearch = !term || objectName.includes(term) || norad.includes(term);
+const matchesRegime = selectedRegimes.length === 0 || selectedRegimes.includes(regime);
+const matchesLicensing = (licValue === "any") || (licensing === licName);
 
 
-        row.style.display = (matchesSearch && matchesRegime && matchesLicensing) ? "" : "none";
-      });
+row.style.display = (matchesSearch && matchesRegime && matchesLicensing) ? "" : "none";
+});
 
-      const visibleCount = getVisibleRows().length;
-      if (noResultsRow) noResultsRow.style.display = visibleCount === 0 ? "" : "none";
+const visibleCount = getVisibleRows().length;
+if (noResultsRow) noResultsRow.style.display = visibleCount === 0 ? "" : "none";
 
-      updateCounts();
-    }
+updateCounts();
+}
 
-    // Filter events
-    if (searchInput) searchInput.addEventListener("input", applyFiltersToTable);
-    if (searchBtn) searchBtn.addEventListener("click", applyFiltersToTable);
-    regimeCheckboxes.forEach(cb => cb.addEventListener("change", applyFiltersToTable));
-    if (licensingSelect) licensingSelect.addEventListener("change", applyFiltersToTable);
+// Filter events
+if (searchInput) searchInput.addEventListener("input", applyFiltersToTable);
+if (searchBtn) searchBtn.addEventListener("click", applyFiltersToTable);
+regimeCheckboxes.forEach(cb => cb.addEventListener("change", applyFiltersToTable));
+if (licensingSelect) licensingSelect.addEventListener("change", applyFiltersToTable);
 
-    if (clearFilters) {
-      clearFilters.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (searchInput) searchInput.value = "";
-        regimeCheckboxes.forEach(cb => cb.checked = false);
-        if (licensingSelect) licensingSelect.value = "any";
-        applyFiltersToTable();
-      });
-    }
+if (clearFilters) {
+clearFilters.addEventListener("click", (e) => {
+e.preventDefault();
+if (searchInput) searchInput.value = "";
+regimeCheckboxes.forEach(cb => cb.checked = false);
+if (licensingSelect) licensingSelect.value = "any";
+applyFiltersToTable();
+});
+}
 
-    // Selection events
-    if (tbody) {
-      tbody.addEventListener("change", (e) => {
-        if (e.target?.classList?.contains("satellite-checkbox")) updateCounts();
-      });
-    }
+// Selection events
+if (tbody) {
+tbody.addEventListener("change", (e) => {
+if (e.target?.classList?.contains("satellite-checkbox")) updateCounts();
+});
+}
 
-    if (selectAll) {
-      selectAll.addEventListener("change", () => {
-        getVisibleCheckboxes().forEach(cb => cb.checked = selectAll.checked);
-        updateCounts();
-      });
-    }
+if (selectAll) {
+selectAll.addEventListener("change", () => {
+getVisibleCheckboxes().forEach(cb => cb.checked = selectAll.checked);
+updateCounts();
+});
+}
 
-    if (clearSelectionLink) {
-      clearSelectionLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        getAllCheckboxes().forEach(cb => cb.checked = false);
-        updateCounts();
-      });
-    }
+if (clearSelectionLink) {
+clearSelectionLink.addEventListener("click", (e) => {
+e.preventDefault();
+getAllCheckboxes().forEach(cb => cb.checked = false);
+updateCounts();
+});
+}
 
-    // Init
-    applyFiltersToTable();
-    updateCounts();
-  });
+// Init
+applyFiltersToTable();
+updateCounts();
+});
 
-    /* Grey out unchecked boxes */
-  document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
-    checkbox.addEventListener('change', (event) => {
-      const table = checkbox.closest('.govuk-checkboxes__item').nextElementSibling;
-      if (table && table.tagName === 'TABLE') {
-        table.classList.toggle('inactive', !checkbox.checked);
-      }
-    });
-  });
+/* Grey out unchecked boxes */
+document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
+checkbox.addEventListener('change', (event) => {
+const table = checkbox.closest('.govuk-checkboxes__item').nextElementSibling;
+if (table && table.tagName === 'TABLE') {
+table.classList.toggle('inactive', !checkbox.checked);
+}
+});
+});
 </script>
-
-
 
 {% endblock %}

@@ -7,72 +7,109 @@ Setup menu
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">
-      Your account information
-      </h1>
+<h1 class="govuk-heading-xl">
+Your account information
+</h1>
 
-    <ul class="app-task-list">
+<ul class="app-task-list">
 
 
 
-          <li>
-            <h2 class="app-task-list__section">
-             View your account details
-            </h2>
-            <ul class="app-task-list__items">
-              <li class="app-task-list__item">
-                <span class="app-task-list__task-name">
-                  <a href="/account/gov-user/account-information">Account details</a>
-                </span>
-              </li>
-            </ul>
-          </li>
+<li>
+<h2 class="app-task-list__section">
+View your account details
+</h2>
+<ul class="app-task-list__items">
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/account-information">Account details</a>
+</span>
+</li>
+</ul>
+</li>
 
-          <li>
-            <h2 class="app-task-list__section">
-            Alert settings
-            </h2>
-            <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/account/gov-user/threshold-settings" aria-describedby="event-thresholds">
-                Edit your alert settings
-              </a>
-            </span>
-          </li>
+<li>
+<h2 class="app-task-list__section">
+Alert settings
+</h2>
+<ul class="app-task-list__items">
 
-        </ul>
-      </li>
+<!-- (just delete this line to unhide redundant pages)
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/alert-settings-v1" aria-describedby="/account/gov-user/alert-settings-v1">
+Edit your alert settings v1
+</a>
+</span>
+</li>
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/alert-settings-v2" aria-describedby="/account/gov-user/alert-settings-v2">
+Edit your alert settings v2
+</a>
+</span>
+</li>
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/alert-settings-v3" aria-describedby="/account/gov-user/alert-settings-v3">
+Edit your alert settings v3
+</a>
+</span>
+</li> 
+--> <!--(just delete this line to unhide redundant pages)-->
 
-      <li>
-        <h2 class="app-task-list__section">
-      View terms and conditions and data privacy notice
-        </h2>
-        <ul class="app-task-list__items">
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/account/gov-user/ts-and-cs" aria-describedby="terms-of-service">
-                Terms and Conditions
-              </a>
-            </span>
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/conjunction-alert-settings-v1" aria-describedby="/account/gov-user/conjunction-alert-settings-v1">
+Edit your conjunction alert settings 
+</a>
+</span>
+</li>
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/reentry-alert-settings-v1" aria-describedby="/account/gov-user/reentry-alert-settings-v1">
+Edit your re-entry alert settings 
+</a>
+</span>
+</li>
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/fragmentation-alert-settings-v1" aria-describedby="/account/gov-user/fragmentation-alert-settings-v1">
+Edit your fragmentation alert settings 
+</a>
+</span>
+</li>
+</ul>
+</li>
+</ul>
 
-          </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="/account/gov-user/data-privacy" aria-describedby="data-privacy">
-                Data privacy notice
-              </a>
-            </span>
 
-          </li>
-        </ul>
-      </li>
+<h2 class="app-task-list__section">
+View terms and conditions and data privacy notice
+</h2>
+<ul class="app-task-list__items">
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/ts-and-cs" aria-describedby="terms-of-service">
+Terms and Conditions
+</a>
+</span>
 
-        </ul>
+</li>
+<li class="app-task-list__item">
+<span class="app-task-list__task-name">
+<a href="/account/gov-user/data-privacy" aria-describedby="data-privacy">
+Data privacy notice
+</a>
+</span>
+</li>
+</ul>
+</li>
+</ul>
 
-  </div>
+</div>
 </div>
 
 {% endblock %}

@@ -23,3 +23,27 @@ window.GOVUKPrototypeKit.documentReady(() => {
       }
       });
 })
+
+// Script to enable 'select all' option for account/gov-user/account-settings-v2 //
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('[data-module="select-all-checkboxes"]').forEach(container => {
+    const selectAll = container.querySelector('#select-all')
+    const boxes = Array.from(container.querySelectorAll('input[type="checkbox"]'))
+      .filter(cb => cb !== selectAll)
+
+    if (!selectAll || boxes.length === 0) return
+
+    // Toggle all boxes when "Select all" changes
+    selectAll.addEventListener('change', () => {
+      boxes.forEach(cb => cb.checked = selectAll.checked)
+    })
+
+    // Keep "Select all" in sync when individuals change
+    boxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        selectAll.checked = boxes.every(cb => cb.checked)
+      })
+    })
+  })
+})
+
