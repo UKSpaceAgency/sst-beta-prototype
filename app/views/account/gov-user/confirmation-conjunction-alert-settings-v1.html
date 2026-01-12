@@ -1,0 +1,21 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Conjunction alert settings saved
+{% endblock %}
+
+{% block beforeContent %}
+{# Typically omit the back link on confirmation pages #}
+{% endblock %}
+
+{% block content %}
+{{ govukPanel({
+titleText: "Changes saved",
+html: "Your conjunction alert settings have been saved."
+}) }}
+
+<a href="/account/gov-user/account" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+Return to account page
+</a>
+{% endblock %}
+
