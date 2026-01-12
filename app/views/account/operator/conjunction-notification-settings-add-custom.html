@@ -168,7 +168,9 @@ margin-bottom: 10px;
 <h2 class="govuk-heading-l">
 1. Choose a name
 </h2>
+
 <div class="govuk-form-group">
+
 <div id="custom-name-hint" class="govuk-hint">
 Give the custom thresholds a clear name that reflects the satellites they apply to,
 for example “LEO satellites” or “satellite A”.
@@ -180,7 +182,7 @@ id="custom-name"
 name="custom-name"
 type="text"
 aria-describedby="group-name-hint">
-</div> <!-- class="govuk-form-group" for custom thresholds -->
+</div> <!-- class="govuk-form-group" -->
 
 <!-- 2. Add Satellites -->
 <h2 class="govuk-heading-l">2. Add satellites to this group</h2>
@@ -510,42 +512,38 @@ NORAD ID
 
 <!-- 3. Thresholds -->
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="custom-or-disable-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">3. Set custom thresholds or disable notifications</h1>
-    </legend>
+<fieldset class="govuk-fieldset" aria-describedby="custom-or-disable-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+3. Set custom thresholds or disable notifications
+</h1>
+</legend>
+<div id="custom-or-disable-hint" class="govuk-hint">
+Select one option
+</div> <!-- id="custom-or-disable" class="govuk-hint" -->
 
-    <div id="custom-or-disable-hint" class="govuk-hint">Select one option</div>
-
-    <div class="govuk-radios" data-module="govuk-radios">
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input"
-               id="disable-notifications"
-               name="custom-or-disable"
-               type="radio"
-               value="disable-notifications">
-        <label class="govuk-label govuk-radios__label" for="disable-notifications">
-          Disable all notifications
-        </label>
-        <div id="disable-notifications-hint" class="govuk-hint govuk-radios__hint">
-          Disabling notifications for these satellites will override other custom settings if they conflict.
-        </div>
-      </div>
-
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input"
-               id="custom-thresholds-yes"
-               name="custom-or-disable"
-               type="radio"
-               value="custom-thresholds-yes"
-               data-aria-controls="conditional-custom-thresholds-yes">
-        <label class="govuk-label govuk-radios__label" for="custom-thresholds-yes">
-          Set custom thresholds
-        </label>
-        <div id="custom-thresholds-hint" class="govuk-hint govuk-radios__hint">
-          We will send you notifications when a conjunction event involving any satellite in this group crosses all of the thresholds you have set.
-        </div>
+<!-- Disable notifications option -->
+<div class="govuk-radios" data-module="govuk-radios">
+</div> <!-- class="govuk-radios" data-module="govuk-radios" -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="disable-notifications" name="custom-or-disable" type="radio" value="disable-notifications" data-aria-controls="conditional-disable-notifications">
+<label class="govuk-label govuk-radios__label" for="disable-notifications">
+Disable all notifications
+</label>
+<div id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint">
+Disabling notifications for these satellites will override other custom settings if they conflict.
+</div> <!-- id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint" -->
+</div> <!-- lass="govuk-radios__item" -->
+<!-- custom thresholds -->
+<div class="govuk-radios" data-module="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="custom-thresholds-yes" name="custom-or-disable" type="radio" value="custom-thresholds-yes" data-aria-controls="conditional-custom-thresholds-yes">
+<label class="govuk-label govuk-radios__label" for="custom-thresholds-yes">
+Set custom thresholds
+</label>
+<div id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint">
+We will send you notifications when a conjunction event involving any satellite in this group crosses all of the thresholds you have set. You do not have to specify thresholds for all criteria.
+</div> <!-- id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint" -->
 
 <!-- this section only appears once button is selected -->
 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-custom-thresholds-yes">
@@ -653,10 +651,10 @@ NORAD ID
 </table>
 </div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
 
-</div> <!-- this section only appears once button is selected -->
-
+</div>
 </div> <!-- class="govuk-radios__item" -->
 </div> <!-- class="govuk-radios" data-module="govuk-radios" -->
+
 </fieldset>
 </div> <!-- class="govuk-form-group" -->
 
@@ -673,21 +671,21 @@ NORAD ID
 Set an exception to disable notifications for conjunction events between a satellite from this group and another specified satellite. Exceptions will override other custom settings if they conflict. 
 </p>
 
-<div id="exception-search-hint" class="govuk-hint">
+<div id="satellite-search-hint" class="govuk-hint">
 Search and filter the list, then select the satellites you want to add as exceptions.
-</div> <!-- id="exception-search-hint" class="govuk-hint" -->
+</div> <!-- id="satellite-search-hint" class="govuk-hint" -->
 
 <!-- Toolbar: Search row -->
 <div class="govuk-form-group sat-toolbar">
-<label class="govuk-label govuk-label--s" for="exception-search">
+<label class="govuk-label govuk-label--s" for="satellite-search">
 Search satellites
 </label>
 
 <div class="govuk-grid-row govuk-!-margin-bottom-1">
 <div class="govuk-grid-column-two-thirds">
 <input class="govuk-input"
-id="exception-search"
-name="exception-search"
+id="satellite-search"
+name="satellite-search"
 type="text"
 placeholder="Search by object name or NORAD ID">
 </div> <!-- class="govuk-grid-column-two-thirds" -->
@@ -696,7 +694,7 @@ placeholder="Search by object name or NORAD ID">
 <button class="govuk-button govuk-!-margin-bottom-1"
 data-module="govuk-button"
 type="button"
-id="exception-search-btn">
+id="satellite-search-btn">
 Search
 </button>
 </div> <!-- class="govuk-grid-column-one-third" -->
@@ -1018,8 +1016,6 @@ const noResultsRow = document.getElementById("no-results-row");
 
 const searchInput = document.getElementById("satellite-search");
 const searchBtn = document.getElementById("satellite-search-btn");
-const searchInput = document.getElementById("exception-search");
-const searchBtn = document.getElementById("exception-search-btn");
 const regimeCheckboxes = Array.from(document.querySelectorAll('input[name="regime"]'));
 const licensingSelect = document.getElementById("licensing-state");
 const clearFilters = document.getElementById("clear-filters");
