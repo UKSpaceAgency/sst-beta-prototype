@@ -18,11 +18,12 @@ Account
 </a>
 </li>
 <li class="govuk-breadcrumbs__list-item" aria-current="page">
-Notification settings
+Re-entry alert settings
 </li>
 </ol>
 </div> <!-- class="govuk-breadcrumbs"-->
 </div> <!-- class="govuk-width-container"-->
+<form class="form" action="/account/operator/account" method="post">
 
 <!-- Page layout -->
 <main class="govuk-main-wrapper" id="main-content" role="main">
@@ -35,7 +36,7 @@ Notification settings
 
 <!-- Page intro -->
 <p class="govuk-body">
-This page allows you to choose which re-entry alerts you receive.
+This page allows you to choose your re-entry alert settings.
 </p>
 
 <!-- Which re-entry alerts would you like to receive? -->
@@ -51,13 +52,13 @@ Select one option.
 </div> <!--  id="which-alerts-hint" class="govuk-hint -->
 <!-- all options for which re-entry alerts would you like to receive?  -->
 <div class="govuk-radios" data-module="govuk-radios"> 
-<!-- Do not receive re-entry alerts -->
+<!-- No re-entry alerts -->
 <div class="govuk-radios__item">
 <input class="govuk-radios__input" id="no-alerts" name="which-alerts" type="radio" value="no-alerts" aria-describedby="no-alerts-item-hint">
 <label class="govuk-label govuk-radios__label" for="no-alerts">
-Do not receive re-entry alerts
+No re-entry alerts
 </label>
-</div> <!-- class="govuk-radios__item" for Do not receive re-entry alerts -->
+</div> <!-- class="govuk-radios__item" for No re-entry alerts -->
 <!-- All re-entry alerts for UK-licensed satellites -->
 <div class="govuk-radios__item">
 <input class="govuk-radios__input" id="all-UK-licensed" name="which-alerts" type="radio" value="all-UK-licensed" aria-describedby="all-UK-licensed-item-hint">
@@ -331,6 +332,10 @@ Email
 </fieldset> <!-- how would you like to receive alerts? -->
 </div> <!-- class="govuk-form-group for how would you like to receive alerts?-->
 
+<a href="/account/gov-user/account" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+Save and continue
+</a>
+</form>
 </div> <!-- class="govuk-grid-column-full" -->
 </div> <!-- class="govuk-grid-row" -->
 </main> 

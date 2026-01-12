@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+<!-- Title -->
+{% block pageTitle %}
+Notification settings
+{% endblock %}
+
+<!-- Page content -->
+{% block content %}
+
+<!-- Breadcrumbs links-->
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/account/gov-user/account">
+Account
+</a>
+</li>
+<li class="govuk-breadcrumbs__list-item" aria-current="page">
+Conjunction alert settings
+</li>
+</ol>
+</div> <!-- class="govuk-breadcrumbs"-->
+</div> <!-- class="govuk-width-container"-->
+<form class="form" action="/account/operator/account" method="post">
+
+
+<!-- Page layout -->
+<main class="govuk-main-wrapper" id="main-content" role="main">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+<!-- Page title -->
+<h1 class="govuk-heading-xl">Conjunction alert settings
+</h1>
+
+<!-- Page intro -->
+<p class="govuk-body">
+This page allows you to choose your conjunction alert settings.
+</p>
+
+<!-- Which conjunction alerts would you like to receive? -->
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="which-alerts-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+Which conjunction alerts would you like to receive? 
+</h1>
+</legend>
+<div id="which-alerts-hint" class="govuk-hint">
+Select one option.
+</div> <!--  id="which-alerts-hint" class="govuk-hint -->
+<!-- all options for which Conjunction alerts would you like to receive?  -->
+<div class="govuk-radios" data-module="govuk-radios"> 
+<!-- No Conjunction alerts -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="no-alerts" name="which-alerts" type="radio" value="no-alerts" aria-describedby="no-alerts-item-hint">
+<label class="govuk-label govuk-radios__label" for="no-alerts">
+No conjunction alerts
+</label>
+</div> <!-- class="govuk-radios__item" for No conjunction alerts -->
+<!-- All conjunction alerts for your areas of interest -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="all-alerts" name="which-alerts" type="radio" value="all-alerts" aria-describedby="all-alerts-item-hint">
+<label class="govuk-label govuk-radios__label" for="all-alerts">
+All conjunction alerts
+</label>
+<div id="all-alerts-hint" class="govuk-hint govuk-radios__hint">
+Recommended for National Space Operations Centre, Civil Aviation Authority, Ministry of Defence and international partners
+</div>
+</div> <!-- class="govuk-radios__item" for All conjunction alerts for your areas of interest -->
+<!-- Only priority conjunction alerts for your areas of interst -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="priority-alerts" name="which-alerts" type="radio" value="priority-alerts" aria-describedby="priority-alerts-item-hint">
+<label class="govuk-label govuk-radios__label" for="priority-alerts">
+Only priority conjunction alerts 
+</label>
+<div id="priority-alerts-hint" class="govuk-hint govuk-radios__hint">
+Recommended for all other government departments
+</div>
+</div> <!-- class="govuk-radios__item" for Only priority conjunction alerts -->
+</div> <!-- class="govuk-radios" data-module="govuk-radios" for all options for which conjunction alerts would you like to receive -->
+</fieldset> <!-- which conjunction alerts would you like to receive? -->
+</div> <!-- class="govuk-form-group for which conjunctino alerts would you like to receive?-->
+
+<!-- How would you like to receive alerts? -->
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="how-alerts-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+How would you like to receive alerts?
+</h1>
+</legend>
+<div id="how-alerts-hint" class="govuk-hint">
+Select one option.
+</div> <!--  id="how-alerts-hint" class="govuk-hint -->
+<!-- all options for How would you like to receive alerts?  -->
+<div class="govuk-radios" data-module="govuk-radios"> 
+<!-- Text -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="text" name="how-alerts" type="radio" value="text" aria-describedby="text-item-hint">
+<label class="govuk-label govuk-radios__label" for="text">
+Text
+</label>
+</div> <!-- class="govuk-radios__item" for text -->
+<!-- Email -->
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="email" name="how-alerts" type="radio" value="email" aria-describedby="email-item-hint">
+<label class="govuk-label govuk-radios__label" for="email">
+Email
+</label>
+</div> <!-- class="govuk-radios__item" for Email -->
+</div> <!-- class="govuk-radios" data-module="govuk-radios" for all options for how would you like to receive alerts? -->
+</fieldset> <!-- how would you like to receive alerts? -->
+</div> <!-- class="govuk-form-group for how would you like to receive alerts?-->
+
+<a href="/account/gov-user/account" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+Save and continue
+</a>
+
+</form>
+</div> <!-- class="govuk-grid-column-full" -->
+</div> <!-- class="govuk-grid-row" -->
+</main> 
+
+{% endblock %}
