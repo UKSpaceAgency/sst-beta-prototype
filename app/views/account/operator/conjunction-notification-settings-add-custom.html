@@ -164,15 +164,15 @@ margin-bottom: 10px;
 <!-- Turn page into a form (where submission leads to a 'check settings' page) -->
 <form method="post" action="/account/operator/conjunction-notification-settings-check-custom">
 
-<!-- 1. Custom thresholds name -->
+<!-- Custom thresholds name -->
 <h2 class="govuk-heading-l">
-1. Choose a name
+Choose a name
 </h2>
 
 <div class="govuk-form-group">
 
 <div id="custom-name-hint" class="govuk-hint">
-Give the custom thresholds a clear name that reflects the satellites they apply to,
+Use a clear name for these custom settings that reflects the satellites included,
 for example “LEO satellites” or “satellite A”.
 </div> <!-- id="custom-name-hint" class="govuk-hint" -->
 
@@ -184,8 +184,10 @@ type="text"
 aria-describedby="group-name-hint">
 </div> <!-- class="govuk-form-group" -->
 
-<!-- 2. Add Satellites -->
-<h2 class="govuk-heading-l">2. Add satellites to this group</h2>
+<!-- Add Satellites -->
+<h2 class="govuk-heading-l">
+Add satellites to this group
+</h2>
 
 <div id="satellite-search-hint" class="govuk-hint">
 Search and filter the list, then select the satellites you want to include.
@@ -510,12 +512,12 @@ NORAD ID
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<!-- 3. Thresholds -->
+<!-- Thresholds -->
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="custom-or-disable-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
-3. Set custom thresholds or disable notifications
+Set custom thresholds or disable notifications 
 </h1>
 </legend>
 <div id="custom-or-disable-hint" class="govuk-hint">
@@ -531,7 +533,7 @@ Select one option
 Disable all notifications
 </label>
 <div id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint">
-Disabling notifications for these satellites will override other custom settings if they conflict.
+Disabling notifications for these satellites will override other settings if they conflict.
 </div> <!-- id="disable-notifications-hint" class="govuk-hint govuk-checkboxes__hint" -->
 </div> <!-- lass="govuk-radios__item" -->
 <!-- custom thresholds -->
@@ -658,17 +660,105 @@ We will send you notifications when a conjunction event involving any satellite 
 </fieldset>
 </div> <!-- class="govuk-form-group" -->
 
+<!-- What type of notifications do you want to receive? -->
+<div class="govuk-form-group" class="govuk-!-margin-top-6">
+<fieldset class="govuk-fieldset" aria-describedby="custom-notification-type-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+When do you want to receive notifications?
+</h1>
+</legend>
+<div id="custom-notification-type-hint" class="govuk-hint">
+Select all that apply.
+</div>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="event-new" name="custom-notification-type" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="event-new">
+For relevant new conjunction events
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="event-updated" name="custom-notification-type" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="event-updated">
+For relevant updated conjunction events
+</label>
+</div> <!-- class="govuk-checkboxes__item -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="event-nspoc" name="custom-notification-type" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="event-nspoc">
+When new NSpOC analysis is uploaded for relevant conjunction events
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</fieldset>
+</div> <!-- class="govuk-form-group" -->
 
-<!-- 4. Exceptions -->
+<!-- How frequent should notifications be? -->
+<div class="govuk-!-margin-top-6">
+</div><div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="custom-frequency-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+How frequent should notifications be?
+</h1>
+</legend>
+ <div id="custom-frequency-hint" class="govuk-hint">
+Select one option.
+    </div>
+<div class="govuk-radios" data-module="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="custom-frequency-asap" name="custom-frequency" type="radio" value="custom-frequency-asap">
+<label class="govuk-label govuk-radios__label" for="custom-frequency-asap">
+As soon as possible
+</label>
+<div id="custom-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
+You'll receive an email as soon as relevant notifications are released from MSH.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="custom-frequency-2" name="custom-frequency" type="radio" value="custom-frequency-2">
+<label class="govuk-label govuk-radios__label" for="custom-frequency-2">
+Every 2 hours
+</label>
+<div id="custom-frequency-2-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past 2 hours will be collated and sent in a single email.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="custom-frequency-12" name="custom-frequency" type="radio" value="custom-frequency-12">
+<label class="govuk-label govuk-radios__label" for="custom-frequency-12">
+Every 12 hours
+</label>
+</label>
+<div id="custom-frequency-12-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past 12 hours will be collated and sent in a single email.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="custom-frequency-24" name="custom-frequency" type="radio" value="custom-frequency-24">
+<label class="govuk-label govuk-radios__label" for="custom-frequency-24">
+Every 24 hours 
+</label>
+</label>
+<div id="custom-frequency-24-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications  from the past 24 hours will be collated and sent in a single email.
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+
+<!-- Exceptions -->
+<!-- ideally, this question would only show if users set custom thresholds - they shouldn't see this question if they 'disabled all notifications. but can't do that in prototype -->
 <h2 class="govuk-heading-l">
-4. Add an exception?
+Add an exception (optional)
 </h2>
 
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="exception-hint">
-
 <p>
-Set an exception to disable notifications for conjunction events between a satellite from this group and another specified satellite. Exceptions will override other custom settings if they conflict. 
+Set an exception to disable notifications for conjunction events between a satellite from this group and another specified satellite. Exceptions will override other settings if they conflict. 
 </p>
 
 <div id="satellite-search-hint" class="govuk-hint">
