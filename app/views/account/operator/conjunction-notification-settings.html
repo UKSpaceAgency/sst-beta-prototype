@@ -57,17 +57,23 @@ This page allows you to adjust your notification settings for conjunction events
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-<!-- General thresholds -->
+<!-- General notifications -->
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 <div class="govuk-accordion__section">
 <div class="govuk-accordion__section-header">
 <h1 class="govuk-accordion__section-heading">
 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-General thresholds
+Set general notifications
 </span>
 </h1>
 </div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+<p class="govuk-body">
+You can set general settings which apply to all satellites. In the next section, you will be able to specify exceptions to these general settings by creating custom settings for specific satellites or groups of satellites.
+</p>
+
+<h2 class="govuk-heading-l">General thresholds
+</h2>
 
 <p class="govuk-body">
 We will send you notifications when a conjunction event crosses all of the thresholds you have set. You do not have to specify thresholds for all criteria.
@@ -75,9 +81,10 @@ We will send you notifications when a conjunction event crosses all of the thres
 <p class="govuk-body">
 You are responsible for the safe operation of your satellites and should choose settings which allow you to do this. The example thresholds may not be the most appropriate thresholds for your satellites.
 </p>
-<p class="govuk-body">
-You can set general thresholds which apply to all satellites. In the next section, you will be able to specify exceptions to these general settings by creating custom settings for specific satellites or groups of satellites.
-</p>
+
+<div class="govuk-hint">
+Select all criteria that apply, then input your preferred thresholds for each.
+</div>
 
 <table class="govuk-table no-border" style="width:100%" id="general-thresholds">
 <thead class="govuk-table__head">
@@ -165,7 +172,7 @@ You can set general thresholds which apply to all satellites. In the next sectio
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Time till conjunction event
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
-<table class="govuk-table threshold-style inactive">
+<table class="govuk-table threshold-style inactive govuk-!-margin-bottom-6"> <!-- keep 'govuk-!-margin-bottom-6' in the <table tag in the last question to add enough space between the table and the next element -->
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">   
 <th scope="row" class="govuk-table__cell">Time till conjunction event is below:
@@ -181,6 +188,95 @@ You can set general thresholds which apply to all satellites. In the next sectio
 </tbody>
 </table>
 </div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+
+<!-- What type of notifications do you want to receive? -->
+<div class="govuk-form-group" class="govuk-!-margin-top-6">
+<fieldset class="govuk-fieldset" aria-describedby="general-notification-type-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+When do you want to receive general notifications?
+</h1>
+</legend>
+<div id="general-notification-type-hint" class="govuk-hint">
+Select all that apply.
+</div>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="event-new" name="general-notification-type" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="event-new">
+A new conjunction event meets your general thresholds
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="event-updated" name="general-notification-type" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="event-updated">
+An updated conjunction event meets your general thresholds
+</label>
+</div> <!-- class="govuk-checkboxes__item -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="event-nspoc" name="general-notification-type" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="event-nspoc">
+New NSpOC analysis is uploaded for a conjunction event which meets your general thresholds
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</fieldset>
+</div> <!-- class="govuk-form-group" -->
+
+<!-- How frequent should notifications be? -->
+<div class="govuk-!-margin-top-6">
+</div><div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="general-frequency-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+How frequent should general notifications be?
+</h1>
+</legend>
+ <div id="general-frequency-hint" class="govuk-hint">
+Select one option.
+    </div>
+<div class="govuk-radios" data-module="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="general-frequency-asap" name="general-frequency" type="radio" value="general-frequency-asap">
+<label class="govuk-label govuk-radios__label" for="general-frequency-asap">
+As soon as possible
+</label>
+<div id="general-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
+You'll receive an email as soon as data on an event which meets your general thresholds is available on MSH.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="general-frequency-2" name="general-frequency" type="radio" value="general-frequency-2">
+<label class="govuk-label govuk-radios__label" for="general-frequency-2">
+Every 2 hours
+</label>
+<div id="general-frequency-2-hint" class="govuk-hint govuk-radios__hint">
+General notifications from the past 2 hours will be collated and sent in a single email.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="general-frequency-12" name="general-frequency" type="radio" value="general-frequency-12">
+<label class="govuk-label govuk-radios__label" for="general-frequency-12">
+Every 12 hours
+</label>
+</label>
+<div id="general-frequency-12-hint" class="govuk-hint govuk-radios__hint">
+General notifications from the past 12 hours will be collated and sent in a single email.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="general-frequency-24" name="general-frequency" type="radio" value="general-frequency-24">
+<label class="govuk-label govuk-radios__label" for="general-frequency-24">
+Every 24 hours 
+</label>
+</label>
+<div id="general-frequency-24-hint" class="govuk-hint govuk-radios__hint">
+General notifications from the past 24 hours will be collated and sent in a single email.
+</div>
+</div>
+</div>
+</fieldset>
+</div>
 
 </div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content" -->
 </div> <!-- class="govuk-accordion__section" -->
@@ -268,110 +364,6 @@ Add custom thresholds
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-<!-- Communication preferences --> 
-<div class="govuk-accordion__section">
-<div class="govuk-accordion__section-header">
-<h2 class="govuk-accordion__section-heading">
-<span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-Communication preferences
-</span>
-</h2>
-</div> <!-- class="govuk-accordion__section-header"> -->
-
-<div id="accordion-default-content-3" class="govuk-accordion__section-content">
-<p class="govuk-body">
-You can choose the type of updates you want to receive, and the frequency of those updates.
-</p>
-
-<!-- What type of notifications do you want to receive? -->
-<div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="general-notification-type-hint">
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-<h1 class="govuk-fieldset__heading">
-When do you want to receive notifications?
-</h1>
-</legend>
-<div id="general-notification-type-hint" class="govuk-hint">
-Select all that apply.
-</div>
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-new" name="general-notification-type" type="checkbox">
-<label class="govuk-label govuk-checkboxes__label" for="event-new">
-A new conjunction event meets your thresholds
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-updated" name="general-notification-type" type="checkbox">
-<label class="govuk-label govuk-checkboxes__label" for="event-updated">
-An updated conjunction event meets your thresholds
-</label>
-</div> <!-- class="govuk-checkboxes__item -->
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-nspoc" name="general-notification-type" type="checkbox">
-<label class="govuk-label govuk-checkboxes__label" for="event-nspoc">
-New NSpOC analysis is uploaded for a conjunction event which meets your thresholds
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</fieldset>
-</div> <!-- class="govuk-form-group" -->
-
-<!-- How frequent should notifications be? -->
-<div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="general-frequency-hint">
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-<h1 class="govuk-fieldset__heading">
-How frequent should notifications be?
-</h1>
-</legend>
- <div id="general-frequency-hint" class="govuk-hint">
-Select one option.
-    </div>
-<div class="govuk-radios" data-module="govuk-radios">
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="general-frequency-asap" name="general-frequency" type="radio" value="general-frequency-asap">
-<label class="govuk-label govuk-radios__label" for="general-frequency-asap">
-As soon as possible
-</label>
-<div id="general-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
-You'll receive an email as soon as data on an event which meets your thresholds is available on MSH.
-</div>
-</div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="general-frequency-2" name="general-frequency" type="radio" value="general-frequency-2">
-<label class="govuk-label govuk-radios__label" for="general-frequency-2">
-Every 2 hours
-</label>
-<div id="general-frequency-2-hint" class="govuk-hint govuk-radios__hint">
-Notifications from the past 2 hours will be collated and sent in a single email.
-</div>
-</div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="general-frequency-12" name="general-frequency" type="radio" value="general-frequency-12">
-<label class="govuk-label govuk-radios__label" for="general-frequency-12">
-Every 12 hours
-</label>
-</label>
-<div id="general-frequency-12-hint" class="govuk-hint govuk-radios__hint">
-Notifications from the past 12 hours will be collated and sent in a single email.
-</div>
-</div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="general-frequency-24" name="general-frequency" type="radio" value="general-frequency-24">
-<label class="govuk-label govuk-radios__label" for="general-frequency-24">
-Every 24 hours 
-</label>
-</label>
-<div id="general-frequency-24-hint" class="govuk-hint govuk-radios__hint">
-Notifications from the past 24 hours will be collated and sent in a single email.
-</div>
-</div>
-</div>
-</fieldset>
-</div>
-
-</div> <!-- id="accordion-default-content-2" class="govuk-accordion__section-content" -->
 </div> <!--class="govuk-accordion__section" --> 
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
