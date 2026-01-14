@@ -1,6 +1,6 @@
- {% extends "layout.html" %}
+{% extends "layout.html" %}
 
- <!-- Title -->
+<!-- Title -->
 {% block pageTitle %}
 Notification settings
 {% endblock %}
@@ -231,9 +231,9 @@ New NSpOC analysis for relevant conjunction events
 Set notification frequency
 </h1>
 </legend>
- <div id="general-frequency-hint" class="govuk-hint">
+<div id="general-frequency-hint" class="govuk-hint">
 Select one option.
-    </div>
+</div>
 <div class="govuk-radios" data-module="govuk-radios">
 <div class="govuk-radios__item">
 <input class="govuk-radios__input" id="general-frequency-asap" name="general-frequency" type="radio" value="general-frequency-asap">
@@ -293,65 +293,108 @@ You can set custom settings which apply only to certain satellites or groups of 
 <div class="govuk-hint"> 
 Add custom notifications using the button below, or edit existing custom notifications using the links in the table.
 </div>
-<table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+
+<!-- Custom settings summary table -->
+<!-- GOV.UK-style accessible table with two header rows, grouped headers, and custom column widths -->
+<div style="overflow-x:auto;">
+<table class="govuk-table" style="width: 150%" aria-describedby="table-caption-custom-settings-summary">
+<!-- Set different column widths -->
+<colgroup>
+<col style="width: 15%;" /> <!--satellites-->
+<col style="width: 15%;" /> <!--Notification settings-->
+<col style="width: 5%;" /> <!--PoC-->
+<col style="width: 5%;" /> <!--TMD-->
+<col style="width: 5%;" /> <!--MRMD-->
+<col style="width: 5%;" /> <!--TCA-->
+<col style="width: 15%;" /> <!--notification type-->
+<col style="width: 10%;" /> <!--notification frequency-->
+<col style="width: 15%;" /> <!--do not notify for conjunctions with-->
+<col style="width: 5%;" /> <!-- edit -->
+<col style="width: 5%;" /> <!-- delete -->
+</colgroup>
+<!-- Header row 1: grouped headings spanning multiple columns -->
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
-<th scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b></b></th>
-<th scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Thresholds</b></th>
-<th scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="1"><b>Exception</b></th> 
-<th scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Configure</b></th>            
+<th class="govuk-table__header" scope="colgroup" colspan="2" 
+aria-hidden="true"> 
+</th> <!-- blank cell over Satellites and Notification Settings-->
+<th class="govuk-table__header" scope="colgroup" colspan="4"> 
+Thresholds
+</th> <!-- Thresholds header over PoC, TMD, MRMD, TCA -->
+<th class="govuk-table__header" scope="colgroup" colspan="2">
+Notifications
+</th>
+</th> <!-- notifications header over type, frequency -->
+<th class="govuk-table__header" scope="colgroup" colspan="1">
+Notifications
+</th> <!-- configure header over edit/delete -->
+<th class="govuk-table__header" scope="colgroup" colspan="2">
+Edit
+</th>
 </tr>
+
+<!-- Header row 2: actual column headers -->
 <tr class="govuk-table__row">
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Satellites</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Notification setting</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 14%";>Probability of collision (%)</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Total miss distance (m)</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Mean radial miss distance (m)</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Time to conjunction event (hrs)</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Do not notify for conjunctions with</th>
-<th scope="col" class="govuk-table__header govuk-body-s"> <span class="govuk-visually-hidden">Edit</span></th>
-<th scope="col" class="govuk-table__header govuk-body-s"><span class="govuk-visually-hidden">Delete</span></th>
-</tr>
+<th class="govuk-table__header" scope="col">Name</th>
+<th class="govuk-table__header" scope="col">Setting</th>
+<th class="govuk-table__header" scope="col">PoC (%)</th>
+<th class="govuk-table__header" scope="col">TMD (m)</th>
+<th class="govuk-table__header" scope="col">MRMD (m)</th>
+<th class="govuk-table__header" scope="col">TCA (hrs)</th>
+<th class="govuk-table__header" scope="col">Notification type (%)</th>
+<th class="govuk-table__header" scope="col">Email frequency </th>
+<th class="govuk-table__header" scope="col">Do not notify for conjunctions with:</th>
+<th class="govuk-table__header" scope="col">Edit </th>
+<th class="govuk-table__header" scope="col">Delete</th></tr>
 </thead>
+
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">Skynet 4C</a></td>
-<td class="govuk-table__cell govuk-body-s">Custom thresholds set</td>
-<td class="govuk-table__cell govuk-body-s">0.02</td>
-<td class="govuk-table__cell govuk-body-s">3000</td>
-<td class="govuk-table__cell govuk-body-s">1500</td>
-<td class="govuk-table__cell govuk-body-s">12</td>
-<td class="govuk-table__cell govuk-body-s"></td>
-<td class="govuk-table__cell govuk-body-s"><a href="">edit</a></td>
-<td class="govuk-table__cell govuk-body-s" ><a href="">delete</a></td>
+<td class="govuk-table__cell">LEO satellites</td>
+<td class="govuk-table__cell">Custom thresholds set</td>
+<td class="govuk-table__cell">0.02</td>
+<td class="govuk-table__cell">3000</td>
+<td class="govuk-table__cell">1500</td>
+<td class="govuk-table__cell">12</td>
+<td class="govuk-table__cell">New events, updated events</td>
+<td class="govuk-table__cell">Every 2 hours</td>
+<td class="govuk-table__cell">Satellite E</td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">LEO satellites</a></td>
-<td class="govuk-table__cell govuk-body-s">Notifications disabled</td>
-<td class="govuk-table__cell govuk-body-s"></td>
-<td class="govuk-table__cell govuk-body-s"></td>
-<td class="govuk-table__cell govuk-body-s"></td>
-<td class="govuk-table__cell govuk-body-s"></td>
-<td class="govuk-table__cell govuk-body-s"></td>
-<td class="govuk-table__cell govuk-body-s"><a href="">edit</a></td>
-<td class="govuk-table__cell govuk-body-s"><a href="">delete</a></td>
+<td class="govuk-table__cell">GEO satellites</td>
+<td class="govuk-table__cell">Notifications disabled</td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
 </tr>
 <tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">UK-licensed satellites</a></td>
-<td class="govuk-table__cell govuk-body-s">Custom thresholds set</td>
-<td class="govuk-table__cell govuk-body-s"></td>
-<td class="govuk-table__cell govuk-body-s">2000</td>
-<td class="govuk-table__cell govuk-body-s"></td>
-<td class="govuk-table__cell govuk-body-s">72</td>
-<td class="govuk-table__cell govuk-body-s">Satellite C</td>
-<td class="govuk-table__cell govuk-body-s"><a href="">edit</a></td>
-<td class="govuk-table__cell govuk-body-s"><a href="">delete</a></td>
+<td class="govuk-table__cell">Skynet 4C</td>
+<td class="govuk-table__cell">Custom thresholds set</td>
+<td class="govuk-table__cell">0.1</td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell">12</td>
+<td class="govuk-table__cell">New events</td>
+<td class="govuk-table__cell">ASAP</td>
+<td class="govuk-table__cell"></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
 </tr>
+
 </tbody>
 </table>
+</div>
 
 <!-- add custom thresholds button -->
-<p class="govuk-body">
+<p class="govuk-body govuk-!-margin-top-6">
 <a class="govuk-link" href="/account/operator/conjunction-notification-settings-add-custom">
 Add custom thresholds
 </a>
