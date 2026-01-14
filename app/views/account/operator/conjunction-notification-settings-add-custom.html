@@ -560,7 +560,7 @@ We will send you notifications when a conjunction event involving any satellite 
 <!-- Probability of collision threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-poc-check" name="custom-poc-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="custom-poc-check" name="custom-thresholds-questions" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
@@ -571,7 +571,7 @@ We will send you notifications when a conjunction event involving any satellite 
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="custom-poc-value" name="custom-poc-value" type="text" spellcheck="false" value = "0.01">
+<input class="govuk-input govuk-input--width-5" id="custom-poc-value" name="custom-thresholds-questions" type="text" spellcheck="false" value = "0.01">
 <div class="govuk-input__suffix" aria-hidden="true">%
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">% -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -584,7 +584,7 @@ We will send you notifications when a conjunction event involving any satellite 
 <!-- total mean distance threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-tmd-check" name="custom-tmd-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="custom-tmd-check" name="custom-thresholds-questions" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Total miss distance</label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <table class="govuk-table threshold-style inactive">
@@ -594,7 +594,7 @@ We will send you notifications when a conjunction event involving any satellite 
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="custom-tmd-value" name="custom-tmd-value" type="text" spellcheck="false" value = "1000">
+<input class="govuk-input govuk-input--width-5" id="custom-tmd-value" name="custom-thresholds-questions" type="text" spellcheck="false" value = "1000">
 <div class="govuk-input__suffix" aria-hidden="true">metres
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">metres -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -607,7 +607,7 @@ We will send you notifications when a conjunction event involving any satellite 
 <!-- mean radial distance threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-mrd-check" name="custom-mrd-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="custom-mrd-check" name="custom-thresholds-questions" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Mean radial distance</label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <table class="govuk-table threshold-style inactive">
@@ -617,7 +617,7 @@ We will send you notifications when a conjunction event involving any satellite 
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="custom-mrd-value" name="custom-mrd-value" type="text" spellcheck="false" value = "1000">
+<input class="govuk-input govuk-input--width-5" id="custom-mrd-value" name="custom-thresholds-questions" type="text" spellcheck="false" value = "1000">
 <div class="govuk-input__suffix" aria-hidden="true">metres
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">metres -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -630,7 +630,7 @@ We will send you notifications when a conjunction event involving any satellite 
 <!-- time to conjunction event threshold-->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-tce-check" name="custom-tce-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="custom-tce-check" name="custom-thresholds-questions" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Time till conjunction event
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
@@ -641,7 +641,7 @@ We will send you notifications when a conjunction event involving any satellite 
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="custom-tce-value" name="custom-tce-value" type="text" spellcheck="false" value = "1">
+<input class="govuk-input govuk-input--width-5" id="custom-tce-value" name="custom-thresholds-questions" type="text" spellcheck="false" value = "1">
 <div class="govuk-input__suffix" aria-hidden="true">hour(s)
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">hour(s) -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -658,12 +658,12 @@ We will send you notifications when a conjunction event involving any satellite 
 </fieldset>
 </div> <!-- class="govuk-form-group" -->
 
-<!-- Select notification type(s) -->
+<!-- Select notification types -->
 <div class="govuk-form-group" class="govuk-!-margin-top-6">
 <fieldset class="govuk-fieldset" aria-describedby="custom-notification-type-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
-Select notification type(s)
+Select notification types
 </h1>
 </legend>
 <div id="custom-notification-type-hint" class="govuk-hint">
@@ -750,13 +750,13 @@ Relevant notifications  from the past 24 hours will be collated and sent in a si
 <!-- Exceptions -->
 <!-- ideally, this question would only show if users set custom thresholds - they shouldn't see this question if they 'disabled all notifications. but can't do that in prototype -->
 <h2 class="govuk-heading-l">
-Add an exception (optional)
+Add exceptions (optional)
 </h2>
 
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="exception-hint">
 <p>
-Set an exception to disable notifications for conjunction events between a satellite from this group and another specified satellite. Exceptions will override other settings if they conflict. 
+You can disable notifications for conjunction events between a satellite from this group and another specified satellite. Exceptions will override other settings if they conflict. 
 </p>
 
 <div id="satellite-search-hint" class="govuk-hint">
