@@ -1,0 +1,271 @@
+{% extends "layout.html" %}
+
+<!-- Title -->
+{% block pageTitle %}
+Notification settings
+{% endblock %}
+
+<!-- Page content -->
+{% block content %}
+
+<style>
+.govuk-table__header, .govuk-table__cell {vertical-align: middle;}
+.govuk-table__cell {font-weight: normal;}
+.threshold-style {
+vertical-align: middle;
+margin-top: -20px;
+margin-left: 70px; 
+margin-bottom: 5px;
+width: calc(100% - 70px);
+}
+.threshold-style th{width: 550px;}
+.inactive {opacity: 40%;}
+.editSatBtn {color: #1d70b8;}
+.no-border th, .no-border td{border: none;}
+#default-label {margin-bottom: 10px;}
+</style>
+
+<!-- Breadcrumbs links-->
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/account/operator/account">
+Account
+</a>
+</li>
+<li class="govuk-breadcrumbs__list-item" aria-current="page">
+Conjunction event notification settings
+</li>
+</ol>
+</div> <!-- class="govuk-breadcrumbs"-->
+</div> <!-- class="govuk-width-container"-->
+
+<!-- Page layout -->
+<main class="govuk-main-wrapper" id="main-content" role="main">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+<!-- Page title -->
+<h1 class="govuk-heading-xl">Activity notification settings
+</h1>
+
+<!-- Page intro -->
+<p class="govuk-body">
+This page allows you to adjust your notification settings for satellite activity.
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<!-- General notifications -->
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h1 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+General notification settings
+</span>
+</h1>
+</div> <!-- class="govuk-accordion__section-header" -->
+<div id="accordion-default-content-1" class="govuk-accordion__section-content">
+<p class="govuk-body">
+You can set general settings which apply to all satellites. In the next section, you will be able to specify exceptions to these general settings by creating custom settings for specific satellites or groups of satellites.
+</p>
+
+<!-- reason for notifications -->
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="general-reasons-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+Select reasons for notifications
+</h1>
+</legend>
+<p>We will send you notifications when satellite activity is flagged for the reasons you have selected.
+</p>
+<div id="general-reasons-hint" class="govuk-hint">
+Select all that apply.
+</div>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-1" name="general-reasons" type="checkbox" value="general-reasons-1">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-1">
+Manoeuvre as planned
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-2" name="general-reasons" type="checkbox" value="general-reasons-2">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-2">
+Manoeuvre not as planned
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-3" name="general-reasons" type="checkbox" value="general-reasons-3">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-3">
+Unexpected position change
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-4" name="general-reasons" type="checkbox" value="general-reasons-4">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-4">
+Missing data
+</label>
+</div>
+</div>
+</fieldset>
+</div>
+
+<!-- set email frequency -->
+<div class="govuk-!-margin-top-6">
+</div><div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="general-frequency-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+Set email frequency
+</h1>
+</legend>
+<div id="general-frequency-hint" class="govuk-hint">
+Select one option.
+</div>
+<div class="govuk-radios" data-module="govuk-radios">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="general-frequency-asap" name="general-frequency" type="radio" value="general-frequency-asap">
+<label class="govuk-label govuk-radios__label" for="general-frequency-asap">
+As soon as possible
+</label>
+<div id="general-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
+You'll receive an email as relevant notifications are released from MSH.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="general-frequency-2" name="general-frequency" type="radio" value="general-frequency-2">
+<label class="govuk-label govuk-radios__label" for="general-frequency-2">
+Every 2 hours
+</label>
+<div id="general-frequency-2-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past 2 hours will be collated and sent in a single email.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="general-frequency-12" name="general-frequency" type="radio" value="general-frequency-12">
+<label class="govuk-label govuk-radios__label" for="general-frequency-12">
+Every 12 hours
+</label>
+</label>
+<div id="general-frequency-12-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past 12 hours will be collated and sent in a single email.
+</div>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="general-frequency-24" name="general-frequency" type="radio" value="general-frequency-24">
+<label class="govuk-label govuk-radios__label" for="general-frequency-24">
+Every 24 hours 
+</label>
+</label>
+<div id="general-frequency-24-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past 24 hours will be collated and sent in a single email.
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+</div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
+
+<!-- Set custom notifications -->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h1 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+Custom notification settings
+</span>
+</h1>
+</div> <!-- class="govuk-accordion__section-header" -->
+<div id="accordion-default-content-2" class="govuk-accordion__section-content">
+<p class="govuk-body">
+You can set custom settings which apply only to certain satellites or groups of satellites. Custom settings will override general settings (for the satellites specified) if they conflict.
+</p>
+<div class="govuk-hint"> 
+Add custom notifications using the button below, or edit existing custom notifications using the links in the table.
+</div>
+
+<!-- Custom settings summary table -->
+<!-- GOV.UK-style accessible table with two header rows, grouped headers, and custom column widths -->
+<div style="overflow-x:auto;">
+<table class="govuk-table" style="width: 100%" aria-describedby="table-caption-custom-settings-summary">
+<!-- Set different column widths -->
+<colgroup>
+<col style="width: 20%;" /> <!--satellites-->
+<col style="width: 30%;" /> <!--Reasons for notifications-->
+<col style="width: 20%;" /> <!--notification frequency-->
+<col style="width: 10%;" /> <!-- edit -->
+<col style="width: 10%;" /> <!-- delete -->
+</colgroup>
+<!-- Header row 1: grouped headings spanning multiple columns -->
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th class="govuk-table__header" scope="col">Satellites</th>
+<th class="govuk-table__header" scope="col">Reasons for notifications</th>
+<th class="govuk-table__header" scope="col">Email frequency </th>
+<th class="govuk-table__header" scope="col">Edit </th>
+<th class="govuk-table__header" scope="col">Delete</th>
+</tr>
+</thead>
+
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">LEO satellites</td>
+<td class="govuk-table__cell">Manoeuvre not as planned; Unexpected position change</td>
+<td class="govuk-table__cell">ASAP</td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">GEO satellites</td>
+<td class="govuk-table__cell">Missing data</td>
+<td class="govuk-table__cell">Every 24 hours</td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+
+<!-- add custom thresholds button -->
+<p class="govuk-body govuk-!-margin-top-6">
+<a class="govuk-link" href="/account/regulator/notification-settings-add-custom">
+Add custom settings
+</a>
+</p>
+</div> <!-- id="accordion-default-content-2" class="govuk-accordion__section-content"> -->
+</div> <!--class="govuk-accordion__section"> --> 
+
+<!-- Save preferences -->
+<form method="post" action="notification-settings-confirmation">
+<button class="govuk-button" data-module="govuk-button">
+Save notification settings
+</button>
+</form>
+<!-- content above here -->
+
+</div> <!-- class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" -->
+</div> <!-- class="govuk-grid-column-full" -->
+</div> <!-- class="govuk-grid-row" -->
+</main> 
+
+
+
+<script>
+/* Grey out unchecked boxes */
+document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
+checkbox.addEventListener('change', (event) => {
+const table = checkbox.closest('.govuk-checkboxes__item').nextElementSibling;
+if (table && table.tagName === 'TABLE') {
+table.classList.toggle('inactive', !checkbox.checked);
+}
+});
+});
+</script>
+
+{% endblock %}
