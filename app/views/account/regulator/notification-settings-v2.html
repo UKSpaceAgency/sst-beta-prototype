@@ -76,43 +76,92 @@ You can set general settings which apply to all satellites. In the next section,
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="general-reasons-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-<h1 class="govuk-fieldset__heading">
 Select reasons for notifications
-</h1>
 </legend>
-<p>We will send you notifications when satellite activity is flagged for the reasons you have selected.
-</p>
-<div id="general-reasons-hint" class="govuk-hint">
+<div id="contact-hint" class="govuk-hint">
 Select all that apply.
 </div>
+
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc" name="general-reasons" type="checkbox" value="general-reasons-pc">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc">
-Position change
-</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-md" name="general-reasons" type="checkbox" value="general-reasons-md">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-md">
-Missing data
-</label>
-</div>
+<!-- select reasons for notifications: manouvre as planned -->
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="general-reasons-map" name="general-reasons" type="checkbox" value="general-reasons-map">
 <label class="govuk-label govuk-checkboxes__label" for="general-reasons-map">
 Manoeuvre as planned
 </label>
 </div>
+<!-- select reasons for notifications: manouvre not as planned -->
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="general-reasons-mnap" name="general-reasons" type="checkbox" value="general-reasons-mnap">
 <label class="govuk-label govuk-checkboxes__label" for="general-reasons-mnap">
 Manoeuvre not as planned
 </label>
 </div>
+<!-- select reasons for notifications: missing data -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-md" name="general-reasons" type="checkbox" value="general-reasons-md">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-md">
+Missing data
+</label>
+</div>
+
+<!-- select reasons for notifications: position change -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-pc" name="general-reasons" type="checkbox" value="general-reasons-pc"
+data-aria-controls="conditional-general-reasons-pc">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc">
+Position change
+</label>
+</div>
+<!-- position change criteria - only opens if Position change selected -->
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-general-reasons-pc" >
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+Select which criteria should trigger a position change flag
+</legend>
+<div id="general-reasons-pc-hint" class="govuk-hint">
+Select all that apply. If <strong>any</strong> of the criteria you have selected are breached, you will be notified about a position change. Exact thresholds for each criteria are set by NSpOC's orbital analysts.
+</div>
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-pc-fsma" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-fsma">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-fsma">Fixed semi-major axis (SMA)</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-pc-smac" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-smac">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-smac">Semi-major axis (SMA) change</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-pc-smacr" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-smacr">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-smacr">Semi-major axis (SMA) change rate</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-pc-fi" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-fi">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-fi">Fixed inclination</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-pc-ic" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-ic">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-ic">Inclination change</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-pc-fl" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-fl">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-fl">Inclination fixed longitude</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="general-reasons-pc-ldr" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-ldr">
+<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-ldr">Longitude drift rate</label>
+</div>
+</div>
+
+</fieldset>
+</div>
+</div>
+
 </div>
 </fieldset>
 </div>
+
 
 <!-- set email frequency -->
 <div class="govuk-!-margin-top-6">
