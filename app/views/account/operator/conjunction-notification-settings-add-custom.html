@@ -669,23 +669,38 @@ Select notification types
 <div id="custom-notification-type-hint" class="govuk-hint">
 Select all that apply.
 </div>
+<p>
+Receive notifications when:
+</p>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="event-new" name="custom-notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-new">
-Relevant new conjunction events
+A new conjunction event meets your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="event-updated" name="custom-notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-updated">
-Relevant updated conjunction events
+An updated conjunction event meets your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item -->
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="event-nspoc" name="custom-notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-nspoc">
-New NSpOC analysis for relevant conjunction events
+New NSpOC analysis is uploaded for a conjunction event meeting your thresholds
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="event-manoeuvre" name="custom-notification-type" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="event-manoeuvre">
+New manoeuvre analysis is uploaded for a conjunction event meeting your thresholds
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="event-end" name="custom-notification-type" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label" for="event-end">
+An updated conjunction event no longer meets your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
 </div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
@@ -693,8 +708,8 @@ New NSpOC analysis for relevant conjunction events
 </div> <!-- class="govuk-form-group" -->
 
 <!-- Set notification frequency -->
-<div class="govuk-!-margin-top-6">
-</div><div class="govuk-form-group">
+<div class="govuk-!-margin-top-6"></div>
+<div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="custom-frequency-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
