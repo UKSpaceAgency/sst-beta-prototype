@@ -52,29 +52,35 @@ Conjunction event notification settings
 
 <!-- Page intro -->
 <p class="govuk-body">
-This page allows you to adjust your notification settings for satellite activity.
+This page allows you to adjust your notification settings for satellite activity. 
+</p>
+<p class="govuk-body">
+You can create universal settings which will apply to all satellites. 
+</p>
+<p class="govuk-body">
+You can also create custom settings which will only apply to selected satellites. For those selected satellites, you custom settings will <strong>not</strong> cancel out your universal settings. You will receive both sets of notifications.
+</p>
+<p class="govuk-body">
+We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings.
 </p>
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-<!-- General notifications -->
+<!-- Universal notifications -->
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
 <div class="govuk-accordion__section">
 <div class="govuk-accordion__section-header">
 <h1 class="govuk-accordion__section-heading">
 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-General notification settings
+Universal notification settings
 </span>
 </h1>
 </div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-<p class="govuk-body">
-You can set general settings which apply to all satellites. In the next section, you will be able to specify exceptions to these general settings by creating custom settings for specific satellites or groups of satellites.
-</p>
 
 <!-- reason for notifications -->
 <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="general-reasons-hint">
+<fieldset class="govuk-fieldset" aria-describedby="universal-reasons-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 Select reasons for notifications
 </legend>
@@ -85,72 +91,72 @@ Select all that apply.
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <!-- select reasons for notifications: manouvre as planned -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-map" name="general-reasons" type="checkbox" value="general-reasons-map">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-map">
+<input class="govuk-checkboxes__input" id="universal-reasons-map" name="universal-reasons" type="checkbox" value="universal-reasons-map">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-map">
 Manoeuvre as planned
 </label>
 </div>
 <!-- select reasons for notifications: manouvre not as planned -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-mnap" name="general-reasons" type="checkbox" value="general-reasons-mnap">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-mnap">
+<input class="govuk-checkboxes__input" id="universal-reasons-mnap" name="universal-reasons" type="checkbox" value="universal-reasons-mnap">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-mnap">
 Manoeuvre not as planned
 </label>
 </div>
 <!-- select reasons for notifications: missing data -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-md" name="general-reasons" type="checkbox" value="general-reasons-md">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-md">
+<input class="govuk-checkboxes__input" id="universal-reasons-md" name="universal-reasons" type="checkbox" value="universal-reasons-md">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-md">
 Missing data
 </label>
 </div>
 
 <!-- select reasons for notifications: position change -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc" name="general-reasons" type="checkbox" value="general-reasons-pc"
-data-aria-controls="conditional-general-reasons-pc">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc">
+<input class="govuk-checkboxes__input" id="universal-reasons-pc" name="universal-reasons" type="checkbox" value="universal-reasons-pc"
+data-aria-controls="conditional-universal-reasons-pc">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-pc">
 Position change
 </label>
 </div>
 <!-- position change criteria - only opens if Position change selected -->
-<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-general-reasons-pc" >
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-universal-reasons-pc" >
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-Select which criteria should trigger a position change flag
+Select which criteria should trigger a position change notification
 </legend>
-<div id="general-reasons-pc-hint" class="govuk-hint">
-Select all that apply. If <strong>any</strong> of the criteria you have selected are breached, you will be notified about a position change. Exact thresholds for each criteria are set by NSpOC's orbital analysts.
+<div id="universal-reasons-pc-hint" class="govuk-hint">
+Select all that apply. You will receive a position change notification if <strong>any</strong> of the criteria you have selected are breached. Exact thresholds for each criteria are set by NSpOC's orbital analysts.
 </div>
 <div class="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc-fsma" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-fsma">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-fsma">Fixed semi-major axis (SMA)</label>
+<input class="govuk-checkboxes__input" id="universal-reasons-pc-fsma" name="universal-reasons-pc" type="checkbox" value="universal-reasons-pc-fsma">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-pc-fsma">Fixed semi-major axis (SMA)</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc-smac" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-smac">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-smac">Semi-major axis (SMA) change</label>
+<input class="govuk-checkboxes__input" id="universal-reasons-pc-smac" name="universal-reasons-pc" type="checkbox" value="universal-reasons-pc-smac">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-pc-smac">Semi-major axis (SMA) change</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc-smacr" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-smacr">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-smacr">Semi-major axis (SMA) change rate</label>
+<input class="govuk-checkboxes__input" id="universal-reasons-pc-smacr" name="universal-reasons-pc" type="checkbox" value="universal-reasons-pc-smacr">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-pc-smacr">Semi-major axis (SMA) change rate</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc-fi" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-fi">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-fi">Fixed inclination</label>
+<input class="govuk-checkboxes__input" id="universal-reasons-pc-fi" name="universal-reasons-pc" type="checkbox" value="universal-reasons-pc-fi">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-pc-fi">Fixed inclination</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc-ic" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-ic">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-ic">Inclination change</label>
+<input class="govuk-checkboxes__input" id="universal-reasons-pc-ic" name="universal-reasons-pc" type="checkbox" value="universal-reasons-pc-ic">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-pc-ic">Inclination change</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc-fl" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-fl">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-fl">Inclination fixed longitude</label>
+<input class="govuk-checkboxes__input" id="universal-reasons-pc-fl" name="universal-reasons-pc" type="checkbox" value="universal-reasons-pc-fl">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-pc-fl">Inclination fixed longitude</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="general-reasons-pc-ldr" name="general-reasons-pc" type="checkbox" value="general-reasons-pc-ldr">
-<label class="govuk-label govuk-checkboxes__label" for="general-reasons-pc-ldr">Longitude drift rate</label>
+<input class="govuk-checkboxes__input" id="universal-reasons-pc-ldr" name="universal-reasons-pc" type="checkbox" value="universal-reasons-pc-ldr">
+<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-pc-ldr">Longitude drift rate</label>
 </div>
 </div>
 
@@ -166,51 +172,51 @@ Select all that apply. If <strong>any</strong> of the criteria you have selected
 <!-- set email frequency -->
 <div class="govuk-!-margin-top-6">
 </div><div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="general-frequency-hint">
+<fieldset class="govuk-fieldset" aria-describedby="universal-frequency-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
 Set email frequency
 </h1>
 </legend>
-<div id="general-frequency-hint" class="govuk-hint">
+<div id="universal-frequency-hint" class="govuk-hint">
 Select one option.
 </div>
 <div class="govuk-radios" data-module="govuk-radios">
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="general-frequency-asap" name="general-frequency" type="radio" value="general-frequency-asap">
-<label class="govuk-label govuk-radios__label" for="general-frequency-asap">
+<input class="govuk-radios__input" id="universal-frequency-asap" name="universal-frequency" type="radio" value="universal-frequency-asap">
+<label class="govuk-label govuk-radios__label" for="universal-frequency-asap">
 As soon as possible
 </label>
-<div id="general-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
+<div id="universal-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
 You'll receive an email as relevant notifications are released from MSH.
 </div>
 </div>
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="general-frequency-2" name="general-frequency" type="radio" value="general-frequency-2">
-<label class="govuk-label govuk-radios__label" for="general-frequency-2">
+<input class="govuk-radios__input" id="universal-frequency-2" name="universal-frequency" type="radio" value="universal-frequency-2">
+<label class="govuk-label govuk-radios__label" for="universal-frequency-2">
 Every 2 hours
 </label>
-<div id="general-frequency-2-hint" class="govuk-hint govuk-radios__hint">
+<div id="universal-frequency-2-hint" class="govuk-hint govuk-radios__hint">
 Relevant notifications from the past 2 hours will be collated and sent in a single email.
 </div>
 </div>
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="general-frequency-12" name="general-frequency" type="radio" value="general-frequency-12">
-<label class="govuk-label govuk-radios__label" for="general-frequency-12">
+<input class="govuk-radios__input" id="universal-frequency-12" name="universal-frequency" type="radio" value="universal-frequency-12">
+<label class="govuk-label govuk-radios__label" for="universal-frequency-12">
 Every 12 hours
 </label>
 </label>
-<div id="general-frequency-12-hint" class="govuk-hint govuk-radios__hint">
+<div id="universal-frequency-12-hint" class="govuk-hint govuk-radios__hint">
 Relevant notifications from the past 12 hours will be collated and sent in a single email.
 </div>
 </div>
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="general-frequency-24" name="general-frequency" type="radio" value="general-frequency-24">
-<label class="govuk-label govuk-radios__label" for="general-frequency-24">
+<input class="govuk-radios__input" id="universal-frequency-24" name="universal-frequency" type="radio" value="universal-frequency-24">
+<label class="govuk-label govuk-radios__label" for="universal-frequency-24">
 Every 24 hours 
 </label>
 </label>
-<div id="general-frequency-24-hint" class="govuk-hint govuk-radios__hint">
+<div id="universal-frequency-24-hint" class="govuk-hint govuk-radios__hint">
 Relevant notifications from the past 24 hours will be collated and sent in a single email.
 </div>
 </div>
@@ -230,13 +236,11 @@ Custom notification settings
 </h1>
 </div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-2" class="govuk-accordion__section-content">
-<p class="govuk-body">
-You can set custom settings which apply only to certain satellites or groups of satellites. Custom settings will override general settings (for the satellites specified) if they conflict.
-</p>
+<h2 class="govuk-heading-l">Summary of custom notification settings
+</h2>
 <div class="govuk-hint"> 
-Add custom notifications using the button below, or edit existing custom notifications using the links in the table.
+This table summarises your existing custom notification settings for selected satellites. Edit existing settings using the links in the table, or add settings for new groups of satellites using the button below.
 </div>
-
 <!-- Custom settings summary table -->
 <!-- GOV.UK-style accessible table with two header rows, grouped headers, and custom column widths -->
 <div style="overflow-x:auto;">
