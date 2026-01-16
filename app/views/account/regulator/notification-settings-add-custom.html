@@ -145,7 +145,7 @@ margin-bottom: 10px;
 <a class="govuk-breadcrumbs__link" href="/account/operator/account">Account</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
-<a class="govuk-breadcrumbs__link" href="/account/operator/conjunction-notification-settings">Notification settings</a>
+<a class="govuk-breadcrumbs__link" href="/account/operator/notification-settings">Notification settings</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
 <span class="govuk-breadcrumbs__link">Add custom settings</span>
@@ -162,7 +162,15 @@ margin-bottom: 10px;
 <h1 class="govuk-heading-xl">Add custom settings</h1>
 
 <!-- Turn page into a form (where submission leads to a 'check settings' page) -->
-<form method="post" action="/account/operator/conjunction-notification-settings-check-custom">
+<form method="post" action="/account/operator/notification-settings-check-custom">
+
+  <!-- intro --> 
+ <p class="govuk-body">
+Remember that for selected satellites, you custom settings will <strong>not</strong> cancel out your universal settings. You will receive both sets of notifications.
+</p>
+<p class="govuk-body">
+We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings.
+</p>
 
 <!-- Custom thresholds name -->
 <h2 class="govuk-heading-l">
@@ -515,7 +523,7 @@ NORAD ID
 <fieldset class="govuk-fieldset" aria-describedby="general-reasons-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
-Select reasons for notifications
+Select reasons for notification
 </h1>
 </legend>
 <p>We will send you notifications when satellite activity is flagged for the reasons you have selected.
@@ -611,7 +619,7 @@ Relevant notifications  from the past 24 hours will be collated and sent in a si
 
 <a class="govuk-button govuk-!-margin-top-4"
 data-module="govuk-button"
-href="/account/regulator/conjunction-notification-settings-check-custom">
+href="/account/regulator/notification-settings-check-custom">
 Continue
 </a>
 
