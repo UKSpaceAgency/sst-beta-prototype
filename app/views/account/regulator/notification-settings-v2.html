@@ -30,12 +30,12 @@ width: calc(100% - 70px);
 <div class="govuk-breadcrumbs">
 <ol class="govuk-breadcrumbs__list">
 <li class="govuk-breadcrumbs__list-item">
-<a class="govuk-breadcrumbs__link" href="/account/operator/account">
+<a class="govuk-breadcrumbs__link" href="/account/regulator/account">
 Account
 </a>
 </li>
 <li class="govuk-breadcrumbs__list-item" aria-current="page">
-Conjunction event notification settings
+Activity notification settings
 </li>
 </ol>
 </div> <!-- class="govuk-breadcrumbs"-->
@@ -58,7 +58,7 @@ This page allows you to adjust your notification settings for satellite activity
 You can create universal settings which will apply to all satellites. 
 </p>
 <p class="govuk-body">
-You can also create custom settings which will only apply to selected satellites. For those selected satellites, you custom settings will <strong>not</strong> cancel out your universal settings. You will receive both sets of notifications.
+You can also create custom settings which will only apply to selected satellites. For those selected satellites, your custom settings will <strong>not</strong> cancel out your universal settings. You will receive both sets of notifications.
 </p>
 <p class="govuk-body">
 We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings.
@@ -84,9 +84,12 @@ Universal notification settings
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 Select reasons for notifications
 </legend>
-<div id="contact-hint" class="govuk-hint">
+<p>We will send you notifications when satellite activity is flagged for the reasons you have selected.
+</p>
+<div id="universal-reasons-hint" class="govuk-hint">
 Select all that apply.
 </div>
+
 
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <!-- select reasons for notifications: manouvre as planned -->
