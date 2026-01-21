@@ -517,45 +517,111 @@ NORAD ID
 </tbody>
 </table>
 
-
 <!-- reason for notifications -->
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="custom-reasons-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-<h1 class="govuk-fieldset__heading">
-Select reasons for notification
-</h1>
+Select reasons for notifications
 </legend>
-<p>We will send you notifications when satellite activity is flagged for the reasons you have selected.
+<p>We will send you notifications when any UK-licensed satellite activity is flagged for the reasons you have selected.
 </p>
 <div id="custom-reasons-hint" class="govuk-hint">
 Select all that apply.
 </div>
+
+
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<!-- select reasons for notifications: planned manoeuvres -->
+<!-- select reasons for notifications: planned manoeuvres -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-1" name="custom-reasons" type="checkbox" value="custom-reasons-1">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-1">
-Manoeuvre as planned
+<input class="govuk-checkboxes__input" id="custom-reasons-pm" name="custom-reasons" type="checkbox" value="custom-reasons-pm"
+data-aria-controls="conditional-custom-reasons-pm">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm">
+Planned manoeuvre
 </label>
 </div>
+<!-- planned manoeuvre options - only opens if planned manoeuvre selected -->
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-custom-reasons-pm" >
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+Optional: select which planned manoeuvre flags to receive
+</legend>
+<div id="custom-reasons-pm-hint" class="govuk-hint">
+To keep the default settings and receive all planned manoeuvre flags, leave all boxes ticked. If you wish to only receive certain planned manoeuvre flags, untick any flags which you do not wish to receive.
+<div class="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-2" name="custom-reasons" type="checkbox" value="custom-reasons-2">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-2">
-Manoeuvre not as planned
-</label>
+<input class="govuk-checkboxes__input" id="custom-reasons-pm-yes" name="custom-reasons-pm" type="checkbox" value="custom-reasons-pm-yes" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm-yes">Manoeuvre executed as planned</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-3" name="custom-reasons" type="checkbox" value="custom-reasons-3">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-3">
-Unexpected position change
-</label>
+<input class="govuk-checkboxes__input" id="custom-reasons-pm-no" name="custom-reasons-pm" type="checkbox" value="custom-reasons-pm-no" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm-no">Actual manoeuvre differed from plan</label>
 </div>
+</fieldset>
+</div>
+</div>
+<!-- select reasons for notifications: missing data -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-4" name="custom-reasons" type="checkbox" value="custom-reasons-4">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-4">
+<input class="govuk-checkboxes__input" id="custom-reasons-md" name="custom-reasons" type="checkbox" value="custom-reasons-md">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-md">
 Missing data
 </label>
 </div>
+
+<!-- select reasons for notifications: unexpected position change -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc" name="custom-reasons" type="checkbox" value="custom-reasons-upc"
+data-aria-controls="conditional-custom-reasons-upc">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc">
+Unexpected position change
+</label>
+</div>
+<!-- unexpected position change criteria - only opens if unexpected position change selected -->
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-custom-reasons-upc" >
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+Optional: select which criteria should trigger a position change notification
+</legend>
+<div id="custom-reasons-upc-hint" class="govuk-hint">
+NSpOC's orbital analysts decide when to flag a position change. To keep the default settings and receive all position change flags, leave all boxes ticked. If you wish to only receive certain position change flags, untick any criteria which should not apply, and you will be notified only if a position change breaches NSpoC's thresholds for any of the criteria you left ticked.
+</div>
+<div class="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-fsma" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fsma" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fsma">Fixed semi-major axis (SMA)</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-smac" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-smac" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-smac">Semi-major axis (SMA) change</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-smacr" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-smacr" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-smacr">Semi-major axis (SMA) change rate</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-fi" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fi" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fi">Fixed inclination</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-ic" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-ic" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-ic">Inclination change</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-fl" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fl" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fl">Inclination fixed longitude</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-ldr" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-ldr" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-ldr">Longitude drift rate</label>
+</div>
+</div>
+
+</fieldset>
+</div>
+</div>
+
 </div>
 </fieldset>
 </div>
