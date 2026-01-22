@@ -58,10 +58,10 @@ This page allows you to adjust your notification settings for satellite activity
 You can create universal settings, which will apply to all UK-licensed satellites. You can also create custom settings which will only apply to selected satellites.  
 </p>
 <p class="govuk-body">
-You will receive a separate email for each custom notification setting you create. Each email will be clearly labelled as 'universal' or with the custom name you choose.
+You will receive separate emails for each notification setting.
 </p>
 <p class="govuk-body">
-Your custom settings will <strong>not</strong> cancel out your universal settings. You will receive both sets of emails. We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings to avoid receiving unnecessary emails.
+If you create custom settings, this will not cancel out your universal settings and you will continue to receive universal notification emails too. We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings to avoid receiving unnecessary emails.
 </p>
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -71,12 +71,14 @@ Your custom settings will <strong>not</strong> cancel out your universal setting
 <div class="govuk-accordion__section-header">
 <h1 class="govuk-accordion__section-heading">
 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-Notification settings for all UK-licensed satellites
+Universal notification settings 
 </span>
 </h1>
 </div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-
+<p>
+Your universal notification settings will apply to all UK-licensed satellites. Each email will be labelled 'universal'.
+</p>
 <!-- reason for notifications -->
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="universal-reasons-hint">
@@ -104,10 +106,12 @@ Planned manoeuvre
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-Optional: select which planned manoeuvre flags to receive
+Advanced: select which planned manoeuvre notifications to receive
 </legend>
 <div id="universal-reasons-pm-hint" class="govuk-hint">
-To keep the default settings and receive all planned manoeuvre flags, leave all boxes ticked. If you wish to only receive certain planned manoeuvre flags, untick any flags which you do not wish to receive.
+To keep the default settings and receive all planned manoeuvre notifications, leave all boxes ticked. 
+If you wish to only receive certain planned manoeuvre notifications, tick only the notifications you wish to receive.
+</div>
 <div class="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="universal-reasons-pm-yes" name="universal-reasons-pm" type="checkbox" value="universal-reasons-pm-yes" checked="true">
@@ -142,10 +146,10 @@ Unexpected position change
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-Optional: select which criteria should trigger a position change notification
+Advanced: select what position changes should trigger a notification
 </legend>
 <div id="universal-reasons-upc-hint" class="govuk-hint">
-NSpOC's orbital analysts decide when to flag a position change. To keep the default settings and receive all position change flags, leave all boxes ticked. If you wish to only receive certain position change flags, untick any criteria which should not apply, and you will be notified only if a position change breaches NSpoC's thresholds for any of the criteria you left ticked.
+A position change triggers a notification if it breaches NSpOC thresholds for <strong>any</strong> of the variables below. To keep the default settings and receive all position change notifications, leave all boxes ticked. If you wish to only receive certain position change notifications, tick only the variables which should apply.
 </div>
 <div class="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
@@ -206,7 +210,7 @@ Select one option.
 As soon as possible
 </label>
 <div id="universal-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
-You'll receive an email as relevant notifications are released from MSH.
+Each relevant notification will be sent as soon as the data is processed by MSH.
 </div>
 </div>
 <div class="govuk-radios__item">
@@ -215,7 +219,7 @@ You'll receive an email as relevant notifications are released from MSH.
 Every 2 hours 
 </label>
 <div id="universal-frequency-2-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications from the past 2 hours will be collated and sent in a single email on the hour every even hour.
+Relevant notifications from the past 2 hours will be collated and sent in a single email every two hours (sent 24/7, starting at midnight).
 </div>
 </div>
 <div class="govuk-radios__item">

@@ -166,11 +166,13 @@ margin-bottom: 10px;
 
   <!-- intro --> 
 <p class="govuk-body">
-You will receive a separate email for each custom notification setting you create. Each email will be clearly labelled with the custom name you choose.
+You will receive separate emails for each notification setting. Each email will be labelled with the custom name you choose.
 </p>
 <p class="govuk-body">
-Remember that your custom settings will <strong>not</strong> cancel out your universal settings. You will receive both sets of emails. We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings to avoid receiving unnecessary emails.
+Remember that if you create custom settings, this will not cancel out your universal settings and you will continue to receive universal notification emails too. We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings to avoid receiving unnecessary emails.
 </p>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
 
 <!-- Custom thresholds name -->
 <h2 class="govuk-heading-l">
@@ -227,17 +229,12 @@ Search
 </div> <!-- class="govuk-grid-row govuk-!-margin-bottom-1" -->
 </div> <!-- class="govuk-form-group sat-toolbar" -->
 
-<!-- Filters (collapsed) + clear filters -->
+<!-- Filters   clear filters -->
 <div class="govuk-!-margin-bottom-2">
-  <details id="satellite-filters" class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">Filter satellites</span>
-    </summary>
-
     <div class="govuk-details__text">
       <div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-one-half">
+        <div class="govuk-grid-column-one-third">
           <div class="govuk-form-group govuk-!-margin-bottom-6">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -259,7 +256,23 @@ Search
           </div>
         </div>
 
-        <div class="govuk-grid-column-one-half">
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--s" for="altitude">
+              Altitude
+            </label>
+
+            <select class="govuk-select" id="altitude" name="altitude">
+              <option value="any" selected>Any</option>
+              <option value="uk">Airbus</option>
+              <option value="us">Avanti</option>
+              <option value="fr">ClydeSpace</option>
+              <option value="de">Inmarsat</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
           <div class="govuk-form-group">
             <label class="govuk-label govuk-label--s" for="licensing-state">
               Operator
@@ -281,7 +294,6 @@ Search
         <a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
       </p>
     </div>
-  </details>
 </div>
 
 
@@ -315,20 +327,20 @@ Select all results
 <table class="govuk-table" id="satellite-table" data-module="moj-sortable-table">
 
 <colgroup>
-<col style="width: 36%;">
-<col style="width: 12%;">  <!-- NORAD -->
-<col style="width: 14%;">  <!-- Regime -->
-<col style="width: 30%;">  <!-- Licensing -->
-<col style="width: 70px;"> <!-- Select -->
+<col style="width: 10%;"> <!-- Object name -->
+<col style="width: 10%;">  <!-- NORAD -->
+<col style="width: 10%;">  <!-- Altitude -->
+<col style="width: 10%;">  <!-- Regime -->
+<col style="width: 10%;">  <!-- Operator -->
+<col style="width: 10%;"> <!-- Select -->
 </colgroup>
 
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <!-- Set one column to ascending if you want an initial sort state -->
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending">Object name</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">
-NORAD ID
-</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">NORAD ID </th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Altitude (km) </th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Orbital regime</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Operator</th>
 <!-- Not sortable -->
@@ -341,6 +353,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Skynet 4C</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="27838">27838</td>
+<td class="govuk-table__cell govuk-body-s">1000</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
@@ -358,6 +371,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Skynet 5A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="40420">40420</td>
+<td class="govuk-table__cell govuk-body-s">1000</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
@@ -375,6 +389,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Skynet 6A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="46949">46949</td>
+<td class="govuk-table__cell govuk-body-s">1000</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
@@ -392,6 +407,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Aurora-LEO 1</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55101">55101</td>
+<td class="govuk-table__cell govuk-body-s">1000</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">Avanti</td>
 <td class="govuk-table__cell">
@@ -409,6 +425,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Aurora-LEO 2</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55102">55102</td>
+<td class="govuk-table__cell govuk-body-s">1000</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">Avanti</td>
 <td class="govuk-table__cell">
@@ -426,6 +443,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Gallica-LEO 7</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="53317">53317</td>
+<td class="govuk-table__cell govuk-body-s">1000</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
 <td class="govuk-table__cell">
@@ -443,6 +461,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">RheinSat 3</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50991">50991</td>
+<td class="govuk-table__cell govuk-body-s">2000</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
 <td class="govuk-table__cell">
@@ -460,6 +479,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">RheinSat 4</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50992">50992</td>
+<td class="govuk-table__cell govuk-body-s">3000</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
 <td class="govuk-table__cell">
@@ -477,6 +497,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">PolarWatch 12</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="60120">60120</td>
+<td class="govuk-table__cell govuk-body-s">1000</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
@@ -494,6 +515,7 @@ NORAD ID
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">OceanScan 5</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="61205">61205</td>
+<td class="govuk-table__cell govuk-body-s">1000</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
 <td class="govuk-table__cell">
