@@ -145,7 +145,7 @@ margin-bottom: 10px;
 <a class="govuk-breadcrumbs__link" href="/account/regulator/account">Account</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
-<a class="govuk-breadcrumbs__link" href="/account/regulator/notification-settings-v2">Notification settings</a>
+<a class="govuk-breadcrumbs__link" href="/account/regulator/notification-settings">Notification settings</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
 <span class="govuk-breadcrumbs__link">Add custom settings</span>
@@ -164,13 +164,15 @@ margin-bottom: 10px;
 <!-- Turn page into a form (where submission leads to a 'check settings' page) -->
 <form method="post" action="/account/regulator/notification-settings-check-custom">
 
-  <!-- intro --> 
- <p class="govuk-body">
-Remember that for selected satellites, your custom settings will <strong>not</strong> cancel out your universal settings. You will receive both sets of notifications.
+<!-- intro --> 
+<p class="govuk-body">
+You will receive separate emails for each notification setting. Each email will be labelled with the custom name you choose.
 </p>
 <p class="govuk-body">
-We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings.
+Remember that if you create custom settings, this will not cancel out your universal settings and you will continue to receive universal notification emails too. We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings to avoid receiving unnecessary emails.
 </p>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
 
 <!-- Custom thresholds name -->
 <h2 class="govuk-heading-l">
@@ -227,63 +229,107 @@ Search
 </div> <!-- class="govuk-grid-row govuk-!-margin-bottom-1" -->
 </div> <!-- class="govuk-form-group sat-toolbar" -->
 
-<!-- Filters (collapsed) + clear filters -->
+<!-- Filters   clear filters -->
 <div class="govuk-!-margin-bottom-2">
-  <details id="satellite-filters" class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">Filter satellites</span>
-    </summary>
+<div class="govuk-grid-row">
 
-    <div class="govuk-details__text">
-      <div class="govuk-grid-row">
-
-        <div class="govuk-grid-column-one-half">
-          <div class="govuk-form-group govuk-!-margin-bottom-6">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                Orbital regime
-              </legend>
-
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="regime-geo" name="regime" type="checkbox" value="GEO">
-                  <label class="govuk-label govuk-checkboxes__label" for="regime-geo">GEO</label>
-                </div>
-
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO">
-                  <label class="govuk-label govuk-checkboxes__label" for="regime-leo">LEO</label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-        </div>
-
-        <div class="govuk-grid-column-one-half">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--s" for="licensing-state">
-              Operator
-            </label>
-
-            <select class="govuk-select" id="licensing-state" name="licensing-state">
-              <option value="any" selected>Any</option>
-              <option value="uk">Airbus</option>
-              <option value="us">Avanti</option>
-              <option value="fr">ClydeSpace</option>
-              <option value="de">Inmarsat</option>
-            </select>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="govuk-body govuk-!-margin-bottom-0">
-        <a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
-      </p>
-    </div>
-  </details>
+  <!-- orbital regime filter -->
+<div class="govuk-form-group govuk-!-margin-bottom-6">
+<details id="satellite-filters" class="govuk-details" data-module="govuk-details"> 
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">Filter by orbital regime
+</span> 
+</summary>
+<fieldset class="govuk-fieldset" aria-describedby="orbital-regime-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Orbital regime
+</legend>
+<div id="orbital-regime-hint" class="govuk-hint">
+Select all that apply.
+</div>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<!-- LEO option -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO" aria-describedby="regime-leo-hint">
+<label class="govuk-label govuk-checkboxes__label" for="regime-leo">
+Low Earth Orbit (LEO)
+</label>
+<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
+LEO satellites orbit at altitudes of 160km to 2,000m.
+</div>
+</div>
+<!-- MEO option -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="regime-meo" name="regime" type="checkbox" value="MEO" aria-describedby="regime-meo-hint">
+<label class="govuk-label govuk-checkboxes__label" for="regime-meo">
+Medium Earth Orbit (MEO)
+</label>
+<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
+MEO satellites orbit at altitudes of 2,000km to 35,786km.
+</div>
+</div>
+<!-- GEO option -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="regime-geo" name="regime" type="checkbox" value="GEO" aria-describedby="regime-geo-hint">
+<label class="govuk-label govuk-checkboxes__label" for="regime-geo">
+Geostationary Earth Orbit (GEO)
+</label>
+<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
+GEO satellites orbit at altitude of exactly 35,786 km.
+</div>
+</div>
+<!-- end checkboxes -->
+</div>
+</fieldset>
+</details>
 </div>
 
+<!-- Operator  filter -->
+<div class="govuk-form-group govuk-!-margin-bottom-6">
+<details id="satellite-filters" class="govuk-details" data-module="govuk-details"> 
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">Filter by operator
+</span> 
+</summary>
+<fieldset class="govuk-fieldset" aria-describedby="operator-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Operator
+</legend>
+<div id="orbital-regime-hint" class="govuk-hint">
+Select all that apply.
+</div>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="operator-airbus" name="operator" type="checkbox" value="operator-airbus">
+<label class="govuk-label govuk-checkboxes__label" for="operator-airbus">Airbus</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="operator-avanti" name="operator" type="checkbox" value="operator-avanti">
+<label class="govuk-label govuk-checkboxes__label" for="operator-avanti">Avanti</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="operator-clydespace" name="operator" type="checkbox" value="operator-clydespace">
+<label class="govuk-label govuk-checkboxes__label" for="operator-clydespace">Clydespace</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="operator-inmarsat" name="operator" type="checkbox" value="operator-inmarsat">
+<label class="govuk-label govuk-checkboxes__label" for="operator-inmarsat">Inmarsat</label>
+</div>
+</div>
+</fieldset>
+</details>
+</div>
+
+<!-- clear filters -->
+<div class="govuk-grid-column-one-third">
+<p class="govuk-body govuk-!-margin-bottom-6">
+<a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
+</p>
+
+</div>
+
+</div> <!-- class="govuk-grid-row" --> 
+</div> <!-- class="govuk-!-margin-bottom-2"> -->
 
 <!-- Selection + results summary row -->
 <div class="sat-selection-bar">
@@ -315,20 +361,18 @@ Select all results
 <table class="govuk-table" id="satellite-table" data-module="moj-sortable-table">
 
 <colgroup>
-<col style="width: 36%;">
-<col style="width: 12%;">  <!-- NORAD -->
-<col style="width: 14%;">  <!-- Regime -->
-<col style="width: 30%;">  <!-- Licensing -->
-<col style="width: 70px;"> <!-- Select -->
+<col style="width: 10%;"> <!-- Object name -->
+<col style="width: 10%;">  <!-- NORAD -->
+<col style="width: 10%;">  <!-- Regime -->
+<col style="width: 10%;">  <!-- Operator -->
+<col style="width: 10%;"> <!-- Select -->
 </colgroup>
 
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <!-- Set one column to ascending if you want an initial sort state -->
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending">Object name</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">
-NORAD ID
-</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">NORAD ID </th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Orbital regime</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Operator</th>
 <!-- Not sortable -->
@@ -337,7 +381,7 @@ NORAD ID
 </thead>
 
 <tbody class="govuk-table__body">
-    
+
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Skynet 4C</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="27838">27838</td>
@@ -522,40 +566,106 @@ NORAD ID
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="custom-reasons-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-<h1 class="govuk-fieldset__heading">
-Select reasons for notification
-</h1>
+Select reasons for notifications
 </legend>
-<p>We will send you notifications when satellite activity is flagged for the reasons you have selected.
+<p>We will send you notifications when any UK-licensed satellite activity is flagged for the reasons you have selected.
 </p>
 <div id="custom-reasons-hint" class="govuk-hint">
 Select all that apply.
 </div>
+
+
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<!-- select reasons for notifications: planned manoeuvres -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-1" name="custom-reasons" type="checkbox" value="custom-reasons-1">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-1">
-Manoeuvre as planned
+<input class="govuk-checkboxes__input" id="custom-reasons-pm" name="custom-reasons" type="checkbox" value="custom-reasons-pm"
+data-aria-controls="conditional-custom-reasons-pm">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm">
+Planned manoeuvre
 </label>
 </div>
+<!-- planned manoeuvre options - only opens if planned manoeuvre selected -->
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-custom-reasons-pm" >
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+Optional: select which planned manoeuvre flags to receive
+</legend>
+<div id="custom-reasons-pm-hint" class="govuk-hint">
+To keep the default settings and receive all planned manoeuvre flags, leave all boxes ticked. If you wish to only receive certain planned manoeuvre flags, untick any flags which you do not wish to receive.
+<div class="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-2" name="custom-reasons" type="checkbox" value="custom-reasons-2">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-2">
-Manoeuvre not as planned
-</label>
+<input class="govuk-checkboxes__input" id="custom-reasons-pm-yes" name="custom-reasons-pm" type="checkbox" value="custom-reasons-pm-yes" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm-yes">Manoeuvre executed as planned</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-3" name="custom-reasons" type="checkbox" value="custom-reasons-3">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-3">
-Unexpected position change
-</label>
+<input class="govuk-checkboxes__input" id="custom-reasons-pm-no" name="custom-reasons-pm" type="checkbox" value="custom-reasons-pm-no" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm-no">Actual manoeuvre differed from plan</label>
 </div>
+</fieldset>
+</div>
+</div>
+<!-- select reasons for notifications: missing data -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-4" name="custom-reasons" type="checkbox" value="custom-reasons-4">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-4">
+<input class="govuk-checkboxes__input" id="custom-reasons-md" name="custom-reasons" type="checkbox" value="custom-reasons-md">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-md">
 Missing data
 </label>
 </div>
+
+<!-- select reasons for notifications: unexpected position change -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc" name="custom-reasons" type="checkbox" value="custom-reasons-upc"
+data-aria-controls="conditional-custom-reasons-upc">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc">
+Unexpected position change
+</label>
+</div>
+<!-- unexpected position change criteria - only opens if unexpected position change selected -->
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-custom-reasons-upc" >
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+Optional: select which criteria should trigger a position change notification
+</legend>
+<div id="custom-reasons-upc-hint" class="govuk-hint">
+NSpOC's orbital analysts decide when to flag a position change. To keep the default settings and receive all position change flags, leave all boxes ticked. If you wish to only receive certain position change flags, untick any criteria which should not apply, and you will be notified only if a position change breaches NSpoC's thresholds for any of the criteria you left ticked.
+</div>
+<div class="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-fsma" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fsma" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fsma">Fixed semi-major axis (SMA)</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-smac" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-smac" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-smac">Semi-major axis (SMA) change</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-smacr" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-smacr" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-smacr">Semi-major axis (SMA) change rate</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-fi" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fi" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fi">Fixed inclination</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-ic" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-ic" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-ic">Inclination change</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-fl" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fl" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fl">Inclination fixed longitude</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="custom-reasons-upc-ldr" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-ldr" checked="true">
+<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-ldr">Longitude drift rate</label>
+</div>
+</div>
+
+</fieldset>
+</div>
+</div>
+
 </div>
 </fieldset>
 </div>
@@ -570,9 +680,9 @@ Missing data
 Set notification frequency
 </h1>
 </legend>
- <div id="custom-frequency-hint" class="govuk-hint">
+<div id="custom-frequency-hint" class="govuk-hint">
 Select one option.
-    </div>
+</div>
 <div class="govuk-radios" data-module="govuk-radios">
 <div class="govuk-radios__item">
 <input class="govuk-radios__input" id="custom-frequency-asap" name="custom-frequency" type="radio" value="custom-frequency-asap">
