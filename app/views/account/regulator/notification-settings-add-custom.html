@@ -164,7 +164,7 @@ margin-bottom: 10px;
 <!-- Turn page into a form (where submission leads to a 'check settings' page) -->
 <form method="post" action="/account/regulator/notification-settings-check-custom">
 
-  <!-- intro --> 
+<!-- intro --> 
 <p class="govuk-body">
 You will receive separate emails for each notification setting. Each email will be labelled with the custom name you choose.
 </p>
@@ -231,69 +231,93 @@ Search
 
 <!-- Filters   clear filters -->
 <div class="govuk-!-margin-bottom-2">
-    <div class="govuk-details__text">
-      <div class="govuk-grid-row">
+<div class="govuk-details__text">
+<div class="govuk-grid-row">
 
-        <div class="govuk-grid-column-one-third">
-          <div class="govuk-form-group govuk-!-margin-bottom-6">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                Orbital regime
-              </legend>
+<!-- orbital regime filter -->
+<div class="govuk-grid-column-one-third">
+<div class="govuk-form-group govuk-!-margin-bottom-6">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Orbital regime
+</legend>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="regime-geo" name="regime" type="checkbox" value="GEO">
+<label class="govuk-label govuk-checkboxes__label" for="regime-geo">GEO</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO">
+<label class="govuk-label govuk-checkboxes__label" for="regime-leo">LEO</label>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
 
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="regime-geo" name="regime" type="checkbox" value="GEO">
-                  <label class="govuk-label govuk-checkboxes__label" for="regime-geo">GEO</label>
-                </div>
+<!-- altitude  filter -->
+<div class="govuk-grid-column-one-third">
+<div class="govuk-form-group govuk-!-margin-bottom-6">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Altitude range
+</legend>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="altitude-1" name="altitude" type="checkbox" value="altitude-1">
+<label class="govuk-label govuk-checkboxes__label" for="altitude-1">Altitude 1</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="altitude-2" name="altitude" type="checkbox" value="altitude-2">
+<label class="govuk-label govuk-checkboxes__label" for="altitude-2">Altitude 2</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="altitude-3" name="altitude" type="checkbox" value="altitude-3">
+<label class="govuk-label govuk-checkboxes__label" for="altitude-3">Altitude 3</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="altitude-4" name="altitude" type="checkbox" value="altitude-4">
+<label class="govuk-label govuk-checkboxes__label" for="altitude-4">Altitude 4</label>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
 
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO">
-                  <label class="govuk-label govuk-checkboxes__label" for="regime-leo">LEO</label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-        </div>
+<!-- Operator  filter -->
+<div class="govuk-grid-column-one-third">
+<div class="govuk-form-group govuk-!-margin-bottom-6">
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Operator
+</legend>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="operator-airbus" name="operator" type="checkbox" value="operator-airbus">
+<label class="govuk-label govuk-checkboxes__label" for="operator-airbus">Airbus</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="operator-avanti" name="operator" type="checkbox" value="operator-avanti">
+<label class="govuk-label govuk-checkboxes__label" for="operator-avanti">Avanti</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="operator-clydespace" name="operator" type="checkbox" value="operator-clydespace">
+<label class="govuk-label govuk-checkboxes__label" for="operator-clydespace">Clydespace</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="operator-inmarsat" name="operator" type="checkbox" value="operator-inmarsat">
+<label class="govuk-label govuk-checkboxes__label" for="operator-inmarsat">Inmarsat</label>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+<div class="govuk-grid-column-one-third">
 
-        <div class="govuk-grid-column-one-third">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--s" for="altitude">
-              Altitude
-            </label>
-
-            <select class="govuk-select" id="altitude" name="altitude">
-              <option value="any" selected>Any</option>
-              <option value="uk">Airbus</option>
-              <option value="us">Avanti</option>
-              <option value="fr">ClydeSpace</option>
-              <option value="de">Inmarsat</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="govuk-grid-column-one-third">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-label--s" for="licensing-state">
-              Operator
-            </label>
-
-            <select class="govuk-select" id="licensing-state" name="licensing-state">
-              <option value="any" selected>Any</option>
-              <option value="uk">Airbus</option>
-              <option value="us">Avanti</option>
-              <option value="fr">ClydeSpace</option>
-              <option value="de">Inmarsat</option>
-            </select>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="govuk-body govuk-!-margin-bottom-0">
-        <a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
-      </p>
-    </div>
+<p class="govuk-body govuk-!-margin-bottom-6">
+<a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
+</p>
+</div>
 </div>
 
 
@@ -349,7 +373,7 @@ Select all results
 </thead>
 
 <tbody class="govuk-table__body">
-    
+
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Skynet 4C</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="27838">27838</td>
@@ -658,9 +682,9 @@ NSpOC's orbital analysts decide when to flag a position change. To keep the defa
 Set notification frequency
 </h1>
 </legend>
- <div id="custom-frequency-hint" class="govuk-hint">
+<div id="custom-frequency-hint" class="govuk-hint">
 Select one option.
-    </div>
+</div>
 <div class="govuk-radios" data-module="govuk-radios">
 <div class="govuk-radios__item">
 <input class="govuk-radios__input" id="custom-frequency-asap" name="custom-frequency" type="radio" value="custom-frequency-asap">
