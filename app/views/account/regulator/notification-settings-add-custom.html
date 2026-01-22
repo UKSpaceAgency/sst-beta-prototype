@@ -231,66 +231,73 @@ Search
 
 <!-- Filters   clear filters -->
 <div class="govuk-!-margin-bottom-2">
-<div class="govuk-details__text">
 <div class="govuk-grid-row">
 
-<!-- orbital regime filter -->
-<div class="govuk-grid-column-one-third">
+  <!-- orbital regime filter -->
 <div class="govuk-form-group govuk-!-margin-bottom-6">
-<fieldset class="govuk-fieldset">
+<details id="satellite-filters" class="govuk-details" data-module="govuk-details"> 
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">Filter by orbital regime
+</span> 
+</summary>
+<fieldset class="govuk-fieldset" aria-describedby="orbital-regime-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 Orbital regime
 </legend>
+<div id="orbital-regime-hint" class="govuk-hint">
+Select all that apply.
+</div>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<!-- LEO option -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="regime-geo" name="regime" type="checkbox" value="GEO">
-<label class="govuk-label govuk-checkboxes__label" for="regime-geo">GEO</label>
+<input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO" aria-describedby="regime-leo-hint">
+<label class="govuk-label govuk-checkboxes__label" for="regime-leo">
+Low Earth Orbit (LEO)
+</label>
+<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
+LEO satellites orbit at altitudes of 160km to 2,000m.
 </div>
+</div>
+<!-- MEO option -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO">
-<label class="govuk-label govuk-checkboxes__label" for="regime-leo">LEO</label>
+<input class="govuk-checkboxes__input" id="regime-meo" name="regime" type="checkbox" value="MEO" aria-describedby="regime-meo-hint">
+<label class="govuk-label govuk-checkboxes__label" for="regime-meo">
+Medium Earth Orbit (MEO)
+</label>
+<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
+MEO satellites orbit at altitudes of 2,000km to 35,786km.
 </div>
+</div>
+<!-- GEO option -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="regime-geo" name="regime" type="checkbox" value="GEO" aria-describedby="regime-geo-hint">
+<label class="govuk-label govuk-checkboxes__label" for="regime-geo">
+Geostationary Earth Orbit (GEO)
+</label>
+<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
+GEO satellites orbit at altitude of exactly 35,786 km.
+</div>
+</div>
+<!-- end checkboxes -->
 </div>
 </fieldset>
-</div>
-</div>
-
-<!-- altitude  filter -->
-<div class="govuk-grid-column-one-third">
-<div class="govuk-form-group govuk-!-margin-bottom-6">
-<fieldset class="govuk-fieldset">
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-Altitude range
-</legend>
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="altitude-1" name="altitude" type="checkbox" value="altitude-1">
-<label class="govuk-label govuk-checkboxes__label" for="altitude-1">Altitude 1</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="altitude-2" name="altitude" type="checkbox" value="altitude-2">
-<label class="govuk-label govuk-checkboxes__label" for="altitude-2">Altitude 2</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="altitude-3" name="altitude" type="checkbox" value="altitude-3">
-<label class="govuk-label govuk-checkboxes__label" for="altitude-3">Altitude 3</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="altitude-4" name="altitude" type="checkbox" value="altitude-4">
-<label class="govuk-label govuk-checkboxes__label" for="altitude-4">Altitude 4</label>
-</div>
-</div>
-</fieldset>
-</div>
+</details>
 </div>
 
 <!-- Operator  filter -->
-<div class="govuk-grid-column-one-third">
 <div class="govuk-form-group govuk-!-margin-bottom-6">
-<fieldset class="govuk-fieldset">
+<details id="satellite-filters" class="govuk-details" data-module="govuk-details"> 
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">Filter by operator
+</span> 
+</summary>
+<fieldset class="govuk-fieldset" aria-describedby="operator-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 Operator
 </legend>
+<div id="orbital-regime-hint" class="govuk-hint">
+Select all that apply.
+</div>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="operator-airbus" name="operator" type="checkbox" value="operator-airbus">
@@ -310,16 +317,19 @@ Operator
 </div>
 </div>
 </fieldset>
+</details>
 </div>
-</div>
-<div class="govuk-grid-column-one-third">
 
+<!-- clear filters -->
+<div class="govuk-grid-column-one-third">
 <p class="govuk-body govuk-!-margin-bottom-6">
 <a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
 </p>
-</div>
+
 </div>
 
+</div> <!-- class="govuk-grid-row" --> 
+</div> <!-- class="govuk-!-margin-bottom-2"> -->
 
 <!-- Selection + results summary row -->
 <div class="sat-selection-bar">
