@@ -55,13 +55,13 @@ Satellite activity notification settings
 This page allows you to adjust your notification settings for satellite activity. 
 </p>
 <p class="govuk-body">
-You can create universal settings, which will apply to all UK-licensed satellites. You can also create custom settings which will only apply to selected satellites.  
+You can create a notification rule which applies to all UK-licensed satellites. You can also create additional custom rules which will only apply to selected satellites.
 </p>
 <p class="govuk-body">
-You will receive separate emails for each notification setting.
+You will receive separate emails for each rule.
 </p>
 <p class="govuk-body">
-If you create custom settings, this will not cancel out your universal settings and you will continue to receive universal notification emails too. We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings to avoid receiving unnecessary emails.
+If you create custom rules, this will not cancel out the rule applying to all UK-licensed satellites. You should consider how many notifications you wish to receive.
 </p>
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -71,13 +71,13 @@ If you create custom settings, this will not cancel out your universal settings 
 <div class="govuk-accordion__section-header">
 <h1 class="govuk-accordion__section-heading">
 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-Universal notification settings 
+All UK-licensed satellites
 </span>
 </h1>
 </div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
 <p>
-Your universal notification settings will apply to all UK-licensed satellites. Each email will be labelled 'universal'.
+This rule will generate notifications for all UK-licensed satellites, so you should consider how many notifications you wish to receive.
 </p>
 <!-- reason for notifications -->
 <div class="govuk-form-group">
@@ -262,17 +262,17 @@ Relevant notifications from the past week will be collated and sent in a single 
 <div class="govuk-accordion__section-header">
 <h1 class="govuk-accordion__section-heading">
 <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-Custom notification settings
+Custom rules
 </span>
 </h1>
 </div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-2" class="govuk-accordion__section-content">
-<h2 class="govuk-heading-l">Summary of custom notification settings
+<h2 class="govuk-heading-l">Summary of custom rules
 </h2>
 <div class="govuk-hint"> 
-This table summarises your existing custom notification settings for selected satellites. Edit existing settings using the links in the table, or add settings for new groups of satellites using the button below.
+This table summarises your existing custom rules for selected satellites. Create new custom rules using the button below the table. You can also duplicate and edit existing rules using the links in the table.
 </div>
-<!-- Custom settings summary table -->
+<!-- Custom rules summary table -->
 <!-- GOV.UK-style accessible table with two header rows, grouped headers, and custom column widths -->
 <div style="overflow-x:auto;">
 <table class="govuk-table" style="width: 100%" aria-describedby="table-caption-custom-settings-summary">
@@ -281,17 +281,17 @@ This table summarises your existing custom notification settings for selected sa
 <col style="width: 20%;" /> <!--name-->
 <col style="width: 30%;" /> <!--Reasons for notifications-->
 <col style="width: 20%;" /> <!--notification frequency-->
-<col style="width: 10%;" /> <!-- edit -->
+<col style="width: 20%;" /> <!-- edit -->
 <col style="width: 10%;" /> <!-- delete -->
 </colgroup>
 <!-- Header row 1: grouped headings spanning multiple columns -->
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
-<th class="govuk-table__header" scope="col">Custom notification settings name</th>
+<th class="govuk-table__header" scope="col">Rule name</th>
 <th class="govuk-table__header" scope="col">Reasons for notifications</th>
 <th class="govuk-table__header" scope="col">Email frequency </th>
-<th class="govuk-table__header" scope="col">Edit </th>
-<th class="govuk-table__header" scope="col">Delete</th>
+<th class="govuk-table__header" scope="col">View and edit </th>
+<th class="govuk-table__header" scope="col">Duplicate</th>
 </tr>
 </thead>
 
@@ -300,15 +300,15 @@ This table summarises your existing custom notification settings for selected sa
 <td class="govuk-table__cell">LEO Satellites</td>
 <td class="govuk-table__cell">Missing data, Unexpected position change</td>
 <td class="govuk-table__cell">As soon as possible</td>
-<td class="govuk-table__cell"><a class="govuk-link" href="notification-settings-edit-custom">Edit</a></td>
-<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="notification-settings-edit-custom">View and edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Duplicate</a></td>
 </tr>
 <tr class="govuk-table__row">
 <td class="govuk-table__cell">Airbus Satellites</td>
 <td class="govuk-table__cell">Missing data</td>
 <td class="govuk-table__cell">Daily</td>
-<td class="govuk-table__cell"><a class="govuk-link" href="notification-settings-edit-custom">Edit</a></td>
-<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="notification-settings-edit-custom">View and edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Duplicate</a></td>
 </tr>
 
 
@@ -319,7 +319,7 @@ This table summarises your existing custom notification settings for selected sa
 <!-- add custom thresholds button -->
 <p class="govuk-body govuk-!-margin-top-6">
 <a class="govuk-link" href="/account/regulator/notification-settings-add-custom">
-Add custom settings
+Add new custom rule
 </a>
 </p>
 </div> <!-- id="accordion-default-content-2" class="govuk-accordion__section-content"> -->
