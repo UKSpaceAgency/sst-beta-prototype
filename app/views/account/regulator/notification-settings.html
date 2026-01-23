@@ -79,15 +79,16 @@ All UK-licensed satellites
 <p>
 This rule will generate notifications for all UK-licensed satellites, so you should consider how many notifications you wish to receive.
 </p>
-<!-- reason for notifications -->
+
+<!-- select reasons for notifications -->
 <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="universal-reasons-hint">
+<fieldset class="govuk-fieldset" aria-describedby="reasons-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 Select reasons for notifications
 </legend>
 <p>We will send you notifications when any UK-licensed satellite activity is flagged for the reasons you have selected.
 </p>
-<div id="universal-reasons-hint" class="govuk-hint">
+<div id="reasons-hint" class="govuk-hint">
 Select all that apply.
 </div>
 
@@ -95,8 +96,8 @@ Select all that apply.
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <!-- select reasons for notifications: missing data -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="universal-reasons-md" name="universal-reasons" type="checkbox" value="universal-reasons-md">
-<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-md">
+<input class="govuk-checkboxes__input" id="reasons-md" name="reasons" type="checkbox" value="reasons-md">
+<label class="govuk-label govuk-checkboxes__label" for="reasons-md">
 Missing data
 </label>
 </div>
@@ -106,19 +107,19 @@ Missing data
 <div class="govuk-checkboxes__item">
 <input
 class="govuk-checkboxes__input"
-id="universal-reasons-upc"
-name="universal-reasons"
+id="reasons-upc"
+name="reasons"
 type="checkbox"
 value="upc"
-aria-describedby="universal-reasons-upc-hint"
-data-aria-controls="conditional-universal-reasons-upc"
+aria-describedby="reasons-upc-hint"
+data-aria-controls="conditional-reasons-upc"
 >
-<label class="govuk-label govuk-checkboxes__label" for="universal-reasons-upc">
+<label class="govuk-label govuk-checkboxes__label" for="reasons-upc">
 Unexpected position change
 </label>
 </div>
 
-<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-universal-reasons-upc">
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-reasons-upc">
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="upc-conditional-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -160,9 +161,7 @@ If you wish to only receive certain planned manoeuvre notifications, tick only t
 </fieldset>
 </div>
 </div>
-</div> <!--asdf-->
-
-
+</div> 
 </div>
 </fieldset>
 </div>
@@ -172,57 +171,57 @@ If you wish to only receive certain planned manoeuvre notifications, tick only t
 <div class="govuk-!-margin-top-6">
 </div>
 <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="universal-frequency-hint">
+<fieldset class="govuk-fieldset" aria-describedby="frequency-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
 Set email frequency
 </h1>
 </legend>
-<div id="universal-frequency-hint" class="govuk-hint">
+<div id="frequency-hint" class="govuk-hint">
 Select one option.
 </div>
 <div class="govuk-radios" data-module="govuk-radios">
 <!-- asap option -->
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-asap" name="universal-frequency" type="radio" value="asap">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-asap">
+<input class="govuk-radios__input" id="frequency-asap" name="frequency" type="radio" value="asap">
+<label class="govuk-label govuk-radios__label" for="frequency-asap">
 As soon as possible
 </label>
-<div id="universal-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
+<div id="frequency-asap-hint" class="govuk-hint govuk-radios__hint">
 Each relevant notification will be sent as soon as the data is processed by MSH.
 </div>
 </div>
 <!-- every 2h option -->
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-2h" name="universal-frequency" type="radio" value="2h">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-2h">
+<input class="govuk-radios__input" id="frequency-2h" name="frequency" type="radio" value="2h">
+<label class="govuk-label govuk-radios__label" for="frequency-2h">
 Every 2 hours 
 </label>
-<div id="universal-frequency-2h-hint" class="govuk-hint govuk-radios__hint">
+<div id="frequency-2h-hint" class="govuk-hint govuk-radios__hint">
 Relevant notifications from the past 2 hours will be collated and sent in a single email every two hours (sent 24/7, starting at midnight UTC*).
 </div>
 </div>
 <!-- daily option -->
 <div class="govuk-radios__item"> 
-<input class="govuk-radios__input" id="universal-frequency-daily" name="universal-frequency" type="radio" value="daily">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-daily">
+<input class="govuk-radios__input" id="frequency-daily" name="frequency" type="radio" value="daily">
+<label class="govuk-label govuk-radios__label" for="frequency-daily">
 Every day
 </label>
-<div id="universal-frequency-daily-hint" class="govuk-hint govuk-radios__hint">
+<div id="frequency-daily-hint" class="govuk-hint govuk-radios__hint">
 Relevant notifications from the past day (24 hours) will be collated and sent in a single email at 12pm UTC* every day.
 </div>
 </div>
 <!-- selected days option -->
 <div class="govuk-radios__item"> 
-<input class="govuk-radios__input" id="universal-frequency-selected-days" name="universal-frequency" type="radio" value="selected-days" data-aria-controls="conditional-universal-frequency-selected-days">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-selected-days">
+<input class="govuk-radios__input" id="frequency-selected-days" name="frequency" type="radio" value="selected-days" data-aria-controls="conditional-frequency-selected-days">
+<label class="govuk-label govuk-radios__label" for="frequency-selected-days">
 Selected days
 </label>
-<div id="universal-frequency-selected-days-hint" class="govuk-hint govuk-radios__hint">
+<div id="frequency-selected-days-hint" class="govuk-hint govuk-radios__hint">
 Relevant notifications since the last email will be collated and sent in a single email at 12pm UTC* every day selected.
 </div>
 </div>
-<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-universal-frequency-selected-days">
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-frequency-selected-days">
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="days-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -286,9 +285,6 @@ Sunday
 </p>
 </div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content" -->
 </div> <!-- class="govuk-accordion__section" -->
-
-<!-- select frequency take 2 -->
-
 
 
 <!-- Set custom notifications -->
@@ -377,7 +373,7 @@ Save notification settings
 
 <script>
 (function () {
-const parent = document.getElementById('universal-reasons-upc');
+const parent = document.getElementById('reasons-upc');
 const conditionalId = parent?.getAttribute('data-aria-controls');
 const conditional = conditionalId ? document.getElementById(conditionalId) : null;
 
@@ -413,3 +409,4 @@ table.classList.toggle('inactive', !checkbox.checked);
 </script>
 
 {% endblock %}
+
