@@ -1,13 +1,12 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Edit your threshold notification settings
+Add custom rule
 {% endblock %}
 
 {% block content %}
 
 <style>
-/* -->>Greyed-out questions for setting thresholds */
 .govuk-table__header, .govuk-table__cell {
 vertical-align: middle;
 }
@@ -145,10 +144,10 @@ margin-bottom: 10px;
 <a class="govuk-breadcrumbs__link" href="/account/regulator/account">Account</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
-<a class="govuk-breadcrumbs__link" href="/account/regulator/notification-settings">Notification settings</a>
+<a class="govuk-breadcrumbs__link" href="/account/regulator/notification-settings">Satellite activity notification settings</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
-<span class="govuk-breadcrumbs__link">Add custom settings</span>
+<span class="govuk-breadcrumbs__link">Add custom rule</span>
 </li>
 </ol>
 </div>
@@ -159,17 +158,17 @@ margin-bottom: 10px;
 <div class="govuk-grid-column-full">
 
 <!-- title -->
-<h1 class="govuk-heading-xl">Add custom settings</h1>
+<h1 class="govuk-heading-xl">Add custom rule</h1>
 
 <!-- Turn page into a form (where submission leads to a 'check settings' page) -->
 <form method="post" action="/account/regulator/notification-settings-check-custom">
 
 <!-- intro --> 
 <p class="govuk-body">
-You will receive separate emails for each notification setting. Each email will be labelled with the custom name you choose.
+You will receive separate emails for each rule. 
 </p>
 <p class="govuk-body">
-Remember that if you create custom settings, this will not cancel out your universal settings and you will continue to receive universal notification emails too. We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings to avoid receiving unnecessary emails.
+Remember that if you create additional custom rules, this will not cancel out the rule applying to all UK-licensed satellites. You should consider how many notifications you wish to receive.
 </p>
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -182,7 +181,7 @@ Choose a name
 <div class="govuk-form-group">
 
 <div id="custom-name-hint" class="govuk-hint">
-Use a clear name for these custom settings that reflects the satellites included,
+Use a clear name for this rule that reflects the satellites included,
 for example “LEO satellites” or “satellite A”.
 </div> <!-- id="custom-name-hint" class="govuk-hint" -->
 
@@ -235,11 +234,6 @@ Search
 
   <!-- orbital regime filter -->
 <div class="govuk-form-group govuk-!-margin-bottom-6">
-<details id="satellite-filters" class="govuk-details" data-module="govuk-details"> 
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">Filter by orbital regime
-</span> 
-</summary>
 <fieldset class="govuk-fieldset" aria-describedby="orbital-regime-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 Orbital regime
@@ -249,15 +243,7 @@ Select all that apply.
 </div>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <!-- LEO option -->
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO" aria-describedby="regime-leo-hint">
-<label class="govuk-label govuk-checkboxes__label" for="regime-leo">
-Low Earth Orbit (LEO)
-</label>
-<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
-LEO satellites orbit at altitudes of 160km to 2,000m.
-</div>
-</div>
+
 <!-- MEO option -->
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="regime-meo" name="regime" type="checkbox" value="MEO" aria-describedby="regime-meo-hint">
@@ -281,16 +267,10 @@ GEO satellites orbit at altitude of exactly 35,786 km.
 <!-- end checkboxes -->
 </div>
 </fieldset>
-</details>
 </div>
 
 <!-- Operator  filter -->
 <div class="govuk-form-group govuk-!-margin-bottom-6">
-<details id="satellite-filters" class="govuk-details" data-module="govuk-details"> 
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">Filter by operator
-</span> 
-</summary>
 <fieldset class="govuk-fieldset" aria-describedby="operator-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 Operator
@@ -317,7 +297,6 @@ Select all that apply.
 </div>
 </div>
 </fieldset>
-</details>
 </div>
 
 <!-- clear filters -->
