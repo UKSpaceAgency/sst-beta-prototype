@@ -1,13 +1,12 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Edit your threshold notification settings
+Add custom rule
 {% endblock %}
 
 {% block content %}
 
 <style>
-/* -->>Greyed-out questions for setting thresholds */
 .govuk-table__header, .govuk-table__cell {
 vertical-align: middle;
 }
@@ -132,7 +131,7 @@ display: flex;
 gap: 15px;
 align-items: baseline;
 flex-wrap: wrap;
-margin-bottom: 10px;
+margin-bottom: 10spx;
 }
 
 </style>
@@ -145,10 +144,10 @@ margin-bottom: 10px;
 <a class="govuk-breadcrumbs__link" href="/account/regulator/account">Account</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
-<a class="govuk-breadcrumbs__link" href="/account/regulator/notification-settings">Notification settings</a>
+<a class="govuk-breadcrumbs__link" href="/account/regulator/notification-settings">Satellite activity notification settings</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
-<span class="govuk-breadcrumbs__link">Add custom settings</span>
+<span class="govuk-breadcrumbs__link">Add custom rule</span>
 </li>
 </ol>
 </div>
@@ -159,17 +158,17 @@ margin-bottom: 10px;
 <div class="govuk-grid-column-full">
 
 <!-- title -->
-<h1 class="govuk-heading-xl">Add custom settings</h1>
+<h1 class="govuk-heading-xl">Add custom rule</h1>
 
 <!-- Turn page into a form (where submission leads to a 'check settings' page) -->
-<form method="post" action="/account/regulator/notification-settings-check-custom">
+<form method="post" action="/account/regulator/notification-settings">
 
 <!-- intro --> 
 <p class="govuk-body">
-You will receive separate emails for each notification setting. Each email will be labelled with the custom name you choose.
+You will receive separate emails for each rule. 
 </p>
 <p class="govuk-body">
-Remember that if you create custom settings, this will not cancel out your universal settings and you will continue to receive universal notification emails too. We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings to avoid receiving unnecessary emails.
+Remember that if you create additional custom rules, this will not cancel out the rule applying to all UK-licensed satellites. You should consider how many notifications you wish to receive.
 </p>
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -182,7 +181,7 @@ Choose a name
 <div class="govuk-form-group">
 
 <div id="custom-name-hint" class="govuk-hint">
-Use a clear name for these custom settings that reflects the satellites included,
+Use a clear name for this rule that reflects the satellites included,
 for example “LEO satellites” or “satellite A”.
 </div> <!-- id="custom-name-hint" class="govuk-hint" -->
 
@@ -229,33 +228,61 @@ Search
 </div> <!-- class="govuk-grid-row govuk-!-margin-bottom-1" -->
 </div> <!-- class="govuk-form-group sat-toolbar" -->
 
-<!-- Filters   clear filters -->
-<div class="govuk-!-margin-bottom-2">
-<div class="govuk-grid-row">
+<!-- Filters -->
 
-  <!-- orbital regime filter -->
-<div class="govuk-form-group govuk-!-margin-bottom-6">
-<details id="satellite-filters" class="govuk-details" data-module="govuk-details"> 
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">Filter by orbital regime
-</span> 
-</summary>
+<!-- orbital regime filter -->
+<div class="govuk-form-group govuk-!-margin-bottom-2">
 <fieldset class="govuk-fieldset" aria-describedby="orbital-regime-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-Orbital regime
+Orbital regime/altitude range
 </legend>
 <div id="orbital-regime-hint" class="govuk-hint">
-Select all that apply.
+Select all that apply. Each regime/altitude range selected will also show satellites within a 50km buffer above and below the regime/altitude range.
 </div>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <!-- LEO option -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="regime-leo" name="regime" type="checkbox" value="LEO" aria-describedby="regime-leo-hint">
+<input
+class="govuk-checkboxes__input"
+id="regime-leo"
+name="regime"
+type="checkbox"
+value="LEO"
+aria-describedby="regime-leo-hint"
+data-aria-controls="conditional-regime-leo"
+>
 <label class="govuk-label govuk-checkboxes__label" for="regime-leo">
 Low Earth Orbit (LEO)
 </label>
-<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
-LEO satellites orbit at altitudes of 160km to 2,000m.
+<div id="regime-leo-hint" class="govuk-hint govuk-checkboxes__hint">
+LEO satellites orbit at altitudes of less than 2,000km.
+</div>
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-regime-leo">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="leo-conditional-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Select altitude range within LEO
+</legend>
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input leo-child" id="leo-opt-1" name="leoOptions" type="checkbox" value="opt1">
+<label class="govuk-label govuk-checkboxes__label" for="leo-opt-1">200km - 500km</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input leo-child" id="leo-opt-2" name="leoOptions" type="checkbox" value="opt2">
+<label class="govuk-label govuk-checkboxes__label" for="leo-opt-2">500km - 1,000km</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input leo-child" id="leo-opt-3" name="leoOptions" type="checkbox" value="opt3">
+<label class="govuk-label govuk-checkboxes__label" for="leo-opt-3">1,000km - 1,500km</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input leo-child" id="leo-opt-4" name="leoOptions" type="checkbox" value="opt4">
+<label class="govuk-label govuk-checkboxes__label" for="leo-opt-4">1,500 - 2,000km</label>
+</div>
+</div>
+</fieldset>
+</div>
 </div>
 </div>
 <!-- MEO option -->
@@ -264,7 +291,7 @@ LEO satellites orbit at altitudes of 160km to 2,000m.
 <label class="govuk-label govuk-checkboxes__label" for="regime-meo">
 Medium Earth Orbit (MEO)
 </label>
-<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
+<div id="regime-meo-hint" class="govuk-hint govuk-checkboxes__hint">
 MEO satellites orbit at altitudes of 2,000km to 35,786km.
 </div>
 </div>
@@ -278,72 +305,50 @@ Geostationary Earth Orbit (GEO)
 GEO satellites orbit at altitude of exactly 35,786 km.
 </div>
 </div>
+
 <!-- end checkboxes -->
-</div>
-</fieldset>
-</details>
-</div>
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes"> -->
+</fieldset> <!-- orbital regime -->
+</div> <!-- govuk-form-group govuk-!-margin-bottom-2" -->
+
+
 
 <!-- Operator  filter -->
 <div class="govuk-form-group govuk-!-margin-bottom-6">
-<details id="satellite-filters" class="govuk-details" data-module="govuk-details"> 
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">Filter by operator
-</span> 
-</summary>
 <fieldset class="govuk-fieldset" aria-describedby="operator-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 Operator
 </legend>
-<div id="orbital-regime-hint" class="govuk-hint">
-Select all that apply.
-</div>
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="operator-airbus" name="operator" type="checkbox" value="operator-airbus">
-<label class="govuk-label govuk-checkboxes__label" for="operator-airbus">Airbus</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="operator-avanti" name="operator" type="checkbox" value="operator-avanti">
-<label class="govuk-label govuk-checkboxes__label" for="operator-avanti">Avanti</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="operator-clydespace" name="operator" type="checkbox" value="operator-clydespace">
-<label class="govuk-label govuk-checkboxes__label" for="operator-clydespace">Clydespace</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="operator-inmarsat" name="operator" type="checkbox" value="operator-inmarsat">
-<label class="govuk-label govuk-checkboxes__label" for="operator-inmarsat">Inmarsat</label>
-</div>
-</div>
+<select class="govuk-select" id="operator" name="operator">
+    <option value="airbus" selected>Airbus</option>
+    <option value="avanti">Avanti</option>
+    <option value="inmarsat">Inmarsat</option>
+    <option value="oneweb">OneWeb</option>
+  </select>
 </fieldset>
-</details>
-</div>
+</div> <!-- govuk-form-group govuk-!-margin-bottom-6" -->
+
 
 <!-- clear filters -->
-<div class="govuk-grid-column-one-third">
 <p class="govuk-body govuk-!-margin-bottom-6">
 <a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
 </p>
 
-</div>
 
-</div> <!-- class="govuk-grid-row" --> 
-</div> <!-- class="govuk-!-margin-bottom-2"> -->
+
+
 
 <!-- Selection + results summary row -->
 <div class="sat-selection-bar">
-<p class="govuk-body govuk-!-margin-bottom-0">
+<p class="govuk-body govuk-!-margin-bottom-2">
 <strong>Showing:</strong> <span id="results-count">0</span>
 </p>
 
-<p class="govuk-body govuk-!-margin-bottom-0">
+<p class="govuk-body govuk-!-margin-bottom-2">
 <strong>Selected:</strong> <span id="selected-count">0</span>
 </p>
-</div> <!-- class="sat-selection-bar" -->
 
-<div class="sat-selection-bar">
-<div class="govuk-checkboxes govuk-!-margin-bottom-0" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes govuk-!-margin-bottom-6" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="select-all">
@@ -352,7 +357,7 @@ Select all results
 </div> <!-- class="govuk-checkboxes__item">-->
 </div> <!-- class="govuk-checkboxes govuk-!-margin-bottom-0" data-module="govuk-checkboxes" -->
 
-<p class="govuk-body govuk-!-margin-bottom-0">
+<p class="govuk-body govuk-!-margin-bottom-6">
 <a href="#" class="govuk-link" id="clear-selection">Clear selection</a>
 </p>
 </div> <!-- class="sat-selection-bar" -->
@@ -364,6 +369,7 @@ Select all results
 <col style="width: 10%;"> <!-- Object name -->
 <col style="width: 10%;">  <!-- NORAD -->
 <col style="width: 10%;">  <!-- Regime -->
+<col style="width: 10%;">  <!-- Altitude -->
 <col style="width: 10%;">  <!-- Operator -->
 <col style="width: 10%;"> <!-- Select -->
 </colgroup>
@@ -374,6 +380,7 @@ Select all results
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending">Object name</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">NORAD ID </th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Orbital regime</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Altitude</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Operator</th>
 <!-- Not sortable -->
 <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
@@ -386,6 +393,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Skynet 4C</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="27838">27838</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">35,786</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -403,6 +411,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Skynet 5A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="40420">40420</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">35,786</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -420,6 +429,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Skynet 6A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="46949">46949</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">35,786</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -437,6 +447,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Aurora-LEO 1</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55101">55101</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">1,000</td>
 <td class="govuk-table__cell govuk-body-s">Avanti</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -454,6 +465,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Aurora-LEO 2</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55102">55102</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">600</td>
 <td class="govuk-table__cell govuk-body-s">Avanti</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -471,6 +483,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Gallica-LEO 7</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="53317">53317</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">200</td>
 <td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -488,6 +501,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">RheinSat 3</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50991">50991</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">35,786</td>
 <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -505,6 +519,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">RheinSat 4</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50992">50992</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">1,500</td>
 <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -522,6 +537,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">PolarWatch 12</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="60120">60120</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">1,800</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -538,7 +554,8 @@ Select all results
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">OceanScan 5</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="61205">61205</td>
-<td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">MEO</td>
+<td class="govuk-table__cell govuk-body-s">2,500</td>
 <td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -561,176 +578,216 @@ Select all results
 </tbody>
 </table>
 
-
-<!-- reason for notifications -->
+<!-- select reasons for notifications -->
 <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="custom-reasons-hint">
+<fieldset class="govuk-fieldset" aria-describedby="reasons-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 Select reasons for notifications
 </legend>
 <p>We will send you notifications when any UK-licensed satellite activity is flagged for the reasons you have selected.
 </p>
-<div id="custom-reasons-hint" class="govuk-hint">
+<div id="reasons-hint" class="govuk-hint">
 Select all that apply.
 </div>
 
 
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<!-- select reasons for notifications: planned manoeuvres -->
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-pm" name="custom-reasons" type="checkbox" value="custom-reasons-pm"
-data-aria-controls="conditional-custom-reasons-pm">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm">
-Planned manoeuvre
-</label>
-</div>
-<!-- planned manoeuvre options - only opens if planned manoeuvre selected -->
-<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-custom-reasons-pm" >
-<div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-Optional: select which planned manoeuvre flags to receive
-</legend>
-<div id="custom-reasons-pm-hint" class="govuk-hint">
-To keep the default settings and receive all planned manoeuvre flags, leave all boxes ticked. If you wish to only receive certain planned manoeuvre flags, untick any flags which you do not wish to receive.
-<div class="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-pm-yes" name="custom-reasons-pm" type="checkbox" value="custom-reasons-pm-yes" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm-yes">Manoeuvre executed as planned</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-pm-no" name="custom-reasons-pm" type="checkbox" value="custom-reasons-pm-no" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-pm-no">Actual manoeuvre differed from plan</label>
-</div>
-</fieldset>
-</div>
-</div>
 <!-- select reasons for notifications: missing data -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-md" name="custom-reasons" type="checkbox" value="custom-reasons-md">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-md">
+<input class="govuk-checkboxes__input" id="reasons-md" name="reasons" type="checkbox" value="reasons-md">
+<label class="govuk-label govuk-checkboxes__label" for="reasons-md">
 Missing data
 </label>
 </div>
 
 <!-- select reasons for notifications: unexpected position change -->
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-upc" name="custom-reasons" type="checkbox" value="custom-reasons-upc"
-data-aria-controls="conditional-custom-reasons-upc">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc">
+<input
+class="govuk-checkboxes__input"
+id="reasons-upc"
+name="reasons"
+type="checkbox"
+value="upc"
+aria-describedby="reasons-upc-hint"
+data-aria-controls="conditional-reasons-upc"
+>
+<label class="govuk-label govuk-checkboxes__label" for="reasons-upc">
 Unexpected position change
 </label>
 </div>
-<!-- unexpected position change criteria - only opens if unexpected position change selected -->
-<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-custom-reasons-upc" >
+
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-reasons-upc">
 <div class="govuk-form-group">
-<fieldset class="govuk-fieldset">
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-Optional: select which criteria should trigger a position change notification
+<fieldset class="govuk-fieldset" aria-describedby="upc-conditional-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Select which unexpected position change notifications to receive
 </legend>
-<div id="custom-reasons-upc-hint" class="govuk-hint">
-NSpOC's orbital analysts decide when to flag a position change. To keep the default settings and receive all position change flags, leave all boxes ticked. If you wish to only receive certain position change flags, untick any criteria which should not apply, and you will be notified only if a position change breaches NSpoC's thresholds for any of the criteria you left ticked.
+<div id="upc-conditional-hint" class="govuk-hint">
+To keep the default settings and receive all planned manoeuvre notifications, leave all boxes ticked. 
+If you wish to only receive certain planned manoeuvre notifications, tick only the notifications you wish to receive.
 </div>
-<div class="govuk-checkboxes">
+<div class="govuk-checkboxes govuk-checkboxes--small">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-upc-fsma" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fsma" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fsma">Fixed semi-major axis (SMA)</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-upc-smac" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-smac" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-smac">Semi-major axis (SMA) change</label>
+<input class="govuk-checkboxes__input upc-child" id="upc-fsma" name="upc-variables" type="checkbox" value="upc-fsma">
+<label class="govuk-label govuk-checkboxes__label" for="upc-fsma">Fixed semi-major axis</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-upc-smacr" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-smacr" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-smacr">Semi-major axis (SMA) change rate</label>
+<input class="govuk-checkboxes__input upc-child" id="upc-smac" name="upc-variables" type="checkbox" value="upc-smac">
+<label class="govuk-label govuk-checkboxes__label" for="upc-smac">Semi-major axis change</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-upc-fi" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fi" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fi">Fixed inclination</label>
+<input class="govuk-checkboxes__input upc-child" id="upc-smacr" name="upc-variables" type="checkbox" value="upc-smacr">
+<label class="govuk-label govuk-checkboxes__label" for="upc-smacr">Semi-major axis change rate</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-upc-ic" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-ic" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-ic">Inclination change</label>
+<input class="govuk-checkboxes__input upc-child" id="upc-fi" name="upc-variables" type="checkbox" value="upc-fi">
+<label class="govuk-label govuk-checkboxes__label" for="upc-fi">Fixed inclination</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-upc-fl" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-fl" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-fl">Inclination fixed longitude</label>
+<input class="govuk-checkboxes__input upc-child" id="upc-ic" name="upc-variables" type="checkbox" value="upc-ic">
+<label class="govuk-label govuk-checkboxes__label" for="upc-ic">Inclination change</label>
 </div>
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-reasons-upc-ldr" name="custom-reasons-upc" type="checkbox" value="custom-reasons-upc-ldr" checked="true">
-<label class="govuk-label govuk-checkboxes__label" for="custom-reasons-upc-ldr">Longitude drift rate</label>
+<input class="govuk-checkboxes__input upc-child" id="upc-fl" name="upc-variables" type="checkbox" value="upc-fl">
+<label class="govuk-label govuk-checkboxes__label" for="upc-fl">Fixed longitude</label>
 </div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input upc-child" id="upc-ldr" name="upc-variables" type="checkbox" value="upc-ldr">
+<label class="govuk-label govuk-checkboxes__label" for="upc-ldr">Longitude drift rate</label>
 </div>
-
 </fieldset>
 </div>
 </div>
-
+</div> 
 </div>
 </fieldset>
 </div>
 
-
-<!-- Set notification frequency -->
+<!-- set email frequency -->
 <div class="govuk-!-margin-top-6">
-</div><div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="custom-frequency-hint">
+</div>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="frequency-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
-Set notification frequency
+Set email frequency
 </h1>
 </legend>
-<div id="custom-frequency-hint" class="govuk-hint">
+<div id="frequency-hint" class="govuk-hint">
 Select one option.
 </div>
 <div class="govuk-radios" data-module="govuk-radios">
+<!-- asap option -->
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="custom-frequency-asap" name="custom-frequency" type="radio" value="custom-frequency-asap">
-<label class="govuk-label govuk-radios__label" for="custom-frequency-asap">
+<input class="govuk-radios__input" id="frequency-asap" name="frequency" type="radio" value="asap">
+<label class="govuk-label govuk-radios__label" for="frequency-asap">
 As soon as possible
 </label>
-<div id="custom-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
-You'll receive an email as soon as relevant notifications are released from MSH.
+<div id="frequency-asap-hint" class="govuk-hint govuk-radios__hint">
+Each relevant notification will be sent as soon as the data is processed by MSH.
 </div>
 </div>
+<!-- every 2h option -->
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="custom-frequency-2" name="custom-frequency" type="radio" value="custom-frequency-2">
-<label class="govuk-label govuk-radios__label" for="custom-frequency-2">
-Every 2 hours
+<input class="govuk-radios__input" id="frequency-2h" name="frequency" type="radio" value="2h">
+<label class="govuk-label govuk-radios__label" for="frequency-2h">
+Every 2 hours 
 </label>
-<div id="custom-frequency-2-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications from the past 2 hours will be collated and sent in a single email.
+<div id="frequency-2h-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past 2 hours will be collated and sent in a single email every two hours (sent 24/7, starting at midnight UTC*).
 </div>
 </div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="custom-frequency-12" name="custom-frequency" type="radio" value="custom-frequency-12">
-<label class="govuk-label govuk-radios__label" for="custom-frequency-12">
-Every 12 hours
+<!-- daily option -->
+<div class="govuk-radios__item"> 
+<input class="govuk-radios__input" id="frequency-daily" name="frequency" type="radio" value="daily">
+<label class="govuk-label govuk-radios__label" for="frequency-daily">
+Every day
 </label>
+<div id="frequency-daily-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past day (24 hours) will be collated and sent in a single email at 12pm UTC* every day.
+</div>
+</div>
+<!-- selected days option -->
+<div class="govuk-radios__item"> 
+<input class="govuk-radios__input" id="frequency-selected-days" name="frequency" type="radio" value="selected-days" data-aria-controls="conditional-frequency-selected-days">
+<label class="govuk-label govuk-radios__label" for="frequency-selected-days">
+Selected days
 </label>
-<div id="custom-frequency-12-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications from the past 12 hours will be collated and sent in a single email.
+<div id="frequency-selected-days-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications since the last email will be collated and sent in a single email at 12pm UTC* every day selected.
 </div>
 </div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="custom-frequency-24" name="custom-frequency" type="radio" value="custom-frequency-24">
-<label class="govuk-label govuk-radios__label" for="custom-frequency-24">
-Every 24 hours 
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-frequency-selected-days">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="days-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Select days
+</legend>
+<!-- checkboxes below -->
+<div class="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-monday" name="days" type="checkbox" value="monday">
+<label class="govuk-label govuk-checkboxes__label" for="days-monday">
+Monday
 </label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-tuesday" name="days" type="checkbox" value="tuesday">
+<label class="govuk-label govuk-checkboxes__label" for="days-tuesday">
+Tuesday
 </label>
-<div id="custom-frequency-24-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications  from the past 24 hours will be collated and sent in a single email.
-</div>
-</div>
-</div>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-wednesday" name="days" type="checkbox" value="wednesday">
+<label class="govuk-label govuk-checkboxes__label" for="days-wednesday">
+Wednesday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-thursday" name="days" type="checkbox" value="thursday">
+<label class="govuk-label govuk-checkboxes__label" for="days-thursday">
+Thursday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-friday" name="days" type="checkbox" value="friday">
+<label class="govuk-label govuk-checkboxes__label" for="days-friday">
+Friday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-saturday" name="days" type="checkbox" value="saturday">
+<label class="govuk-label govuk-checkboxes__label" for="days-saturday">
+Saturday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-sunday" name="days" type="checkbox" value="sunday">
+<label class="govuk-label govuk-checkboxes__label" for="days-sunday">
+Sunday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!--class="govuk-checkboxes"-->
+<!-- checkboxes above -->
+</fieldset>
+</div> <!--class="govuk-form-group"-->
+</div> <!-- class="govuk-radios__conditional govuk-radios__conditional--hidden"-->
+
+
 </fieldset>
 </div>
+<p id="UTC-paragraph" class="govuk-hint">
+* Coordinated Universal Time (UTC) is 1 hour behind British Summer Time (BST) and the same as Greenwich Mean Time (GMT).
+</p>
+</div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
 
 
 <a class="govuk-button govuk-!-margin-top-4"
 data-module="govuk-button"
-href="/account/regulator/notification-settings-check-custom">
-Continue
+href="/account/regulator/notification-settings">
+Create rule
 </a>
 
 </div>
@@ -905,6 +962,34 @@ table.classList.toggle('inactive', !checkbox.checked);
 }
 });
 });
+
+// automatically check altitude checkboxes when LEO checked
+(function () {
+const parent = document.getElementById('regime-leo');
+const conditionalId = parent?.getAttribute('data-aria-controls');
+const conditional = conditionalId ? document.getElementById(conditionalId) : null;
+
+if (!parent || !conditional) return;
+
+const childCheckboxes = conditional.querySelectorAll('input[type="checkbox"]');
+
+function syncConditional() {
+if (parent.checked) {
+// when opening, auto-check all conditional checkboxes
+childCheckboxes.forEach(cb => { cb.checked = true; });
+} else {
+// optional: when closing, uncheck them again
+childCheckboxes.forEach(cb => { cb.checked = false; });
+}
+}
+
+// Run on load in case the parent is pre-checked (e.g. returning to the page)
+syncConditional();
+
+// Run when user changes parent checkbox
+parent.addEventListener('change', syncConditional);
+})();
+
 </script>
 
 {% endblock %}
