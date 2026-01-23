@@ -228,11 +228,12 @@ Search
 </div> <!-- class="govuk-grid-row govuk-!-margin-bottom-1" -->
 </div> <!-- class="govuk-form-group sat-toolbar" -->
 
-<!-- Filters   clear filters -->
-<div class="govuk-!-margin-bottom-2">
+<!-- Filters -->
+
 <div class="govuk-grid-row">
 
-  <!-- orbital regime filter -->
+<!-- orbital regime filter -->
+<div class="govuk-grid-column-one-half">
 <div class="govuk-form-group govuk-!-margin-bottom-6">
 <fieldset class="govuk-fieldset" aria-describedby="orbital-regime-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -243,6 +244,52 @@ Select all that apply.
 </div>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <!-- LEO option -->
+<div class="govuk-checkboxes__item">
+<input
+class="govuk-checkboxes__input"
+id="regime-leo"
+name="regime"
+type="checkbox"
+value="LEO"
+aria-describedby="regime-leo-hint"
+data-aria-controls="conditional-regime-leo"
+>
+<label class="govuk-label govuk-checkboxes__label" for="regime-leo">
+Low Earth Orbit (LEO)
+</label>
+<div id="regime-leo-hint" class="govuk-hint govuk-checkboxes__hint">
+LEO satellites orbit at altitudes of less than 2,000km.
+</div>
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-regime-leo">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="leo-conditional-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Select altitude range within LEO
+</legend>
+<div class="govuk-checkboxes govuk-checkboxes--small">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input leo-child" id="leo-opt-1" name="leoOptions" type="checkbox" value="opt1">
+<label class="govuk-label govuk-checkboxes__label" for="leo-opt-1">200km - 500km</label>
+</div>
+
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input leo-child" id="leo-opt-2" name="leoOptions" type="checkbox" value="opt2">
+<label class="govuk-label govuk-checkboxes__label" for="leo-opt-2">500km - 1,000km</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input leo-child" id="leo-opt-3" name="leoOptions" type="checkbox" value="opt3">
+<label class="govuk-label govuk-checkboxes__label" for="leo-opt-3">1,000km - 1,500km</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input leo-child" id="leo-opt-4" name="leoOptions" type="checkbox" value="opt4">
+<label class="govuk-label govuk-checkboxes__label" for="leo-opt-4">1,500 - 2,000km</label>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+
 
 <!-- MEO option -->
 <div class="govuk-checkboxes__item">
@@ -250,7 +297,7 @@ Select all that apply.
 <label class="govuk-label govuk-checkboxes__label" for="regime-meo">
 Medium Earth Orbit (MEO)
 </label>
-<div id="regime-geo-hint" class="govuk-hint govuk-checkboxes__hint">
+<div id="regime-meo-hint" class="govuk-hint govuk-checkboxes__hint">
 MEO satellites orbit at altitudes of 2,000km to 35,786km.
 </div>
 </div>
@@ -264,51 +311,45 @@ Geostationary Earth Orbit (GEO)
 GEO satellites orbit at altitude of exactly 35,786 km.
 </div>
 </div>
+
 <!-- end checkboxes -->
-</div>
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes"> -->
 </fieldset>
-</div>
+</div> <!-- govuk-form-group govuk-!-margin-bottom-6" -->
+</div> <!-- class="govuk-grid-column-one-half"> -->
+
 
 <!-- Operator  filter -->
+<div class="govuk-grid-column-one-half">
 <div class="govuk-form-group govuk-!-margin-bottom-6">
 <fieldset class="govuk-fieldset" aria-describedby="operator-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
 Operator
 </legend>
-<div id="orbital-regime-hint" class="govuk-hint">
-Select all that apply.
-</div>
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="operator-airbus" name="operator" type="checkbox" value="operator-airbus">
-<label class="govuk-label govuk-checkboxes__label" for="operator-airbus">Airbus</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="operator-avanti" name="operator" type="checkbox" value="operator-avanti">
-<label class="govuk-label govuk-checkboxes__label" for="operator-avanti">Avanti</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="operator-clydespace" name="operator" type="checkbox" value="operator-clydespace">
-<label class="govuk-label govuk-checkboxes__label" for="operator-clydespace">Clydespace</label>
-</div>
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="operator-inmarsat" name="operator" type="checkbox" value="operator-inmarsat">
-<label class="govuk-label govuk-checkboxes__label" for="operator-inmarsat">Inmarsat</label>
-</div>
-</div>
+<select class="govuk-select" id="operator" name="operator">
+    <option value="airbus" selected>Airbus</option>
+    <option value="avanti">Avanti</option>
+    <option value="inmarsat">Inmarsat</option>
+    <option value="oneweb">OneWeb</option>
+  </select>
 </fieldset>
-</div>
+</div> <!-- govuk-form-group govuk-!-margin-bottom-6" -->
+</div> <!-- class="govuk-grid-column-one-half"> 
+
 
 <!-- clear filters -->
+</div> <!-- class=govuk-grid-row-->
+
+<!-- clear filters -->
+<div class="govuk-grid-row"> 
 <div class="govuk-grid-column-one-third">
 <p class="govuk-body govuk-!-margin-bottom-6">
 <a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
 </p>
-
-</div>
-
+</div> <!-- class="govuk-!-margin-bottom-6"> -->
+</div> <!-- class="govuk-grid-column-one-third" --> 
 </div> <!-- class="govuk-grid-row" --> 
-</div> <!-- class="govuk-!-margin-bottom-2"> -->
+
 
 <!-- Selection + results summary row -->
 <div class="sat-selection-bar">
@@ -343,6 +384,7 @@ Select all results
 <col style="width: 10%;"> <!-- Object name -->
 <col style="width: 10%;">  <!-- NORAD -->
 <col style="width: 10%;">  <!-- Regime -->
+<col style="width: 10%;">  <!-- Altitude -->
 <col style="width: 10%;">  <!-- Operator -->
 <col style="width: 10%;"> <!-- Select -->
 </colgroup>
@@ -353,6 +395,7 @@ Select all results
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending">Object name</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">NORAD ID </th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Orbital regime</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Altitude</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Operator</th>
 <!-- Not sortable -->
 <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
@@ -365,6 +408,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Skynet 4C</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="27838">27838</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">35,786</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -382,6 +426,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Skynet 5A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="40420">40420</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">35,786</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -399,6 +444,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Skynet 6A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="46949">46949</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">35,786</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -416,6 +462,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Aurora-LEO 1</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55101">55101</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">1,000</td>
 <td class="govuk-table__cell govuk-body-s">Avanti</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -433,6 +480,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Aurora-LEO 2</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55102">55102</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">600</td>
 <td class="govuk-table__cell govuk-body-s">Avanti</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -450,6 +498,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">Gallica-LEO 7</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="53317">53317</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">200</td>
 <td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -467,6 +516,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">RheinSat 3</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50991">50991</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
+<td class="govuk-table__cell govuk-body-s">35,786</td>
 <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -484,6 +534,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">RheinSat 4</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50992">50992</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">1,500</td>
 <td class="govuk-table__cell govuk-body-s">Inmarsat</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -501,6 +552,7 @@ Select all results
 <td class="govuk-table__cell govuk-body-s">PolarWatch 12</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="60120">60120</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">1,800</td>
 <td class="govuk-table__cell govuk-body-s">Airbus</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -517,7 +569,8 @@ Select all results
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">OceanScan 5</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="61205">61205</td>
-<td class="govuk-table__cell govuk-body-s">LEO</td>
+<td class="govuk-table__cell govuk-body-s">MEO</td>
+<td class="govuk-table__cell govuk-body-s">2,500</td>
 <td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -884,6 +937,34 @@ table.classList.toggle('inactive', !checkbox.checked);
 }
 });
 });
+
+// automatically check altitude checkboxes when LEO checked
+(function () {
+const parent = document.getElementById('regime-leo');
+const conditionalId = parent?.getAttribute('data-aria-controls');
+const conditional = conditionalId ? document.getElementById(conditionalId) : null;
+
+if (!parent || !conditional) return;
+
+const childCheckboxes = conditional.querySelectorAll('input[type="checkbox"]');
+
+function syncConditional() {
+if (parent.checked) {
+// when opening, auto-check all conditional checkboxes
+childCheckboxes.forEach(cb => { cb.checked = true; });
+} else {
+// optional: when closing, uncheck them again
+childCheckboxes.forEach(cb => { cb.checked = false; });
+}
+}
+
+// Run on load in case the parent is pre-checked (e.g. returning to the page)
+syncConditional();
+
+// Run when user changes parent checkbox
+parent.addEventListener('change', syncConditional);
+})();
+
 </script>
 
 {% endblock %}
