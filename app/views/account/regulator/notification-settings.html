@@ -157,12 +157,10 @@ If you wish to only receive certain planned manoeuvre notifications, tick only t
 <input class="govuk-checkboxes__input upc-child" id="upc-ldr" name="upc-variables" type="checkbox" value="upc-ldr">
 <label class="govuk-label govuk-checkboxes__label" for="upc-ldr">Longitude drift rate</label>
 </div>
-
-
 </fieldset>
 </div>
 </div>
-</div>
+</div> <!--asdf-->
 
 
 </div>
@@ -184,8 +182,9 @@ Set email frequency
 Select one option.
 </div>
 <div class="govuk-radios" data-module="govuk-radios">
+<!-- asap option -->
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-asap" name="universal-frequency" type="radio" value="universal-frequency-asap">
+<input class="govuk-radios__input" id="universal-frequency-asap" name="universal-frequency" type="radio" value="asap">
 <label class="govuk-label govuk-radios__label" for="universal-frequency-asap">
 As soon as possible
 </label>
@@ -193,42 +192,93 @@ As soon as possible
 Each relevant notification will be sent as soon as the data is processed by MSH.
 </div>
 </div>
+<!-- every 2h option -->
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-2" name="universal-frequency" type="radio" value="universal-frequency-2">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-2">
+<input class="govuk-radios__input" id="universal-frequency-2h" name="universal-frequency" type="radio" value="2h">
+<label class="govuk-label govuk-radios__label" for="universal-frequency-2h">
 Every 2 hours 
 </label>
-<div id="universal-frequency-2-hint" class="govuk-hint govuk-radios__hint">
+<div id="universal-frequency-2h-hint" class="govuk-hint govuk-radios__hint">
 Relevant notifications from the past 2 hours will be collated and sent in a single email every two hours (sent 24/7, starting at midnight UTC*).
 </div>
 </div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-daily" name="universal-frequency" type="radio" value="universal-frequency-daily">
+<!-- daily option -->
+<div class="govuk-radios__item"> 
+<input class="govuk-radios__input" id="universal-frequency-daily" name="universal-frequency" type="radio" value="daily">
 <label class="govuk-label govuk-radios__label" for="universal-frequency-daily">
 Every day
 </label>
-<div id="universal-frequency-2-hint" class="govuk-hint govuk-radios__hint">
+<div id="universal-frequency-daily-hint" class="govuk-hint govuk-radios__hint">
 Relevant notifications from the past day (24 hours) will be collated and sent in a single email at 12pm UTC* every day.
 </div>
 </div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-weekly" name="universal-frequency" type="radio" value="universal-frequency-weekly">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-weekly">
-Every Monday
+<!-- selected days option -->
+<div class="govuk-radios__item"> 
+<input class="govuk-radios__input" id="universal-frequency-selected-days" name="universal-frequency" type="radio" value="selected-days" data-aria-controls="conditional-universal-frequency-selected-days">
+<label class="govuk-label govuk-radios__label" for="universal-frequency-selected-days">
+Selected days
 </label>
-<div id="universal-frequency-weekly-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications from the past week will be collated and sent in a single email at 12pm UTC* every Monday.
+<div id="universal-frequency-selected-days-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications since the last email will be collated and sent in a single email at 12pm UTC* every day selected.
 </div>
 </div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-weekly" name="universal-frequency" type="radio" value="universal-frequency-weekly">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-weekly">
-Every Friday
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-universal-frequency-selected-days">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="days-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Select days
+</legend>
+<!-- checkboxes below -->
+<div class="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-monday" name="days" type="checkbox" value="monday">
+<label class="govuk-label govuk-checkboxes__label" for="days-monday">
+Monday
 </label>
-<div id="universal-frequency-weekly-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications from the past week will be collated and sent in a single email at 12pm UTC* every Friday.
-</div>
-</div>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-tuesday" name="days" type="checkbox" value="tuesday">
+<label class="govuk-label govuk-checkboxes__label" for="days-tuesday">
+Tuesday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-wednesday" name="days" type="checkbox" value="wednesday">
+<label class="govuk-label govuk-checkboxes__label" for="days-wednesday">
+Wednesday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-thursday" name="days" type="checkbox" value="thursday">
+<label class="govuk-label govuk-checkboxes__label" for="days-thursday">
+Thursday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-friday" name="days" type="checkbox" value="friday">
+<label class="govuk-label govuk-checkboxes__label" for="days-friday">
+Friday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-saturday" name="days" type="checkbox" value="saturday">
+<label class="govuk-label govuk-checkboxes__label" for="days-saturday">
+Saturday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-sunday" name="days" type="checkbox" value="sunday">
+<label class="govuk-label govuk-checkboxes__label" for="days-sunday">
+Sunday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!--class="govuk-checkboxes"-->
+<!-- checkboxes above -->
+</fieldset>
+</div> <!--class="govuk-form-group"-->
+</div> <!-- class="govuk-radios__conditional govuk-radios__conditional--hidden"-->
+
+
 </fieldset>
 </div>
 <p id="UTC-paragraph" class="govuk-hint">
@@ -236,6 +286,10 @@ Relevant notifications from the past week will be collated and sent in a single 
 </p>
 </div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content" -->
 </div> <!-- class="govuk-accordion__section" -->
+
+<!-- select frequency take 2 -->
+
+
 
 <!-- Set custom notifications -->
 <div class="govuk-accordion__section">
