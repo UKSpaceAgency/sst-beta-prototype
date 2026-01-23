@@ -783,12 +783,57 @@ Sunday
 </div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content" -->
 </div> <!-- class="govuk-accordion__section" -->
 
+<div class="govuk-!-margin-top-4">
+  <a class="govuk-button govuk-!-margin-bottom-3"
+     data-module="govuk-button"
+     href="/account/regulator/notification-settings">
+    Save edits to custom rule
+  </a>
+</div>
 
-<a class="govuk-button govuk-!-margin-top-4"
-data-module="govuk-button"
-href="/account/regulator/notification-settings">
-Save edits
-</a>
+<button
+  type="button"
+  class="govuk-button govuk-button--warning"
+  data-module="govuk-button"
+  id="delete-button"
+>
+  Delete {{ itemName }}
+</button>
+
+
+
+<!-- are you sure you want to delete? -->
+<div id="delete-confirm" class="govuk-!-margin-top-3" hidden>
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Are you sure you want to delete{{ itemName }}?
+    </strong>
+  </div>
+
+  <p class="govuk-body">
+    This will delete this custom rule from your settings and you will no longer receive notifications under this rule. {{ itemName }} You will not be able to undo this action.
+  </p>
+
+  <form method="post" action="/delete-item">
+    <input type="hidden" name="itemName" value="{{ itemName }}">
+
+    <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+      Yes, delete {{ itemName }}
+    </button>
+
+    <button
+      type="button"
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button"
+      id="cancel-delete"
+    >
+      Cancel
+    </button>
+  </form>
+</div>
+
 
 </div>
 </div>
@@ -990,6 +1035,28 @@ syncConditional();
 parent.addEventListener('change', syncConditional);
 })();
 
+// ask are you sure you want to delete?
+  const deleteBtn = document.getElementById('delete-button')
+  const confirmBox = document.getElementById('delete-confirm')
+  const cancelLink = document.getElementById('cancel-delete')
+
+  if (deleteBtn && confirmBox) {
+    deleteBtn.addEventListener('click', function (e) {
+      e.preventDefault()
+      confirmBox.hidden = false
+      confirmBox.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    })
+  }
+
+  if (cancelLink && confirmBox) {
+    cancelLink.addEventListener('click', function (e) {
+      e.preventDefault()
+      confirmBox.hidden = true
+    })
+  }
+
+
 </script>
+
 
 {% endblock %}
