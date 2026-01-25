@@ -797,7 +797,7 @@ Sunday
   data-module="govuk-button"
   id="delete-button"
 >
-  Delete {{ itemName }}
+  Delete custom rule {{ itemName }}
 </button>
 
 
@@ -819,18 +819,21 @@ Sunday
   <form method="post" action="/delete-item">
     <input type="hidden" name="itemName" value="{{ itemName }}">
 
-    <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-      Yes, delete {{ itemName }}
-    </button>
+<div class="govuk-button-group">
+  <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+    Yes, delete {{ itemName }}
+  </button>
 
-    <button
-      type="button"
-      class="govuk-button govuk-button--secondary"
-      data-module="govuk-button"
-      id="cancel-delete"
-    >
-      Cancel
-    </button>
+  <button
+    type="button"
+    class="govuk-button govuk-button--secondary govuk-!-margin-left-4"
+    data-module="govuk-button"
+    id="cancel-delete"
+  >
+    Cancel
+  </button>
+</div>
+
   </form>
 </div>
 
