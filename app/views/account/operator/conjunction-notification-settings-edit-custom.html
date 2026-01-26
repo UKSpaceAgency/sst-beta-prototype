@@ -148,7 +148,7 @@ margin-bottom: 10px;
 <a class="govuk-breadcrumbs__link" href="/account/operator/conjunction-notification-settings">Notification settings</a>
 </li>
 <li class="govuk-breadcrumbs__list-item">
-<span class="govuk-breadcrumbs__link">Add custom rule</span>
+<span class="govuk-breadcrumbs__link">Edit custom rule</span>
 </li>
 </ol>
 </div>
@@ -159,7 +159,7 @@ margin-bottom: 10px;
 <div class="govuk-grid-column-full">
 
 <!-- title -->
-<h1 class="govuk-heading-xl">Add custom rule</h1>
+<h1 class="govuk-heading-xl">Edit custom rule</h1>
 
 <!-- Turn page into a form (where submission leads to a 'check settings' page) -->
 <form method="post" action="/account/operator/conjunction-notification-settings">
@@ -231,6 +231,11 @@ Search
 
 <!-- Filters (collapsed) + clear filters -->
 <div class="govuk-!-margin-bottom-2">
+  <details id="satellite-filters" class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">Filter satellites</span>
+    </summary>
+
     <div class="govuk-details__text">
       <div class="govuk-grid-row">
 
@@ -278,6 +283,7 @@ Search
         <a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
       </p>
     </div>
+  </details>
 </div>
 
 
@@ -512,7 +518,6 @@ NORAD ID
 </tr>
 </tbody>
 </table>
-
 
 <!-- Thresholds -->
 <h2 class="govuk-heading-l">Set thresholds for notification
@@ -808,8 +813,8 @@ Add exceptions (optional)
 If any satellite selected above is in a conjunction event with any 'exception' satellite, you will <strong>not</strong> receive notifications according to the custom settings above. Instead, you will only receive notifications about the conjunction event according to your universal settings.
 </p>
 
-<div id="satellite-search-hint" class="govuk-hint">
-Search and filter the list, then select satellites for exception.
+<div id="exception-hint" class="govuk-hint">
+Search and filter the list, then select the satellites you want to include.
 </div> <!-- id="satellite-search-hint" class="govuk-hint" -->
 
 <!-- Toolbar: Search row -->
@@ -838,6 +843,7 @@ Search
 </div> <!-- class="govuk-grid-row govuk-!-margin-bottom-1" -->
 </div> <!-- class="govuk-form-group sat-toolbar" -->
 
+<!-- Filters (collapsed) + clear filters -->
 <div class="govuk-!-margin-bottom-2">
   <details id="satellite-filters" class="govuk-details" data-module="govuk-details">
     <summary class="govuk-details__summary">
@@ -1127,17 +1133,69 @@ NORAD ID
 </tbody>
 </table>
 
-<a class="govuk-button govuk-!-margin-top-4"
+
+<div class="govuk-!-margin-top-4">
+<a class="govuk-button govuk-!-margin-bottom-3"
 data-module="govuk-button"
-href="/account/operator/conjunction-notification-settings">
-Continue
+href="/account/regulator/notification-settings">
+Save edits
 </a>
+</div>
+
+<button
+type="button"
+class="govuk-button govuk-button--warning"
+data-module="govuk-button"
+id="delete-button"
+>
+Delete custom rule {{ itemName }}
+</button>
+
+
+
+<!-- are you sure you want to delete? -->
+<div id="delete-confirm" class="govuk-!-margin-top-3" hidden>
+<div class="govuk-warning-text">
+<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+<strong class="govuk-warning-text__text">
+<span class="govuk-visually-hidden">Warning</span>
+Are you sure you want to delete{{ itemName }}?
+</strong>
+</div>
+
+<p class="govuk-body">
+This will delete this custom rule from your settings and you will no longer receive notifications under this rule. {{ itemName }} You will not be able to undo this action.
+</p>
+
+<form method="post" action="/delete-item">
+<input type="hidden" name="itemName" value="{{ itemName }}">
+
+<div class="govuk-button-group">
+<button class="govuk-button govuk-button--warning" data-module="govuk-button">
+Yes, delete {{ itemName }}
+</button>
+
+<button
+type="button"
+class="govuk-button govuk-button--secondary govuk-!-margin-left-4"
+data-module="govuk-button"
+id="cancel-delete"
+>
+Cancel
+</button>
+</div>
+
+</form>
+</div>
+
 
 </div>
-</div>
+</div> <!-- class="govuk-grid-column-full"> -->
+</div> <!-- class="govuk-grid-row"> -->
 </main>
 </div>
 <script>
+
 document.addEventListener("DOMContentLoaded", () => {
 const table = document.getElementById("satellite-table");
 if (!table) return;
@@ -1305,6 +1363,27 @@ table.classList.toggle('inactive', !checkbox.checked);
 }
 });
 });
+
+// ask are you sure you want to delete?
+  const deleteBtn = document.getElementById('delete-button')
+  const confirmBox = document.getElementById('delete-confirm')
+  const cancelLink = document.getElementById('cancel-delete')
+
+  if (deleteBtn && confirmBox) {
+    deleteBtn.addEventListener('click', function (e) {
+      e.preventDefault()
+      confirmBox.hidden = false
+      confirmBox.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    })
+  }
+
+  if (cancelLink && confirmBox) {
+    cancelLink.addEventListener('click', function (e) {
+      e.preventDefault()
+      confirmBox.hidden = true
+    })
+  }
+
 </script>
 
 {% endblock %}

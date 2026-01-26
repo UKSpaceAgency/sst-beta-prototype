@@ -52,19 +52,17 @@ Conjunction event notification settings
 
 <!-- Page intro -->
 <p class="govuk-body">
-This page allows you to adjust your notification settings for conjunction events involving your satellites. 
+This page allows you to adjust your notification settings for satellite activity. 
 </p>
 <p class="govuk-body">
-You can create universal settings which will apply to all satellites. 
+You can create a notification rule which applies to all satellites operated by your organisation. You can also create additional custom rules which will only apply to selected satellites.
 </p>
 <p class="govuk-body">
-You can also create custom settings which will only apply to selected satellites. For those selected satellites, you custom settings will <strong>not</strong> cancel out your universal settings. You will receive both sets of notifications.
+You will receive separate emails for each rule.
 </p>
 <p class="govuk-body">
-We therefore recommend that your universal settings should be <strong>less</strong> inclusive than your custom settings.
+If you create additional custom rules, this will not cancel out the rule applying to all satellites operated by your organisation. You should consider how many notifications you wish to receive.
 </p>
-
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 <!-- Universal notifications -->
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -72,12 +70,15 @@ We therefore recommend that your universal settings should be <strong>less</stro
 <div class="govuk-accordion__section-header">
 <h1 class="govuk-accordion__section-heading">
 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-Universal notification settings
+All your satellites
 </span>
 </h1>
 </div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-<h2 class="govuk-heading-l">Set universal thresholds
+<p>
+This rule will generate notifications for all satellites operated by your organisation, so you should consider how many notifications you wish to receive.
+</p>
+<h2 class="govuk-heading-l">Set thresholds for notification
 </h2>
 <p class="govuk-body">
 We will send you notifications when a conjunction event crosses <strong>all</strong> of the thresholds you have set. You do not have to specify thresholds for all criteria.
@@ -244,58 +245,124 @@ An updated conjunction event no longer meets your thresholds
 
 <!-- How frequent should notifications be? -->
 <div class="govuk-!-margin-top-6"> </div>
+
+<!-- set email frequency -->
+<div class="govuk-!-margin-top-6">
+</div>
 <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="universal-frequency-hint">
+<fieldset class="govuk-fieldset" aria-describedby="frequency-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
-Set notification frequency
+Set email frequency
 </h1>
 </legend>
-<div id="universal-frequency-hint" class="govuk-hint">
+<div id="frequency-hint" class="govuk-hint">
 Select one option.
 </div>
 <div class="govuk-radios" data-module="govuk-radios">
+<!-- asap option -->
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-asap" name="universal-frequency" type="radio" value="universal-frequency-asap">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-asap">
+<input class="govuk-radios__input" id="frequency-asap" name="frequency" type="radio" value="asap">
+<label class="govuk-label govuk-radios__label" for="frequency-asap">
 As soon as possible
 </label>
-<div id="universal-frequency-asap-hint" class="govuk-hint govuk-radios__hint">
-You'll receive an email as soon as relevant notifications are released from MSH.
+<div id="frequency-asap-hint" class="govuk-hint govuk-radios__hint">
+Each relevant notification will be sent as soon as the data is processed by MSH.
 </div>
 </div>
+<!-- every 2h option -->
 <div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-2" name="universal-frequency" type="radio" value="universal-frequency-2">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-2">
-Every 2 hours
+<input class="govuk-radios__input" id="frequency-2h" name="frequency" type="radio" value="2h">
+<label class="govuk-label govuk-radios__label" for="frequency-2h">
+Every 2 hours 
 </label>
-<div id="universal-frequency-2-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications from the past 2 hours will be collated and sent in a single email.
+<div id="frequency-2h-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past 2 hours will be collated and sent in a single email every two hours (sent 24/7, starting at midnight UTC*).
 </div>
 </div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-12" name="universal-frequency" type="radio" value="universal-frequency-12">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-12">
-Every 12 hours
+<!-- daily option -->
+<div class="govuk-radios__item"> 
+<input class="govuk-radios__input" id="frequency-daily" name="frequency" type="radio" value="daily">
+<label class="govuk-label govuk-radios__label" for="frequency-daily">
+Every day
 </label>
+<div id="frequency-daily-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications from the past day (24 hours) will be collated and sent in a single email at 12pm UTC* every day.
+</div>
+</div>
+<!-- selected days option -->
+<div class="govuk-radios__item"> 
+<input class="govuk-radios__input" id="frequency-selected-days" name="frequency" type="radio" value="selected-days" data-aria-controls="conditional-frequency-selected-days">
+<label class="govuk-label govuk-radios__label" for="frequency-selected-days">
+Selected days
 </label>
-<div id="universal-frequency-12-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications from the past 12 hours will be collated and sent in a single email.
+<div id="frequency-selected-days-hint" class="govuk-hint govuk-radios__hint">
+Relevant notifications since the last email will be collated and sent in a single email at 12pm UTC* every day selected.
 </div>
 </div>
-<div class="govuk-radios__item">
-<input class="govuk-radios__input" id="universal-frequency-24" name="universal-frequency" type="radio" value="universal-frequency-24">
-<label class="govuk-label govuk-radios__label" for="universal-frequency-24">
-Every 24 hours 
+<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-frequency-selected-days">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="days-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+Select days
+</legend>
+<!-- checkboxes below -->
+<div class="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-monday" name="days" type="checkbox" value="monday">
+<label class="govuk-label govuk-checkboxes__label" for="days-monday">
+Monday
 </label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-tuesday" name="days" type="checkbox" value="tuesday">
+<label class="govuk-label govuk-checkboxes__label" for="days-tuesday">
+Tuesday
 </label>
-<div id="universal-frequency-24-hint" class="govuk-hint govuk-radios__hint">
-Relevant notifications from the past 24 hours will be collated and sent in a single email.
-</div>
-</div>
-</div>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-wednesday" name="days" type="checkbox" value="wednesday">
+<label class="govuk-label govuk-checkboxes__label" for="days-wednesday">
+Wednesday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-thursday" name="days" type="checkbox" value="thursday">
+<label class="govuk-label govuk-checkboxes__label" for="days-thursday">
+Thursday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-friday" name="days" type="checkbox" value="friday">
+<label class="govuk-label govuk-checkboxes__label" for="days-friday">
+Friday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-saturday" name="days" type="checkbox" value="saturday">
+<label class="govuk-label govuk-checkboxes__label" for="days-saturday">
+Saturday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="days-sunday" name="days" type="checkbox" value="sunday">
+<label class="govuk-label govuk-checkboxes__label" for="days-sunday">
+Sunday
+</label>
+</div> <!-- class="govuk-checkboxes__item" -->
+</div> <!--class="govuk-checkboxes"-->
+<!-- checkboxes above -->
+</fieldset>
+</div> <!--class="govuk-form-group"-->
+</div> <!-- class="govuk-radios__conditional govuk-radios__conditional--hidden"-->
+<p id="UTC-paragraph" class="govuk-hint">
+* Coordinated Universal Time (UTC) is 1 hour behind British Summer Time (BST) and the same as Greenwich Mean Time (GMT).
+</p>
 </fieldset>
 </div>
+
+
+
 </div> <!-- id="accordion-default-content-1" class="govuk-accordion__section-content" -->
 </div> <!-- class="govuk-accordion__section" -->
 
@@ -304,120 +371,83 @@ Relevant notifications from the past 24 hours will be collated and sent in a sin
 <div class="govuk-accordion__section-header">
 <h1 class="govuk-accordion__section-heading">
 <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-Custom notification settings
+Custom rules
 </span>
 </h1>
 </div> <!-- class="govuk-accordion__section-header" -->
 <div id="accordion-default-content-2" class="govuk-accordion__section-content">
-<h2 class="govuk-heading-l">Summary of custom notification settings
+<h2 class="govuk-heading-l">Summary of custom rules
 </h2>
 <div class="govuk-hint"> 
-This table summarises your existing custom notification settings for selected satellites. Edit existing settings using the links in the table, or add settings for new groups of satellites using the button below.
+This table summarises your existing custom rules for selected satellites. Create new custom rules using the button below the table. You can also duplicate and edit existing rules using the links in the table.
 </div>
 
-<!-- Custom settings summary table -->
+<!-- Custom rules summary table -->
 <!-- GOV.UK-style accessible table with two header rows, grouped headers, and custom column widths -->
 <div style="overflow-x:auto;">
 <table class="govuk-table" style="width: 100%" aria-describedby="table-caption-custom-settings-summary">
 <!-- Set different column widths -->
 <colgroup>
-<col style="width: 15%;" /> <!--name-->
-<col style="width: 15%;" /> <!--notification type-->
-<col style="width: 15%;" /> <!--notification frequency-->
-<col style="width: 15%;" /> <!--do not notify for conjunctions with-->
-<!-- delete to restore custom thresholds 
-<col style="width: 5%;" />  
-<col style="width: 5%;" />  
-<col style="width: 5%;" />  
-<col style="width: 5%;" />  
-delete to restore custom thresholds -->
-<col style="width: 5%;" /> <!-- edit -->
-<col style="width: 5%;" /> <!-- delete -->
-
+<col style="width: 20%;" /> <!--name-->
+<col style="width: 30%;" /> <!--Reasons for notifications-->
+<col style="width: 20%;" /> <!--notification frequency-->
+<col style="width: 20%;" /> <!-- edit -->
+<col style="width: 10%;" /> <!-- delete -->
 </colgroup>
-<!-- delete this row to restore Header row 1: grouped headings spanning multiple columns 
+<!-- Header row 1: grouped headings spanning multiple columns -->
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
-<th class="govuk-table__header" scope="colgroup" colspan="2" 
-aria-hidden="true"> 
-</th> 
-<th class="govuk-table__header" scope="colgroup" colspan="2">
-Notifications
-</th>
-</th> 
-<th class="govuk-table__header" scope="colgroup" colspan="1"> 
-Exceptions
-</th> 
-<th class="govuk-table__header" scope="colgroup" colspan="4"> 
-Thresholds
-</th> 
-<th class="govuk-table__header" scope="colgroup" colspan="2"> 
-Edit
-</th>
-</tr>
-delete this row to restore Header row 1: grouped headings spanning multiple columns -->
-
-<!-- Header row 2: actual column headers -->
-<tr class="govuk-table__row">
-
-<th class="govuk-table__header" scope="col">Name</th>
+<th class="govuk-table__header" scope="col">Rule name</th>
 <th class="govuk-table__header" scope="col">Notification types received</th>
 <th class="govuk-table__header" scope="col">Email frequency </th>
-<th class="govuk-table__header" scope="col">Do not notify for conjunctions with:</th>
-<!-- delete this row to restore custom thresholds --> <!--
-<td class="govuk-table__cell">Probability of collision (%)</td>
-<td class="govuk-table__cell">Total miss distance (m)</td>
-<td class="govuk-table__cell">Mean radial miss distance (m)</td>
-<td class="govuk-table__cell">Time till conjunction event (hrs)</td>
---> <!-- delete this row to restore custom thresholds -->
-<th class="govuk-table__header" scope="col">Edit </th>
-<th class="govuk-table__header" scope="col">Delete</th>
+<th class="govuk-table__header" scope="col">View and edit </th>
+<th class="govuk-table__header" scope="col">Duplicate</th>
 </tr>
 </thead>
 
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
-<td class="govuk-table__cell">LEO satellites</td>
-<td class="govuk-table__cell">New events, Updated events, Updated closed events</td>
-<td class="govuk-table__cell">Every 2 hours</td>
-<td class="govuk-table__cell">Satellite A, Satellite B, Satellite C</td>
-<!-- delete this row to restore custom thresholds --> <!--
-<td class="govuk-table__cell">0.02</td>
-<td class="govuk-table__cell">3000</td>
-<td class="govuk-table__cell">1500</td>
-<td class="govuk-table__cell">12</td>
---> <!-- delete this row to restore custom thresholds -->
-<td class="govuk-table__cell"><a class="govuk-link" href="">Edit</a></td>
-<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
-</tr>
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">GEO satellites</td>
-<td class="govuk-table__cell">NSpoC analysis, Manouevre analysis</td>
-<td class="govuk-table__cell">Every 24 hours</td>
-<td class="govuk-table__cell"></td><!-- delete this row to restore custom thresholds --> <!--
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell"></td>
---> <!-- delete this row to restore custom thresholds -->
-<td class="govuk-table__cell"><a class="govuk-link" href="">Edit</a></td>
-<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
-</tr>
-<tr class="govuk-table__row">
-<td class="govuk-table__cell">Skynet 4C</td>
-<!-- delete this row to restore custom thresholds --> <!--
-<td class="govuk-table__cell">0.1</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell">12</td>
---> <!-- delete this row to restore custom thresholds -->
+<td class="govuk-table__cell">LEO Satellites</td>
 <td class="govuk-table__cell">New events</td>
 <td class="govuk-table__cell">As soon as possible</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell"><a class="govuk-link" href="">Edit</a></td>
-<td class="govuk-table__cell"><a class="govuk-link" href="">Delete</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="conjunction-notification-settings-edit-custom">View and edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Duplicate</a></td>
 </tr>
-
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Satellite A</td>
+<td class="govuk-table__cell">Updated events</td>
+<td class="govuk-table__cell">Every 2 hours</td>
+<td class="govuk-table__cell"><a class="govuk-link" href="conjunction-notification-settings-edit-custom">View and edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Duplicate</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Satellite B</td>
+<td class="govuk-table__cell">Updated closed events</td>
+<td class="govuk-table__cell">Every day</td>
+<td class="govuk-table__cell"><a class="govuk-link" href="conjunction-notification-settings-edit-custom">View and edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Duplicate</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">GEO Satellites</td>
+<td class="govuk-table__cell">NSpOC analysis</td>
+<td class="govuk-table__cell">Every Monday</td>
+<td class="govuk-table__cell"><a class="govuk-link" href="conjunction-notification-settings-edit-custom">View and edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Duplicate</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Remainder satellites</td>
+<td class="govuk-table__cell">Manoeuvre analysis</td>
+<td class="govuk-table__cell">Every Monday; Every Tuesday</td>
+<td class="govuk-table__cell"><a class="govuk-link" href="conjunction-notification-settings-edit-custom">View and edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Duplicate</a></td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell">Satellites E</td>
+<td class="govuk-table__cell">New events; Updated events; Updated closed events; NSpOC analysis; Manoeuvre analysis</td>
+<td class="govuk-table__cell">Every Monday; Every Tuesday</td>
+<td class="govuk-table__cell"><a class="govuk-link" href="conjunction-notification-settings-edit-custom">View and edit</a></td>
+<td class="govuk-table__cell"><a class="govuk-link" href="">Duplicate</a></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -425,7 +455,7 @@ delete this row to restore Header row 1: grouped headings spanning multiple colu
 <!-- add custom thresholds button -->
 <p class="govuk-body govuk-!-margin-top-6">
 <a class="govuk-link" href="/account/operator/conjunction-notification-settings-add-custom">
-Add custom notification settings
+Add custom rule 
 </a>
 </p>
 </div> <!-- id="accordion-default-content-2" class="govuk-accordion__section-content"> -->
