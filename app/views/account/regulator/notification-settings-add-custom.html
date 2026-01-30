@@ -194,43 +194,56 @@ aria-describedby="group-name-hint">
 </div> <!-- class="govuk-form-group" -->
 
 <!-- Add Satellites -->
-<h2 class="govuk-heading-l">
-Add satellites to this group
-</h2>
+<h2 class="govuk-heading-l">Add satellites to this group</h2>
+<p>Search and filter all UK-licensed satellites, then select satellites to add to this group.</p>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
 
-<div id="satellite-search-hint" class="govuk-hint">
-Search and filter the list, then select the satellites you want to include.
-</div> <!-- id="satellite-search-hint" class="govuk-hint" -->
+<form method="post" action="conjunction-notification-settings-add-custom" novalidate>
+<input type="hidden" name="hasRunSearch" value="true">
 
-<!-- Toolbar: Search row -->
-<div class="govuk-form-group sat-toolbar">
-<label class="govuk-label govuk-label--s" for="satellite-search">
-Search satellites
-</label>
-
-<div class="govuk-grid-row govuk-!-margin-bottom-1">
-<div class="govuk-grid-column-two-thirds">
-<input class="govuk-input"
-id="satellite-search"
-name="satellite-search"
+<!-- Free-text search -->
+<div class="govuk-form-group">
+<label class="govuk-label govuk-label--s" for="q">Search by object name or NORAD ID</label>
+<input
+class="govuk-input"
+id="q"
+name="q"
 type="text"
-placeholder="Search by object name or NORAD ID">
-</div> <!-- class="govuk-grid-column-two-thirds" -->
+aria-describedby="q-hint"
+value="{{ data.q | default('') }}"
+>
+</div>
 
-<div class="govuk-grid-column-one-third">
-<button class="govuk-button govuk-!-margin-bottom-1"
-data-module="govuk-button"
-type="button"
-id="satellite-search-btn">
-Search
-</button>
-</div> <!-- class="govuk-grid-column-one-third" -->
-</div> <!-- class="govuk-grid-row govuk-!-margin-bottom-1" -->
-</div> <!-- class="govuk-form-group sat-toolbar" -->
+<div class="govuk-grid-row">
 
-<!-- Filters -->
+<!-- Filter 1: Licensing state (select) -->
+<div class="govuk-grid-column-one-half">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-label--s" for="filterState">Licensing state</label>
+<select class="govuk-select" id="filterState" name="filterState">
+<option value="" {% if not data.filterState %}selected{% endif %}>All</option>
+<option value="United Kingdom" {% if data.filterState == "United Kingdom" %}selected{% endif %}>United Kingdom</option>
+<option value="United States" {% if data.filterState == "United States" %}selected{% endif %}>France</option>
+<option value="France" {% if data.filterState == "France" %}selected{% endif %}>France</option>
+</select>
+</div>
+
+
+<!-- Filter 1: Operator (select) -->
+<div class="govuk-form-group">
+<label class="govuk-label govuk-label--s" for="filterOperator">Operator</label>
+<select class="govuk-select" id="filterState" name="filterOperator">
+<option value="" {% if not data.filterState %}selected{% endif %}>All</option>
+<option value="Airbus" {% if data.filterState == "Airbus" %}selected{% endif %}>Airbus</option>
+<option value=Clydespace" {% if data.filterState == "Clydespace" %}selected{% endif %}>Clydespace</option>
+<option value="OneWeb" {% if data.filterState == "OneWeb" %}selected{% endif %}>OneWeb</option>
+</select>
+</div>
+</div>
 
 <!-- orbital regime filter -->
+ <div class="govuk-grid-column-one-half">
 <div class="govuk-form-group govuk-!-margin-bottom-2">
 <fieldset class="govuk-fieldset" aria-describedby="orbital-regime-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -310,45 +323,35 @@ GEO satellites orbit at altitude of exactly 35,786 km.
 </div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes"> -->
 </fieldset> <!-- orbital regime -->
 </div> <!-- govuk-form-group govuk-!-margin-bottom-2" -->
+</div> <!-- class="govuk-grid-column-one-half" for orbital regime-->
 
 
+</div>
 
-<!-- Operator  filter -->
-<div class="govuk-form-group govuk-!-margin-bottom-6">
-<fieldset class="govuk-fieldset" aria-describedby="operator-hint">
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-Operator
-</legend>
-<select class="govuk-select" id="operator" name="operator">
-    <option value="airbus" selected>Airbus</option>
-    <option value="avanti">Avanti</option>
-    <option value="inmarsat">Inmarsat</option>
-    <option value="oneweb">OneWeb</option>
-  </select>
-</fieldset>
-</div> <!-- govuk-form-group govuk-!-margin-bottom-6" -->
+<button class="govuk-button" data-module="govuk-button" type="submit">
+Run search
+</button>
+</form>
 
+<!-- RESULTS (below the form) -->
+<div class="govuk-!-margin-top-6">
+{% if data.hasRunSearch %}
 
-<!-- clear filters -->
-<p class="govuk-body govuk-!-margin-bottom-6">
-<a href="#" class="govuk-link" id="clear-filters">Clear filters</a>
-</p>
-
-
-
-
+<h2 class="govuk-heading-m">Results</h2>
 
 <!-- Selection + results summary row -->
 <div class="sat-selection-bar">
-<p class="govuk-body govuk-!-margin-bottom-2">
+<p class="govuk-body govuk-!-margin-bottom-3">
 <strong>Showing:</strong> <span id="results-count">0</span>
 </p>
 
-<p class="govuk-body govuk-!-margin-bottom-2">
+<p class="govuk-body govuk-!-margin-bottom-3">
 <strong>Selected:</strong> <span id="selected-count">0</span>
 </p>
+</div> <!-- class="sat-selection-bar" -->
 
-<div class="govuk-checkboxes govuk-!-margin-bottom-6" data-module="govuk-checkboxes">
+<div class="sat-selection-bar">
+<div class="govuk-checkboxes govuk-!-margin-bottom-0" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="select-all" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="select-all">
@@ -357,32 +360,27 @@ Select all results
 </div> <!-- class="govuk-checkboxes__item">-->
 </div> <!-- class="govuk-checkboxes govuk-!-margin-bottom-0" data-module="govuk-checkboxes" -->
 
-<p class="govuk-body govuk-!-margin-bottom-6">
+<p class="govuk-body govuk-!-margin-bottom-0">
 <a href="#" class="govuk-link" id="clear-selection">Clear selection</a>
 </p>
 </div> <!-- class="sat-selection-bar" -->
 
-<!-- Satellite selection table -->
-<table class="govuk-table" id="satellite-table" data-module="moj-sortable-table">
+<table class="govuk-table" id="exceptions-table" data-module="moj-sortable-table">
 
 <colgroup>
-<col style="width: 10%;"> <!-- Object name -->
-<col style="width: 10%;">  <!-- NORAD -->
-<col style="width: 10%;">  <!-- Regime -->
-<col style="width: 10%;">  <!-- Altitude -->
-<col style="width: 10%;">  <!-- Operator -->
-<col style="width: 10%;"> <!-- Select -->
+<col style="width: 20%;"> <!-- object name -->
+<col style="width: 15%;">  <!-- NORAD -->
+<col style="width: 15%;">  <!-- Regime -->
+<col style="width: 15%;">  <!-- Licensing -->
+<col style="width: 15%;"> <!-- Select -->
 </colgroup>
 
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
-<!-- Set one column to ascending if you want an initial sort state -->
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="ascending">Object name</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">NORAD ID </th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">NORAD ID</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Orbital regime</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Altitude</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Operator</th>
-<!-- Not sortable -->
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none">Licensing state</th>
 <th scope="col" class="govuk-table__header govuk-body-s">Select</th>
 </tr>
 </thead>
@@ -391,10 +389,9 @@ Select all results
 
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">Skynet 4C</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="27838">27838</td>
+<td class="govuk-table__cell govuk-body-s">27838</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
-<td class="govuk-table__cell govuk-body-s">35,786</td>
-<td class="govuk-table__cell govuk-body-s">Airbus</td>
+<td class="govuk-table__cell govuk-body-s">United Kingdom</td>
 <td class="govuk-table__cell">
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
@@ -407,176 +404,21 @@ Select all results
 </td>
 </tr>
 
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">Skynet 5A</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="40420">40420</td>
-<td class="govuk-table__cell govuk-body-s">GEO</td>
-<td class="govuk-table__cell govuk-body-s">35,786</td>
-<td class="govuk-table__cell govuk-body-s">Airbus</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-2" name="satellites" type="checkbox" value="skynet-5a">
-<label class="govuk-label govuk-checkboxes__label" for="sat-2">
-<span class="govuk-visually-hidden">Select Skynet 5A</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">Skynet 6A</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="46949">46949</td>
-<td class="govuk-table__cell govuk-body-s">GEO</td>
-<td class="govuk-table__cell govuk-body-s">35,786</td>
-<td class="govuk-table__cell govuk-body-s">Airbus</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-3" name="satellites" type="checkbox" value="skynet-6a">
-<label class="govuk-label govuk-checkboxes__label" for="sat-3">
-<span class="govuk-visually-hidden">Select Skynet 6A</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">Aurora-LEO 1</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55101">55101</td>
-<td class="govuk-table__cell govuk-body-s">LEO</td>
-<td class="govuk-table__cell govuk-body-s">1,000</td>
-<td class="govuk-table__cell govuk-body-s">Avanti</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-4" name="satellites" type="checkbox" value="aurora-leo-1">
-<label class="govuk-label govuk-checkboxes__label" for="sat-4">
-<span class="govuk-visually-hidden">Select Aurora-LEO 1</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">Aurora-LEO 2</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="55102">55102</td>
-<td class="govuk-table__cell govuk-body-s">LEO</td>
-<td class="govuk-table__cell govuk-body-s">600</td>
-<td class="govuk-table__cell govuk-body-s">Avanti</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-5" name="satellites" type="checkbox" value="aurora-leo-2">
-<label class="govuk-label govuk-checkboxes__label" for="sat-5">
-<span class="govuk-visually-hidden">Select Aurora-LEO 2</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">Gallica-LEO 7</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="53317">53317</td>
-<td class="govuk-table__cell govuk-body-s">LEO</td>
-<td class="govuk-table__cell govuk-body-s">200</td>
-<td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-6" name="satellites" type="checkbox" value="gallica-leo-7">
-<label class="govuk-label govuk-checkboxes__label" for="sat-6">
-<span class="govuk-visually-hidden">Select Gallica-LEO 7</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">RheinSat 3</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50991">50991</td>
-<td class="govuk-table__cell govuk-body-s">GEO</td>
-<td class="govuk-table__cell govuk-body-s">35,786</td>
-<td class="govuk-table__cell govuk-body-s">Inmarsat</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-7" name="satellites" type="checkbox" value="rheinsat-3">
-<label class="govuk-label govuk-checkboxes__label" for="sat-7">
-<span class="govuk-visually-hidden">Select RheinSat 3</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">RheinSat 4</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="50992">50992</td>
-<td class="govuk-table__cell govuk-body-s">LEO</td>
-<td class="govuk-table__cell govuk-body-s">1,500</td>
-<td class="govuk-table__cell govuk-body-s">Inmarsat</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-8" name="satellites" type="checkbox" value="rheinsat-4">
-<label class="govuk-label govuk-checkboxes__label" for="sat-8">
-<span class="govuk-visually-hidden">Select RheinSat 4</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">PolarWatch 12</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="60120">60120</td>
-<td class="govuk-table__cell govuk-body-s">LEO</td>
-<td class="govuk-table__cell govuk-body-s">1,800</td>
-<td class="govuk-table__cell govuk-body-s">Airbus</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-9" name="satellites" type="checkbox" value="polarwatch-12">
-<label class="govuk-label govuk-checkboxes__label" for="sat-9">
-<span class="govuk-visually-hidden">Select PolarWatch 12</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item" -->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-body-s">OceanScan 5</td>
-<td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric" data-sort-value="61205">61205</td>
-<td class="govuk-table__cell govuk-body-s">MEO</td>
-<td class="govuk-table__cell govuk-body-s">2,500</td>
-<td class="govuk-table__cell govuk-body-s">ClydeSpace</td>
-<td class="govuk-table__cell">
-<div class="govuk-checkboxes" data-module="govuk-checkboxes">
-<div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input satellite-checkbox" id="sat-10" name="satellites" type="checkbox" value="oceanscan-5">
-<label class="govuk-label govuk-checkboxes__label" for="sat-10">
-<span class="govuk-visually-hidden">Select OceanScan 5</span>
-</label>
-</div> <!-- class="govuk-checkboxes__item"-->
-</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
-</td>
-</tr>
-
-<!-- No results message row -->
-<tr class="govuk-table__row" id="no-results-row" style="display:none">
-<td class="govuk-table__cell" colspan="5">
-<p class="govuk-body govuk-!-margin-bottom-0">No satellites match your search and filters.</p>
-</td>
-</tr>
-</tbody>
 </table>
+
+{% else %}
+
+<h2 class="govuk-heading-m">Results</h2>
+<p class="govuk-body">
+Enter a search term or choose filters, then select <strong>Run search</strong>.
+</p>
+
+{% endif %}
+</div>
+
+</div>
+</div>
+
 
 <!-- select reasons for notifications -->
 <div class="govuk-form-group">
