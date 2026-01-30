@@ -34,3 +34,12 @@ router.post('/account/superadmin/invite-new-member', function(request, response)
     }
 
 })
+
+
+router.post('/search', function (req, res) {
+  // Optional but useful: make sure the flag is set even if the hidden input is missing
+  req.session.data.hasRunSearch = 'true'
+
+  // Redirect back to the same page so you're "staying on the page"
+  res.redirect('/search')
+})
