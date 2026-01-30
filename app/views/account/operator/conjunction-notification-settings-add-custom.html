@@ -192,8 +192,33 @@ type="text"
 aria-describedby="group-name-hint">
 </div> <!-- class="govuk-form-group" -->
 
-<!-- Add Satellites -->
- <h2 class="govuk-heading-l">Add satellites to this group</h2>
+<!-- Add Satellites version 1 -->
+<h2 class="govuk-heading-l"></h2>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="long-text-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Add satellites to this group (@Filip - is this version possible?)
+      </h1>
+    </legend>
+
+    <div id="long-text-hint" class="govuk-hint">
+      Submit the satellites you wish to add to this group. List satellites by NORAD ID separated by semicolons.
+    </div>
+
+<textarea class="govuk-textarea"
+          id="long-text"
+          name="long-text"
+          rows="8"
+          spellcheck="false"
+          placeholder="E.g.: 12345; 23456; 34567; 45678"></textarea>
+
+  </fieldset>
+</div>
+
+
+<!-- Add Satellites version 2 -->
+<h2 class="govuk-heading-l">Add satellites to this group (version 2)</h2>
 <p>Search and filter all satellites operated by your organisation, then select satellites to add to this group.</p>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
