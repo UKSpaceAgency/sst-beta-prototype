@@ -638,164 +638,6 @@ Create rule
 </main>
 </div>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-const table = document.getElementById("satellite-table");
-if (!table) return;
-
-const tbody = table.querySelector("tbody");
-const rows = Array.from(tbody.querySelectorAll("tr.govuk-table__row:not(#no-results-row)"));
-const noResultsRow = document.getElementById("no-results-row");
-
-const searchInput = document.getElementById("satellite-search");
-const searchBtn = document.getElementById("satellite-search-btn");
-const regimeCheckboxes = Array.from(document.querySelectorAll('input[name="regime"]'));
-const licensingSelect = document.getElementById("licensing-state");
-const clearFilters = document.getElementById("clear-filters");
-
-const selectedCountEl = document.getElementById("selected-count");
-const resultsCountEl = document.getElementById("results-count");
-const clearSelectionLink = document.getElementById("clear-selection");
-const selectAll = document.getElementById("select-all"); // keep ONLY ONE in the page
-
-function normalise(s) {
-return (s || "").toString().trim().toLowerCase();
-}
-
-function licensingValueToName(val) {
-const map = {
-any: "",
-uk: "airbus",
-us: "avanti",
-fr: "clydespace",
-de: "inmarsat"
-};
-return map[val] || normalise(val);
-}
-
-function getRowCheckbox(row) {
-return row.querySelector(".satellite-checkbox");
-}
-
-function isRowVisible(row) {
-return row.style.display !== "none";
-}
-
-function getVisibleRows() {
-return rows.filter(isRowVisible);
-}
-
-function getVisibleCheckboxes() {
-return getVisibleRows().map(getRowCheckbox).filter(Boolean);
-}
-
-function getAllCheckboxes() {
-return rows.map(getRowCheckbox).filter(Boolean);
-}
-
-function updateCounts() {
-const allCbs = getAllCheckboxes();
-const selectedCount = allCbs.filter(cb => cb.checked).length;
-if (selectedCountEl) selectedCountEl.textContent = String(selectedCount);
-
-const visibleCount = getVisibleRows().length;
-if (resultsCountEl) resultsCountEl.textContent = String(visibleCount);
-
-if (selectAll) {
-const visibleCbs = getVisibleCheckboxes();
-if (!visibleCbs.length) {
-selectAll.checked = false;
-selectAll.indeterminate = false;
-} else {
-const allChecked = visibleCbs.every(cb => cb.checked);
-const anyChecked = visibleCbs.some(cb => cb.checked);
-selectAll.checked = allChecked;
-selectAll.indeterminate = anyChecked && !allChecked;
-}
-}
-}
-
-function applyFiltersToTable() {
-const term = normalise(searchInput ? searchInput.value : "");
-const selectedRegimes = regimeCheckboxes
-.filter(cb => cb.checked)
-.map(cb => normalise(cb.value)); // GEO/LEO -> geo/leo
-
-const licValue = licensingSelect ? licensingSelect.value : "any";
-const licName = licensingValueToName(licValue);
-
-// ✅ Default: show ALL satellites when no filters
-const noFiltersApplied = !term && selectedRegimes.length === 0 && licValue === "any";
-if (noFiltersApplied) {
-rows.forEach(r => r.style.display = "");
-if (noResultsRow) noResultsRow.style.display = "none";
-updateCounts();
-return;
-}
-
-rows.forEach(row => {
-const cells = row.querySelectorAll("th, td");
-const objectName = normalise(cells[0]?.textContent);
-const norad = normalise(cells[1]?.textContent);
-const regime = normalise(cells[2]?.textContent);
-const licensing = normalise(cells[3]?.textContent);
-
-const matchesSearch = !term || objectName.includes(term) || norad.includes(term);
-const matchesRegime = selectedRegimes.length === 0 || selectedRegimes.includes(regime);
-const matchesLicensing = (licValue === "any") || (licensing === licName);
-
-
-row.style.display = (matchesSearch && matchesRegime && matchesLicensing) ? "" : "none";
-});
-
-const visibleCount = getVisibleRows().length;
-if (noResultsRow) noResultsRow.style.display = visibleCount === 0 ? "" : "none";
-
-updateCounts();
-}
-
-// Filter events
-if (searchInput) searchInput.addEventListener("input", applyFiltersToTable);
-if (searchBtn) searchBtn.addEventListener("click", applyFiltersToTable);
-regimeCheckboxes.forEach(cb => cb.addEventListener("change", applyFiltersToTable));
-if (licensingSelect) licensingSelect.addEventListener("change", applyFiltersToTable);
-
-if (clearFilters) {
-clearFilters.addEventListener("click", (e) => {
-e.preventDefault();
-if (searchInput) searchInput.value = "";
-regimeCheckboxes.forEach(cb => cb.checked = false);
-if (licensingSelect) licensingSelect.value = "any";
-applyFiltersToTable();
-});
-}
-
-// Selection events
-if (tbody) {
-tbody.addEventListener("change", (e) => {
-if (e.target?.classList?.contains("satellite-checkbox")) updateCounts();
-});
-}
-
-if (selectAll) {
-selectAll.addEventListener("change", () => {
-getVisibleCheckboxes().forEach(cb => cb.checked = selectAll.checked);
-updateCounts();
-});
-}
-
-if (clearSelectionLink) {
-clearSelectionLink.addEventListener("click", (e) => {
-e.preventDefault();
-getAllCheckboxes().forEach(cb => cb.checked = false);
-updateCounts();
-});
-}
-
-// Init
-applyFiltersToTable();
-updateCounts();
-});
-
 /* Grey out unchecked boxes */
 document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
 checkbox.addEventListener('change', (event) => {
@@ -805,6 +647,34 @@ table.classList.toggle('inactive', !checkbox.checked);
 }
 });
 });
+
+// automatically check altitude checkboxes when position change checked
+(function () {
+const parent = document.getElementById('reasons-upc');
+const conditionalId = parent?.getAttribute('data-aria-controls');
+const conditional = conditionalId ? document.getElementById(conditionalId) : null;
+
+if (!parent || !conditional) return;
+
+const childCheckboxes = conditional.querySelectorAll('input[type="checkbox"]');
+
+function syncConditional() {
+if (parent.checked) {
+// when opening, auto-check all conditional checkboxes
+childCheckboxes.forEach(cb => { cb.checked = true; });
+} else {
+// optional: when closing, uncheck them again
+childCheckboxes.forEach(cb => { cb.checked = false; });
+}
+}
+
+// Run on load in case the parent is pre-checked (e.g. returning to the page)
+syncConditional();
+
+// Run when user changes parent checkbox
+parent.addEventListener('change', syncConditional);
+})();
+
 
 // automatically check altitude checkboxes when LEO checked
 (function () {
@@ -832,7 +702,6 @@ syncConditional();
 // Run when user changes parent checkbox
 parent.addEventListener('change', syncConditional);
 })();
-
 </script>
 
 {% endblock %}

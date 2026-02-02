@@ -393,6 +393,17 @@ Save notification settings
 
 
 <script>
+/* Grey out unchecked boxes */
+document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
+checkbox.addEventListener('change', (event) => {
+const table = checkbox.closest('.govuk-checkboxes__item').nextElementSibling;
+if (table && table.tagName === 'TABLE') {
+table.classList.toggle('inactive', !checkbox.checked);
+}
+});
+});
+
+// automatically check altitude checkboxes when position change checked
 (function () {
 const parent = document.getElementById('reasons-upc');
 const conditionalId = parent?.getAttribute('data-aria-controls');
@@ -419,14 +430,6 @@ syncConditional();
 parent.addEventListener('change', syncConditional);
 })();
 
-document.querySelectorAll('.govuk-checkboxes__input').forEach(checkbox => {
-checkbox.addEventListener('change', (event) => {
-const table = checkbox.closest('.govuk-checkboxes__item').nextElementSibling;
-if (table && table.tagName === 'TABLE') {
-table.classList.toggle('inactive', !checkbox.checked);
-}
-});
-});
 </script>
 
 {% endblock %}
