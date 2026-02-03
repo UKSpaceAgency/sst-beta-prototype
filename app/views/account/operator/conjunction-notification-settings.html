@@ -110,13 +110,23 @@ Select all criteria that apply, then set your preferred thresholds for each.
 <table class="govuk-table threshold-style inactive">
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">   
-<th scope="row" class="govuk-table__cell">Probability of collision is above:
+<p>Submit a value in <strong>either</strong> percentage or scientific notation format</p> 
+</tr>    
+<tr class="govuk-table__row">    
+<th scope="row" class="govuk-table__cell">Probability of collision (%) is above:
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="universal-poc-value" name="universal-poc-value" type="text" spellcheck="false" value = "0.01">
+<input class="govuk-input govuk-input--width-5" id="universal-poc-percent-value" name="universal-poc-value" type="text" spellcheck="false" value = "0.01">
 <div class="govuk-input__suffix" aria-hidden="true">%
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">% -->
+</div> <!-- class="govuk-input__wrapper" -->
+<tr class="govuk-table__row">    
+<th scope="row" class="govuk-table__cell">Probability of collision (scientific notation) is above:
+</th>
+<td class="govuk-table__cell">  
+<div class="govuk-input__wrapper"> 
+<input class="govuk-input govuk-input--width-5" id="universal-poc-percent-value" name="universal-poc-value" type="text" spellcheck="false" value = "10^-6">
 </div> <!-- class="govuk-input__wrapper" -->
 </td>
 </tr>
