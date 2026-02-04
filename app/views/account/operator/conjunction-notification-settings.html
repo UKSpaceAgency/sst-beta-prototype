@@ -25,6 +25,7 @@ width: calc(100% - 70px);
 #default-label {margin-bottom: 10px;}
 </style>
 
+
 <!-- Breadcrumbs links-->
 <div class="govuk-width-container">
 <div class="govuk-breadcrumbs">
@@ -91,7 +92,7 @@ You are responsible for the safe operation of your satellites and should choose 
 Select all criteria that apply, then set your preferred thresholds for each.
 </div>
 
-<table class="govuk-table no-border" style="width:100%" id="universal-thresholds">
+<table class="govuk-table no-border" style="width:100%" id="thresholds">
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <th scope="col" class="govuk-table__header" style="width:40%">Criteria</th>
@@ -100,44 +101,48 @@ Select all criteria that apply, then set your preferred thresholds for each.
 </thead>
 </table>
 
-<!-- Probability of collision threshold -->
+<!-- probability of collision threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="universal-poc-check" name="universal-poc-check" type="checkbox">
-<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision
-</label>
+<input class="govuk-checkboxes__input" id="poc-check" name="poc-check" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision</label>
 </div> <!-- class="govuk-checkboxes__item" -->
-<table class="govuk-table threshold-style inactive">
+<table class="govuk-table govuk-table--no-row-borders threshold-style inactive">
 <tbody class="govuk-table__body">
+<tr class="govuk-table__row" >   
+<th scope="row" class="govuk-table__cell govuk-!-padding-top-4 govuk-hint"">Input a value using <strong>either</strong> percentage or scientific notation. 
+</th>
+<td class="govuk-table__cell">  
+</td>
+</tr>
 <tr class="govuk-table__row">   
-<p>Submit a value in <strong>either</strong> percentage or scientific notation format</p> 
-</tr>    
-<tr class="govuk-table__row">    
-<th scope="row" class="govuk-table__cell">Probability of collision (%) is above:
+<th scope="row" class="govuk-table__cell">Probability of collision (%) is below:
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="universal-poc-percent-value" name="universal-poc-value" type="text" spellcheck="false" value = "0.01">
+<input class="govuk-input govuk-input--width-5" id="poc-value-percent" name="poc-value" type="text" spellcheck="false" value = "0.01">
 <div class="govuk-input__suffix" aria-hidden="true">%
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">% -->
 </div> <!-- class="govuk-input__wrapper" -->
-<tr class="govuk-table__row">    
-<th scope="row" class="govuk-table__cell">Probability of collision (scientific notation) is above:
+</td>
+</tr>
+<tr class="govuk-table__row">   
+<th scope="row" class="govuk-table__cell">Probability of collision (scientific notation) is below:
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="universal-poc-percent-value" name="universal-poc-value" type="text" spellcheck="false" value = "10^-6">
+<input class="govuk-input govuk-input--width-5" id="poc-value-percent" name="poc-value" type="text" spellcheck="false" value = "10^-6">
 </div> <!-- class="govuk-input__wrapper" -->
 </td>
 </tr>
 </tbody>
 </table>
-</div> <!-- lass="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
 
 <!-- total mean distance threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="universal-tmd-check" name="universal-tmd-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="tmd-check" name="tmd-check" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Total miss distance</label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <table class="govuk-table threshold-style inactive">
@@ -147,7 +152,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="universal-tmd-value" name="universal-tmd-value" type="text" spellcheck="false" value = "1000">
+<input class="govuk-input govuk-input--width-5" id="tmd-value" name="tmd-value" type="text" spellcheck="false" value = "1000">
 <div class="govuk-input__suffix" aria-hidden="true">metres
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">metres -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -160,7 +165,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 <!-- mean radial distance threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="universal-mrd-check" name="universal-mrd-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="mrd-check" name="mrd-check" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Mean radial distance</label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <table class="govuk-table threshold-style inactive">
@@ -170,7 +175,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="universal-mrd-value" name="universal-mrd-value" type="text" spellcheck="false" value = "1000">
+<input class="govuk-input govuk-input--width-5" id="mrd-value" name="mrd-value" type="text" spellcheck="false" value = "1000">
 <div class="govuk-input__suffix" aria-hidden="true">metres
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">metres -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -183,7 +188,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 <!-- time to conjunction event threshold-->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="universal-tce-check" name="universal-tce-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="tce-check" name="tce-check" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Time till conjunction event
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
@@ -194,7 +199,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="universal-tce-value" name="universal-tce-value" type="text" spellcheck="false" value = "1">
+<input class="govuk-input govuk-input--width-5" id="tce-value" name="tce-value" type="text" spellcheck="false" value = "1">
 <div class="govuk-input__suffix" aria-hidden="true">hour(s)
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">hour(s) -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -206,13 +211,13 @@ Select all criteria that apply, then set your preferred thresholds for each.
 
 <!-- What type of notifications do you want to receive? -->
 <div class="govuk-form-group" class="govuk-!-margin-top-6">
-<fieldset class="govuk-fieldset" aria-describedby="universal-notification-type-hint">
+<fieldset class="govuk-fieldset" aria-describedby="notification-type-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
 Select notification types
 </h1>
 </legend>
-<div id="universal-notification-type-hint" class="govuk-hint">
+<div id="notification-type-hint" class="govuk-hint">
 Select all that apply.
 </div>
 <p>
@@ -220,31 +225,31 @@ Receive notifications when:
 </p>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-new" name="universal-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-new" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-new">
 A new conjunction event meets your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-updated" name="universal-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-updated" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-updated">
 An updated conjunction event meets your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-nspoc" name="universal-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-nspoc" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-nspoc">
 New NSpOC analysis is uploaded for a conjunction event meeting your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-manoeuvre" name="universal-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-manoeuvre" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-manoeuvre">
 New manoeuvre analysis is uploaded for a conjunction event meeting your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-end" name="universal-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-end" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-end">
 An updated conjunction event no longer meets your thresholds
 </label>
