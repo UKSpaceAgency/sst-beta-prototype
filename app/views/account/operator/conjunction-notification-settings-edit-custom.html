@@ -113,10 +113,10 @@ text-align: right;
 }
 
 /* Indent threshold checkboxes + their conditional blocks */
-#custom-thresholds-conditional .govuk-checkboxes__item {
+#thresholds-conditional .govuk-checkboxes__item {
 margin-left: 25px;
 }
-#custom-thresholds-conditional .govuk-checkboxes__conditional {
+#thresholds-conditional .govuk-checkboxes__conditional {
 margin-left: 25px;
 }
 /* Tighten spacing between search and filters */
@@ -402,7 +402,7 @@ You are responsible for the safe operation of your satellites and should choose 
 Select all criteria that apply, then set your preferred thresholds for each.
 </div>
 
-<table class="govuk-table no-border" style="width:100%" id="custom-thresholds">
+<table class="govuk-table no-border" style="width:100%" id="thresholds">
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <th scope="col" class="govuk-table__header" style="width:40%">Criteria</th>
@@ -411,34 +411,48 @@ Select all criteria that apply, then set your preferred thresholds for each.
 </thead>
 </table>
 
-<!-- Probability of collision threshold -->
+<!-- probability of collision threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-poc-check" name="custom-poc-check" type="checkbox">
-<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision
-</label>
+<input class="govuk-checkboxes__input" id="poc-check" name="poc-check" type="checkbox">
+<label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Probability of collision</label>
 </div> <!-- class="govuk-checkboxes__item" -->
-<table class="govuk-table threshold-style inactive">
+<table class="govuk-table govuk-table--no-row-borders threshold-style inactive">
 <tbody class="govuk-table__body">
+<tr class="govuk-table__row" >   
+<th scope="row" class="govuk-table__cell govuk-!-padding-top-4 govuk-hint"">Input a value using <strong>either</strong> percentage or scientific notation. 
+</th>
+<td class="govuk-table__cell">  
+</td>
+</tr>
 <tr class="govuk-table__row">   
-<th scope="row" class="govuk-table__cell">Probability of collision is above:
+<th scope="row" class="govuk-table__cell">Probability of collision (%) is below:
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="custom-poc-value" name="custom-poc-value" type="text" spellcheck="false" value = "0.01">
+<input class="govuk-input govuk-input--width-5" id="poc-value-percent" name="poc-value" type="text" spellcheck="false" value = "0.01">
 <div class="govuk-input__suffix" aria-hidden="true">%
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">% -->
 </div> <!-- class="govuk-input__wrapper" -->
 </td>
 </tr>
+<tr class="govuk-table__row">   
+<th scope="row" class="govuk-table__cell">Probability of collision (scientific notation) is below:
+</th>
+<td class="govuk-table__cell">  
+<div class="govuk-input__wrapper"> 
+<input class="govuk-input govuk-input--width-5" id="poc-value-percent" name="poc-value" type="text" spellcheck="false" value = "10^-6">
+</div> <!-- class="govuk-input__wrapper" -->
+</td>
+</tr>
 </tbody>
 </table>
-</div> <!-- lass="govuk-checkboxes" data-module="govuk-checkboxes" -->
+</div> <!-- class="govuk-checkboxes" data-module="govuk-checkboxes" -->
 
 <!-- total mean distance threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-tmd-check" name="custom-tmd-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="tmd-check" name="tmd-check" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Total miss distance</label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <table class="govuk-table threshold-style inactive">
@@ -448,7 +462,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="custom-tmd-value" name="custom-tmd-value" type="text" spellcheck="false" value = "1000">
+<input class="govuk-input govuk-input--width-5" id="tmd-value" name="tmd-value" type="text" spellcheck="false" value = "1000">
 <div class="govuk-input__suffix" aria-hidden="true">metres
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">metres -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -461,7 +475,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 <!-- mean radial distance threshold -->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-mrd-check" name="custom-mrd-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="mrd-check" name="mrd-check" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Mean radial distance</label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <table class="govuk-table threshold-style inactive">
@@ -471,7 +485,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="custom-mrd-value" name="custom-mrd-value" type="text" spellcheck="false" value = "1000">
+<input class="govuk-input govuk-input--width-5" id="mrd-value" name="mrd-value" type="text" spellcheck="false" value = "1000">
 <div class="govuk-input__suffix" aria-hidden="true">metres
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">metres -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -484,7 +498,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 <!-- time to conjunction event threshold-->
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="custom-tce-check" name="custom-tce-check" type="checkbox">
+<input class="govuk-checkboxes__input" id="tce-check" name="tce-check" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold">Time till conjunction event
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
@@ -495,7 +509,7 @@ Select all criteria that apply, then set your preferred thresholds for each.
 </th>
 <td class="govuk-table__cell">  
 <div class="govuk-input__wrapper"> 
-<input class="govuk-input govuk-input--width-5" id="custom-tce-value" name="custom-tce-value" type="text" spellcheck="false" value = "1">
+<input class="govuk-input govuk-input--width-5" id="tce-value" name="tce-value" type="text" spellcheck="false" value = "1">
 <div class="govuk-input__suffix" aria-hidden="true">hour(s)
 </div> <!-- class="govuk-input__suffix" aria-hidden="true">hour(s) -->
 </div> <!-- class="govuk-input__wrapper" -->
@@ -508,13 +522,13 @@ Select all criteria that apply, then set your preferred thresholds for each.
 
 <!-- Select notification types -->
 <div class="govuk-form-group" class="govuk-!-margin-top-6">
-<fieldset class="govuk-fieldset" aria-describedby="custom-notification-type-hint">
+<fieldset class="govuk-fieldset" aria-describedby="notification-type-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
 <h1 class="govuk-fieldset__heading">
 Select notification types
 </h1>
 </legend>
-<div id="custom-notification-type-hint" class="govuk-hint">
+<div id="notification-type-hint" class="govuk-hint">
 Select all that apply.
 </div>
 <p>
@@ -522,31 +536,31 @@ Receive notifications when:
 </p>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-new" name="custom-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-new" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-new">
 A new conjunction event meets your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-updated" name="custom-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-updated" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-updated">
 An updated conjunction event meets your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-nspoc" name="custom-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-nspoc" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-nspoc">
 New NSpOC analysis is uploaded for a conjunction event meeting your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-manoeuvre" name="custom-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-manoeuvre" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-manoeuvre">
 New manoeuvre analysis is uploaded for a conjunction event meeting your thresholds
 </label>
 </div> <!-- class="govuk-checkboxes__item" -->
 <div class="govuk-checkboxes__item">
-<input class="govuk-checkboxes__input" id="event-end" name="custom-notification-type" type="checkbox">
+<input class="govuk-checkboxes__input" id="event-end" name="notification-type" type="checkbox">
 <label class="govuk-label govuk-checkboxes__label" for="event-end">
 An updated conjunction event no longer meets your thresholds
 </label>
