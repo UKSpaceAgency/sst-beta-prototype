@@ -93,11 +93,11 @@ Monitoring flag 45131-001
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Date of TLE prior to flag</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">16/02/24</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">5 February 2026</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Date of first TLE after flag</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">26/02/24</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">15 February 2026</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Reporting threshold for TLE age (days)</th>
@@ -109,7 +109,7 @@ Monitoring flag 45131-001
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Flag issued date</th>
-          <td class="govuk-table__cell govuk-table__cell--numeric">23/02/24</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">12 February 2026</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">TLE count in month prior to flag</th>
