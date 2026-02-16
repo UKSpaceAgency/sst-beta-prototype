@@ -217,19 +217,7 @@ value="{{ data.q | default('') }}"
 </div>
 
 <div class="govuk-grid-row">
-
-<!-- Filter 1: Licensing state (select) -->
 <div class="govuk-grid-column-one-half">
-<div class="govuk-form-group">
-<label class="govuk-label govuk-label--s" for="filterState">Licensing state</label>
-<select class="govuk-select" id="filterState" name="filterState">
-<option value="" {% if not data.filterState %}selected{% endif %}>All</option>
-<option value="United Kingdom" {% if data.filterState == "United Kingdom" %}selected{% endif %}>United Kingdom</option>
-<option value="United States" {% if data.filterState == "United States" %}selected{% endif %}>France</option>
-<option value="France" {% if data.filterState == "France" %}selected{% endif %}>France</option>
-</select>
-</div>
-
 
 <!-- Filter 1: Operator (select) -->
 <div class="govuk-form-group">
