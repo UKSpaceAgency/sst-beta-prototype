@@ -90,17 +90,18 @@ Apply filters to this table
 
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
-<td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="6"><b>Event information</b></td>
+<td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="7"><b>Event information</b></td>
 <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Latest recorded position</b></td>
 </tr>
 
 <tr class="govuk-table__row">
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Reason for flag</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Object</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Operator</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>NORAD ID</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Date of flag</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 25%";>Flag ID</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Satellite</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 5%";>Operator</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 5%";>NORAD ID</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>Date of flag</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Flag status</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 5%";>Orbit</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 5%";>Altitude (km)</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 5%";>Longitude (°)</th>
@@ -114,6 +115,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="/organisations/avanti">Avanti</a></td>
 <td class="govuk-table__cell govuk-body-s">37237</td>
 <td class="govuk-table__cell govuk-body-s">16 February 2026</td>
+<td class="govuk-table__cell govuk-body-s">Ongoing position change</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
 <td class="govuk-table__cell govuk-body-s">159.6 E</td>
@@ -125,6 +127,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="/organisations/oneweb">OneWeb</a></td>
 <td class="govuk-table__cell govuk-body-s">54643</td>
 <td class="govuk-table__cell govuk-body-s">14 February 2026</td>
+<td class="govuk-table__cell govuk-body-s">Manoeuvre finished (05/01/24)</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">1177</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
@@ -136,6 +139,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat</a></td>
 <td class="govuk-table__cell govuk-body-s">42814</td>
 <td class="govuk-table__cell govuk-body-s">13 February 2026</td> 
+<td class="govuk-table__cell govuk-body-s">Position change finished (05/01/24)</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
 <td class="govuk-table__cell govuk-body-s">39 E</td>
@@ -147,6 +151,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="#">OneWeb</a></td>
 <td class="govuk-table__cell govuk-body-s">45131</td>
 <td class="govuk-table__cell govuk-body-s">15 February 2026</td>
+<td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (21/12/23)</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">1226</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
@@ -158,6 +163,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="#">Airbus</a></td>
 <td class="govuk-table__cell govuk-body-s">25639</td>
 <td class="govuk-table__cell govuk-body-s">16 February 2026</td>
+<td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (21/12/23)</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
 <td class="govuk-table__cell govuk-body-s">1.2 W</td>
@@ -169,6 +175,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="#">Inmarsat</a></td>
 <td class="govuk-table__cell govuk-body-s">42698</td>
 <td class="govuk-table__cell govuk-body-s">15 February 2026</td>
+<td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (21/12/23)</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
 <td class="govuk-table__cell govuk-body-s">56.5 E</td>
@@ -180,6 +187,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="#">OneWeb</a></td>
 <td class="govuk-table__cell govuk-body-s">44057</td>
 <td class="govuk-table__cell govuk-body-s">15 February 2026</td>
+<td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (21/12/23)</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">1198</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
@@ -191,6 +199,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="#">ClydeSpace</a></td>
 <td class="govuk-table__cell govuk-body-s">55067</td>
 <td class="govuk-table__cell govuk-body-s">15 February 2026</td>
+<td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (21/12/23)</td>
 <td class="govuk-table__cell govuk-body-s">LEO</td>
 <td class="govuk-table__cell govuk-body-s">444</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
@@ -202,6 +211,7 @@ Apply filters to this table
 <td class="govuk-table__cell govuk-body-s"><a href="/organisations/avanti">Avanti</a></td>
 <td class="govuk-table__cell govuk-body-s">37237</td>
 <td class="govuk-table__cell govuk-body-s">15 February 2026</td>
+<td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (21/12/23)</td>
 <td class="govuk-table__cell govuk-body-s">GEO</td>
 <td class="govuk-table__cell govuk-body-s">N/A</td>
 <td class="govuk-table__cell govuk-body-s">159.6 E</td>
