@@ -93,24 +93,22 @@ Find a satellite:
 <td class="govuk-table__cell govuk-body-s" colspan="2"><b></td>
 </tr>
 <tr class="govuk-table__row">
-<td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="4"><b>Satellite information</b></td>
+<td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Satellite information</b></td>
 <td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Latest recorded position</b></td>
 </tr>
 <tr class="govuk-table__row">
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Common name</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 22%";>NORAD ID</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>International designator</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 15%";>Launch date</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Orbit</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 12%";>Altitude (km) </th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 18%";>Longitude (°)</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 30%";>Common name</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>NORAD ID</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 20%";>Launch date</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Orbit</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Altitude (km) </th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Longitude (°)</th>
 </tr>
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">HYLAS 1</td>
 <td class="govuk-table__cell govuk-body-s">37237</td>
-<td class="govuk-table__cell govuk-body-s">2010-065A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2010</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">159.6 E</td>
@@ -119,7 +117,6 @@ Find a satellite:
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">HYLAS 2</td>
 <td class="govuk-table__cell govuk-body-s">38741</td>
-<td class="govuk-table__cell govuk-body-s">2012-043B</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2012</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">31.1 E</td>
@@ -128,7 +125,6 @@ Find a satellite:
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s">HYLAS 4</td>
 <td class="govuk-table__cell govuk-body-s">43272</td>
-<td class="govuk-table__cell govuk-body-s">2018-033B</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">2018</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">N/A</td>
 <td class="govuk-table__cell govuk-body-s govuk-table__cell--numeric">33.5 W</td>
@@ -165,17 +161,13 @@ Filter by satellite
 
 <table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
 <col>
-<colgroup span="3"></colgroup>
-<colgroup span="2"></colgroup>
-<colgroup span="2"></colgroup>
-
+<colgroup span="4"></colgroup>
 <thead class="govuk-table__head">
 <tr class="govuk-table__row">
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Reason for flag</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Flag ID</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Satellite</th>
 <th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Date of flag</th>
-<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 13%";>Flag status</th>
 </tr>
 </thead>
 <tbody class="govuk-table__body">
@@ -185,35 +177,30 @@ Filter by satellite
 <td class="govuk-table__cell govuk-body-s"><a href="#">38741-003</a></td>
 <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 2</a></td>
 <td class="govuk-table__cell govuk-body-s">26/02/24</td>
-<td class="govuk-table__cell govuk-body-s">Ongoing manoeuvre</td>
 </tr>
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--blue">Unexpected position change</strong></td>
 <td class="govuk-table__cell govuk-body-s"><a href="/monitoring/37237-001">37237-004</a></td>
 <td class="govuk-table__cell govuk-body-s"><a href="/satellites/regulator/hylas1">HYLAS 1</a></td>
 <td class="govuk-table__cell govuk-body-s">17/01/24</td>
-<td class="govuk-table__cell govuk-body-s">Position change finished (18/01/24)</td>
 </tr>
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--purple">Manoeuvre not as planned</strong></td>
 <td class="govuk-table__cell govuk-body-s"><a href="#">38741-002</a></td>
 <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 2</a></td>
 <td class="govuk-table__cell govuk-body-s">03/01/24</td>
-<td class="govuk-table__cell govuk-body-s">Manoeuvre finished (05/01/24)</td>
 </tr>
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--grey">Manoeuvre as planned</strong></td>
 <td class="govuk-table__cell govuk-body-s"><a href="#">43272-001</a></td>
 <td class="govuk-table__cell govuk-body-s"><a href="#">HYLAS 4</a></td>
 <td class="govuk-table__cell govuk-body-s">27/12/23</td>
-<td class="govuk-table__cell govuk-body-s">Manoeuvre finished (28/12/23)</td>
 </tr>
 <tr class="govuk-table__row">
 <td class="govuk-table__cell govuk-body-s"><strong class="govuk-tag govuk-tag--turquoise">Missing data</strong></td>
 <td class="govuk-table__cell govuk-body-s"><a href="#">37237-003</a></td>
 <td class="govuk-table__cell govuk-body-s"><a href="/satellites/regulator/hylas1">HYLAS 1</a></td>
 <td class="govuk-table__cell govuk-body-s">21/12/23</td>
-<td class="govuk-table__cell govuk-body-s">Resolved: updated TLE (21/12/23)</td>
 </tr>
 </tbody>
 </col>
