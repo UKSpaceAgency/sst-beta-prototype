@@ -1,0 +1,243 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+HYLAS 2
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/satellites/regulator/satellite-list">Satellites</a>
+</li>
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/satellites/regulator/hylas2">HYLAS 2</a>
+</li>
+</ol>
+</div>
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+<h1 class="govuk-heading-xl">HYLAS 2</h1>
+</div>
+<div class="govuk-grid-column-one-quarter">
+<h3 class="govuk-heading-s">Contents
+</h3>
+<ul class="moj-side-navigation__list">
+<li class="moj-side-navigation__item">
+<li class="moj-side-navigation__item">
+<a href="#Satellite information">Satellite information</a>
+<a href="#Conjunction events">Conjunction events</a>
+<a href="#Activity flags">Activity flags</a>
+<a href="#Re-entry events">Re-entry events</a>
+<a href="#Fragmentation events">Fragmentation events</a>
+</li>
+</ul>
+</div> <!-- class="govuk-grid-column-one-quarter" -->
+<div class="govuk-grid-column-three-quarters">
+
+<h1 class="govuk-heading-l">Satellite information</h1>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-satellite-information">
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+Object data
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header"> -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">Space-Track is the main source of all object data. Contact Space-Track if your satellite data is incorrect.</p>
+<p class="govuk-body">SPACETRACK DATA TABLE GOES HERE</p>
+<h2 class="govuk-heading-s">Additional data</h2>
+<p class="govuk-body">ESA DISCOS provides additional object data where available. Contact ESA DISCOS if your satellite data is incorrect.</p>
+<p class="govuk-body">ESA DATA TABLE GOES HERE</p>
+<p class="govuk-body">ESA DISCOS data was last updated on: 21/04/2026 04:05:43 UTC</p>
+</div> <!--  class="govuk-accordion__section-content"> -->
+</div> <!-- class="govuk-accordion__section"-->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+Ephemeris data
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">UPLOAD EPHEMERIS BUTTON GOES HERE</p>
+</div> <!-- class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
+</div> <!-- class="govuk-accordion" data-module="govuk-accordion" id="accordion-satellite-information"> -->
+
+<h1 class="govuk-heading-l">Conjunction events</h1>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-conjunction-events">
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+All conjunction events
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">This table shows all upcoming conjunction events involving [Hylas 2]. You can apply filters to view past events.</p>
+<p class="govuk-body govuk-!-font-weight-bold">Apply filters to this table:</p>
+<div class="govuk-form-group">
+<label class="govuk-label" for="time-filter">
+Filter by
+</label>
+<select class="govuk-select" id="time-filter" name="time-filter">
+<option selected>Upcoming</option>
+<option >Past</option>
+<option>All</option>
+</select>
+</div> <!-- class="govuk-form-group">-->
+<p class="govuk-body govuk-!-text-align-right">RADIOS HERE (like on main Track Conjunction Event  page) Display probability of collision as: scientific/percentage</p>
+<table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Event information</b></td>
+<td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="3"><b>Probability of collision</b></td>
+<td scope="colgroup" class="govuk-table__cell govuk-body-s" colspan="2"><b>Time of closest approach (TCA)</b></td></tr>
+<tr class="govuk-table__row">
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Event ID</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Secondary object</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Space-Track CDM</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>NSpOC</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>Total miss distance (m)</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>TCA date</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" span="1" style="width: 10%";>TCA time</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">	kgbkrwl-bvjaazp-beaznw</td>
+<td class="govuk-table__cell govuk-body-s">Starlink-1234</td>
+<td class="govuk-table__cell govuk-body-s">3.2233e-4</td>
+<td class="govuk-table__cell govuk-body-s">3.2233e-4</td>
+<td class="govuk-table__cell govuk-body-s">2145</td>
+<td class="govuk-table__cell govuk-body-s">21 April 2026</td>
+<td class="govuk-table__cell govuk-body-s">15:38:57</td>
+</tr>
+<tr class="govuk-table__row">
+<td class="govuk-table__cell govuk-body-s">	kgbkrwl-bvjaazp-beaznw</td>
+<td class="govuk-table__cell govuk-body-s">Starlink-1234</td>
+<td class="govuk-table__cell govuk-body-s">3.2233e-4</td>
+<td class="govuk-table__cell govuk-body-s">3.2233e-4</td>
+<td class="govuk-table__cell govuk-body-s">2145</td>
+<td class="govuk-table__cell govuk-body-s">21 April 2026</td>
+<td class="govuk-table__cell govuk-body-s">15:38:57</td>
+</tr>
+</tbody>
+</table>
+</div> <!-- class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+Conjunction events by type
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">Content for Conjunction events by type</p>
+</div> <!-- class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+Conjunction events by probability of collision
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">Content for Conjunction events by probability of collision</p>
+</div> <!-- class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
+</div> <!-- class="govuk-accordion" data-module="govuk-accordion" id="accordion-satellite-information"> -->
+
+<h1 class="govuk-heading-l">Activity information</h1>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-conjunction-events">
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+All activity flags
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header"> -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">Content for All activity flags</p>
+</div> <!--  class="govuk-accordion__section-content"> -->
+</div> <!-- class="govuk-accordion__section"-->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+Position history
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">Content for position history</p>
+</div> <!-- class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+Activity flags by type
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">Activity flags by type</p>
+</div> <!-- class="govuk-accordion__section-content" -->
+</div> <!-- class="govuk-accordion__section" -->
+</div> <!-- class="govuk-accordion" data-module="govuk-accordion" id="accordion-satellite-information"> -->
+
+
+<h1 class="govuk-heading-l">Re-entry events</h1>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-satellite-information">
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+All re-entry events 
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header"> -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">Content for All re-entry events</p>
+</div> <!--  class="govuk-accordion__section-content"> -->
+</div> <!-- class="govuk-accordion__section"-->
+</div> <!-- class="govuk-accordion" data-module="govuk-accordion" id="accordion-satellite-information"> -->
+
+<h1 class="govuk-heading-l">Fragmentation events</h1>
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-satellite-information">
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button">
+All fragmentation events 
+</span>
+</h2>
+</div> <!-- class="govuk-accordion__section-header"> -->
+<div class="govuk-accordion__section-content">
+<p class="govuk-body">Content for All fragmentation events</p>
+</div> <!--  class="govuk-accordion__section-content"> -->
+</div> <!-- class="govuk-accordion__section"-->
+</div> <!-- class="govuk-accordion" data-module="govuk-accordion" id="accordion-satellite-information"> -->
+
+<a href="/positionmonitoring/satellite-list" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+Return to all satellites</a>
+</div> <!-- class="govuk-grid-column-three-quarters" -->
+</div>  <!-- <div class="govuk-grid-column-full" -->
+</div> <!-- <div class="govuk-grid-row"> -->
+</main> 
+</div> <!-- class="govuk-width-container" -->
+{% endblock %}
