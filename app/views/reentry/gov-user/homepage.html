@@ -35,15 +35,42 @@ Track re-entry events
             <br>
             <br>
             <ul class="govuk-list govuk-list--bullet">
-              <li><b>Upcoming re-entry alerts</b>: all upcoming re-entry events which meet the UK Space Agency's thresholds for alerting UK government
-              <li><b>Upcoming re-entry events worldwide</b>: all upcoming re-entry events worldwide, including those which have not met alerting thresholds</li>
+              <li><b>Re-entry alerts</b>: all re-entry events which meet the UK Space Agency's thresholds for alerting UK government
+              <li><b>Re-entry events worldwide</b>: all re-entry events worldwide, including those which have not met alerting thresholds</li>
             </ul>
           </div>
         </details>
-        <h2 class="govuk-heading-m">All re-entry events (upcoming and past)</h2>
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-        <p class="govuk-body">This table contains all tracked re-entry events, including re-entry events that meet the UK Space Agency's thresholds for alerting UK government. For further detail on how risk and alert thresholds are defined, see 'Help with this table' below.</p>
-  
+        <h2 class="govuk-heading-m">Upcoming reentry alerts</h2>
+<table class="govuk-table eff-table--sticky eff-table--padding-right-on-last-cell" style="width:100%" data-module=moj-sortable-table>
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">Highest risk</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">Event ID</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">Object</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">NORAD ID</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">Location at  most risk</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">Debris impact in location (%)</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">Date</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">Time (UTC)</th>
+<th scope="col" class="govuk-table__header govuk-body-s" aria-sort="none" style="width: 11%" span="1">Window (mins)</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Low</strong></td>
+<td class="govuk-table__cell govuk-body-s" data-sort-value="0001"> <b><a href="/reentry/gov-user/event-summary" class="govuk-link--no-visited-state">RE26-014</a></b></td>
+<td class="govuk-table__cell govuk-body-s">CZ-2C R/B (ROCKET BODY)</td>
+<td class="govuk-table__cell govuk-body-s">295820</td>
+<td class="govuk-table__cell govuk-body-s">South Georgia and the South Sandwich Islands</td>
+<td class="govuk-table__cell govuk-body-s">0.25</td>
+<td class="govuk-table__cell govuk-body-s">30/06/2026</td>
+<td class="govuk-table__cell govuk-body-s">23:33:01</td>
+<td class="govuk-table__cell govuk-body-s">+/- 240</td>
+</tr>
+</tbody>
+</col>
+</table>
+        <h2 class="govuk-heading-m">All re-entry events  worldwide</h2>
         <div class="moj-search">
             <form action="#" method="post">
             <div class="govuk-form-group">
