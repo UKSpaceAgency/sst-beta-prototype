@@ -5,3 +5,9 @@
 
 // Add extra styles here
 @import "node_modules/@ministryofjustice/frontend/moj/all";
+
+// Custom tag variant - teal
+.govuk-tag--teal {
+  background-color: #D0E6E7;
+  color: #0B4144;
+}
