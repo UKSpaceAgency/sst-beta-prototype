@@ -84,6 +84,7 @@ Select all that apply.
 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 </legend>
 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<h3 class="govuk-heading-s">Using distribution lists</h3>
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
 <label class="govuk-label govuk-checkboxes__label" for="contact">
@@ -102,16 +103,17 @@ Level 2 (alert) re-entry distribution list
 UK-licensed satellites re-entry distribution list
 </label>
 </div>
+<h3 class="govuk-heading-s">Using individual emails</h3>
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="contact-4" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-4">
 <label class="govuk-label govuk-checkboxes__label" for="contact-4">
-Individually selected recipients - send with Level 1 (alert) information
+Send with Level 1 (alert) comments
 </label>
 </div>
 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-4">
 <div class="govuk-form-group">
 <label class="govuk-label" for="contact-by-text">
-Provide individual email addresses to receive communications containing Level 1 (alert) information. Separate each email address with a semi-colon.
+Provide individual email addresses to receive communications containing Level 1 (alert) comments. Separate each email address with a semi-colon.
 </label>
 <input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
 </div>
@@ -119,13 +121,13 @@ Provide individual email addresses to receive communications containing Level 1 
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="contact-5" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-5">
 <label class="govuk-label govuk-checkboxes__label" for="contact-5">
-Individually selected recipients - send with Level 2 (warning) information
+Send with Level 2 (warning) comments
 </label>
 </div>
 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-5">
 <div class="govuk-form-group">
 <label class="govuk-label" for="contact-by-text">
-Provide individual email addresses to receive communications containing Level 1 (alert) information. Separate each email address with a semi-colon.
+Provide individual email addresses to receive communications containing Level 2 (warning) comments. Separate each email address with a semi-colon.
 </label>
 <input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
 </div>
@@ -133,13 +135,13 @@ Provide individual email addresses to receive communications containing Level 1 
 <div class="govuk-checkboxes__item">
 <input class="govuk-checkboxes__input" id="contact-6" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-6">
 <label class="govuk-label govuk-checkboxes__label" for="contact-6">
-Individually selected recipients - send with default information
+Send with default comments
 </label>
 </div>
 <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-6">
 <div class="govuk-form-group">
 <label class="govuk-label" for="contact-by-text">
-Provide individual email addresses to receive communications containing default information. Separate each email address with a semi-colon.
+Provide individual email addresses to receive communications containing default comments. Separate each email address with a semi-colon.
 </label>
 <input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
 </div>
@@ -148,6 +150,7 @@ Provide individual email addresses to receive communications containing default 
 </fieldset>
 </div>
 
+<!-- start alternative option 
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 </legend>
@@ -196,13 +199,11 @@ Provide individual email addresses to receive communications containing default 
 <input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
 </div>
 </div>
-
-
-
-
 </div>
 </fieldset>
 </div>
+end alternative option -->
+
 
 <a href="/reentry/approver/review-notifications" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
 Review selection</a>
