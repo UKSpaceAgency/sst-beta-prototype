@@ -28,40 +28,40 @@ Re-entry alert for SATELLITE X
 Edit 'Closed comment' 
 </label>
 </h1>
-<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "closed_comment" field. It will appear alongside the 'Closed' flag.</div>
+<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "closed_comment" field. It will only appear on closed alerts.</div>
 <textarea class="govuk-textarea" id="more-detail" name="tbc" rows="5" aria-describedby="more-detail-hint"></textarea>
 <a href="/reentry/approver/edit-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
 Clear 'Closed Comment' text</a>
 
 <h1 class="govuk-label-wrapper">
 <label class="govuk-label govuk-label--m" for="more-detail">
-Edit 'Executive Summary' 
-<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "executive_summary_comment" field.</div>
+Edit 'Executive summary' (default) 
+<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "executive_summary_comment_default" field. It will be visible to all users not on either distribution list, and to Level 1 or Level 2 users <strong>if</strong> the "executive_summary_comment_level_1" or "executive_summary_comment_level_2" fields are not filled.</div>
 <textarea class="govuk-textarea" id="more-detail" name="tbc" rows="5" aria-describedby="more-detail-hint"></textarea>
 </label>
 </h1>
 <a href="/reentry/approver/edit-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-Clear 'Executive Summary' text</a>
+Clear 'Executive summary' (default) text</a>
 
 <h1 class="govuk-label-wrapper">
 <label class="govuk-label govuk-label--m" for="more-detail">
-Edit 'Executive Summary' (level 1 only)
-<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "executive_summary_comment_level_1" field. It will only be visible to users with Level 1 permissions.</div>
+Edit 'Executive summary' (level 1 only)
+<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "executive_summary_comment_level_1" field. It will only be visible to users on the Level 1 distribution list. If left unfilled these users will see 'Executive summary' (default) instead.</div>
 <textarea class="govuk-textarea" id="more-detail" name="tbc" rows="5" aria-describedby="more-detail-hint"></textarea>
 </label>
 </h1>
 <a href="/reentry/approver/edit-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-Clear 'Executive Summary' (level 1 only) text</a>
+Clear 'Executive summary' (level 1 only) text</a>
 
 <h1 class="govuk-label-wrapper">
 <label class="govuk-label govuk-label--m" for="more-detail">
-Edit 'Executive Summary' (level 2 only)
-<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "executive_summary_comment_level_2" field. It will only be visible to users with Level 2 permissions.</div>
+Edit 'Executive summary' (level 2 only)
+<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "executive_summary_comment_level_2" field. It will only be visible to users on the Level 2 distribution list. If left unfilled these users will see 'Executive summary' (default) instead.</div>
 <textarea class="govuk-textarea" id="more-detail" name="tbc" rows="5" aria-describedby="more-detail-hint"></textarea>
 </label>
 </h1>
 <a href="/reentry/approver/edit-report" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-Clear 'Executive Summary' (level 2 only) text</a>
+Clear 'Executive summary' (level 2 only) text</a>
 
 <h1 class="govuk-label-wrapper">
 <label class="govuk-label govuk-label--m" for="more-detail">
@@ -76,7 +76,7 @@ Clear 'Damages and Liability' text</a>
 <h1 class="govuk-label-wrapper">
 <label class="govuk-label govuk-label--m" for="more-detail">
 Add to 'Guidance if object impacts UK interests' 
-<div id="more-detail-hint" class="govuk-hint">This text will replace below the standardised text in the 'Guidance if object impacts UK interests' section. It will replace any text submitted via the JSON's "uk_response_comment" field.</div>
+<div id="more-detail-hint" class="govuk-hint">This text will replace any text submitted via the JSON's "uk_response_comment" field.</div>
 <textarea class="govuk-textarea" id="more-detail" name="tbc" rows="5" aria-describedby="more-detail-hint"></textarea>
 </label>
 </h1>
