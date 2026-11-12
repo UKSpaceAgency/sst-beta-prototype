@@ -6,135 +6,214 @@ Send alerts for re-entry event re-asghj-kifdy
 
 {% block content %}
 
-  <div class="govuk-width-container">
-    <div class="govuk-breadcrumbs">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">Upcoming re-entry events</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary">Re-entry event re-asghj-kifdy: Alert</a>
-        </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/reentry/approver/send-notifications">Send alerts</a>
-          </li>
-      </ol>
-      <br>
-      <h1 class="govuk-heading-xl">Send alert to additional recipients</h1>
-    </div>
-    <p>This page shows you the current distribution status of the re-entry alert and allows you to manually distribute the alert to additional recipients.</p>
-    <p>If it is not already, you can choose to make the alert a priority re-entry alert. You are also able to manually select individual emails to send the alert to.</p>
-    <h2 class="govuk-heading-m">Current alert distribution</h2>
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Using distribution lists</th>
-            <th scope="col" class="govuk-table__header">Status</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="text-indent: 40px">All re-entry alerts</th>
-            <td class="govuk-table__cell"><strong class="govuk-tag">
-                Sent to distribution list
-              </strong></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="text-indent: 40px">Re-entry alerts for UK satellites</th>
-            <td class="govuk-table__cell">        <strong class="govuk-tag govuk-tag">
-                sent to  distribution list
-              </strong></td>
-          </tr>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header" style="text-indent: 40px">Priority re-entry alerts only</th>
-          <td class="govuk-table__cell">        <strong class="govuk-tag govuk-tag--grey">
-              Not sent to  distribution list
-            </strong></td>
-        </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Using individual emails</th>
-            <td class="govuk-table__cell"></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header" style="text-indent: 40px">Individually selected recipients</th>
-            <td class="govuk-table__cell"> primeminister@no10.org.uk; firstminister@holyrood.org.uk</td>
-          </tr>
-        </tbody>
-      </table>
+<div class="govuk-width-container">
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/reentry/approver/homepage">Upcoming re-entry events</a>
+</li>
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/reentry/approver/event-summary">Re-entry event re-asghj-kifdy: Alert</a>
+</li>
+<li class="govuk-breadcrumbs__list-item">
+<a class="govuk-breadcrumbs__link" href="/reentry/approver/send-notifications">Send alerts</a>
+</li>
+</ol>
+<br>
 
-      
-    <details class="govuk-details">
+</div>
 
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Distribution lists and re-entry alert critera
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <b>Distribution lists:</b>
-          <br>
-           You are able to what distribution list users are currently on in the account section (<a class="govuk__link" href="/account/approver/distribution-lists">View distribution lists</a>)
-           <br>
-           <br>
-           <b>Priority re-entry alert criteria for automatic distribution:</b>
-           <br>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Debris likely to survive to the ground</li>
-            <li>AND one of the following:</li>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>More than 0.1% chance of impact in the UK (and overseas territories on case by case basis)</li>
-              <li>OR UK-licensed object</li>
-              <li>OR significant press interest</li></ul>
-          </ul>
-        <p>You can use this page to make an alert 'priority' before it meets the automatic distribution criteria.</p>
-      </div>
-      </details>
-      <br>
-      <h2 class="govuk-heading-m">Change alert distribution</h2>
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+<h1 class="govuk-heading-xl">Send to additional recipients</h1>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-<p>Select whether you would like to send this alert to additional recipients.</p>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-2">
-              <label class="govuk-label govuk-checkboxes__label" for="contact-2">
-                Priority re-entry alerts only
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
-              <label class="govuk-label govuk-checkboxes__label" for="contact-3">
-                Individually selected recipients
-              </label>
-            <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                If you wish to send the alert to individual recipients not currently recieving alerts, you can do so here
-              </div>
-            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-text">
-                    Provide individual email addresses to receive alerts about this event in the box below. Separate each email address with a semi-colon.
-                </label>
-                <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-      </div>
+<p class="govuk-body">This page shows the current distribution status of the alert/warning.</p>
+<p class="govuk-body">You can send the alert to additional distribution lists or individual recipients.</p>
 
-    <a href="/reentry/approver/review-notifications" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
-        Review selection</a>
-        <a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Return to previous page</a>
-        <div id="waste-hint" class="govuk-hint"></div>
-  </form>
+{# ---------------- Current distribution status ---------------- #}
+<h2 class="govuk-heading-m">Current distribution status</h2>
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<tr class="govuk-table__row">
+<th scope="col" class="govuk-table__header govuk-!-width-one-half">Using distribution lists</th>
+<th scope="col" class="govuk-table__header">Status</th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header govuk-!-padding-left-6">Level 1 (Alert) re-entry distribution list</th>
+<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not sent to distribution list</strong></td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header govuk-!-padding-left-6">Level 2 (Warning) re-entry distribution list</th>
+<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not sent to distribution list</strong></td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header govuk-!-padding-left-6">UK-licensed satellites Re-entry distribution list</th>
+<td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Not sent to distribution list</strong></td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="rowgroup" colspan="2" class="govuk-table__header">Using individual emails</th>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header govuk-!-padding-left-6">Sent with level 1 (alert) information</th>
+<td class="govuk-table__cell"></td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header govuk-!-padding-left-6">Sent with level 2 (warning) information</th>
+<td class="govuk-table__cell"></td>
+</tr>
+<tr class="govuk-table__row">
+<th scope="row" class="govuk-table__header govuk-!-padding-left-6">Sent with default information</th>
+<td class="govuk-table__cell"></td>
+</tr>
+</tbody>
+</table>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="choose-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+Choose who to message
+</h1>
+</legend>
+<div id="choose-hint" class="govuk-hint">
+Select all that apply.
+</div>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+</legend>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+<label class="govuk-label govuk-checkboxes__label" for="contact">
+Level 1 (alert) re-entry distribution list
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-2">
+<label class="govuk-label govuk-checkboxes__label" for="contact-2">
+Level 2 (alert) re-entry distribution list
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-3">
+<label class="govuk-label govuk-checkboxes__label" for="contact-3">
+UK-licensed satellites re-entry distribution list
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact-4" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-4">
+<label class="govuk-label govuk-checkboxes__label" for="contact-4">
+Individually selected recipients - send with Level 1 (alert) information
+</label>
+</div>
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-4">
+<div class="govuk-form-group">
+<label class="govuk-label" for="contact-by-text">
+Provide individual email addresses to receive communications containing Level 1 (alert) information. Separate each email address with a semi-colon.
+</label>
+<input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+</div>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact-5" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-5">
+<label class="govuk-label govuk-checkboxes__label" for="contact-5">
+Individually selected recipients - send with Level 2 (warning) information
+</label>
+</div>
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-5">
+<div class="govuk-form-group">
+<label class="govuk-label" for="contact-by-text">
+Provide individual email addresses to receive communications containing Level 1 (alert) information. Separate each email address with a semi-colon.
+</label>
+<input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+</div>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact-6" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-6">
+<label class="govuk-label govuk-checkboxes__label" for="contact-6">
+Individually selected recipients - send with default information
+</label>
+</div>
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-6">
+<div class="govuk-form-group">
+<label class="govuk-label" for="contact-by-text">
+Provide individual email addresses to receive communications containing default information. Separate each email address with a semi-colon.
+</label>
+<input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+</legend>
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+<label class="govuk-label govuk-checkboxes__label" for="contact">
+Level 1 (alert) re-entry distribution list
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-2">
+<label class="govuk-label govuk-checkboxes__label" for="contact-2">
+Level 2 (alert) re-entry distribution list
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-3">
+<label class="govuk-label govuk-checkboxes__label" for="contact-3">
+UK-licensed satellites re-entry distribution list
+</label>
+</div>
+<div class="govuk-checkboxes__item">
+<input class="govuk-checkboxes__input" id="contact-ind" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-ind">
+<label class="govuk-label govuk-checkboxes__label" for="contact-ind">
+Individually selected recipients
+</label>
+</div>
+<div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-ind">
+<div class="govuk-form-group">
+<label class="govuk-label" for="contact-by-text">
+Provide individual email addresses to receive communications containing Level 1 (alert) information. Separate each email address with a semi-colon.
+</label>
+<input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+</div>
+<div class="govuk-form-group">
+<label class="govuk-label" for="contact-by-text">
+Provide individual email addresses to receive communications containing Level 2 (alert) information. Separate each email address with a semi-colon.
+</label>
+<input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+</div>
+<div class="govuk-form-group">
+<label class="govuk-label" for="contact-by-text">
+Provide individual email addresses to receive communications containing default information. Separate each email address with a semi-colon.
+</label>
+<input class="govuk-textarea" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+</div>
+</div>
+
+
+
+
+</div>
+</fieldset>
+</div>
+
+<a href="/reentry/approver/review-notifications" role="button" draggable="false" class="govuk-button govuk-button--primary" data-module="govuk-button">
+Review selection</a>
+<a href="/reentry/approver/event-summary" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+Return to previous page</a>
+<div id="waste-hint" class="govuk-hint"></div>
+</form>
 </div>
 </div>
 </main>
 </div>
 
-  
-  {% endblock %}
+
+{% endblock %}
